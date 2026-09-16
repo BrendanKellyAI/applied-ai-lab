@@ -23,7 +23,13 @@ cp .env.example .env    # then add your API keys
 
 ## Commands
 
-To follow as the harness is built: `smoke`, `estimate`, `run`, and `analyse`.
+```bash
+uv run lab smoke        # one tiny call per model and mode in smoke.yaml
+```
+
+`lab smoke` checks your keys and every result field before any paid run. It skips providers without a key. Running it again makes no new calls, because responses are cached. Edit `smoke.yaml` to check the models you plan to use; each must be listed in [`src/lab/providers/capabilities.yaml`](src/lab/providers/capabilities.yaml).
+
+To follow as the harness is built: `estimate`, `run`, and `analyse`.
 
 ## Field notes
 
@@ -36,7 +42,7 @@ To follow as the harness is built: `smoke`, `estimate`, `run`, and `analyse`.
 
 | Episode | Sample | Folder |
 |---|---|---|
-| S1 E1 | Your first API call | To follow |
+| S1 E1 | Your first API call | [episodes/s1-e1-one-token-at-a-time](episodes/s1-e1-one-token-at-a-time/) |
 
 ## Development
 

@@ -1,0 +1,86 @@
+# Settings each model accepts. The harness checks every planned call against this file before
+# any call is made, and refuses a setting a model does not support rather than changing it.
+#
+# Verified against provider documentation on 16 September 2026. Provider behaviour changes
+# often: re-verify before a paid run, and update this file rather than working around an error.
+#
+#   reasoning           neutral levels the harness may send; "off" means fully disabled
+#   temperature         whether a temperature may be sent at all
+#   max_output_tokens   the provider's documented output limit, where published
+#
+# Sources:
+#   https://developers.openai.com/api/docs/models
+#   https://developers.openai.com/api/docs/guides/reasoning
+#   https://platform.claude.com/docs/en/about-claude/models/overview
+#   https://platform.claude.com/docs/en/build-with-claude/effort
+#   https://platform.claude.com/docs/en/build-with-claude/thinking
+#   https://ai.google.dev/gemini-api/docs/models
+#   https://ai.google.dev/gemini-api/docs/thinking
+
+openai:
+  # reasoning.effort "none" is the neutral "off". Temperature support for these models is not
+  # documented, so it is treated as unsupported until `lab smoke` confirms otherwise.
+  gpt-6-astra:
+    reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  gpt-5.6-sol:
+    reasoning: [off, low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  gpt-5.6-terra:
+    reasoning: [off, low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  gpt-5.6-luna:
+    reasoning: [off, low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+
+anthropic:
+  # Current models reject any non-default temperature. Reasoning levels map to
+  # output_config.effort with adaptive thinking; "off" maps to thinking disabled.
+  claude-fable-5-1:
+    reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  claude-opus-5:
+    reasoning: [off, low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  claude-sonnet-5:
+    reasoning: [off, low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  claude-haiku-4-5-20251001:
+    # Retirement not sooner than 15 October 2026. Extended thinking only, so effort levels
+    # are not offered here.
+    reasoning: ["off"]
+    temperature: true
+    max_output_tokens: 64000
+
+google:
+  # Levels map to thinking_config.thinking_level; "off" maps to thinking_budget 0.
+  # "minimal" is the lowest level on several Gemini 3 models but does not guarantee no thinking.
+  # Google recommends leaving temperature at its default of 1.0 for Gemini 3 models.
+  gemini-3.8-flash:
+    reasoning: [low, medium, high]
+    temperature: true
+  gemini-3.7-flash:
+    reasoning: [low, medium, high]
+    temperature: true
+  gemini-3.6-flash:
+    reasoning: [minimal, low, medium, high]
+    temperature: true
+  gemini-3.5-flash-lite:
+    reasoning: [minimal, low, medium, high]
+    temperature: true
+  gemini-2.5-pro:
+    reasoning: [low, medium, high]
+    temperature: true
+  gemini-2.5-flash:
+    reasoning: ["off", low, medium, high]
+    temperature: true
+  gemini-2.5-flash-lite:
+    reasoning: ["off", low, medium, high]
+    temperature: true

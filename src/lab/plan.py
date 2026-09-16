@@ -7,7 +7,7 @@ from collections.abc import Sequence
 
 from pydantic import BaseModel, ConfigDict, field_validator
 
-from lab.config import CellValue
+from lab.config import CellValue, ModelConfig
 from lab.providers.base import GenerationRequest
 
 RESERVED_KEYS = frozenset({"model", "provider", "mode"})
@@ -57,3 +57,28 @@ def ensure_unique_call_ids(calls: Sequence[PlannedCall]) -> None:
     ]
     if duplicates:
         raise PlanError(f"Duplicate call identifiers in plan: {', '.join(sorted(duplicates))}")
+
+
+def build_request(
+    model: ModelConfig,
+    mode: str,
+    *,
+    prompt: str,
+    system: str | None = None,
+    metadata: dict[str, str] | None = None,
+) -> GenerationRequest:
+    """A request for one model in one of its configured modes."""
+    if mode not in model.modes:
+        raise PlanError(f"Model '{model.display_label}' has no mode '{mode}'")
+    settings = model.modes[mode]
+    return GenerationRequest(
+        provider=model.provider,
+        model=model.model,
+        system=system,
+        prompt=prompt,
+        max_output_tokens=settings.max_output_tokens,
+        temperature=settings.temperature,
+        reasoning=settings.reasoning,
+        show_thinking=settings.show_thinking,
+        metadata={**(metadata or {}), "mode": mode},
+    )

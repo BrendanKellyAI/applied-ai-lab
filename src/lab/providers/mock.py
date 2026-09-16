@@ -91,7 +91,7 @@ class MockProvider:
             output_tokens=len(text.split()) + (reasoning_tokens or 0),
             reasoning_tokens=reasoning_tokens,
             cached_input_tokens=0,
-            time_to_first_token_ms=latency_ms,
+            time_to_first_answer_token_ms=latency_ms,
             time_to_first_thinking_ms=latency_ms if reasoning_tokens else None,
             total_latency_ms=latency_ms,
             finish_reason="stop",

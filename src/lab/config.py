@@ -28,6 +28,7 @@ class ModeSettings(BaseModel):
     reasoning: ReasoningLevel | None
     temperature: float | None
     max_output_tokens: int = Field(gt=0)
+    show_thinking: bool = False
 
     @field_validator("reasoning", mode="before")
     @classmethod
