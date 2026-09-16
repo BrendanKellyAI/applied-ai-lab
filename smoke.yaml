@@ -1,0 +1,24 @@
+# One tiny call per model and mode, to check API keys and adapters before any paid run.
+# Uses a low-cost model per provider. Edit the models to check the ones you plan to use;
+# every model must be listed in src/lab/providers/capabilities.yaml.
+experiment: smoke
+description: Check keys, adapters, and every result field with a tiny call
+seed: 20260916
+parameters:
+  prompt: "Reply with the single word: ready"
+models:
+  - provider: openai
+    model: gpt-5.6-luna
+    modes:
+      off: { reasoning: off, temperature: null, max_output_tokens: 16 }
+      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
+  - provider: anthropic
+    model: claude-sonnet-5
+    modes:
+      off: { reasoning: off, temperature: null, max_output_tokens: 16 }
+      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
+  - provider: google
+    model: gemini-3.5-flash-lite
+    modes:
+      minimal: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
+      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }

@@ -35,11 +35,20 @@ packages = ["src/lab"]
 line-length = 100
 target-version = "py312"
 
+[tool.ruff.format]
+# Episode samples match slide listings exactly, so the formatter leaves them alone.
+exclude = ["episodes/**"]
+
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM"]
 
+[tool.ruff.lint.per-file-ignores]
+# Each part prints its heading before the slide code, which starts with its import.
+"episodes/**" = ["E402"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "--cov=lab --cov-report=term-missing --cov-fail-under=85"
 
 [tool.coverage.run]

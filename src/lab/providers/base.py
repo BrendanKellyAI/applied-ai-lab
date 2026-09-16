@@ -7,7 +7,9 @@ from typing import Literal, Protocol
 from pydantic import BaseModel, ConfigDict, Field
 
 ProviderName = Literal["openai", "anthropic", "google", "mock"]
-ReasoningLevel = Literal["off", "low", "medium", "high"]
+# "off" means reasoning fully disabled. Not every model accepts every level; see capabilities.yaml.
+ReasoningLevel = Literal["off", "minimal", "low", "medium", "high", "xhigh", "max"]
+FinishReason = Literal["stop", "length", "content_filter", "other"]
 
 # Fields that change how a call is delivered or labelled, but not what the model sees.
 _FIELDS_EXCLUDED_FROM_HASH = {"stream", "metadata"}
@@ -23,6 +25,8 @@ class GenerationRequest(BaseModel):
     max_output_tokens: int = Field(gt=0)
     temperature: float | None = None
     reasoning: ReasoningLevel | None = None
+    # Stream thinking summaries where the provider offers them.
+    show_thinking: bool = False
     stream: bool = True
     metadata: dict[str, str] = Field(default_factory=dict)
 
@@ -42,11 +46,11 @@ class GenerationResult(BaseModel):
     reasoning_tokens: int | None
     cached_input_tokens: int | None
     # Dispatch to the first token of visible answer text.
-    time_to_first_token_ms: float | None
+    time_to_first_answer_token_ms: float | None
     # Dispatch to the first streamed reasoning or thinking content, where the provider streams it.
     time_to_first_thinking_ms: float | None = None
     total_latency_ms: float
-    finish_reason: str
+    finish_reason: FinishReason
     timestamp_utc: str
     error: str | None = None
 
