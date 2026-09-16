@@ -8,7 +8,7 @@ from lab.config import ExperimentConfig
 from lab.plan import PlanError, build_request
 from lab.providers.mock import MockProvider
 from lab.raw_log import RunRecord
-from lab.smoke import describe, missing_fields, plan_smoke
+from lab.smoke import describe, missing_fields, plan_smoke, reasoning_warnings
 
 runner = CliRunner()
 
@@ -153,3 +153,40 @@ def test_failed_record_is_described():
 
     assert "FAILED" in describe(record, False)[0]
     assert missing_fields(record, False) == ["result"]
+
+
+def test_reasoning_tokens_with_reasoning_off_are_warned():
+    record = _record(False, reasoning_tokens=37)
+
+    warnings = reasoning_warnings(record, reasoning="off")
+
+    assert warnings == ["reasoning is off but 37 reasoning tokens were reported"]
+    assert "  WARNING: reasoning is off but 37 reasoning tokens were reported" in describe(
+        record, False, reasoning="off"
+    )
+
+
+@pytest.mark.parametrize(
+    ("reasoning_tokens", "reasoning"), [(0, "off"), (None, "off"), (37, "low")]
+)
+def test_no_warning_when_reasoning_is_consistent(reasoning_tokens, reasoning):
+    record = _record(False, reasoning_tokens=reasoning_tokens)
+
+    assert reasoning_warnings(record, reasoning=reasoning) == []
+
+
+def test_smoke_fails_when_reasoning_off_is_not_honoured(tmp_path, monkeypatch):
+    from lab.providers import registry
+    from lab.providers.mock import MockProvider as RealMock
+
+    class ThinkingAnyway(RealMock):
+        def generate(self, request):
+            return super().generate(request).model_copy(update={"reasoning_tokens": 12})
+
+    monkeypatch.setattr(registry, "create_provider", lambda name: ThinkingAnyway())
+    config = _write(tmp_path, MOCK_SMOKE)
+
+    result = _invoke(tmp_path, config)
+
+    assert result.exit_code == 1
+    assert "WARNING: reasoning is off but 12 reasoning tokens were reported" in result.output

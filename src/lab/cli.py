@@ -18,7 +18,7 @@ from lab.providers.base import UnsupportedSettingError
 from lab.providers.registry import available_providers
 from lab.raw_log import latest_successful, load_records
 from lab.runner import Runner, format_summary
-from lab.smoke import describe, missing_fields, plan_smoke
+from lab.smoke import describe, missing_fields, plan_smoke, reasoning_warnings
 
 app = typer.Typer(help="Run and analyse applied-ai-lab experiments.", no_args_is_help=True)
 
@@ -80,10 +80,15 @@ def smoke(
             typer.echo(f"{call.model_label} [{call.mode}]: FAILED, see warnings above")
             incomplete = True
             continue
-        typer.echo("\n".join(describe(record, expects_thinking)))
-        incomplete = incomplete or bool(missing_fields(record, expects_thinking))
+        reasoning = call.request.reasoning
+        typer.echo("\n".join(describe(record, expects_thinking, reasoning)))
+        problems = missing_fields(record, expects_thinking) + reasoning_warnings(record, reasoning)
+        incomplete = incomplete or bool(problems)
     typer.echo("")
     typer.echo(format_summary(summary))
     if incomplete:
-        typer.echo("Some calls failed or returned empty fields. Check the output above.", err=True)
+        typer.echo(
+            "Some calls failed, returned empty fields, or raised warnings. Check the output above.",
+            err=True,
+        )
         raise typer.Exit(code=1)
