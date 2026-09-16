@@ -36,7 +36,17 @@ def _expected(name: str, expects_thinking: bool) -> bool:
     return expects_thinking or name not in _THINKING_FIELDS
 
 
-def describe(record: RunRecord, expects_thinking: bool) -> list[str]:
+def reasoning_warnings(record: RunRecord, reasoning: str | None) -> list[str]:
+    """Flag a model that reports reasoning tokens although reasoning was set to off."""
+    if record.result is None or reasoning != "off":
+        return []
+    tokens = record.result.reasoning_tokens
+    if tokens:
+        return [f"reasoning is off but {tokens} reasoning tokens were reported"]
+    return []
+
+
+def describe(record: RunRecord, expects_thinking: bool, reasoning: str | None = None) -> list[str]:
     """Human-readable lines for one smoke result, flagging any field that came back empty."""
     heading = f"{record.model_label} [{record.mode}]"
     if record.result is None:
@@ -51,6 +61,7 @@ def describe(record: RunRecord, expects_thinking: bool) -> list[str]:
         else:
             shown = value if not isinstance(value, float) else f"{value:,.0f}"
             lines.append(f"  {name}: {str(shown)[:80]}")
+    lines.extend(f"  WARNING: {warning}" for warning in reasoning_warnings(record, reasoning))
     return lines
 
 

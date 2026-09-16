@@ -16,6 +16,8 @@
 #   https://platform.claude.com/docs/en/build-with-claude/thinking
 #   https://ai.google.dev/gemini-api/docs/models
 #   https://ai.google.dev/gemini-api/docs/thinking
+#   https://ai.google.dev/gemini-api/docs/generate-content/thinking
+#   https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash
 
 openai:
   # reasoning.effort "none" is the neutral "off". Temperature support for these models is not
@@ -60,8 +62,8 @@ anthropic:
     max_output_tokens: 64000
 
 google:
-  # Levels map to thinking_config.thinking_level; "off" maps to thinking_budget 0.
-  # "minimal" is the lowest level on several Gemini 3 models but does not guarantee no thinking.
+  # Gemini 3 models: levels map to thinking_config.thinking_level. "minimal" is the lowest level
+  # on several of them but does not guarantee no thinking.
   # Google recommends leaving temperature at its default of 1.0 for Gemini 3 models.
   gemini-3.8-flash:
     reasoning: [low, medium, high]
@@ -75,12 +77,15 @@ google:
   gemini-3.5-flash-lite:
     reasoning: [minimal, low, medium, high]
     temperature: true
-  gemini-2.5-pro:
-    reasoning: [low, medium, high]
-    temperature: true
+  # Gemini 2.5 models do not accept thinking_level; they take a thinking_budget in tokens.
+  # "off" maps to a budget of 0, which the documentation says disables thinking on Flash and
+  # Flash-Lite. Other levels have no documented budget equivalent, so they are not offered.
+  # Gemini 2.5 Pro cannot disable thinking and has no levels, so it is not listed.
+  # Source: https://ai.google.dev/gemini-api/docs/generate-content/thinking
   gemini-2.5-flash:
-    reasoning: ["off", low, medium, high]
+    reasoning: ["off"]
     temperature: true
+    max_output_tokens: 65536
   gemini-2.5-flash-lite:
-    reasoning: ["off", low, medium, high]
+    reasoning: ["off"]
     temperature: true

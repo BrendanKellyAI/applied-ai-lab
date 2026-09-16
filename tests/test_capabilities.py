@@ -73,9 +73,27 @@ def test_packaged_table_loads_and_reads_yaml_off_as_a_level():
         ("anthropic", "claude-opus-5"),
         ("anthropic", "claude-sonnet-5"),
         ("google", "gemini-3.5-flash-lite"),
-        ("google", "gemini-2.5-flash"),
+        ("google", "gemini-3.6-flash"),
     ],
 )
 def test_packaged_table_covers_models_named_in_configs(provider, model):
     request = _request(provider=provider, model=model, reasoning="low")
     default_capabilities().check(request)
+
+
+@pytest.mark.parametrize("model", ["gemini-2.5-flash", "gemini-2.5-flash-lite"])
+def test_gemini_2_5_accepts_only_thinking_off(model):
+    """Gemini 2.5 models take a thinking budget, not a thinking level, so only off maps cleanly."""
+    table = default_capabilities()
+
+    table.check(_request(provider="google", model=model, reasoning="off"))
+    for level in ("low", "medium", "high"):
+        with pytest.raises(UnsupportedSettingError, match="Allowed: off"):
+            table.check(_request(provider="google", model=model, reasoning=level))
+
+
+def test_gemini_2_5_pro_is_not_listed_because_thinking_cannot_be_off_or_levelled():
+    with pytest.raises(UnsupportedSettingError, match="not in capabilities.yaml"):
+        default_capabilities().check(
+            _request(provider="google", model="gemini-2.5-pro", reasoning="low")
+        )
