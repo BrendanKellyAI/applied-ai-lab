@@ -1,30 +1,33 @@
 # One tiny call per model and mode, to check API keys and adapters before any paid run.
-# Uses a low-cost model per provider. Smoke fails if a model reports reasoning tokens with
-# reasoning set to off. Edit the models to check the ones you plan to use;
-# every model must be listed in src/lab/providers/capabilities.yaml.
+# Covers the models chosen for S1 E7 and S1 E10, at the lowest reasoning setting each allows
+# and at low reasoning with thinking shown. Smoke fails if a model reports reasoning tokens
+# with reasoning set to off. Every model must be listed in src/lab/providers/capabilities.yaml.
 experiment: smoke
 description: Check keys, adapters, and every result field with a tiny call
 seed: 20260916
 parameters:
   prompt: "Reply with the single word: ready"
 models:
+  # S1 E7 and S1 E10
   - provider: openai
-    model: gpt-5.6-luna
+    model: gpt-5.6-terra
     modes:
       off: { reasoning: off, temperature: null, max_output_tokens: 16 }
       low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
+  # S1 E7 and S1 E10
   - provider: anthropic
     model: claude-sonnet-5
     modes:
       off: { reasoning: off, temperature: null, max_output_tokens: 16 }
       low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
-  # Gemini 2.5 Flash is the S1 E7 model; smoke checks that thinking is genuinely off.
+  # S1 E7: checks that thinking is genuinely off
   - provider: google
     model: gemini-2.5-flash
     modes:
       off: { reasoning: off, temperature: null, max_output_tokens: 16 }
-  # A Gemini 3 model checks the thinking fields, which Gemini 2.5 cannot provide with levels.
+  # S1 E10: minimal is the lowest level, so it gets room for reasoning tokens
   - provider: google
-    model: gemini-3.5-flash-lite
+    model: gemini-3.6-flash
     modes:
+      minimal: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
       low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
