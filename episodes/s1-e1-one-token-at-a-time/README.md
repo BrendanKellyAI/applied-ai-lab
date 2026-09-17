@@ -24,19 +24,13 @@ You need Python 3.12 or later, [uv](https://docs.astral.sh/uv/), and an OpenAI A
    uv sync
    ```
 
-2. Set your API key as an environment variable in the same terminal. The script reads it from the environment, exactly as the slide code does.
-
-   macOS or Linux:
+2. Add your API key to a file named `.env` in the repository root, the same file the rest of the lab uses:
 
    ```bash
-   export OPENAI_API_KEY="your-key-here"
+   OPENAI_API_KEY=your-key-here
    ```
 
-   Windows PowerShell:
-
-   ```powershell
-   $env:OPENAI_API_KEY = "your-key-here"
-   ```
+   If `.env` does not exist yet, copy `.env.example` to `.env` first. The script loads the key from `.env` in its first few lines, above the code shown on the slides. A key already set as an environment variable takes priority.
 
 3. Run the script:
 
@@ -44,7 +38,7 @@ You need Python 3.12 or later, [uv](https://docs.astral.sh/uv/), and an OpenAI A
    uv run python episodes/s1-e1-one-token-at-a-time/first_call.py
    ```
 
-Never paste your key into the script or commit it to a repository.
+Never paste your key into the script. `.env` is listed in `.gitignore`, so it is never committed.
 
 ## Cost
 
