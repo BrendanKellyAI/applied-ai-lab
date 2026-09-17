@@ -5,6 +5,11 @@ prices.local.yaml
 # Response cache (committed results live in each field note's results/ folder)
 .cache/
 
+# Built datasets and fresh runs inside a field note. Field note datasets are rebuilt by
+# build_dataset.py, because they contain Project Gutenberg text; see datasets/README.md.
+field-notes/*/dataset/
+field-notes/*/results-fresh/
+
 # Python
 __pycache__/
 *.py[cod]

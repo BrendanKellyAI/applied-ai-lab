@@ -1,7 +1,4 @@
-"""Command line entry point for the lab harness.
-
-Commands run and analyse are added with the field notes in later build phases.
-"""
+"""Command line entry point for the lab harness."""
 
 import logging
 from datetime import UTC, datetime
@@ -13,10 +10,24 @@ from dotenv import load_dotenv
 
 from lab import __version__
 from lab.cache import ResponseCache
-from lab.config import ConfigError, load_config
-from lab.estimate import build_report, default_token_counter, format_report
-from lab.experiments import load_plan_function, results_dir
-from lab.plan import PlanError
+from lab.config import ConfigError, ExperimentConfig, load_config
+from lab.estimate import (
+    BudgetError,
+    build_report,
+    check_budget,
+    default_token_counter,
+    estimate_run,
+    format_report,
+)
+from lab.experiments import (
+    dataset_sources,
+    load_analyse_function,
+    load_plan_function,
+    results_dir,
+)
+from lab.metadata import build_metadata, write_metadata
+from lab.pilot import select_calls
+from lab.plan import PlanError, PlannedCall
 from lab.prices import load_prices
 from lab.providers.base import UnsupportedSettingError
 from lab.providers.registry import available_providers
@@ -69,6 +80,151 @@ def estimate(
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=2) from exc
     typer.echo(format_report(report))
+
+
+@app.command()
+def run(
+    config: Annotated[Path, typer.Argument(help="Experiment config.yaml.")],
+    pilot: Annotated[bool, typer.Option(help="Run only the pilot defined by the config.")] = False,
+    fresh: Annotated[
+        bool,
+        typer.Option(
+            help="Make new calls into a separate folder, leaving committed results untouched."
+        ),
+    ] = False,
+    provider: Annotated[
+        str | None, typer.Option(help="Run one provider only, for readers with a single key.")
+    ] = None,
+    prices: Annotated[Path, typer.Option(help="Local prices file.")] = Path("prices.local.yaml"),
+    cache_dir: Annotated[Path, typer.Option(help="Response cache folder.")] = Path(".cache"),
+    env_file: Annotated[Path, typer.Option(help="File to read API keys from.")] = Path(".env"),
+) -> None:
+    """Run an experiment. Resumable: calls already complete are never repeated."""
+    load_dotenv(env_file, override=False)
+    started = datetime.now(UTC).isoformat()
+    try:
+        experiment = load_config(config)
+        calls = load_plan_function(config)(experiment, config.parent)
+        selected = select_calls(calls, experiment, pilot=pilot, provider=provider)
+        if not selected:
+            typer.echo("Nothing to run: the selection matched no calls.", err=True)
+            raise typer.Exit(code=2)
+        cache = ResponseCache(cache_dir)
+        raw_path = _run_log_path(config, fresh)
+        _check_budget(
+            experiment,
+            selected,
+            cache=cache,
+            raw_path=raw_path,
+            prices_path=prices,
+            pilot=pilot,
+        )
+        providers = _providers_for(experiment, selected)
+        runner = Runner(
+            providers=providers,
+            cache=cache,
+            limits={name: experiment.limits_for(name) for name in providers},
+        )
+        summary = runner.run(selected, raw_path, use_cache=not fresh)
+    except (ConfigError, PlanError, UnsupportedSettingError, BudgetError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=2) from exc
+
+    records = load_records(raw_path)
+    write_metadata(
+        raw_path.parent / "run_metadata.json",
+        build_metadata(
+            config=experiment,
+            summary=summary,
+            records=records,
+            started_utc=started,
+            ended_utc=datetime.now(UTC).isoformat(),
+            datasets=dataset_sources(config)(experiment, config.parent),
+            repo_dir=config.parent,
+        ),
+    )
+    typer.echo(format_summary(summary))
+    typer.echo(f"\nResults written to {raw_path.parent}")
+    if summary.failed:
+        typer.echo(
+            f"{summary.failed} call(s) failed. Run the same command again to retry them.", err=True
+        )
+        raise typer.Exit(code=1)
+
+
+@app.command()
+def analyse(
+    config: Annotated[Path, typer.Argument(help="Experiment config.yaml.")],
+    results: Annotated[
+        Path | None, typer.Option(help="Results folder to analyse. Defaults to results/.")
+    ] = None,
+) -> None:
+    """Score results and build tables and charts. Reads committed results; needs no API key."""
+    try:
+        experiment = load_config(config)
+        folder = results if results is not None else results_dir(config)
+        records = load_records(folder / "raw.jsonl")
+        if not records:
+            typer.echo(
+                f"No results found in {folder}. Run `lab run {config}` first, or pass --results.",
+                err=True,
+            )
+            raise typer.Exit(code=2)
+        report = load_analyse_function(config)(experiment, config.parent, records)
+    except (ConfigError, PlanError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=2) from exc
+    typer.echo(report)
+
+
+def _run_log_path(config: Path, fresh: bool) -> Path:
+    """Committed results drive resume. `--fresh` writes to a separate, gitignored folder."""
+    if not fresh:
+        return results_dir(config) / "raw.jsonl"
+    stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
+    return config.parent / "results-fresh" / stamp / "raw.jsonl"
+
+
+def _check_budget(
+    experiment: ExperimentConfig,
+    selected: list[PlannedCall],
+    *,
+    cache: ResponseCache,
+    raw_path: Path,
+    prices_path: Path,
+    pilot: bool,
+) -> None:
+    """Refuse to start when the calls still to make would cost more than the budget."""
+    prices = load_prices(prices_path)
+    budget = prices.budget_for(experiment.experiment) if prices else None
+    if budget is None:
+        return
+    check_budget(
+        estimate_run(
+            "Pilot" if pilot else "Full run",
+            selected,
+            cache=cache,
+            prior_records=load_records(raw_path),
+            prices=prices,
+            count_tokens=default_token_counter(),
+        ),
+        budget,
+    )
+
+
+def _providers_for(experiment: ExperimentConfig, selected: list[PlannedCall]) -> dict:
+    """Providers needed by the selected calls, refusing early when a key is missing."""
+    needed = sorted({call.request.provider for call in selected})
+    available = available_providers(needed)
+    if available.missing_keys:
+        missing = "; ".join(
+            f"{name}: set {' or '.join(variables)}"
+            for name, variables in sorted(available.missing_keys.items())
+        )
+        raise PlanError(
+            f"No API key for {missing}. Add the key to .env, or run one provider with --provider."
+        )
+    return dict(available.providers)
 
 
 @app.command()

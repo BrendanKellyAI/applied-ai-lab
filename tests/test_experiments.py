@@ -6,7 +6,7 @@ from typer.testing import CliRunner
 from lab import cli
 from lab.cli import app
 from lab.config import ConfigError
-from lab.experiments import load_plan_function, results_dir
+from lab.experiments import load_analyse_function, load_plan_function, results_dir
 
 CONFIG = """
 experiment: demo
@@ -41,6 +41,11 @@ def plan_calls(config, folder):
     ]
 """
 
+ANALYSE = """
+def analyse(config, folder, records):
+    return f"{config.experiment}: {len(records)} records"
+"""
+
 PRICES = """
 currency: USD
 prices_checked: 2026-09-17
@@ -52,12 +57,18 @@ budgets:
 """
 
 
-def _field_note(tmp_path: Path, build_dataset: str | None = BUILD_DATASET) -> Path:
+def _field_note(
+    tmp_path: Path,
+    build_dataset: str | None = BUILD_DATASET,
+    analyse: str | None = ANALYSE,
+) -> Path:
     folder = tmp_path / "field-notes" / "demo"
     folder.mkdir(parents=True)
     (folder / "config.yaml").write_text(CONFIG, encoding="utf-8")
     if build_dataset is not None:
         (folder / "build_dataset.py").write_text(build_dataset, encoding="utf-8")
+    if analyse is not None:
+        (folder / "analyse.py").write_text(analyse, encoding="utf-8")
     return folder / "config.yaml"
 
 
@@ -130,3 +141,21 @@ def test_estimate_command_reports_config_errors(tmp_path):
 
     assert result.exit_code == 2
     assert "Config file not found" in result.output
+
+
+def test_loads_analyse_function_from_field_note_folder(tmp_path):
+    config_path = _field_note(tmp_path)
+
+    analyse = load_analyse_function(config_path)
+
+    assert callable(analyse)
+
+
+def test_missing_analyse_module_is_a_config_error(tmp_path):
+    with pytest.raises(ConfigError, match="analyse.py"):
+        load_analyse_function(_field_note(tmp_path, analyse=None))
+
+
+def test_analyse_module_without_analyse_function_is_a_config_error(tmp_path):
+    with pytest.raises(ConfigError, match="analyse"):
+        load_analyse_function(_field_note(tmp_path, analyse="VALUE = 1"))

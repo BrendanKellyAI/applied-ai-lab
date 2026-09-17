@@ -27,22 +27,35 @@ cp .env.example .env    # then add your API keys
 uv run lab smoke                    # a few tiny calls per model in smoke.yaml
 uv run lab smoke --fresh            # the same, ignoring the cache, to re-measure latency
 uv run lab estimate <config.yaml>   # tokens and cost for the pilot and full run; no API calls
+uv run lab run <config.yaml>        # run an experiment, resumable
+uv run lab analyse <config.yaml>    # score, tabulate, and chart committed results; no API key
 ```
 
 `lab smoke` checks your keys and every result field before any paid run. It skips providers without a key. Running it again makes no new calls, because responses are cached. Edit `smoke.yaml` to check the models you plan to use; each must be listed in [`src/lab/providers/capabilities.yaml`](src/lab/providers/capabilities.yaml).
 
 `lab estimate` shows tokens for the pilot and the full run. To see costs and check a budget, copy `prices.example.yaml` to `prices.local.yaml` (gitignored) and fill in current prices and a budget per experiment. Published results never include prices.
 
-If your Anthropic key is not scoped to a single workspace, also set `ANTHROPIC_WORKSPACE_ID` in `.env`.
+`lab run` validates every planned call before sending any, so an unsupported setting fails before
+it costs anything, and it refuses to start if the estimate exceeds the budget in
+`prices.local.yaml`. It resumes: a call already complete in `results/raw.jsonl` is never repeated.
+`--pilot` runs the pilot defined by the config, `--provider` runs one provider only, and `--fresh`
+makes new calls into a separate folder, leaving committed results untouched. Interrupting a run is
+safe.
 
-To follow with the field notes: `run` and `analyse`.
+`lab analyse` works from committed results with no API key, so anyone can reproduce the charts and
+tables for free. It loads the field note's own `analyse.py`.
+
+If your Anthropic key is not scoped to a single workspace, also set `ANTHROPIC_WORKSPACE_ID` in `.env`.
 
 ## Field notes
 
 | Episode | Question | Folder |
 |---|---|---|
-| S1 E7 | Does a fact's position in a long context affect retrieval? | To follow |
+| S1 E7 | Does a fact's position in a long context affect retrieval? | [field-notes/s1-e7-lost-in-the-middle](field-notes/s1-e7-lost-in-the-middle/) |
 | S1 E10 | When does turning reasoning on improve accuracy enough to justify the cost? | To follow |
+
+Datasets are not committed; each field note rebuilds its own. Sources and licences are in
+[datasets/README.md](datasets/README.md).
 
 ## Episode code
 

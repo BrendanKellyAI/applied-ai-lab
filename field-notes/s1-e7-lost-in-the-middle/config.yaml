@@ -1,0 +1,86 @@
+# S1 E7: does a fact's position in a long context affect whether a model retrieves it?
+#
+# Every setting a model ran with is recorded here, so the run can be reproduced exactly.
+# Every model must be listed in src/lab/providers/capabilities.yaml.
+experiment: s1-e7-lost-in-the-middle
+description: Retrieval accuracy by fact position and context length
+seed: 20260917
+
+models:
+  # All three models are each maker's balanced mid-tier model, so the comparison is like for
+  # like. Temperature is null for every model, so all three run at their provider default:
+  # current OpenAI and Claude models reject temperature 0, and using 0 for Gemini alone would
+  # give it a different condition.
+  - provider: openai
+    model: gpt-5.6-terra
+    label: GPT-5.6 Terra
+    modes:
+      # Reasoning fully off, so 50 output tokens is ample for a four-digit answer.
+      standard: { reasoning: off, temperature: null, max_output_tokens: 50 }
+  - provider: anthropic
+    model: claude-sonnet-5
+    label: Claude Sonnet 5
+    modes:
+      standard: { reasoning: off, temperature: null, max_output_tokens: 50 }
+  - provider: google
+    model: gemini-3.6-flash
+    label: Gemini 3.6 Flash
+    modes:
+      # Gemini 3.x cannot turn thinking off. "minimal" is its lowest level and does not
+      # guarantee no thinking, so the limit leaves room for reasoning tokens, which are billed
+      # as output. Confirmed in the pilot: see the README.
+      standard: { reasoning: minimal, temperature: null, max_output_tokens: 1024 }
+
+parameters:
+  context_lengths_tokens: [4000, 16000, 64000]
+  positions_percent: [0, 25, 50, 75, 100]
+  facts_per_cell: 6
+  # Filler text: public-domain novels from Project Gutenberg, one book per fact, so the same six
+  # filler passages carry every position and length (the paired design). Book IDs are pinned
+  # with the SHA-256 of the mirror file, checked on 17 September 2026. A download that does not
+  # match the checksum fails the build.
+  filler_books:
+    - id: 1342
+      title: Pride and Prejudice
+      author: Jane Austen
+      sha256: 81300b79e8a8d65ac530a97578417d06137e3bbc90622a10a65e5036183d2500
+    - id: 2701
+      title: Moby Dick; or, The Whale
+      author: Herman Melville
+      sha256: 547de799c1643ef231cc1efe45ffccefcb876ff3fe8f2206e7488529ad08f999
+    - id: 1400
+      title: Great Expectations
+      author: Charles Dickens
+      sha256: 48dd8f292e68ff2856675a60b48bcd80b1ebe6ed58ac3e6f91a2bb2400f1e345
+    - id: 98
+      title: A Tale of Two Cities
+      author: Charles Dickens
+      sha256: e3dfeb67feb904ac0f73a35204a175c58248422c2be8556802cb8820d958d67c
+    - id: 345
+      title: Dracula
+      author: Bram Stoker
+      sha256: 8cf05c0f0ac5b282d84f2fb36dbccd744bdb5bce7b5612438a63b43cbe27b472
+    - id: 84
+      title: Frankenstein; Or, The Modern Prometheus
+      author: Mary Wollstonecraft Shelley
+      sha256: 06c37d2c52d208d3d81eb12c3b10b5edbd7728b73554325ddceadbe2fb427e77
+
+# Conservative defaults for entry-level API tiers. Raise them locally if your account allows.
+limits:
+  openai: { max_concurrency: 2, requests_per_minute: 30 }
+  anthropic: { max_concurrency: 2, requests_per_minute: 30 }
+  google: { max_concurrency: 2, requests_per_minute: 30 }
+
+# Latency is recorded for context but is not a finding here, so the estimator reports what a
+# batch API would save.
+measures_latency: false
+
+# A structured pilot rather than a percentage, so 21 calls cover every model, length, and
+# position, and exercise the 64,000-token path for each provider:
+#   every model at every position at 4,000 tokens   15 calls
+#   every model at 16,000 and 64,000 tokens at 50%   6 calls
+pilot:
+  strategy: filter
+  include:
+    - { context_length_tokens: 4000, fact_index: 0 }
+    - { position_percent: 50, fact_index: 0 }
