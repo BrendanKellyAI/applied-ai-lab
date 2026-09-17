@@ -1,7 +1,8 @@
 """Anthropic adapter, using the Messages API with streaming."""
 
+import os
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Mapping
 from typing import Any
 
 import anthropic
@@ -27,6 +28,7 @@ _STOP_REASONS: dict[str, FinishReason] = {
     "refusal": "content_filter",
 }
 _RETRYABLE_STREAM_ERRORS = {"overloaded_error": ServerError, "api_error": ServerError}
+_WORKSPACE_HEADER = "anthropic-workspace-id"
 
 
 class AnthropicProvider:
@@ -38,7 +40,7 @@ class AnthropicProvider:
         clock: Callable[[], float] = time.perf_counter,
     ) -> None:
         # SDK retries are off: the runner owns retries so attempt counts are honest.
-        self._client = client or anthropic.Anthropic(max_retries=0)
+        self._client = client or _default_client()
         self._capabilities = capabilities or default_capabilities()
         self._clock = clock
 
@@ -71,6 +73,14 @@ class AnthropicProvider:
             finish_reason=_STOP_REASONS.get(state.stop_reason, "other"),
             times=clock.finish(),
         )
+
+
+def _default_client(environ: Mapping[str, str] | None = None) -> anthropic.Anthropic:
+    """Build the SDK client, adding a workspace header when the key is multi-workspace."""
+    env = os.environ if environ is None else environ
+    workspace_id = env.get("ANTHROPIC_WORKSPACE_ID")
+    headers = {_WORKSPACE_HEADER: workspace_id} if workspace_id else None
+    return anthropic.Anthropic(max_retries=0, default_headers=headers)
 
 
 def build_params(request: GenerationRequest) -> dict[str, Any]:

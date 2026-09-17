@@ -81,6 +81,8 @@ google:
   # "off" maps to a budget of 0, which the documentation says disables thinking on Flash and
   # Flash-Lite. Other levels have no documented budget equivalent, so they are not offered.
   # Gemini 2.5 Pro cannot disable thinking and has no levels, so it is not listed.
+  # New Gemini API projects often cannot call 2.5 models; keep these for accounts that still
+  # have access. Prefer gemini-3.6-flash for new smoke and episode configs.
   # Source: https://ai.google.dev/gemini-api/docs/generate-content/thinking
   gemini-2.5-flash:
     reasoning: ["off"]

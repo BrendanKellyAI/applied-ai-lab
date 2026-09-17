@@ -198,5 +198,15 @@ def test_stream_ending_before_message_delta_is_interrupted():
 
 def test_default_client_disables_sdk_retries(monkeypatch):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key-not-real")
+    monkeypatch.delenv("ANTHROPIC_WORKSPACE_ID", raising=False)
 
     assert AnthropicProvider()._client.max_retries == 0
+
+
+def test_default_client_sends_workspace_header_when_set(monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key-not-real")
+    monkeypatch.setenv("ANTHROPIC_WORKSPACE_ID", "wrkspc_01TestWorkspaceId")
+
+    headers = AnthropicProvider()._client.default_headers
+
+    assert headers["anthropic-workspace-id"] == "wrkspc_01TestWorkspaceId"
