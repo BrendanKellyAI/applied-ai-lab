@@ -24,12 +24,18 @@ cp .env.example .env    # then add your API keys
 ## Commands
 
 ```bash
-uv run lab smoke        # one tiny call per model and mode in smoke.yaml
+uv run lab smoke                    # a few tiny calls per model in smoke.yaml
+uv run lab smoke --fresh            # the same, ignoring the cache, to re-measure latency
+uv run lab estimate <config.yaml>   # tokens and cost for the pilot and full run; no API calls
 ```
 
 `lab smoke` checks your keys and every result field before any paid run. It skips providers without a key. Running it again makes no new calls, because responses are cached. Edit `smoke.yaml` to check the models you plan to use; each must be listed in [`src/lab/providers/capabilities.yaml`](src/lab/providers/capabilities.yaml).
 
-To follow as the harness is built: `estimate`, `run`, and `analyse`.
+`lab estimate` shows tokens for the pilot and the full run. To see costs and check a budget, copy `prices.example.yaml` to `prices.local.yaml` (gitignored) and fill in current prices and a budget per experiment. Published results never include prices.
+
+If your Anthropic key is not scoped to a single workspace, also set `ANTHROPIC_WORKSPACE_ID` in `.env`.
+
+To follow with the field notes: `run` and `analyse`.
 
 ## Field notes
 
