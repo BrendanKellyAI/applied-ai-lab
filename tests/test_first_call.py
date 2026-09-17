@@ -4,6 +4,7 @@ import runpy
 from pathlib import Path
 from types import SimpleNamespace
 
+import dotenv
 import openai
 import pytest
 
@@ -53,8 +54,29 @@ class FakeOpenAI:
         FakeOpenAI.instances.append(self)
 
 
+class EnvLoads:
+    """Stands in for load_dotenv, so tests never read a real .env file."""
+
+    def __init__(self) -> None:
+        self.count = 0
+        self.clients_before_first_load = None
+
+    def __call__(self, *_args, **_kwargs) -> bool:
+        if self.count == 0:
+            self.clients_before_first_load = len(FakeOpenAI.instances)
+        self.count += 1
+        return False
+
+
 @pytest.fixture
-def calls(monkeypatch, capsys):
+def env_loads(monkeypatch):
+    loads = EnvLoads()
+    monkeypatch.setattr(dotenv, "load_dotenv", loads)
+    return loads
+
+
+@pytest.fixture
+def calls(monkeypatch, capsys, env_loads):
     FakeOpenAI.instances.clear()
     monkeypatch.setattr(openai, "OpenAI", FakeOpenAI)
     runpy.run_path(str(SCRIPT), run_name="__main__")
@@ -96,3 +118,15 @@ def test_prints_a_heading_before_each_part(calls, capsys):
     assert positions == sorted(positions)
     assert "10 8" in output
     assert "Input tokens: 30" in output
+
+
+def test_loads_env_file_before_creating_the_client(calls, env_loads):
+    assert env_loads.count == 1
+    assert env_loads.clients_before_first_load == 0
+
+
+def test_env_loading_sits_above_the_slide_code():
+    source = SCRIPT.read_text(encoding="utf-8")
+
+    assert source.index("load_dotenv()") < source.index("=== Part 1: first call ===")
+    assert source.index("load_dotenv()") < source.index(SLIDE_ONE)

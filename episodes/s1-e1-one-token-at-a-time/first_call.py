@@ -4,8 +4,15 @@ Run from the repository root:
 
     uv run python episodes/s1-e1-one-token-at-a-time/first_call.py
 
-Needs OPENAI_API_KEY set in your environment. See README.md in this folder.
+Needs OPENAI_API_KEY, either in the repository's .env file or set in your environment.
+See README.md in this folder.
 """
+
+from dotenv import load_dotenv
+
+# Copies OPENAI_API_KEY from the .env file into the environment, if it is not already set.
+# Everything below this line matches the slides.
+load_dotenv()
 
 print("\n=== Part 1: first call ===\n")
 
