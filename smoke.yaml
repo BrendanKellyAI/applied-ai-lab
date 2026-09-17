@@ -1,33 +1,37 @@
-# One tiny call per model and mode, to check API keys and adapters before any paid run.
-# Covers the models chosen for S1 E7 and S1 E10, at the lowest reasoning setting each allows
-# and at low reasoning with thinking shown. Smoke fails if a model reports reasoning tokens
-# with reasoning set to off. Every model must be listed in src/lab/providers/capabilities.yaml.
+# A few tiny calls per model, to check API keys and adapters before any paid run.
+# Covers the models chosen for S1 E7 and S1 E10, with the same two modes S1 E10 uses:
+#   lowest  the lowest reasoning setting the model allows, with a trivial prompt
+#   high    high reasoning with thinking shown, with a prompt that needs reasoning, so the
+#           thinking fields can be checked
+# Smoke fails if a field is missing, if a model reports reasoning tokens with reasoning off, or
+# if a model does not think when thinking is shown. Run with --fresh to re-measure latency.
+# Every model must be listed in src/lab/providers/capabilities.yaml.
 experiment: smoke
-description: Check keys, adapters, and every result field with a tiny call
+description: Check keys, adapters, and every result field with tiny calls
 seed: 20260916
 parameters:
   prompt: "Reply with the single word: ready"
+  thinking_prompt: >-
+    How many times does the letter r appear in the words strawberry, raspberry, and cranberry
+    combined? Reply with the number only.
 models:
   # S1 E7 and S1 E10
   - provider: openai
     model: gpt-5.6-terra
     modes:
-      off: { reasoning: off, temperature: null, max_output_tokens: 16 }
-      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 16 }
+      high: { reasoning: high, temperature: null, max_output_tokens: 8000, show_thinking: true }
   # S1 E7 and S1 E10
   - provider: anthropic
     model: claude-sonnet-5
     modes:
-      off: { reasoning: off, temperature: null, max_output_tokens: 16 }
-      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
-  # S1 E7: checks that thinking is genuinely off
-  - provider: google
-    model: gemini-2.5-flash
-    modes:
-      off: { reasoning: off, temperature: null, max_output_tokens: 16 }
-  # S1 E10: minimal is the lowest level, so it gets room for reasoning tokens
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 16 }
+      high: { reasoning: high, temperature: null, max_output_tokens: 8000, show_thinking: true }
+  # S1 E7 and S1 E10. Gemini 2.5 Flash, which could fully disable thinking, is closed to new
+  # API users. "minimal" is Gemini 3.6 Flash's lowest level and does not guarantee no thinking,
+  # so its output limit leaves room for reasoning tokens.
   - provider: google
     model: gemini-3.6-flash
     modes:
-      minimal: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
-      low: { reasoning: low, temperature: null, max_output_tokens: 1024, show_thinking: true }
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
+      high: { reasoning: high, temperature: null, max_output_tokens: 8000, show_thinking: true }
