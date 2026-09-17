@@ -1,0 +1,26 @@
+# Copy to prices.local.yaml (gitignored) and fill in your own values.
+# Used only by `lab estimate` and the budget check in `lab run`, to protect your API budget.
+# Published results never include prices; costs appear only as ratios.
+#
+# Prices are per 1 million tokens, from each provider's pricing page. Leave a price blank if
+# unknown; the estimator then shows tokens without a cost.
+
+currency: USD
+prices_checked:
+
+prices:
+  openai:
+    # https://developers.openai.com/api/docs/pricing
+    gpt-5.6-terra: { input: , cached_input: , output: }
+  anthropic:
+    # https://platform.claude.com/docs/en/about-claude/pricing
+    claude-sonnet-5: { input: , cached_input: , output: }
+  google:
+    # https://ai.google.dev/gemini-api/docs/pricing
+    gemini-3.6-flash: { input: , cached_input: , output: }
+
+# Maximum estimated spend on uncached calls, per experiment, covering the pilot and full run.
+# `lab run` refuses to start if the estimate for the calls it would make exceeds this.
+budgets:
+  s1-e7-lost-in-the-middle:
+  s1-e10-reasoning-vs-standard:
