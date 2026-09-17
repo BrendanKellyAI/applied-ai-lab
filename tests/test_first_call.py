@@ -20,8 +20,8 @@ first = client.responses.create(
     input="My name is Brendan.",
 )
 print(first.output_text)
-print(first.usage.input_tokens,
-      first.usage.output_tokens)
+print("Input tokens:", first.usage.input_tokens)
+print("Output tokens:", first.usage.output_tokens)
 """
 
 SLIDE_TWO = """second = client.responses.create(
@@ -42,7 +42,14 @@ class FakeResponses:
         reply = replies[len(self.calls) - 1]
         return SimpleNamespace(
             output_text=reply,
-            usage=SimpleNamespace(input_tokens=10 * len(self.calls), output_tokens=8),
+            usage=SimpleNamespace(
+                input_tokens=10 * len(self.calls),
+                output_tokens=8 + len(self.calls),
+                # The first call reasons a little; the others do not, to check 0 is printed.
+                output_tokens_details=SimpleNamespace(
+                    reasoning_tokens=5 if len(self.calls) == 1 else 0
+                ),
+            ),
         )
 
 
@@ -116,8 +123,21 @@ def test_prints_a_heading_before_each_part(calls, capsys):
     ]
     positions = [output.index(heading) for heading in headings]
     assert positions == sorted(positions)
-    assert "10 8" in output
-    assert "Input tokens: 30" in output
+
+
+def test_every_part_labels_its_token_counts_including_zero(calls, capsys):
+    output = capsys.readouterr().out
+    parts = output.split("=== Part ")[1:]
+
+    expected = [
+        ("Input tokens: 10", "Output tokens: 9", "Reasoning tokens (included in output): 5"),
+        ("Input tokens: 20", "Output tokens: 10", "Reasoning tokens (included in output): 0"),
+        ("Input tokens: 30", "Output tokens: 11", "Reasoning tokens (included in output): 0"),
+    ]
+    assert len(parts) == 3
+    for part, lines in zip(parts, expected, strict=True):
+        for line in lines:
+            assert line in part
 
 
 def test_loads_env_file_before_creating_the_client(calls, env_loads):

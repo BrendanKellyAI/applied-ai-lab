@@ -6,7 +6,13 @@ This sample does not use the lab harness. It calls the OpenAI Python SDK directl
 
 ## What it does
 
-**Part 1: first call.** Sends "My name is Brendan." to the model and prints the reply. It then prints two numbers from the usage fields: input tokens (what you sent) and output tokens (what the model produced). You are billed for both.
+Every part prints the reply, then three labelled token counts from the usage fields:
+
+- **Input tokens:** what you sent, including a little formatting the API adds around each message.
+- **Output tokens:** what the model produced. You are billed for input and output.
+- **Reasoning tokens (included in output):** hidden thinking before the reply. `gpt-6-astra` always reasons a little, so output tokens can be higher than the visible reply suggests. It can also be 0.
+
+**Part 1: first call.** Sends "My name is Brendan." to the model and prints the reply and its token counts.
 
 **Part 2: second call, no history.** Sends "What is my name?" on its own. The model cannot answer, because it has no memory between calls. Each call starts from nothing.
 

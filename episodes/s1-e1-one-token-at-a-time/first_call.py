@@ -26,8 +26,9 @@ first = client.responses.create(
     input="My name is Brendan.",
 )
 print(first.output_text)
-print(first.usage.input_tokens,
-      first.usage.output_tokens)
+print("Input tokens:", first.usage.input_tokens)
+print("Output tokens:", first.usage.output_tokens)
+print("Reasoning tokens (included in output):", first.usage.output_tokens_details.reasoning_tokens)
 
 print("\n=== Part 2: second call, no history ===\n")
 
@@ -36,6 +37,9 @@ second = client.responses.create(
     input="What is my name?",
 )
 print(second.output_text)
+print("Input tokens:", second.usage.input_tokens)
+print("Output tokens:", second.usage.output_tokens)
+print("Reasoning tokens (included in output):", second.usage.output_tokens_details.reasoning_tokens)
 
 print("\n=== Part 3: third call, with history ===\n")
 
@@ -52,3 +56,5 @@ third = client.responses.create(
 )
 print(third.output_text)
 print("Input tokens:", third.usage.input_tokens)
+print("Output tokens:", third.usage.output_tokens)
+print("Reasoning tokens (included in output):", third.usage.output_tokens_details.reasoning_tokens)
