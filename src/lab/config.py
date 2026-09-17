@@ -105,6 +105,8 @@ class ExperimentConfig(BaseModel):
     limits: dict[ProviderName, ProviderLimits] = Field(default_factory=dict)
     pilot: PilotConfig = StratifiedPilot(strategy="stratified")
     call_order: Literal["planned", "shuffled"] = "planned"
+    # Whether latency is part of the findings. If not, the estimator notes batch API savings.
+    measures_latency: bool = True
 
     @model_validator(mode="after")
     def _labels_unique(self) -> "ExperimentConfig":

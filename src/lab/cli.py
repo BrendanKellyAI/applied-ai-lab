@@ -1,6 +1,6 @@
 """Command line entry point for the lab harness.
 
-Commands estimate, run, and analyse are added in later build phases.
+Commands run and analyse are added with the field notes in later build phases.
 """
 
 import logging
@@ -14,7 +14,10 @@ from dotenv import load_dotenv
 from lab import __version__
 from lab.cache import ResponseCache
 from lab.config import ConfigError, load_config
+from lab.estimate import build_report, default_token_counter, format_report
+from lab.experiments import load_plan_function, results_dir
 from lab.plan import PlanError
+from lab.prices import load_prices
 from lab.providers.base import UnsupportedSettingError
 from lab.providers.registry import available_providers
 from lab.raw_log import latest_successful, load_records
@@ -42,6 +45,30 @@ def main(
 ) -> None:
     """Run and analyse applied-ai-lab experiments."""
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
+
+
+@app.command()
+def estimate(
+    config: Annotated[Path, typer.Argument(help="Experiment config.yaml.")],
+    prices: Annotated[Path, typer.Option(help="Local prices file.")] = Path("prices.local.yaml"),
+    cache_dir: Annotated[Path, typer.Option(help="Response cache folder.")] = Path(".cache"),
+) -> None:
+    """Estimate tokens and cost for the pilot and the full run. Makes no API calls."""
+    try:
+        experiment = load_config(config)
+        calls = load_plan_function(config)(experiment, config.parent)
+        report = build_report(
+            experiment,
+            calls,
+            cache=ResponseCache(cache_dir),
+            prior_records=load_records(results_dir(config) / "raw.jsonl"),
+            prices=load_prices(prices),
+            count_tokens=default_token_counter(),
+        )
+    except (ConfigError, PlanError) as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=2) from exc
+    typer.echo(format_report(report))
 
 
 @app.command()
