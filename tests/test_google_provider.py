@@ -69,6 +69,12 @@ def test_reasoning_level_maps_to_thinking_level_with_thoughts():
     assert config.thinking_config.include_thoughts is True
 
 
+def test_automatic_function_calling_is_disabled():
+    config = build_config(_request())
+
+    assert config.automatic_function_calling.disable is True
+
+
 def test_reasoning_off_sets_thinking_budget_zero():
     request = _request(model="gemini-2.5-flash", reasoning="off", show_thinking=False, system=None)
 

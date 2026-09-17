@@ -83,7 +83,11 @@ class GoogleProvider:
 
 
 def build_config(request: GenerationRequest) -> types.GenerateContentConfig:
-    fields: dict[str, Any] = {"max_output_tokens": request.max_output_tokens}
+    fields: dict[str, Any] = {
+        "max_output_tokens": request.max_output_tokens,
+        # No tools are passed; disabling this silences an SDK warning and rules out tool calls.
+        "automatic_function_calling": types.AutomaticFunctionCallingConfig(disable=True),
+    }
     if request.system is not None:
         fields["system_instruction"] = request.system
     if request.temperature is not None:

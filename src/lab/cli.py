@@ -4,6 +4,7 @@ Commands estimate, run, and analyse are added in later build phases.
 """
 
 import logging
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Annotated
 
@@ -18,7 +19,7 @@ from lab.providers.base import UnsupportedSettingError
 from lab.providers.registry import available_providers
 from lab.raw_log import latest_successful, load_records
 from lab.runner import Runner, format_summary
-from lab.smoke import describe, missing_fields, plan_smoke, reasoning_warnings
+from lab.smoke import describe, plan_smoke, problems
 
 app = typer.Typer(help="Run and analyse applied-ai-lab experiments.", no_args_is_help=True)
 
@@ -48,6 +49,9 @@ def smoke(
     config: Annotated[Path, typer.Option(help="Smoke test config.")] = Path("smoke.yaml"),
     cache_dir: Annotated[Path, typer.Option(help="Response cache folder.")] = Path(".cache"),
     env_file: Annotated[Path, typer.Option(help="File to read API keys from.")] = Path(".env"),
+    fresh: Annotated[
+        bool, typer.Option(help="Ignore cached responses and make new calls, to re-measure.")
+    ] = False,
 ) -> None:
     """Make one tiny call per configured model and mode, and show every result field."""
     load_dotenv(env_file, override=False)
@@ -65,8 +69,8 @@ def smoke(
             cache=ResponseCache(cache_dir),
             limits={name: experiment.limits_for(name) for name in available.providers},
         )
-        raw_path = cache_dir / "smoke" / "raw.jsonl"
-        summary = runner.run(calls, raw_path)
+        raw_path = _smoke_log_path(cache_dir, fresh)
+        summary = runner.run(calls, raw_path, use_cache=not fresh)
     except (ConfigError, PlanError, UnsupportedSettingError) as exc:
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=2) from exc
@@ -75,15 +79,12 @@ def smoke(
     incomplete = False
     for call in calls:
         record = latest.get(call.call_id)
-        expects_thinking = call.request.show_thinking
         if record is None:
             typer.echo(f"{call.model_label} [{call.mode}]: FAILED, see warnings above")
             incomplete = True
             continue
-        reasoning = call.request.reasoning
-        typer.echo("\n".join(describe(record, expects_thinking, reasoning)))
-        problems = missing_fields(record, expects_thinking) + reasoning_warnings(record, reasoning)
-        incomplete = incomplete or bool(problems)
+        typer.echo("\n".join(describe(record, call.request)))
+        incomplete = incomplete or bool(problems(record, call.request))
     typer.echo("")
     typer.echo(format_summary(summary))
     if incomplete:
@@ -92,3 +93,10 @@ def smoke(
             err=True,
         )
         raise typer.Exit(code=1)
+
+
+def _smoke_log_path(cache_dir: Path, fresh: bool) -> Path:
+    if not fresh:
+        return cache_dir / "smoke" / "raw.jsonl"
+    stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
+    return cache_dir / "smoke-fresh" / stamp / "raw.jsonl"
