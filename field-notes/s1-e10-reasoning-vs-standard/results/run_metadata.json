@@ -1,0 +1,191 @@
+{
+  "experiment": "s1-e10-reasoning-vs-standard",
+  "started_utc": "2026-09-18T19:15:00.131517+00:00",
+  "ended_utc": "2026-09-18T20:27:41.259373+00:00",
+  "git": {
+    "commit": "44005a5b0dcf6f37cc9181fe7e4c625e2e5add90",
+    "dirty": false
+  },
+  "harness_version": "0.1.0",
+  "python_version": "3.13.7",
+  "sdk_versions": {
+    "openai": "3.14.1",
+    "anthropic": "1.6.0",
+    "google-genai": "2.23.0"
+  },
+  "models": [
+    {
+      "label": "GPT-5.6 Terra",
+      "provider": "openai",
+      "model_requested": "gpt-5.6-terra",
+      "model_versions_returned": [
+        "gpt-5.6-terra"
+      ]
+    },
+    {
+      "label": "Claude Sonnet 5",
+      "provider": "anthropic",
+      "model_requested": "claude-sonnet-5",
+      "model_versions_returned": [
+        "claude-sonnet-5"
+      ]
+    },
+    {
+      "label": "Gemini 3.6 Flash",
+      "provider": "google",
+      "model_requested": "gemini-3.6-flash",
+      "model_versions_returned": [
+        "gemini-3.6-flash"
+      ]
+    }
+  ],
+  "config": {
+    "experiment": "s1-e10-reasoning-vs-standard",
+    "description": "Accuracy, tokens, and latency with reasoning at its lowest setting and at high",
+    "seed": 20260918,
+    "models": [
+      {
+        "provider": "openai",
+        "model": "gpt-5.6-terra",
+        "label": "GPT-5.6 Terra",
+        "modes": {
+          "lowest": {
+            "reasoning": "off",
+            "temperature": null,
+            "max_output_tokens": 2000,
+            "show_thinking": false
+          },
+          "high": {
+            "reasoning": "high",
+            "temperature": null,
+            "max_output_tokens": 16000,
+            "show_thinking": true
+          }
+        }
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5",
+        "label": "Claude Sonnet 5",
+        "modes": {
+          "lowest": {
+            "reasoning": "off",
+            "temperature": null,
+            "max_output_tokens": 2000,
+            "show_thinking": false
+          },
+          "high": {
+            "reasoning": "high",
+            "temperature": null,
+            "max_output_tokens": 16000,
+            "show_thinking": true
+          }
+        }
+      },
+      {
+        "provider": "google",
+        "model": "gemini-3.6-flash",
+        "label": "Gemini 3.6 Flash",
+        "modes": {
+          "lowest": {
+            "reasoning": "minimal",
+            "temperature": null,
+            "max_output_tokens": 2000,
+            "show_thinking": false
+          },
+          "high": {
+            "reasoning": "high",
+            "temperature": null,
+            "max_output_tokens": 16000,
+            "show_thinking": true
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "tasks": [
+        "extraction",
+        "arithmetic",
+        "state-tracking",
+        "constraint-puzzle"
+      ],
+      "items_per_task": 30
+    },
+    "limits": {
+      "openai": {
+        "max_concurrency": 2,
+        "requests_per_minute": 30
+      },
+      "anthropic": {
+        "max_concurrency": 2,
+        "requests_per_minute": 30
+      },
+      "google": {
+        "max_concurrency": 2,
+        "requests_per_minute": 30
+      }
+    },
+    "pilot": {
+      "strategy": "stratified",
+      "fraction": 0.05,
+      "strata": [
+        "task",
+        "mode"
+      ]
+    },
+    "call_order": "shuffled",
+    "measures_latency": true
+  },
+  "datasets": [
+    {
+      "name": "S1 E10 generated task items",
+      "version": "seed 20260918, 30 items per task",
+      "licence": "Generated from the config seed for this repository. No third-party content.",
+      "url": null,
+      "checksum": "sha256:c7df8a6a6a83a7a304db56de90899ba896a8591c6ef9abd63d6505e8dfa39470"
+    }
+  ],
+  "counts": {
+    "planned": 720,
+    "complete": 720,
+    "failed": 0,
+    "not_run": 0,
+    "from_cache": 0
+  },
+  "passes": [
+    {
+      "started_utc": "2026-09-18T20:11:19.950263+00:00",
+      "ended_utc": "2026-09-18T20:12:19.733647+00:00",
+      "git": {
+        "commit": "44005a5b0dcf6f37cc9181fe7e4c625e2e5add90",
+        "dirty": false
+      },
+      "pilot": true,
+      "provider": null,
+      "counts": {
+        "planned": 36,
+        "already_complete": 30,
+        "cached": 0,
+        "made": 6,
+        "failed": 0
+      }
+    },
+    {
+      "started_utc": "2026-09-18T20:16:16.348838+00:00",
+      "ended_utc": "2026-09-18T20:27:41.403644+00:00",
+      "git": {
+        "commit": "44005a5b0dcf6f37cc9181fe7e4c625e2e5add90",
+        "dirty": false
+      },
+      "pilot": false,
+      "provider": null,
+      "counts": {
+        "planned": 720,
+        "already_complete": 36,
+        "cached": 0,
+        "made": 684,
+        "failed": 0
+      }
+    }
+  ]
+}
