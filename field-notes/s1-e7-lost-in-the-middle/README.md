@@ -1,12 +1,15 @@
 # S1 E7: Lost in the middle
 
-> Work in progress. The method, dataset, and analysis are built and tested. The results and what
-> they mean are filled in after the pilot and full run, which need the owner's approval because
-> they spend API budget.
-
 ## Summary
 
-To follow after the run.
+**Position did not matter.** Three current mid-tier models, GPT-5.6 Terra, Claude Sonnet 5, and
+Gemini 3.6 Flash, retrieved an invented fact from a public-domain novel in **all 270 of 270
+calls**: at the start, the middle, and the end of the document, at 4,000, 16,000, and 64,000
+tokens. The "lost in the middle" effect reported in 2023 did not appear at all.
+
+That is a finding about the easiest form of long-context work, a single out-of-place sentence to
+look up, at lengths well inside these models' windows. It does not show that long documents are
+now read perfectly, and the limitations below say why.
 
 ## The question
 
@@ -88,22 +91,67 @@ Gutenberg's robot policy. See [`datasets/README.md`](../../datasets/README.md).
 
 ## Results
 
-To follow after the run. The analysis writes:
+Run on 18 September 2026, between 19:13 and 19:40 UTC.
 
-- `results/summary.csv`, one row per call, including the reasoning level each model ran with
-- `results/charts/accuracy-heatmap-<model>.png` and `.svg`, position against context length, with
-  the largest drop from the 0% position outlined in acid green
-- `results/charts/accuracy-by-position-64000.png` and `.svg`, accuracy by position at 64,000
-  tokens, with the model that dips deepest between the 25% and 75% positions in acid green
+| | Correct | 95% interval |
+|---|---|---|
+| All calls | 270 of 270 | 98.6% to 100% |
+| GPT-5.6 Terra | 90 of 90 | 95.9% to 100% |
+| Claude Sonnet 5 | 90 of 90 | 95.9% to 100% |
+| Gemini 3.6 Flash | 90 of 90 | 95.9% to 100% |
+| The middle (25% to 75%) at 64,000 tokens, all models | 54 of 54 | 93.4% to 100% |
+
+Every one of the 45 cells, each model at each length and position, scored 6 of 6. With six calls a
+cell, a perfect score is compatible with a true accuracy as low as 61%, which is why the pooled
+figures above are the ones to quote.
+
+- **Nothing was highlighted.** The charts' rules colour the largest drop from the 0% position,
+  and the model that dips deepest in the middle. No cell dropped and no model dipped, so every
+  chart says so rather than colouring anything.
+- **Reasoning stayed off.** GPT-5.6 Terra and Claude Sonnet 5 reported 0 reasoning tokens on every
+  call. Gemini 3.6 Flash, which cannot turn thinking off, ran at `minimal`. It reported no
+  reasoning count at all, and it used at most 4 output tokens on any call, a count that includes
+  any reasoning. So it did not reason either, even at 64,000 tokens.
+- **No answer was cut short.** Every response finished normally.
+- **Tokenisers differ more than expected.** For the same documents, Claude Sonnet 5 counted 42%
+  more input tokens than GPT-5.6 Terra (3,575,215 against 2,522,307). The target lengths in this
+  note are measured with `o200k_base`, the tokeniser GPT-5.6 Terra uses.
+- **Gemini cached a quarter of its input automatically** (25%), because the paired design gives
+  many prompts a shared opening. This changes cost, not accuracy.
+
+The charts:
+
+- `results/charts/accuracy-heatmap-<model>.png`: position against context length, per model
+- `results/charts/accuracy-by-position-64000.png`: accuracy by position at 64,000 tokens
 
 ## What it means
 
-To follow after the run.
+**For looking up a single fact in a document of up to 64,000 tokens, where the fact sits no
+longer matters for these three models.** The practical advice that followed the 2023 paper, to
+put the important material at the start or the end of a long prompt, buys nothing for this kind
+of lookup at these lengths.
+
+It would be a mistake to read more into it than that:
+
+- **This is the easiest long-context task there is.** One invented sentence about a turbine code,
+  dropped into a nineteenth-century novel, stands out on style alone. Real documents hide the answer in
+  text that looks like everything around it, and real questions often need several facts combined.
+- **64,000 tokens is a fraction of these models' windows.** Whether position starts to matter at
+  hundreds of thousands of tokens is not tested here.
+- **The result is a ceiling.** Every model scored perfectly, so this experiment cannot rank them.
+  A harder version, with distractor facts that look like the target, or questions that need two
+  facts from different parts of the document, would be needed to separate them.
+
+The useful conclusion for anyone building with these models: simple retrieval from a long
+document is no longer the risk it was, so test the harder shapes of your own task, several facts,
+look-alike distractors, reasoning across the document, before trusting a long context with them.
 
 ## Limitations
 
 - A single inserted fact is easier than real multi-document reasoning. This measures retrieval,
   not comprehension.
+- Every model scored 100%, so the experiment hit its ceiling and cannot rank the models or show
+  how close any of them is to failing.
 - Six facts per cell gives wide confidence intervals. The intervals are published with every
   number, and differences that fall inside them are not claimed as findings.
 - Results apply to the specific model versions and dates recorded in `results/run_metadata.json`.
@@ -158,6 +206,12 @@ uv run python field-notes/s1-e7-lost-in-the-middle/build_dataset.py
 ## Run metadata
 
 Every run writes `results/run_metadata.json`: the git commit and whether the tree was clean, the
-harness, Python, and SDK versions, start and end times in UTC, the models requested and the
-versions returned, the full config, the source books with their licences and checksums, and
-counts of calls planned, cached, made, and failed. It never contains prices or keys.
+harness, Python, and SDK versions, the run window in UTC, the models requested and the versions
+returned, the full config, the source books with their licences and checksums, counts across the
+whole grid, and a list of every pass over the results. It never contains prices or keys.
+
+This run took three passes: the 21-call pilot, the full run, and a retry of three calls that hit
+OpenAI's per-minute token limit. The list of passes was added to the metadata after the run, so
+it starts with a later pass that made no calls; the run window and counts are taken from the
+recorded results themselves, and cover all three passes. Every model returned the exact version
+requested: `gpt-5.6-terra`, `claude-sonnet-5`, and `gemini-3.6-flash`.
