@@ -170,7 +170,7 @@ def analyse(
                 err=True,
             )
             raise typer.Exit(code=2)
-        report = load_analyse_function(config)(experiment, config.parent, records)
+        report = load_analyse_function(config)(experiment, config.parent, records, folder)
     except (ConfigError, PlanError) as exc:
         typer.echo(f"Error: {exc}", err=True)
         raise typer.Exit(code=2) from exc

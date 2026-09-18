@@ -277,13 +277,31 @@ class TestReportText:
 
         report = module.analyse(config, tmp_path, records)
 
-        assert "reasoning tokens" in report.lower()
-        assert "Gemini 3.6 Flash" in report
+        assert "Gemini 3.6 Flash (level minimal): 64 reasoning tokens" in report
+        assert "not fully off" in report
 
     def test_says_so_when_no_model_reasoned(self, module, config, facts, tmp_path, no_charts):
         report = module.analyse(config, tmp_path, _full_grid(config, facts))
 
-        assert "no reasoning tokens" in report.lower()
+        assert "GPT-5.6 Terra (level off): 0 reasoning tokens on every call" in report
+
+    def test_an_unreported_count_is_not_called_zero(
+        self, module, config, facts, tmp_path, no_charts
+    ):
+        """Gemini leaves the count out when it does not think, which is not the same as 0."""
+        records = [
+            record.model_copy(
+                update={"result": record.result.model_copy(update={"reasoning_tokens": None})}
+            )
+            if record.model_label == "Gemini 3.6 Flash"
+            else record
+            for record in _full_grid(config, facts)
+        ]
+
+        report = module.analyse(config, tmp_path, records)
+
+        assert "Gemini 3.6 Flash (level minimal): reasoning not reported" in report
+        assert "which includes any reasoning" in report
 
     def test_reports_cached_input_tokens(self, module, config, facts, tmp_path, no_charts):
         records = _full_grid(config, facts)
@@ -387,3 +405,21 @@ class TestCharts:
         cells = module.accuracy_by_cell(_full_grid(config, facts), facts)
 
         assert module.deepest_dip_model(cells, 64000) is None
+
+
+class TestPartialGrid:
+    def test_a_pilot_shaped_grid_is_analysed_without_heatmaps(
+        self, module, config, facts, tmp_path
+    ):
+        """The S1 E7 pilot covers 4,000 tokens fully but 16,000 and 64,000 only at 50%."""
+        records = [
+            record
+            for record in _full_grid(config, facts)
+            if record.cell["context_length_tokens"] == 4000 or record.cell["position_percent"] == 50
+        ]
+
+        report = module.analyse(config, tmp_path, records)
+
+        charts = tmp_path / "results" / "charts"
+        assert not list(charts.glob(f"{module.HEATMAP_NAME}-*")) if charts.exists() else True
+        assert "Heatmaps not drawn" in report
