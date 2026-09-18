@@ -1,12 +1,18 @@
 # S1 E10: Reasoning versus standard
 
-> Work in progress. The tasks, method, and analysis are built and tested. The results and what
-> they mean are filled in after the pilot and full run, which need the owner's approval because
-> they spend API budget.
-
 ## Summary
 
-To follow after the run.
+**Reasoning paid off on the two tasks that need several steps held in mind, and on nothing
+else.** Across three models and 720 calls, turning reasoning from its lowest setting to high
+raised accuracy on state tracking by 18.9 points and on constraint puzzles by 21.1 points. On
+extraction and short arithmetic it changed nothing beyond chance, while still costing more
+tokens and time.
+
+**Almost all of that gain came from one model.** GPT-5.6 Terra answers instantly with reasoning
+off, in about nine tokens, and gets hard problems wrong that way. Claude Sonnet 5 and Gemini 3.6
+Flash work the problem through in their visible reply even at their lowest setting, so they were
+already right, and turning reasoning up added little. The setting matters most for a model that
+would otherwise answer without thinking at all.
 
 ## The question
 
@@ -93,27 +99,97 @@ the pilot has run; after it, the full run is projected from what the pilot actua
 
 ## Results
 
-To follow after the run. The analysis writes:
+Run on 18 September 2026, between 19:15 and 20:27 UTC. All 720 calls completed.
 
-- `results/summary.csv`, one row per call, including the reasoning level and whether thinking was
-  shown
-- `results/charts/accuracy-by-task.png` and `.svg`, accuracy in both modes per task, with the
-  high bar in acid green for the task with the largest gain whose 95% interval excludes zero
-- `results/charts/output-token-multiple-by-task.png` and `.svg`, how many times more output
-  tokens high reasoning billed, with the largest multiple in acid green
-- `results/charts/cost-of-accuracy.png` and `.svg`, extra output tokens against accuracy gained,
-  one point per model and task, with the best accuracy per 1,000 extra tokens in acid green
-- `results/charts/two-kinds-of-first-token.png` and `.svg`, time to first thinking against time
-  to first answer token, with the longest wait in acid green
+**Accuracy change from lowest to high reasoning**, paired over the same items, three models and
+30 items per task, so 90 pairs each:
+
+| Task | Change | 95% interval | |
+|---|---|---|---|
+| Extraction | +0.0 points | -4.1 to +4.1 | within chance |
+| Short arithmetic | -3.3 points | -9.8 to +2.2 | within chance |
+| State tracking | **+18.9 points** | +10.2 to +28.4 | clear of chance |
+| Constraint puzzles | **+21.1 points** | +13.1 to +30.5 | clear of chance |
+
+**Correct answers out of 30, lowest then high:**
+
+| Model | Extraction | Arithmetic | State tracking | Puzzles |
+|---|---|---|---|---|
+| GPT-5.6 Terra | 30, 30 | 30, 30 | **14, 30** | **11, 28** |
+| Claude Sonnet 5 | 30, 30 | 30, 30 | 30, 30 | 29, 30 |
+| Gemini 3.6 Flash | 30, 30 | 28, 25 | 28, 29 | 29, 30 |
+
+The acid green bar on the accuracy chart is constraint puzzles: the largest gain whose interval
+excludes zero **and** where every model moved the same way. State tracking also cleared
+chance, but Claude Sonnet 5 did not move on it, so it does not qualify.
+
+**What high reasoning cost**, median and 90th percentile:
+
+| Model | Output tokens, lowest | Output tokens, high | Total time, lowest | Total time, high |
+|---|---|---|---|---|
+| GPT-5.6 Terra | 9 / 22 | 42 / 284 | 1.1s / 2.3s | 2.9s / 7.4s |
+| Claude Sonnet 5 | 66 / 1,093 | 65 / 1,802 | 2.1s / 10.0s | 3.3s / 15.9s |
+| Gemini 3.6 Flash | 94 / 636 | 706 / 3,175 | 1.6s / 4.2s | 4.4s / 17.2s |
+
+- **Terra's gain was cheap in tokens.** On state tracking it went from 14 to 30 correct for about
+  50 extra output tokens an item. Its multiples look large, 7x and 13x, only because its lowest
+  setting uses almost nothing.
+- **Claude used no more tokens at high than at lowest.** Hidden thinking replaced the working it
+  otherwise writes out in the reply; on state tracking it billed half as many output tokens.
+- **Gemini paid the most for the least.** It billed 4.6x to 16x the output tokens at high and gained
+  at most one item per task.
+- **Two kinds of first token.** With thinking shown, all three providers streamed thinking before
+  any answer: after a median of 0.9 to 2.0 seconds, against 2.8 to 4.2 seconds for the first
+  answer token. A user watching sees activity well before the answer starts.
+
+**Parse rate 99.0%.** Seven responses had no `ANSWER:` line and are scored incorrect, as agreed
+before the run. Six were Gemini 3.6 Flash at high replying with the number alone, and every one of
+those numbers was right. Accepting a bare number would change Gemini's arithmetic figure from -10
+points to +6.7, and the pooled arithmetic change from -3.3 to +2.2, both still within chance. It
+would not change any conclusion above. The seventh was Claude Sonnet 5 at lowest on a puzzle,
+which searched through the orders in its reply and ran past its 2,000-token limit, the only
+response of the 720 to do so.
+
+The charts:
+
+- `results/charts/accuracy-by-task.png`: accuracy in both modes per task
+- `results/charts/output-token-multiple-by-task.png`: how many times more output tokens high used
+- `results/charts/cost-of-accuracy.png`: extra output tokens against accuracy gained, per model
+  and task
+- `results/charts/two-kinds-of-first-token.png`: time to first thinking against time to first
+  answer token
 
 ## What it means
 
-To follow after the run.
+**Turn reasoning on for problems that need several steps held in mind at once, and leave it off
+for lookups and simple sums.** On extraction and two- or three-step arithmetic, high reasoning
+bought nothing on any model and cost up to 16 times the output tokens and up to 2.3 times the wait.
+
+**Whether it pays depends as much on the model as on the task.** A model that answers
+instantly with reasoning off, as GPT-5.6 Terra does, gains a great deal from turning it on, and
+cheaply. A model that already writes its working into the reply, as Claude Sonnet 5 and Gemini
+3.6 Flash do, has most of the benefit already; turning reasoning up moves the thinking out of
+sight rather than adding much. "Reasoning off" is therefore not one condition across providers,
+and a comparison between models at "off" is partly a comparison of how chatty each one is.
+
+**Pilot before you commit.** Reasoning cost was hard to predict: the estimate before the pilot,
+bounded by the output limit, was $55.82; the full run itself cost about $2. And the first version of
+these tasks was too easy for any model to show a difference, which only the pilot revealed.
+
+This is the evidence behind the S1 E11 decision framework, "When is a reasoning model worth the
+cost?".
 
 ## Limitations
 
 - Synthetic tasks represent task shapes, not every real workload. Thirty items per task detects
   large effects only.
+- State tracking and the puzzles were made harder after the first pilot, in which every model
+  answered every item correctly. The final tasks were then fixed before the full run, and the
+  scoring rule was not changed after seeing results.
+- Most models were at or near 100% on most tasks even at the lowest setting, so this measures
+  where reasoning helps on these task shapes, not how far each model is from its limit.
+- The pooled intervals treat 90 pairs as independent when they are 30 items put to three models,
+  so they are slightly optimistic; the chart's highlight also requires every model to agree.
 - Gemini 3.6 Flash cannot fully disable thinking, so its lower mode is `minimal` rather than off.
   Its accuracy and token gains from reasoning may be understated compared with the other two.
 - Reasoning token reporting differs between providers. Token multiples use billed output tokens,

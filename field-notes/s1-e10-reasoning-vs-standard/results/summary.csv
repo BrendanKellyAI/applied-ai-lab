@@ -1,0 +1,721 @@
+model,provider,model_returned,mode,reasoning,show_thinking,task,item_index,answer_expected,answer_given,parsed,correct,input_tokens,cached_input_tokens,output_tokens,reasoning_tokens,time_to_first_thinking_ms,time_to_first_answer_token_ms,total_latency_ms,finish_reason
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,0,77,77,True,True,97,0,43,32,730.8428999995158,1876.6692999997758,1886.1110999996527,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,0,77,77,True,True,97,0,67,0,,926.3900000005378,1384.7697000001062,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,1,45,45,True,True,87,0,86,14,1340.4356999999436,2819.075899999916,2822.7579999993395,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,1,45,45,True,True,87,0,56,0,,1195.0634000004356,1826.5559000001304,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,2,925,925,True,True,96,0,65,55,1320.4254000002038,4301.390300000094,4327.7992000003,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,2,925,925,True,True,96,0,66,0,,952.8699000002234,1394.520100000591,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,3,48,48,True,True,100,0,35,25,1076.371900000595,3308.4687999999005,3313.9561000007234,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,3,48,48,True,True,100,0,40,0,,1296.1499000000458,2085.0622000000385,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,4,91,91,True,True,93,0,98,45,977.5758000005226,2273.634099999981,2284.3236999997316,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,4,91,91,True,True,93,0,58,0,,1252.923600000031,2144.0647999997964,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,5,143,143,True,True,97,0,44,33,1090.3378000002704,3689.354500000263,3692.0051000006424,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,5,143,143,True,True,97,0,66,0,,912.7967000003991,1396.6801000005944,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,6,96,96,True,True,87,0,36,27,1150.905600000442,2560.230600000068,2616.2156999998842,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,6,96,96,True,True,87,0,40,0,,914.5917999994708,1151.5847000000576,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,7,700,700,True,True,96,0,67,57,1184.3798999998398,3550.609699999768,3554.168700000446,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,7,700,700,True,True,96,0,85,0,,782.4048000002222,1498.279299999922,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,8,273,273,True,True,100,0,31,21,1006.2694999996893,3120.0850999994145,3122.5589999994554,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,8,273,273,True,True,100,0,44,0,,914.5099999996091,1228.396900000007,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,9,8,8,True,True,93,0,116,45,1057.4005999997098,3213.3426000000327,3223.038600000109,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,9,8,8,True,True,93,0,58,0,,894.7404000000461,1325.9892999999465,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,10,84,84,True,True,97,0,40,27,1130.1639000002979,3074.945700000171,3077.2907999999006,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,10,84,84,True,True,97,0,64,0,,839.6466000003784,2326.636700000563,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,11,74,74,True,True,87,0,30,19,850.2098999997543,2022.4349000000075,2026.750600000014,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,11,74,74,True,True,87,0,32,0,,1227.688900000203,2046.4403000000857,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,12,350,350,True,True,95,0,40,28,1095.5158000006122,3145.2816000000894,3156.6914000004545,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,12,350,350,True,True,95,0,106,0,,1451.0801000005813,2554.9390000005587,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,13,441,441,True,True,100,0,56,25,1181.101099999978,2602.9692000001887,2606.7645000002813,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,13,441,441,True,True,100,0,43,0,,1227.5311000003057,1963.1144000004497,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,14,13,13,True,True,93,0,50,39,939.977899999576,3372.368800000004,3385.013999999501,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,14,13,13,True,True,93,0,58,0,,1059.1151000007812,1585.9218000005058,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,15,105,105,True,True,97,0,41,30,1297.6823999997578,3538.6908999998923,3541.983000000073,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,15,105,105,True,True,97,0,43,0,,1040.836500000296,1799.7025000004214,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,16,60,60,True,True,87,0,40,28,842.086499999823,2593.383399999766,2603.3379999998942,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,16,60,60,True,True,87,0,32,0,,715.3698000001896,983.3342000001721,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,17,1650,1650,True,True,96,0,99,55,1097.8922000003877,3023.0776999997033,3026.7360999996527,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,17,1650,1650,True,True,96,0,109,0,,1073.6322000002474,1875.4506000004767,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,18,702,702,True,True,100,0,34,24,1016.4142000003267,2798.0541999995694,2801.3335999994524,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,18,702,702,True,True,100,0,50,0,,1071.9945000000735,1853.872599999704,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,19,222,222,True,True,93,0,56,45,883.9918000003308,2470.220500000323,2475.4345000001194,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,19,222,222,True,True,93,0,58,0,,1068.8876000003802,1875.531200000296,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,20,161,161,True,True,97,0,40,29,5447.351400000116,7725.881399999707,7728.583799999797,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,20,161,161,True,True,97,0,70,0,,824.1250000000946,1757.155000000239,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,21,88,88,True,True,87,0,28,18,876.2298999999985,2221.769900000254,2224.3075000005774,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,21,88,88,True,True,87,0,34,0,,829.4572000004337,1166.593699999794,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,22,1150,1150,True,True,96,0,117,69,1481.4117000005353,3514.8465000002034,3616.132600000128,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,22,1150,1150,True,True,96,0,46,0,,993.706199999906,1780.0681999997323,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,23,714,714,True,True,100,0,41,31,988.7908999999127,3262.24000000002,3264.6726000002673,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,23,714,714,True,True,100,0,44,0,,1086.1499000002368,1847.9171999997561,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,24,68,68,True,True,93,0,58,45,1132.8169999997044,3063.598799999454,3065.3614999991987,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,24,68,68,True,True,93,0,58,0,,1054.1461000002528,1899.4928000001892,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,25,74,74,True,True,97,0,39,26,1106.9691000002422,3205.2222000002075,3210.818100000324,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,25,74,74,True,True,97,0,60,0,,1110.4054999996151,1924.4669999998223,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,26,75,75,True,True,87,0,70,49,941.7311999995945,2688.162999999804,2697.31579999916,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,26,75,75,True,True,87,0,40,0,,932.2613000003912,1674.1706000002523,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,27,1055,1055,True,True,96,0,72,30,1612.636900000325,2965.2384000000893,3581.915100000515,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,27,1055,1055,True,True,96,0,71,0,,1313.2064000001265,2381.3898999997036,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,28,112,112,True,True,100,0,34,24,993.8557000000401,2876.663199999939,2877.8959999999643,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,28,112,112,True,True,100,0,44,0,,978.368799999771,1350.2590999996755,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,arithmetic,29,64,64,True,True,93,0,114,47,846.3778999994247,2180.587299999388,2191.34589999976,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,arithmetic,29,64,64,True,True,93,0,58,0,,1695.1822000000902,2597.1263000001272,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","flushing, greasing, hosing, calibration, emissions, descaling, balancing",True,True,240,0,1916,1235,1070.9594999998444,15783.888599999955,17909.805199999937,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","flushing, greasing, hosing, calibration, emissions, descaling, balancing",True,True,240,0,966,0,,1020.6184000007852,8838.264800000616,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","greasing, calibration, balancing, hosing, descaling, emissions, flushing",True,True,233,0,1513,923,1130.4158000002644,11908.012200000485,13329.584200000681,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","greasing, calibration, balancing, hosing, descaling, emissions, flushing",True,True,233,0,970,0,,1117.9814000006445,8757.45200000074,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, greasing, emissions, audit",True,True,239,0,1946,1177,1249.1208999999799,14210.031399999934,17741.428899999846,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, greasing, emissions, audit",True,True,239,0,1238,0,,918.8113000000158,12633.131800000228,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","hosing, flushing, audit, calibration, balancing, emissions, descaling",True,True,236,0,663,629,1013.8198000004195,8462.723600000572,8468.939400000636,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","hosing, flushing, audit, calibration, balancing, emissions, descaling",True,True,236,0,946,0,,868.3808999994653,7851.251499999307,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","hosing, flushing, descaling, calibration, emissions, balancing, audit",True,True,236,0,1603,925,1124.39650000033,13831.332499999917,15043.885000000046,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","hosing, flushing, descaling, calibration, emissions, balancing, audit",True,True,236,0,881,0,,1373.8823000003322,9058.45109999973,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, descaling, calibration, audit, flushing, greasing",True,True,247,0,1736,1086,1118.2039000004806,12883.263200000329,14651.337999999669,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, descaling, calibration, audit, flushing, greasing",True,True,247,0,1656,0,,1172.190700000101,15862.91170000004,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","calibration, audit, descaling, flushing, greasing, hosing, balancing",True,True,264,0,1798,1064,999.7920000005251,12623.648499999945,16142.20750000004,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","calibration, audit, descaling, flushing, greasing, hosing, balancing",True,True,264,0,748,0,,1146.9086999995852,7627.448000000186,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,248,0,2012,1192,856.0560000005353,12484.400800000003,16104.758000000402,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,248,0,1275,0,,1205.5160999998407,11518.218199999865,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, audit, flushing, hosing, descaling, calibration",True,True,231,0,1802,1118,967.8174999999101,11598.802299999988,14873.70909999936,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, audit, flushing, hosing, descaling, calibration",True,True,231,0,739,0,,1249.1016999993008,7185.775299999477,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, hosing, descaling, calibration, emissions",True,True,223,0,1254,692,1061.5271999995457,11109.25159999988,12575.431000000208,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, hosing, descaling, calibration, emissions",True,True,223,0,910,0,,1119.1130999995949,8475.784100000055,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,229,0,1370,799,873.7611999995352,10083.208699999886,12694.634599999517,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,229,0,1093,0,,1094.097299999703,10048.993499999597,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, balancing, greasing, flushing, calibration, hosing",True,True,230,0,1881,1275,1243.7056999997367,15492.772499999774,16459.936199999902,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, balancing, greasing, flushing, calibration, hosing",True,True,230,0,854,0,,1036.0962999993717,7747.31729999985,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,229,0,798,403,996.6272000001482,6316.723799999636,6729.601299999558,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,229,0,646,0,,1058.0271999997422,5642.522399999507,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,240,0,1435,1005,1112.5892000000022,14358.304499999576,14799.371600000086,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,240,0,1068,0,,1119.4175000000541,9923.088499999722,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","flushing, descaling, emissions, audit, calibration, balancing, greasing",True,True,236,0,2011,1330,1024.7423999999228,14517.934200000127,16961.49509999941,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","flushing, descaling, emissions, audit, calibration, balancing, greasing",True,True,236,0,755,0,,827.2820000001957,7217.694500000107,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,220,0,788,751,1138.0614999998215,11180.271000000175,11315.65319999936,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,220,0,1495,0,,1393.9242000005834,15131.414700000278,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration","descaling, greasing, flushing, emissions, balancing, hosing, calibration",True,True,242,0,3750,2954,1046.961700000793,33284.58219999993,36895.96100000017,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration",,False,False,242,0,2000,0,,1377.6778000001286,21539.055700000063,length
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,220,0,1034,492,1064.1076000001704,7363.883899999564,9483.520300000237,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,220,0,1458,0,,1185.4786000003514,14257.680900000196,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,232,0,123,89,968.6960999997609,4308.082900000045,4311.021499999697,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,232,0,354,0,,854.9211999998079,3542.622400000255,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, audit, balancing, calibration, greasing",True,True,245,0,1876,1120,1128.1552000000374,13983.376600000156,15940.674999999828,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, audit, balancing, calibration, greasing",True,True,245,0,1261,0,,1285.4330999998638,11748.82709999929,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","audit, flushing, descaling, greasing, emissions, calibration, balancing",True,True,237,0,1646,1030,1208.764300000439,12346.95550000015,13850.47300000042,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","audit, flushing, descaling, greasing, emissions, calibration, balancing",True,True,237,0,1034,0,,987.4221999998554,9011.375500000213,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,246,0,2148,1382,1418.4231999997792,17822.82799999939,21321.103299999777,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,246,0,1789,0,,916.3958999997703,15207.94829999977,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,234,0,1576,1270,1096.3497000002462,16125.346699999682,16279.921299999842,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,234,0,829,0,,1025.7497000002331,8428.50929999986,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,229,0,922,365,983.6983000004693,6961.699399999816,8060.282899999947,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,229,0,521,0,,964.3998000001375,4876.007500000014,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, descaling, calibration, audit, greasing, hosing, flushing",True,True,238,0,1131,612,1165.0542999996105,8711.690399999497,10240.409899999577,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, descaling, calibration, audit, greasing, hosing, flushing",True,True,238,0,631,0,,1021.5124999995169,6681.099700000232,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","flushing, descaling, emissions, hosing, calibration, balancing, audit",True,True,256,0,1580,1295,1247.7345999996032,13992.840900000374,14003.52810000004,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","flushing, descaling, emissions, hosing, calibration, balancing, audit",True,True,256,0,1945,0,,2040.6327000000601,14854.260500000237,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","flushing, balancing, calibration, audit, hosing, emissions, descaling",True,True,231,0,1913,1117,1114.9124999992637,13836.990399999195,15108.519099999285,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","flushing, balancing, calibration, audit, hosing, emissions, descaling",True,True,231,0,1168,0,,1094.452199999978,10004.589099999976,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,231,0,3739,3159,1667.7632000000813,36478.979999999865,37688.99549999969,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,231,0,552,0,,977.2573999998713,5070.683899999494,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, hosing, greasing, emissions, descaling, flushing",True,True,228,0,1926,1246,1143.890299999839,13650.947000000087,16946.65199999963,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, hosing, greasing, emissions, descaling, flushing",True,True,228,0,1119,0,,1485.1448999997956,11399.2274000002,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, emissions, descaling, calibration, flushing, greasing",True,True,245,0,2547,1567,1190.732900000512,16217.127400000209,20935.93670000064,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, emissions, descaling, calibration, flushing, greasing",True,True,245,0,1642,0,,896.478699999534,14148.456099999748,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,0,4842,4842,True,True,315,0,14,0,,1197.342800000115,1746.7760999998063,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,0,4842,4842,True,True,315,0,36,0,,674.6445000007952,1481.3170000006721,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,1,5260,5260,True,True,318,0,24,12,859.182599999258,1690.161999999873,1692.4532999992152,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,1,5260,5260,True,True,318,0,57,0,,994.1209000000981,1264.7899999999481,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,2,5202,5202,True,True,321,0,24,12,1152.8935999995156,2340.462899999693,2343.260300000111,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,2,5202,5202,True,True,321,0,31,0,,1101.7055000002074,1657.560000000558,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,3,9681,9681,True,True,326,0,23,12,1042.1814999999697,2216.531300000497,2219.2774000004647,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,3,9681,9681,True,True,326,0,32,0,,803.5915000000386,1011.0936000000947,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,4,9200,9200,True,True,323,0,31,19,1143.66869999958,3195.0396000002,3278.5156999998435,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,4,9200,9200,True,True,323,0,59,0,,961.415599999782,1832.871999999952,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,5,7781,7781,True,True,320,0,22,11,897.6984999999331,2060.239200000069,2062.898799999857,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,5,7781,7781,True,True,320,0,30,0,,787.4061000002257,991.8309000004228,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,6,9404,9404,True,True,324,0,33,19,1065.733899999941,2687.1488999995563,2699.858099999801,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,6,9404,9404,True,True,324,0,32,0,,1079.0600999998787,1972.5124999995387,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,7,3190,3190,True,True,322,0,29,17,719.7161999993114,1821.5936999995392,1822.9704999994283,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,7,3190,3190,True,True,322,0,62,0,,984.793599999648,1450.0950999999986,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,8,4741,4741,True,True,317,0,14,0,,1115.7711000005293,1714.2069000001356,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,8,4741,4741,True,True,317,0,57,0,,1086.990899999364,2015.0272000000768,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,9,3694,3694,True,True,319,0,31,19,1094.8321000005308,2640.6772999998793,2662.3175000004267,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,9,3694,3694,True,True,319,0,62,0,,1403.726400000778,2118.665200000578,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,10,4774,4774,True,True,321,0,29,17,1049.8267999992095,1964.4014999994397,1967.4570999995922,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,10,4774,4774,True,True,321,0,60,0,,1151.5785000001415,1969.7697999999946,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,11,3046,3046,True,True,320,0,31,19,1116.3855000004332,2424.531100000422,2429.1309000000183,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,11,3046,3046,True,True,320,0,11,0,,1170.5460999992283,1723.175999999512,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,12,4078,4078,True,True,321,0,31,19,1237.6938999996128,2465.963799999372,2477.4822999997923,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,12,4078,4078,True,True,321,0,14,0,,1147.8462000004583,1788.2665000006455,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,13,6957,6957,True,True,322,0,31,19,1366.5751999997156,2722.808200000145,2730.9434999997393,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,13,6957,6957,True,True,322,0,11,0,,1191.2548000000243,1817.1384999996008,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,14,6053,6053,True,True,316,0,30,19,1104.71409999991,2468.367500000568,2471.3581000005433,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,14,6053,6053,True,True,316,0,32,0,,1156.995299999835,1992.1512000000803,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,15,7905,7905,True,True,322,0,24,12,1021.2412000000768,2334.5278000006147,2337.408000000323,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,15,7905,7905,True,True,322,0,59,0,,980.4103999995277,1289.9741999999605,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,16,4759,4759,True,True,315,0,20,9,978.4062999997332,1766.7937999995047,1768.39740000014,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,16,4759,4759,True,True,315,0,32,0,,1022.8553999995711,1811.154400000305,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,17,8800,8800,True,True,316,0,31,19,791.4319000001342,1625.6898999999976,1628.4327000003032,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,17,8800,8800,True,True,316,0,32,0,,1067.5258999999642,1857.6861999999892,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,18,8414,8414,True,True,324,0,31,19,1126.8629999995028,2173.343799999202,2175.6622999992032,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,18,8414,8414,True,True,324,0,11,0,,1151.7014000000927,1721.2257000001046,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,19,6753,6753,True,True,330,0,21,9,1025.4801999999472,1963.9439000000039,1966.961099999935,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,19,6753,6753,True,True,330,0,59,0,,1092.674999999872,1986.194500000238,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,20,8182,8182,True,True,321,0,24,12,1054.9959999998464,1896.8585999991774,1898.9080999999715,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,20,8182,8182,True,True,321,0,31,0,,1183.937099999639,1866.7934999994031,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,21,5088,5088,True,True,318,0,27,12,1234.255800000028,2679.7952999995687,2683.443300000363,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,21,5088,5088,True,True,318,0,32,0,,1187.2906000007788,1947.5327000000107,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,22,7147,7147,True,True,322,0,31,19,1102.3094000001947,2676.325200000065,2682.585300000028,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,22,7147,7147,True,True,322,0,62,0,,1251.0758999997051,2213.502900000094,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,23,2938,2938,True,True,319,0,31,19,992.3114000002897,1876.6326000004483,1886.9892000002437,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,23,2938,2938,True,True,319,0,59,0,,1222.9894999991302,2119.181799999751,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,24,7958,7958,True,True,321,0,31,19,1478.994999999486,2355.928500000118,2359.900800000105,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,24,7958,7958,True,True,321,0,62,0,,1452.0851999996012,1954.0790999999444,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,25,2860,2860,True,True,321,0,23,12,810.0023999995756,1722.1448000000237,1724.7301999996125,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,25,2860,2860,True,True,321,0,30,0,,881.8643999993583,1082.854000000225,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,26,2379,2379,True,True,326,0,31,19,1367.8064999994604,2504.758699999911,2509.9449999997887,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,26,2379,2379,True,True,326,0,41,0,,1214.5226000002367,2073.721900000237,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,27,3703,3703,True,True,316,0,31,19,795.7181000001583,1644.088200000624,1646.5447000000495,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,27,3703,3703,True,True,316,0,60,0,,1717.08419999959,1983.9362000002438,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,28,8316,8316,True,True,322,0,20,9,2386.688999999933,2543.6859999999797,2546.0053000006155,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,28,8316,8316,True,True,322,0,63,0,,1099.3565999997372,2038.9982999995482,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,extraction,29,2063,2063,True,True,327,0,20,9,1035.4365000002872,2528.5181999997803,2532.5138999996852,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,extraction,29,2063,2063,True,True,327,0,34,0,,1554.3070000003354,2208.833300000151,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,0,135,135,True,True,359,0,52,43,1136.0642999998163,3041.9451999996454,3047.877199999675,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,0,135,135,True,True,359,0,68,0,,970.2194000001327,1850.557600000684,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,1,265,265,True,True,423,0,76,66,928.6096000005273,2712.5201999997444,2723.303300000225,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,1,265,265,True,True,423,0,235,0,,1010.5067000004055,2502.790499999719,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,2,195,195,True,True,522,0,134,124,1125.5701999998564,4254.5764000005875,4259.363099999973,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,2,195,195,True,True,522,0,141,0,,1235.2670999998736,2663.227299999562,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,3,150,150,True,True,400,0,101,91,1062.8108000000793,4524.956199999906,4526.1696999996275,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,3,150,150,True,True,400,0,153,0,,1347.5626999997985,2380.5963999993764,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,4,45,45,True,True,399,0,42,33,1112.81020000024,3922.620999999708,3926.797799999804,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,4,45,45,True,True,399,0,63,0,,812.2819000000163,1830.7873000003383,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,5,60,60,True,True,494,0,49,40,1057.7701999991405,2335.6382999991183,2340.016299999661,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,5,60,60,True,True,494,0,59,0,,914.0427000002092,1708.5979000003135,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,6,200,200,True,True,451,0,97,87,937.8390000001673,3752.9594999996334,3756.257199999709,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,6,200,200,True,True,451,0,174,0,,932.7490999994552,2268.0591999996977,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,7,155,155,True,True,468,0,312,302,1043.1093000006513,5007.641000000149,5009.883400000035,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,7,155,155,True,True,468,0,373,0,,878.1988999999157,3317.613000000165,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,8,40,40,True,True,509,0,87,77,1120.464799999354,4056.576099999802,4058.9041999992332,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,8,40,40,True,True,509,0,421,0,,1024.6498000005886,3713.2141000001866,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,9,30,30,True,True,480,0,95,85,1272.105800000645,4858.313600000656,4860.34760000075,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,9,30,30,True,True,480,0,133,0,,831.104800000503,2100.691600000573,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,10,50,50,True,True,399,0,38,29,1131.4001999999164,2986.4467999996123,2993.561999999656,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,10,50,50,True,True,399,0,34,0,,1164.3142000002626,1886.1463000002914,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,11,140,140,True,True,379,0,35,26,922.3267999996096,2562.1089999995093,2567.606099999466,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,11,140,140,True,True,379,0,42,0,,1914.6818999997777,2137.556399999994,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,12,130,130,True,True,355,0,70,31,1104.050300000381,3495.4705000000104,3498.6557000001994,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,12,130,130,True,True,355,0,113,0,,1140.9084999995684,2328.4332000002905,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,13,170,170,True,True,495,0,325,315,888.5448000000906,5211.72579999984,5213.744499999848,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,13,170,170,True,True,495,0,452,0,,1651.9902999998521,4391.230999999607,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,14,275,275,True,True,406,0,37,28,1105.7843000007779,3498.9902000006623,3500.6130000001576,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,14,275,275,True,True,406,0,46,0,,999.1792999999234,1749.8764000001756,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,15,110,110,True,True,390,0,39,30,1008.8915999995152,3305.4754999993747,3312.6356999991913,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,15,110,110,True,True,390,0,70,0,,1198.324799999682,2179.597399999693,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,16,140,140,True,True,484,0,90,80,1206.5597000000707,4445.721300000514,4450.4792000007,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,16,140,140,True,True,484,0,403,0,,1000.6718999993609,3826.9092999998975,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,17,30,30,True,True,355,0,31,22,1167.2135999997408,2954.5176999999967,2960.0089000005028,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,17,30,30,True,True,355,0,88,0,,747.1775999993042,1363.6866999995618,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,18,55,55,True,True,514,0,187,177,1022.4209000007249,4856.9187000002785,4859.264500000791,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,18,55,55,True,True,514,0,207,0,,1034.8100000001068,2388.1375999999364,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,19,35,35,True,True,450,0,100,90,1194.1993000000366,4407.924099999946,4409.850500000175,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,19,35,35,True,True,450,0,431,0,,1049.9160000008487,3839.975200000481,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,20,45,45,True,True,395,0,57,47,818.9320999999836,2848.7762000004295,2872.27780000012,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,20,45,45,True,True,395,0,57,0,,1163.2244000002174,2065.9050000003845,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,21,50,50,True,True,480,0,323,313,802.5770000003831,4916.009999999915,4920.397900000353,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,21,50,50,True,True,480,0,365,0,,872.6794999993217,3094.232099999317,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,22,25,25,True,True,393,0,65,55,1139.538200000061,3603.0116000001726,3616.992499999469,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,22,25,25,True,True,393,0,303,0,,1069.1484999997556,3165.917100000115,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,23,45,45,True,True,504,0,68,58,2102.227100000164,4794.984000000113,4799.010600000656,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,23,45,45,True,True,504,0,198,0,,1189.668399999391,2859.7540999999183,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,24,60,60,True,True,354,0,65,55,945.6895000002987,3908.6264999996274,3911.0858000003645,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,24,60,60,True,True,354,0,133,0,,945.5362999997305,2058.200299999953,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,25,95,95,True,True,505,0,368,358,775.3859000004013,4335.228599999937,4338.928500000293,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,25,95,95,True,True,505,0,428,0,,1122.883500000171,3847.375300000749,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,26,205,205,True,True,492,0,68,58,914.1508000002432,3733.4767000002103,3745.9374999998545,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,26,205,205,True,True,492,0,374,0,,996.1941999999908,3551.384500000495,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,27,145,145,True,True,489,0,147,137,1075.3254000001107,4883.5738999996465,4888.194799999837,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,27,145,145,True,True,489,0,420,0,,1129.5632999999725,3968.274500000007,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,28,50,50,True,True,398,0,267,257,810.5547000004663,4177.102300000115,4179.172400000425,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,28,50,50,True,True,398,0,427,0,,950.2769000000626,3744.221199999629,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,high,high,True,state-tracking,29,135,135,True,True,499,0,398,388,1182.7438000000257,5392.411700000594,5394.510500000251,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,lowest,off,False,state-tracking,29,135,135,True,True,499,0,547,0,,1144.0677000000505,4714.267700000164,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,0,77,77,True,True,70,0,41,31,674.8897999996188,2304.3902999997954,2337.7253999997265,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,0,77,77,True,True,70,0,8,0,,900.9667999998783,1012.3950999995941,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,1,45,45,True,True,65,0,8,0,,870.4299000000901,1029.5022999998764,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,1,45,45,True,True,65,0,8,0,,772.5012999999308,1002.4221000003308,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,2,925,925,True,True,70,0,36,26,727.5612000003093,2636.379499999748,2683.3980000001247,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,2,925,925,True,True,70,0,8,0,,749.2996000000858,1033.313200000066,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,3,48,48,True,True,67,0,30,20,1512.2194999994463,4987.261799999942,5252.936400000181,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,3,48,48,True,True,67,0,8,0,,923.8963999996486,1138.9797000001636,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,4,91,91,True,True,68,0,46,36,723.9945999999691,3023.7289999995483,3085.951500000192,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,4,91,91,True,True,68,0,8,0,,814.7801999994044,938.677899999675,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,5,143,143,True,True,70,0,41,31,988.8299000003826,2528.9425999999366,2633.865099999639,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,5,143,143,True,True,70,0,8,0,,725.6231000001208,909.0701999994053,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,6,96,96,True,True,65,0,32,22,817.8169000002526,2156.72799999993,2270.3549000007115,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,6,96,96,True,True,65,0,8,0,,652.5018999991516,833.8061999993442,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,7,700,700,True,True,70,0,32,22,679.2273999999452,2082.4000999991767,2176.787499999591,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,7,700,700,True,True,70,0,8,0,,1138.32420000017,1215.527800000018,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,8,273,273,True,True,67,0,36,26,954.1605000003983,2482.1271999999226,2530.562699999791,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,8,273,273,True,True,67,0,8,0,,2817.4154000000726,2962.02970000013,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,9,8,8,True,True,68,0,40,30,637.7406999999948,2808.4521999999197,2884.62250000066,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,9,8,8,True,True,68,0,8,0,,770.078999999896,962.1280000001207,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,10,84,84,True,True,70,0,40,30,677.1574000003966,2226.5431000005265,2281.423999999788,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,10,84,84,True,True,70,0,8,0,,2082.1036999996068,2436.433599999873,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,11,74,74,True,True,65,0,40,30,681.8156999997882,1236.911400000281,1346.4779000005365,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,11,74,74,True,True,65,0,8,0,,912.2339000000466,1183.7602999999035,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,12,350,350,True,True,69,0,8,0,,827.576599999702,984.8512999997183,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,12,350,350,True,True,69,0,8,0,,967.4862000001667,1143.0258999998841,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,13,441,441,True,True,67,0,37,27,1181.832199999917,3718.8887999998315,3769.2187999998623,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,13,441,441,True,True,67,0,8,0,,855.8861999999863,1115.3141000004325,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,14,13,13,True,True,68,0,32,22,720.1189999996132,2138.6183000004166,2319.224800000484,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,14,13,13,True,True,68,0,8,0,,672.9602000004888,824.2608000000473,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,15,105,105,True,True,70,0,54,44,2359.7177000001466,6909.740600000077,7180.775499999982,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,15,105,105,True,True,70,0,8,0,,704.7425000000658,932.1513000004416,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,16,60,60,True,True,65,0,8,0,,795.9909000001062,1124.7847000004185,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,16,60,60,True,True,65,0,8,0,,986.1484999992172,1203.05769999959,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,17,1650,1650,True,True,70,0,48,37,1482.984899999792,8232.706799999505,8324.816999999712,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,17,1650,1650,True,True,70,0,9,0,,981.4812000004167,1611.3704999997935,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,18,702,702,True,True,67,0,52,42,2902.419099999861,7028.211200000442,7131.004400000165,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,18,702,702,True,True,67,0,8,0,,633.768599999712,828.7959999997838,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,19,222,222,True,True,68,0,44,34,868.469100000766,2519.9001000000862,2564.723200000117,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,19,222,222,True,True,68,0,8,0,,798.2017000003907,979.4825999997556,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,20,161,161,True,True,70,0,41,31,2024.7878000000128,4970.626200000879,5104.3563000002905,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,20,161,161,True,True,70,0,8,0,,1534.2251000001852,1903.8846000003105,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,21,88,88,True,True,65,0,23,13,1654.9063000002207,2362.560200000189,2571.133800000098,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,21,88,88,True,True,65,0,8,0,,1671.8396000001121,2299.5447999999215,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,22,1150,1150,True,True,70,0,9,0,,1320.9524999992937,1331.3619999998991,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,22,1150,1150,True,True,70,0,9,0,,714.5145999993474,1092.077700000118,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,23,714,714,True,True,67,0,42,32,867.6161000003049,2509.874800000034,2598.5264000000825,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,23,714,714,True,True,67,0,8,0,,1699.2502000002787,2086.322099999961,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,24,68,68,True,True,68,0,54,44,1784.4801000001098,3788.506199999574,3918.4457000001203,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,24,68,68,True,True,68,0,8,0,,1785.4206000001795,2236.9674999999916,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,25,74,74,True,True,70,0,43,33,947.0670999999129,2411.81030000007,2473.2426000000487,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,25,74,74,True,True,70,0,8,0,,722.0266999993328,894.874599999639,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,26,75,75,True,True,65,0,32,22,724.500999999691,2337.8491000003123,2465.007499999956,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,26,75,75,True,True,65,0,8,0,,733.6672000001272,814.8553000000902,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,27,1055,1055,True,True,70,0,36,25,1053.7358999999924,3808.7139999997817,3971.545299999889,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,27,1055,1055,True,True,70,0,9,0,,829.9985000003289,1002.6440000001458,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,28,112,112,True,True,67,0,36,26,687.166800000341,2087.4652000002243,2179.7162000002572,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,28,112,112,True,True,67,0,8,0,,856.5744999996241,1202.5319999993371,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,arithmetic,29,64,64,True,True,68,0,50,40,701.1816000003819,2898.030400000607,2984.067200000027,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,arithmetic,29,64,64,True,True,68,0,8,0,,1371.4922999997725,1794.3230000000767,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","flushing, greasing, hosing, calibration, emissions, descaling, balancing",True,True,152,0,277,253,821.1909000001469,5223.453800000243,5458.296800000426,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","calibration, emissions, descaling, greasing, hosing, flushing, balancing",True,False,152,0,22,0,,907.8555000005508,1320.7376999998814,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","greasing, calibration, balancing, hosing, descaling, emissions, flushing",True,True,150,0,606,582,754.9396000003981,12127.899200000684,12151.34240000043,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","hosing, greasing, descaling, emissions, balancing, flushing, calibration",True,False,150,0,22,0,,754.2911000000458,1096.3015000006635,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, greasing, emissions, audit",True,True,154,0,257,233,990.6404000003022,4735.071699999935,4922.219000000041,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, emissions, greasing, audit",True,False,154,0,22,0,,1204.2166999999608,1430.6053999998767,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","hosing, flushing, audit, calibration, emissions, balancing, descaling",True,False,156,0,266,243,1227.3630999998204,6209.800100000393,6644.289199999548,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","balancing, flushing, hosing, audit, calibration, descaling, emissions",True,False,156,0,21,0,,1207.809599999564,1786.2199999999575,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","hosing, flushing, descaling, calibration, emissions, balancing, audit",True,True,149,0,182,159,1916.7778999999427,15586.967899999763,16262.301099999604,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","flushing, descaling, calibration, hosing, emissions, balancing, audit",True,False,149,0,21,0,,911.0208000001876,1202.1354000007705,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, descaling, greasing, calibration, audit, flushing",True,False,157,0,349,325,954.9525000002177,9131.705300000249,9319.47930000024,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, calibration, descaling, audit, flushing, greasing",True,False,157,0,22,0,,5906.445200000235,6072.111600000426,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","calibration, audit, descaling, flushing, greasing, hosing, balancing",True,True,166,0,262,238,1147.4866999997175,5250.712399999429,5430.318499999885,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","audit, calibration, flushing, greasing, descaling, hosing, balancing",True,False,166,0,22,0,,564.4256000005043,804.5712000002823,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,157,0,375,351,660.2229000000079,5939.277499999662,6083.561299999928,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,157,0,22,0,,713.0898999994315,1121.7071999999462,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, audit, flushing, hosing, descaling, calibration",True,True,149,0,322,299,918.0182999998578,6143.234600000142,6260.827699999936,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, flushing, audit, descaling, calibration, hosing",True,False,149,0,21,0,,1952.3876000002929,2826.244400000178,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, hosing, descaling, calibration, emissions",True,True,141,0,223,199,1234.6244999998817,7195.223599999736,7408.952299999328,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, descaling, calibration, emissions, hosing",True,False,141,0,22,0,,817.8779999998369,1151.2854000002335,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,148,0,167,144,825.1318000002357,5322.206099999676,5351.024200000211,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,148,0,21,0,,1271.6059000003952,1601.447800000642,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, balancing, greasing, flushing, calibration, hosing",True,True,149,0,218,194,908.3351000008406,7421.657700000651,7577.341400000478,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, greasing, balancing, flushing, calibration, hosing",True,False,149,0,22,0,,717.7369999999428,1070.9545999998227,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,145,0,59,35,823.3157999993637,4276.321599999392,4517.476299999544,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,145,0,22,0,,1025.9735999998156,1264.3133000001399,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,150,0,205,182,910.203399999773,4507.2652999997445,4754.509399999733,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,150,0,21,0,,905.1339999996344,1171.0796999996091,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","flushing, descaling, emissions, audit, calibration, balancing, greasing",True,True,154,0,306,283,704.0676999995412,5303.801899999598,5503.646099999969,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","descaling, flushing, audit, emissions, balancing, calibration, greasing",True,False,154,0,21,0,,1047.5132999999914,1388.683299999684,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,140,0,284,261,2528.092900000047,26511.08110000041,26714.58960000018,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,140,0,21,0,,709.9285000003874,1001.9234999999753,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration","descaling, greasing, flushing, emissions, balancing, hosing, calibration",True,True,152,0,305,281,4630.242299999736,10780.492500000037,10966.831499999898,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration","descaling, balancing, hosing, greasing, flushing, emissions, calibration",True,False,152,0,22,0,,1826.7077000000427,2507.125399999495,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,140,0,189,166,1044.7041999996145,4696.645699999863,4853.083899999547,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,140,0,21,0,,845.3420999994705,1135.1957999995648,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,146,0,105,81,819.0967999998975,3322.828800000025,3502.2883999999976,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,146,0,22,0,,1839.2420999998649,4451.58739999988,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, audit, balancing, calibration, greasing",True,True,157,0,310,287,19405.546900000445,42040.87460000028,42397.55409999998,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, calibration, balancing, greasing, audit",True,False,157,0,21,0,,955.454699999791,1308.9967000005345,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","audit, flushing, descaling, greasing, emissions, calibration, balancing",True,True,153,0,250,227,720.2879000005851,6009.5344000001205,6166.144800000438,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","descaling, audit, emissions, calibration, balancing, flushing, greasing",True,False,153,0,21,0,,693.3835999998337,1004.3000000005122,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,156,0,296,273,741.9021999994584,5728.114399999868,5880.289799999446,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,156,0,21,0,,968.5577999998713,1264.0670000000682,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,151,0,216,192,908.8684999996985,5188.575199999832,5334.237699999903,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,151,0,22,0,,920.1965000002019,1158.021500000359,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,149,0,120,96,782.5457999997525,2277.112400000078,2432.28789999921,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,149,0,22,0,,918.2381999999052,1251.7346000004181,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, descaling, calibration, audit, greasing, hosing, flushing",True,True,157,0,217,193,821.9343000000663,5304.204500000196,5722.533000000112,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, calibration, descaling, audit, greasing, flushing, hosing",True,False,157,0,22,0,,2034.372799999801,3225.990599999932,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","flushing, descaling, emissions, hosing, calibration, balancing, audit",True,True,162,0,667,644,1314.390900000035,12627.44500000008,12835.125900000094,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","descaling, flushing, hosing, emissions, balancing, calibration, audit",True,False,162,0,21,0,,985.9571000001779,1183.8364999998703,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","flushing, balancing, calibration, audit, hosing, emissions, descaling",True,True,150,0,324,301,2820.205099999839,10531.343799999831,10734.576899999865,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","calibration, flushing, balancing, hosing, audit, descaling, emissions",True,False,150,0,21,0,,974.9154000000999,1876.9662000004246,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,145,0,145,121,853.110399999423,3678.502799999478,3912.7207999999882,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,145,0,22,0,,746.1506999998164,1046.8526000004204,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, hosing, greasing, emissions, descaling, flushing",True,True,150,0,300,276,735.1973999993788,6071.025899999768,6229.04969999945,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, emissions, flushing, hosing, greasing, descaling",True,False,150,0,22,0,,773.8871999999901,1120.1876999994056,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, emissions, descaling, calibration, flushing, greasing",True,True,159,0,335,311,645.5175000000963,6616.37410000003,6878.920699999981,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, descaling, emissions, flushing, calibration, greasing",True,False,159,0,22,0,,985.7726999998704,1297.0274999997855,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,0,4842,4842,True,True,197,0,9,0,,789.27560000011,934.633799999574,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,0,4842,4842,True,True,197,0,9,0,,745.4914999998437,909.284000000298,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,1,5260,5260,True,True,200,0,9,0,,1791.1066999995455,1922.8942999998253,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,1,5260,5260,True,True,200,0,9,0,,918.1625999999596,1138.3114000000205,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,2,5202,5202,True,True,199,0,21,10,999.1614000000482,1401.5896000000794,1667.6562000002377,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,2,5202,5202,True,True,199,0,9,0,,1411.0893999995824,1570.061800000076,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,3,9681,9681,True,True,207,0,9,0,,987.1973999997863,1015.610899999956,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,3,9681,9681,True,True,207,0,9,0,,2126.0817000002135,2254.5712000001004,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,4,9200,9200,True,True,201,0,9,0,,716.9215000003533,875.8646000005683,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,4,9200,9200,True,True,201,0,9,0,,785.5435999999827,899.5349000006172,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,5,7781,7781,True,True,205,0,9,0,,895.4313000003822,1046.9868000000133,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,5,7781,7781,True,True,205,0,9,0,,814.5337999994808,971.0698999997476,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,6,9404,9404,True,True,203,0,9,0,,741.885700000239,905.986199999461,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,6,9404,9404,True,True,203,0,9,0,,1223.9705000001777,1465.7099000005473,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,7,3190,3190,True,True,200,0,9,0,,990.4484999997294,1220.101099999738,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,7,3190,3190,True,True,200,0,9,0,,772.2112000001289,888.4437000006074,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,8,4741,4741,True,True,198,0,9,0,,813.6732999992091,977.6152999993428,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,8,4741,4741,True,True,198,0,9,0,,870.4592999999932,1083.2894000000124,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,9,3694,3694,True,True,202,0,9,0,,783.4653999998409,917.5556000000142,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,9,3694,3694,True,True,202,0,9,0,,707.2289999996428,828.5093999993478,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,10,4774,4774,True,True,200,0,9,0,,1043.686200000593,1201.0016000003816,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,10,4774,4774,True,True,200,0,9,0,,1035.1525000000947,1047.71310000001,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,11,3046,3046,True,True,202,0,9,0,,1902.7404999997088,2052.144999999655,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,11,3046,3046,True,True,202,0,9,0,,719.7630999999092,817.6352000000406,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,12,4078,4078,True,True,202,0,9,0,,683.7162000001626,826.8832000003385,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,12,4078,4078,True,True,202,0,9,0,,809.1309000001274,949.3965000001481,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,13,6957,6957,True,True,203,0,9,0,,665.4405999997834,750.9793999997783,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,13,6957,6957,True,True,203,0,9,0,,928.0219000002035,1080.2275000005466,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,14,6053,6053,True,True,197,0,9,0,,758.2498000001578,874.151000000893,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,14,6053,6053,True,True,197,0,9,0,,687.2414999998,1001.8509000001359,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,15,7905,7905,True,True,203,0,9,0,,768.9902000001894,890.9800000001269,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,15,7905,7905,True,True,203,0,9,0,,1674.571300000025,1815.0298999998995,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,16,4759,4759,True,True,198,0,9,0,,1734.3035999992935,1844.4187999994028,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,16,4759,4759,True,True,198,0,9,0,,878.8466000005428,1145.834100000684,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,17,8800,8800,True,True,200,0,9,0,,745.2540000003864,882.4606000007407,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,17,8800,8800,True,True,200,0,9,0,,6078.106700000035,6238.8548000001265,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,18,8414,8414,True,True,202,0,9,0,,1053.2703999997466,1062.923899999987,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,18,8414,8414,True,True,202,0,9,0,,658.65550000035,893.4901000002355,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,19,6753,6753,True,True,205,0,9,0,,2062.625200000184,2207.8275000003487,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,19,6753,6753,True,True,205,0,9,0,,923.5969000001205,1042.942099999891,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,20,8182,8182,True,True,202,0,9,0,,910.1428000001306,1035.5363000001034,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,20,8182,8182,True,True,202,0,9,0,,1114.3235000008644,1393.5159000002386,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,21,5088,5088,True,True,197,0,9,0,,1165.7687999995687,1283.1429999996544,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,21,5088,5088,True,True,197,0,9,0,,2850.2142000006643,3539.2541999999594,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,22,7147,7147,True,True,202,0,9,0,,1388.9142999996693,1512.9964999996446,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,22,7147,7147,True,True,202,0,9,0,,826.5369999999166,965.798199999881,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,23,2938,2938,True,True,198,0,9,0,,1228.8134000000355,1357.2438999999576,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,23,2938,2938,True,True,198,0,9,0,,815.4568999998446,960.8438000004753,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,24,7958,7958,True,True,202,0,9,0,,699.831500000073,863.7140999999247,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,24,7958,7958,True,True,202,0,9,0,,1378.5491999997248,1535.913800000344,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,25,2860,2860,True,True,201,0,9,0,,1244.977199999994,1405.7935000000725,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,25,2860,2860,True,True,201,0,9,0,,707.027399999788,842.3485000002984,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,26,2379,2379,True,True,202,0,9,0,,3723.3895999997912,3821.4709000003495,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,26,2379,2379,True,True,202,0,9,0,,1011.5718999995806,1183.4955999993326,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,27,3703,3703,True,True,197,0,9,0,,893.4424999997646,1070.0559999995676,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,27,3703,3703,True,True,197,0,9,0,,760.1172999993651,878.1811999997444,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,28,8316,8316,True,True,203,0,9,0,,958.8504000003013,1287.0629999997618,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,28,8316,8316,True,True,203,0,9,0,,834.6917999997459,941.0117999996146,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,extraction,29,2063,2063,True,True,205,0,9,0,,962.1205000003101,1058.5133000004134,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,extraction,29,2063,2063,True,True,205,0,9,0,,849.4307999999364,1006.4137999997911,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,0,135,135,True,True,232,0,39,29,637.3199999998178,1439.5155000001978,1469.9697999994896,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,0,135,135,True,True,232,0,8,0,,2090.653100000054,2291.013000000021,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,1,265,265,True,True,270,0,68,58,2100.686499999938,8802.828599999884,9299.992999999631,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,1,265,265,True,True,270,0,8,0,,1942.7658000004158,2320.6976000001305,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,2,195,195,True,True,336,0,93,83,907.5572000001557,3192.4409000002925,3255.387299999711,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,2,195,185,True,False,336,0,8,0,,2437.9343999999037,2601.644400000623,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,3,150,150,True,True,260,0,65,55,738.8474999997925,3788.191999999981,3883.0734999992274,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,3,150,125,True,False,260,0,8,0,,659.8318000005747,838.4980999999243,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,4,45,45,True,True,260,0,38,28,862.944299999981,3025.7885000000897,3073.9994000005026,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,4,45,45,True,True,260,0,8,0,,755.6878999994296,842.7609999998822,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,5,60,60,True,True,320,0,35,25,1195.3424000002997,2856.672400000207,2923.8132000000405,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,5,60,60,True,True,320,0,8,0,,920.5021000002489,1052.8408999998646,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,6,200,200,True,True,288,0,57,47,851.9285000002128,2580.898199999865,2694.66040000043,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,6,200,165,True,False,288,0,8,0,,756.8697999995493,881.0975999995208,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,7,155,155,True,True,300,0,73,63,1431.376999999884,3557.0858999999473,3618.519599999672,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,7,155,70,True,False,300,0,14,0,,2223.2726000002003,2349.6844999999666,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,8,40,40,True,True,330,0,74,64,1974.7513000002073,6237.4447000001965,6278.32060000037,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,8,40,70,True,False,330,0,8,0,,1323.960900000202,1673.4701000004861,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,9,30,30,True,True,312,0,49,39,637.5428000001193,2203.1716000001325,2305.6775000004563,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,9,30,15,True,False,312,0,8,0,,816.9451000003392,1026.6253999998298,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,10,50,50,True,True,258,0,31,21,721.8940000002476,1740.4726000004302,1925.1262000007046,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,10,50,50,True,True,258,0,8,0,,1192.8196999997454,1409.611699999914,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,11,140,140,True,True,246,0,40,30,1980.8470999996644,4758.965300000455,4817.577800000436,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,11,140,140,True,True,246,0,8,0,,1269.478799999888,1383.1018000000768,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,12,130,130,True,True,232,0,35,25,817.0991999995749,2122.1207999997205,2266.664199999468,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,12,130,130,True,True,232,0,8,0,,748.23379999998,1048.5996000006708,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,13,170,170,True,True,320,0,132,122,660.0840000000971,4783.889999999701,4851.493999999548,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,13,170,75,True,False,320,0,8,0,,1140.0998999997682,1356.3758999998754,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,14,275,275,True,True,260,0,42,32,785.2233000003253,2639.4397000003664,2764.9830999998812,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,14,275,275,True,True,260,0,8,0,,758.8019000004351,867.7568000002793,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,15,110,110,True,True,254,0,41,31,714.9443999996947,2580.2930999998352,2642.2317999995357,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,15,110,110,True,True,254,0,8,0,,736.9422000001578,936.9069000003947,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,16,140,140,True,True,314,0,55,45,660.5717000002187,2293.927000000622,2403.5832999998092,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,16,140,65,True,False,314,0,8,0,,735.3684999998222,1138.6152000004586,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,17,30,30,True,True,230,0,35,25,703.448500000377,2323.6100000003717,2387.154900000496,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,17,30,30,True,True,230,0,8,0,,733.2606999998461,918.450699999994,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,18,55,55,True,True,336,0,91,81,788.3357999999134,4753.207100000509,4812.724100000196,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,18,55,35,True,False,336,0,8,0,,823.6799000005703,878.3771000007619,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,19,35,35,True,True,288,0,95,85,4202.6316999999835,21585.4819999995,22702.200099999573,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,19,35,20,True,False,288,0,8,0,,812.9329000003054,933.1049000002167,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,20,45,45,True,True,252,0,49,39,1433.762900000147,2973.581899999772,3077.641599999879,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,20,45,45,True,True,252,0,8,0,,995.1314999998431,1505.529099999876,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,21,50,50,True,True,306,0,85,75,976.6475000001265,3301.2776000000486,3358.426700000109,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,21,50,5,True,False,306,0,8,0,,1333.7000999999873,1465.4067000001305,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,22,25,25,True,True,254,0,41,31,1287.8584000000046,3115.783299999748,3213.49519999967,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,22,25,25,True,True,254,0,8,0,,708.6970000000292,866.6739999998754,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,23,45,45,True,True,322,0,63,53,660.8388000004197,2814.837599999919,2858.3372000002782,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,23,45,45,True,True,322,0,8,0,,902.1201999994446,1071.2055999993026,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,24,60,60,True,True,226,0,51,41,1065.2391999992687,2792.2325999998066,2838.036000000102,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,24,60,60,True,True,226,0,8,0,,709.4521999997596,846.7304999994667,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,25,95,95,True,True,328,0,70,60,607.95059999964,3246.6993999996703,3282.3496999999406,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,25,95,60,True,False,328,0,8,0,,1467.805999999655,1817.1041999994486,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,26,205,205,True,True,314,0,44,34,1116.621999999552,2914.3286999997144,2994.829000000209,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,26,205,200,True,False,314,0,8,0,,1232.2297000000617,1399.8179000000164,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,27,145,145,True,True,314,0,55,45,941.6799999999057,3315.506099999766,3348.6916000001656,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,27,145,135,True,False,314,0,8,0,,1723.7765999998373,2043.9020999992863,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,28,50,50,True,True,256,0,67,57,1070.8654000000024,3206.5167999999176,3253.4599000000526,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,28,50,45,True,False,256,0,8,0,,952.2373999998308,1072.71049999963,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,high,high,True,state-tracking,29,135,135,True,True,318,0,53,43,2171.1285000001226,6569.757399999617,6636.806800000159,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,lowest,off,False,state-tracking,29,135,70,True,False,318,0,8,0,,844.00210000058,1019.026599999961,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,0,77,77,True,True,68,,286,187,2095.101999999315,2159.1394999995828,2472.3494999998366,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,0,77,77,True,True,68,,8,,,1274.8576000003595,1278.0291999997644,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,1,45,45,True,True,62,,302,225,1597.1997999995438,1738.518600000134,2108.9619999993374,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,1,45,45,True,True,62,,69,,,1000.3961000002164,1193.6712000006082,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,2,925,925,True,True,70,,328,179,,2319.840500000282,2994.4177000006675,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,2,925,925,True,True,70,,112,,,992.6012999994782,1540.3729999998177,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,3,48,,False,False,66,,188,186,1607.3402000001806,1774.9610000000757,1784.65050000068,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,3,48,48,True,True,66,,75,,,1144.50670000042,1465.7364000004236,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,4,91,91,True,True,66,,223,215,1897.2982000004777,1977.4632000007841,1991.6735000006156,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,4,91,91,True,True,66,,77,,,838.2682999999815,1043.3978999999454,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,5,143,143,True,True,67,,202,196,,1842.017300000407,1848.34039999987,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,5,143,143,True,True,67,,10,,,1657.3830000006637,1666.4386000002196,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,6,96,,False,False,61,,194,192,1669.9561000004906,1956.8466000000626,1963.3950000006735,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,6,96,102,True,False,61,,10,,,793.9009000001533,855.902000000242,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,7,700,700,True,True,71,,227,217,1824.2060000002311,2041.4513999994597,2052.644700000201,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,7,700,700,True,True,71,,109,,,1121.361600000455,1599.5441000004575,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,8,273,,False,False,65,,235,232,1803.8163000001077,2237.302599999566,2254.7680999996373,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,8,273,273,True,True,65,,68,,,1255.0808999994842,1754.5788999996148,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,9,8,8,True,True,66,,611,551,2081.15110000017,4510.963099999572,4672.069299999748,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,9,8,8,True,True,66,,54,,,1889.1614000003756,2145.998800000598,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,10,84,84,True,True,68,,265,257,2488.911499999631,2837.1476000002076,2840.249500000027,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,10,84,120,True,False,68,,10,,,734.5273999999336,840.5614999992395,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,11,74,74,True,True,62,,144,136,,1695.9583000000293,1709.6085999999104,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,11,74,74,True,True,62,,95,,,905.286399999568,1329.6653999996124,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,12,350,350,True,True,70,,376,257,2999.502200000279,3476.439600000049,4097.446000000673,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,12,350,350,True,True,70,,90,,,1018.1321000000025,1430.5209000003742,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,13,441,441,True,True,65,,282,208,2050.873000000138,2118.6995999996725,2432.5841999998374,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,13,441,441,True,True,65,,63,,,1021.6291000006095,1321.7592999999397,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,14,13,13,True,True,64,,179,171,,1986.2371999997777,2034.489499999836,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,14,13,13,True,True,64,,49,,,1036.738100000548,1264.2009999999573,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,15,105,105,True,True,67,,192,182,1678.3660000000964,1777.749699999731,1816.797499999666,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,15,105,105,True,True,67,,10,,,888.9887999994244,969.9617999995098,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,16,60,60,True,True,61,,121,113,,1472.7663000003304,1515.4818000000887,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,16,60,60,True,True,61,,92,,,789.4694999995409,1216.7686000002504,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,17,1650,1650,True,True,71,,204,192,2115.805200000068,2117.3048000000563,2121.3975999999093,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,17,1650,1650,True,True,71,,12,,,898.3471999999892,973.9682999997967,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,18,702,702,True,True,65,,236,226,2010.8386000001701,2299.097700000857,2307.4073000007047,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,18,702,702,True,True,65,,68,,,1070.443399999931,1323.8703000006353,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,19,222,,False,False,66,,257,254,1754.989299999579,2179.446000000098,2196.1903999999777,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,19,222,222,True,True,66,,10,,,1017.0138000003135,1070.606900000712,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,20,161,161,True,True,67,,157,151,,1822.4728000004689,1833.841200000279,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,20,161,161,True,True,67,,10,,,805.7948000005126,859.716699999808,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,21,88,88,True,True,63,,154,146,,2079.6299000003273,2091.849899999943,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,21,88,88,True,True,63,,8,,,802.4712999995245,851.5676999995776,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,22,1150,1150,True,True,71,,423,271,1741.581700000097,2052.653800000371,2753.0587999999625,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,22,1150,1150,True,True,71,,89,,,968.9432000004672,1360.2521000002525,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,23,714,714,True,True,65,,226,216,1711.5004000006593,1915.1779000003444,1918.532800000321,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,23,714,714,True,True,65,,10,,,1139.0670999999202,1204.7147000002951,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,24,68,68,True,True,67,,331,237,2056.059799999275,2278.014499999699,2652.4759999992966,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,24,68,68,True,True,67,,8,,,1123.2317000003604,1209.7103000005518,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,25,74,74,True,True,68,,345,246,1894.8382999997193,2420.097199999873,2970.8143999996537,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,25,74,74,True,True,68,,8,,,957.4879000001602,1011.8431999999302,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,26,75,,False,False,62,,126,124,,1597.1951999999874,1606.1691999993855,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,26,75,75,True,True,62,,109,,,1102.758200000153,1619.9291000000358,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,27,1055,1055,True,True,71,,213,206,1797.521699999379,1838.5091000000102,1856.294600000183,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,27,1055,1055,True,True,71,,110,,,978.8691000003382,1515.198000000055,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,28,112,112,True,True,65,,176,166,1928.4808000002158,1930.213399999957,1933.205100000123,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,28,112,112,True,True,65,,10,,,900.7001999998465,1048.2096000005185,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,arithmetic,29,64,64,True,True,66,,228,220,2077.4630000005345,2830.840999999964,2847.3147000004246,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,arithmetic,29,64,64,True,True,66,,8,,,2653.4619999993083,2704.5572999995784,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","flushing, greasing, hosing, calibration, emissions, descaling, balancing",True,True,153,,2839,2462,1656.073799999831,13582.443299999795,15372.228499999437,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,0,"flushing, greasing, hosing, calibration, emissions, descaling, balancing","flushing, greasing, hosing, calibration, emissions, descaling, balancing",True,True,153,,542,,,787.8506999995807,3505.614400000013,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","greasing, calibration, balancing, hosing, descaling, emissions, flushing",True,True,153,,5777,5411,1876.2164999998276,29567.18109999929,31259.230699999534,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,1,"greasing, calibration, balancing, hosing, descaling, emissions, flushing","greasing, hosing, balancing, descaling, emissions, calibration, flushing",True,False,153,,670,,,716.8610999997327,4334.317400000145,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, greasing, emissions, audit",True,True,154,,3860,3436,1836.6886999992857,19824.030099999618,22278.94229999947,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,2,"balancing, flushing, hosing, descaling, greasing, emissions, audit","balancing, flushing, hosing, descaling, greasing, emissions, audit",True,True,154,,761,,,807.0113000003403,4551.314100000127,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","hosing, flushing, audit, calibration, balancing, emissions, descaling",True,True,157,,3574,3122,1916.0547999999835,16722.24239999923,19040.28239999934,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,3,"hosing, flushing, audit, calibration, balancing, emissions, descaling","hosing, flushing, audit, calibration, balancing, emissions, descaling",True,True,157,,851,,,1754.439899999852,6244.494600000053,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","hosing, flushing, descaling, calibration, emissions, balancing, audit",True,True,150,,2257,1954,1791.4649999993344,10754.759899999954,12445.985299999847,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,4,"hosing, flushing, descaling, calibration, emissions, balancing, audit","hosing, flushing, descaling, calibration, emissions, balancing, audit",True,True,150,,350,,,1025.0826999999845,2476.4757000002646,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, descaling, calibration, audit, flushing, greasing",True,True,160,,2989,2684,2626.868000000286,14437.30930000038,16021.303399999852,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,5,"hosing, balancing, descaling, calibration, audit, flushing, greasing","hosing, balancing, descaling, calibration, audit, flushing, greasing",True,True,160,,355,,,949.264800000492,2544.257900000048,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","calibration, audit, descaling, flushing, greasing, hosing, balancing",True,True,170,,2712,2060,2239.8088999998436,12393.704799999796,15606.405399999858,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,6,"calibration, audit, descaling, flushing, greasing, hosing, balancing","calibration, audit, descaling, flushing, greasing, hosing, balancing",True,True,170,,993,,,961.4164000004166,5945.4218000000765,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,161,,3622,3287,1861.5811999998186,17107.02399999991,18478.998699999465,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,7,"hosing, emissions, descaling, calibration, greasing, balancing, flushing","hosing, emissions, descaling, calibration, greasing, balancing, flushing",True,True,161,,633,,,933.2025000003341,4212.844900000164,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, audit, flushing, hosing, descaling, calibration",True,True,150,,4638,4173,2315.861600000062,23706.520400000045,26231.548300000213,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,8,"emissions, balancing, audit, flushing, hosing, descaling, calibration","emissions, balancing, audit, flushing, hosing, descaling, calibration",True,True,150,,520,,,1044.4797000000108,3497.4695999999312,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, hosing, descaling, calibration, emissions",True,True,144,,2566,2169,1748.473699999522,13197.060599999531,15076.846599999953,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,9,"audit, greasing, balancing, hosing, descaling, calibration, emissions","audit, greasing, balancing, hosing, descaling, calibration, emissions",True,True,144,,636,,,943.5268999995969,4073.5881999999037,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,150,,2578,2253,1797.3259000000326,13584.868199999619,15055.784899999708,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,10,"hosing, flushing, greasing, calibration, emissions, balancing, audit","hosing, flushing, greasing, calibration, emissions, balancing, audit",True,True,150,,517,,,1268.2338000004165,3984.5390999998926,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, balancing, greasing, flushing, calibration, hosing",True,True,152,,3175,2633,2008.552399999644,14729.545600000165,17505.27890000012,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,11,"audit, descaling, balancing, greasing, flushing, calibration, hosing","audit, descaling, balancing, greasing, flushing, calibration, hosing",True,True,152,,748,,,1021.1779000001115,4770.271200000025,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,147,,1223,868,2091.414900000018,5261.21669999975,6899.5138000000225,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,12,"calibration, hosing, emissions, flushing, audit, descaling, greasing","calibration, hosing, emissions, flushing, audit, descaling, greasing",True,True,147,,343,,,1074.0826000001107,2716.9714000001477,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,152,,2801,2418,1967.5360000001092,15471.430999999939,17592.566100000113,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,13,"hosing, descaling, flushing, audit, balancing, calibration, emissions","hosing, descaling, flushing, audit, balancing, calibration, emissions",True,True,152,,385,,,858.1482999998116,2794.400200000382,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","flushing, descaling, emissions, audit, calibration, balancing, greasing",True,True,156,,2255,1740,1750.5240000000413,9918.663399999787,12515.732099999695,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,14,"flushing, descaling, emissions, audit, calibration, balancing, greasing","flushing, descaling, emissions, audit, calibration, balancing, greasing",True,True,156,,589,,,829.896600000211,3837.934199999836,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,141,,2845,2512,1846.8796000006478,15291.56680000051,17039.208000000144,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,15,"emissions, calibration, audit, hosing, greasing, flushing, balancing","emissions, calibration, audit, hosing, greasing, flushing, balancing",True,True,141,,1004,,,1075.8584999994127,6605.148900000131,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration","descaling, greasing, flushing, emissions, balancing, hosing, calibration",True,True,154,,2613,2158,2406.1953999998877,13999.735200000032,16080.13099999971,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,16,"descaling, greasing, flushing, emissions, balancing, hosing, calibration","descaling, greasing, flushing, emissions, balancing, hosing, calibration",True,True,154,,474,,,906.403599999976,3169.9579999999514,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,142,,2300,1967,2260.9345999999277,11412.074900000334,12898.645500000384,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,17,"audit, hosing, greasing, calibration, flushing, emissions, balancing","audit, hosing, greasing, calibration, flushing, emissions, balancing",True,True,142,,367,,,974.9338000001444,2621.1272999998982,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,147,,1450,1167,2335.813099999541,7167.140900000049,8609.829799999716,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,18,"audit, descaling, flushing, emissions, greasing, balancing, hosing","audit, descaling, flushing, emissions, greasing, balancing, hosing",True,True,147,,348,,,983.0543999996735,2631.7584999997052,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, audit, balancing, calibration, greasing",True,True,159,,5878,5466,1965.2897000005396,29732.038600000124,31950.46629999979,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,19,"emissions, descaling, flushing, audit, balancing, calibration, greasing","emissions, descaling, flushing, audit, balancing, calibration, greasing",True,True,159,,588,,,1352.7282000004561,4329.4943999999305,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","audit, flushing, descaling, greasing, emissions, calibration, balancing",True,True,156,,5259,4834,2985.456599999452,27662.355200000093,29773.03219999976,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,20,"audit, flushing, descaling, greasing, emissions, calibration, balancing","audit, flushing, descaling, greasing, emissions, calibration, balancing",True,True,156,,1067,,,1077.5288000004366,6905.8930999999575,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,158,,3190,2758,2023.3382999995229,15557.401000000027,17507.552000000032,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,21,"audit, balancing, emissions, flushing, hosing, descaling, calibration","audit, balancing, emissions, flushing, hosing, descaling, calibration",True,True,158,,634,,,797.4673999997322,3644.0302000000884,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,153,,1935,1632,5140.488199999709,9755.462299999635,11226.79479999988,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,22,"balancing, audit, hosing, greasing, calibration, flushing, descaling","balancing, audit, hosing, greasing, calibration, flushing, descaling",True,True,153,,452,,,902.9436999999234,3119.053999999778,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,152,,1671,1354,1936.4140000002408,7910.223400000177,9378.34170000042,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,23,"hosing, balancing, audit, calibration, descaling, emissions, greasing","hosing, balancing, audit, calibration, descaling, emissions, greasing",True,True,152,,407,,,1113.6888000000909,3214.111199999934,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, descaling, calibration, audit, greasing, hosing, flushing",True,True,159,,2850,2194,2532.5198999998975,12433.974399999897,15621.994600000107,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,24,"balancing, descaling, calibration, audit, greasing, hosing, flushing","balancing, descaling, calibration, audit, greasing, hosing, flushing",True,True,159,,752,,,927.4832999999489,4124.313399999664,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","flushing, descaling, emissions, hosing, calibration, balancing, audit",True,True,165,,7318,6652,1924.5982000002186,35586.124100000234,38741.92000000039,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,25,"flushing, descaling, emissions, hosing, calibration, balancing, audit","flushing, descaling, emissions, hosing, calibration, balancing, audit",True,True,165,,1928,,,1024.5033000001058,11331.86029999979,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","flushing, balancing, calibration, audit, hosing, emissions, descaling",True,True,151,,3301,2686,1838.1641000005402,13708.350700000665,16501.4254000007,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,26,"flushing, balancing, calibration, audit, hosing, emissions, descaling","flushing, balancing, calibration, audit, hosing, emissions, descaling",True,True,151,,1100,,,1512.9661000000851,7668.6594000002515,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,148,,1748,1485,1952.3876000002929,9922.709999999825,11015.891399999418,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,27,"flushing, audit, greasing, descaling, hosing, calibration, emissions","flushing, audit, greasing, descaling, hosing, calibration, emissions",True,True,148,,494,,,1005.9871000003113,3313.3151000001817,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, hosing, greasing, emissions, descaling, flushing",True,True,153,,3291,2788,1910.2992999996786,16326.111899999887,18674.910900000214,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,28,"audit, calibration, hosing, greasing, emissions, descaling, flushing","audit, calibration, hosing, greasing, emissions, descaling, flushing",True,True,153,,1480,,,1103.149300000041,9700.89149999967,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, emissions, descaling, calibration, flushing, greasing",True,True,161,,3257,2809,2162.3617000004742,15082.523000000037,17191.162299999633,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,constraint-puzzle,29,"audit, hosing, emissions, descaling, calibration, flushing, greasing","audit, hosing, emissions, descaling, calibration, flushing, greasing",True,True,161,,699,,,824.3064999996932,4676.081599999634,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,0,4842,4842,True,True,201,,80,73,,1344.5050000000265,1361.8340000002718,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,0,4842,4842,True,True,201,,12,,,960.3562000002057,1029.3940999999904,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,1,5260,5260,True,True,204,,270,258,1876.8145000003642,2367.832300000373,2379.607599999872,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,1,5260,5260,True,True,204,,12,,,1170.7306999996945,1408.742199999324,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,2,5202,5202,True,True,205,,230,218,1980.24869999972,2489.8034999996526,2500.3779999997278,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,2,5202,5202,True,True,205,,7,,,1390.4976000003444,1439.3644000001586,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,3,9681,9681,True,True,212,,248,236,1954.9154999995153,2353.8904999995793,2358.54449999988,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,3,9681,9681,True,True,212,,12,,,1130.9839000005013,1196.125999999822,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,4,9200,9200,True,True,205,,82,75,,1716.614799999661,1719.628499999999,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,4,9200,9200,True,True,205,,12,,,788.4494000008999,854.9909000003026,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,5,7781,7781,True,True,205,,306,299,1735.284800000045,1983.765200000562,2040.7451999999466,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,5,7781,7781,True,True,205,,12,,,1072.253099999216,1094.6728999997504,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,6,9404,9404,True,True,208,,197,185,1913.575900000069,2000.0436999998783,2015.1589000006425,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,6,9404,9404,True,True,208,,12,,,1183.91900000006,1287.1925999997984,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,7,3190,3190,True,True,205,,218,211,1652.7930000002016,2129.399100000228,2143.684800000301,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,7,3190,3190,True,True,205,,12,,,1217.8269999994882,1359.30129999997,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,8,4741,4741,True,True,203,,84,77,,1469.5678999996744,1483.0020999997942,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,8,4741,4741,True,True,203,,12,,,1073.1760999997277,1141.2334999995437,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,9,3694,3694,True,True,207,,114,102,,1516.443999999865,1521.8641000001298,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,9,3694,3694,True,True,207,,12,,,1033.3271999998033,1079.182899999978,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,10,4774,4774,True,True,206,,125,118,,1540.428599999359,1548.4099999994214,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,10,4774,4774,True,True,206,,12,,,1393.622200000209,1462.0740000000296,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,11,3046,3046,True,True,209,,225,213,1759.5097999992504,1974.9557999994067,1981.2509999992471,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,11,3046,3046,True,True,209,,12,,,919.096399999944,964.0826000004381,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,12,4078,4078,True,True,207,,123,116,,1864.3368000002738,1872.0996000001833,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,12,4078,4078,True,True,207,,12,,,988.2814000002327,1042.6988999997775,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,13,6957,6957,True,True,207,,90,83,,1530.4910000004384,1537.6734999999826,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,13,6957,6957,True,True,207,,7,,,910.1869000005536,974.4326000000001,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,14,6053,6053,True,True,200,,159,147,,1886.6636000002472,1995.9968000002846,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,14,6053,6053,True,True,200,,12,,,1041.1833999996816,1079.337299999679,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,15,7905,7905,True,True,206,,116,104,,1908.1734000001234,1913.0797999996503,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,15,7905,7905,True,True,206,,12,,,1567.6024000003963,1634.7720000003392,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,16,4759,4759,True,True,203,,278,266,2042.335500000263,2341.702499999883,2360.7589000002918,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,16,4759,4759,True,True,203,,12,,,1335.7994999996663,1339.2529000002469,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,17,8800,8800,True,True,202,,225,218,3099.770499999977,3199.2166999998517,3222.512299999835,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,17,8800,8800,True,True,202,,7,,,931.4504999993005,970.0311999995392,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,18,8414,8414,True,True,205,,175,168,1740.9764000003634,1922.317400000793,1934.3474000006609,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,18,8414,8414,True,True,205,,12,,,1659.5775000000685,1786.4176000000498,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,19,6753,6753,True,True,210,,134,122,,1536.0531999995146,1566.6936999996324,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,19,6753,6753,True,True,210,,12,,,1420.9886999997252,1426.7939000001206,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,20,8182,8182,True,True,207,,142,130,,1452.751800000442,1461.4369000000806,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,20,8182,8182,True,True,207,,12,,,934.8233999999138,984.5661999997901,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,21,5088,5088,True,True,202,,206,199,1869.6350999998685,1921.037800000704,1934.6094000002267,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,21,5088,5088,True,True,202,,12,,,741.6161000001011,794.3511000003127,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,22,7147,7147,True,True,204,,101,89,,1492.8152000002228,1533.641500000158,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,22,7147,7147,True,True,204,,12,,,971.1772000000565,1078.5482000001139,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,23,2938,2938,True,True,201,,197,190,2105.7871000002706,2202.971499999876,2211.762500000077,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,23,2938,2938,True,True,201,,12,,,971.0621000003812,1057.0612999999867,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,24,7958,7958,True,True,206,,370,358,1750.7378000000244,2598.3784999998534,2603.5892999998396,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,24,7958,7958,True,True,206,,12,,,819.3830999998681,905.3411999993841,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,25,2860,2860,True,True,207,,111,99,,2169.6642999995674,2172.3000000001775,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,25,2860,2860,True,True,207,,12,,,847.335600000406,915.0778000002902,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,26,2379,2379,True,True,206,,196,184,,1941.5435999999318,1985.4247000002943,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,26,2379,2379,True,True,206,,12,,,997.0794000000751,1065.463799999634,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,27,3703,3703,True,True,203,,227,215,2083.568300000479,2411.7455000005066,2429.686899999979,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,27,3703,3703,True,True,203,,12,,,1165.8236000002944,1236.1569000004238,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,28,8316,8316,True,True,206,,186,179,,2016.8443000002299,2024.043000000347,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,28,8316,8316,True,True,206,,12,,,1313.9549999996234,1364.866500000062,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,extraction,29,2063,2063,True,True,211,,307,300,1775.86699999938,2531.0387999998056,2549.4011000000683,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,extraction,29,2063,2063,True,True,211,,12,,,2727.2940000002563,2769.151999999849,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,0,135,135,True,True,260,,998,988,1922.0766999997068,4872.423900000285,4888.183299999582,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,0,135,135,True,True,260,,111,,,1495.6168999997317,1980.1257999997688,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,1,265,265,True,True,306,,1736,1730,1825.580999999147,8669.225199999346,8730.137399999876,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,1,265,265,True,True,306,,201,,,933.0567999995765,1774.7898999996323,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,2,195,195,True,True,383,,2927,2688,1701.0003999994296,12284.270899999683,13349.51319999982,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,2,195,195,True,True,383,,255,,,1136.4923000001,2195.051599999715,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,3,150,150,True,True,291,,1298,1102,2752.8656999993473,6737.350699999297,7589.55960000003,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,3,150,150,True,True,291,,245,,,947.4971000004189,2041.4158000003226,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,4,45,45,True,True,289,,848,840,2179.2089000000487,5319.669000000431,5343.199699999786,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,4,45,45,True,True,289,,98,,,1039.3747999996776,1547.3519999995915,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,5,60,60,True,True,369,,1193,1096,1578.196399999797,5259.928899999977,5626.646599999731,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,5,60,60,True,True,369,,94,,,1117.2968999999284,1469.1210000000865,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,6,200,200,True,True,334,,1355,1349,2138.2487000000765,7477.911699999822,7482.574499999828,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,6,200,200,True,True,334,,189,,,1122.8533999992578,2005.7699999997567,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,7,155,155,True,True,342,,1539,1301,1803.9320999996562,6107.0786999998745,7061.057699999765,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,7,155,155,True,True,342,,273,,,1019.4090000004508,2540.003600000091,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,8,40,40,True,True,379,,1370,1365,2197.4264999998923,7220.891900000424,7245.431800000006,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,8,40,40,True,True,379,,564,,,1134.4843000006222,3418.0669000006674,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,9,30,30,True,True,358,,1550,1381,1827.0362000002933,6510.612699999911,7131.249199999729,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,9,30,120,True,False,358,,6,,,1285.4625999998461,1308.9549000005718,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,10,50,50,True,True,289,,1211,1094,2314.2281000000366,5751.094100000046,6377.02199999967,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,10,50,50,True,True,289,,86,,,1143.159100000048,1298.9794999994047,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,11,140,140,True,True,277,,1129,1033,2068.460700000287,5567.709100000229,5940.560600000026,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,11,140,140,True,True,277,,10,,,1733.8331000000835,1852.076400000442,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,12,130,130,True,True,262,,811,805,2186.1848999997164,3875.918300000194,3927.0747000000483,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,12,130,130,True,True,262,,117,,,1005.5645000002187,1579.845899999782,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,13,170,170,True,True,367,,2088,1835,2399.935500000538,9400.596000000405,10763.531900000089,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,13,170,130,True,False,367,,6,,,1054.2232999996486,1112.7315999992788,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,14,275,275,True,True,298,,1172,1056,2319.940100000167,5516.029899999921,6067.275500000505,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,14,275,275,True,True,298,,101,,,994.2768999999316,1620.887799999764,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,15,110,110,True,True,285,,1313,1207,1954.7668000004705,6362.415200000214,6793.149500000254,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,15,110,110,True,True,285,,109,,,1009.5195999992939,1435.40799999937,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,16,140,,False,False,358,,2223,2220,1698.4862999997858,10287.376799999947,10293.665500000316,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,16,140,140,True,True,358,,251,,,1010.7798000008188,2303.9880000005724,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,17,30,30,True,True,259,,802,794,2034.7320000000764,4630.027600000176,4641.354299999875,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,17,30,30,True,True,259,,132,,,1024.9351000002207,1674.3640000004234,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,18,55,55,True,True,380,,2539,2162,1955.3382999993119,10938.306299999567,12589.013099999647,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,18,55,55,True,True,380,,303,,,1162.6870000000054,2302.639200000158,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,19,35,35,True,True,331,,1707,1442,1961.9126999996297,6929.76920000001,7910.872200000085,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,19,35,35,True,True,331,,269,,,1035.3431999992608,2310.5649999997695,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,20,45,45,True,True,286,,1137,1132,2144.4124999998166,6434.454199999891,6488.920200000393,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,20,45,45,True,True,286,,112,,,821.244900000238,1373.8516000003074,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,21,50,50,True,True,355,,2615,2371,1726.4062000003833,11283.647700000074,12327.631799999835,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,21,50,50,True,True,355,,362,,,921.9923000000563,2771.661099999619,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,22,25,25,True,True,286,,1278,1140,2559.3302999996013,6847.899399999733,7339.556199999606,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,22,25,25,True,True,286,,148,,,1012.861499999417,1725.6965999995373,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,23,45,45,True,True,371,,1862,1688,1760.057799999231,8078.016999999818,8735.436500000105,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,23,45,45,True,True,371,,134,,,1130.404699999417,1619.892400000026,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,24,60,60,True,True,254,,831,826,2502.5580000001355,4934.039400000074,4953.83049999964,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,24,60,60,True,True,254,,170,,,1145.7534999999552,1797.353299999486,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,25,95,95,True,True,374,,2602,2390,1607.2393000004013,10131.594999999834,10973.953900000197,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,25,95,95,True,True,374,,262,,,1048.3238999995592,2279.6487999994497,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,26,205,205,True,True,362,,1382,1372,2342.3437999999805,6942.920299999969,6962.222799999836,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,26,205,205,True,True,362,,171,,,1179.8462999995536,1865.958800000044,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,27,145,145,True,True,361,,1923,1913,2011.7387000000235,9448.901199999455,9511.904500000128,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,27,145,145,True,True,361,,246,,,1005.7803999998214,2037.8122000001895,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,28,50,50,True,True,290,,2082,1762,1841.1869000001388,9525.474600000052,10928.654299999835,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,28,50,50,True,True,290,,516,,,988.8305999993463,2934.68699999994,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,high,high,True,state-tracking,29,135,135,True,True,367,,1810,1804,1879.052799999954,7907.6571999994485,7955.18919999995,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,lowest,minimal,False,state-tracking,29,135,135,True,True,367,,134,,,1058.5793999998714,1699.8701000002256,stop
