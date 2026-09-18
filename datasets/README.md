@@ -53,7 +53,7 @@ in the config.
 
 **What it contains.** 120 generated questions with known correct answers, in four families:
 extraction from a short operations log, short arithmetic word problems, warehouse state tracking,
-and five-job ordering puzzles.
+and seven-job ordering puzzles.
 
 **Source.** None. Every item, including the prose in the extraction passages, is generated from
 the seed in the field note's `config.yaml`, so no question can have appeared in a model's
@@ -70,5 +70,5 @@ a run can never send questions the committed config does not describe.
 
 **Correctness.** The test suite re-solves every item independently from the published prompt:
 the arithmetic is worked out again, the warehouse movements are replayed, and each puzzle is brute
-forced over all 120 orderings to confirm that exactly one fits its clues and that it is the
+forced over all 5,040 orderings to confirm that exactly one fits its clues and that it is the
 recorded answer.

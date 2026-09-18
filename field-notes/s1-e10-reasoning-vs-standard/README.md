@@ -53,8 +53,10 @@ search problem that does.
 |---|---|---|
 | Extraction | A short operations log with one invented fact, and a direct lookup question | Control: reasoning should add cost without adding accuracy |
 | Short arithmetic | Word problems needing two or three operations | Light multi-step reasoning |
-| State tracking | Six to eight sequential changes to stock across three warehouses | Heavy multi-step reasoning |
-| Constraint puzzles | Five jobs to put in order from a handful of clues | Search and constraint satisfaction |
+| State tracking | Twelve to twenty sequential changes to stock across five warehouses | Heavy multi-step reasoning |
+| Constraint puzzles | Seven jobs to put in order from five to seven clues | Search and constraint satisfaction |
+
+**Harder after the pilot.** In the first pilot, every model answered every item correctly, including five-job puzzles and six-change stock problems with reasoning at its lowest setting. A task every model already gets right cannot show what reasoning adds, so state tracking went from six to eight changes across three warehouses to twelve to twenty across five, and the puzzles from five jobs (120 possible orders) to seven (5,040). Extraction stays the control and arithmetic stays light, as designed.
 
 **Everything is generated, and everything is committed.** Every item is built from the seed in
 `config.yaml` by [`generators.py`](generators.py), so no question can have appeared in a model's
@@ -65,7 +67,7 @@ that no longer matches the config is rebuilt rather than used.
 
 **Every answer is checked by a second implementation.** The test suite re-solves every generated
 item independently from the published prompt: it re-does the arithmetic, replays the warehouse
-movements, and brute forces all 120 orderings of each puzzle to confirm that exactly one fits the
+movements, and brute forces all 5,040 orderings of each puzzle to confirm that exactly one fits the
 clues and that it is the recorded answer. It also confirms that no clue in a puzzle is redundant.
 
 **Prompt.** There is no system prompt, so the reasoning setting is the only difference between

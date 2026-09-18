@@ -9,8 +9,12 @@ The four families run from a control that needs no reasoning to a search problem
 
   extraction         a generated operations log with one invented fact, and a lookup question
   arithmetic         word problems needing two or three operations
-  state-tracking     six to eight sequential changes to stock across three warehouses
-  constraint-puzzle  a five-job ordering puzzle with exactly one valid order, brute forced
+  state-tracking     twelve to twenty sequential changes to stock across five warehouses
+  constraint-puzzle  a seven-job ordering puzzle with exactly one valid order, brute forced
+
+State tracking and the puzzles were made harder after the pilot, in which every model answered
+every item correctly with reasoning at its lowest setting. A task that every model already gets
+right cannot show what reasoning adds.
 
 Nothing in this module touches the network or the clock.
 """
@@ -245,28 +249,26 @@ def _arithmetic_item(rng: random.Random, template: ArithmeticTemplate) -> tuple[
 
 
 # --------------------------------------------------------------------------------------------
-# T3 Long state tracking: six to eight sequential changes across three warehouses.
+# T3 Long state tracking: twelve to twenty sequential changes across five warehouses.
 # --------------------------------------------------------------------------------------------
 
-WAREHOUSES = ("Aldridge", "Brindle", "Colwyn")
-MIN_CHANGES = 6
-MAX_CHANGES = 8
+WAREHOUSES = ("Aldridge", "Brindle", "Colwyn", "Dunmore", "Elgin")
+MIN_CHANGES = 12
+MAX_CHANGES = 20
+# Spelled out in the prompt, so the count reads naturally.
+NUMBER_WORDS = {3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven"}
 
 
 def _state_tracking_item(rng: random.Random) -> tuple[str, str] | None:
     stock = {name: rng.randrange(40, 240, 5) for name in WAREHOUSES}
     opening = dict(stock)
-    changes: list[str] = []
-    for _ in range(rng.randint(MIN_CHANGES, MAX_CHANGES)):
-        change = _one_change(rng, stock)
-        if change is None:
-            return None
-        changes.append(change)
+    changes = [_one_change(rng, stock) for _ in range(rng.randint(MIN_CHANGES, MAX_CHANGES))]
     asked = rng.choice(WAREHOUSES)
     lines = "\n".join(f"{number}. {text}" for number, text in enumerate(changes, start=1))
     opening_text = ", ".join(f"{name} {count} units" for name, count in opening.items())
     prompt = (
-        f"Three warehouses start the day with these stock levels: {opening_text}.\n\n"
+        f"{NUMBER_WORDS[len(WAREHOUSES)]} warehouses start the day with these stock levels: "
+        f"{opening_text}.\n\n"
         f"The following changes happen in order:\n{lines}\n\n"
         f"Question: how many units are in {asked} at the end?\n"
         "Answer with a whole number only.\n"
@@ -275,18 +277,20 @@ def _state_tracking_item(rng: random.Random) -> tuple[str, str] | None:
     return prompt, str(stock[asked])
 
 
-def _one_change(rng: random.Random, stock: dict[str, int]) -> str | None:
-    """Apply one change to `stock` and describe it. None when it would go negative."""
+def _one_change(rng: random.Random, stock: dict[str, int]) -> str:
+    """Apply one change to `stock` and describe it. Stock never goes below zero.
+
+    Stock only leaves a warehouse that holds enough of it. When none does, the change becomes an
+    arrival, so a long sequence never has to be thrown away and drawn again.
+    """
     kind = rng.choice(("move", "arrive", "ship"))
-    if kind == "arrive":
+    amount = rng.randrange(5, 90, 5)
+    sources = [name for name in WAREHOUSES if stock[name] >= amount]
+    if kind == "arrive" or not sources:
         where = rng.choice(WAREHOUSES)
-        amount = rng.randrange(5, 90, 5)
         stock[where] += amount
         return f"{amount} units arrive at {where}."
-    source = rng.choice(WAREHOUSES)
-    amount = rng.randrange(5, 90, 5)
-    if stock[source] < amount:
-        return None
+    source = rng.choice(sources)
     stock[source] -= amount
     if kind == "ship":
         return f"{amount} units are shipped out from {source}."
@@ -309,7 +313,9 @@ JOBS = (
     "greasing",
     "hosing",
 )
-PUZZLE_SIZE = 5
+# Seven jobs give 5,040 possible orders, against 120 for five, which the pilot showed every
+# model could solve at its lowest reasoning setting.
+PUZZLE_SIZE = 7
 
 # A constraint is a sentence and the test it stands for.
 Constraint = tuple[str, Callable[[tuple[str, ...]], bool]]
@@ -318,9 +324,9 @@ Constraint = tuple[str, Callable[[tuple[str, ...]], bool]]
 def _candidate_constraints(order: tuple[str, ...], rng: random.Random) -> list[Constraint]:
     """Every constraint that is true of `order`, hardest first so puzzles need real search.
 
-    Position constraints come last, because a puzzle solved by reading off five positions
+    Position constraints come last, because a puzzle solved by reading off the positions
     would test nothing. They are still in the pool, which guarantees that a unique set always
-    exists: the five of them pin the order completely.
+    exists: together they pin the order completely.
     """
     positions = {job: index for index, job in enumerate(order)}
     relations: list[Constraint] = []
@@ -392,11 +398,21 @@ def _solutions(jobs: tuple[str, ...], constraints: list[Constraint]) -> list[tup
 def _minimal_constraints(
     jobs: tuple[str, ...], candidates: list[Constraint]
 ) -> list[Constraint] | None:
-    """The shortest prefix of `candidates` with one solution, then pruned of what it can spare."""
+    """Clues taken in order until one solution is left, then pruned of any it can spare.
+
+    The orders still possible are narrowed as each clue is added, rather than every order being
+    checked again from scratch, which matters at 5,040 orders. A clue that rules nothing out is
+    skipped, so it never reaches the reader.
+    """
+    remaining = list(permutations(sorted(jobs)))
     chosen: list[Constraint] = []
     for candidate in candidates:
+        narrowed = [order for order in remaining if candidate[1](order)]
+        if len(narrowed) == len(remaining):
+            continue
         chosen.append(candidate)
-        if len(_solutions(jobs, chosen)) == 1:
+        remaining = narrowed
+        if len(remaining) == 1:
             break
     else:
         return None
@@ -416,11 +432,12 @@ def _constraint_puzzle_item(rng: random.Random) -> tuple[str, str] | None:
     clues = "\n".join(f"- {sentence}" for sentence, _ in chosen)
     names = ", ".join(sorted(jobs))
     prompt = (
-        f"Five maintenance jobs are run one after another, as job 1 through to job 5. The "
-        f"jobs are: {names}.\n\n"
+        f"{NUMBER_WORDS[PUZZLE_SIZE]} maintenance jobs are run one after another, as job 1 "
+        f"through to job {PUZZLE_SIZE}. The jobs are: {names}.\n\n"
         f"These statements are all true:\n{clues}\n\n"
         "Exactly one order fits every statement. Work out that order.\n"
-        "Answer with the five job names from first to last, separated by commas.\n"
+        f"Answer with the {NUMBER_WORDS[PUZZLE_SIZE].lower()} job names from first to last, "
+        "separated by commas.\n"
         f"{ANSWER_INSTRUCTION}"
     )
     return prompt, ", ".join(order)
