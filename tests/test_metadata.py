@@ -3,7 +3,14 @@ import subprocess
 from types import SimpleNamespace
 
 from lab.config import ExperimentConfig
-from lab.metadata import DatasetSource, build_metadata, git_state, write_metadata
+from lab.metadata import (
+    RESULTS_PATHSPECS,
+    DatasetSource,
+    build_metadata,
+    git_state,
+    read_metadata,
+    write_metadata,
+)
 from lab.providers.mock import MockProvider
 from lab.raw_log import RunRecord
 from lab.runner import RunSummary
@@ -34,8 +41,11 @@ def _fake_git(outputs: dict[tuple[str, ...], str], returncode: int = 0):
     return run
 
 
+STATUS = ("status", "--porcelain", "--", ".", *RESULTS_PATHSPECS)
+
+
 def test_git_state_reads_commit_and_dirty_flag(tmp_path):
-    run = _fake_git({("rev-parse", "HEAD"): "abc123\n", ("status", "--porcelain"): " M file.py\n"})
+    run = _fake_git({("rev-parse", "HEAD"): "abc123\n", STATUS: " M file.py\n"})
 
     state = git_state(tmp_path, run=run)
 
@@ -43,7 +53,7 @@ def test_git_state_reads_commit_and_dirty_flag(tmp_path):
 
 
 def test_git_state_clean_tree(tmp_path):
-    run = _fake_git({("rev-parse", "HEAD"): "abc123\n", ("status", "--porcelain"): ""})
+    run = _fake_git({("rev-parse", "HEAD"): "abc123\n", STATUS: ""})
 
     assert git_state(tmp_path, run=run).dirty is False
 
@@ -110,7 +120,8 @@ def test_build_metadata_records_everything_the_spec_requires(tmp_path):
     assert metadata.models[0].model_versions_returned == ["mock-a-mock-0001"]
     assert metadata.config["seed"] == 7
     assert metadata.datasets[0].licence == "Public domain in the USA"
-    assert metadata.counts.made == 1
+    assert metadata.passes[-1].counts.made == 1
+    assert metadata.counts.complete == 1
 
 
 def test_write_metadata_produces_readable_json(tmp_path):
@@ -130,6 +141,138 @@ def test_write_metadata_produces_readable_json(tmp_path):
     write_metadata(path, metadata)
 
     data = json.loads(path.read_text(encoding="utf-8"))
-    assert data["counts"]["cached"] == 1
+    assert data["passes"][0]["counts"]["cached"] == 1
     assert data["models"][0]["model_versions_returned"] == []
     assert "api_key" not in path.read_text(encoding="utf-8").lower()
+
+
+def _metadata(tmp_path, *, records, started, ended, previous=None, planned_ids=None, **kwargs):
+    return build_metadata(
+        config=CONFIG,
+        summary=RunSummary(planned=1, already_complete=0, cached=0, made=1, failed=0),
+        records=records,
+        started_utc=started,
+        ended_utc=ended,
+        datasets=[],
+        repo_dir=tmp_path,
+        git=lambda _path: git_state(tmp_path, run=_fake_git({}, returncode=1)),
+        planned_ids=planned_ids,
+        previous=previous,
+        **kwargs,
+    )
+
+
+def test_the_results_folder_is_not_what_makes_a_tree_dirty():
+    """A run's own output is not a change to the code that produced it."""
+    assert any("results/" in spec and "exclude" in spec for spec in RESULTS_PATHSPECS)
+    assert any("results-fresh/" in spec for spec in RESULTS_PATHSPECS)
+
+
+def test_passes_accumulate_and_the_window_spans_all_of_them(tmp_path):
+    first = _metadata(
+        tmp_path,
+        records=[],
+        started="2026-09-18T10:00:00+00:00",
+        ended="2026-09-18T11:00:00+00:00",
+        pilot=True,
+    )
+    retry = _metadata(
+        tmp_path,
+        records=[],
+        started="2026-09-18T12:00:00+00:00",
+        ended="2026-09-18T12:00:17+00:00",
+        previous=first,
+        provider="openai",
+    )
+
+    assert len(retry.passes) == 2
+    assert retry.passes[0].pilot is True
+    assert retry.passes[1].provider == "openai"
+    assert retry.started_utc == "2026-09-18T10:00:00+00:00"
+    assert retry.ended_utc == "2026-09-18T12:00:17+00:00"
+
+
+def test_counts_cover_the_whole_grid_not_the_calls_one_pass_selected(tmp_path):
+    records = _records()
+    metadata = _metadata(
+        tmp_path,
+        records=records,
+        started="2026-09-18T10:00:00+00:00",
+        ended="2026-09-18T10:01:00+00:00",
+        planned_ids=[records[0].call_id, "never-run-a", "never-run-b"],
+        provider="mock",
+    )
+
+    assert metadata.counts.planned == 3
+    assert metadata.counts.complete == 1
+    assert metadata.counts.not_run == 2
+
+
+def test_a_call_that_failed_then_succeeded_is_complete_not_failed(tmp_path):
+    records = _records()  # a failure, then a success, for the same call
+
+    metadata = _metadata(
+        tmp_path,
+        records=records,
+        started="2026-09-18T10:00:00+00:00",
+        ended="2026-09-18T10:01:00+00:00",
+        planned_ids=[records[0].call_id],
+    )
+
+    assert (metadata.counts.complete, metadata.counts.failed) == (1, 0)
+
+
+def test_a_call_that_only_failed_is_counted_as_failed(tmp_path):
+    failed = _records()[0]
+
+    metadata = _metadata(
+        tmp_path,
+        records=[failed],
+        started="2026-09-18T10:00:00+00:00",
+        ended="2026-09-18T10:01:00+00:00",
+        planned_ids=[failed.call_id],
+    )
+
+    assert (metadata.counts.complete, metadata.counts.failed) == (0, 1)
+
+
+def test_results_older_than_the_first_pass_move_the_start_earlier(tmp_path):
+    """Metadata written before passes were kept still gets an honest start time."""
+    early = _records()[1].model_copy(update={"recorded_utc": "2026-09-18T08:00:00+00:00"})
+
+    metadata = _metadata(
+        tmp_path,
+        records=[early],
+        started="2026-09-18T12:00:00+00:00",
+        ended="2026-09-18T12:00:17+00:00",
+    )
+
+    assert metadata.started_utc == "2026-09-18T08:00:00+00:00"
+
+
+def test_earlier_metadata_is_read_back(tmp_path):
+    path = tmp_path / "run_metadata.json"
+    write_metadata(
+        path,
+        _metadata(tmp_path, records=[], started="a", ended="b"),
+    )
+
+    assert read_metadata(path, "demo").passes[0].started_utc == "a"
+
+
+def test_metadata_in_an_older_format_starts_a_new_history(tmp_path):
+    path = tmp_path / "run_metadata.json"
+    path.write_text(json.dumps({"experiment": "demo", "counts": {"made": 3}}), encoding="utf-8")
+
+    assert read_metadata(path, "demo") is None
+
+
+def test_metadata_for_another_experiment_is_ignored(tmp_path):
+    path = tmp_path / "run_metadata.json"
+    write_metadata(path, _metadata(tmp_path, records=[], started="a", ended="b"))
+
+    assert read_metadata(path, "something-else") is None
+
+
+def test_missing_metadata_is_none(tmp_path):
+    assert read_metadata(tmp_path / "run_metadata.json", "demo") is None
