@@ -423,3 +423,25 @@ class TestPartialGrid:
         charts = tmp_path / "results" / "charts"
         assert not list(charts.glob(f"{module.HEATMAP_NAME}-*")) if charts.exists() else True
         assert "Heatmaps not drawn" in report
+
+
+class TestLabelPlacement:
+    def test_every_label_stays_on_the_chart_when_all_lines_are_at_100_percent(self, module):
+        """Three identical lines at the top: pushing labels up would hide two of them."""
+        series = [(name, [1.0] * 5) for name in ("Terra", "Sonnet", "Gemini")]
+
+        anchors = module._label_anchors(series, [0, 25, 50, 75, 100])
+
+        heights = sorted((y for _, y in anchors.values()), reverse=True)
+        assert all(height <= 1.0 for height in heights)
+        assert all(
+            upper - lower >= module.LABEL_GAP - 1e-9
+            for upper, lower in zip(heights, heights[1:], strict=False)
+        )
+
+    def test_labels_keep_the_config_order_when_lines_coincide(self, module):
+        series = [(name, [1.0] * 5) for name in ("Terra", "Sonnet", "Gemini")]
+
+        anchors = module._label_anchors(series, [0, 25, 50, 75, 100])
+
+        assert anchors["Terra"][1] > anchors["Sonnet"][1] > anchors["Gemini"][1]

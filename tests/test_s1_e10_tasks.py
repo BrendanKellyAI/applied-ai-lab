@@ -259,7 +259,7 @@ class TestStateTracking:
         for item in _of(items, generators.STATE_TRACKING):
             assert int(item.answer) == solve_state_tracking(item.prompt)
 
-    def test_every_item_has_six_to_eight_changes(self, generators, items):
+    def test_every_item_has_the_configured_number_of_changes(self, generators, items):
         for item in _of(items, generators.STATE_TRACKING):
             changes = [line for line in item.prompt.splitlines() if CHANGE_LINE.match(line)]
             assert generators.MIN_CHANGES <= len(changes) <= generators.MAX_CHANGES
@@ -279,7 +279,7 @@ class TestConstraintPuzzles:
             (only,) = solve_puzzle(item.prompt)
             assert ", ".join(only) == item.answer
 
-    def test_every_puzzle_orders_five_jobs(self, generators, items):
+    def test_every_puzzle_orders_the_configured_number_of_jobs(self, generators, items):
         for item in _of(items, generators.CONSTRAINT_PUZZLE):
             assert len(item.answer.split(", ")) == generators.PUZZLE_SIZE
 

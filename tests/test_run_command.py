@@ -140,6 +140,21 @@ class TestRun:
         assert len(lines) == 3
         assert "Calls made:             3" in result.output
 
+    def test_a_pilot_then_the_full_run_are_both_recorded(self, tmp_path, monkeypatch):
+        _counts_tokens(monkeypatch)
+        config_path = _field_note(tmp_path)
+        _invoke(config_path, tmp_path, "--pilot")
+        _invoke(config_path, tmp_path)
+
+        metadata = json.loads(
+            (config_path.parent / "results" / "run_metadata.json").read_text(encoding="utf-8")
+        )
+
+        assert [one["pilot"] for one in metadata["passes"]] == [True, False]
+        assert metadata["counts"]["planned"] == 3
+        assert metadata["counts"]["complete"] == 3
+        assert metadata["started_utc"] <= metadata["passes"][0]["started_utc"]
+
     def test_writes_run_metadata_with_dataset_sources(self, tmp_path, monkeypatch):
         _counts_tokens(monkeypatch)
         config_path = _field_note(tmp_path)
@@ -150,7 +165,8 @@ class TestRun:
             (config_path.parent / "results" / "run_metadata.json").read_text(encoding="utf-8")
         )
         assert metadata["experiment"] == "demo"
-        assert metadata["counts"]["made"] == 3
+        assert metadata["passes"][-1]["counts"]["made"] == 3
+        assert metadata["counts"]["complete"] == 3
         assert metadata["datasets"][0]["name"] == "Demo filler"
         assert metadata["models"][0]["label"] == "Mock A"
         assert "price" not in json.dumps(metadata).lower()

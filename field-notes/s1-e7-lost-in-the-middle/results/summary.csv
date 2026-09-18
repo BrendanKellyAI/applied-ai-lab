@@ -1,0 +1,271 @@
+model,provider,model_returned,mode,reasoning,context_length_tokens,position_percent,fact_index,correct,input_tokens,cached_input_tokens,output_tokens,reasoning_tokens,time_to_first_answer_token_ms,total_latency_ms,finish_reason
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,0,True,5940,0,4,0,2888.3158999999523,2897.6708999998664,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,1,True,5572,0,4,0,1699.6154000003116,1781.6842000001998,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,2,True,5634,0,4,0,1337.557199999992,1412.9507000002377,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,3,True,5532,0,4,0,1863.0448999997498,1910.3297999999995,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,4,True,5465,0,4,0,1711.0849000000599,1767.2085999997762,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,0,5,True,5783,0,4,0,1745.1684000002388,1811.0810000002857,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,0,True,5940,0,4,0,3214.1039000000546,3282.4299000001247,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,1,True,5572,0,4,0,3151.538000000073,3198.7809000002017,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,2,True,5633,0,4,0,1252.8222000000824,1722.8175999998712,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,3,True,5531,0,4,0,1133.5457000000133,3505.8751999999913,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,4,True,5465,0,4,0,1780.8905000001687,1781.8836000001284,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,25,5,True,5783,0,4,0,1277.0008000002235,3914.0035000000353,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,0,True,5939,0,4,0,2863.691900000049,2919.142400000055,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,1,True,5572,0,4,0,1254.5728999998573,2878.364099999999,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,2,True,5633,0,4,0,1247.8716000000531,1925.409899999977,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,3,True,5532,0,4,0,3361.809099999846,3407.3726999999963,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,4,True,5465,0,4,0,1073.1305999997858,2810.783399999764,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,50,5,True,5783,0,4,0,1018.9350000000559,3481.369900000118,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,0,True,5940,0,4,0,3603.742900000043,3637.671000000182,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,1,True,5571,0,4,0,1539.3476999997802,1554.9935999997615,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,2,True,5633,0,4,0,1256.6162999996777,1870.8575999999084,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,3,True,5532,0,4,0,3613.751599999887,3621.9297999996343,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,4,True,5465,0,4,0,3555.377900000167,3608.2197000000633,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,75,5,True,5783,0,4,0,2973.0775999996695,3024.8453999997764,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,0,True,5940,0,4,0,3037.0454000001246,3038.3555000000797,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,1,True,5572,0,4,0,3100.194999999985,3164.4853000002513,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,2,True,5634,0,4,0,1854.3229000001702,1856.6281000003073,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,3,True,5532,0,4,0,3253.5219999999754,3255.699299999833,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,4,True,5465,0,4,0,3053.6833999999544,3073.9032999999836,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,4000,100,5,True,5783,0,4,0,1702.0549000003484,1760.0750999999946,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,0,True,23559,0,4,0,2001.9721999997273,2004.2012999997496,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,1,True,22529,0,4,0,2022.1427000001313,2040.117200000168,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,2,True,22586,0,4,0,2497.9828000000452,2505.6916000003184,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,3,True,22822,0,4,0,1686.8892000002234,1800.8174999999937,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,4,True,21584,0,4,0,2012.1963999999934,2095.1215000000047,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,0,5,True,22898,0,4,0,881.9865000000391,1662.239000000227,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,0,True,23559,0,4,0,4460.0555000001805,4538.0411000001,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,1,True,22529,0,4,0,1316.2532999999712,3763.5360000003857,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,2,True,22586,0,4,0,3510.3456000001643,3578.4458000002815,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,3,True,22821,0,4,0,3020.4616999999416,3069.8294999997415,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,4,True,21582,0,4,0,1325.8989000000838,3660.5505000002267,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,25,5,True,22897,0,4,0,1296.8267999999625,3004.823700000088,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,0,True,23559,0,4,0,1787.9990000001271,1811.7894000001797,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,1,True,22529,0,4,0,1071.7547999997805,2600.918599999659,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,2,True,22585,0,4,0,1414.5382000001518,1416.6811999998572,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,3,True,22822,0,4,0,3925.477199999932,3995.7460000000538,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,4,True,21583,0,4,0,3714.117200000146,3716.6676000001644,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,50,5,True,22897,0,4,0,2016.2027999999736,2032.307700000274,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,0,True,23559,0,4,0,2693.646400000034,2748.7135000001217,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,1,True,22529,0,4,0,1250.8988000004138,3313.5534000002735,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,2,True,22586,0,4,0,1361.7904999996426,3625.1242999996975,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,3,True,22822,0,4,0,3343.537899999774,3387.6609999997527,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,4,True,21584,0,4,0,3342.197500000111,4846.418200000244,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,75,5,True,22898,0,4,0,3533.299799999895,3548.127199999726,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,0,True,23559,0,4,0,2013.5388999997303,2090.386899999885,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,1,True,22529,0,4,0,1770.4795999998169,1777.3858000000473,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,2,True,22586,0,4,0,3591.5820000000167,3595.5078000001777,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,3,True,22822,0,4,0,3570.8377000000837,3631.0551999999916,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,4,True,21584,0,4,0,1977.3513000000094,1978.1118000000788,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,16000,100,5,True,22898,0,4,0,2692.756400000235,2726.488600000266,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,0,True,93901,0,4,0,2568.288500000108,2636.3774999999805,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,1,True,91223,0,4,0,2586.0641999997824,2592.414899999767,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,2,True,90024,0,4,0,3800.101000000268,3869.682600000033,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,3,True,91418,0,4,0,4323.091600000225,4400.760900000023,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,4,True,87287,0,4,0,2690.31300000006,2724.2873000000145,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,0,5,True,91290,0,4,0,2306.681900000058,2370.4391000001124,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,0,True,93901,0,4,0,4867.06839999988,4870.394900000065,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,1,True,91222,0,4,0,3028.831699999955,3057.2189999998045,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,2,True,90024,0,4,0,1865.3807999999117,2457.8263999997034,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,3,True,91418,0,4,0,3889.4695999997566,3943.408999999974,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,4,True,87287,0,4,0,3877.97159999991,3880.407599999671,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,25,5,True,91289,0,4,0,2697.268400000212,2749.090100000103,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,0,True,93901,0,4,0,2000.8847999999944,3948.6021999998684,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,1,True,91222,0,4,0,4111.82719999988,4124.585200000183,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,2,True,90024,0,4,0,1859.5617999999376,3876.0243000001537,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,3,True,91418,0,4,0,4697.287999999844,4712.612399999671,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,4,True,87287,0,4,0,2153.5711000001356,4053.035700000237,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,50,5,True,91290,0,4,0,4247.651099999985,4288.299400000142,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,0,True,93900,0,4,0,3423.163100000238,3489.958800000295,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,1,True,91223,0,4,0,4369.840100000147,4385.554299999967,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,2,True,90023,0,4,0,2042.3591000003398,2123.5327000003963,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,3,True,91417,0,4,0,3898.5109999998713,3915.5775999997786,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,4,True,87287,0,4,0,4449.779399999898,4523.160199999893,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,75,5,True,91289,0,4,0,5055.490199999895,5146.27930000006,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,0,True,93901,0,4,0,2491.324500000246,2510.247100000015,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,1,True,91223,0,4,0,4132.9931999998735,4183.834599999955,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,2,True,90024,0,4,0,2529.616399999668,2566.0483999999997,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,3,True,91418,0,4,0,2714.607299999898,2742.662999999993,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,4,True,87287,0,4,0,2618.7150999999176,2692.7922999998373,stop
+Claude Sonnet 5,anthropic,claude-sonnet-5,standard,off,64000,100,5,True,91290,0,4,0,3076.0574999999335,3154.0423000001283,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,0,True,4020,0,6,0,7988.125500000024,8106.130599999915,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,1,True,4033,0,6,0,637.6135000000431,744.5302000000993,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,2,True,4037,0,6,0,950.0338000002557,1064.9332000002687,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,3,True,4041,0,6,0,990.3454000000238,1244.8421999997663,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,4,True,4038,0,6,0,1463.7923000000228,1468.047100000149,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,0,5,True,4038,0,6,0,1199.7120000000905,1408.0677000001742,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,0,True,4020,0,6,0,6150.677999999971,6167.7618999999595,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,1,True,4033,0,6,0,1295.3456999998707,1359.488799999781,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,2,True,4038,0,6,0,759.8415999996178,913.0124999996951,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,3,True,4042,0,6,0,905.4409000000305,1132.1468999999524,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,4,True,4038,0,6,0,1160.0672999998096,1306.6383999998834,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,25,5,True,4038,0,6,0,897.6622000000134,1049.4753999996647,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,0,True,4020,0,6,0,1377.7035000000524,1461.465900000121,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,1,True,4033,0,6,0,982.9076999999415,1113.5153999998693,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,2,True,4037,0,6,0,782.4901000003592,917.2310000003563,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,3,True,4041,0,6,0,1001.6436999999314,1252.6145000001634,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,4,True,4038,0,6,0,790.9012999998595,943.0600000000595,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,50,5,True,4038,0,6,0,854.4798000002629,996.6604000001098,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,0,True,4020,0,6,0,1572.0390000001316,1659.7054000001208,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,1,True,4033,0,6,0,830.2786999997807,967.751700000008,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,2,True,4037,0,6,0,750.3625999997894,895.538299999771,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,3,True,4041,0,6,0,802.4498999998286,932.665199999974,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,4,True,4038,0,6,0,1063.6641999999483,1191.4370999998027,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,75,5,True,4038,0,6,0,834.4194999999672,859.4366000002083,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,0,True,4020,0,6,0,1064.6908999999596,1171.6490999999678,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,1,True,4033,0,6,0,1503.81200000038,1591.2848000002668,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,2,True,4037,0,6,0,836.1428000002888,1009.6330999999736,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,3,True,4041,0,6,0,816.2987999999132,916.3287000001219,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,4,True,4038,0,6,0,835.2740000000267,976.2531999999737,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,4000,100,5,True,4038,0,6,0,934.5545999999558,1091.00269999999,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,0,True,16008,0,6,0,5056.3969999998335,5097.630499999923,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,1,True,16008,0,6,0,871.9888000000537,1013.0808999997498,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,2,True,16019,0,6,0,838.0734999996093,1021.389999999883,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,3,True,16023,0,6,0,957.4218999996447,1174.0767999999662,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,4,True,16038,0,6,0,1001.1262000002716,1103.4581000003527,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,0,5,True,16035,0,6,0,1085.4371000000356,1273.8813000000846,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,0,True,16008,0,6,0,3054.9550999999155,3132.9579999996895,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,1,True,16008,0,6,0,840.9037999999782,977.3764000001393,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,2,True,16019,0,6,0,795.8929999999782,963.5981000001266,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,3,True,16023,0,6,0,808.4395999999288,903.7263000000166,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,4,True,16037,0,6,0,1091.6435999997702,1308.3867999998802,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,25,5,True,16035,0,6,0,955.605099999957,1013.122199999998,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,0,True,16008,0,6,0,1190.041199999996,1334.3155999998544,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,1,True,16008,0,6,0,1089.964499999951,1208.3161999998993,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,2,True,16019,0,6,0,1481.6354999998111,1521.913399999903,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,3,True,16023,0,6,0,932.143399999859,1060.5200999998488,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,4,True,16038,0,6,0,1665.1027000002614,1894.3947000002481,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,50,5,True,16035,0,6,0,1010.0228000001152,1381.4170000000559,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,0,True,16008,0,6,0,1267.8520999998,1415.501200000108,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,1,True,16008,0,6,0,1856.156800000008,1989.9204999996982,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,2,True,16019,0,6,0,906.2812000001941,1053.4703000002992,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,3,True,16023,0,6,0,1315.7836000000316,1381.9929000001139,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,4,True,16038,0,6,0,946.6631999998754,1054.97749999995,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,75,5,True,16035,0,6,0,1329.4590000000426,1334.1878000001088,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,0,True,16008,0,6,0,1319.5106000002852,1398.8115000001926,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,1,True,16008,0,6,0,909.7388999998657,1061.9077000001198,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,2,True,16019,0,6,0,1085.690699999759,1207.4328999997306,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,3,True,16023,0,6,0,990.5181000003722,1155.223300000216,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,4,True,16038,0,6,0,784.16819999984,900.6380999999237,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,16000,100,5,True,16035,0,6,0,909.5579999998336,1129.7711000001982,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,0,True,63976,0,6,0,1362.094099999922,1490.9508999999161,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,1,True,64025,0,6,0,1211.9622000000163,1371.7704000000595,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,2,True,64037,0,6,0,961.0422000000653,1163.2801000000654,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,3,True,64025,0,6,0,1085.8944999999949,1259.4481999999516,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,4,True,64028,0,6,0,981.3863000003948,1108.2255999999688,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,0,5,True,64032,0,6,0,1174.45459999999,1411.5437000000384,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,0,True,63976,0,6,0,1161.167100000057,1406.9673000003604,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,1,True,64025,0,6,0,1098.4897000003002,1165.406200000234,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,2,True,64037,0,6,0,1076.4959000002818,1222.2785000003569,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,3,True,64025,0,6,0,1247.9309000000285,1381.6027000002578,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,4,True,64028,0,6,0,1357.7374999999847,1558.3267000001797,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,25,5,True,64032,0,6,0,1477.4317999999766,1604.1503000001285,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,0,True,63976,0,6,0,1982.2877999999946,2130.415200000016,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,1,True,64025,0,6,0,991.7908000002171,1222.2342000000026,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,2,True,64037,0,6,0,1823.3083999998598,1936.1499999999978,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,3,True,64025,0,6,0,1491.3404000003538,1601.7974000001232,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,4,True,64028,0,6,0,3634.6331999998256,3664.9540999997043,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,50,5,True,64032,0,6,0,1635.3264000003946,1710.5452000000696,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,0,True,63976,0,6,0,1431.1640999999327,1691.2847999997211,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,1,True,64025,0,6,0,1107.2280000003047,1364.241100000072,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,2,True,64037,0,6,0,1209.745699999985,1458.5484000003817,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,3,True,64026,0,6,0,5628.519200000028,5658.570499999769,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,4,True,64028,0,6,0,1501.4219999998204,1549.995299999864,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,75,5,True,64032,0,6,0,1358.7317000001349,1672.283100000186,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,0,True,63976,0,6,0,1197.6110999999037,1283.7194000003365,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,1,True,64025,0,6,0,1097.535500000049,1293.0073999996239,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,2,True,64037,0,6,0,968.0419999999685,1091.223699999773,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,3,True,64025,0,6,0,1413.3656999997584,1601.160499999878,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,4,True,64028,0,6,0,1626.2305999998716,1638.2849999999962,stop
+GPT-5.6 Terra,openai,gpt-5.6-terra,standard,off,64000,100,5,True,64032,0,6,0,1527.1344999996472,1642.80269999972,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,0,True,4074,,4,,3954.7165000001314,3960.024100000055,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,1,True,3968,,4,,1023.3376000001044,1039.8093000003428,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,2,True,4121,,4,,1438.933200000065,1455.1851999999599,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,3,True,4114,,4,,1153.115600000092,1157.2962000000189,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,4,True,4056,,4,,1214.5355000002382,1228.9433000000827,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,0,5,True,3960,,4,,1214.8969999998371,1219.3719000001693,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,0,True,4074,,4,,5461.436499999991,5550.620999999865,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,1,True,3968,,4,,905.539299999873,950.0710000002073,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,2,True,4120,,4,,926.9518999999491,936.2145000000055,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,3,True,4113,,4,,1482.964400000128,1492.6455999998325,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,4,True,4056,,4,,1297.3652000000584,1303.73789999976,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,25,5,True,3960,,4,,1302.4233000001004,1341.9975000001614,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,0,True,4073,,4,,2561.438100000032,2569.584400000167,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,1,True,3968,,4,,1031.5765000000283,1039.2425000000003,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,2,True,4120,,4,,1438.1419000001188,1441.787899999781,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,3,True,4114,,4,,1553.8834999997562,1566.237000000001,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,4,True,4056,,4,,1376.1738000002879,1388.4138000003077,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,50,5,True,3960,,4,,1705.4830000001857,1711.0538000001725,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,0,True,4074,,4,,47215.96739999995,47223.39360000001,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,1,True,3967,,4,,1022.9927000000316,1030.7967000003373,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,2,True,4120,,4,,1733.3144999997785,1737.1275000000423,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,3,True,4114,,4,,4132.825799999864,4142.5037999997585,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,4,True,4056,,4,,5046.24479999984,5058.195699999942,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,75,5,True,3960,,4,,999.1530000002058,1041.5907999999945,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,0,True,4074,,4,,2699.3660999999065,2704.9802999999883,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,1,True,3968,,4,,1163.2731999998214,1170.9744999998293,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,2,True,4121,,4,,1380.1336000001356,1386.933200000385,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,3,True,4114,,4,,1140.4464000002008,1142.3162000000957,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,4,True,4056,,4,,1206.290699999954,1216.468800000257,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,4000,100,5,True,3960,,4,,1377.8151999999864,1386.6481999998541,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,0,True,16186,,4,,1105.9868000002098,1143.0276000000958,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,1,True,15851,,4,,1413.8582000000497,1416.6980999998486,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,2,True,16353,,4,,1217.756300000019,1238.3472999999867,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,3,True,16364,,4,,1297.098200000164,1346.8886000000566,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,4,True,16186,,4,,1319.992000000184,1326.0083000000122,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,0,5,True,15773,,4,,1426.114399999733,1462.5612999998339,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,0,True,16186,,4,,1573.300300000028,1575.839900000119,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,1,True,15851,,4,,1218.7087000002066,1294.2524999998568,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,2,True,16353,,4,,1994.550600000366,1997.3078000002715,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,3,True,16363,,4,,1321.4732000001277,1329.1807000000517,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,4,True,16184,,4,,1281.3538000000335,1334.4391000000542,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,25,5,True,15772,,4,,1886.6869000003135,1898.8491000000067,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,0,True,16186,,4,,11496.411200000011,11500.095999999985,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,1,True,15851,,4,,1302.2096999998212,1303.6174999997456,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,2,True,16352,,4,,1509.2444000001706,1509.9708000002465,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,3,True,16364,,4,,1201.1575999999877,1247.2155999998904,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,4,True,16185,,4,,1196.968900000229,1234.3089999999393,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,50,5,True,15772,,4,,2049.6817999996892,2115.515999999843,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,0,True,16186,8173,4,,1129.189000000224,1159.649900000204,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,1,True,15851,,4,,1267.9222000001573,1380.6134999999813,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,2,True,16353,,4,,1455.5998999999247,1456.7535000001044,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,3,True,16364,,4,,1356.4966999997523,1363.757799999803,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,4,True,16186,,4,,1274.8191000000588,1322.0971000000645,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,75,5,True,15773,,4,,1564.2290999999204,1571.082800000113,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,0,True,16186,8173,4,,1156.8661999999676,1164.460699999836,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,1,True,15851,8173,4,,1145.9846000002472,1149.945900000148,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,2,True,16353,8174,4,,1149.931199999628,1151.666899999782,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,3,True,16364,8174,4,,1405.5199999997967,1407.346399999824,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,4,True,16186,8173,4,,5401.079499999923,5406.050799999775,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,16000,100,5,True,15773,8173,4,,1158.8503999996647,1179.809899999782,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,0,True,64452,8187,4,,1911.00090000009,1918.5818999999356,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,1,True,63791,8187,4,,1382.98020000002,1436.8918000000122,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,2,True,65076,8187,4,,1567.0945000001666,1625.7089999999152,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,3,True,65092,8187,4,,1578.524600000037,1601.5050999999403,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,4,True,64747,8187,4,,1661.7231000000174,1663.6311999995996,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,0,5,True,63249,8187,4,,1532.8671000002032,1540.1667999999518,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,0,True,64452,8187,4,,1485.3761999997914,1497.932899999796,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,1,True,63790,8187,4,,1599.4871999996576,1607.4451999998018,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,2,True,65076,8187,4,,1457.0920000001024,1504.9806000001809,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,3,True,65092,8187,4,,1780.851100000291,1825.0126000002638,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,4,True,64747,8187,4,,2303.9283000002797,2351.863300000332,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,25,5,True,63248,8187,4,,1568.4909999999945,1622.0248999998148,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,0,True,64452,57311,4,,3527.4097000001348,3538.377400000172,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,1,True,63790,8187,4,,1522.1394999998665,1547.0414999999775,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,2,True,65076,8187,4,,1516.718899999887,1548.3288999998877,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,3,True,65092,8187,4,,1551.112600000124,1556.2568000000283,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,4,True,64747,8187,4,,1758.473000000322,1765.1576000002933,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,50,5,True,63249,8187,4,,2137.574300000324,2140.367800000149,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,0,True,64451,24562,4,,1486.6862999997466,1527.9881999999816,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,1,True,63791,24562,4,,1410.2307000002838,1452.5720999999976,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,2,True,65075,24562,4,,1408.5555999999997,1460.5226000003313,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,3,True,65091,24562,4,,1394.1869000000224,1420.4924999999093,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,4,True,64747,24562,4,,1500.379200000225,1544.0426000000116,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,75,5,True,63248,24562,4,,1927.4641000001793,2221.855300000243,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,0,True,64452,40937,4,,1417.010499999833,1424.6236999997564,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,1,True,63791,40936,4,,1381.137200000012,1434.1982000000826,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,2,True,65076,40937,4,,1404.6499999999469,1442.9439999998976,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,3,True,65092,40937,4,,1558.1068999999843,1575.3750999997465,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,4,True,64747,40937,4,,1432.0895000000746,1439.1919999998208,stop
+Gemini 3.6 Flash,google,gemini-3.6-flash,standard,minimal,64000,100,5,True,63249,40936,4,,1571.3822000002438,1574.0724000002047,stop

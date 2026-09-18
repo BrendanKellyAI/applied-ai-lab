@@ -1,5 +1,12 @@
-"""`results/run_metadata.json`: exactly how a run was produced."""
+"""`results/run_metadata.json`: exactly how a set of results was produced.
 
+A run is often finished in more than one pass: a pilot, the full run, then a retry of calls that
+hit a rate limit. The metadata describes the results folder as a whole, from the first pass to
+the last, and lists every pass with its own commit, filters, and counts. Writing only the latest
+pass would publish a retry of three calls as if it were the whole experiment.
+"""
+
+import logging
 import os
 import platform
 import subprocess
@@ -9,7 +16,7 @@ from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 from lab import __version__
 from lab.config import ExperimentConfig
@@ -17,6 +24,18 @@ from lab.raw_log import RunRecord
 from lab.runner import RunSummary
 
 SDK_PACKAGES = ("openai", "anthropic", "google-genai")
+# A run's own output is not a change to the code or config that produced it, so results folders
+# never make the tree count as dirty. Without this, the first run of every experiment would be
+# recorded as dirty, because its results are not committed yet.
+# Anchored at the repository root with `top`, because git runs from inside the field note
+# folder, and a relative pathspec there would both miss these folders and hide changes elsewhere.
+RESULTS_PATHSPECS = (
+    ":(top,exclude,glob)field-notes/*/results/**",
+    ":(top,exclude,glob)field-notes/*/results-fresh/**",
+)
+WHOLE_REPOSITORY = ":(top)"
+
+logger = logging.getLogger(__name__)
 
 
 class GitState(BaseModel):
@@ -46,6 +65,8 @@ class ModelRun(BaseModel):
 
 
 class CallCounts(BaseModel):
+    """What one pass did."""
+
     model_config = ConfigDict(frozen=True)
 
     planned: int
@@ -55,12 +76,41 @@ class CallCounts(BaseModel):
     failed: int
 
 
+class RunPass(BaseModel):
+    """One `lab run` over this results folder."""
+
+    model_config = ConfigDict(frozen=True)
+
+    started_utc: str
+    ended_utc: str
+    git: GitState
+    pilot: bool
+    provider: str | None
+    counts: CallCounts
+
+
+class ResultCounts(BaseModel):
+    """The state of the whole grid in this results folder, across every pass."""
+
+    model_config = ConfigDict(frozen=True)
+
+    planned: int
+    complete: int
+    failed: int
+    not_run: int
+    # Complete calls whose result was reused from the response cache rather than made anew.
+    from_cache: int
+
+
 class RunMetadata(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     experiment: str
+    # From the start of the first pass, or the first recorded result if earlier, to the last
+    # recorded result.
     started_utc: str
     ended_utc: str
+    # The latest pass. Every pass's commit is in `passes`.
     git: GitState
     harness_version: str
     python_version: str
@@ -68,7 +118,8 @@ class RunMetadata(BaseModel):
     models: list[ModelRun]
     config: dict[str, Any]
     datasets: list[DatasetSource]
-    counts: CallCounts
+    counts: ResultCounts
+    passes: list[RunPass]
 
 
 def git_state(repo_dir: Path, run: Callable[..., Any] = subprocess.run) -> GitState:
@@ -86,7 +137,7 @@ def git_state(repo_dir: Path, run: Callable[..., Any] = subprocess.run) -> GitSt
     commit = git("rev-parse", "HEAD")
     if commit is None:
         return GitState(commit=None, dirty=None)
-    status = git("status", "--porcelain")
+    status = git("status", "--porcelain", "--", WHOLE_REPOSITORY, *RESULTS_PATHSPECS)
     return GitState(commit=commit.strip(), dirty=None if status is None else bool(status.strip()))
 
 
@@ -116,6 +167,22 @@ def _models(config: ExperimentConfig, records: Sequence[RunRecord]) -> list[Mode
     ]
 
 
+def _result_counts(planned_ids: Sequence[str], records: Sequence[RunRecord]) -> ResultCounts:
+    # A call that succeeded on any pass is complete, whatever failures came before or after it.
+    succeeded = {record.call_id: record for record in records if record.result is not None}
+    attempted = {record.call_id for record in records}
+    planned = list(dict.fromkeys(planned_ids))
+    complete = [call_id for call_id in planned if call_id in succeeded]
+    failed = [call_id for call_id in planned if call_id in attempted and call_id not in succeeded]
+    return ResultCounts(
+        planned=len(planned),
+        complete=len(complete),
+        failed=len(failed),
+        not_run=len(planned) - len(complete) - len(failed),
+        from_cache=sum(1 for call_id in complete if succeeded[call_id].source == "cache"),
+    )
+
+
 def build_metadata(
     *,
     config: ExperimentConfig,
@@ -126,18 +193,23 @@ def build_metadata(
     datasets: Sequence[DatasetSource],
     repo_dir: Path,
     git: Callable[[Path], GitState] = git_state,
+    planned_ids: Sequence[str] | None = None,
+    previous: "RunMetadata | None" = None,
+    pilot: bool = False,
+    provider: str | None = None,
 ) -> RunMetadata:
-    return RunMetadata(
-        experiment=config.experiment,
+    """Metadata for the results folder, adding this pass to any earlier ones.
+
+    `planned_ids` is the whole grid, not the calls this pass selected, so a pilot or a
+    one-provider retry is never reported as the size of the experiment.
+    """
+    state = git(repo_dir)
+    this_pass = RunPass(
         started_utc=started_utc,
         ended_utc=ended_utc,
-        git=git(repo_dir),
-        harness_version=__version__,
-        python_version=platform.python_version(),
-        sdk_versions=_sdk_versions(),
-        models=_models(config, records),
-        config=config.model_dump(mode="json"),
-        datasets=list(datasets),
+        git=state,
+        pilot=pilot,
+        provider=provider,
         counts=CallCounts(
             planned=summary.planned,
             already_complete=summary.already_complete,
@@ -146,6 +218,43 @@ def build_metadata(
             failed=summary.failed,
         ),
     )
+    passes = [*(previous.passes if previous else []), this_pass]
+    # ISO 8601 UTC timestamps sort as text. The window is when results were actually recorded,
+    # so a pass that made no calls, such as one that only refreshes this file, does not stretch
+    # it, and passes made before the metadata kept a history are still covered.
+    recorded = [record.recorded_utc for record in records]
+    starts = [passes[0].started_utc, *recorded]
+    ids = planned_ids if planned_ids is not None else [record.call_id for record in records]
+    return RunMetadata(
+        experiment=config.experiment,
+        started_utc=min(starts),
+        ended_utc=max(recorded) if recorded else ended_utc,
+        git=state,
+        harness_version=__version__,
+        python_version=platform.python_version(),
+        sdk_versions=_sdk_versions(),
+        models=_models(config, records),
+        config=config.model_dump(mode="json"),
+        datasets=list(datasets),
+        counts=_result_counts(ids, records),
+        passes=passes,
+    )
+
+
+def read_metadata(path: Path, experiment: str) -> RunMetadata | None:
+    """Earlier metadata for this results folder, or None if there is none that can be used.
+
+    Metadata written before passes were kept, or for another experiment, starts a fresh history
+    rather than failing the run.
+    """
+    if not path.exists():
+        return None
+    try:
+        found = RunMetadata.model_validate_json(path.read_text(encoding="utf-8"))
+    except (ValidationError, OSError, UnicodeDecodeError):
+        logger.warning("Starting a new pass history: %s is from an older format", path)
+        return None
+    return found if found.experiment == experiment else None
 
 
 def write_metadata(path: Path, metadata: RunMetadata) -> None:

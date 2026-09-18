@@ -17,6 +17,7 @@ from pathlib import Path
 
 from lab.config import ExperimentConfig
 from lab.experiments import load_sibling
+from lab.providers.base import request_hash
 from lab.raw_log import RunRecord
 
 HIGH_MODE = "high"
@@ -90,6 +91,21 @@ def _figures():
 
 def _items(folder: Path):
     return _module("build_dataset.py").read_items(folder)
+
+
+def _current_hashes(config: ExperimentConfig, items) -> dict[str, str]:
+    """The request each call makes now, from the committed items and the config."""
+    calls = _module("build_dataset.py").plan_from_items(config, items)
+    return {call.call_id: request_hash(call.request) for call in calls}
+
+
+def _stale_lines(stale: int) -> list[str]:
+    if not stale:
+        return []
+    return [
+        f"{stale} earlier result(s) answered questions that have since changed, and are not "
+        "scored. Run `lab run` to answer the current questions."
+    ]
 
 
 def _settings(config: ExperimentConfig) -> dict[tuple[str, str], tuple[str, bool]]:
@@ -568,6 +584,7 @@ def analyse(
     """Score the results, write summary.csv and the charts, and return the report text."""
     metrics = _metrics()
     items = _items(folder)
+    records, stale = metrics.current_records(records, _current_hashes(config, items))
     scored = metrics.outcomes(records, items)
     if not scored:
         raise AnalysisError(
@@ -602,6 +619,8 @@ def analyse(
     failures = _failure_lines(records)
     if failures:
         lines += ["", *failures]
+    if stale:
+        lines += ["", *_stale_lines(stale)]
     lines += [
         "",
         f"Written: {results_folder / 'summary.csv'}",

@@ -281,17 +281,20 @@ def _label_anchors(
     """Where to put each line's direct label: at its lowest point, where lines separate.
 
     Every model scores near 100% at the edges of the document, so labels placed at the last
-    point would sit on top of each other. Labels are nudged apart vertically when two lines dip
-    to nearly the same accuracy.
+    point would sit on top of each other. Labels sit below their line, and when two lines dip to
+    nearly the same accuracy the lower label moves further down. Moving down rather than up
+    matters when every line is at 100%: labels pushed upwards would leave the chart, and a
+    reader would see one named line where there are three.
     """
     anchors = [
-        [model, positions[list(points).index(min(points))], min(points)] for model, points in series
+        [index, model, positions[list(points).index(min(points))], min(points)]
+        for index, (model, points) in enumerate(series)
     ]
-    anchors.sort(key=lambda anchor: (anchor[2], anchor[0]))
+    anchors.sort(key=lambda anchor: (-anchor[3], anchor[0]))
     for earlier, later in zip(anchors, anchors[1:], strict=False):
-        if later[2] - earlier[2] < LABEL_GAP:
-            later[2] = earlier[2] + LABEL_GAP
-    return {model: (x, y) for model, x, y in anchors}
+        if earlier[3] - later[3] < LABEL_GAP:
+            later[3] = earlier[3] - LABEL_GAP
+    return {model: (x, y) for _, model, x, y in anchors}
 
 
 def _draw_position_curve(
@@ -400,7 +403,7 @@ def _charts(
         drop = largest_drop_cell(cells, model)
         note = None
         if drop is None:
-            note = "No cell scored below the 0% position, so nothing is highlighted."
+            note = "No cell scored below the 0% position; nothing highlighted."
         written += export_chart(
             _draw_heatmap(cells, model, lengths, positions, drop),
             out_dir,
@@ -422,9 +425,7 @@ def _charts(
             dip_model = deepest_dip_model(cells, CURVE_LENGTH_TOKENS)
             note = None
             if dip_model is None:
-                note = (
-                    "No model dipped between the 25% and 75% positions, so nothing is highlighted."
-                )
+                note = "No model dipped in the middle, so nothing is highlighted."
             written += export_chart(
                 _draw_position_curve(cells, drawable, positions, CURVE_LENGTH_TOKENS, dip_model),
                 out_dir,

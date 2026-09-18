@@ -118,5 +118,15 @@ def load_records(path: Path) -> list[RunRecord]:
 
 
 def latest_successful(records: list[RunRecord]) -> dict[str, RunRecord]:
-    """The last successful record for each call, in log order."""
-    return {record.call_id: record for record in records if record.result is not None}
+    """The last successful record for each call, if it answered the latest request for that call.
+
+    When a prompt or setting changes, the next attempt at a call carries a new request hash. If
+    that attempt fails, the earlier success answered a question that is no longer asked, so it
+    is not returned. Otherwise an analysis would score an old answer against a new question.
+    """
+    latest_request = {record.call_id: record.request_hash for record in records}
+    return {
+        record.call_id: record
+        for record in records
+        if record.result is not None and record.request_hash == latest_request[record.call_id]
+    }

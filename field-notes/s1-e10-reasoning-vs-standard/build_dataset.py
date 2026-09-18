@@ -146,11 +146,15 @@ def plan_calls(config: ExperimentConfig, folder: Path) -> list[PlannedCall]:
     The same item is sent to the same model in both modes, which is what makes the comparison
     paired and lets the analysis use a paired confidence interval.
     """
-    _check_modes(config)
     items = load_items(config, folder)
     if items is None:
         items = build_items(config, folder)
+    return plan_from_items(config, items)
 
+
+def plan_from_items(config: ExperimentConfig, items) -> list[PlannedCall]:
+    """The calls for a given set of items. Writes nothing, so the analysis can use it too."""
+    _check_modes(config)
     calls: list[PlannedCall] = []
     for item in items:
         cell = {"task": item.task, "item_index": item.index}

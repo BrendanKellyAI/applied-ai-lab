@@ -11,7 +11,7 @@ output format is a real result, not a gap in the data.
 
 import math
 import statistics
-from collections.abc import Iterable, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
 
 from lab.raw_log import RunRecord, latest_successful
@@ -98,6 +98,22 @@ def score(text: str, expected: str, answer_kind: str) -> tuple[bool, str | None]
 
 def successful(records: Sequence[RunRecord]) -> list[RunRecord]:
     return list(latest_successful(list(records)).values())
+
+
+def current_records(
+    records: Sequence[RunRecord], current_hashes: Mapping[str, str]
+) -> tuple[list[RunRecord], int]:
+    """The records that answered the questions asked now, and how many answered older ones.
+
+    When the questions change, earlier answers stay in the log. Scoring them against the new
+    questions would mark right answers wrong, so any record whose request no longer matches the
+    current plan is set aside and counted.
+    """
+    kept = [r for r in records if current_hashes.get(r.call_id) == r.request_hash]
+    stale = {r.call_id for r in records if r.result is not None} - {
+        r.call_id for r in kept if r.result is not None
+    }
+    return kept, len(stale)
 
 
 def outcomes(records: Sequence[RunRecord], items: Iterable) -> list[Outcome]:

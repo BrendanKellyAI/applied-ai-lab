@@ -63,6 +63,12 @@ def no_charts(module, monkeypatch):
     monkeypatch.setattr(module, "_charts", lambda *args, **kwargs: [])
 
 
+_PROMPTS = {
+    (item.task, item.index): item.prompt
+    for item in load_sibling(FIELD_NOTE / "build_dataset.py").read_items(FIELD_NOTE)
+}
+
+
 def _record(
     config,
     *,
@@ -81,7 +87,8 @@ def _record(
 ) -> RunRecord:
     model = config.models[model_index]
     cell = {"task": task, "item_index": index}
-    request = build_request(model, mode, prompt="prompt")
+    # The real question, so the analysis recognises the record as answering the current plan.
+    request = build_request(model, mode, prompt=_PROMPTS.get((task, index), "no such item"))
     call = PlannedCall(
         call_id=make_call_id(model_label=model.display_label, mode=mode, cell=cell),
         model_label=model.display_label,
@@ -562,3 +569,25 @@ class TestFailureCounting:
         ]
         report = module.analyse(config, folder, records)
         assert "1 call(s) failed" in report
+
+
+class TestStaleResults:
+    def test_an_answer_to_an_earlier_version_of_a_question_is_not_scored(
+        self, module, config, items, folder, no_charts
+    ):
+        """The questions changed after this answer was given, and the rerun has not happened."""
+        current = _record(config, index=0, text=f"ANSWER: {_answers(items, EXTRACTION, 0)}")
+        other = _record(config, index=1, text=f"ANSWER: {_answers(items, EXTRACTION, 1)}")
+        stale_other = other.model_copy(update={"request_hash": "old"})
+
+        report = module.analyse(config, folder, [current, stale_other])
+
+        assert "1 scored call(s)" in report
+        assert "1 earlier result(s) answered questions that have since changed" in report
+
+    def test_nothing_is_said_when_every_result_is_current(
+        self, module, config, items, folder, no_charts
+    ):
+        report = module.analyse(config, folder, [_record(config)])
+
+        assert "have since changed" not in report

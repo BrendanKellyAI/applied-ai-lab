@@ -25,7 +25,7 @@ from lab.experiments import (
     load_plan_function,
     results_dir,
 )
-from lab.metadata import build_metadata, write_metadata
+from lab.metadata import build_metadata, read_metadata, write_metadata
 from lab.pilot import select_calls
 from lab.plan import PlanError, PlannedCall
 from lab.prices import load_prices
@@ -131,8 +131,9 @@ def run(
         raise typer.Exit(code=2) from exc
 
     records = load_records(raw_path)
+    metadata_path = raw_path.parent / "run_metadata.json"
     write_metadata(
-        raw_path.parent / "run_metadata.json",
+        metadata_path,
         build_metadata(
             config=experiment,
             summary=summary,
@@ -141,6 +142,10 @@ def run(
             ended_utc=datetime.now(UTC).isoformat(),
             datasets=dataset_sources(config)(experiment, config.parent),
             repo_dir=config.parent,
+            planned_ids=[call.call_id for call in calls],
+            previous=read_metadata(metadata_path, experiment.experiment),
+            pilot=pilot,
+            provider=provider,
         ),
     )
     typer.echo(format_summary(summary))
