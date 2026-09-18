@@ -106,8 +106,8 @@ class RunMetadata(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     experiment: str
-    # From the start of the first pass, or the first recorded result if earlier, to the end of
-    # the latest pass.
+    # From the start of the first pass, or the first recorded result if earlier, to the last
+    # recorded result.
     started_utc: str
     ended_utc: str
     # The latest pass. Every pass's commit is in `passes`.
@@ -219,14 +219,16 @@ def build_metadata(
         ),
     )
     passes = [*(previous.passes if previous else []), this_pass]
-    # ISO 8601 UTC timestamps sort as text. The first recorded result covers passes made before
-    # the metadata kept a history.
-    starts = [passes[0].started_utc, *(record.recorded_utc for record in records)]
+    # ISO 8601 UTC timestamps sort as text. The window is when results were actually recorded,
+    # so a pass that made no calls, such as one that only refreshes this file, does not stretch
+    # it, and passes made before the metadata kept a history are still covered.
+    recorded = [record.recorded_utc for record in records]
+    starts = [passes[0].started_utc, *recorded]
     ids = planned_ids if planned_ids is not None else [record.call_id for record in records]
     return RunMetadata(
         experiment=config.experiment,
         started_utc=min(starts),
-        ended_utc=ended_utc,
+        ended_utc=max(recorded) if recorded else ended_utc,
         git=state,
         harness_version=__version__,
         python_version=platform.python_version(),

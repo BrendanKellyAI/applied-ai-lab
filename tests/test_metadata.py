@@ -309,3 +309,17 @@ def test_real_git_still_sees_a_change_outside_the_field_note_folder(tmp_path):
     (tmp_path / "code.py").write_text("VALUE = 2\n", encoding="utf-8")
 
     assert git_state(note).dirty is True
+
+
+def test_a_pass_that_made_no_calls_does_not_stretch_the_window(tmp_path):
+    last = _records()[1].model_copy(update={"recorded_utc": "2026-09-18T19:40:09+00:00"})
+
+    metadata = _metadata(
+        tmp_path,
+        records=[last],
+        started="2026-09-18T19:50:00+00:00",
+        ended="2026-09-18T19:50:56+00:00",
+    )
+
+    assert metadata.ended_utc == "2026-09-18T19:40:09+00:00"
+    assert metadata.passes[-1].ended_utc == "2026-09-18T19:50:56+00:00"
