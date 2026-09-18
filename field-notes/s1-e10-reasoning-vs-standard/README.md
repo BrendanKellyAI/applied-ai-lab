@@ -139,8 +139,11 @@ chance, but Claude Sonnet 5 did not move on it, so it does not qualify.
 - **Gemini paid the most for the least.** It billed 4.6x to 16x the output tokens at high and gained
   at most one item per task.
 - **Two kinds of first token.** With thinking shown, all three providers streamed thinking before
-  any answer: after a median of 0.9 to 2.0 seconds, against 2.8 to 4.2 seconds for the first
-  answer token. A user watching sees activity well before the answer starts.
+  any answer. On the calls where they did, thinking appeared after a median of 0.9 seconds for
+  GPT-5.6 Terra, 1.1 for Claude Sonnet 5, and 2.0 for Gemini 3.6 Flash, and the first answer
+  token after 3.7, 3.3, and 6.4 seconds. A user watching sees activity seconds before the answer
+  starts. Not every high call thought at all: Terra streamed thinking on 87 of 120, Gemini on 97,
+  and Claude on 118, the rest answering straight away.
 
 **Parse rate 99.0%.** Seven responses had no `ANSWER:` line and are scored incorrect, as agreed
 before the run. Six were Gemini 3.6 Flash at high replying with the number alone, and every one of
