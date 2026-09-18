@@ -11,8 +11,10 @@ from lab.plan import PlannedCall
 from lab.raw_log import RunRecord
 
 PlanFunction = Callable[[ExperimentConfig, Path], list[PlannedCall]]
-# analyse(config, folder, records) -> text to print. It writes summary.csv and charts itself.
-AnalyseFunction = Callable[[ExperimentConfig, Path, Sequence[RunRecord]], str]
+# analyse(config, folder, records, out_dir) -> text to print. It writes summary.csv and charts
+# into out_dir, the results folder the records came from, so analysing a fresh run never
+# overwrites the published results.
+AnalyseFunction = Callable[[ExperimentConfig, Path, Sequence[RunRecord], Path], str]
 
 DatasetSourcesFunction = Callable[[ExperimentConfig, Path], list[DatasetSource]]
 
@@ -74,9 +76,9 @@ def dataset_sources(config_path: Path) -> DatasetSourcesFunction:
 
 
 def load_analyse_function(config_path: Path) -> AnalyseFunction:
-    """The field note's `analyse(config, folder, records)`, defined in its analyse.py."""
+    """The field note's `analyse(config, folder, records, out_dir)`, from its analyse.py."""
     return _load_callable(
-        config_path, ANALYSE_MODULE, ANALYSE_FUNCTION, "(config, folder, records)"
+        config_path, ANALYSE_MODULE, ANALYSE_FUNCTION, "(config, folder, records, out_dir)"
     )
 
 

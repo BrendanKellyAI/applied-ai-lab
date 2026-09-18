@@ -559,7 +559,12 @@ def _failure_lines(records: Sequence[RunRecord]) -> list[str]:
     return [f"{len(failed)} call(s) failed and are not scored. Run `lab run` again to retry them."]
 
 
-def analyse(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]) -> str:
+def analyse(
+    config: ExperimentConfig,
+    folder: Path,
+    records: Sequence[RunRecord],
+    out_dir: Path | None = None,
+) -> str:
     """Score the results, write summary.csv and the charts, and return the report text."""
     metrics = _metrics()
     items = _items(folder)
@@ -572,7 +577,9 @@ def analyse(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]
 
     tasks = tuple(str(task) for task in config.parameters["tasks"])
     models = [model.display_label for model in config.models]
-    results_folder = folder / "results"
+    # Written beside the records they came from, so analysing a fresh run leaves the
+    # published results/ folder untouched.
+    results_folder = out_dir if out_dir is not None else folder / "results"
     rows = _write_summary(results_folder / "summary.csv", records, items, config)
     charts = _charts(scored, config, results_folder / "charts", tasks, models)
 

@@ -56,9 +56,9 @@ def plan_calls(config, folder):
 """
 
 ANALYSE = """
-def analyse(config, folder, records):
-    (folder / "results").mkdir(parents=True, exist_ok=True)
-    (folder / "results" / "summary.csv").write_text("item,correct\\n", encoding="utf-8")
+def analyse(config, folder, records, out_dir):
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "summary.csv").write_text("item,correct\\n", encoding="utf-8")
     return f"Analysed {config.experiment}: {len(records)} records"
 """
 
@@ -267,6 +267,17 @@ class TestAnalyse:
 
         assert result.exit_code == 0, result.output
         assert "3 records" in result.output
+
+    def test_analysing_a_fresh_run_leaves_published_results_untouched(self, tmp_path, monkeypatch):
+        _counts_tokens(monkeypatch)
+        config_path = _field_note(tmp_path)
+        _invoke(config_path, tmp_path, "--fresh")
+        fresh = next((config_path.parent / "results-fresh").glob("*"))
+
+        runner.invoke(app, ["analyse", str(config_path), "--results", str(fresh)])
+
+        assert (fresh / "summary.csv").exists()
+        assert not (config_path.parent / "results" / "summary.csv").exists()
 
     def test_missing_analyse_module_is_reported(self, tmp_path, monkeypatch):
         _counts_tokens(monkeypatch)

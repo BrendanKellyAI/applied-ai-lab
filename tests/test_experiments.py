@@ -47,7 +47,7 @@ def plan_calls(config, folder):
 """
 
 ANALYSE = """
-def analyse(config, folder, records):
+def analyse(config, folder, records, out_dir):
     return f"{config.experiment}: {len(records)} records"
 """
 

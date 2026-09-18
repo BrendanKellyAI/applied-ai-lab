@@ -353,6 +353,33 @@ def _slug(text: str) -> str:
     return "-".join(part for part in "".join(kept).split("-") if part)
 
 
+def complete_grid(
+    cells: dict[tuple[str, int, int], Cell],
+    model: str,
+    lengths: Sequence[int],
+    positions: Sequence[int],
+) -> bool:
+    """Whether the model has a result in every length and position cell."""
+    return all((model, length, position) in cells for length in lengths for position in positions)
+
+
+def _grid_lines(cells: dict[tuple[str, int, int], Cell], models: Sequence[str]) -> list[str]:
+    lengths = sorted({length for _, length, _ in cells})
+    positions = sorted({position for _, _, position in cells})
+    partial = [
+        model
+        for model in models
+        if any(label == model for label, _, _ in cells)
+        and not complete_grid(cells, model, lengths, positions)
+    ]
+    if not partial:
+        return []
+    return [
+        f"Heatmaps not drawn for {', '.join(partial)}: the results do not cover every length and "
+        "position yet, as in a pilot. They are drawn once the grid is complete."
+    ]
+
+
 def _charts(
     cells: dict[tuple[str, int, int], Cell],
     config: ExperimentConfig,
@@ -365,7 +392,10 @@ def _charts(
     written: list[Path] = []
 
     for model in models:
-        if not any(label == model for label, _, _ in cells):
+        # A heatmap needs every cell. A pilot or a partial run has gaps, and a blank drawn as
+        # 0% would read as a model failing every fact, so the heatmap is left out and the report
+        # says why.
+        if not complete_grid(cells, model, lengths, positions):
             continue
         drop = largest_drop_cell(cells, model)
         note = None
@@ -460,24 +490,35 @@ def _finish_reason_lines(records: Sequence[RunRecord]) -> list[str]:
 
 
 def _reasoning_lines(records: Sequence[RunRecord], config: ExperimentConfig) -> list[str]:
-    """Whether any model produced reasoning tokens, which matters for Gemini at `minimal`."""
-    totals: dict[str, int] = {}
-    for record in _successful(records):
-        if record.result is not None and record.result.reasoning_tokens:
-            totals[record.model_label] = (
-                totals.get(record.model_label, 0) + record.result.reasoning_tokens
-            )
+    """Whether any model produced reasoning tokens, which matters for Gemini at `minimal`.
+
+    A provider that leaves the reasoning count out is not the same as one reporting zero, so
+    each model is described separately. Output tokens include any reasoning, so a model that
+    reports nothing but used only a handful of output tokens per call cannot have reasoned.
+    """
     levels = _reasoning_levels(config)
-    if not totals:
-        return [
-            "Reasoning: every model reported no reasoning tokens, so reasoning was off or "
-            "unused throughout."
-        ]
-    lines = ["Reasoning tokens were produced, so reasoning was not fully off:"]
-    for model, total in sorted(totals.items()):
-        lines.append(
-            f"  {model} (level {levels.get(model, 'unknown')}): {total:,} reasoning tokens"
-        )
+    by_model: dict[str, list] = {}
+    for record in _successful(records):
+        if record.result is not None:
+            by_model.setdefault(record.model_label, []).append(record.result)
+
+    lines = ["Reasoning, per model:"]
+    for model, results in sorted(by_model.items()):
+        level = levels.get(model, "unknown")
+        reported = [r.reasoning_tokens for r in results if r.reasoning_tokens is not None]
+        largest_output = max(r.output_tokens for r in results)
+        if sum(reported) > 0:
+            lines.append(
+                f"  {model} (level {level}): {sum(reported):,} reasoning tokens, so reasoning "
+                "was not fully off"
+            )
+        elif reported:
+            lines.append(f"  {model} (level {level}): 0 reasoning tokens on every call")
+        else:
+            lines.append(
+                f"  {model} (level {level}): reasoning not reported; at most "
+                f"{largest_output:,} output tokens on any call, which includes any reasoning"
+            )
     return lines
 
 
@@ -517,7 +558,12 @@ def _failure_lines(records: Sequence[RunRecord]) -> list[str]:
     return [f"{len(failed)} call(s) failed and are not scored. Run `lab run` again to retry them."]
 
 
-def analyse(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]) -> str:
+def analyse(
+    config: ExperimentConfig,
+    folder: Path,
+    records: Sequence[RunRecord],
+    out_dir: Path | None = None,
+) -> str:
     """Score the results, write summary.csv and the charts, and return the report text."""
     facts = _facts(config)
     successful = _successful(records)
@@ -526,7 +572,9 @@ def analyse(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]
             "These results contain no successful calls, so there is nothing to score."
         )
 
-    results_folder = folder / "results"
+    # Written beside the records they came from, so analysing a fresh run leaves the
+    # published results/ folder untouched.
+    results_folder = out_dir if out_dir is not None else folder / "results"
     rows = _write_summary(results_folder / "summary.csv", records, facts, config)
     cells = accuracy_by_cell(records, facts)
     charts = _charts(
@@ -546,6 +594,9 @@ def analyse(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]
         "",
         *_token_lines(records),
     ]
+    grid = _grid_lines(cells, models)
+    if grid:
+        lines += ["", *grid]
     failures = _failure_lines(records)
     if failures:
         lines += ["", *failures]
