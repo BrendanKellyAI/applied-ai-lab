@@ -120,6 +120,9 @@ def _rc(style: ChartStyle) -> dict[str, object]:
         "legend.labelcolor": MIST,
         "hatch.color": NAVY,
         "svg.fonttype": "path",
+        # A fixed salt makes the IDs inside an SVG the same on every render, so re-rendering an
+        # unchanged chart leaves the committed file unchanged.
+        "svg.hashsalt": "applied-ai-lab",
     }
 
 
@@ -307,7 +310,9 @@ def _render(
             paths = []
             for extension in layout.formats:
                 path = out_dir / f"{spec.name}-{layout.name}.{extension}"
-                fig.savefig(path, dpi=DPI, format=extension)
+                # No creation date in the file, for the same reason.
+                metadata = {"Date": None} if extension == "svg" else None
+                fig.savefig(path, dpi=DPI, format=extension, metadata=metadata)
                 paths.append(path)
             return paths
         finally:
