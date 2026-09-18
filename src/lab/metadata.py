@@ -27,10 +27,13 @@ SDK_PACKAGES = ("openai", "anthropic", "google-genai")
 # A run's own output is not a change to the code or config that produced it, so results folders
 # never make the tree count as dirty. Without this, the first run of every experiment would be
 # recorded as dirty, because its results are not committed yet.
+# Anchored at the repository root with `top`, because git runs from inside the field note
+# folder, and a relative pathspec there would both miss these folders and hide changes elsewhere.
 RESULTS_PATHSPECS = (
-    ":(exclude,glob)field-notes/*/results/**",
-    ":(exclude,glob)field-notes/*/results-fresh/**",
+    ":(top,exclude,glob)field-notes/*/results/**",
+    ":(top,exclude,glob)field-notes/*/results-fresh/**",
 )
+WHOLE_REPOSITORY = ":(top)"
 
 logger = logging.getLogger(__name__)
 
@@ -134,7 +137,7 @@ def git_state(repo_dir: Path, run: Callable[..., Any] = subprocess.run) -> GitSt
     commit = git("rev-parse", "HEAD")
     if commit is None:
         return GitState(commit=None, dirty=None)
-    status = git("status", "--porcelain", "--", ".", *RESULTS_PATHSPECS)
+    status = git("status", "--porcelain", "--", WHOLE_REPOSITORY, *RESULTS_PATHSPECS)
     return GitState(commit=commit.strip(), dirty=None if status is None else bool(status.strip()))
 
 

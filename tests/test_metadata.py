@@ -5,6 +5,7 @@ from types import SimpleNamespace
 from lab.config import ExperimentConfig
 from lab.metadata import (
     RESULTS_PATHSPECS,
+    WHOLE_REPOSITORY,
     DatasetSource,
     build_metadata,
     git_state,
@@ -41,7 +42,7 @@ def _fake_git(outputs: dict[tuple[str, ...], str], returncode: int = 0):
     return run
 
 
-STATUS = ("status", "--porcelain", "--", ".", *RESULTS_PATHSPECS)
+STATUS = ("status", "--porcelain", "--", WHOLE_REPOSITORY, *RESULTS_PATHSPECS)
 
 
 def test_git_state_reads_commit_and_dirty_flag(tmp_path):
@@ -276,3 +277,35 @@ def test_metadata_for_another_experiment_is_ignored(tmp_path):
 
 def test_missing_metadata_is_none(tmp_path):
     assert read_metadata(tmp_path / "run_metadata.json", "demo") is None
+
+
+def _real_repo(tmp_path):
+    def git(*args):
+        subprocess.run(["git", *args], cwd=tmp_path, check=True, capture_output=True)
+
+    git("init", "-q")
+    git("config", "user.email", "test@example.com")
+    git("config", "user.name", "Test")
+    note = tmp_path / "field-notes" / "demo"
+    note.mkdir(parents=True)
+    (note / "config.yaml").write_text("seed: 1\n", encoding="utf-8")
+    (tmp_path / "code.py").write_text("VALUE = 1\n", encoding="utf-8")
+    git("add", "-A")
+    git("commit", "-q", "-m", "start")
+    return note
+
+
+def test_real_git_ignores_results_when_run_from_the_field_note_folder(tmp_path):
+    """git runs from inside the field note, so the pathspecs must be anchored at the root."""
+    note = _real_repo(tmp_path)
+    (note / "results").mkdir()
+    (note / "results" / "raw.jsonl").write_text("{}\n", encoding="utf-8")
+
+    assert git_state(note).dirty is False
+
+
+def test_real_git_still_sees_a_change_outside_the_field_note_folder(tmp_path):
+    note = _real_repo(tmp_path)
+    (tmp_path / "code.py").write_text("VALUE = 2\n", encoding="utf-8")
+
+    assert git_state(note).dirty is True
