@@ -32,6 +32,10 @@ POINT_COLOURS = (MIST, SLATE, MIST)
 MILLISECONDS_PER_SECOND = 1000.0
 # How far above its point each label sits. Wide enough to clear the marker itself.
 LABEL_OFFSET_POINTS = 16
+# Points closer than these shares of each axis range are treated as one spot for labelling. A
+# label is wider than it is tall, so labels collide sideways at a far greater distance.
+OVERLAP_ACROSS = 0.12
+OVERLAP_UP = 0.03
 # Clear space kept around the plotted points, as a share of each axis range. The top gets more,
 # because the highest point still needs room for its label.
 AXIS_MARGIN = 0.1
@@ -131,6 +135,32 @@ def token_multiple_by_task(
     )
 
 
+def _label_groups(
+    points: Sequence[tuple[str, str, float, float]], span: float, reach: float
+) -> list[tuple[float, float, list[str]]]:
+    """Points close enough to overlap on the chart, each group with its task codes in order.
+
+    Each group's label sits above its highest point, at the group's mean horizontal position.
+    """
+    groups: list[list[tuple[float, float, str]]] = []
+    for _, task, extra, change in sorted(points, key=lambda point: (point[2], point[3])):
+        for group in groups:
+            x, y, _ = group[0]
+            if abs(extra - x) <= OVERLAP_ACROSS * span and abs(change - y) <= OVERLAP_UP * reach:
+                group.append((extra, change, task))
+                break
+        else:
+            groups.append([(extra, change, task)])
+    return [
+        (
+            sum(x for x, _, _ in group) / len(group),
+            max(y for _, y, _ in group),
+            list(dict.fromkeys(code for _, _, code in group)),
+        )
+        for group in groups
+    ]
+
+
 def cost_of_accuracy(
     out_dir: Path,
     *,
@@ -166,12 +196,14 @@ def cost_of_accuracy(
             )
             if highlight_key == (model, task):
                 highlight(marker)
-            # Two-letter codes, centred directly above their own point, never nudged. Moving a
-            # label to avoid a neighbour would either stretch the axis or separate the label
-            # from the point it names, and both mislead. The key is in the chart's footnote.
+        # Two-letter codes, centred above their points, never nudged: moving a label to avoid a
+        # neighbour would either stretch the axis or separate it from the point it names. Points
+        # that sit on top of each other share one label listing their codes, rather than
+        # printing their labels over one another. The key is in the chart's footnote.
+        for x, y, codes in _label_groups(points, span, reach):
             ax.annotate(
-                task,
-                (extra, change),
+                " ".join(codes),
+                (x, y),
                 textcoords="offset points",
                 xytext=(0, LABEL_OFFSET_POINTS),
                 ha="center",
