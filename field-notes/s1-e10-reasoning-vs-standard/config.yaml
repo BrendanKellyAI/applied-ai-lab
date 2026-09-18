@@ -1,0 +1,75 @@
+# S1 E10: for which kinds of task does turning reasoning on earn its extra tokens and latency?
+#
+# Every setting a model ran with is recorded here, so the run can be reproduced exactly.
+# Every model must be listed in src/lab/providers/capabilities.yaml.
+experiment: s1-e10-reasoning-vs-standard
+description: Accuracy, tokens, and latency with reasoning at its lowest setting and at high
+seed: 20260918
+
+models:
+  # The same model in both modes, so the comparison isolates reasoning from every other
+  # difference between models. One model per provider, each maker's balanced mid-tier model,
+  # and the same OpenAI and Anthropic models S1 E7 used, so the two field notes sit side by side.
+  #
+  # Modes are named `lowest` and `high`, not `off` and `high`: Gemini 3.6 Flash cannot turn
+  # thinking off, so `off` would be untrue for it on charts and in published data. summary.csv
+  # records the actual reasoning level each model ran with in each mode.
+  #
+  # Temperature is null for every model, so all three run at their provider default. OpenAI and
+  # Claude models reject a non-default temperature, and Google warns that lowering temperature
+  # on Gemini 3 models can cause looping or degraded reasoning, which is the very thing being
+  # measured here.
+  #
+  # Output limits count reasoning tokens, which every provider bills as output. `high` is set
+  # well above what these tasks need, so reasoning is not truncated; any response that still
+  # hits the limit is flagged by the analysis and scored incorrect.
+  - provider: openai
+    model: gpt-5.6-terra
+    label: GPT-5.6 Terra
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 2000 }
+      high:
+        { reasoning: high, temperature: null, max_output_tokens: 16000, show_thinking: true }
+  - provider: anthropic
+    model: claude-sonnet-5
+    label: Claude Sonnet 5
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 2000 }
+      high:
+        { reasoning: high, temperature: null, max_output_tokens: 16000, show_thinking: true }
+  - provider: google
+    model: gemini-3.6-flash
+    label: Gemini 3.6 Flash
+    modes:
+      # `minimal` is the lowest level Gemini 3.x offers and does not guarantee no thinking.
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 2000 }
+      high:
+        { reasoning: high, temperature: null, max_output_tokens: 16000, show_thinking: true }
+
+parameters:
+  # Four task shapes, from a control that needs no reasoning to a search problem that does.
+  # Every item is generated from the seed above and committed in tasks/items.jsonl, so readers
+  # can inspect every question.
+  tasks: [extraction, arithmetic, state-tracking, constraint-puzzle]
+  items_per_task: 30
+
+# Conservative defaults for entry-level API tiers. Raise them locally if your account allows.
+limits:
+  openai: { max_concurrency: 2, requests_per_minute: 30 }
+  anthropic: { max_concurrency: 2, requests_per_minute: 30 }
+  google: { max_concurrency: 2, requests_per_minute: 30 }
+
+# Latency is part of the finding here, so batch APIs are not an option and the estimator
+# should not suggest them.
+measures_latency: true
+
+# Modes and models are interleaved at random, so provider load at a given time of day affects
+# every condition equally rather than one block of calls.
+call_order: shuffled
+
+# 5% of 720 calls is 36, and every one of the 24 model, task, and mode combinations is covered
+# before any extra call is drawn.
+pilot:
+  strategy: stratified
+  fraction: 0.05
+  strata: [task, mode]

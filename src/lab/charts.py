@@ -19,12 +19,12 @@ import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib import font_manager  # noqa: E402
 from matplotlib.artist import Artist  # noqa: E402
 from matplotlib.axes import Axes  # noqa: E402
-from matplotlib.colors import LinearSegmentedColormap  # noqa: E402
+from matplotlib.colors import LinearSegmentedColormap, to_hex  # noqa: E402
 from matplotlib.figure import Figure  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch, Rectangle  # noqa: E402
 from matplotlib.text import Text  # noqa: E402
-from matplotlib.ticker import PercentFormatter  # noqa: E402
+from matplotlib.ticker import Formatter, PercentFormatter  # noqa: E402
 
 NAVY = "#0B1F3A"
 WHITE = "#FFFFFF"
@@ -62,6 +62,9 @@ class ChartSpec:
     sample_size: str
     # Set when the chart has a highlight rule but no element met it; the chart then says so.
     no_highlight_note: str | None = None
+    # An extra footer line, for a caveat a reader needs in order to read the chart correctly.
+    # Keep each line to about 60 characters: the footer does not wrap.
+    footnote: str | None = None
 
     def __post_init__(self) -> None:
         if not self.units.strip():
@@ -172,8 +175,13 @@ def grouped_bars(
     series: Sequence[tuple[str, Sequence[float]]],
     style: ChartStyle,
     highlight_bar: tuple[int, int] | None = None,
+    value_formatter: Formatter | None = None,
 ) -> None:
-    """Bars grouped by category, with series told apart by colour, hatching, and legend."""
+    """Bars grouped by category, with series told apart by colour, hatching, and legend.
+
+    Values are proportions on a percentage axis unless `value_formatter` says otherwise, which
+    is what a chart of multiples rather than shares needs.
+    """
     if len(series) > len(SERIES_COLOURS):
         raise ValueError(f"At most {len(SERIES_COLOURS)} series are supported")
     width = 0.8 / len(series)
@@ -191,12 +199,53 @@ def grouped_bars(
         if highlight_bar is not None and highlight_bar[0] == index:
             highlight(bars.patches[highlight_bar[1]])
     ax.set_xticks(range(len(categories)), labels=categories)
-    ax.yaxis.set_major_formatter(PercentFormatter(xmax=1, decimals=0))
+    ax.yaxis.set_major_formatter(value_formatter or PercentFormatter(xmax=1, decimals=0))
     ax.grid(axis="y", alpha=0.4)
     ax.set_axisbelow(True)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
-    ax.legend(loc="upper left", bbox_to_anchor=(0, 1.12), ncols=len(series))
+    # A single series needs no legend: the axis label already says what the bars measure.
+    if len(series) > 1:
+        # Built from fresh swatches rather than from the bars themselves. Matplotlib copies the
+        # face colour of the first bar in a series into its legend key, so a highlighted first
+        # bar would turn its legend swatch acid green too, and the chart would show the finding
+        # twice.
+        ax.legend(
+            handles=[
+                Patch(
+                    facecolor=SERIES_COLOURS[index],
+                    hatch=SERIES_HATCHES[index],
+                    edgecolor=NAVY,
+                    label=label,
+                )
+                for index, (label, _) in enumerate(series)
+            ],
+            loc="upper left",
+            bbox_to_anchor=(0, 1.12),
+            ncols=len(series),
+        )
+
+
+def _is_acid_green(artist: Artist) -> bool:
+    """Whether an artist is drawn in acid green, however it came to be.
+
+    Checked by colour rather than by the marker `highlight` leaves, because matplotlib copies
+    colours into artists of its own, such as legend keys, without copying the marker.
+    """
+    if isinstance(artist, Line2D):
+        return _is_acid(artist.get_color())
+    if isinstance(artist, Patch):
+        return _is_acid(artist.get_facecolor() if artist.get_fill() else artist.get_edgecolor())
+    if isinstance(artist, Text):
+        return _is_acid(artist.get_color())
+    return False
+
+
+def _is_acid(colour: object) -> bool:
+    try:
+        return to_hex(colour).upper() == ACID_GREEN.upper()
+    except ValueError:  # pragma: no cover - matplotlib colours are always convertible
+        return False
 
 
 def _check(fig: Figure, spec: ChartSpec, style: ChartStyle) -> None:
@@ -206,7 +255,7 @@ def _check(fig: Figure, spec: ChartSpec, style: ChartStyle) -> None:
     suptitle = getattr(fig, "_suptitle", None)
     if suptitle is not None and suptitle.get_text():
         raise ValueError("Titles belong on the slide, not inside the chart image")
-    findings = fig.findobj(lambda artist: artist.get_gid() == FINDING_GID)
+    findings = fig.findobj(_is_acid_green)
     if len(findings) > 1:
         raise ValueError(f"Only one acid green element per chart; found {len(findings)}")
     if findings and spec.no_highlight_note:
@@ -232,6 +281,8 @@ def _render(
         line_width_pt=label_size_pt(layout) / 4,
     )
     footer = f"{spec.units} · {spec.sample_size}"
+    if spec.footnote:
+        footer = f"{spec.footnote}\n{footer}"
     if spec.no_highlight_note:
         footer = f"{spec.no_highlight_note}\n{footer}"
     footer_lines = footer.count("\n") + 1

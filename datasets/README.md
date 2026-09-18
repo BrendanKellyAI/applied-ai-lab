@@ -2,9 +2,13 @@
 
 Sources and licences for every dataset used in the field notes.
 
-Datasets are **not committed**. Each field note's `build_dataset.py` rebuilds its own, byte for
-byte, from the seed in its `config.yaml`. Built files land in `field-notes/<episode>/dataset/`,
-which is gitignored.
+Each field note's `build_dataset.py` builds its own data, byte for byte, from the seed in its
+`config.yaml`.
+
+A dataset is committed only when every part of it is ours. S1 E10's task items are, so they are
+committed and every question can be read in the repository. S1 E7's documents contain Project
+Gutenberg text, so they are not: they land in `field-notes/<episode>/dataset/`, which is
+gitignored, and are rebuilt on demand.
 
 ## S1 E7: lost in the middle
 
@@ -47,5 +51,24 @@ in the config.
 
 ## S1 E10: reasoning versus standard
 
-To follow. Its generated task items are committed alongside the generator, because they are
-wholly ours and readers should be able to see every question.
+**What it contains.** 120 generated questions with known correct answers, in four families:
+extraction from a short operations log, short arithmetic word problems, warehouse state tracking,
+and five-job ordering puzzles.
+
+**Source.** None. Every item, including the prose in the extraction passages, is generated from
+the seed in the field note's `config.yaml`, so no question can have appeared in a model's
+training data.
+
+**Licence.** Wholly ours, under the repository's MIT licence. No third-party content is involved,
+which is why these items are the one dataset in the repository that **is committed**: they live in
+`field-notes/s1-e10-reasoning-vs-standard/tasks/items.jsonl`, so readers can inspect every
+question rather than take the results on trust.
+
+**Integrity.** `tasks/manifest.json` records the seed, the task list, the number of items, and the
+SHA-256 of `items.jsonl`. A file that no longer matches the config is rebuilt rather than used, so
+a run can never send questions the committed config does not describe.
+
+**Correctness.** The test suite re-solves every item independently from the published prompt:
+the arithmetic is worked out again, the warehouse movements are replayed, and each puzzle is brute
+forced over all 120 orderings to confirm that exactly one fits its clues and that it is the
+recorded answer.

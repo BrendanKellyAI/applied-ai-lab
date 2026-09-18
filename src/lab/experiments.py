@@ -33,6 +33,17 @@ def _load_module(path: Path) -> object:
     return module
 
 
+def load_sibling(module_path: Path) -> object:
+    """Load another module from a field note folder.
+
+    A field note folder is not an importable package, so a note whose code is split across
+    more than one file loads its siblings by path rather than by `import`.
+    """
+    if not module_path.exists():
+        raise ConfigError(f"{module_path} not found")
+    return _load_module(module_path)
+
+
 def _load_callable(config_path: Path, module_name: str, function: str, signature: str) -> object:
     module_path = config_path.parent / module_name
     if not module_path.exists():

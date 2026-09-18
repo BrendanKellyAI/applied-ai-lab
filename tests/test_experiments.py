@@ -6,7 +6,12 @@ from typer.testing import CliRunner
 from lab import cli
 from lab.cli import app
 from lab.config import ConfigError
-from lab.experiments import load_analyse_function, load_plan_function, results_dir
+from lab.experiments import (
+    load_analyse_function,
+    load_plan_function,
+    load_sibling,
+    results_dir,
+)
 
 CONFIG = """
 experiment: demo
@@ -159,3 +164,16 @@ def test_missing_analyse_module_is_a_config_error(tmp_path):
 def test_analyse_module_without_analyse_function_is_a_config_error(tmp_path):
     with pytest.raises(ConfigError, match="analyse"):
         load_analyse_function(_field_note(tmp_path, analyse="VALUE = 1"))
+
+
+def test_a_sibling_module_is_loaded_by_path(tmp_path):
+    folder = tmp_path / "field-notes" / "demo"
+    folder.mkdir(parents=True)
+    (folder / "helpers.py").write_text("SHARED = 7\n", encoding="utf-8")
+
+    assert load_sibling(folder / "helpers.py").SHARED == 7
+
+
+def test_a_missing_sibling_module_is_a_config_error(tmp_path):
+    with pytest.raises(ConfigError, match="helpers.py"):
+        load_sibling(tmp_path / "helpers.py")

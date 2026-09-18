@@ -5,8 +5,11 @@ import pytest
 from lab.scoring import (
     contains_match,
     exact_match,
+    integer_match,
     normalise,
     numeric_match,
+    paired_difference_interval,
+    parse_answer,
     wilson_interval,
 )
 
@@ -104,3 +107,105 @@ class TestWilsonInterval:
     def test_more_correct_than_trials_is_refused(self):
         with pytest.raises(ValueError):
             wilson_interval(7, 6)
+
+
+class TestParseAnswer:
+    def test_reads_the_answer_line(self):
+        assert parse_answer("Working it out.\nANSWER: 42") == "42"
+
+    def test_is_not_case_sensitive(self):
+        assert parse_answer("answer: 42") == "42"
+
+    def test_ignores_markdown_around_the_value(self):
+        assert parse_answer("**ANSWER: 42**") == "42"
+
+    def test_the_last_answer_line_wins(self):
+        response = "I will reply as ANSWER: <value>\nANSWER: 42"
+        assert parse_answer(response) == "42"
+
+    def test_keeps_a_comma_separated_list_intact(self):
+        assert parse_answer("ANSWER: audit, balancing, flushing") == "audit, balancing, flushing"
+
+    def test_no_answer_line_gives_none(self):
+        assert parse_answer("The answer is probably 42.") is None
+
+    def test_the_prompt_instruction_echoed_back_is_not_an_answer(self):
+        # The instruction itself contains "ANSWER: <value>", so a model that only repeats it
+        # must not be recorded as having answered.
+        echoed = "Give your final answer on the last line in the form ANSWER: <value>"
+        assert parse_answer(echoed) is None
+
+    def test_an_answer_after_the_echoed_instruction_is_still_read(self):
+        response = "I will use the form ANSWER: <value>.\nANSWER: 42"
+        assert parse_answer(response) == "42"
+
+    def test_an_empty_answer_line_gives_none(self):
+        assert parse_answer("ANSWER:   ") is None
+
+
+class TestIntegerMatch:
+    def test_exact_value_matches(self):
+        assert integer_match("42", 42)
+
+    def test_thousands_separators_are_allowed(self):
+        assert integer_match("1,024", 1024)
+
+    def test_a_different_value_does_not_match(self):
+        assert not integer_match("43", 42)
+
+    def test_a_value_with_units_does_not_match(self):
+        assert not integer_match("42 units", 42)
+
+    def test_a_decimal_does_not_match(self):
+        assert not integer_match("42.0", 42)
+
+    def test_a_negative_value_matches(self):
+        assert integer_match("-7", -7)
+
+
+class TestPairedDifferenceInterval:
+    def test_difference_is_the_discordant_pairs_over_the_total(self):
+        change, _, _ = paired_difference_interval(10, 8, 2, 10)
+        assert change == pytest.approx((8 - 2) / 30)
+
+    def test_equal_discordant_counts_give_no_change_and_span_zero(self):
+        change, low, high = paired_difference_interval(5, 4, 4, 7)
+        assert change == pytest.approx(0.0)
+        assert low < 0 < high
+
+    def test_a_clear_one_sided_effect_excludes_zero(self):
+        _, low, high = paired_difference_interval(5, 20, 0, 5)
+        assert low > 0
+        assert high <= 1.0
+
+    def test_swapping_the_conditions_negates_the_interval(self):
+        change, low, high = paired_difference_interval(7, 9, 3, 11)
+        other_change, other_low, other_high = paired_difference_interval(7, 3, 9, 11)
+        assert other_change == pytest.approx(-change)
+        assert other_low == pytest.approx(-high)
+        assert other_high == pytest.approx(-low)
+
+    def test_the_interval_contains_the_difference(self):
+        change, low, high = paired_difference_interval(4, 6, 1, 9)
+        assert low <= change <= high
+
+    def test_it_is_narrower_than_the_unpaired_interval_when_answers_agree(self):
+        # 20 items, the same 3 point gain, but every disagreement is one sided: strongly paired.
+        _, paired_low, paired_high = paired_difference_interval(14, 3, 0, 3)
+        _, first_low, first_high = wilson_interval(17, 20)
+        _, second_low, second_high = wilson_interval(14, 20)
+        unpaired = (first_high - first_low) + (second_high - second_low)
+        assert (paired_high - paired_low) < unpaired
+
+    def test_an_empty_margin_falls_back_to_no_correlation(self):
+        # Nobody answered correctly in either condition, so phi cannot be estimated.
+        change, low, high = paired_difference_interval(0, 0, 0, 12)
+        assert change == pytest.approx(0.0)
+        assert low <= 0 <= high
+
+    def test_no_pairs_gives_the_whole_range(self):
+        assert paired_difference_interval(0, 0, 0, 0) == (0.0, -1.0, 1.0)
+
+    def test_negative_counts_are_refused(self):
+        with pytest.raises(ValueError):
+            paired_difference_interval(1, -1, 0, 0)

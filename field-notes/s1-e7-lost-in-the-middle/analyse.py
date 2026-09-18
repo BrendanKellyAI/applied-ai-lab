@@ -505,10 +505,13 @@ def _token_lines(records: Sequence[RunRecord]) -> list[str]:
 
 
 def _failure_lines(records: Sequence[RunRecord]) -> list[str]:
+    """How many distinct calls failed. A call retried twice is one failed call, not two."""
     succeeded = {record.call_id for record in _successful(records)}
-    failed = [
-        record for record in records if record.result is None and record.call_id not in succeeded
-    ]
+    failed = {
+        record.call_id
+        for record in records
+        if record.result is None and record.call_id not in succeeded
+    }
     if not failed:
         return []
     return [f"{len(failed)} call(s) failed and are not scored. Run `lab run` again to retry them."]
