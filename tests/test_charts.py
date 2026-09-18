@@ -167,3 +167,74 @@ def test_series_are_distinguished_by_more_than_colour(tmp_path):
     assert len(captured["hatches"]) == 2
     assert captured["legend"] == ["Lowest", "High"]
     assert captured["colours"] == {MIST.upper(), SLATE.upper(), ACID_GREEN.upper()}
+
+
+def test_a_footnote_adds_a_footer_line(tmp_path):
+    captured = {}
+
+    def capture(fig, ax, style):
+        draw_bars(fig, ax, style)
+        captured["fig"] = fig
+
+    spec = ChartSpec("bars", "Accuracy (%)", "n = 30", footnote="Lowest is minimal on one model")
+    export_chart(capture, tmp_path, spec, layouts=(SLIDE,))
+
+    footers = [
+        text.get_text()
+        for text in captured["fig"].texts
+        if "Lowest is minimal on one model" in text.get_text()
+    ]
+    assert footers == ["Lowest is minimal on one model\nAccuracy (%) · n = 30"]
+
+
+def test_bars_can_show_a_multiple_rather_than_a_percentage(tmp_path):
+    captured = {}
+
+    def multiples(fig, ax, style):
+        grouped_bars(
+            ax,
+            categories=["T1", "T2"],
+            series=[("High", [4.0, 12.0])],
+            style=style,
+            value_formatter=matplotlib.ticker.FuncFormatter(lambda value, _: f"{value:g}x"),
+        )
+        captured["labels"] = [label.get_text() for label in ax.get_yticklabels()]
+        captured["legend"] = ax.get_legend()
+
+    export_chart(multiples, tmp_path, ChartSpec("bars", "Multiple", "n = 30"), layouts=(SLIDE,))
+
+    assert any(label.endswith("x") for label in captured["labels"] if label)
+    assert captured["legend"] is None
+
+
+def test_highlighting_the_first_bar_does_not_recolour_its_legend_key(tmp_path):
+    captured = {}
+
+    def highlight_first(fig, ax, style):
+        grouped_bars(
+            ax,
+            categories=["T1", "T2"],
+            series=[("Lowest", [0.5, 0.6]), ("High", [0.9, 0.6])],
+            style=style,
+            highlight_bar=(1, 0),
+        )
+        captured["legend"] = [
+            matplotlib.colors.to_hex(handle.get_facecolor()).upper()
+            for handle in ax.get_legend().legend_handles
+        ]
+
+    export_chart(
+        highlight_first, tmp_path, ChartSpec("bars", "Accuracy (%)", "n = 30"), layouts=(SLIDE,)
+    )
+
+    assert ACID_GREEN.upper() not in captured["legend"]
+
+
+def test_a_second_acid_green_element_is_refused_even_without_the_marker(tmp_path):
+    def two_greens(fig, ax, style):
+        draw_bars(fig, ax, style)
+        # Coloured by hand rather than through highlight(), so it carries no marker.
+        ax.patches[0].set_facecolor(ACID_GREEN)
+
+    with pytest.raises(ValueError, match="one acid green element"):
+        export_chart(two_greens, tmp_path, ChartSpec("bars", "Accuracy (%)", "n = 30"))

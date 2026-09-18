@@ -305,12 +305,39 @@ class TestReportText:
 
     def test_reports_failed_calls(self, module, config, facts, tmp_path, no_charts):
         records = _full_grid(config, facts)
-        failed = records[0].model_copy(update={"result": None, "error": "RateLimitError: 429"})
+        # A call with no successful record of its own. Copying a successful call's identifier
+        # would leave nothing to report, because that call did complete.
+        failed = records[0].model_copy(
+            update={"call_id": "neverfinished", "result": None, "error": "RateLimitError: 429"}
+        )
         records.append(failed)
 
         report = module.analyse(config, tmp_path, records)
 
-        assert "failed" in report.lower()
+        assert "1 call(s) failed and are not scored" in report
+
+    def test_one_call_retried_twice_counts_once(self, module, config, facts, tmp_path, no_charts):
+        records = _full_grid(config, facts)
+        failed = records[0].model_copy(
+            update={"call_id": "neverfinished", "result": None, "error": "RateLimitError: 429"}
+        )
+        records += [failed, failed]
+
+        report = module.analyse(config, tmp_path, records)
+
+        assert "1 call(s) failed and are not scored" in report
+
+    def test_says_nothing_when_a_retry_later_succeeded(
+        self, module, config, facts, tmp_path, no_charts
+    ):
+        records = _full_grid(config, facts)
+        records.append(
+            records[0].model_copy(update={"result": None, "error": "RateLimitError: 429"})
+        )
+
+        report = module.analyse(config, tmp_path, records)
+
+        assert "call(s) failed" not in report
 
     def test_refuses_an_empty_set_of_results(self, module, config, tmp_path):
         with pytest.raises(module.AnalysisError, match="no successful"):

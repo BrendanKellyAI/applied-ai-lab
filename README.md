@@ -52,9 +52,11 @@ If your Anthropic key is not scoped to a single workspace, also set `ANTHROPIC_W
 | Episode | Question | Folder |
 |---|---|---|
 | S1 E7 | Does a fact's position in a long context affect retrieval? | [field-notes/s1-e7-lost-in-the-middle](field-notes/s1-e7-lost-in-the-middle/) |
-| S1 E10 | When does turning reasoning on improve accuracy enough to justify the cost? | To follow |
+| S1 E10 | When does turning reasoning on improve accuracy enough to justify the cost? | [field-notes/s1-e10-reasoning-vs-standard](field-notes/s1-e10-reasoning-vs-standard/) |
 
-Datasets are not committed; each field note rebuilds its own. Sources and licences are in
+Each field note builds its own data from the seed in its config. S1 E10's task items are wholly
+generated, so all 120 questions are committed; S1 E7's documents contain Project Gutenberg text,
+so they are rebuilt rather than committed. Sources and licences are in
 [datasets/README.md](datasets/README.md).
 
 ## Episode code
