@@ -238,3 +238,13 @@ def test_a_second_acid_green_element_is_refused_even_without_the_marker(tmp_path
 
     with pytest.raises(ValueError, match="one acid green element"):
         export_chart(two_greens, tmp_path, ChartSpec("bars", "Accuracy (%)", "n = 30"))
+
+
+def test_rendering_the_same_chart_twice_gives_identical_svg(tmp_path):
+    """No date or random IDs, so re-rendering an unchanged chart changes no committed file."""
+    first = export_chart(draw_bars, tmp_path / "a", HEATMAP_SPEC, layouts=(SLIDE,))
+    second = export_chart(draw_bars, tmp_path / "b", HEATMAP_SPEC, layouts=(SLIDE,))
+
+    svg = [path for path in first if path.suffix == ".svg"][0]
+    again = [path for path in second if path.suffix == ".svg"][0]
+    assert svg.read_bytes() == again.read_bytes()

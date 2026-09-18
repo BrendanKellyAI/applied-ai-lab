@@ -176,7 +176,7 @@ sight rather than adding much. "Reasoning off" is therefore not one condition ac
 and a comparison between models at "off" is partly a comparison of how chatty each one is.
 
 **Pilot before you commit.** Reasoning cost was hard to predict: the estimate before the pilot,
-bounded by the output limit, was $55.82; the full run itself cost about $2. And the first version of
+bounded by the output limit, was about 28 times what the full run actually cost. And the first version of
 these tasks was too easy for any model to show a difference, which only the pilot revealed.
 
 This is the evidence behind the S1 E11 decision framework, "When is a reasoning model worth the
