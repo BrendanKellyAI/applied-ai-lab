@@ -46,3 +46,20 @@ def test_latest_successful_ignores_failures_and_keeps_last_success(tmp_path, mak
     latest = latest_successful([failed, succeeded, other_failed])
 
     assert latest == {call.call_id: succeeded}
+
+
+def test_an_answer_to_a_question_no_longer_asked_is_not_returned(make_call):
+    """A prompt changed, and the attempt at the new prompt failed: the old answer is stale."""
+    old = _record(make_call(item=1, prompt="the old question"))
+    new_attempt = _record(make_call(item=1, prompt="the new question"), error="boom")
+    assert old.call_id == new_attempt.call_id
+    assert old.request_hash != new_attempt.request_hash
+
+    assert latest_successful([old, new_attempt]) == {}
+
+
+def test_a_failed_retry_of_the_same_request_keeps_the_earlier_answer(make_call):
+    call = make_call(item=1)
+    answered = _record(call)
+
+    assert latest_successful([answered, _record(call, error="boom")]) == {call.call_id: answered}
