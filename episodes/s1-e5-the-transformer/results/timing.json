@@ -1,0 +1,365 @@
+{
+ "model": "gpt2",
+ "model_canonical": "openai-community/gpt2",
+ "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+ "device": "cpu",
+ "dtype": "float32",
+ "run_date_utc": "2026-09-19",
+ "machine": {
+  "cpu": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+  "physical_cores": 4,
+  "logical_cores": 8,
+  "threads_used": 4,
+  "os": "Windows-11-10.0.26200-SP0",
+  "power_source": "battery",
+  "power_source_at_end": "battery"
+ },
+ "libraries": {
+  "python": "3.13.7",
+  "torch": "2.14.0",
+  "transformers": "5.17.0",
+  "tokenizers": "0.23.2"
+ },
+ "method": {
+  "timer": "time.perf_counter",
+  "warmups": 2,
+  "repeats": 5,
+  "headline_tokens": 512,
+  "sweep_tokens": [
+   64,
+   128,
+   256,
+   512,
+   896
+  ],
+  "writing_prompt_tokens": 8,
+  "reading_scores": "last position only (logits_to_keep=1)"
+ },
+ "prompt": {
+  "book": "Pride and Prejudice",
+  "gutenberg_id": 1342,
+  "book_sha256": "81300b79e8a8d65ac530a97578417d06137e3bbc90622a10a65e5036183d2500",
+  "longest_prompt_tokens": 896,
+  "longest_prompt_ids_sha256": "655464bf7f7b8d4814aa4d5d699700ca18590b02c8e7c108aac128960ec4bcde",
+  "writing_prompt_text": "Mr. Darcy stood near them in"
+ },
+ "configuration": {
+  "n_layer": 12,
+  "n_head": 12,
+  "n_embd": 768,
+  "vocab_size": 50257,
+  "n_positions": 1024,
+  "parameters": 124439808,
+  "attention_implementation": "sdpa"
+ },
+ "conditions": [
+  {
+   "name": "reading-64",
+   "kind": "reading",
+   "kv_cache": true,
+   "prompt_tokens": 64,
+   "new_tokens": 0,
+   "tokens": 64,
+   "warmups": 2,
+   "seconds": [
+    0.1930006000038702,
+    0.21806919999653473,
+    0.21929069999896456,
+    0.19538599999214057,
+    0.2160884999902919
+   ],
+   "summary": {
+    "total_s": {
+     "median": 0.2160884999902919,
+     "min": 0.1930006000038702,
+     "max": 0.21929069999896456
+    },
+    "per_token_ms": {
+     "median": 3.376382812348311,
+     "min": 3.015634375060472,
+     "max": 3.426417187483821
+    }
+   }
+  },
+  {
+   "name": "reading-128",
+   "kind": "reading",
+   "kv_cache": true,
+   "prompt_tokens": 128,
+   "new_tokens": 0,
+   "tokens": 128,
+   "warmups": 2,
+   "seconds": [
+    0.3555455999885453,
+    0.36734170001000166,
+    0.33402019999630284,
+    0.3670045000035316,
+    0.3653319999866653
+   ],
+   "summary": {
+    "total_s": {
+     "median": 0.3653319999866653,
+     "min": 0.33402019999630284,
+     "max": 0.36734170001000166
+    },
+    "per_token_ms": {
+     "median": 2.854156249895823,
+     "min": 2.609532812471116,
+     "max": 2.869857031328138
+    }
+   }
+  },
+  {
+   "name": "reading-256",
+   "kind": "reading",
+   "kv_cache": true,
+   "prompt_tokens": 256,
+   "new_tokens": 0,
+   "tokens": 256,
+   "warmups": 2,
+   "seconds": [
+    0.6830602000118233,
+    0.7278890000015963,
+    0.7607298000075389,
+    0.757335400005104,
+    0.7669632000033744
+   ],
+   "summary": {
+    "total_s": {
+     "median": 0.757335400005104,
+     "min": 0.6830602000118233,
+     "max": 0.7669632000033744
+    },
+    "per_token_ms": {
+     "median": 2.9583414062699376,
+     "min": 2.668203906296185,
+     "max": 2.995950000013181
+    }
+   }
+  },
+  {
+   "name": "reading-512",
+   "kind": "reading",
+   "kv_cache": true,
+   "prompt_tokens": 512,
+   "new_tokens": 0,
+   "tokens": 512,
+   "warmups": 2,
+   "seconds": [
+    1.5062381999887293,
+    1.609605100005865,
+    1.6045986999961315,
+    1.4956099999981234,
+    1.5086233000038192
+   ],
+   "summary": {
+    "total_s": {
+     "median": 1.5086233000038192,
+     "min": 1.4956099999981234,
+     "max": 1.609605100005865
+    },
+    "per_token_ms": {
+     "median": 2.9465298828199593,
+     "min": 2.9211132812463347,
+     "max": 3.1437599609489553
+    }
+   }
+  },
+  {
+   "name": "reading-896",
+   "kind": "reading",
+   "kv_cache": true,
+   "prompt_tokens": 896,
+   "new_tokens": 0,
+   "tokens": 896,
+   "warmups": 2,
+   "seconds": [
+    2.5104829000047175,
+    2.666964799995185,
+    2.566366700004437,
+    2.5806408999924315,
+    2.5937104000040563
+   ],
+   "summary": {
+    "total_s": {
+     "median": 2.5806408999924315,
+     "min": 2.5104829000047175,
+     "max": 2.666964799995185
+    },
+    "per_token_ms": {
+     "median": 2.88017957588441,
+     "min": 2.8018782366124078,
+     "max": 2.9765232142803404
+    }
+   }
+  },
+  {
+   "name": "writing-64",
+   "kind": "writing",
+   "kv_cache": true,
+   "prompt_tokens": 8,
+   "new_tokens": 64,
+   "tokens": 64,
+   "warmups": 2,
+   "seconds": [
+    4.214168699996662,
+    3.974872700011474,
+    3.885872400001972,
+    3.7550408999959473,
+    4.1323342000105185
+   ],
+   "summary": {
+    "total_s": {
+     "median": 3.974872700011474,
+     "min": 3.7550408999959473,
+     "max": 4.214168699996662
+    },
+    "per_token_ms": {
+     "median": 62.10738593767928,
+     "min": 58.672514062436676,
+     "max": 65.84638593744785
+    }
+   }
+  },
+  {
+   "name": "writing-128",
+   "kind": "writing",
+   "kv_cache": true,
+   "prompt_tokens": 8,
+   "new_tokens": 128,
+   "tokens": 128,
+   "warmups": 2,
+   "seconds": [
+    7.648719699995127,
+    8.046522399992682,
+    7.605389800010016,
+    7.644468699989375,
+    7.847249799990095
+   ],
+   "summary": {
+    "total_s": {
+     "median": 7.648719699995127,
+     "min": 7.605389800010016,
+     "max": 8.046522399992682
+    },
+    "per_token_ms": {
+     "median": 59.755622656211926,
+     "min": 59.41710781257825,
+     "max": 62.86345624994283
+    }
+   }
+  },
+  {
+   "name": "writing-256",
+   "kind": "writing",
+   "kv_cache": true,
+   "prompt_tokens": 8,
+   "new_tokens": 256,
+   "tokens": 256,
+   "warmups": 2,
+   "seconds": [
+    15.616216399997938,
+    16.003681300004246,
+    16.065236900001764,
+    15.81022899999516,
+    15.694513199996436
+   ],
+   "summary": {
+    "total_s": {
+     "median": 15.81022899999516,
+     "min": 15.616216399997938,
+     "max": 16.065236900001764
+    },
+    "per_token_ms": {
+     "median": 61.7587070312311,
+     "min": 61.00084531249195,
+     "max": 62.75483164063189
+    }
+   }
+  },
+  {
+   "name": "writing-512",
+   "kind": "writing",
+   "kv_cache": true,
+   "prompt_tokens": 8,
+   "new_tokens": 512,
+   "tokens": 512,
+   "warmups": 2,
+   "seconds": [
+    33.38003700000991,
+    33.55854189999809,
+    33.21872239999357,
+    34.04886739999347,
+    32.822738900009426
+   ],
+   "summary": {
+    "total_s": {
+     "median": 33.38003700000991,
+     "min": 32.822738900009426,
+     "max": 34.04886739999347
+    },
+    "per_token_ms": {
+     "median": 65.19538476564435,
+     "min": 64.10691191408091,
+     "max": 66.50169414061224
+    }
+   }
+  },
+  {
+   "name": "writing-896",
+   "kind": "writing",
+   "kv_cache": true,
+   "prompt_tokens": 8,
+   "new_tokens": 896,
+   "tokens": 896,
+   "warmups": 2,
+   "seconds": [
+    62.196422499997425,
+    62.146738299998106,
+    61.989004300005035,
+    61.97115899999335,
+    62.09016040001006
+   ],
+   "summary": {
+    "total_s": {
+     "median": 62.09016040001006,
+     "min": 61.97115899999335,
+     "max": 62.196422499997425
+    },
+    "per_token_ms": {
+     "median": 69.29705401786838,
+     "min": 69.16423995534971,
+     "max": 69.41565011160426
+    }
+   }
+  },
+  {
+   "name": "writing-no-cache-512",
+   "kind": "writing",
+   "kv_cache": false,
+   "prompt_tokens": 8,
+   "new_tokens": 512,
+   "tokens": 512,
+   "warmups": 2,
+   "seconds": [
+    337.4199023999972,
+    384.77515909999784,
+    394.507853099989,
+    406.2431951000035,
+    396.51273040000524
+   ],
+   "summary": {
+    "total_s": {
+     "median": 394.507853099989,
+     "min": 337.4199023999972,
+     "max": 406.2431951000035
+    },
+    "per_token_ms": {
+     "median": 770.523150585916,
+     "min": 659.0232468749946,
+     "max": 793.4437404296943
+    }
+   }
+  }
+ ]
+}
