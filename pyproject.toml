@@ -24,6 +24,12 @@ dependencies = [
 [project.scripts]
 lab = "lab.cli:app"
 
+[project.optional-dependencies]
+e4 = [
+    "torch>=2.14.0",
+    "transformers>=5.17.0",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

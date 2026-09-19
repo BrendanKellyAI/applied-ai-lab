@@ -257,3 +257,23 @@ def test_fonts_for_other_scripts_follow_the_brand_font():
     family = font_family()
     assert family[0] in (PREFERRED_FONT, "sans-serif")
     assert all(font in FALLBACK_FONTS for font in family[1:])
+
+
+def test_horizontal_bars_put_the_first_category_at_the_top(tmp_path):
+    captured = {}
+
+    def horizontal(fig, ax, style):
+        grouped_bars(
+            ax,
+            categories=["first", "second"],
+            series=[("A", [0.2, 0.4]), ("B", [0.3, 0.5])],
+            style=style,
+            highlight_bar=(1, 0),
+            horizontal=True,
+        )
+        labels = sorted((tick.get_position()[1], tick.get_text()) for tick in ax.get_yticklabels())
+        captured["top"] = labels[-1][1]
+
+    export_chart(horizontal, tmp_path, ChartSpec("bars", "Share", "n = 2"), layouts=(SLIDE,))
+
+    assert captured["top"] == "first"
