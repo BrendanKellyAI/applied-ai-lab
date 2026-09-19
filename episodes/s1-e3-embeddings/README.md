@@ -35,7 +35,7 @@ Each pair scored on its own. The paraphrase and the unrelated sentence are yards
 | Pair | First | Second | Cosine similarity |
 |---|---|---|---|
 | Negation | The drug is safe. | The drug is not safe. | 0.807 |
-| Numbers | Shares rose 5% today. | Shares fell 5% today. | 0.858 |
+| Direction | Shares rose 5% today. | Shares fell 5% today. | 0.858 |
 | Paraphrase | The drug is safe. | The medicine carries no risk. | 0.592 |
 | Unrelated | The drug is safe. | The train leaves at noon. | 0.104 |
 
@@ -45,7 +45,7 @@ Each pair scored on its own. The paraphrase and the unrelated sentence are yards
 
 **Claim 2 held, strongly.** "The drug is not safe." scored 0.807 against "The drug is safe.", higher than a sentence that means the same thing, "The medicine carries no risk.", at 0.592. The model placed the opposite claim nearer than the paraphrase. Two sentences can be close in embedding space and say opposite things.
 
-**Claim 3 held, but it is really about direction.** "Shares rose 5% today." and "Shares fell 5% today." scored 0.858, the highest of all four pairs and well above the paraphrase. But both sentences contain the same number; what differs is the direction, rose against fell. So this shows that opposite movements land as near neighbours. It does not test whether different numbers, such as 5% against 50%, are told apart; that was not run here.
+**Claim 3 held, but it is really about direction, which is why the pair is labelled "Direction".** "Shares rose 5% today." and "Shares fell 5% today." scored 0.858, the highest of all four pairs and well above the paraphrase. But both sentences contain the same number; what differs is the direction, rose against fell. So this shows that opposite movements land as near neighbours. It does not test whether different numbers, such as 5% against 50%, are told apart; that was not run here.
 
 The practical lesson for anyone building search on embeddings: a close match is a candidate, not an answer. Check negation, direction, and figures another way before trusting them.
 
@@ -84,7 +84,7 @@ uv run python episodes/s1-e3-embeddings/chart.py
 The charts read only `results/embeddings.json`, which is committed, so anyone can redraw them without a key.
 
 - `charts/similarity-to-query`: one bar per stored phrase, highest first. The acid green bar is the phrase that scores highest.
-- `charts/pairs`: the four pairs in the order above. The acid green bar is whichever of the negation and numbers pairs scores higher, and only if it beats the paraphrase; otherwise nothing is highlighted and the chart says so. In this run, the numbers pair is highlighted.
+- `charts/pairs`: the four pairs in the order above. The acid green bar is whichever of the negation and direction pairs scores higher, and only if it beats the paraphrase; otherwise nothing is highlighted and the chart says so. In this run, the direction pair is highlighted.
 
 ## Reading the scores
 

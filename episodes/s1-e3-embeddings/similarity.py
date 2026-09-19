@@ -46,6 +46,9 @@ PAIRS = [
     ("paraphrase", "The drug is safe.", "The medicine carries no risk."),
     ("unrelated", "The drug is safe.", "The train leaves at noon."),
 ]
+# The rose and fell pair keeps the key "numbers" in the results, but both sentences say 5%, so
+# what it tests is direction, and that is how it is shown.
+LABELS = {"numbers": "direction"}
 
 
 def cosine(a: np.ndarray, b: np.ndarray) -> float:
@@ -64,7 +67,7 @@ pair_scores = []
 for kind, first, second in PAIRS:
     score = cosine(pair_vectors[first], pair_vectors[second])
     pair_scores.append({"kind": kind, "first": first, "second": second, "score": score})
-    print(f"{score:.3f}  {kind}: {first} / {second}")
+    print(f"{score:.3f}  {LABELS.get(kind, kind)}: {first} / {second}")
 
 # Every text keeps its vector, so the scores can be checked, or recomputed another way, later.
 texts = {query: vectors[0], **dict(zip(phrases, rows, strict=True)), **pair_vectors}

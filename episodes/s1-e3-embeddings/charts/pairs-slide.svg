@@ -796,75 +796,74 @@ z
     <g id="ytick_2">
      <g id="line2d_14"/>
      <g id="text_9">
-      <!-- Numbers -->
-      <g style="fill: #c9d3e0" transform="translate(48.13704 378.607713) scale(0.2304 -0.2304)">
+      <!-- Direction -->
+      <g style="fill: #c9d3e0" transform="translate(51.48864 378.607713) scale(0.2304 -0.2304)">
        <defs>
-        <path id="InterTight-Regular-2b1" d="M 2544 1425 
-L 2544 3494 
-L 3075 3494 
-L 3075 0 
-L 2544 0 
-L 2544 594 
-L 2506 594 
-Q 2381 328 2123 140 
-Q 1866 -47 1469 -44 
-Q 1141 -44 887 98 
-Q 634 241 489 534 
-Q 344 828 344 1275 
-L 344 3494 
-L 875 3494 
-L 875 1306 
-Q 875 928 1092 700 
-Q 1309 472 1644 475 
-Q 1844 475 2051 576 
-Q 2259 678 2401 889 
-Q 2544 1100 2544 1425 
+        <path id="InterTight-Regular-2f" d="M 1850 0 
+L 731 0 
+L 731 500 
+L 1813 500 
+Q 2391 500 2770 722 
+Q 3150 944 3337 1356 
+Q 3525 1769 3525 2338 
+Q 3525 2900 3340 3308 
+Q 3156 3716 2789 3936 
+Q 2422 4156 1875 4156 
+L 706 4156 
+L 706 4656 
+L 1913 4656 
+Q 2591 4656 3073 4378 
+Q 3556 4100 3812 3579 
+Q 4069 3059 4069 2338 
+Q 4069 1609 3809 1086 
+Q 3550 563 3054 281 
+Q 2559 0 1850 0 
+z
+M 975 4656 
+L 975 0 
+L 413 0 
+L 413 4656 
+L 975 4656 
 z
 " transform="scale(0.015625)"/>
-        <path id="InterTight-Regular-18c" d="M 1938 -75 
-Q 1603 -75 1400 39 
-Q 1197 153 1087 298 
-Q 978 444 919 538 
-L 856 538 
-L 856 0 
-L 344 0 
-L 344 4656 
-L 875 4656 
-L 875 2938 
-L 919 2938 
-Q 978 3028 1084 3170 
-Q 1191 3313 1391 3425 
-Q 1591 3538 1931 3538 
-Q 2372 3538 2706 3317 
-Q 3041 3097 3230 2692 
-Q 3419 2288 3419 1738 
-Q 3419 1184 3231 776 
-Q 3044 369 2709 147 
-Q 2375 -75 1938 -75 
-z
-M 1869 406 
-Q 2203 406 2428 586 
-Q 2653 766 2767 1069 
-Q 2881 1372 2881 1744 
-Q 2881 2113 2768 2409 
-Q 2656 2706 2432 2881 
-Q 2209 3056 1869 3056 
-Q 1541 3056 1319 2892 
-Q 1097 2728 983 2433 
-Q 869 2138 869 1744 
-Q 869 1350 984 1048 
-Q 1100 747 1323 576 
-Q 1547 406 1869 406 
+        <path id="InterTight-Regular-195" d="M 1756 -75 
+Q 1269 -75 914 158 
+Q 559 391 367 797 
+Q 175 1203 175 1725 
+Q 175 2259 372 2667 
+Q 569 3075 923 3306 
+Q 1278 3538 1750 3538 
+Q 2119 3538 2414 3402 
+Q 2709 3266 2898 3019 
+Q 3088 2772 3131 2444 
+L 2594 2444 
+Q 2553 2603 2447 2743 
+Q 2341 2884 2167 2970 
+Q 1994 3056 1756 3056 
+Q 1444 3056 1209 2893 
+Q 975 2731 844 2436 
+Q 713 2141 713 1744 
+Q 713 1341 841 1039 
+Q 969 738 1205 572 
+Q 1441 406 1756 406 
+Q 2072 406 2297 570 
+Q 2522 734 2594 1019 
+L 3131 1019 
+Q 3088 709 2908 462 
+Q 2728 216 2436 70 
+Q 2144 -75 1756 -75 
 z
 " transform="scale(0.015625)"/>
        </defs>
-       <use xlink:href="#InterTight-Regular-a2"/>
-       <use xlink:href="#InterTight-Regular-2b1" transform="translate(70.703125 0)"/>
-       <use xlink:href="#InterTight-Regular-238" transform="translate(124.125 0)"/>
-       <use xlink:href="#InterTight-Regular-18c" transform="translate(206.453125 0)"/>
-       <use xlink:href="#InterTight-Regular-1b1" transform="translate(262.609375 0)"/>
-       <use xlink:href="#InterTight-Regular-27d" transform="translate(315.9375 0)"/>
-       <use xlink:href="#InterTight-Regular-28c" transform="translate(348.453125 0)"/>
+       <use xlink:href="#InterTight-Regular-2f"/>
+       <use xlink:href="#InterTight-Regular-203" transform="translate(67.1875 0)"/>
+       <use xlink:href="#InterTight-Regular-27d" transform="translate(86.234375 0)"/>
+       <use xlink:href="#InterTight-Regular-1b1" transform="translate(117.09375 0)"/>
+       <use xlink:href="#InterTight-Regular-195" transform="translate(170.421875 0)"/>
+       <use xlink:href="#InterTight-Regular-29c" transform="translate(221.890625 0)"/>
+       <use xlink:href="#InterTight-Regular-203" transform="translate(253.53125 0)"/>
+       <use xlink:href="#InterTight-Regular-24e" transform="translate(272.578125 0)"/>
+       <use xlink:href="#InterTight-Regular-23f" transform="translate(327.5625 0)"/>
       </g>
      </g>
     </g>
@@ -1127,6 +1126,28 @@ L 2188 0
 L 1625 0 
 L 1625 4156 
 L 156 4156 
+z
+" transform="scale(0.015625)"/>
+      <path id="InterTight-Regular-2b1" d="M 2544 1425 
+L 2544 3494 
+L 3075 3494 
+L 3075 0 
+L 2544 0 
+L 2544 594 
+L 2506 594 
+Q 2381 328 2123 140 
+Q 1866 -47 1469 -44 
+Q 1141 -44 887 98 
+Q 634 241 489 534 
+Q 344 828 344 1275 
+L 344 3494 
+L 875 3494 
+L 875 1306 
+Q 875 928 1092 700 
+Q 1309 472 1644 475 
+Q 1844 475 2051 576 
+Q 2259 678 2401 889 
+Q 2544 1100 2544 1425 
 z
 " transform="scale(0.015625)"/>
       <path id="InterTight-Regular-1dc" d="M 1894 3494 
@@ -1478,34 +1499,6 @@ z
     <!-- The drug is safe. / The medicine carries no risk. -->
     <g style="fill: #c9d3e0" transform="translate(142.87904 499.730619) scale(0.2304 -0.2304)">
      <defs>
-      <path id="InterTight-Regular-195" d="M 1756 -75 
-Q 1269 -75 914 158 
-Q 559 391 367 797 
-Q 175 1203 175 1725 
-Q 175 2259 372 2667 
-Q 569 3075 923 3306 
-Q 1278 3538 1750 3538 
-Q 2119 3538 2414 3402 
-Q 2709 3266 2898 3019 
-Q 3088 2772 3131 2444 
-L 2594 2444 
-Q 2553 2603 2447 2743 
-Q 2341 2884 2167 2970 
-Q 1994 3056 1756 3056 
-Q 1444 3056 1209 2893 
-Q 975 2731 844 2436 
-Q 713 2141 713 1744 
-Q 713 1341 841 1039 
-Q 969 738 1205 572 
-Q 1441 406 1756 406 
-Q 2072 406 2297 570 
-Q 2522 734 2594 1019 
-L 3131 1019 
-Q 3088 709 2908 462 
-Q 2728 216 2436 70 
-Q 2144 -75 1756 -75 
-z
-" transform="scale(0.015625)"/>
       <path id="InterTight-Regular-21d" d="M 844 1275 
 L 831 1938 
 L 944 1938 
@@ -1726,6 +1719,42 @@ L 2338 1744
 L 300 1744 
 L 300 2244 
 L 2338 2244 
+z
+" transform="scale(0.015625)"/>
+     <path id="InterTight-Regular-18c" d="M 1938 -75 
+Q 1603 -75 1400 39 
+Q 1197 153 1087 298 
+Q 978 444 919 538 
+L 856 538 
+L 856 0 
+L 344 0 
+L 344 4656 
+L 875 4656 
+L 875 2938 
+L 919 2938 
+Q 978 3028 1084 3170 
+Q 1191 3313 1391 3425 
+Q 1591 3538 1931 3538 
+Q 2372 3538 2706 3317 
+Q 3041 3097 3230 2692 
+Q 3419 2288 3419 1738 
+Q 3419 1184 3231 776 
+Q 3044 369 2709 147 
+Q 2375 -75 1938 -75 
+z
+M 1869 406 
+Q 2203 406 2428 586 
+Q 2653 766 2767 1069 
+Q 2881 1372 2881 1744 
+Q 2881 2113 2768 2409 
+Q 2656 2706 2432 2881 
+Q 2209 3056 1869 3056 
+Q 1541 3056 1319 2892 
+Q 1097 2728 983 2433 
+Q 869 2138 869 1744 
+Q 869 1350 984 1048 
+Q 1100 747 1323 576 
+Q 1547 406 1869 406 
 z
 " transform="scale(0.015625)"/>
      <path id="InterTight-Regular-5be" d="M 1906 -63 

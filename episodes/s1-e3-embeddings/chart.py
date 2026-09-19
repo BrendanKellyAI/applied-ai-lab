@@ -7,8 +7,8 @@ Run from the repository root:
 similarity-to-query: how close each stored phrase is to "How do I get my money back?". The acid
 green bar is the phrase that scores highest.
 
-pairs: the negation and numbers pairs beside a paraphrase and an unrelated sentence. The acid
-green bar is whichever of negation or numbers scores highest, and only if it beats the
+pairs: the negation and direction pairs beside a paraphrase and an unrelated sentence. The
+acid green bar is whichever of negation or direction scores highest, and only if it beats the
 paraphrase: a warning pair that scores below a true paraphrase shows nothing worth flagging.
 """
 
@@ -28,10 +28,12 @@ OUT_DIR = HERE / "charts"
 SEARCH_CHART = "similarity-to-query"
 PAIRS_CHART = "pairs"
 # The two pairs the episode warns about. Paraphrase and unrelated are yardsticks, not findings.
+# The rose and fell pair keeps its original key, "numbers", because the committed results use it,
+# but it is shown as "Direction": both sentences say 5%, so what it tests is rose against fell.
 WARNING_KINDS = ("negation", "numbers")
 PAIR_LABELS = {
     "negation": "Negation",
-    "numbers": "Numbers",
+    "numbers": "Direction",
     "paraphrase": "Paraphrase",
     "unrelated": "Unrelated",
 }

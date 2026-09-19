@@ -184,31 +184,47 @@ def grouped_bars(
     style: ChartStyle,
     highlight_bar: tuple[int, int] | None = None,
     value_formatter: Formatter | None = None,
+    horizontal: bool = False,
 ) -> None:
     """Bars grouped by category, with series told apart by colour, hatching, and legend.
 
     Values are proportions on a percentage axis unless `value_formatter` says otherwise, which
-    is what a chart of multiples rather than shares needs.
+    is what a chart of multiples rather than shares needs. `horizontal` lays the groups out top
+    to bottom in category order, for categories whose names are too long to sit side by side.
     """
     if len(series) > len(SERIES_COLOURS):
         raise ValueError(f"At most {len(SERIES_COLOURS)} series are supported")
     width = 0.8 / len(series)
+    # Read top to bottom, a horizontal chart puts the first category and first series at the top.
+    positions = (
+        [len(categories) - 1 - i for i in range(len(categories))]
+        if horizontal
+        else list(range(len(categories)))
+    )
     for index, (label, values) in enumerate(series):
-        offsets = [i - 0.4 + width * (index + 0.5) for i in range(len(categories))]
-        bars = ax.bar(
+        step = -1 if horizontal else 1
+        offsets = [p - step * 0.4 + step * width * (index + 0.5) for p in positions]
+        draw = ax.barh if horizontal else ax.bar
+        size = {"height": width} if horizontal else {"width": width}
+        bars = draw(
             offsets,
             values,
-            width=width,
             label=label,
             color=SERIES_COLOURS[index],
             hatch=SERIES_HATCHES[index],
             edgecolor=NAVY,
+            **size,
         )
         if highlight_bar is not None and highlight_bar[0] == index:
             highlight(bars.patches[highlight_bar[1]])
-    ax.set_xticks(range(len(categories)), labels=categories)
-    ax.yaxis.set_major_formatter(value_formatter or PercentFormatter(xmax=1, decimals=0))
-    ax.grid(axis="y", alpha=0.4)
+    value_axis, category_axis = (ax.xaxis, "y") if horizontal else (ax.yaxis, "x")
+    if horizontal:
+        ax.set_yticks(positions, labels=categories)
+        ax.tick_params(axis="y", length=0)
+    else:
+        ax.set_xticks(positions, labels=categories)
+    value_axis.set_major_formatter(value_formatter or PercentFormatter(xmax=1, decimals=0))
+    ax.grid(axis="x" if category_axis == "y" else "y", alpha=0.4)
     ax.set_axisbelow(True)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)

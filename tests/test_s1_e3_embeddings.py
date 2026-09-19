@@ -194,7 +194,8 @@ def test_every_pair_is_scored_and_printed(run):
     assert [pair["kind"] for pair in run.results["pairs"]] == PAIR_KINDS
     for pair in run.results["pairs"]:
         assert pair["score"] == pytest.approx(_cosine(pair["first"], pair["second"]))
-        assert f"{pair['kind']}: {pair['first']} / {pair['second']}" in run.output
+        label = "direction" if pair["kind"] == "numbers" else pair["kind"]
+        assert f"{label}: {pair['first']} / {pair['second']}" in run.output
 
 
 def test_the_results_record_every_text_vector_score_and_the_run(run):
@@ -345,3 +346,10 @@ def test_both_footnotes_name_the_model(chart, committed, tmp_path, monkeypatch):
     assert "Cosine similarity to: How do I get my money back?" in (
         specs["similarity-to-query"].footnote
     )
+
+
+def test_the_rose_and_fell_pair_is_shown_as_direction(chart):
+    """Both sentences say 5%, so the pair tests direction, not numbers. The results keep the key
+    "numbers"; only the label a reader sees changes."""
+    assert chart.PAIR_LABELS["numbers"] == "Direction"
+    assert "Numbers" not in chart.PAIR_LABELS.values()
