@@ -33,6 +33,10 @@ SLATE = "#8193AD"
 ACID_GREEN = "#B8E04A"
 
 PREFERRED_FONT = "Inter Tight"
+# Inter Tight covers Latin scripts only. Matplotlib takes any character a font lacks from the
+# next font in the list, so a label in Amharic, for example, still renders instead of showing
+# empty boxes. Ebrima ships with Windows; Noto Sans Ethiopic is free for macOS and Linux.
+FALLBACK_FONTS = ("Ebrima", "Noto Sans Ethiopic", "Nyala")
 DPI = 100
 MIN_LABEL_PX_AT_1080 = 32
 FINDING_GID = "finding"
@@ -89,7 +93,8 @@ def label_size_pt(layout: ChartLayout) -> float:
 @cache
 def font_family() -> tuple[str, ...]:
     installed = {font.name for font in font_manager.fontManager.ttflist}
-    return (PREFERRED_FONT,) if PREFERRED_FONT in installed else ("sans-serif",)
+    primary = PREFERRED_FONT if PREFERRED_FONT in installed else "sans-serif"
+    return (primary, *(font for font in FALLBACK_FONTS if font in installed))
 
 
 def sequential_colormap() -> LinearSegmentedColormap:

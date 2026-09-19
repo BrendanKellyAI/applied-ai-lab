@@ -248,3 +248,12 @@ def test_rendering_the_same_chart_twice_gives_identical_svg(tmp_path):
     svg = [path for path in first if path.suffix == ".svg"][0]
     again = [path for path in second if path.suffix == ".svg"][0]
     assert svg.read_bytes() == again.read_bytes()
+
+
+def test_fonts_for_other_scripts_follow_the_brand_font():
+    """Inter Tight has no Amharic, so installed fallbacks come after it, never before."""
+    from lab.charts import FALLBACK_FONTS, PREFERRED_FONT, font_family
+
+    family = font_family()
+    assert family[0] in (PREFERRED_FONT, "sans-serif")
+    assert all(font in FALLBACK_FONTS for font in family[1:])
