@@ -31,6 +31,7 @@ Sources and licences for every dataset are in [datasets/README.md](datasets/READ
 |---|---|---|
 | S1 E1 | Your first API call | [episodes/s1-e1-one-token-at-a-time](episodes/s1-e1-one-token-at-a-time/) |
 | S1 E2 | The same sentence, counted in tokens in three languages | [episodes/s1-e2-tokens](episodes/s1-e2-tokens/) |
+| S1 E3 | Embeddings: how close texts are in meaning, and where closeness misleads | [episodes/s1-e3-embeddings](episodes/s1-e3-embeddings/) |
 
 ## Reproduce a result for free
 
