@@ -18,9 +18,9 @@ import tiktoken
 encoding = tiktoken.get_encoding("o200k_base")
 
 sentences = {
-    "English": "My name is Brendan.",
-    "French": "Je m'appelle Brendan.",
-    "Amharic": "ስሜ ብሬንዳን ነው።",
+    "English": "My name is Brendan, welcome to my course everyone.",
+    "French": "Je m'appelle Brendan, bienvenue à tous dans mon cours.",
+    "Amharic": "ስሜ ብሬንዳን ነው፤ ሁላችሁም ወደ ትምህርቴ እንኳን ደህና መጣችሁ።",
 }
 
 for language, sentence in sentences.items():

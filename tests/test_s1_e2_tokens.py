@@ -20,9 +20,9 @@ SLIDE_LISTING = """import tiktoken
 encoding = tiktoken.get_encoding("o200k_base")
 
 sentences = {
-    "English": "My name is Brendan.",
-    "French": "Je m'appelle Brendan.",
-    "Amharic": "ስሜ ብሬንዳን ነው።",
+    "English": "My name is Brendan, welcome to my course everyone.",
+    "French": "Je m'appelle Brendan, bienvenue à tous dans mon cours.",
+    "Amharic": "ስሜ ብሬንዳን ነው፤ ሁላችሁም ወደ ትምህርቴ እንኳን ደህና መጣችሁ።",
 }
 
 for language, sentence in sentences.items():
@@ -30,7 +30,7 @@ for language, sentence in sentences.items():
     print(f"{language}: {len(tokens)} tokens  {sentence}")
 """
 
-EXPECTED = {"English": 5, "French": 5, "Amharic": 22}
+EXPECTED = {"English": 11, "French": 12, "Amharic": 76}
 
 
 def _chart():
@@ -50,9 +50,8 @@ def test_the_script_prints_the_counts_on_the_slide():
     )
     output = completed.stdout.decode("utf-8")
 
-    assert "English: 5 tokens  My name is Brendan." in output
-    assert "French: 5 tokens  Je m'appelle Brendan." in output
-    assert "Amharic: 22 tokens  ስሜ ብሬንዳን ነው።" in output
+    for language, count in EXPECTED.items():
+        assert f"{language}: {count} tokens  {_chart().SENTENCES[language]}" in output
 
 
 def test_the_chart_counts_match_the_script():

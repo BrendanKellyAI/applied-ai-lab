@@ -14,18 +14,21 @@ import tiktoken
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-from lab.charts import MIST, SLATE, ChartSpec, ChartStyle, export_chart, highlight
+from lab.charts import MIST, NAVY, SLATE, ChartSpec, ChartStyle, export_chart, highlight
 
 TOKENISER = "o200k_base"
 SENTENCES = {
-    "English": "My name is Brendan.",
-    "French": "Je m'appelle Brendan.",
-    "Amharic": "ስሜ ብሬንዳን ነው።",
+    "English": "My name is Brendan, welcome to my course everyone.",
+    "French": "Je m'appelle Brendan, bienvenue à tous dans mon cours.",
+    "Amharic": "ስሜ ብሬንዳን ነው፤ ሁላችሁም ወደ ትምህርቴ እንኳን ደህና መጣችሁ።",
 }
 CHART_NAME = "tokens-by-language"
 OUT_DIR = Path(__file__).parent / "charts"
 # Space between the end of a bar and its count, in points.
 VALUE_OFFSET_POINTS = 12
+# Bars are kept thin, to leave room for each sentence on the line above.
+BAR_HEIGHT = 0.4
+SENTENCE_GAP = 0.06
 
 
 def token_counts(tokeniser: str = TOKENISER) -> dict[str, int]:
@@ -45,7 +48,7 @@ def _draw(counts: dict[str, int]):
         bars = ax.barh(
             list(rows),
             [counts[language] for language in languages],
-            height=0.55,
+            height=BAR_HEIGHT,
             color=SLATE,
         )
         for bar, language in zip(bars.patches, languages, strict=True):
@@ -59,10 +62,20 @@ def _draw(counts: dict[str, int]):
                 va="center",
                 color=MIST,
             )
-        # The sentence sits under its language, so every bar is labelled with what was counted.
-        ax.set_yticks(
-            list(rows), labels=[f"{language}\n{SENTENCES[language]}" for language in languages]
-        )
+            # The sentence sits on its own line above its bar, so every bar is labelled with
+            # exactly what was counted. Too long to fit beside the bar as an axis label.
+            ax.text(
+                0,
+                bar.get_y() + bar.get_height() + SENTENCE_GAP,
+                SENTENCES[language],
+                ha="left",
+                va="bottom",
+                color=MIST,
+                # Navy backing, so the gridlines never run through the sentence.
+                bbox={"facecolor": NAVY, "edgecolor": "none", "pad": 2},
+            )
+        ax.set_yticks(list(rows), labels=languages)
+        ax.set_ylim(-0.5, len(languages) - 0.2)
         ax.set_xlim(0, max(counts.values()) * 1.2)
         ax.set_xlabel("Tokens")
         ax.tick_params(axis="y", length=0)
