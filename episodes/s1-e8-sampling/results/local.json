@@ -1,0 +1,2033 @@
+{
+ "model": "gpt2",
+ "model_canonical": "openai-community/gpt2",
+ "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+ "device": "cpu",
+ "dtype": "float32",
+ "run_date_utc": "2026-09-20",
+ "libraries": {
+  "python": "3.13.7",
+  "torch": "2.14.0",
+  "transformers": "5.17.0",
+  "tokenizers": "0.23.2"
+ },
+ "temperatures": [
+  0.3,
+  1.0,
+  1.8
+ ],
+ "prompts": {
+  "capital": {
+   "prompt": "The capital of Ireland is",
+   "prompt_tokens": [
+    "The",
+    "Ġcapital",
+    "Ġof",
+    "ĠIreland",
+    "Ġis"
+   ],
+   "vocabulary_size": 50257,
+   "distributions": {
+    "0.3": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.6552219521554309
+      },
+      {
+       "rank": 2,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.13133356088038392
+      },
+      {
+       "rank": 3,
+       "token_id": 18220,
+       "token": "ĠDublin",
+       "text": " Dublin",
+       "probability": 0.08614992985834195
+      },
+      {
+       "rank": 4,
+       "token_id": 783,
+       "token": "Ġnow",
+       "text": " now",
+       "probability": 0.07717874862698514
+      },
+      {
+       "rank": 5,
+       "token_id": 287,
+       "token": "Ġin",
+       "text": " in",
+       "probability": 0.011840561393510727
+      },
+      {
+       "rank": 6,
+       "token_id": 407,
+       "token": "Ġnot",
+       "text": " not",
+       "probability": 0.011668973343722562
+      },
+      {
+       "rank": 7,
+       "token_id": 7517,
+       "token": "ĠIreland",
+       "text": " Ireland",
+       "probability": 0.010683082053918437
+      },
+      {
+       "rank": 8,
+       "token_id": 635,
+       "token": "Ġalso",
+       "text": " also",
+       "probability": 0.0055862902501753065
+      },
+      {
+       "rank": 9,
+       "token_id": 1363,
+       "token": "Ġhome",
+       "text": " home",
+       "probability": 0.004871705536274283
+      },
+      {
+       "rank": 10,
+       "token_id": 5140,
+       "token": "Ġlocated",
+       "text": " located",
+       "probability": 0.0010699757483279494
+      }
+     ],
+     "top_mass": 0.9956047798470712
+    },
+    "1.0": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.09607344154912162
+      },
+      {
+       "rank": 2,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.05931978009396801
+      },
+      {
+       "rank": 3,
+       "token_id": 18220,
+       "token": "ĠDublin",
+       "text": " Dublin",
+       "probability": 0.05227129924425393
+      },
+      {
+       "rank": 4,
+       "token_id": 783,
+       "token": "Ġnow",
+       "text": " now",
+       "probability": 0.05057502851486585
+      },
+      {
+       "rank": 5,
+       "token_id": 287,
+       "token": "Ġin",
+       "text": " in",
+       "probability": 0.028820300496415957
+      },
+      {
+       "rank": 6,
+       "token_id": 407,
+       "token": "Ġnot",
+       "text": " not",
+       "probability": 0.02869436450341598
+      },
+      {
+       "rank": 7,
+       "token_id": 7517,
+       "token": "ĠIreland",
+       "text": " Ireland",
+       "probability": 0.027944464120054555
+      },
+      {
+       "rank": 8,
+       "token_id": 635,
+       "token": "Ġalso",
+       "text": " also",
+       "probability": 0.02300508623471669
+      },
+      {
+       "rank": 9,
+       "token_id": 1363,
+       "token": "Ġhome",
+       "text": " home",
+       "probability": 0.02207959614602959
+      },
+      {
+       "rank": 10,
+       "token_id": 5140,
+       "token": "Ġlocated",
+       "text": " located",
+       "probability": 0.014011963481664447
+      }
+     ],
+     "top_mass": 0.4027953243845066
+    },
+    "1.8": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.0084710833334265
+      },
+      {
+       "rank": 2,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.006480425179629783
+      },
+      {
+       "rank": 3,
+       "token_id": 18220,
+       "token": "ĠDublin",
+       "text": " Dublin",
+       "probability": 0.0060406457689105445
+      },
+      {
+       "rank": 4,
+       "token_id": 783,
+       "token": "Ġnow",
+       "text": " now",
+       "probability": 0.005930944175748698
+      },
+      {
+       "rank": 5,
+       "token_id": 287,
+       "token": "Ġin",
+       "text": " in",
+       "probability": 0.00433946573226362
+      },
+      {
+       "rank": 6,
+       "token_id": 407,
+       "token": "Ġnot",
+       "text": " not",
+       "probability": 0.004328920952162771
+      },
+      {
+       "rank": 7,
+       "token_id": 7517,
+       "token": "ĠIreland",
+       "text": " Ireland",
+       "probability": 0.00426569999295477
+      },
+      {
+       "rank": 8,
+       "token_id": 635,
+       "token": "Ġalso",
+       "text": " also",
+       "probability": 0.0038287892655420827
+      },
+      {
+       "rank": 9,
+       "token_id": 1363,
+       "token": "Ġhome",
+       "text": " home",
+       "probability": 0.0037424360322359995
+      },
+      {
+       "rank": 10,
+       "token_id": 5140,
+       "token": "Ġlocated",
+       "text": " located",
+       "probability": 0.0029069431369882605
+      }
+     ],
+     "top_mass": 0.05033535356986303
+    }
+   },
+   "dublin": {
+    "token_id": 18220,
+    "single_token": true,
+    "rank": 3,
+    "probability": 0.05227129924425393
+   }
+  },
+  "colour": {
+   "prompt": "My favourite colour is",
+   "prompt_tokens": [
+    "My",
+    "Ġfavourite",
+    "Ġcolour",
+    "Ġis"
+   ],
+   "vocabulary_size": 50257,
+   "distributions": {
+    "0.3": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.818877441135096
+      },
+      {
+       "rank": 2,
+       "token_id": 4171,
+       "token": "Ġblue",
+       "text": " blue",
+       "probability": 0.07450794939549275
+      },
+      {
+       "rank": 3,
+       "token_id": 2042,
+       "token": "Ġblack",
+       "text": " black",
+       "probability": 0.024548503606375647
+      },
+      {
+       "rank": 4,
+       "token_id": 2266,
+       "token": "Ġred",
+       "text": " red",
+       "probability": 0.023663365210043804
+      },
+      {
+       "rank": 5,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.01668740759613113
+      },
+      {
+       "rank": 6,
+       "token_id": 11398,
+       "token": "Ġpink",
+       "text": " pink",
+       "probability": 0.014128315994636648
+      },
+      {
+       "rank": 7,
+       "token_id": 2330,
+       "token": "Ġwhite",
+       "text": " white",
+       "probability": 0.01119832508824792
+      },
+      {
+       "rank": 8,
+       "token_id": 4077,
+       "token": "Ġgreen",
+       "text": " green",
+       "probability": 0.0063160996136856756
+      },
+      {
+       "rank": 9,
+       "token_id": 10912,
+       "token": "Ġorange",
+       "text": " orange",
+       "probability": 0.004486628560854472
+      },
+      {
+       "rank": 10,
+       "token_id": 14032,
+       "token": "Ġpurple",
+       "text": " purple",
+       "probability": 0.0028875323606864897
+      }
+     ],
+     "top_mass": 0.9973015685612505
+    },
+    "1.0": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.10545993346119487
+      },
+      {
+       "rank": 2,
+       "token_id": 4171,
+       "token": "Ġblue",
+       "text": " blue",
+       "probability": 0.05137863998624647
+      },
+      {
+       "rank": 3,
+       "token_id": 2042,
+       "token": "Ġblack",
+       "text": " black",
+       "probability": 0.036823861470384675
+      },
+      {
+       "rank": 4,
+       "token_id": 2266,
+       "token": "Ġred",
+       "text": " red",
+       "probability": 0.036420405158983545
+      },
+      {
+       "rank": 5,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.032797329499399716
+      },
+      {
+       "rank": 6,
+       "token_id": 11398,
+       "token": "Ġpink",
+       "text": " pink",
+       "probability": 0.031199593870910126
+      },
+      {
+       "rank": 7,
+       "token_id": 2330,
+       "token": "Ġwhite",
+       "text": " white",
+       "probability": 0.029098308378118252
+      },
+      {
+       "rank": 8,
+       "token_id": 4077,
+       "token": "Ġgreen",
+       "text": " green",
+       "probability": 0.024505101861013037
+      },
+      {
+       "rank": 9,
+       "token_id": 10912,
+       "token": "Ġorange",
+       "text": " orange",
+       "probability": 0.022115555671133217
+      },
+      {
+       "rank": 10,
+       "token_id": 14032,
+       "token": "Ġpurple",
+       "text": " purple",
+       "probability": 0.019376702834479065
+      }
+     ],
+     "top_mass": 0.38917543219186296
+    },
+    "1.8": {
+     "top": [
+      {
+       "rank": 1,
+       "token_id": 262,
+       "token": "Ġthe",
+       "text": " the",
+       "probability": 0.0075413065557638275
+      },
+      {
+       "rank": 2,
+       "token_id": 4171,
+       "token": "Ġblue",
+       "text": " blue",
+       "probability": 0.005057593021845828
+      },
+      {
+       "rank": 3,
+       "token_id": 2042,
+       "token": "Ġblack",
+       "text": " black",
+       "probability": 0.004203208639864774
+      },
+      {
+       "rank": 4,
+       "token_id": 2266,
+       "token": "Ġred",
+       "text": " red",
+       "probability": 0.004177561594220368
+      },
+      {
+       "rank": 5,
+       "token_id": 257,
+       "token": "Ġa",
+       "text": " a",
+       "probability": 0.003941319025709611
+      },
+      {
+       "rank": 6,
+       "token_id": 11398,
+       "token": "Ġpink",
+       "text": " pink",
+       "probability": 0.0038334680156619613
+      },
+      {
+       "rank": 7,
+       "token_id": 2330,
+       "token": "Ġwhite",
+       "text": " white",
+       "probability": 0.0036878135521710817
+      },
+      {
+       "rank": 8,
+       "token_id": 4077,
+       "token": "Ġgreen",
+       "text": " green",
+       "probability": 0.003352110084646784
+      },
+      {
+       "rank": 9,
+       "token_id": 10912,
+       "token": "Ġorange",
+       "text": " orange",
+       "probability": 0.003166383134033763
+      },
+      {
+       "rank": 10,
+       "token_id": 14032,
+       "token": "Ġpurple",
+       "text": " purple",
+       "probability": 0.0029421484881235393
+      }
+     ],
+     "top_mass": 0.041902912112041536
+    }
+   }
+  }
+ },
+ "top_p": {
+  "top_p": 0.6,
+  "temperature": 1.0,
+  "kept": [
+   {
+    "rank": 1,
+    "token_id": 262,
+    "token": "Ġthe",
+    "text": " the",
+    "probability": 0.10545993346119487,
+    "cumulative": 0.10545993346119487
+   },
+   {
+    "rank": 2,
+    "token_id": 4171,
+    "token": "Ġblue",
+    "text": " blue",
+    "probability": 0.05137863998624647,
+    "cumulative": 0.15683857344744134
+   },
+   {
+    "rank": 3,
+    "token_id": 2042,
+    "token": "Ġblack",
+    "text": " black",
+    "probability": 0.036823861470384675,
+    "cumulative": 0.19366243491782603
+   },
+   {
+    "rank": 4,
+    "token_id": 2266,
+    "token": "Ġred",
+    "text": " red",
+    "probability": 0.036420405158983545,
+    "cumulative": 0.23008284007680957
+   },
+   {
+    "rank": 5,
+    "token_id": 257,
+    "token": "Ġa",
+    "text": " a",
+    "probability": 0.032797329499399716,
+    "cumulative": 0.2628801695762093
+   },
+   {
+    "rank": 6,
+    "token_id": 11398,
+    "token": "Ġpink",
+    "text": " pink",
+    "probability": 0.031199593870910126,
+    "cumulative": 0.29407976344711945
+   },
+   {
+    "rank": 7,
+    "token_id": 2330,
+    "token": "Ġwhite",
+    "text": " white",
+    "probability": 0.029098308378118252,
+    "cumulative": 0.3231780718252377
+   },
+   {
+    "rank": 8,
+    "token_id": 4077,
+    "token": "Ġgreen",
+    "text": " green",
+    "probability": 0.024505101861013037,
+    "cumulative": 0.34768317368625073
+   },
+   {
+    "rank": 9,
+    "token_id": 10912,
+    "token": "Ġorange",
+    "text": " orange",
+    "probability": 0.022115555671133217,
+    "cumulative": 0.36979872935738395
+   },
+   {
+    "rank": 10,
+    "token_id": 14032,
+    "token": "Ġpurple",
+    "text": " purple",
+    "probability": 0.019376702834479065,
+    "cumulative": 0.389175432191863
+   },
+   {
+    "rank": 11,
+    "token_id": 7872,
+    "token": "Ġyellow",
+    "text": " yellow",
+    "probability": 0.013215981358973462,
+    "cumulative": 0.40239141355083646
+   },
+   {
+    "rank": 12,
+    "token_id": 13791,
+    "token": "Ġgrey",
+    "text": " grey",
+    "probability": 0.010417598176256647,
+    "cumulative": 0.4128090117270931
+   },
+   {
+    "rank": 13,
+    "token_id": 326,
+    "token": "Ġthat",
+    "text": " that",
+    "probability": 0.009594432389825502,
+    "cumulative": 0.4224034441169186
+   },
+   {
+    "rank": 14,
+    "token_id": 616,
+    "token": "Ġmy",
+    "text": " my",
+    "probability": 0.008568432636338068,
+    "cumulative": 0.43097187675325666
+   },
+   {
+    "rank": 15,
+    "token_id": 705,
+    "token": "Ġ'",
+    "text": " '",
+    "probability": 0.008295057865355724,
+    "cumulative": 0.4392669346186124
+   },
+   {
+    "rank": 16,
+    "token_id": 1682,
+    "token": "Ġactually",
+    "text": " actually",
+    "probability": 0.007768029969111739,
+    "cumulative": 0.4470349645877241
+   },
+   {
+    "rank": 17,
+    "token_id": 3223,
+    "token": "Ġdark",
+    "text": " dark",
+    "probability": 0.007674133085930455,
+    "cumulative": 0.4547090976736546
+   },
+   {
+    "rank": 18,
+    "token_id": 2192,
+    "token": "Ġprobably",
+    "text": " probably",
+    "probability": 0.007124593420809767,
+    "cumulative": 0.46183369109446437
+   },
+   {
+    "rank": 19,
+    "token_id": 2619,
+    "token": "ĠBlack",
+    "text": " Black",
+    "probability": 0.00692840118116867,
+    "cumulative": 0.46876209227563304
+   },
+   {
+    "rank": 20,
+    "token_id": 407,
+    "token": "Ġnot",
+    "text": " not",
+    "probability": 0.006054688521936212,
+    "cumulative": 0.4748167807975692
+   },
+   {
+    "rank": 21,
+    "token_id": 635,
+    "token": "Ġalso",
+    "text": " also",
+    "probability": 0.005666370302890445,
+    "cumulative": 0.4804831511004597
+   },
+   {
+    "rank": 22,
+    "token_id": 7586,
+    "token": "Ġbrown",
+    "text": " brown",
+    "probability": 0.00560189348400052,
+    "cumulative": 0.4860850445844602
+   },
+   {
+    "rank": 23,
+    "token_id": 28738,
+    "token": "Ġlime",
+    "text": " lime",
+    "probability": 0.004554133425590479,
+    "cumulative": 0.4906391780100507
+   },
+   {
+    "rank": 24,
+    "token_id": 3869,
+    "token": "Ġgold",
+    "text": " gold",
+    "probability": 0.00442811662544113,
+    "cumulative": 0.4950672946354918
+   },
+   {
+    "rank": 25,
+    "token_id": 4753,
+    "token": "Ġdefinitely",
+    "text": " definitely",
+    "probability": 0.0042844512469065515,
+    "cumulative": 0.4993517458823984
+   },
+   {
+    "rank": 26,
+    "token_id": 8465,
+    "token": "Ġsilver",
+    "text": " silver",
+    "probability": 0.0038689667248676634,
+    "cumulative": 0.5032207126072661
+   },
+   {
+    "rank": 27,
+    "token_id": 2297,
+    "token": "ĠRed",
+    "text": " Red",
+    "probability": 0.0038129963807155766,
+    "cumulative": 0.5070337089879816
+   },
+   {
+    "rank": 28,
+    "token_id": 428,
+    "token": "Ġthis",
+    "text": " this",
+    "probability": 0.003647168891098598,
+    "cumulative": 0.5106808778790802
+   },
+   {
+    "rank": 29,
+    "token_id": 3221,
+    "token": "Ġusually",
+    "text": " usually",
+    "probability": 0.0036371653865688975,
+    "cumulative": 0.5143180432656491
+   },
+   {
+    "rank": 30,
+    "token_id": 530,
+    "token": "Ġone",
+    "text": " one",
+    "probability": 0.003627825860577217,
+    "cumulative": 0.5179458691262263
+   },
+   {
+    "rank": 31,
+    "token_id": 6016,
+    "token": "Ġbright",
+    "text": " bright",
+    "probability": 0.003508170631491962,
+    "cumulative": 0.5214540397577183
+   },
+   {
+    "rank": 32,
+    "token_id": 23956,
+    "token": "Ġnavy",
+    "text": " navy",
+    "probability": 0.0034793298698927123,
+    "cumulative": 0.5249333696276111
+   },
+   {
+    "rank": 33,
+    "token_id": 281,
+    "token": "Ġan",
+    "text": " an",
+    "probability": 0.003474528508173901,
+    "cumulative": 0.5284078981357849
+   },
+   {
+    "rank": 34,
+    "token_id": 1464,
+    "token": "Ġalways",
+    "text": " always",
+    "probability": 0.0034193041319944295,
+    "cumulative": 0.5318272022677794
+   },
+   {
+    "rank": 35,
+    "token_id": 25,
+    "token": ":",
+    "text": ":",
+    "probability": 0.0031986641317196174,
+    "cumulative": 0.535025866399499
+   },
+   {
+    "rank": 36,
+    "token_id": 47565,
+    "token": "Ġpeach",
+    "text": " peach",
+    "probability": 0.0031925689786998818,
+    "cumulative": 0.5382184353781989
+   },
+   {
+    "rank": 37,
+    "token_id": 366,
+    "token": "Ġ\"",
+    "text": " \"",
+    "probability": 0.003165284200423511,
+    "cumulative": 0.5413837195786224
+   },
+   {
+    "rank": 38,
+    "token_id": 11,
+    "token": ",",
+    "text": ",",
+    "probability": 0.003115806871979792,
+    "cumulative": 0.5444995264506022
+   },
+   {
+    "rank": 39,
+    "token_id": 4518,
+    "token": "ĠBlue",
+    "text": " Blue",
+    "probability": 0.0030556116483326794,
+    "cumulative": 0.5475551380989349
+   },
+   {
+    "rank": 40,
+    "token_id": 287,
+    "token": "Ġin",
+    "text": " in",
+    "probability": 0.003033730029183286,
+    "cumulative": 0.5505888681281181
+   },
+   {
+    "rank": 41,
+    "token_id": 286,
+    "token": "Ġof",
+    "text": " of",
+    "probability": 0.0029562275788426896,
+    "cumulative": 0.5535450957069609
+   },
+   {
+    "rank": 42,
+    "token_id": 284,
+    "token": "Ġto",
+    "text": " to",
+    "probability": 0.002766967290727428,
+    "cumulative": 0.5563120629976883
+   },
+   {
+    "rank": 43,
+    "token_id": 45725,
+    "token": "Ġviolet",
+    "text": " violet",
+    "probability": 0.0026126063251307226,
+    "cumulative": 0.558924669322819
+   },
+   {
+    "rank": 44,
+    "token_id": 3469,
+    "token": "ĠGreen",
+    "text": " Green",
+    "probability": 0.0026116098849782196,
+    "cumulative": 0.5615362792077973
+   },
+   {
+    "rank": 45,
+    "token_id": 1444,
+    "token": "Ġcalled",
+    "text": " called",
+    "probability": 0.0025590264150373195,
+    "cumulative": 0.5640953056228346
+   },
+   {
+    "rank": 46,
+    "token_id": 422,
+    "token": "Ġfrom",
+    "text": " from",
+    "probability": 0.002470548305290925,
+    "cumulative": 0.5665658539281255
+   },
+   {
+    "rank": 47,
+    "token_id": 14005,
+    "token": "Ġpale",
+    "text": " pale",
+    "probability": 0.0023651240968582256,
+    "cumulative": 0.5689309780249837
+   },
+   {
+    "rank": 48,
+    "token_id": 1107,
+    "token": "Ġreally",
+    "text": " really",
+    "probability": 0.0023216977190074323,
+    "cumulative": 0.5712526757439912
+   },
+   {
+    "rank": 49,
+    "token_id": 7858,
+    "token": "Ġtur",
+    "text": " tur",
+    "probability": 0.0022605911055503004,
+    "cumulative": 0.5735132668495415
+   },
+   {
+    "rank": 50,
+    "token_id": 783,
+    "token": "Ġnow",
+    "text": " now",
+    "probability": 0.002237649153496792,
+    "cumulative": 0.5757509160030383
+   },
+   {
+    "rank": 51,
+    "token_id": 21606,
+    "token": "Ġlav",
+    "text": " lav",
+    "probability": 0.0021382607935144233,
+    "cumulative": 0.5778891767965527
+   },
+   {
+    "rank": 52,
+    "token_id": 14657,
+    "token": "ĠPink",
+    "text": " Pink",
+    "probability": 0.002125963184603942,
+    "cumulative": 0.5800151399811566
+   },
+   {
+    "rank": 53,
+    "token_id": 1690,
+    "token": "Ġoften",
+    "text": " often",
+    "probability": 0.0020872943121459362,
+    "cumulative": 0.5821024342933026
+   },
+   {
+    "rank": 54,
+    "token_id": 523,
+    "token": "Ġso",
+    "text": " so",
+    "probability": 0.0020621583175172435,
+    "cumulative": 0.5841645926108198
+   },
+   {
+    "rank": 55,
+    "token_id": 607,
+    "token": "Ġher",
+    "text": " her",
+    "probability": 0.0020539776838459645,
+    "cumulative": 0.5862185702946657
+   },
+   {
+    "rank": 56,
+    "token_id": 655,
+    "token": "Ġjust",
+    "text": " just",
+    "probability": 0.002020606950164561,
+    "cumulative": 0.5882391772448303
+   },
+   {
+    "rank": 57,
+    "token_id": 845,
+    "token": "Ġvery",
+    "text": " very",
+    "probability": 0.0019986513811591604,
+    "cumulative": 0.5902378286259895
+   },
+   {
+    "rank": 58,
+    "token_id": 21541,
+    "token": "Ġblonde",
+    "text": " blonde",
+    "probability": 0.001990434129842788,
+    "cumulative": 0.5922282627558323
+   },
+   {
+    "rank": 59,
+    "token_id": 534,
+    "token": "Ġyour",
+    "text": " your",
+    "probability": 0.0018135557413376127,
+    "cumulative": 0.5940418184971699
+   },
+   {
+    "rank": 60,
+    "token_id": 2635,
+    "token": "ĠWhite",
+    "text": " White",
+    "probability": 0.001799675940895886,
+    "cumulative": 0.5958414944380658
+   },
+   {
+    "rank": 61,
+    "token_id": 618,
+    "token": "Ġwhen",
+    "text": " when",
+    "probability": 0.001759771243522613,
+    "cumulative": 0.5976012656815884
+   },
+   {
+    "rank": 62,
+    "token_id": 38973,
+    "token": "Ġraspberry",
+    "text": " raspberry",
+    "probability": 0.00174273609625582,
+    "cumulative": 0.5993440017778443
+   },
+   {
+    "rank": 63,
+    "token_id": 1223,
+    "token": "Ġsomething",
+    "text": " something",
+    "probability": 0.0017093806141575505,
+    "cumulative": 0.6010533823920019
+   }
+  ],
+  "kept_mass": 0.6010533823920019,
+  "matches_transformers": true
+ },
+ "sampling": {
+  "prompt": "My favourite colour is",
+  "new_tokens": 10,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "settings": "do_sample=True, top_k=0, top_p=1.0, torch.manual_seed(seed) before each",
+  "by_temperature": {
+   "0.3": {
+    "samples": [
+     {
+      "seed": 0,
+      "text": " a bright blue with a very nice light blue tint",
+      "token_ids": [
+       257,
+       6016,
+       4171,
+       351,
+       257,
+       845,
+       3621,
+       1657,
+       4171,
+       34791
+      ]
+     },
+     {
+      "seed": 1,
+      "text": " the blue of the Moon. The blue of the",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       6869,
+       13,
+       383,
+       4171,
+       286,
+       262
+      ]
+     },
+     {
+      "seed": 2,
+      "text": " pink, which is the most beautiful colour I've",
+      "token_ids": [
+       11398,
+       11,
+       543,
+       318,
+       262,
+       749,
+       4950,
+       9568,
+       314,
+       1053
+      ]
+     },
+     {
+      "seed": 3,
+      "text": " the red. I love the red. I love",
+      "token_ids": [
+       262,
+       2266,
+       13,
+       314,
+       1842,
+       262,
+       2266,
+       13,
+       314,
+       1842
+      ]
+     },
+     {
+      "seed": 4,
+      "text": " the red, and I think it's the best",
+      "token_ids": [
+       262,
+       2266,
+       11,
+       290,
+       314,
+       892,
+       340,
+       338,
+       262,
+       1266
+      ]
+     },
+     {
+      "seed": 5,
+      "text": " the red. I have never seen it before,",
+      "token_ids": [
+       262,
+       2266,
+       13,
+       314,
+       423,
+       1239,
+       1775,
+       340,
+       878,
+       11
+      ]
+     },
+     {
+      "seed": 6,
+      "text": " the blue of the sun. It's the most",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       4252,
+       13,
+       632,
+       338,
+       262,
+       749
+      ]
+     },
+     {
+      "seed": 7,
+      "text": " the pink, which is the most beautiful colour.",
+      "token_ids": [
+       262,
+       11398,
+       11,
+       543,
+       318,
+       262,
+       749,
+       4950,
+       9568,
+       13
+      ]
+     },
+     {
+      "seed": 8,
+      "text": " the blue of the sky.\n\nI love",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       6766,
+       13,
+       198,
+       198,
+       40,
+       1842
+      ]
+     },
+     {
+      "seed": 9,
+      "text": " yellow, but I think it's the most beautiful",
+      "token_ids": [
+       7872,
+       11,
+       475,
+       314,
+       892,
+       340,
+       338,
+       262,
+       749,
+       4950
+      ]
+     },
+     {
+      "seed": 10,
+      "text": " the blue of the moon. It is the colour",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       8824,
+       13,
+       632,
+       318,
+       262,
+       9568
+      ]
+     },
+     {
+      "seed": 11,
+      "text": " black.\n\nI love the way the color",
+      "token_ids": [
+       2042,
+       13,
+       198,
+       198,
+       40,
+       1842,
+       262,
+       835,
+       262,
+       3124
+      ]
+     },
+     {
+      "seed": 12,
+      "text": " the red, which is the color of the sun",
+      "token_ids": [
+       262,
+       2266,
+       11,
+       543,
+       318,
+       262,
+       3124,
+       286,
+       262,
+       4252
+      ]
+     },
+     {
+      "seed": 13,
+      "text": " the red, which is a very nice shade of",
+      "token_ids": [
+       262,
+       2266,
+       11,
+       543,
+       318,
+       257,
+       845,
+       3621,
+       17979,
+       286
+      ]
+     },
+     {
+      "seed": 14,
+      "text": " the green of the sun. I love the colour",
+      "token_ids": [
+       262,
+       4077,
+       286,
+       262,
+       4252,
+       13,
+       314,
+       1842,
+       262,
+       9568
+      ]
+     },
+     {
+      "seed": 15,
+      "text": " pink, so I love it. I love the",
+      "token_ids": [
+       11398,
+       11,
+       523,
+       314,
+       1842,
+       340,
+       13,
+       314,
+       1842,
+       262
+      ]
+     },
+     {
+      "seed": 16,
+      "text": " the blue of the sun, and the colour of",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       4252,
+       11,
+       290,
+       262,
+       9568,
+       286
+      ]
+     },
+     {
+      "seed": 17,
+      "text": " the blue of the rainbow.\n\nThe colour",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       27223,
+       13,
+       198,
+       198,
+       464,
+       9568
+      ]
+     },
+     {
+      "seed": 18,
+      "text": " the red, which is the most beautiful colour I",
+      "token_ids": [
+       262,
+       2266,
+       11,
+       543,
+       318,
+       262,
+       749,
+       4950,
+       9568,
+       314
+      ]
+     },
+     {
+      "seed": 19,
+      "text": " the blue of the moon.\n\nThe most",
+      "token_ids": [
+       262,
+       4171,
+       286,
+       262,
+       8824,
+       13,
+       198,
+       198,
+       464,
+       749
+      ]
+     }
+    ],
+    "distinct": 20
+   },
+   "1.0": {
+    "samples": [
+     {
+      "seed": 0,
+      "text": " a bright blue with a spot of Gold \"tree",
+      "token_ids": [
+       257,
+       6016,
+       4171,
+       351,
+       257,
+       4136,
+       286,
+       3561,
+       366,
+       21048
+      ]
+     },
+     {
+      "seed": 1,
+      "text": " Dark Psychedelic Yellow, which I love.",
+      "token_ids": [
+       3801,
+       18773,
+       24015,
+       291,
+       12550,
+       11,
+       543,
+       314,
+       1842,
+       13
+      ]
+     },
+     {
+      "seed": 2,
+      "text": " purple, which is healthier and safer. It's",
+      "token_ids": [
+       14032,
+       11,
+       543,
+       318,
+       22841,
+       290,
+       14178,
+       13,
+       632,
+       338
+      ]
+     },
+     {
+      "seed": 3,
+      "text": " bright red to my ear in a way that every",
+      "token_ids": [
+       6016,
+       2266,
+       284,
+       616,
+       1027,
+       287,
+       257,
+       835,
+       326,
+       790
+      ]
+     },
+     {
+      "seed": 4,
+      "text": " of iron\";\n\n(249)—doesn't",
+      "token_ids": [
+       286,
+       6953,
+       8172,
+       198,
+       198,
+       7,
+       21626,
+       27920,
+       45084,
+       470
+      ]
+     },
+     {
+      "seed": 5,
+      "text": " among my \"politically correct\" childhood memories,\"",
+      "token_ids": [
+       1871,
+       616,
+       366,
+       34470,
+       1146,
+       3376,
+       1,
+       9963,
+       9846,
+       553
+      ]
+     },
+     {
+      "seed": 6,
+      "text": " the blue or purple accent of the eagle.\n",
+      "token_ids": [
+       262,
+       4171,
+       393,
+       14032,
+       18702,
+       286,
+       262,
+       31176,
+       13,
+       198
+      ]
+     },
+     {
+      "seed": 7,
+      "text": " only when we kill it, crank it back up",
+      "token_ids": [
+       691,
+       618,
+       356,
+       1494,
+       340,
+       11,
+       30425,
+       340,
+       736,
+       510
+      ]
+     },
+     {
+      "seed": 8,
+      "text": " is this pale gold that curls up around the realistic",
+      "token_ids": [
+       318,
+       428,
+       14005,
+       3869,
+       326,
+       49507,
+       510,
+       1088,
+       262,
+       12653
+      ]
+     },
+     {
+      "seed": 9,
+      "text": " yellow, seemingly due to its pinky-t",
+      "token_ids": [
+       7872,
+       11,
+       9775,
+       2233,
+       284,
+       663,
+       11398,
+       88,
+       12,
+       83
+      ]
+     },
+     {
+      "seed": 10,
+      "text": " bold cherries, but is also effective as an",
+      "token_ids": [
+       10758,
+       21382,
+       1678,
+       11,
+       475,
+       318,
+       635,
+       4050,
+       355,
+       281
+      ]
+     },
+     {
+      "seed": 11,
+      "text": " black going into reptile mode! I love the",
+      "token_ids": [
+       2042,
+       1016,
+       656,
+       28761,
+       576,
+       4235,
+       0,
+       314,
+       1842,
+       262
+      ]
+     },
+     {
+      "seed": 12,
+      "text": " moonshine, a ball of muskini",
+      "token_ids": [
+       31093,
+       71,
+       500,
+       11,
+       257,
+       2613,
+       286,
+       1928,
+       74,
+       5362
+      ]
+     },
+     {
+      "seed": 13,
+      "text": " gold. You can order a warm summer theme with",
+      "token_ids": [
+       3869,
+       13,
+       921,
+       460,
+       1502,
+       257,
+       5814,
+       3931,
+       7505,
+       351
+      ]
+     },
+     {
+      "seed": 14,
+      "text": " pink green with a sexy little hint of ruby,",
+      "token_ids": [
+       11398,
+       4077,
+       351,
+       257,
+       17144,
+       1310,
+       9254,
+       286,
+       43506,
+       11
+      ]
+     },
+     {
+      "seed": 15,
+      "text": " offered as follows:\n\n\"Ideological resistance",
+      "token_ids": [
+       4438,
+       355,
+       5679,
+       25,
+       198,
+       198,
+       1,
+       41452,
+       2770,
+       6625
+      ]
+     },
+     {
+      "seed": 16,
+      "text": " also Coraline from Don Cherry's book, Coco",
+      "token_ids": [
+       635,
+       2744,
+       20663,
+       422,
+       2094,
+       23165,
+       338,
+       1492,
+       11,
+       48222
+      ]
+     },
+     {
+      "seed": 17,
+      "text": " here, and Rosy's Best Friend.You",
+      "token_ids": [
+       994,
+       11,
+       290,
+       10018,
+       88,
+       338,
+       6705,
+       9182,
+       13,
+       1639
+      ]
+     },
+     {
+      "seed": 18,
+      "text": " white with blue shimmer nearby on top of that.",
+      "token_ids": [
+       2330,
+       351,
+       4171,
+       34493,
+       6716,
+       319,
+       1353,
+       286,
+       326,
+       13
+      ]
+     },
+     {
+      "seed": 19,
+      "text": "… blue,\" Gérard told Bleacher Report",
+      "token_ids": [
+       1399,
+       4171,
+       553,
+       402,
+       42445,
+       446,
+       1297,
+       17175,
+       3493,
+       6358
+      ]
+     }
+    ],
+    "distinct": 20
+   },
+   "1.8": {
+    "samples": [
+     {
+      "seed": 0,
+      "text": " Jama button pilot originatedave Girls... is \"tree",
+      "token_ids": [
+       21661,
+       4936,
+       8022,
+       20973,
+       1015,
+       12002,
+       986,
+       318,
+       366,
+       21048
+      ]
+     },
+     {
+      "seed": 1,
+      "text": " upset wash foam grippers ones UNDER 40 Really inconsist",
+      "token_ids": [
+       9247,
+       13502,
+       19828,
+       11120,
+       11799,
+       3392,
+       35219,
+       2319,
+       16123,
+       26104
+      ]
+     },
+     {
+      "seed": 2,
+      "text": " Madrido Powderanto Pebble angry blu holesian 411",
+      "token_ids": [
+       14708,
+       78,
+       33688,
+       14723,
+       46041,
+       7954,
+       48208,
+       6039,
+       35610,
+       43184
+      ]
+     },
+     {
+      "seed": 3,
+      "text": " brightwearill captures cultured in flash driultial",
+      "token_ids": [
+       6016,
+       13927,
+       359,
+       23007,
+       45847,
+       287,
+       7644,
+       1454,
+       586,
+       498
+      ]
+     },
+     {
+      "seed": 4,
+      "text": " of iron\";tons region PONEYRocket graphic Mace",
+      "token_ids": [
+       286,
+       6953,
+       8172,
+       27288,
+       3814,
+       350,
+       48399,
+       50218,
+       13028,
+       48925
+      ]
+     },
+     {
+      "seed": 5,
+      "text": " among Wilson Squarks\" with hundreds ELF racks",
+      "token_ids": [
+       1871,
+       8127,
+       5056,
+       5558,
+       1,
+       351,
+       5179,
+       17852,
+       37,
+       39843
+      ]
+     },
+     {
+      "seed": 6,
+      "text": " purely Women United Athlete of the Tournament Bahwatch",
+      "token_ids": [
+       14177,
+       6926,
+       1578,
+       13548,
+       5807,
+       286,
+       262,
+       9595,
+       13081,
+       8340
+      ]
+     },
+     {
+      "seed": 7,
+      "text": " only examples Given Fist\n\n\nReplicate\n\n",
+      "token_ids": [
+       691,
+       6096,
+       11259,
+       23733,
+       628,
+       198,
+       39232,
+       5344,
+       198,
+       198
+      ]
+     },
+     {
+      "seed": 8,
+      "text": " is catcherredd 450L.Trade packages LSD realistic",
+      "token_ids": [
+       318,
+       32408,
+       26504,
+       18523,
+       43,
+       13,
+       35965,
+       10392,
+       27483,
+       12653
+      ]
+     },
+     {
+      "seed": 9,
+      "text": " yellow!\" seemingly drill cartoons east\n\nAmy Falling",
+      "token_ids": [
+       7872,
+       2474,
+       9775,
+       16007,
+       30070,
+       7627,
+       198,
+       198,
+       40797,
+       42914
+      ]
+     },
+     {
+      "seed": 10,
+      "text": " bold cher à Bride Long . 272 Bedford prayer;",
+      "token_ids": [
+       10758,
+       21382,
+       28141,
+       29840,
+       5882,
+       764,
+       38107,
+       41540,
+       11443,
+       26
+      ]
+     },
+     {
+      "seed": 11,
+      "text": " Process going perpetuate reptudenework red were Mo░░",
+      "token_ids": [
+       10854,
+       1016,
+       43874,
+       28761,
+       44452,
+       6433,
+       2266,
+       547,
+       4270,
+       27534
+      ]
+     },
+     {
+      "seed": 12,
+      "text": " moonshroud 🙂bing ball Niissehini",
+      "token_ids": [
+       31093,
+       71,
+       5493,
+       32485,
+       4623,
+       2613,
+       11556,
+       20782,
+       71,
+       5362
+      ]
+     },
+     {
+      "seed": 13,
+      "text": " determinsticism.\" brings IEEE warm summer anarchy dry",
+      "token_ids": [
+       3416,
+       11268,
+       1042,
+       526,
+       6774,
+       40552,
+       5814,
+       3931,
+       42856,
+       5894
+      ]
+     },
+     {
+      "seed": 14,
+      "text": " wander green Drop Attack worst optimized linufostic buying",
+      "token_ids": [
+       27776,
+       4077,
+       14258,
+       8307,
+       5290,
+       23392,
+       9493,
+       3046,
+       15132,
+       7067
+      ]
+     },
+     {
+      "seed": 15,
+      "text": " offered quiteinaosedwi herself lumin even To men",
+      "token_ids": [
+       4438,
+       2407,
+       1437,
+       1335,
+       37686,
+       5223,
+       29763,
+       772,
+       1675,
+       1450
+      ]
+     },
+     {
+      "seed": 16,
+      "text": " purely fate although from jail eo died (Not",
+      "token_ids": [
+       14177,
+       10030,
+       3584,
+       422,
+       7356,
+       304,
+       78,
+       3724,
+       357,
+       3673
+      ]
+     },
+     {
+      "seed": 17,
+      "text": " here against Klopp''. %JP_ should discarded hook",
+      "token_ids": [
+       994,
+       1028,
+       43461,
+       35384,
+       4064,
+       12889,
+       62,
+       815,
+       25148,
+       8011
+      ]
+     },
+     {
+      "seed": 18,
+      "text": " garrison pri corrected deciding nearby princess memories being look Restore",
+      "token_ids": [
+       45416,
+       1293,
+       19267,
+       14615,
+       6716,
+       21752,
+       9846,
+       852,
+       804,
+       42019
+      ]
+     },
+     {
+      "seed": 19,
+      "text": " Imperial inspired,\" analogousoutside. Sergeiahlgro /",
+      "token_ids": [
+       11773,
+       7867,
+       553,
+       34657,
+       43435,
+       13,
+       34724,
+       15668,
+       27333,
+       1220
+      ]
+     }
+    ],
+    "distinct": 20
+   }
+  },
+  "greedy": {
+   "text": " the blue of the sun. It is the colour",
+   "token_ids": [
+    262,
+    4171,
+    286,
+    262,
+    4252,
+    13,
+    632,
+    318,
+    262,
+    9568
+   ]
+  }
+ }
+}
