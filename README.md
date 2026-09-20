@@ -35,6 +35,7 @@ Sources and licences for every dataset are in [datasets/README.md](datasets/READ
 | S1 E4 | Attention: where GPT-2 looks from the word "it", measured | [episodes/s1-e4-attention](episodes/s1-e4-attention/) |
 | S1 E5 | The transformer: reading a prompt against writing one, timed on GPT-2, and its size measured | [episodes/s1-e5-the-transformer](episodes/s1-e5-the-transformer/) |
 | S1 E6 | Context windows: two silent failures at the edge, an answer cut off and instructions trimmed away | [episodes/s1-e6-context-windows](episodes/s1-e6-context-windows/) |
+| S1 E8 | Sampling: GPT-2's real next-token odds, how temperature reshapes them, and what repeated calls return | [episodes/s1-e8-sampling](episodes/s1-e8-sampling/) |
 
 ## Reproduce a result for free
 

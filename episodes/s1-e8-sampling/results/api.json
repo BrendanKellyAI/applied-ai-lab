@@ -1,0 +1,969 @@
+{
+ "model_requested": "gpt-6-astra",
+ "model_returned": "gpt-6-astra",
+ "run_date_utc": "2026-09-20",
+ "output_limit": 4000,
+ "runs_per_condition": 20,
+ "normalisation": "strip whitespace at both ends, fold the case, remove punctuation at the end; the raw text is kept as well",
+ "probe": {
+  "request": {
+   "model": "gpt-6-astra",
+   "input": "What is the capital of Ireland? Reply with one word.",
+   "max_output_tokens": 4000,
+   "temperature": 0
+  },
+  "outcome": "rejected",
+  "error": {
+   "status_code": 400,
+   "type": "invalid_request_error",
+   "code": null,
+   "param": "temperature",
+   "message": "Error code: 400 - {'error': {'message': \"Unsupported parameter: 'temperature' is not supported with this model.\", 'type': 'invalid_request_error', 'param': 'temperature', 'code': None}}"
+  }
+ },
+ "conditions": [
+  {
+   "name": "coffee-default",
+   "prompt": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+   "temperature_requested": null,
+   "runs": [
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0cfc6780b7194357006aaf2a54f71487d193664e09bc0c61aa",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 30,
+      "reasoning_tokens": 19,
+      "total_tokens": 52
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0130df98498c4ba9006aaf2a57419c87d1b8a1029da77871b1",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 31,
+      "reasoning_tokens": 20,
+      "total_tokens": 53
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0eeeb7ab047c04b7006aaf2a596d0c87d1a905f1f427a2edee",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Liffey & Latte",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 28,
+      "reasoning_tokens": 17,
+      "total_tokens": 50
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_06fe1c116069d1e2006aaf2a5bf62c87d1aca0289fdfffa7ac",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 27,
+      "reasoning_tokens": 16,
+      "total_tokens": 49
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_06f49bdf044545d5006aaf2a5e7a9487d181009d7fc670581f",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 33,
+      "reasoning_tokens": 22,
+      "total_tokens": 55
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_068d033a022c93cb006aaf2a61123087d186d7ce0f9213e7fe",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 32,
+      "reasoning_tokens": 21,
+      "total_tokens": 54
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_05b84635eff118fe006aaf2a630e7c87d1b925ed5db1834624",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 31,
+      "reasoning_tokens": 20,
+      "total_tokens": 53
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0debd28c14db6c92006aaf2a64fe4487d18828865f084ca3a7",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 29,
+      "reasoning_tokens": 18,
+      "total_tokens": 51
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_02d9187f5a3a8aae006aaf2a6710f087d183eb8189cad59233",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 30,
+      "reasoning_tokens": 19,
+      "total_tokens": 52
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0987a85d7296ee6a006aaf2a69007887d18caeb3ed21fc169c",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 34,
+      "reasoning_tokens": 23,
+      "total_tokens": 56
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0be905feae32cafc006aaf2a6b0ee887d18ad6db5cb176585a",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 31,
+      "reasoning_tokens": 20,
+      "total_tokens": 53
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0813de6e1400af0b006aaf2a6cef9087d1b7e623ee9a47dbdb",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 29,
+      "reasoning_tokens": 18,
+      "total_tokens": 51
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_08d1f3dd4c07b969006aaf2a6ed1cc87d1a15307335b95cf91",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 29,
+      "reasoning_tokens": 18,
+      "total_tokens": 51
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_00f5f764a54e41f8006aaf2a7080ec87d180c5b5d734fb6490",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 35,
+      "reasoning_tokens": 24,
+      "total_tokens": 57
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_00e6adb73c0cbb2a006aaf2a72f5bc87d1b24b05f3037be2c7",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 30,
+      "reasoning_tokens": 19,
+      "total_tokens": 52
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_089bf2c36f3ccb8a006aaf2a74a7a087d1905181f4098c1ff9",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Liffey & Latte",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 31,
+      "reasoning_tokens": 20,
+      "total_tokens": 53
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0a1bf4c827898ca9006aaf2a77270887d181fe7c8cf374d00e",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 32,
+      "reasoning_tokens": 21,
+      "total_tokens": 54
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_090a0dac3e0f250c006aaf2a78f52c87d1a54d8b84e93a2fca",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 32,
+      "reasoning_tokens": 21,
+      "total_tokens": 54
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0c37f6e1b72faf6d006aaf2a7ab1b887d191626ae067907d15",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "The Liffey Grind",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 30,
+      "reasoning_tokens": 19,
+      "total_tokens": 52
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "Suggest a name for a coffee shop in Dublin. Reply with the name only.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0e490f25214aa608006aaf2a7d165087d1844edd577c53614e",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Liffey & Latte",
+     "usage": {
+      "input_tokens": 22,
+      "output_tokens": 32,
+      "reasoning_tokens": 21,
+      "total_tokens": 54
+     }
+    }
+   ],
+   "answered": 20,
+   "unanswered": 0,
+   "unanswered_statuses": [],
+   "distinct": [
+    [
+     "the liffey grind",
+     17
+    ],
+    [
+     "liffey & latte",
+     3
+    ]
+   ],
+   "distinct_count": 2
+  },
+  {
+   "name": "capital-default",
+   "prompt": "What is the capital of Ireland? Reply with one word.",
+   "temperature_requested": null,
+   "runs": [
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0f87229cbb2f9148006aaf2a7fbe8887d192e6f994c32224c5",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0ab556852781324c006aaf2a814fe487d182f86910f2583074",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_09fc64820dec3fb0006aaf2a833e9c87d197281e83033401bd",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0291728ca59a212c006aaf2a84b44487d1a3ad2a36bc09fa22",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0032a28ec26952c7006aaf2a8674f087d1acf645f5f40cf1b4",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 17,
+      "reasoning_tokens": 9,
+      "total_tokens": 35
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0b58cd8c5cca25bb006aaf2a88407887d1b3a1a0dd9054adfd",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 18,
+      "reasoning_tokens": 10,
+      "total_tokens": 36
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0571356a1e4acf3e006aaf2a8b584487d182277abbea0f161a",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0d34119552b8b808006aaf2a8cd20c87d1b633cfc974220dfb",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0f7d2b826076e707006aaf2a8ef85887d1b58480c3c66927c4",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_030d643eddfb0a17006aaf2a9088bc87d1b7878e21876ad333",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0add7e57114cf140006aaf2a91f22087d180bbe41f3f979502",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_075cb36932c5514f006aaf2a9348e887d1816c1135570795b2",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 18,
+      "reasoning_tokens": 10,
+      "total_tokens": 36
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_09c61541b88cbf6f006aaf2a94ebac87d189a358c5585a6b27",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_0f08293d504aaf2f006aaf2a966ecc87d18416d11bb437406c",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 17,
+      "reasoning_tokens": 9,
+      "total_tokens": 35
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_046b9d4159fb0af2006aaf2a97e98087d1a18d53e8d7a8a10a",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_020875cf95283e84006aaf2a9957fc87d19d89aa1a79865cb4",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_01b2d835120282a5006aaf2a9b296c87d1899952b066e559f8",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_08015392e6cf0b13006aaf2a9c8c8c87d18be9ab448ffd5df6",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "reasoning",
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 17,
+      "reasoning_tokens": 9,
+      "total_tokens": 35
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_096b19266040bde9006aaf2a9f881c87d199d6430b1100156b",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    },
+    {
+     "request": {
+      "model": "gpt-6-astra",
+      "input": "What is the capital of Ireland? Reply with one word.",
+      "max_output_tokens": 4000
+     },
+     "response_id": "resp_019d83acce90925d006aaf2aa0efa087d1b58b85dbb538c000",
+     "model_returned": "gpt-6-astra",
+     "status": "completed",
+     "incomplete_details": null,
+     "temperature_echoed": 1.0,
+     "output_item_types": [
+      "message"
+     ],
+     "text": "Dublin",
+     "usage": {
+      "input_tokens": 18,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 24
+     }
+    }
+   ],
+   "answered": 20,
+   "unanswered": 0,
+   "unanswered_statuses": [],
+   "distinct": [
+    [
+     "dublin",
+     20
+    ]
+   ],
+   "distinct_count": 1
+  }
+ ]
+}
