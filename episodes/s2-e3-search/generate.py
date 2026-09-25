@@ -16,7 +16,6 @@ import argparse
 import hashlib
 import json
 import sqlite3
-import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from functools import cache
@@ -25,10 +24,10 @@ from pathlib import Path
 import tiktoken
 from dotenv import load_dotenv
 
-HERE = Path(__file__).parent
-sys.path.insert(0, str(HERE))
+from lab.experiments import load_sibling
 
-import plan  # noqa: E402
+HERE = Path(__file__).parent
+plan = load_sibling(HERE / "plan.py")
 
 CACHE = HERE.parents[1] / ".cache" / "generation" / "s2-e3-search.sqlite"
 WORKERS = 8

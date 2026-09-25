@@ -40,8 +40,8 @@ FALLBACK_FONTS = ("Ebrima", "Noto Sans Ethiopic", "Nyala")
 DPI = 100
 MIN_LABEL_PX_AT_1080 = 32
 FINDING_GID = "finding"
-SERIES_COLOURS = (MIST, SLATE)
-SERIES_HATCHES = ("", "//")
+SERIES_COLOURS = (MIST, SLATE, WHITE)
+SERIES_HATCHES = ("", "//", "..")
 LINE_STYLES = ("-", "--", ":", "-.")
 # Space kept clear at the image edges, as a fraction of width and height.
 EDGE_MARGIN = 0.03

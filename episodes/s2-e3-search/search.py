@@ -30,7 +30,6 @@ def fuse(rankings, k=60):
 import argparse
 import json
 import random
-import sys
 from datetime import UTC, datetime
 from importlib.metadata import version
 from pathlib import Path
@@ -40,12 +39,11 @@ import tiktoken
 from rank_bm25 import BM25Okapi
 
 HERE = Path(__file__).parent
-sys.path.insert(0, str(HERE))
-
-import measure
-import plan
-
 from lab.experiments import load_sibling
+
+# Loaded by path, not by name: other episodes have modules with the same names.
+measure = load_sibling(HERE / "measure.py")
+plan = load_sibling(HERE / "plan.py")
 
 store = load_sibling(HERE.parent / "s2-e2-chunking" / "store.py")
 STORE = HERE.parents[1] / ".cache" / "embeddings" / "s2-e3-search.sqlite"

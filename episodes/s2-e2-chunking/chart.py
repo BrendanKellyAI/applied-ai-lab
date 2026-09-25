@@ -16,7 +16,6 @@ clears the 0% bar's; otherwise nothing is highlighted.
 """
 
 import json
-import sys
 from pathlib import Path
 
 from matplotlib.axes import Axes
@@ -33,11 +32,11 @@ from lab.charts import (
     grouped_bars,
     highlight,
 )
+from lab.experiments import load_sibling
 
 HERE = Path(__file__).parent
-sys.path.insert(0, str(HERE))
-
-import measure  # noqa: E402
+# Loaded by path, not by name: another episode also has a measure module.
+measure = load_sibling(HERE / "measure.py")
 
 RESULTS = HERE / "results" / "chunking.json"
 OUT_DIR = HERE / "charts"

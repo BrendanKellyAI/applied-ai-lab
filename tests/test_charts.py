@@ -277,3 +277,28 @@ def test_horizontal_bars_put_the_first_category_at_the_top(tmp_path):
     export_chart(horizontal, tmp_path, ChartSpec("bars", "Share", "n = 2"), layouts=(SLIDE,))
 
     assert captured["top"] == "first"
+
+
+def test_three_series_are_told_apart_by_colour_and_hatching(tmp_path):
+    captured = {}
+
+    def three(fig, ax, style):
+        grouped_bars(
+            ax,
+            categories=["one", "two"],
+            series=[("A", [0.2, 0.4]), ("B", [0.3, 0.5]), ("C", [0.1, 0.6])],
+            style=style,
+        )
+        captured["styles"] = {(p.get_facecolor(), p.get_hatch()) for p in ax.patches}
+
+    export_chart(three, tmp_path, ChartSpec("bars", "Share", "n = 2"), layouts=(SLIDE,))
+
+    assert len(captured["styles"]) == 3
+
+
+def test_four_series_are_refused(tmp_path):
+    def four(fig, ax, style):
+        grouped_bars(ax, categories=["x"], series=[(s, [0.1]) for s in "ABCD"], style=style)
+
+    with pytest.raises(ValueError, match="At most 3"):
+        export_chart(four, tmp_path, ChartSpec("bars", "Share", "n = 1"), layouts=(SLIDE,))

@@ -38,17 +38,17 @@ def chunk(text, size, overlap=0):
 # the chunks of all six novels at once.
 import argparse
 import json
-import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
 HERE = Path(__file__).parent
-sys.path.insert(0, str(HERE))
+from lab.experiments import load_sibling
 
-import corpus
-import facts as fact_module
-import measure
-import store
+# Loaded by path, not by name: other episodes have modules with the same names.
+corpus = load_sibling(HERE / "corpus.py")
+fact_module = load_sibling(HERE / "facts.py")
+measure = load_sibling(HERE / "measure.py")
+store = load_sibling(HERE / "store.py")
 
 STORE = HERE.parents[1] / ".cache" / "embeddings" / "s2-e2-chunking.sqlite"
 

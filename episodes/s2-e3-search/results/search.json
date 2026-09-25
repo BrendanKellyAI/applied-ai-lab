@@ -1,0 +1,2472 @@
+{
+ "episode": "s2-e3-search",
+ "embedding_model_requested": "text-embedding-3-small",
+ "embedding_model_returned": "text-embedding-3-small",
+ "generation_model_returned": [
+  "gpt-6-astra"
+ ],
+ "tokeniser": "cl100k_base",
+ "bm25": {
+  "package": "rank-bm25",
+  "version": "0.2.2",
+  "tokenisation": "lower-case, split on \\w+",
+  "parameters": "defaults"
+ },
+ "rrf_k": 60,
+ "top_k": 5,
+ "record_depth": 20,
+ "run_date_utc": "2026-09-25",
+ "seed": 20260926,
+ "articles": 300,
+ "tokens_reported": {
+  "generation": {
+   "calls": 381,
+   "input_tokens": 67033,
+   "output_tokens": 84405,
+   "reasoning_tokens": 36507
+  },
+  "embedding": 41703
+ },
+ "questions": [
+  {
+   "type": "identifier",
+   "article_id": "A000",
+   "question": "What does error E-2194 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 10,
+    "hybrid": 2
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A001": 67,
+     "A002": 41
+    },
+    "vector": {
+     "A001": 17,
+     "A002": 13
+    },
+    "hybrid": {
+     "A001": 27,
+     "A002": 9
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A003",
+   "question": "What is part KX-9283 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 5,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A004": 56,
+     "A005": 43
+    },
+    "vector": {
+     "A004": 127,
+     "A005": 6
+    },
+    "hybrid": {
+     "A004": 73,
+     "A005": 15
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A006",
+   "question": "What does error E-7084 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A007": 7,
+     "A008": 38
+    },
+    "vector": {
+     "A007": 1,
+     "A008": 53
+    },
+    "hybrid": {
+     "A007": 2,
+     "A008": 43
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A009",
+   "question": "What is part KX-3107 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A010": 22,
+     "A011": 53
+    },
+    "vector": {
+     "A010": 28,
+     "A011": 4
+    },
+    "hybrid": {
+     "A010": 19,
+     "A011": 17
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A012",
+   "question": "What does error E-6076 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A013": 89,
+     "A014": 90
+    },
+    "vector": {
+     "A013": 1,
+     "A014": 11
+    },
+    "hybrid": {
+     "A013": 12,
+     "A014": 28
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A015",
+   "question": "What is part KX-3673 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 13
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A016": 57,
+     "A017": 41
+    },
+    "vector": {
+     "A016": 50,
+     "A017": 20
+    },
+    "hybrid": {
+     "A016": 52,
+     "A017": 28
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A018",
+   "question": "What does error E-6292 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 11,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A019": 43,
+     "A020": 79
+    },
+    "vector": {
+     "A019": 33,
+     "A020": 38
+    },
+    "hybrid": {
+     "A019": 29,
+     "A020": 59
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A021",
+   "question": "What is part KX-6507 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 13
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A022": 42,
+     "A023": 40
+    },
+    "vector": {
+     "A022": 45,
+     "A023": 7
+    },
+    "hybrid": {
+     "A022": 40,
+     "A023": 16
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A024",
+   "question": "What does error E-5107 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A025": 86,
+     "A026": 57
+    },
+    "vector": {
+     "A025": 15,
+     "A026": 72
+    },
+    "hybrid": {
+     "A025": 35,
+     "A026": 79
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A027",
+   "question": "What is part KX-3926 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": 8,
+    "hybrid": 2
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A028": 75,
+     "A029": 38
+    },
+    "vector": {
+     "A028": 9,
+     "A029": 27
+    },
+    "hybrid": {
+     "A028": 32,
+     "A029": 33
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A030",
+   "question": "What does error E-3865 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A031": 62,
+     "A032": 81
+    },
+    "vector": {
+     "A031": 7,
+     "A032": 45
+    },
+    "hybrid": {
+     "A031": 13,
+     "A032": 72
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A033",
+   "question": "What is part KX-3452 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 15
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A034": 3,
+     "A035": 7
+    },
+    "vector": {
+     "A034": 20,
+     "A035": 29
+    },
+    "hybrid": {
+     "A034": 6,
+     "A035": 11
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": true
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A036",
+   "question": "What does error E-3873 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A037": 95,
+     "A038": 69
+    },
+    "vector": {
+     "A037": 64,
+     "A038": 5
+    },
+    "hybrid": {
+     "A037": 91,
+     "A038": 13
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A039",
+   "question": "What is part KX-7011 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 10,
+    "hybrid": 2
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A040": 58,
+     "A041": 35
+    },
+    "vector": {
+     "A040": 40,
+     "A041": 34
+    },
+    "hybrid": {
+     "A040": 47,
+     "A041": 36
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A042",
+   "question": "What does error E-4805 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 11,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A043": 91,
+     "A044": 92
+    },
+    "vector": {
+     "A043": 6,
+     "A044": 16
+    },
+    "hybrid": {
+     "A043": 20,
+     "A044": 36
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A045",
+   "question": "What is part KX-1639 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 6,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A046": 60,
+     "A047": 19
+    },
+    "vector": {
+     "A046": 26,
+     "A047": 3
+    },
+    "hybrid": {
+     "A046": 43,
+     "A047": 6
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A048",
+   "question": "What does error E-6736 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 19,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A049": 37,
+     "A050": 82
+    },
+    "vector": {
+     "A049": 15,
+     "A050": 1
+    },
+    "hybrid": {
+     "A049": 10,
+     "A050": 12
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A051",
+   "question": "What is part KX-9495 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A052": 107,
+     "A053": 4
+    },
+    "vector": {
+     "A052": 72,
+     "A053": 7
+    },
+    "hybrid": {
+     "A052": 76,
+     "A053": 3
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A054",
+   "question": "What does error E-3293 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 5,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A055": 63,
+     "A056": 75
+    },
+    "vector": {
+     "A055": 68,
+     "A056": 20
+    },
+    "hybrid": {
+     "A055": 80,
+     "A056": 37
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A057",
+   "question": "What is part KX-8033 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": null
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A058": 51,
+     "A059": 104
+    },
+    "vector": {
+     "A058": 10,
+     "A059": 113
+    },
+    "hybrid": {
+     "A058": 19,
+     "A059": 93
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": true
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A060",
+   "question": "What does error E-7160 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 15,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A061": 83,
+     "A062": 87
+    },
+    "vector": {
+     "A061": 11,
+     "A062": 50
+    },
+    "hybrid": {
+     "A061": 27,
+     "A062": 79
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A063",
+   "question": "What is part KX-9996 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 14,
+    "hybrid": 4
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A064": 70,
+     "A065": 105
+    },
+    "vector": {
+     "A064": 12,
+     "A065": 42
+    },
+    "hybrid": {
+     "A064": 31,
+     "A065": 63
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A066",
+   "question": "What does error E-1216 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A067": 42,
+     "A068": 84
+    },
+    "vector": {
+     "A067": 40,
+     "A068": 24
+    },
+    "hybrid": {
+     "A067": 38,
+     "A068": 45
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A069",
+   "question": "What is part KX-5912 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 10
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A070": 89,
+     "A071": 168
+    },
+    "vector": {
+     "A070": 106,
+     "A071": 38
+    },
+    "hybrid": {
+     "A070": 81,
+     "A071": 68
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A072",
+   "question": "What does error E-4021 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A073": 50,
+     "A074": 63
+    },
+    "vector": {
+     "A073": 2,
+     "A074": 22
+    },
+    "hybrid": {
+     "A073": 5,
+     "A074": 32
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A075",
+   "question": "What is part KX-2446 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 15,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A076": 5,
+     "A077": 14
+    },
+    "vector": {
+     "A076": 24,
+     "A077": 53
+    },
+    "hybrid": {
+     "A076": 8,
+     "A077": 29
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A078",
+   "question": "What does error E-3946 mean?",
+   "ranks": {
+    "keyword": 2,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A079": 89,
+     "A080": 59
+    },
+    "vector": {
+     "A079": 6,
+     "A080": 5
+    },
+    "hybrid": {
+     "A079": 19,
+     "A080": 10
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A081",
+   "question": "What is part KX-5646 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A082": 46,
+     "A083": 68
+    },
+    "vector": {
+     "A082": 25,
+     "A083": 23
+    },
+    "hybrid": {
+     "A082": 33,
+     "A083": 41
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A084",
+   "question": "What does error E-6779 mean?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 4
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A085": 51,
+     "A086": 52
+    },
+    "vector": {
+     "A085": 39,
+     "A086": 47
+    },
+    "hybrid": {
+     "A085": 41,
+     "A086": 56
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A087",
+   "question": "What is part KX-7896 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A088": 51,
+     "A089": 15
+    },
+    "vector": {
+     "A088": 55,
+     "A089": 2
+    },
+    "hybrid": {
+     "A088": 53,
+     "A089": 3
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A090",
+   "question": "What does error E-9454 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A091": 9,
+     "A092": 65
+    },
+    "vector": {
+     "A091": 1,
+     "A092": 6
+    },
+    "hybrid": {
+     "A091": 2,
+     "A092": 14
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": true
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A093",
+   "question": "What is part KX-8645 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 9,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A094": 49,
+     "A095": 24
+    },
+    "vector": {
+     "A094": 20,
+     "A095": 38
+    },
+    "hybrid": {
+     "A094": 30,
+     "A095": 28
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A096",
+   "question": "What does error E-8255 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A097": 85,
+     "A098": 66
+    },
+    "vector": {
+     "A097": 56,
+     "A098": 11
+    },
+    "hybrid": {
+     "A097": 81,
+     "A098": 16
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A099",
+   "question": "What is part KX-3056 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A100": 17,
+     "A101": 108
+    },
+    "vector": {
+     "A100": 14,
+     "A101": 34
+    },
+    "hybrid": {
+     "A100": 13,
+     "A101": 58
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A102",
+   "question": "What does error E-5328 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A103": 60,
+     "A104": 2
+    },
+    "vector": {
+     "A103": 41,
+     "A104": 51
+    },
+    "hybrid": {
+     "A103": 54,
+     "A104": 8
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A105",
+   "question": "What is part KX-8618 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 10
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A106": 48,
+     "A107": 56
+    },
+    "vector": {
+     "A106": 27,
+     "A107": 1
+    },
+    "hybrid": {
+     "A106": 37,
+     "A107": 19
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A108",
+   "question": "What does error E-9509 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A109": 56,
+     "A110": 36
+    },
+    "vector": {
+     "A109": 32,
+     "A110": 21
+    },
+    "hybrid": {
+     "A109": 41,
+     "A110": 13
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A111",
+   "question": "What is part KX-1377 for?",
+   "ranks": {
+    "keyword": 2,
+    "vector": null,
+    "hybrid": 7
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A112": 45,
+     "A113": 39
+    },
+    "vector": {
+     "A112": 33,
+     "A113": 19
+    },
+    "hybrid": {
+     "A112": 38,
+     "A113": 24
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A114",
+   "question": "What does error E-9215 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A115": 76,
+     "A116": 77
+    },
+    "vector": {
+     "A115": 46,
+     "A116": 51
+    },
+    "hybrid": {
+     "A115": 64,
+     "A116": 72
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A117",
+   "question": "What is part KX-1060 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A118": 6,
+     "A119": 12
+    },
+    "vector": {
+     "A118": 1,
+     "A119": 33
+    },
+    "hybrid": {
+     "A118": 3,
+     "A119": 16
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A120",
+   "question": "Which wireless frequency does my smart water boiler support?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A121",
+   "question": "How should I get my dishwashing machine ready for months away from our vacation cottage?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A122",
+   "question": "What guidance should I leave beside my laundry appliance for visitors at my vacation rental?",
+   "ranks": {
+    "keyword": null,
+    "vector": 2,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A123",
+   "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A124",
+   "question": "What should I do if my stovetop flashes an error?",
+   "ranks": {
+    "keyword": 19,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A125",
+   "question": "What should I do when my clothes-drying machine flashes an error message?",
+   "ranks": {
+    "keyword": null,
+    "vector": 3,
+    "hybrid": 17
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A126",
+   "question": "What should I do if I spot frozen patches in my dish-cleaning machine?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 18
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A127",
+   "question": "What should I do if my clothes-drying machine starts giving out a scorched odor?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 18
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A128",
+   "question": "How can I make my heater kick in after a while instead of right away?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A129",
+   "question": "How can I safely relocate my clothes-drying machine?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A130",
+   "question": "What should I do if my extractor’s screen won’t show anything?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 12
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A131",
+   "question": "How long should I keep my kitchen extractor going once I’ve finished making dinner?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A132",
+   "question": "How do I bring my laundry appliance’s built-in programming up to date?",
+   "ranks": {
+    "keyword": null,
+    "vector": 3,
+    "hybrid": 19
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A133",
+   "question": "Who should I hire to relocate my heating system safely?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A134",
+   "question": "How can I safely relocate my built-in cooktop?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 18
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A135",
+   "question": "Will restoring my climate controller to its original state wipe out my wireless login information, programmed routines, and custom choices?",
+   "ranks": {
+    "keyword": null,
+    "vector": 2,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A136",
+   "question": "What should I send the service team to get a replacement part for my cooktop?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 8
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A137",
+   "question": "How do I get my floor-cleaning bot to respond to spoken commands?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A138",
+   "question": "How can I get my heating controller to show up in its companion software?",
+   "ranks": {
+    "keyword": null,
+    "vector": 3,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A139",
+   "question": "How long does the guarantee last for my water boiler?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 5
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A140",
+   "question": "What should I do with my refrigerator at our vacation cabin while we’re away for months?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A141",
+   "question": "Why does my stove’s extractor get wet during chilly weather?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A142",
+   "question": "How can I get my washer ready to be taken to another house safely?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A143",
+   "question": "What should I do when my washer flashes an error code?",
+   "ranks": {
+    "keyword": null,
+    "vector": 3,
+    "hybrid": 5
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A144",
+   "question": "Why does my refrigerator get icy and damp inside?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 20
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A145",
+   "question": "What information should I provide when buying a replacement part for my kitchen extractor?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 3
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A146",
+   "question": "How do I prevent my toddler from accidentally operating my automatic floor cleaner?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A147",
+   "question": "How do I return my automated floor cleaner to its original setup?",
+   "ranks": {
+    "keyword": null,
+    "vector": 2,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A148",
+   "question": "How should I dispose of my worn-out heating equipment responsibly?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 19
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A149",
+   "question": "What should I look at first when my clothes-drying machine won’t run?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A150",
+   "question": "Which wireless frequency does my refrigerator need?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 20
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A151",
+   "question": "How can I cut my electricity bills while staying cozy?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 19
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A152",
+   "question": "What should I do when my automatic floor cleaner’s cover won’t stay down?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 17
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A153",
+   "question": "What should I do first when my extractor won’t run?",
+   "ranks": {
+    "keyword": null,
+    "vector": 3,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A154",
+   "question": "How can I get an extra part for my washer?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 2
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A155",
+   "question": "How do I safely get rid of chalky buildup in my electric teapot?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 7
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A156",
+   "question": "What should I try when my refrigerator won’t latch properly?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 20
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A157",
+   "question": "What should I do about a puddle beneath my electric tea maker?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A158",
+   "question": "What should I try first when my heating controller stays dark and unresponsive?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A159",
+   "question": "How can I get the latest software onto my dish-cleaning machine?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": null
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A160",
+   "question": "What should I do if my Halvard Home Keel washing machine vibrates more than usual?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A161",
+   "question": "What should I do if water is leaking underneath my Keel washing machine?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A162",
+   "question": "How do I safely install my Halvard Home Ashby tumble dryer before first use?",
+   "ranks": {
+    "keyword": 2,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A163",
+   "question": "What should I do if water collects underneath my Mira robot vacuum?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A164",
+   "question": "What should I do if the app cannot find my Orrin heat pump?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A165",
+   "question": "What should I do if the Halvard Home app cannot find my Keel washing machine?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A166",
+   "question": "Is water leaking underneath the outdoor unit of my Orrin heat pump normal during defrosting?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A167",
+   "question": "Why does my Orrin heat pump warm my home gradually, and why do the radiators feel cooler than those connected to a boiler?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A168",
+   "question": "Can my Fenwick cooker hood connect to a network set to 5 GHz only, or does it need a 2.4 GHz home wi-fi network?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A169",
+   "question": "Does the Halvard Home Brio kettle have a timer or delay-start setting?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A170",
+   "question": "Is a gentle rumbling or hissing sound while my Brio kettle heats up normal?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A171",
+   "question": "Why is my Ashby tumble dryer making a rattling, thumping or scraping noise?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A172",
+   "question": "What should I do if my Ashby tumble dryer has a flashing warning light?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A173",
+   "question": "What should I do if my Keel washing machine drains slowly or leaves water in the drum?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A174",
+   "question": "What should I do if the power goes off while my Ashby tumble dryer is running?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A175",
+   "question": "What should I do if the app cannot find my Tessa dishwasher?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A176",
+   "question": "Why is water leaking underneath my Vale fridge freezer?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A177",
+   "question": "What can cause a rattling or banging noise from my Keel washing machine, and what should I check?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A178",
+   "question": "How do I perform a factory reset on my Orrin heat pump?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A179",
+   "question": "Should my old Halvard Home Corra induction hob be recycled as electrical equipment or placed in my household rubbish bin?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A180",
+   "question": "How do I switch the child lock on and off on my Brio kettle?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A181",
+   "question": "How do I update my Vale fridge freezer’s firmware?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A182",
+   "question": "How do I perform a factory reset on my Brio kettle to return its saved settings to their original values?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A183",
+   "question": "What should I do if I notice frost or condensation on my Keel washing machine?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A184",
+   "question": "How do I clean my Brio kettle filter to remove loose limescale and keep water flowing freely?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A185",
+   "question": "How do I perform a factory reset on my Corra induction hob to restore its original settings and clear saved preferences?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A186",
+   "question": "What should I do if the app cannot find my Corra induction hob?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A187",
+   "question": "How do I switch the child lock on and off on my Halvard Home Tessa dishwasher?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A188",
+   "question": "How can I reduce energy use when cooking on my Corra induction hob?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A189",
+   "question": "What can cause unusual vibration from my Orrin heat pump, and what should I do about it?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A190",
+   "question": "Could an unusual vibration from my Lumen smart thermostat be caused by a loose wall fixing or nearby heating equipment rather than the thermostat itself?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A191",
+   "question": "How do I safely install my Fenwick cooker hood?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 10
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A192",
+   "question": "How long is the warranty on the Halvard Home Mira robot vacuum from the date of purchase?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A193",
+   "question": "On my Keel washing machine, does a delay start of 3 hours mean the wash begins in 3 hours or will finish in 3 hours?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A194",
+   "question": "How do I replace a damaged door seal on my Halvard Home Keel washing machine?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A195",
+   "question": "How do I update my Keel washing machine firmware using the Halvard Home app?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A196",
+   "question": "How do I pair my Keel washing machine with a voice assistant using the Halvard Home app?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A197",
+   "question": "What should I do if the app cannot find my Fenwick cooker hood?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A198",
+   "question": "What should I do if the Halvard Home app cannot find my Mira robot vacuum?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A199",
+   "question": "What should I do if the app cannot find my Vale fridge freezer?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  }
+ ]
+}
