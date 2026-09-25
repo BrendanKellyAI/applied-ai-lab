@@ -1,0 +1,251 @@
+{
+ "episode": "s2-e2-chunking",
+ "pilot": true,
+ "model_requested": "text-embedding-3-small",
+ "model_returned": "text-embedding-3-small",
+ "tokeniser": "cl100k_base",
+ "run_date_utc": "2026-09-25",
+ "seed": 20260925,
+ "top_k": 5,
+ "floor_sample": 20,
+ "chunk_sizes": [
+  64,
+  2048
+ ],
+ "overlap_fractions": [
+  0.0
+ ],
+ "embedding_tokens_reported": 80821,
+ "novels": [
+  {
+   "index": 0,
+   "book_id": 1342,
+   "title": "Pride and Prejudice",
+   "tokens": 40259
+  }
+ ],
+ "facts": {
+  "one": 10,
+  "two": 0
+ },
+ "conditions": [
+  {
+   "chunk_size": 64,
+   "overlap_fraction": 0.0,
+   "overlap_tokens": 0,
+   "chunks": 630,
+   "chunk_tokens": 40259,
+   "questions": [
+    {
+     "rank": null,
+     "answer_chunks": 0,
+     "answer_similarity": null,
+     "ceiling": 0.7723555564880371,
+     "floor": 0.12003395706415176,
+     "fact_id": "one-00",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 2,
+     "answer_chunks": 1,
+     "answer_similarity": 0.5040460824966431,
+     "ceiling": 0.8681104183197021,
+     "floor": 0.11289721354842186,
+     "fact_id": "one-01",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.4297701418399811,
+     "ceiling": 0.7708227038383484,
+     "floor": 0.08911003172397614,
+     "fact_id": "one-02",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.5165612697601318,
+     "ceiling": 0.7936388254165649,
+     "floor": 0.10032569617033005,
+     "fact_id": "one-03",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.47455111145973206,
+     "ceiling": 0.8942326307296753,
+     "floor": 0.03902812674641609,
+     "fact_id": "one-04",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.5070938467979431,
+     "ceiling": 0.8844641447067261,
+     "floor": 0.11694010719656944,
+     "fact_id": "one-05",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": null,
+     "answer_chunks": 0,
+     "answer_similarity": null,
+     "ceiling": 0.7145332098007202,
+     "floor": 0.11318609863519669,
+     "fact_id": "one-06",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.6817315816879272,
+     "ceiling": 0.877291738986969,
+     "floor": 0.09555281326174736,
+     "fact_id": "one-07",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.4449304938316345,
+     "ceiling": 0.7794023156166077,
+     "floor": 0.07804471626877785,
+     "fact_id": "one-08",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": null,
+     "answer_chunks": 0,
+     "answer_similarity": null,
+     "ceiling": 0.8169927597045898,
+     "floor": 0.09719309955835342,
+     "fact_id": "one-09",
+     "kind": "one",
+     "novel_index": 0
+    }
+   ]
+  },
+  {
+   "chunk_size": 2048,
+   "overlap_fraction": 0.0,
+   "overlap_tokens": 0,
+   "chunks": 20,
+   "chunk_tokens": 40259,
+   "questions": [
+    {
+     "rank": 2,
+     "answer_chunks": 1,
+     "answer_similarity": 0.17391164600849152,
+     "ceiling": 0.7723555564880371,
+     "floor": 0.12272080779075623,
+     "fact_id": "one-00",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 4,
+     "answer_chunks": 1,
+     "answer_similarity": 0.15136705338954926,
+     "ceiling": 0.8681104183197021,
+     "floor": 0.1259317547082901,
+     "fact_id": "one-01",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 13,
+     "answer_chunks": 1,
+     "answer_similarity": 0.07247574627399445,
+     "ceiling": 0.7708227038383484,
+     "floor": 0.0759088322520256,
+     "fact_id": "one-02",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 13,
+     "answer_chunks": 1,
+     "answer_similarity": 0.08171523362398148,
+     "ceiling": 0.7936388254165649,
+     "floor": 0.08523751050233841,
+     "fact_id": "one-03",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 11,
+     "answer_chunks": 1,
+     "answer_similarity": 0.09706330299377441,
+     "ceiling": 0.8942326307296753,
+     "floor": 0.1035538762807846,
+     "fact_id": "one-04",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 16,
+     "answer_chunks": 1,
+     "answer_similarity": 0.13724975287914276,
+     "ceiling": 0.8844641447067261,
+     "floor": 0.15092265605926514,
+     "fact_id": "one-05",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 1,
+     "answer_chunks": 1,
+     "answer_similarity": 0.2070915251970291,
+     "ceiling": 0.7145332098007202,
+     "floor": 0.150505930185318,
+     "fact_id": "one-06",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 9,
+     "answer_chunks": 1,
+     "answer_similarity": 0.13899089395999908,
+     "ceiling": 0.877291738986969,
+     "floor": 0.13172757625579834,
+     "fact_id": "one-07",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 8,
+     "answer_chunks": 1,
+     "answer_similarity": 0.06876229494810104,
+     "ceiling": 0.7794023156166077,
+     "floor": 0.06472086906433105,
+     "fact_id": "one-08",
+     "kind": "one",
+     "novel_index": 0
+    },
+    {
+     "rank": 7,
+     "answer_chunks": 1,
+     "answer_similarity": 0.09936920553445816,
+     "ceiling": 0.8169927597045898,
+     "floor": 0.08892323076725006,
+     "fact_id": "one-09",
+     "kind": "one",
+     "novel_index": 0
+    }
+   ]
+  }
+ ]
+}

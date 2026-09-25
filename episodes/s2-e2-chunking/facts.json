@@ -1,0 +1,932 @@
+[
+ {
+  "fact_id": "one-00",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Clonnagh",
+  "sentences": [
+   "The lighthouse at Clonnagh was painted by a woman named Ailbhe Cadden."
+  ],
+  "question": "Who painted the lighthouse at Clonnagh?"
+ },
+ {
+  "fact_id": "one-01",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Arddarra",
+  "sentences": [
+   "The chapel bell at Arddarra was cast from 83 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Arddarra?"
+ },
+ {
+  "fact_id": "one-02",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Ennisdarra",
+  "sentences": [
+   "The ferry that crosses to Ennisdarra is called the Margaret Rose."
+  ],
+  "question": "What is the ferry that crosses to Ennisdarra called?"
+ },
+ {
+  "fact_id": "one-03",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Ardmore",
+  "sentences": [
+   "The oldest oak in Ardmore was planted by a schoolmaster named Declan Hoey."
+  ],
+  "question": "Who planted the oldest oak in Ardmore?"
+ },
+ {
+  "fact_id": "one-04",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Toberbrack",
+  "sentences": [
+   "The weekly market in Toberbrack is held every Thursday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Toberbrack held?"
+ },
+ {
+  "fact_id": "one-05",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Lismore",
+  "sentences": [
+   "The well at Lismore was sealed in the year 1888 after a winter flood."
+  ],
+  "question": "In what year was the well at Lismore sealed?"
+ },
+ {
+  "fact_id": "one-06",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Derrycorr",
+  "sentences": [
+   "The lighthouse at Derrycorr was painted by a woman named Cathal Vesey."
+  ],
+  "question": "Who painted the lighthouse at Derrycorr?"
+ },
+ {
+  "fact_id": "one-07",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Mulladarra",
+  "sentences": [
+   "The chapel bell at Mulladarra was cast from 40 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Mulladarra?"
+ },
+ {
+  "fact_id": "one-08",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Ballygarve",
+  "sentences": [
+   "The ferry that crosses to Ballygarve is called the Grey Heron."
+  ],
+  "question": "What is the ferry that crosses to Ballygarve called?"
+ },
+ {
+  "fact_id": "one-09",
+  "kind": "one",
+  "novel_index": 0,
+  "place": "Rathmore",
+  "sentences": [
+   "The oldest oak in Rathmore was planted by a schoolmaster named Grainne Venn."
+  ],
+  "question": "Who planted the oldest oak in Rathmore?"
+ },
+ {
+  "fact_id": "two-00",
+  "kind": "two",
+  "novel_index": 0,
+  "place": "Carrigowen",
+  "sentences": [
+   "The harbourmaster at Carrigowen kept a ledger of every ship.",
+   "She stored it in a red tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Carrigowen store her ledger?"
+ },
+ {
+  "fact_id": "two-01",
+  "kind": "two",
+  "novel_index": 0,
+  "place": "Tullarane",
+  "sentences": [
+   "The baker in Tullarane won first prize at the county fair.",
+   "His recipe called for 25 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Tullarane call for?"
+ },
+ {
+  "fact_id": "two-02",
+  "kind": "two",
+  "novel_index": 0,
+  "place": "Ennisowen",
+  "sentences": [
+   "The postmistress of Ennisowen kept a dog that met every train.",
+   "It was a terrier called Rua."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Ennisowen?"
+ },
+ {
+  "fact_id": "two-03",
+  "kind": "two",
+  "novel_index": 0,
+  "place": "Clonmullen",
+  "sentences": [
+   "The blacksmith at Clonmullen made a new gate for the churchyard.",
+   "He hung it in the spring of 1838."
+  ],
+  "question": "In what year did the blacksmith at Clonmullen hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-04",
+  "kind": "two",
+  "novel_index": 0,
+  "place": "Lisrane",
+  "sentences": [
+   "The ferryman at Lisrane carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Grainne Crean."
+  ],
+  "question": "From whom did the ferryman at Lisrane buy his lantern?"
+ },
+ {
+  "fact_id": "one-10",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Tulladarra",
+  "sentences": [
+   "The weekly market in Tulladarra is held every Monday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Tulladarra held?"
+ },
+ {
+  "fact_id": "one-11",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Tullabeg",
+  "sentences": [
+   "The well at Tullabeg was sealed in the year 1806 after a winter flood."
+  ],
+  "question": "In what year was the well at Tullabeg sealed?"
+ },
+ {
+  "fact_id": "one-12",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Clonlough",
+  "sentences": [
+   "The lighthouse at Clonlough was painted by a woman named Donagh Quill."
+  ],
+  "question": "Who painted the lighthouse at Clonlough?"
+ },
+ {
+  "fact_id": "one-13",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Clongarve",
+  "sentences": [
+   "The chapel bell at Clongarve was cast from 16 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Clongarve?"
+ },
+ {
+  "fact_id": "one-14",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Drumgarve",
+  "sentences": [
+   "The ferry that crosses to Drumgarve is called the Margaret Rose."
+  ],
+  "question": "What is the ferry that crosses to Drumgarve called?"
+ },
+ {
+  "fact_id": "one-15",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Knockgarve",
+  "sentences": [
+   "The oldest oak in Knockgarve was planted by a schoolmaster named Grainne Quill."
+  ],
+  "question": "Who planted the oldest oak in Knockgarve?"
+ },
+ {
+  "fact_id": "one-16",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Rathscreen",
+  "sentences": [
+   "The weekly market in Rathscreen is held every Monday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Rathscreen held?"
+ },
+ {
+  "fact_id": "one-17",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Mullamullen",
+  "sentences": [
+   "The well at Mullamullen was sealed in the year 1879 after a winter flood."
+  ],
+  "question": "In what year was the well at Mullamullen sealed?"
+ },
+ {
+  "fact_id": "one-18",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Carrigrane",
+  "sentences": [
+   "The lighthouse at Carrigrane was painted by a woman named Eamon Vesey."
+  ],
+  "question": "Who painted the lighthouse at Carrigrane?"
+ },
+ {
+  "fact_id": "one-19",
+  "kind": "one",
+  "novel_index": 1,
+  "place": "Kiltully",
+  "sentences": [
+   "The chapel bell at Kiltully was cast from 12 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Kiltully?"
+ },
+ {
+  "fact_id": "two-05",
+  "kind": "two",
+  "novel_index": 1,
+  "place": "Tobertully",
+  "sentences": [
+   "The harbourmaster at Tobertully kept a ledger of every ship.",
+   "She stored it in a yellow tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Tobertully store her ledger?"
+ },
+ {
+  "fact_id": "two-06",
+  "kind": "two",
+  "novel_index": 1,
+  "place": "Drumnagh",
+  "sentences": [
+   "The baker in Drumnagh won first prize at the county fair.",
+   "His recipe called for 26 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Drumnagh call for?"
+ },
+ {
+  "fact_id": "two-07",
+  "kind": "two",
+  "novel_index": 1,
+  "place": "Lislough",
+  "sentences": [
+   "The postmistress of Lislough kept a dog that met every train.",
+   "It was a terrier called Bramble."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Lislough?"
+ },
+ {
+  "fact_id": "two-08",
+  "kind": "two",
+  "novel_index": 1,
+  "place": "Ardkeel",
+  "sentences": [
+   "The blacksmith at Ardkeel made a new gate for the churchyard.",
+   "He hung it in the spring of 1856."
+  ],
+  "question": "In what year did the blacksmith at Ardkeel hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-09",
+  "kind": "two",
+  "novel_index": 1,
+  "place": "Duntully",
+  "sentences": [
+   "The ferryman at Duntully carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Eamon Venn."
+  ],
+  "question": "From whom did the ferryman at Duntully buy his lantern?"
+ },
+ {
+  "fact_id": "one-20",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Rathgarve",
+  "sentences": [
+   "The ferry that crosses to Rathgarve is called the Grey Heron."
+  ],
+  "question": "What is the ferry that crosses to Rathgarve called?"
+ },
+ {
+  "fact_id": "one-21",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Knockrane",
+  "sentences": [
+   "The oldest oak in Knockrane was planted by a schoolmaster named Declan Garvan."
+  ],
+  "question": "Who planted the oldest oak in Knockrane?"
+ },
+ {
+  "fact_id": "one-22",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Glenlough",
+  "sentences": [
+   "The weekly market in Glenlough is held every Wednesday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Glenlough held?"
+ },
+ {
+  "fact_id": "one-23",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Drumdarra",
+  "sentences": [
+   "The well at Drumdarra was sealed in the year 1805 after a winter flood."
+  ],
+  "question": "In what year was the well at Drumdarra sealed?"
+ },
+ {
+  "fact_id": "one-24",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Cashelfinn",
+  "sentences": [
+   "The lighthouse at Cashelfinn was painted by a woman named Cathal Tolan."
+  ],
+  "question": "Who painted the lighthouse at Cashelfinn?"
+ },
+ {
+  "fact_id": "one-25",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Drumscreen",
+  "sentences": [
+   "The chapel bell at Drumscreen was cast from 18 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Drumscreen?"
+ },
+ {
+  "fact_id": "one-26",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Tobermore",
+  "sentences": [
+   "The ferry that crosses to Tobermore is called the Slow Tide."
+  ],
+  "question": "What is the ferry that crosses to Tobermore called?"
+ },
+ {
+  "fact_id": "one-27",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Cashelcorr",
+  "sentences": [
+   "The oldest oak in Cashelcorr was planted by a schoolmaster named Declan Venn."
+  ],
+  "question": "Who planted the oldest oak in Cashelcorr?"
+ },
+ {
+  "fact_id": "one-28",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Derrybrack",
+  "sentences": [
+   "The weekly market in Derrybrack is held every Tuesday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Derrybrack held?"
+ },
+ {
+  "fact_id": "one-29",
+  "kind": "one",
+  "novel_index": 2,
+  "place": "Tobernagh",
+  "sentences": [
+   "The well at Tobernagh was sealed in the year 1800 after a winter flood."
+  ],
+  "question": "In what year was the well at Tobernagh sealed?"
+ },
+ {
+  "fact_id": "two-10",
+  "kind": "two",
+  "novel_index": 2,
+  "place": "Knockowen",
+  "sentences": [
+   "The harbourmaster at Knockowen kept a ledger of every ship.",
+   "She stored it in a copper tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Knockowen store her ledger?"
+ },
+ {
+  "fact_id": "two-11",
+  "kind": "two",
+  "novel_index": 2,
+  "place": "Dunscreen",
+  "sentences": [
+   "The baker in Dunscreen won first prize at the county fair.",
+   "His recipe called for 15 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Dunscreen call for?"
+ },
+ {
+  "fact_id": "two-12",
+  "kind": "two",
+  "novel_index": 2,
+  "place": "Lisfinn",
+  "sentences": [
+   "The postmistress of Lisfinn kept a dog that met every train.",
+   "It was a terrier called Tinker."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Lisfinn?"
+ },
+ {
+  "fact_id": "two-13",
+  "kind": "two",
+  "novel_index": 2,
+  "place": "Knockcorr",
+  "sentences": [
+   "The blacksmith at Knockcorr made a new gate for the churchyard.",
+   "He hung it in the spring of 1813."
+  ],
+  "question": "In what year did the blacksmith at Knockcorr hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-14",
+  "kind": "two",
+  "novel_index": 2,
+  "place": "Carrigfinn",
+  "sentences": [
+   "The ferryman at Carrigfinn carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Declan Venn."
+  ],
+  "question": "From whom did the ferryman at Carrigfinn buy his lantern?"
+ },
+ {
+  "fact_id": "one-30",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Kilowen",
+  "sentences": [
+   "The lighthouse at Kilowen was painted by a woman named Eamon Vesey."
+  ],
+  "question": "Who painted the lighthouse at Kilowen?"
+ },
+ {
+  "fact_id": "one-31",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Kilfinn",
+  "sentences": [
+   "The chapel bell at Kilfinn was cast from 21 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Kilfinn?"
+ },
+ {
+  "fact_id": "one-32",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Mullakeel",
+  "sentences": [
+   "The ferry that crosses to Mullakeel is called the Grey Heron."
+  ],
+  "question": "What is the ferry that crosses to Mullakeel called?"
+ },
+ {
+  "fact_id": "one-33",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Ardtully",
+  "sentences": [
+   "The oldest oak in Ardtully was planted by a schoolmaster named Cathal Moran."
+  ],
+  "question": "Who planted the oldest oak in Ardtully?"
+ },
+ {
+  "fact_id": "one-34",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Ennislough",
+  "sentences": [
+   "The weekly market in Ennislough is held every Tuesday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Ennislough held?"
+ },
+ {
+  "fact_id": "one-35",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Ballycorr",
+  "sentences": [
+   "The well at Ballycorr was sealed in the year 1873 after a winter flood."
+  ],
+  "question": "In what year was the well at Ballycorr sealed?"
+ },
+ {
+  "fact_id": "one-36",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Ardgarve",
+  "sentences": [
+   "The lighthouse at Ardgarve was painted by a woman named Donagh Parle."
+  ],
+  "question": "Who painted the lighthouse at Ardgarve?"
+ },
+ {
+  "fact_id": "one-37",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Drumbeg",
+  "sentences": [
+   "The chapel bell at Drumbeg was cast from 58 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Drumbeg?"
+ },
+ {
+  "fact_id": "one-38",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Clonkeel",
+  "sentences": [
+   "The ferry that crosses to Clonkeel is called the Lady Anne."
+  ],
+  "question": "What is the ferry that crosses to Clonkeel called?"
+ },
+ {
+  "fact_id": "one-39",
+  "kind": "one",
+  "novel_index": 3,
+  "place": "Tobermullen",
+  "sentences": [
+   "The oldest oak in Tobermullen was planted by a schoolmaster named Tadhg Hoey."
+  ],
+  "question": "Who planted the oldest oak in Tobermullen?"
+ },
+ {
+  "fact_id": "two-15",
+  "kind": "two",
+  "novel_index": 3,
+  "place": "Knocknagh",
+  "sentences": [
+   "The harbourmaster at Knocknagh kept a ledger of every ship.",
+   "She stored it in a green tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Knocknagh store her ledger?"
+ },
+ {
+  "fact_id": "two-16",
+  "kind": "two",
+  "novel_index": 3,
+  "place": "Inishbeg",
+  "sentences": [
+   "The baker in Inishbeg won first prize at the county fair.",
+   "His recipe called for 29 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Inishbeg call for?"
+ },
+ {
+  "fact_id": "two-17",
+  "kind": "two",
+  "novel_index": 3,
+  "place": "Ballyowen",
+  "sentences": [
+   "The postmistress of Ballyowen kept a dog that met every train.",
+   "It was a terrier called Marley."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Ballyowen?"
+ },
+ {
+  "fact_id": "two-18",
+  "kind": "two",
+  "novel_index": 3,
+  "place": "Knockdarra",
+  "sentences": [
+   "The blacksmith at Knockdarra made a new gate for the churchyard.",
+   "He hung it in the spring of 1811."
+  ],
+  "question": "In what year did the blacksmith at Knockdarra hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-19",
+  "kind": "two",
+  "novel_index": 3,
+  "place": "Mullascreen",
+  "sentences": [
+   "The ferryman at Mullascreen carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Sorcha Lusk."
+  ],
+  "question": "From whom did the ferryman at Mullascreen buy his lantern?"
+ },
+ {
+  "fact_id": "one-40",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Dundarra",
+  "sentences": [
+   "The weekly market in Dundarra is held every Thursday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Dundarra held?"
+ },
+ {
+  "fact_id": "one-41",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Inishgarve",
+  "sentences": [
+   "The well at Inishgarve was sealed in the year 1851 after a winter flood."
+  ],
+  "question": "In what year was the well at Inishgarve sealed?"
+ },
+ {
+  "fact_id": "one-42",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Rathkeel",
+  "sentences": [
+   "The lighthouse at Rathkeel was painted by a woman named Ronan Parle."
+  ],
+  "question": "Who painted the lighthouse at Rathkeel?"
+ },
+ {
+  "fact_id": "one-43",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Inishnagh",
+  "sentences": [
+   "The chapel bell at Inishnagh was cast from 59 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Inishnagh?"
+ },
+ {
+  "fact_id": "one-44",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Liskeel",
+  "sentences": [
+   "The ferry that crosses to Liskeel is called the Kittiwake."
+  ],
+  "question": "What is the ferry that crosses to Liskeel called?"
+ },
+ {
+  "fact_id": "one-45",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Mullanagh",
+  "sentences": [
+   "The oldest oak in Mullanagh was planted by a schoolmaster named Nuala Crean."
+  ],
+  "question": "Who planted the oldest oak in Mullanagh?"
+ },
+ {
+  "fact_id": "one-46",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Rathrane",
+  "sentences": [
+   "The weekly market in Rathrane is held every Tuesday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Rathrane held?"
+ },
+ {
+  "fact_id": "one-47",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Rathowen",
+  "sentences": [
+   "The well at Rathowen was sealed in the year 1839 after a winter flood."
+  ],
+  "question": "In what year was the well at Rathowen sealed?"
+ },
+ {
+  "fact_id": "one-48",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Carriggarve",
+  "sentences": [
+   "The lighthouse at Carriggarve was painted by a woman named Ailbhe Cadden."
+  ],
+  "question": "Who painted the lighthouse at Carriggarve?"
+ },
+ {
+  "fact_id": "one-49",
+  "kind": "one",
+  "novel_index": 4,
+  "place": "Carrigcorr",
+  "sentences": [
+   "The chapel bell at Carrigcorr was cast from 42 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Carrigcorr?"
+ },
+ {
+  "fact_id": "two-20",
+  "kind": "two",
+  "novel_index": 4,
+  "place": "Lisbrack",
+  "sentences": [
+   "The harbourmaster at Lisbrack kept a ledger of every ship.",
+   "She stored it in a black tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Lisbrack store her ledger?"
+ },
+ {
+  "fact_id": "two-21",
+  "kind": "two",
+  "novel_index": 4,
+  "place": "Tullanagh",
+  "sentences": [
+   "The baker in Tullanagh won first prize at the county fair.",
+   "His recipe called for 76 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Tullanagh call for?"
+ },
+ {
+  "fact_id": "two-22",
+  "kind": "two",
+  "novel_index": 4,
+  "place": "Lisgarve",
+  "sentences": [
+   "The postmistress of Lisgarve kept a dog that met every train.",
+   "It was a terrier called Bramble."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Lisgarve?"
+ },
+ {
+  "fact_id": "two-23",
+  "kind": "two",
+  "novel_index": 4,
+  "place": "Ballyrane",
+  "sentences": [
+   "The blacksmith at Ballyrane made a new gate for the churchyard.",
+   "He hung it in the spring of 1887."
+  ],
+  "question": "In what year did the blacksmith at Ballyrane hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-24",
+  "kind": "two",
+  "novel_index": 4,
+  "place": "Rathcorr",
+  "sentences": [
+   "The ferryman at Rathcorr carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Cathal Hoey."
+  ],
+  "question": "From whom did the ferryman at Rathcorr buy his lantern?"
+ },
+ {
+  "fact_id": "one-50",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Ennisgarve",
+  "sentences": [
+   "The ferry that crosses to Ennisgarve is called the Silver Eel."
+  ],
+  "question": "What is the ferry that crosses to Ennisgarve called?"
+ },
+ {
+  "fact_id": "one-51",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Carrigmullen",
+  "sentences": [
+   "The oldest oak in Carrigmullen was planted by a schoolmaster named Orla Mahony."
+  ],
+  "question": "Who planted the oldest oak in Carrigmullen?"
+ },
+ {
+  "fact_id": "one-52",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Ballymore",
+  "sentences": [
+   "The weekly market in Ballymore is held every Thursday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Ballymore held?"
+ },
+ {
+  "fact_id": "one-53",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Clontully",
+  "sentences": [
+   "The well at Clontully was sealed in the year 1791 after a winter flood."
+  ],
+  "question": "In what year was the well at Clontully sealed?"
+ },
+ {
+  "fact_id": "one-54",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Inishmore",
+  "sentences": [
+   "The lighthouse at Inishmore was painted by a woman named Aoife Tolan."
+  ],
+  "question": "Who painted the lighthouse at Inishmore?"
+ },
+ {
+  "fact_id": "one-55",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Glenowen",
+  "sentences": [
+   "The chapel bell at Glenowen was cast from 67 melted horseshoes."
+  ],
+  "question": "How many horseshoes were melted to cast the chapel bell at Glenowen?"
+ },
+ {
+  "fact_id": "one-56",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Drumcorr",
+  "sentences": [
+   "The ferry that crosses to Drumcorr is called the Silver Eel."
+  ],
+  "question": "What is the ferry that crosses to Drumcorr called?"
+ },
+ {
+  "fact_id": "one-57",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Dunrane",
+  "sentences": [
+   "The oldest oak in Dunrane was planted by a schoolmaster named Grainne Parle."
+  ],
+  "question": "Who planted the oldest oak in Dunrane?"
+ },
+ {
+  "fact_id": "one-58",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Knockfinn",
+  "sentences": [
+   "The weekly market in Knockfinn is held every Tuesday in the tannery yard."
+  ],
+  "question": "On which day is the weekly market in Knockfinn held?"
+ },
+ {
+  "fact_id": "one-59",
+  "kind": "one",
+  "novel_index": 5,
+  "place": "Ennisrane",
+  "sentences": [
+   "The well at Ennisrane was sealed in the year 1790 after a winter flood."
+  ],
+  "question": "In what year was the well at Ennisrane sealed?"
+ },
+ {
+  "fact_id": "two-25",
+  "kind": "two",
+  "novel_index": 5,
+  "place": "Ennismullen",
+  "sentences": [
+   "The harbourmaster at Ennismullen kept a ledger of every ship.",
+   "She stored it in a copper tin under the stairs."
+  ],
+  "question": "Where did the harbourmaster at Ennismullen store her ledger?"
+ },
+ {
+  "fact_id": "two-26",
+  "kind": "two",
+  "novel_index": 5,
+  "place": "Liscorr",
+  "sentences": [
+   "The baker in Liscorr won first prize at the county fair.",
+   "His recipe called for 26 duck eggs."
+  ],
+  "question": "How many duck eggs did the prize recipe of the baker in Liscorr call for?"
+ },
+ {
+  "fact_id": "two-27",
+  "kind": "two",
+  "novel_index": 5,
+  "place": "Kildarra",
+  "sentences": [
+   "The postmistress of Kildarra kept a dog that met every train.",
+   "It was a terrier called Pilot."
+  ],
+  "question": "What was the name of the dog kept by the postmistress of Kildarra?"
+ },
+ {
+  "fact_id": "two-28",
+  "kind": "two",
+  "novel_index": 5,
+  "place": "Ardscreen",
+  "sentences": [
+   "The blacksmith at Ardscreen made a new gate for the churchyard.",
+   "He hung it in the spring of 1803."
+  ],
+  "question": "In what year did the blacksmith at Ardscreen hang the churchyard gate?"
+ },
+ {
+  "fact_id": "two-29",
+  "kind": "two",
+  "novel_index": 5,
+  "place": "Toberscreen",
+  "sentences": [
+   "The ferryman at Toberscreen carried a lantern on every crossing.",
+   "He had bought it from a pedlar named Grainne Sleat."
+  ],
+  "question": "From whom did the ferryman at Toberscreen buy his lantern?"
+ }
+]

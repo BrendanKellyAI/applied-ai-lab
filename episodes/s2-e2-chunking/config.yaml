@@ -1,0 +1,28 @@
+# S2 E2: does the way a document is cut into chunks decide what search can find?
+#
+# Every setting the run used is here, so it can be reproduced exactly. The six novels are the
+# S1 E7 books, read from that field note's config.yaml so both episodes pin the same files.
+seed: 20260925
+model: text-embedding-3-small
+# The tokeniser of text-embedding-3-small. S1 E2 used o200k_base, which counts differently.
+tokeniser: cl100k_base
+books_from: field-notes/s1-e7-lost-in-the-middle/config.yaml
+
+# One contiguous excerpt per novel, in cl100k_base tokens, before the facts go in. The brief
+# asked for 30,000, but 15 facts spaced 2,500 tokens apart need at least 35,000: see README.
+excerpt_tokens: 40000
+one_sentence_facts_per_novel: 10
+two_sentence_facts_per_novel: 5
+# Measured from the start of one fact to the start of the next.
+min_fact_spacing_tokens: 2500
+
+chunk_sizes: [64, 128, 256, 512, 1024, 2048]
+overlap_fractions: [0.0, 0.25]
+top_k: 5
+floor_sample: 20
+
+pilot:
+  novel_index: 0
+  chunk_sizes: [64, 2048]
+  overlap_fractions: [0.0]
+  kinds: [one]
