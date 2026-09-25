@@ -1,0 +1,276 @@
+{
+ "episode": "s2-e3-search",
+ "embedding_model_requested": "text-embedding-3-small",
+ "embedding_model_returned": "text-embedding-3-small",
+ "generation_model_returned": [
+  "gpt-6-astra"
+ ],
+ "tokeniser": "cl100k_base",
+ "bm25": {
+  "package": "rank-bm25",
+  "version": "0.2.2",
+  "tokenisation": "lower-case, split on \\w+",
+  "parameters": "defaults"
+ },
+ "rrf_k": 60,
+ "top_k": 5,
+ "record_depth": 20,
+ "run_date_utc": "2026-09-25",
+ "seed": 20260926,
+ "articles": 30,
+ "tokens_reported": {
+  "generation": {
+   "calls": 38,
+   "input_tokens": 6679,
+   "output_tokens": 8157,
+   "reasoning_tokens": 3302
+  },
+  "embedding": 4704
+ },
+ "questions": [
+  {
+   "type": "identifier",
+   "article_id": "A000",
+   "question": "What does error E-2194 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A001": 11,
+     "A002": 8
+    },
+    "vector": {
+     "A001": 4,
+     "A002": 3
+    },
+    "hybrid": {
+     "A001": 5,
+     "A002": 3
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A003",
+   "question": "What is part KX-9283 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A004": 8,
+     "A005": 6
+    },
+    "vector": {
+     "A004": 17,
+     "A005": 2
+    },
+    "hybrid": {
+     "A004": 11,
+     "A005": 4
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A006",
+   "question": "What does error E-7084 mean?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A007": 2,
+     "A008": 7
+    },
+    "vector": {
+     "A007": 1,
+     "A008": 9
+    },
+    "hybrid": {
+     "A007": 2,
+     "A008": 8
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": true,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "identifier",
+   "article_id": "A009",
+   "question": "What is part KX-3107 for?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {
+    "keyword": {
+     "A010": 3,
+     "A011": 7
+    },
+    "vector": {
+     "A010": 4,
+     "A011": 2
+    },
+    "hybrid": {
+     "A010": 3,
+     "A011": 4
+    }
+   },
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A120",
+   "question": "Which wireless frequency does my smart water boiler support?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 11
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A121",
+   "question": "How should I get my dishwashing machine ready for months away from our vacation cottage?",
+   "ranks": {
+    "keyword": 14,
+    "vector": 1,
+    "hybrid": 5
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A122",
+   "question": "What guidance should I leave beside my laundry appliance for visitors at my vacation rental?",
+   "ranks": {
+    "keyword": 18,
+    "vector": 1,
+    "hybrid": 6
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A123",
+   "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+   "ranks": {
+    "keyword": null,
+    "vector": 1,
+    "hybrid": 6
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A160",
+   "question": "What should I do if my Halvard Home Keel washing machine vibrates more than usual?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A161",
+   "question": "What should I do if water is leaking underneath my Keel washing machine?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A162",
+   "question": "How do I safely install my Halvard Home Ashby tumble dryer before first use?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  },
+  {
+   "type": "shared",
+   "article_id": "A163",
+   "question": "What should I do if water collects underneath my Mira robot vacuum?",
+   "ranks": {
+    "keyword": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "lookalike_ranks": {},
+   "lookalike_above": {
+    "keyword": false,
+    "vector": false,
+    "hybrid": false
+   }
+  }
+ ]
+}

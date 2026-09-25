@@ -1,0 +1,118 @@
+# S2 E3: keyword search, vector search, and a hybrid of the two, on a knowledge base with known
+# answers. Every setting the run used is here, so it can be reproduced exactly.
+seed: 20260926
+company: Halvard Home
+generation_model: gpt-6-astra
+# Generous, because a reasoning model spends part of the limit thinking before it writes (S1 E6).
+# No temperature is sent: gpt-6-astra rejects one with HTTP 400 (S1 E8).
+max_output_tokens: 4000
+embedding_model: text-embedding-3-small
+tokeniser: cl100k_base
+
+articles: 300
+article_tokens: [120, 220]
+identifier_targets: 40
+lookalikes_per_target: 2
+questions_per_type: 40
+# A shared-word question must reuse at least this many of its article's content words.
+min_shared_words: 2
+max_attempts: 4
+
+top_k: 5
+# Ranks deeper than this are recorded as "not found".
+record_depth: 20
+rrf_k: 60
+
+pilot:
+  articles: 30
+  identifier_targets: 4
+  questions_per_type: 4
+
+products:
+  - Brio kettle
+  - Tessa dishwasher
+  - Orrin heat pump
+  - Lumen smart thermostat
+  - Keel washing machine
+  - Ashby tumble dryer
+  - Vale fridge freezer
+  - Corra induction hob
+  - Fenwick cooker hood
+  - Mira robot vacuum
+
+topics:
+  - first installation
+  - connecting to home wi-fi
+  - resetting to factory settings
+  - cleaning the filter
+  - descaling
+  - a strange noise during use
+  - a burning smell
+  - water leaking underneath
+  - the display staying blank
+  - the unit not switching on
+  - a fault code on the display
+  - a replacement part
+  - energy saving settings
+  - the child lock
+  - the warranty period
+  - booking an engineer visit
+  - updating the firmware
+  - the app not finding the device
+  - an unusual vibration
+  - the door or lid not closing
+  - a flashing warning light
+  - moving or transporting the unit
+  - the timer or delay start
+  - using it in a holiday home
+  - pairing with a voice assistant
+  - recycling an old unit
+  - a slow or weak performance
+  - frost or condensation build-up
+  - a power cut during use
+  - ordering a spare accessory
+
+article_prompt: |
+  You write customer support articles for Halvard Home, an invented maker of home appliances.
+  Write one support article about the product and topic below. Start with a short title line,
+  then the article, 100 to 140 words, in plain UK English. The article must state one specific,
+  concrete fact clearly, such as a setting, a duration, a figure, a step, or a cause, so a
+  reader could answer a question from it. Do not mention any error code or part number other
+  than one given below.
+
+identifier_prompt: |
+  The article is about {kind} {identifier}. Use exactly "{identifier}" once, and say clearly
+  what it means for this product and what to do. Invent a fault that fits the topic.
+
+question_prompts:
+  paraphrase: |
+    Here is a support article. Write one question a customer might ask whose answer is the
+    article's key fact. Use completely different words from the article: everyday phrasing and
+    synonyms, and no word that appears in the article, apart from very common words such as
+    "the", "how", or "my". Reply with the question only.
+  shared: |
+    Here is a support article. Write one question a customer might ask whose answer is the
+    article's key fact, using the article's own key words, including the product name. Reply
+    with the question only.
+  retry: |
+    Your question broke the rule. {problem} Write a new question that follows the rule. Reply
+    with the question only.
+
+# Identifier questions are written from templates in code, so they name the identifier and
+# nothing else distinctive.
+identifier_questions:
+  error code: "What does error {identifier} mean?"
+  part number: "What is part {identifier} for?"
+
+# Removed before comparing a question's words with its article's. Everything else counts as a
+# content word, including words such as "error" and "part".
+stop_words: [
+  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because,
+  been, before, being, below, between, both, but, by, can, could, did, do, does, doing, down,
+  during, each, few, for, from, further, get, got, had, has, have, having, he, her, here, hers,
+  him, his, how, i, if, in, into, is, it, its, just, me, more, most, my, myself, no, nor, not,
+  now, of, off, on, once, only, or, other, our, ours, out, over, own, s, same, she, should, so,
+  some, such, t, than, that, the, their, theirs, them, then, there, these, they, this, those,
+  through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who,
+  whom, why, will, with, would, you, your, yours, yourself, d, ll, m, re, ve
+]

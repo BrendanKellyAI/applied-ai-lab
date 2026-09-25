@@ -1,0 +1,89 @@
+{
+ "seed": 20260926,
+ "questions": [
+  {
+   "type": "identifier",
+   "article_id": "A000",
+   "question": "What does error E-2194 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A003",
+   "question": "What is part KX-9283 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A006",
+   "question": "What does error E-7084 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A009",
+   "question": "What is part KX-3107 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A120",
+   "question": "Which wireless frequency does my smart water boiler support?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A121",
+   "question": "How should I get my dishwashing machine ready for months away from our vacation cottage?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A122",
+   "question": "What guidance should I leave beside my laundry appliance for visitors at my vacation rental?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A123",
+   "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A160",
+   "question": "What should I do if my Halvard Home Keel washing machine vibrates more than usual?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A161",
+   "question": "What should I do if water is leaking underneath my Keel washing machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A162",
+   "question": "How do I safely install my Halvard Home Ashby tumble dryer before first use?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A163",
+   "question": "What should I do if water collects underneath my Mira robot vacuum?",
+   "regenerated": 0,
+   "rejected": []
+  }
+ ]
+}
