@@ -44,7 +44,7 @@ target-version = "py312"
 
 [tool.ruff.format]
 # Episode samples match slide listings exactly, so the formatter leaves them alone.
-exclude = ["episodes/**"]
+exclude = ["episodes/**", "field-notes/s2-e4-embedding-migration/migrate.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM"]
@@ -54,6 +54,8 @@ select = ["E", "F", "W", "I", "UP", "B", "SIM"]
 # above the slide listing, and zip() is not given strict=, which would push lines past 64
 # characters.
 "episodes/**" = ["E402", "B905"]
+# A field note with a slide listing, laid out the same way as the episode samples.
+"field-notes/s2-e4-embedding-migration/migrate.py" = ["E402"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

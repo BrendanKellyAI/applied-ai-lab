@@ -1,0 +1,48 @@
+# S2 E4: what changes when a retrieval system swaps its embedding model, and what re-embedding
+# costs in tokens. Every setting and every pass mark is here, fixed before the run.
+seed: 20260929
+# The S2 E3 corpus and questions, read as committed and never edited.
+corpus: episodes/s2-e3-search/corpus.json
+questions: episodes/s2-e3-search/questions.json
+e3_results: episodes/s2-e3-search/results/search.json
+tokeniser: cl100k_base
+
+old_model: text-embedding-3-small
+old_dimensions: 1536
+new_model: text-embedding-3-large
+new_dimensions: 3072
+# The large vectors cut to the old model's shape, locally: first 1,536 values, rescaled to length 1.
+short_dimensions: 1536
+
+# Route B: S2 E3 did not commit its vectors, so the old model is embedded twice, in two passes.
+route: B
+
+top_k: 5
+# The dimension check: this many articles embedded by the new model at short_dimensions.
+dimension_check_articles: 5
+dimension_check_min_cosine: 0.9999
+# Claim 3: the threshold is this percentile of the right articles' scores.
+threshold_percentile: 10
+
+pass_marks:
+  claim1_max_mean_overlap: 3.5
+  claim1_min_losses: 5
+  claim2a_max_hits: 10
+  claim2c_max_old_half_recall: 0.10
+  claim2c_max_gap_points: 10
+  claim3_min_k_points: 15
+  claim3_min_w_factor: 2
+  claim3_min_w_articles: 5
+  claim4_max_gap_percent: 1
+  control_min_mean_overlap: 4.9
+  control_max_flips: 2
+
+# Vectors committed to results/vectors.npz: the old side (fresh set 1), the new model, and the
+# dimension check. Control set 2 is left out to stay under 10 MB; its overlaps, flips and median
+# cosine are kept in results.json.
+committed_vectors: [old_a, old_q, new_a, new_q]
+max_vector_bytes: 10000000
+
+pilot:
+  questions_per_type: 4
+  other_articles: 8
