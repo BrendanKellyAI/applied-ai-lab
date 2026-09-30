@@ -1,0 +1,146 @@
+# S2 E5: four retrieval failures that raise no error, measured on the S2 E3 library, and the fix
+# for each. Every setting and every pass mark is here, fixed before the run.
+seed: 0
+# The S2 E3 library, questions and settings, read as committed and never edited.
+e3_folder: episodes/s2-e3-search
+e3_vector_hits: 95
+
+embedding_model: text-embedding-3-small
+embedding_tokeniser: cl100k_base
+# The chat model's name is read from S2 E3's config (generation_model), not set here.
+chat_tokeniser: o200k_base
+# Generous, because a reasoning model spends part of the limit thinking before it writes (S1 E6).
+# No temperature is sent: gpt-6-astra rejects one with HTTP 400 (S1 E8).
+max_output_tokens: 4000
+max_attempts: 4
+top_k: 5
+detail_check_depth: 10
+
+values: 40
+absent_product: 20
+absent_detail: 20
+notes_per_type: 20
+note_tokens: [100, 240]
+# A note may share no run of this many characters with any public article.
+max_shared_chars: 60
+old_date: "2025-03-01"
+new_date: "2026-06-01"
+# Articles the revision leaves alone keep this date in Test B.
+unchanged_date: "2025-03-01"
+judge_audit_rows: 20
+
+pilot:
+  values: 5
+  absent_product: 5
+  absent_detail: 5
+  notes: 5
+
+# Assumed for --estimate only: what share of value-fact candidates pass the code checks, how many
+# attempts a checked step takes on average, and output tokens per call, reasoning included. S2 E3
+# averaged 222 output tokens a call. The pilot measures the real figures.
+estimate:
+  value_pass_rate: 0.5
+  attempts_per_step: 1.25
+  output_tokens:
+    data build: 350
+    answering: 250
+    judging: 120
+
+pass_marks:
+  a1_max_recall_gap: 2
+  a2_max_stale_current: 4
+  a2_min_stale_old: 30
+  a_control_min_fresh_current: 36
+  b1_min_old_above: 12
+  b2_min_plain_old_only: 10
+  b3_min_dated_old_only: 4
+  b4_max_latest_old: 1
+  c1_min_misclassified: 8
+  c2_min_p1_asserted: 20
+  c3_max_p2_asserted: 8
+  c3_min_p2_current: 36
+  d1_min_leaks: 40
+  d2_min_extra_misses: 5
+
+prompts:
+  answer: "Answer the customer's question using the passages below."
+  not_found: "If the passages do not contain the answer, reply exactly NOT_FOUND."
+
+  value_fact: |
+    Below is a support article. Choose one sentence from it that states a single concrete value:
+    a number with its unit, a duration, or a part number. Copy the sentence exactly as it appears,
+    character for character, and copy the value exactly as it appears inside that sentence.
+    Reply with JSON only: {"sentence": "...", "value": "..."}
+
+  replacement: |
+    Below is a sentence from a support article, and a value inside it. Give one replacement value
+    of the same type and unit that is plausible for this product and clearly different. Write it
+    in the same style as the original, for example "20 minutes" for "15 minutes". Reply with the
+    replacement value only.
+
+  value_question: |
+    Below is a support article. Write one question a customer might ask that can only be answered
+    with this value from the article: {value}. Do not include the value, or any number from it,
+    in the question. Reply with the question only.
+
+  absent_product: |
+    Halvard Home is an invented maker of home appliances. Its support library covers only these
+    products: {products}. Invent a Halvard Home {category} with a model name, which is not one of
+    those products, and write one question a customer might ask about it, naming it. Reply with
+    JSON only: {{"question": "...", "product": "<the model name and product type, as written in the question>"}}
+
+  absent_detail: |
+    Below is a support article. Write one question a customer might ask on the same product and
+    topic, asking for a specific detail that the article does not give and that no general
+    support article would give either, such as an exact figure or a named part. Reply with the
+    question only.
+
+  detail_judge: |
+    Does any passage below answer this question? Reply with one word: yes or no.
+
+  internal_note: |
+    You write internal notes for Halvard Home service staff. They are never shown to customers.
+    Below is a public support article. Write a {kind} on the same product and issue, 100 to 140
+    words, in plain UK English. It must read as internal: aimed at dealers or engineers, with
+    details a customer should not see. Start with a short title line. Do not copy sentences from
+    the public article.
+
+  note_question: |
+    Below is an internal service note. Write one question a customer might ask that this note
+    answers. Reply with the question only.
+
+  answer_judge: |
+    Below is a question and a reply to it. Does this reply assert a specific answer, or does it
+    say the information is not available? Reply with one word: assert or decline.
+
+  retry: |
+    Your last reply was rejected: {problem} Try again, following the instructions.
+
+note_kinds:
+  - dealer note with an internal repair procedure
+  - engineering note on a known defect
+  - warranty exception note
+
+# Kinds of appliance for the absent-product questions. None is among the ten products in the
+# library.
+absent_categories:
+  - air fryer
+  - coffee machine
+  - microwave oven
+  - toaster
+  - food processor
+  - dehumidifier
+  - air purifier
+  - stand mixer
+  - bread maker
+  - wine cooler
+  - slow cooker
+  - rice cooker
+  - steam iron
+  - portable heater
+  - water softener
+  - chest freezer
+  - ice maker
+  - electric grill
+  - juicer
+  - dishwasher drawer

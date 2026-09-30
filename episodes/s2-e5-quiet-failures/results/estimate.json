@@ -1,0 +1,48 @@
+{
+ "sizes": {
+  "values": 40,
+  "absent_product": 20,
+  "absent_detail": 20,
+  "notes": 60
+ },
+ "stages": {
+  "data build": {
+   "calls": 390,
+   "input_tokens": 108853,
+   "output_tokens": 136500
+  },
+  "embeddings": {
+   "calls": 685,
+   "input_tokens": 63738,
+   "output_tokens": 0
+  },
+  "answering": {
+   "calls": 280,
+   "input_tokens": 224332,
+   "output_tokens": 70000
+  },
+  "judging": {
+   "calls": 80,
+   "input_tokens": 11348,
+   "output_tokens": 9600
+  }
+ },
+ "total": {
+  "calls": 1435,
+  "input_tokens": 408271,
+  "output_tokens": 216100
+ },
+ "tokenisers": {
+  "chat": "o200k_base",
+  "embeddings": "cl100k_base"
+ },
+ "assumptions": {
+  "value_pass_rate": 0.5,
+  "attempts_per_step": 1.25,
+  "output_tokens": {
+   "data build": 350,
+   "answering": 250,
+   "judging": 120
+  }
+ }
+}
