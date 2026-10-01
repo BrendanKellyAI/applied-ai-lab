@@ -67,8 +67,11 @@ prompts:
   not_found: "If the passages do not contain the answer, reply exactly NOT_FOUND."
 
   value_fact: |
-    Below is a support article. Choose one sentence from it that states a single concrete value:
-    a number with its unit, a duration, or a part number. Copy the sentence exactly as it appears,
+    Below is a support article. Choose one sentence from it that states a single concrete value.
+    Prefer, in this order: a measurement with its unit (such as a temperature, weight, volume or
+    distance), then a duration, then a setting with a number. Choose a part number or code only if
+    the article has none of those. Prefer a value specific enough not to appear in other articles,
+    such as "38 minutes" rather than "5 minutes". Copy the sentence exactly as it appears,
     character for character, and copy the value exactly as it appears inside that sentence.
     Reply with JSON only: {"sentence": "...", "value": "..."}
 
@@ -91,9 +94,10 @@ prompts:
 
   absent_detail: |
     Below is a support article. Write one question a customer might ask on the same product and
-    topic, asking for a specific detail that the article does not give and that no general
-    support article would give either, such as an exact figure or a named part. Reply with the
-    question only.
+    topic, asking for a specific technical detail of the kind support articles give, such as a
+    setting, a temperature, a duration, a measurement or a step, that this article does not give.
+    Do not ask about prices, costs, fees, warranty claims, the customer's account or order, or
+    anything personal. Reply with the question only.
 
   detail_judge: |
     Does any passage below answer this question? Reply with one word: yes or no.

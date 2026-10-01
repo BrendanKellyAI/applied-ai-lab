@@ -440,3 +440,9 @@ def test_clears_needs_intervals_apart(m):
     low, high = m.measure.count(2, 40), m.measure.count(30, 40)
     assert chart.clears([low, high], 1) and chart.clears([low, high], 0)
     assert not chart.clears([m.measure.count(20, 40), m.measure.count(24, 40)], 1)
+
+
+def test_value_kind(m):
+    assert m.library.value_kind("KX-3056") == "code"
+    assert m.library.value_kind("E-2194") == "code"
+    assert m.library.value_kind("38 minutes") == "measurement or duration"

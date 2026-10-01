@@ -146,7 +146,8 @@ def run(config: dict, chat, embed, e3: dict, data: dict, pilot: bool) -> dict:
     claims = {**measure.claims_a(a["summary"], marks), **measure.claims_b(b["summary"], marks),
               **measure.claims_c(c["summary"], marks),
               **measure.claims_d(d["summary"], marks, config["e3_vector_hits"])}
-    return {"A": a, "B": b, "C": c, "D": d, "audit": audit, "checks": checks, "claims": claims}
+    return {"A": a, "B": b, "C": c, "D": d, "audit": audit, "checks": checks, "claims": claims,
+            "values": values}
 
 
 def summary(config: dict, out: dict, chat, embed, size: dict, pilot: bool) -> dict:
@@ -162,6 +163,9 @@ def summary(config: dict, out: dict, chat, embed, size: dict, pilot: bool) -> di
         "embedding_model_returned": embed.inner.model_returned or config["embedding_model"],
         "top_k": config["top_k"],
         "pass_marks": config["pass_marks"],
+        "value_kinds": {kind: sum(1 for v in out["values"]
+                                  if library.value_kind(v["old"]) == kind)
+                        for kind in ("code", "measurement or duration")},
         "claims": out["claims"],
         "checks": out["checks"],
         "A": out["A"]["summary"],
@@ -224,7 +228,8 @@ def main() -> None:
     tokens = {"estimate": est, "actual": {**chat.usage, "embeddings": embed.usage()},
               "chat_calls_sent_this_run": chat.sent}
     write_results(folder, out, summ, tokens)
-    print(f"{'Pilot' if args.pilot else 'Full run'}, {summ['run_date_utc']}:")
+    print(f"{'Pilot' if args.pilot else 'Full run'}, {summ['run_date_utc']}. "
+          f"Value kinds: {summ['value_kinds']}")
     print_claims(summ)
     print(f"Chat calls sent this run: {chat.sent}; results in {folder.relative_to(ROOT)}")
 

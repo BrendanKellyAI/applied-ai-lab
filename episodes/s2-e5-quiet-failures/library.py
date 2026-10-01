@@ -105,6 +105,14 @@ def assert_minimal(original: str, revised: str, old: str, new: str) -> None:
         raise AssertionError("the changed text is not part of the new value")
 
 
+CODE = re.compile(r"^[A-Z]{1,3}-\d{3,5}$")
+
+
+def value_kind(value: str) -> str:
+    """Part number or code, or a measurement, duration or setting: for reporting the mix."""
+    return "code" if CODE.match(value.strip()) else "measurement or duration"
+
+
 def question_problem(question: str, old: str, new: str) -> str | None:
     if not question.strip():
         return "the question was empty"
