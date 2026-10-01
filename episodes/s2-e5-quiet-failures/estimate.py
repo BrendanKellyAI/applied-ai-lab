@@ -51,7 +51,8 @@ def data_build(config: dict, articles: list[dict], questions: list[dict], produc
     ids = [a["article_id"] for a in articles]
     out, embeds = [], []
 
-    out += [(with_article(p["value_fact"], articles[i]["text"]), 1) for i in candidates]
+    value_tries = config["estimate"]["value_fact_attempts"]
+    out += [(with_article(p["value_fact"], articles[i]["text"]), value_tries) for i in candidates]
     for i in candidates[: sizes["values"]]:
         text = articles[i]["text"]
         replacement = (f"{p['replacement']}{NL}Sentence: {stand_in_sentence(text)}{NL}"

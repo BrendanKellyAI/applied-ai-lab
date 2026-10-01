@@ -36,15 +36,17 @@ pilot:
   notes: 5
 
 # Assumed for --estimate only: what share of value-fact candidates pass the code checks, how many
-# attempts a checked step takes on average, and output tokens per call, reasoning included. S2 E3
-# averaged 222 output tokens a call. The pilot measures the real figures.
+# attempts the value-fact step and other checked steps take on average, and output tokens per
+# call, reasoning included. Set from the second pilot (1 October 2026), rounded up: about 75
+# output tokens per data-build call, 35 per answer and 6 per judgement.
 estimate:
   value_pass_rate: 0.5
+  value_fact_attempts: 2.5
   attempts_per_step: 1.25
   output_tokens:
-    data build: 350
-    answering: 250
-    judging: 120
+    data build: 100
+    answering: 50
+    judging: 10
 
 pass_marks:
   a1_max_recall_gap: 2

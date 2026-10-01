@@ -63,18 +63,25 @@ def value_candidate(chat, config: dict, texts: list[str], article: dict) -> dict
     """One article through the value-fact steps. Checks against the original library only; the
     checks between items run in accept_value."""
     prompts, text, aid = config["prompts"], article["text"], article["article_id"]
-    reply = chat(f"{prompts['value_fact']}\nArticle:\n{text}", "data build")
-    found = chatlib.parse_json(reply) or {}
-    sentence, old = str(found.get("sentence", "")), str(found.get("value", ""))
-    problem = library.value_problem(texts, text, sentence, old)
-    if problem:
-        return {"article_id": aid, "problem": f"value: {problem}", "reply": reply}
+
+    def check_value(r: str):
+        found = chatlib.parse_json(r) or {}
+        pair = (str(found.get("sentence", "")), str(found.get("value", "")))
+        return pair, library.value_problem(texts, text, *pair)
+
+    # Asked again with the reason when the value is not unique, so an article whose preferred
+    # measurement repeats elsewhere can still offer a unique value.
+    picked, tried = ask(chat, config, f"{prompts['value_fact']}\nArticle:\n{text}", check_value)
+    if picked is None:
+        return {"article_id": aid, "problem": "value: no unique value", "rejected": tried}
+    sentence, old = picked
 
     def check_new(r: str):
         return r.strip(), library.replacement_problem(texts, old, r)
 
     new, rejected = ask(chat, config, f"{prompts['replacement']}\nSentence: {sentence}\n"
                         f"Value: {old}", check_new)
+    rejected = tried + rejected
     if new is None:
         return {"article_id": aid, "problem": "no valid replacement", "rejected": rejected}
     try:
