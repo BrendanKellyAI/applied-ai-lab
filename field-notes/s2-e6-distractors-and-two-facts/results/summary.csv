@@ -1,16 +1,64 @@
 model,shape,context_length_tokens,item,bridge_first,correct,type,truncated,also_names_distractor,input_tokens,cached_input_tokens,output_tokens,reasoning_tokens,finish_reason,model_returned
-Claude Sonnet 5,single,16000,0,True,True,correct,False,False,23482,0,4,0,stop,claude-sonnet-5
-Claude Sonnet 5,distractors,16000,0,True,True,correct,False,False,23557,0,4,0,stop,claude-sonnet-5
-Claude Sonnet 5,two-fact,16000,0,True,True,correct,False,False,23503,0,4,0,stop,claude-sonnet-5
-Claude Sonnet 5,two-fact-distractors,16000,0,True,False,distractor value,False,False,23599,0,43,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,0,True,True,correct,False,False,185565,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,3,False,True,correct,False,False,182659,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,4,True,True,correct,False,False,180155,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,7,False,True,correct,False,False,182548,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,8,True,True,correct,False,False,174555,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,single,128000,11,False,True,correct,False,False,183036,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,0,True,True,correct,False,False,185640,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,3,False,True,correct,False,False,182733,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,4,True,True,correct,False,False,180229,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,7,False,True,correct,False,False,182622,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,8,True,True,correct,False,False,174631,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,128000,11,False,True,correct,False,False,183111,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,0,True,True,correct,False,False,185586,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,3,False,True,correct,False,False,182681,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,4,True,True,correct,False,False,180176,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,7,False,True,correct,False,False,182568,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,8,True,True,correct,False,False,174576,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,128000,11,False,True,correct,False,False,183057,0,4,0,stop,claude-sonnet-5
 Claude Sonnet 5,two-fact-distractors,128000,0,True,True,correct,False,False,185683,0,4,0,stop,claude-sonnet-5
-GPT-5.6 Terra,single,16000,0,True,True,correct,False,False,15953,0,6,0,stop,gpt-5.6-terra
-GPT-5.6 Terra,distractors,16000,0,True,True,correct,False,False,16006,0,6,0,stop,gpt-5.6-terra
-GPT-5.6 Terra,two-fact,16000,0,True,True,correct,False,False,15974,0,6,0,stop,gpt-5.6-terra
-GPT-5.6 Terra,two-fact-distractors,16000,0,True,True,correct,False,False,16060,0,6,0,stop,gpt-5.6-terra
+Claude Sonnet 5,two-fact-distractors,128000,3,False,False,intermediate,True,False,182779,0,50,0,length,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,128000,4,True,True,correct,False,False,180273,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,128000,7,False,False,distractor value,False,False,182663,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,128000,8,True,False,distractor value,False,False,174675,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,128000,11,False,False,distractor value,False,False,183152,0,4,0,stop,claude-sonnet-5
+GPT-5.6 Terra,single,128000,0,True,True,correct,False,False,127968,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,single,128000,3,False,True,correct,False,False,127976,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,single,128000,4,True,True,correct,False,False,127934,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,single,128000,8,True,True,correct,False,False,127980,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,0,True,True,correct,False,False,128021,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,3,False,True,correct,False,False,128028,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,8,True,True,correct,False,False,128032,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,0,True,True,correct,False,False,127989,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,7,False,True,correct,False,False,127996,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,8,True,True,correct,False,False,128001,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,0,True,True,correct,False,False,128074,0,6,0,stop,gpt-5.6-terra
-Gemini 3.6 Flash,single,16000,0,True,True,correct,False,False,16132,,4,,stop,gemini-3.6-flash
-Gemini 3.6 Flash,distractors,16000,0,True,True,correct,False,False,16198,,4,,stop,gemini-3.6-flash
-Gemini 3.6 Flash,two-fact,16000,0,True,True,correct,False,False,16149,,4,,stop,gemini-3.6-flash
-Gemini 3.6 Flash,two-fact-distractors,16000,0,True,True,correct,False,False,16235,,4,,stop,gemini-3.6-flash
+GPT-5.6 Terra,two-fact-distractors,128000,3,False,True,correct,False,False,128081,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,128000,4,True,True,correct,False,False,128040,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,128000,8,True,True,correct,False,False,128085,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,128000,11,False,True,correct,False,False,128060,0,6,0,stop,gpt-5.6-terra
+Gemini 3.6 Flash,single,128000,0,True,True,correct,False,False,128693,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,single,128000,3,False,True,correct,False,False,127140,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,single,128000,4,True,True,correct,False,False,130011,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,single,128000,7,False,True,correct,False,False,129755,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,single,128000,8,True,True,correct,False,False,129441,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,single,128000,11,False,True,correct,False,False,129605,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,0,True,True,correct,False,False,128759,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,3,False,True,correct,False,False,127206,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,4,True,True,correct,False,False,130077,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,7,False,True,correct,False,False,129821,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,8,True,True,correct,False,False,129509,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,128000,11,False,True,correct,False,False,129672,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,0,True,True,correct,False,False,128710,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,3,False,True,correct,False,False,127156,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,4,True,True,correct,False,False,130028,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,7,False,True,correct,False,False,129771,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,8,True,True,correct,False,False,129458,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,128000,11,False,True,correct,False,False,129622,,4,,stop,gemini-3.6-flash
 Gemini 3.6 Flash,two-fact-distractors,128000,0,True,False,intermediate,False,False,128797,,2,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,3,False,False,intermediate,False,False,127243,,2,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,4,True,False,intermediate,False,False,130115,,2,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,7,False,False,intermediate,False,False,129856,,2,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,8,True,False,intermediate,False,False,129545,,2,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,11,False,False,intermediate,False,False,129707,,2,,stop,gemini-3.6-flash

@@ -1,11 +1,23 @@
 {
   "experiment": "s2-e6-distractors-and-two-facts",
-  "scored_calls": 15,
-  "planned_calls": 432,
+  "scored_calls": 63,
+  "planned_calls": 72,
+  "run_lengths_tokens": [
+    128000
+  ],
+  "run_items": [
+    0,
+    3,
+    4,
+    7,
+    8,
+    11
+  ],
+  "pilot_calls_outside_run": 12,
   "grid_complete": false,
   "run_window": {
-    "first_result_utc": "2026-10-04T15:30:36.641878+00:00",
-    "last_result_utc": "2026-10-04T15:30:48.929490+00:00"
+    "first_result_utc": "2026-10-04T15:30:45.184029+00:00",
+    "last_result_utc": "2026-10-04T16:03:50.779971+00:00"
   },
   "dataset": {
     "documents": 144,
@@ -18,136 +30,115 @@
     "by_model": {
       "GPT-5.6 Terra": {
         "single": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 4,
+            "trials": 4,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.5101,
             "wilson_high": 1.0
           }
         },
         "distractors": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 3,
+            "trials": 3,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.4385,
             "wilson_high": 1.0
           }
         },
         "two-fact": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 3,
+            "trials": 3,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.4385,
             "wilson_high": 1.0
           }
         },
         "two-fact-distractors": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
-            "accuracy": 1.0,
-            "wilson_low": 0.2065,
-            "wilson_high": 1.0
-          },
           "128000": {
-            "correct": 1,
-            "trials": 1,
+            "correct": 5,
+            "trials": 5,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.5655,
             "wilson_high": 1.0
           }
         }
       },
       "Claude Sonnet 5": {
         "single": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "distractors": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "two-fact": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "two-fact-distractors": {
-          "16000": {
-            "correct": 0,
-            "trials": 1,
-            "accuracy": 0.0,
-            "wilson_low": 0.0,
-            "wilson_high": 0.7935
-          },
           "128000": {
-            "correct": 1,
-            "trials": 1,
-            "accuracy": 1.0,
-            "wilson_low": 0.2065,
-            "wilson_high": 1.0
+            "correct": 2,
+            "trials": 6,
+            "accuracy": 0.3333,
+            "wilson_low": 0.0968,
+            "wilson_high": 0.7
           }
         }
       },
       "Gemini 3.6 Flash": {
         "single": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "distractors": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "two-fact": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
+          "128000": {
+            "correct": 6,
+            "trials": 6,
             "accuracy": 1.0,
-            "wilson_low": 0.2065,
+            "wilson_low": 0.6097,
             "wilson_high": 1.0
           }
         },
         "two-fact-distractors": {
-          "16000": {
-            "correct": 1,
-            "trials": 1,
-            "accuracy": 1.0,
-            "wilson_low": 0.2065,
-            "wilson_high": 1.0
-          },
           "128000": {
             "correct": 0,
-            "trials": 1,
+            "trials": 6,
             "accuracy": 0.0,
             "wilson_low": 0.0,
-            "wilson_high": 0.7935
+            "wilson_high": 0.3903
           }
         }
       }
@@ -186,8 +177,8 @@
     },
     {
       "id": "H4",
-      "verdict": "Not evaluated",
-      "evidence": "Needs every call for two-fact-distractors at 16,000 and two-fact-distractors at 128,000.",
+      "verdict": "Not tested",
+      "evidence": "Withdrawn before the run: the reduced run has no 16,000-token calls.",
       "figures": {}
     },
     {
@@ -214,177 +205,244 @@
       "other": 0
     },
     "two-fact-distractors": {
-      "distractor value": 1,
-      "intermediate": 1,
+      "distractor value": 3,
+      "intermediate": 7,
       "other": 0
     }
   },
   "wrong_by_model": {
     "GPT-5.6 Terra": {},
     "Claude Sonnet 5": {
-      "distractor value": 1
+      "intermediate": 1,
+      "distractor value": 3
     },
     "Gemini 3.6 Flash": {
-      "intermediate": 1
+      "intermediate": 6
     }
   },
   "distractor_replies_by_edit_kind": {
-    "swap": 1
+    "digit": 1
   },
   "correct_but_also_named_distractor": 0,
-  "truncated": [],
+  "truncated": [
+    {
+      "model": "Claude Sonnet 5",
+      "shape": "two-fact-distractors",
+      "length": 128000,
+      "item": 3
+    }
+  ],
   "order": {
     "two-fact": {
       "bridge first": {
-        "16000": {
-          "correct": 3,
-          "trials": 3,
+        "128000": {
+          "correct": 8,
+          "trials": 8,
           "accuracy": 1.0,
-          "wilson_low": 0.4385,
+          "wilson_low": 0.6756,
           "wilson_high": 1.0
         },
         "all": {
-          "correct": 3,
-          "trials": 3,
+          "correct": 8,
+          "trials": 8,
           "accuracy": 1.0,
-          "wilson_low": 0.4385,
+          "wilson_low": 0.6756,
           "wilson_high": 1.0
         }
       },
       "answer first": {
+        "128000": {
+          "correct": 7,
+          "trials": 7,
+          "accuracy": 1.0,
+          "wilson_low": 0.6457,
+          "wilson_high": 1.0
+        },
         "all": {
-          "correct": 0,
-          "trials": 0,
-          "accuracy": 0.0,
-          "wilson_low": 0.0,
+          "correct": 7,
+          "trials": 7,
+          "accuracy": 1.0,
+          "wilson_low": 0.6457,
           "wilson_high": 1.0
         }
       }
     },
     "two-fact-distractors": {
       "bridge first": {
-        "16000": {
-          "correct": 2,
-          "trials": 3,
-          "accuracy": 0.6667,
-          "wilson_low": 0.2077,
-          "wilson_high": 0.9385
-        },
         "128000": {
-          "correct": 2,
-          "trials": 3,
-          "accuracy": 0.6667,
-          "wilson_low": 0.2077,
-          "wilson_high": 0.9385
+          "correct": 5,
+          "trials": 9,
+          "accuracy": 0.5556,
+          "wilson_low": 0.2667,
+          "wilson_high": 0.8112
         },
         "all": {
-          "correct": 4,
-          "trials": 6,
-          "accuracy": 0.6667,
-          "wilson_low": 0.3,
-          "wilson_high": 0.9032
+          "correct": 5,
+          "trials": 9,
+          "accuracy": 0.5556,
+          "wilson_low": 0.2667,
+          "wilson_high": 0.8112
         }
       },
       "answer first": {
+        "128000": {
+          "correct": 2,
+          "trials": 8,
+          "accuracy": 0.25,
+          "wilson_low": 0.0715,
+          "wilson_high": 0.5907
+        },
         "all": {
-          "correct": 0,
-          "trials": 0,
-          "accuracy": 0.0,
-          "wilson_low": 0.0,
-          "wilson_high": 1.0
+          "correct": 2,
+          "trials": 8,
+          "accuracy": 0.25,
+          "wilson_low": 0.0715,
+          "wilson_high": 0.5907
         }
       }
     }
   },
   "tokens": {
     "Claude Sonnet 5": {
-      "calls": 5,
-      "input_tokens": 279824,
+      "calls": 24,
+      "input_tokens": 4355353,
       "cached_input_tokens": 0,
-      "output_tokens": 59,
-      "max_output_tokens_per_call": 43,
-      "mean_output_tokens_per_call": 11.8,
-      "reasoning_tokens_reported_on": 5,
+      "output_tokens": 142,
+      "max_output_tokens_per_call": 50,
+      "mean_output_tokens_per_call": 5.92,
+      "reasoning_tokens_reported_on": 24,
       "reasoning_tokens": 0,
       "models_returned": [
         "claude-sonnet-5"
       ],
       "by_length": {
-        "16000": {
-          "calls": 4,
-          "provider_input_tokens": 94141,
-          "o200k_document_tokens": 63813,
-          "ratio": 1.475,
-          "max_provider_input_tokens": 23599
-        },
         "128000": {
-          "calls": 1,
-          "provider_input_tokens": 185683,
-          "o200k_document_tokens": 128026,
-          "ratio": 1.45,
+          "calls": 24,
+          "provider_input_tokens": 4355353,
+          "o200k_document_tokens": 3071141,
+          "ratio": 1.418,
           "max_provider_input_tokens": 185683
         }
       }
     },
     "GPT-5.6 Terra": {
-      "calls": 5,
-      "input_tokens": 192067,
+      "calls": 15,
+      "input_tokens": 1920265,
       "cached_input_tokens": 0,
-      "output_tokens": 30,
+      "output_tokens": 90,
       "max_output_tokens_per_call": 6,
       "mean_output_tokens_per_call": 6.0,
-      "reasoning_tokens_reported_on": 5,
+      "reasoning_tokens_reported_on": 15,
       "reasoning_tokens": 0,
       "models_returned": [
         "gpt-5.6-terra"
       ],
       "by_length": {
-        "16000": {
-          "calls": 4,
-          "provider_input_tokens": 63993,
-          "o200k_document_tokens": 63813,
-          "ratio": 1.003,
-          "max_provider_input_tokens": 16060
-        },
         "128000": {
-          "calls": 1,
-          "provider_input_tokens": 128074,
-          "o200k_document_tokens": 128026,
+          "calls": 15,
+          "provider_input_tokens": 1920265,
+          "o200k_document_tokens": 1919587,
           "ratio": 1.0,
-          "max_provider_input_tokens": 128074
+          "max_provider_input_tokens": 128085
         }
       }
     },
     "Gemini 3.6 Flash": {
-      "calls": 5,
-      "input_tokens": 193511,
+      "calls": 24,
+      "input_tokens": 3099697,
       "cached_input_tokens": 0,
-      "output_tokens": 18,
+      "output_tokens": 84,
       "max_output_tokens_per_call": 4,
-      "mean_output_tokens_per_call": 3.6,
+      "mean_output_tokens_per_call": 3.5,
       "reasoning_tokens_reported_on": 0,
       "reasoning_tokens": 0,
       "models_returned": [
         "gemini-3.6-flash"
       ],
       "by_length": {
-        "16000": {
-          "calls": 4,
-          "provider_input_tokens": 64714,
-          "o200k_document_tokens": 63813,
-          "ratio": 1.014,
-          "max_provider_input_tokens": 16235
-        },
         "128000": {
-          "calls": 1,
-          "provider_input_tokens": 128797,
-          "o200k_document_tokens": 128026,
-          "ratio": 1.006,
-          "max_provider_input_tokens": 128797
+          "calls": 24,
+          "provider_input_tokens": 3099697,
+          "o200k_document_tokens": 3071141,
+          "ratio": 1.009,
+          "max_provider_input_tokens": 130115
         }
       }
     }
   },
-  "failures": [],
+  "failures": [
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "item": 3,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: Rate limit reached for gpt-5.6-terra in organization org-Dbpc9fzOInT4ihGo2iUWqcsj on tokens per min (TPM): Limit 500000, Used 440514, Requested 128140. Please try again in 8.238s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "item": 4,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: Rate limit reached for gpt-5.6-terra in organization org-Dbpc9fzOInT4ihGo2iUWqcsj on tokens per min (TPM): Limit 500000, Used 473107, Requested 128129. Please try again in 12.148s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "item": 4,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "item": 7,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "item": 7,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "item": 7,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "item": 11,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "item": 11,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "item": 11,
+      "error": "StreamInterruptedError: OpenAI stream interrupted: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "too_long": false
+    }
+  ],
   "chart_highlights": {}
 }

@@ -1,5 +1,11 @@
 model,shape,context_length_tokens,item,identifier,expected,reply,type,matched,matched_role,truncated,finish_reason
-Claude Sonnet 5,two-fact-distractors,16000,0,F-155,9571,"4106
-
-**Turbine F-155 is stored in hangar 4G**, and the access code for hangar 4G is **4106**.",distractor value,4G,hangar of F-515 (swap),False,stop
+Claude Sonnet 5,two-fact-distractors,128000,3,J-150,6993,"I don't have that information in the document. The document mentions ""Turbine J-150 is stored in hangar 4Y"" but does not provide an access code for hangar 4",intermediate,4Y,the turbine's own hangar,True,length
+Claude Sonnet 5,two-fact-distractors,128000,7,V-503,7751,7691,distractor value,7691,"access code for hangar 1X, which has no turbine",False,stop
+Claude Sonnet 5,two-fact-distractors,128000,8,M-124,5561,7039,distractor value,7039,"access code for hangar 5H, which has no turbine",False,stop
+Claude Sonnet 5,two-fact-distractors,128000,11,U-211,3494,9679,distractor value,9679,"access code for hangar 5V, where U-711 is (digit)",False,stop
 Gemini 3.6 Flash,two-fact-distractors,128000,0,F-155,9571,5N,intermediate,5N,the turbine's own hangar,False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,3,J-150,6993,4Y,intermediate,4Y,the turbine's own hangar,False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,4,N-994,9076,6P,intermediate,6P,the turbine's own hangar,False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,7,V-503,7751,8D,intermediate,8D,the turbine's own hangar,False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,8,M-124,5561,2M,intermediate,2M,the turbine's own hangar,False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,11,U-211,3494,9V,intermediate,9V,the turbine's own hangar,False,stop
