@@ -187,6 +187,11 @@ answerable questions.
 | D-post | 0 of 120 (0% to 3%) | 84 of 120 (61% to 77%) | 3.18 | 62 |
 | D-pre | 0 of 120 (0% to 3%) | 95 of 120 (71% to 85%) | 5.00 | 0 |
 
+Leaks by question type: all 40 code questions, 12 of 40 paraphrase and 10 of 40 shared-word. An
+internal note ranked first on 41 of 120 questions, and the leaked note is not always on the
+question's topic: "What does error E-2194 mean?" brought up a dealer note on error E-9509, the
+same weakness with codes that S2 E3 measured.
+
 Internal notes on the same issue often outrank public articles. Dropping them after ranking stops
 the leak, but leaves the prompt short (fewer than 5 passages on 62 questions) and loses 11 right
 answers that sat just below the notes. Filtering before ranking keeps all five places for public
