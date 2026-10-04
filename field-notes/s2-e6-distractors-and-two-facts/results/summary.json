@@ -1,0 +1,390 @@
+{
+  "experiment": "s2-e6-distractors-and-two-facts",
+  "scored_calls": 15,
+  "planned_calls": 432,
+  "grid_complete": false,
+  "run_window": {
+    "first_result_utc": "2026-10-04T15:30:36.641878+00:00",
+    "last_result_utc": "2026-10-04T15:30:48.929490+00:00"
+  },
+  "dataset": {
+    "documents": 144,
+    "max_length_deviation_percent": 0.856,
+    "max_position_deviation_points": 0.439,
+    "length_tolerance_percent": 5,
+    "position_tolerance_points": 2
+  },
+  "accuracy": {
+    "by_model": {
+      "GPT-5.6 Terra": {
+        "single": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "distractors": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact-distractors": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          },
+          "128000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        }
+      },
+      "Claude Sonnet 5": {
+        "single": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "distractors": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact-distractors": {
+          "16000": {
+            "correct": 0,
+            "trials": 1,
+            "accuracy": 0.0,
+            "wilson_low": 0.0,
+            "wilson_high": 0.7935
+          },
+          "128000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        }
+      },
+      "Gemini 3.6 Flash": {
+        "single": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "distractors": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          }
+        },
+        "two-fact-distractors": {
+          "16000": {
+            "correct": 1,
+            "trials": 1,
+            "accuracy": 1.0,
+            "wilson_low": 0.2065,
+            "wilson_high": 1.0
+          },
+          "128000": {
+            "correct": 0,
+            "trials": 1,
+            "accuracy": 0.0,
+            "wilson_low": 0.0,
+            "wilson_high": 0.7935
+          }
+        }
+      }
+    },
+    "pooled": {
+      "single": {},
+      "distractors": {},
+      "two-fact": {},
+      "two-fact-distractors": {}
+    }
+  },
+  "claims": [
+    {
+      "id": "H0",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for the Single shape.",
+      "figures": {}
+    },
+    {
+      "id": "H1",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for single at 128,000 and distractors at 128,000.",
+      "figures": {}
+    },
+    {
+      "id": "H2",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for single at 128,000 and two-fact at 128,000.",
+      "figures": {}
+    },
+    {
+      "id": "H3",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for shapes 2, 3 and 4 at 128,000.",
+      "figures": {}
+    },
+    {
+      "id": "H4",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for two-fact-distractors at 16,000 and two-fact-distractors at 128,000.",
+      "figures": {}
+    },
+    {
+      "id": "H5",
+      "verdict": "Not evaluated",
+      "evidence": "Needs every call for shape 4 at 128,000.",
+      "figures": {}
+    }
+  ],
+  "wrong_by_shape": {
+    "single": {
+      "distractor value": 0,
+      "intermediate": 0,
+      "other": 0
+    },
+    "distractors": {
+      "distractor value": 0,
+      "intermediate": 0,
+      "other": 0
+    },
+    "two-fact": {
+      "distractor value": 0,
+      "intermediate": 0,
+      "other": 0
+    },
+    "two-fact-distractors": {
+      "distractor value": 1,
+      "intermediate": 1,
+      "other": 0
+    }
+  },
+  "wrong_by_model": {
+    "GPT-5.6 Terra": {},
+    "Claude Sonnet 5": {
+      "distractor value": 1
+    },
+    "Gemini 3.6 Flash": {
+      "intermediate": 1
+    }
+  },
+  "distractor_replies_by_edit_kind": {
+    "swap": 1
+  },
+  "correct_but_also_named_distractor": 0,
+  "truncated": [],
+  "order": {
+    "two-fact": {
+      "bridge first": {
+        "16000": {
+          "correct": 3,
+          "trials": 3,
+          "accuracy": 1.0,
+          "wilson_low": 0.4385,
+          "wilson_high": 1.0
+        },
+        "all": {
+          "correct": 3,
+          "trials": 3,
+          "accuracy": 1.0,
+          "wilson_low": 0.4385,
+          "wilson_high": 1.0
+        }
+      },
+      "answer first": {
+        "all": {
+          "correct": 0,
+          "trials": 0,
+          "accuracy": 0.0,
+          "wilson_low": 0.0,
+          "wilson_high": 1.0
+        }
+      }
+    },
+    "two-fact-distractors": {
+      "bridge first": {
+        "16000": {
+          "correct": 2,
+          "trials": 3,
+          "accuracy": 0.6667,
+          "wilson_low": 0.2077,
+          "wilson_high": 0.9385
+        },
+        "128000": {
+          "correct": 2,
+          "trials": 3,
+          "accuracy": 0.6667,
+          "wilson_low": 0.2077,
+          "wilson_high": 0.9385
+        },
+        "all": {
+          "correct": 4,
+          "trials": 6,
+          "accuracy": 0.6667,
+          "wilson_low": 0.3,
+          "wilson_high": 0.9032
+        }
+      },
+      "answer first": {
+        "all": {
+          "correct": 0,
+          "trials": 0,
+          "accuracy": 0.0,
+          "wilson_low": 0.0,
+          "wilson_high": 1.0
+        }
+      }
+    }
+  },
+  "tokens": {
+    "Claude Sonnet 5": {
+      "calls": 5,
+      "input_tokens": 279824,
+      "cached_input_tokens": 0,
+      "output_tokens": 59,
+      "max_output_tokens_per_call": 43,
+      "mean_output_tokens_per_call": 11.8,
+      "reasoning_tokens_reported_on": 5,
+      "reasoning_tokens": 0,
+      "models_returned": [
+        "claude-sonnet-5"
+      ],
+      "by_length": {
+        "16000": {
+          "calls": 4,
+          "provider_input_tokens": 94141,
+          "o200k_document_tokens": 63813,
+          "ratio": 1.475,
+          "max_provider_input_tokens": 23599
+        },
+        "128000": {
+          "calls": 1,
+          "provider_input_tokens": 185683,
+          "o200k_document_tokens": 128026,
+          "ratio": 1.45,
+          "max_provider_input_tokens": 185683
+        }
+      }
+    },
+    "GPT-5.6 Terra": {
+      "calls": 5,
+      "input_tokens": 192067,
+      "cached_input_tokens": 0,
+      "output_tokens": 30,
+      "max_output_tokens_per_call": 6,
+      "mean_output_tokens_per_call": 6.0,
+      "reasoning_tokens_reported_on": 5,
+      "reasoning_tokens": 0,
+      "models_returned": [
+        "gpt-5.6-terra"
+      ],
+      "by_length": {
+        "16000": {
+          "calls": 4,
+          "provider_input_tokens": 63993,
+          "o200k_document_tokens": 63813,
+          "ratio": 1.003,
+          "max_provider_input_tokens": 16060
+        },
+        "128000": {
+          "calls": 1,
+          "provider_input_tokens": 128074,
+          "o200k_document_tokens": 128026,
+          "ratio": 1.0,
+          "max_provider_input_tokens": 128074
+        }
+      }
+    },
+    "Gemini 3.6 Flash": {
+      "calls": 5,
+      "input_tokens": 193511,
+      "cached_input_tokens": 0,
+      "output_tokens": 18,
+      "max_output_tokens_per_call": 4,
+      "mean_output_tokens_per_call": 3.6,
+      "reasoning_tokens_reported_on": 0,
+      "reasoning_tokens": 0,
+      "models_returned": [
+        "gemini-3.6-flash"
+      ],
+      "by_length": {
+        "16000": {
+          "calls": 4,
+          "provider_input_tokens": 64714,
+          "o200k_document_tokens": 63813,
+          "ratio": 1.014,
+          "max_provider_input_tokens": 16235
+        },
+        "128000": {
+          "calls": 1,
+          "provider_input_tokens": 128797,
+          "o200k_document_tokens": 128026,
+          "ratio": 1.006,
+          "max_provider_input_tokens": 128797
+        }
+      }
+    }
+  },
+  "failures": [],
+  "chart_highlights": {}
+}

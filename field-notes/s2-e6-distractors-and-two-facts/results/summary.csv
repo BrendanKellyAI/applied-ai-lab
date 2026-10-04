@@ -1,0 +1,16 @@
+model,shape,context_length_tokens,item,bridge_first,correct,type,truncated,also_names_distractor,input_tokens,cached_input_tokens,output_tokens,reasoning_tokens,finish_reason,model_returned
+Claude Sonnet 5,single,16000,0,True,True,correct,False,False,23482,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,distractors,16000,0,True,True,correct,False,False,23557,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact,16000,0,True,True,correct,False,False,23503,0,4,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,16000,0,True,False,distractor value,False,False,23599,0,43,0,stop,claude-sonnet-5
+Claude Sonnet 5,two-fact-distractors,128000,0,True,True,correct,False,False,185683,0,4,0,stop,claude-sonnet-5
+GPT-5.6 Terra,single,16000,0,True,True,correct,False,False,15953,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,16000,0,True,True,correct,False,False,16006,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,16000,0,True,True,correct,False,False,15974,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,16000,0,True,True,correct,False,False,16060,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,128000,0,True,True,correct,False,False,128074,0,6,0,stop,gpt-5.6-terra
+Gemini 3.6 Flash,single,16000,0,True,True,correct,False,False,16132,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,distractors,16000,0,True,True,correct,False,False,16198,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact,16000,0,True,True,correct,False,False,16149,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,16000,0,True,True,correct,False,False,16235,,4,,stop,gemini-3.6-flash
+Gemini 3.6 Flash,two-fact-distractors,128000,0,True,False,intermediate,False,False,128797,,2,,stop,gemini-3.6-flash

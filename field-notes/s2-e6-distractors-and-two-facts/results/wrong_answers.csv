@@ -1,0 +1,5 @@
+model,shape,context_length_tokens,item,identifier,expected,reply,type,matched,matched_role,truncated,finish_reason
+Claude Sonnet 5,two-fact-distractors,16000,0,F-155,9571,"4106
+
+**Turbine F-155 is stored in hangar 4G**, and the access code for hangar 4G is **4106**.",distractor value,4G,hangar of F-515 (swap),False,stop
+Gemini 3.6 Flash,two-fact-distractors,128000,0,F-155,9571,5N,intermediate,5N,the turbine's own hangar,False,stop

@@ -112,7 +112,7 @@ def _drop_claim(
 ) -> Claim:
     above, below = cells.pooled(*high), cells.pooled(*low)
     if above is None or below is None:
-        return _missing(claim_id, f"{high[0]} and {low[0]}")
+        return _missing(claim_id, f"{high[0]} at {high[1]:,} and {low[0]} at {low[1]:,}")
     drop = _points(above, below)
     return Claim(
         claim_id,
