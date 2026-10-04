@@ -237,8 +237,10 @@ third). None changed a pass mark.
   but a fresh run with an empty cache will not reproduce them word for word.
 - **Chart style** is the repository's shared `lab.charts` system that S2 E2 to E4 use (navy,
   pale bars, hatched second series, one acid green highlight, Inter Tight), at the same slide
-  size as S2 E4. Only the scope chart has a highlight: no-filter leaks, the one interval that
-  clears the others.
+  size as S2 E4. Two charts have a highlight, each where one interval clears the bar it is
+  compared with: the stale index's old-value bar (`stale`) and the no-filter leaks bar
+  (`scope`). `versions` and `prompts` say on the chart that nothing is highlighted; `scores` has
+  no highlight rule.
 - **Test B dates:** the 260 unchanged articles are dated 2025-03-01, and B-latest shows passages
   without dates, so only the filter differs from B-plain.
 
