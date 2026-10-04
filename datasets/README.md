@@ -49,6 +49,26 @@ book and both digests, rather than quietly producing a different dataset. Checks
 17 September 2026; if a mirror file legitimately changes, check the text and update the checksum
 in the config.
 
+## S2 E6: distractors and two-fact questions
+
+**What it contains.** Passages from six public-domain novels at 16,000, 64,000 and 128,000
+tokens, each with invented sentences inserted at measured positions: one maintenance code, the
+same with four look-alikes, a two-step bridge and access code, or the two-step pair with
+look-alikes. Every id, hangar and code is generated from the config seed and is absent from the
+book text.
+
+**Source.** S1 E7's five books above, except Frankenstein, which is too short for 128,000 tokens,
+plus one replacement from the same mirror, pinned by SHA-256 on 4 October 2026:
+
+| Gutenberg ID | Title | Author |
+|---|---|---|
+| 1260 | Jane Eyre | Charlotte Brontë |
+
+**Licence, download and integrity.** As S1 E7. The documents are gitignored and rebuilt on
+demand; `field-notes/s2-e6-distractors-and-two-facts/results/dataset_manifest.json`, which is
+committed, holds the invented facts and a SHA-256 of every built document, so a rebuild can be
+checked against it.
+
 ## S1 E10: reasoning versus standard
 
 **What it contains.** 120 generated questions with known correct answers, in four families:

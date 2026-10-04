@@ -14,7 +14,7 @@ from typing import Any
 from lab.cache import ResponseCache
 from lab.config import ExperimentConfig
 from lab.pilot import select_calls
-from lab.plan import PlannedCall
+from lab.plan import PlanError, PlannedCall
 from lab.prices import PricesFile
 from lab.providers.base import request_hash
 from lab.raw_log import RunRecord, latest_successful
@@ -121,6 +121,45 @@ class EstimateReport:
     full: RunEstimate
     budget: float | None
     batch_note: str
+    breakdown: "InputBreakdown | None" = None
+
+
+@dataclass(frozen=True)
+class InputBreakdown:
+    """The full run's input tokens per model at each value of one cell key, such as length."""
+
+    key: str
+    # (model label, cell value, calls, input tokens counted with o200k_base)
+    rows: tuple[tuple[str, Any, int, int], ...]
+
+
+def input_breakdown(
+    calls: Sequence[PlannedCall], key: str, count_tokens: TokenCounter
+) -> InputBreakdown:
+    """Input tokens per model and per value of `key`, for every call, cached or not."""
+    totals: dict[tuple[str, Any], list[int]] = defaultdict(lambda: [0, 0])
+    for call in calls:
+        if key not in call.cell:
+            raise PlanError(f"estimate_by key '{key}' is not a key of call cells")
+        total = totals[(call.model_label, call.cell[key])]
+        total[0] += 1
+        total[1] += count_tokens(call.request.system or "") + count_tokens(call.request.prompt)
+    return InputBreakdown(
+        key=key,
+        rows=tuple((model, value, n, tokens) for (model, value), (n, tokens) in totals.items()),
+    )
+
+
+def _memoised(count_tokens: TokenCounter) -> TokenCounter:
+    """The same counter, remembering each text, so a prompt sent to three models is counted once."""
+    seen: dict[str, int] = {}
+
+    def count(text: str) -> int:
+        if text not in seen:
+            seen[text] = count_tokens(text)
+        return seen[text]
+
+    return count
 
 
 def _output_samples(records: Sequence[RunRecord]) -> dict[tuple[str, str], list[int]]:
@@ -248,9 +287,14 @@ def build_report(
     **options: Any,
 ) -> EstimateReport:
     """Estimate the pilot and the full run separately. Options are passed to estimate_run."""
+    options = {**options, "count_tokens": _memoised(options["count_tokens"])}
     pilot = estimate_run("Pilot", select_calls(calls, config, pilot=True), **options)
-    full = estimate_run("Full run", select_calls(calls, config), **options)
+    full_calls = select_calls(calls, config)
+    full = estimate_run("Full run", full_calls, **options)
     prices: PricesFile | None = options.get("prices")
+    breakdown = None
+    if config.estimate_by is not None:
+        breakdown = input_breakdown(full_calls, config.estimate_by, options["count_tokens"])
     return EstimateReport(
         experiment=config.experiment,
         prices=prices,
@@ -258,6 +302,7 @@ def build_report(
         full=full,
         budget=prices.budget_for(config.experiment) if prices else None,
         batch_note=_batch_note(config, full),
+        breakdown=breakdown,
     )
 
 
@@ -336,6 +381,17 @@ def _format_run(run: RunEstimate) -> list[str]:
     return lines
 
 
+def _format_breakdown(breakdown: InputBreakdown | None) -> list[str]:
+    """Input tokens per model at each value of the key, or nothing when no key is set."""
+    if breakdown is None:
+        return []
+    lines = [f"Full run input tokens by model and {breakdown.key} (o200k_base, all calls):"]
+    for model, value, calls, tokens in sorted(breakdown.rows, key=lambda row: (row[0], row[1])):
+        shown = f"{value:,}" if isinstance(value, int) else str(value)
+        lines.append(f"  {model:<20} {shown:>10}  {_plural(calls, 'call'):>9}  {tokens:>13,}")
+    return [*lines, ""]
+
+
 def _budget_line(report: EstimateReport) -> str:
     if report.prices is None:
         return "Budget: not checked, because there is no prices file."
@@ -364,6 +420,7 @@ def format_report(report: EstimateReport) -> str:
         "",
         *_format_run(report.full),
         "",
+        *_format_breakdown(report.breakdown),
         _budget_line(report),
         report.batch_note,
     ]

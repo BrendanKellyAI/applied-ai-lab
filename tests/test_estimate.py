@@ -243,3 +243,52 @@ def test_nothing_left_to_run_passes_any_budget(tmp_path):
 
     assert run.uncached_calls == 0
     check_budget(run, budget=0.0)
+
+
+def test_breakdown_by_cell_key_counts_every_full_run_call(tmp_path):
+    config = _config(estimate_by="item")
+
+    report = build_report(
+        config,
+        _calls(config, items=2),
+        cache=ResponseCache(tmp_path),
+        prior_records=[],
+        prices=None,
+        count_tokens=words,
+    )
+
+    # Two modes per item, 12 tokens per call: 2 calls and 24 tokens at each item.
+    assert sorted(report.breakdown.rows) == [("mock-a", 0, 2, 24), ("mock-a", 1, 2, 24)]
+    assert "Full run input tokens by model and item" in format_report(report)
+
+
+def test_no_breakdown_unless_a_key_is_set(tmp_path):
+    config = _config()
+
+    report = build_report(
+        config,
+        _calls(config),
+        cache=ResponseCache(tmp_path),
+        prior_records=[],
+        prices=None,
+        count_tokens=words,
+    )
+
+    assert report.breakdown is None
+    assert "input tokens by model and" not in format_report(report)
+
+
+def test_breakdown_key_must_be_a_cell_key(tmp_path):
+    from lab.plan import PlanError
+
+    config = _config(estimate_by="length")
+
+    with pytest.raises(PlanError, match="length"):
+        build_report(
+            config,
+            _calls(config),
+            cache=ResponseCache(tmp_path),
+            prior_records=[],
+            prices=None,
+            count_tokens=words,
+        )

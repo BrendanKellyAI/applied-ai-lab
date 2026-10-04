@@ -107,6 +107,9 @@ class ExperimentConfig(BaseModel):
     call_order: Literal["planned", "shuffled"] = "planned"
     # Whether latency is part of the findings. If not, the estimator notes batch API savings.
     measures_latency: bool = True
+    # A cell key, such as context_length_tokens, by which `lab estimate` also breaks down the
+    # full run's input tokens per model.
+    estimate_by: str | None = None
 
     @model_validator(mode="after")
     def _labels_unique(self) -> "ExperimentConfig":

@@ -1,0 +1,4983 @@
+{
+  "experiment": "s2-e6-distractors-and-two-facts",
+  "seed": 20261004,
+  "tokeniser": "o200k_base",
+  "front_matter_fraction": 0.1,
+  "mirror": "https://gutenberg.pglaf.org",
+  "books": [
+    {
+      "id": 1342,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "sha256": "81300b79e8a8d65ac530a97578417d06137e3bbc90622a10a65e5036183d2500",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/1/3/4/1342/1342-0.txt"
+    },
+    {
+      "id": 2701,
+      "title": "Moby Dick; or, The Whale",
+      "author": "Herman Melville",
+      "sha256": "547de799c1643ef231cc1efe45ffccefcb876ff3fe8f2206e7488529ad08f999",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/2/7/0/2701/2701-0.txt"
+    },
+    {
+      "id": 1400,
+      "title": "Great Expectations",
+      "author": "Charles Dickens",
+      "sha256": "48dd8f292e68ff2856675a60b48bcd80b1ebe6ed58ac3e6f91a2bb2400f1e345",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/1/4/0/1400/1400-0.txt"
+    },
+    {
+      "id": 98,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "sha256": "e3dfeb67feb904ac0f73a35204a175c58248422c2be8556802cb8820d958d67c",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/9/98/98-0.txt"
+    },
+    {
+      "id": 345,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "sha256": "8cf05c0f0ac5b282d84f2fb36dbccd744bdb5bce7b5612438a63b43cbe27b472",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/3/4/345/345-0.txt"
+    },
+    {
+      "id": 1260,
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "sha256": "693618b2da336410626b96d793af9988215d39a8e5f192e3e7800c5f927d6c43",
+      "licence": "Public domain in the United States. Project Gutenberg header and footer removed, so the Project Gutenberg trademark and its licence do not apply to the extracted text. Licence terms checked 17 September 2026: https://www.gutenberg.org/policy/permission.html",
+      "url": "https://gutenberg.pglaf.org/1/2/6/1260/1260-0.txt"
+    }
+  ],
+  "max_length_deviation_percent": 0.856,
+  "max_position_deviation_points": 0.439,
+  "fact_sets": [
+    {
+      "item": 0,
+      "book_id": 1342,
+      "identifier": "F-155",
+      "hangar": "5N",
+      "maintenance_code": "5496",
+      "access_code": "9571",
+      "look_alikes": [
+        "F-515",
+        "F-755",
+        "Z-155",
+        "F-145"
+      ],
+      "look_alike_codes": [
+        "8798",
+        "3373",
+        "7447",
+        "6889"
+      ],
+      "look_alike_hangars": [
+        "4G",
+        "2H",
+        "3J",
+        "7J"
+      ],
+      "look_alike_access_codes": [
+        "4106",
+        "3540",
+        "5058",
+        "2209"
+      ],
+      "bridge_first": true,
+      "target_position": 32.4,
+      "distractor_positions": [
+        6.2,
+        59.5,
+        70.2,
+        86.5
+      ],
+      "bridge_position": 18.5,
+      "answer_position": 77.4,
+      "combined_positions": [
+        57.6,
+        32.9,
+        88.3,
+        8.3,
+        43.1,
+        98.3
+      ]
+    },
+    {
+      "item": 1,
+      "book_id": 1342,
+      "identifier": "W-441",
+      "hangar": "3E",
+      "maintenance_code": "5761",
+      "access_code": "9903",
+      "look_alikes": [
+        "W-414",
+        "W-401",
+        "G-441",
+        "W-421"
+      ],
+      "look_alike_codes": [
+        "6839",
+        "5755",
+        "8285",
+        "7138"
+      ],
+      "look_alike_hangars": [
+        "1G",
+        "1W",
+        "6T",
+        "5T"
+      ],
+      "look_alike_access_codes": [
+        "6473",
+        "7559",
+        "8259",
+        "8694"
+      ],
+      "bridge_first": false,
+      "target_position": 52.0,
+      "distractor_positions": [
+        40.3,
+        20.9,
+        80.0,
+        67.2
+      ],
+      "bridge_position": 85.0,
+      "answer_position": 20.5,
+      "combined_positions": [
+        63.4,
+        2.6,
+        96.5,
+        32.0,
+        53.0,
+        73.9
+      ]
+    },
+    {
+      "item": 2,
+      "book_id": 2701,
+      "identifier": "K-573",
+      "hangar": "5U",
+      "maintenance_code": "1204",
+      "access_code": "3671",
+      "look_alikes": [
+        "K-537",
+        "K-578",
+        "X-573",
+        "K-773"
+      ],
+      "look_alike_codes": [
+        "6578",
+        "9288",
+        "9439",
+        "5955"
+      ],
+      "look_alike_hangars": [
+        "6M",
+        "7X",
+        "5G",
+        "4Y"
+      ],
+      "look_alike_access_codes": [
+        "5941",
+        "8932",
+        "7927",
+        "9032"
+      ],
+      "bridge_first": true,
+      "target_position": 56.1,
+      "distractor_positions": [
+        84.2,
+        42.7,
+        11.1,
+        25.3
+      ],
+      "bridge_position": 13.0,
+      "answer_position": 73.9,
+      "combined_positions": [
+        33.3,
+        97.8,
+        1.5,
+        57.1,
+        45.8,
+        87.6
+      ]
+    },
+    {
+      "item": 3,
+      "book_id": 2701,
+      "identifier": "J-150",
+      "hangar": "4Y",
+      "maintenance_code": "1953",
+      "access_code": "6993",
+      "look_alikes": [
+        "J-105",
+        "J-110",
+        "K-150",
+        "J-550"
+      ],
+      "look_alike_codes": [
+        "7249",
+        "8985",
+        "3324",
+        "3269"
+      ],
+      "look_alike_hangars": [
+        "5J",
+        "2L",
+        "1L",
+        "2Y"
+      ],
+      "look_alike_access_codes": [
+        "9325",
+        "4428",
+        "3898",
+        "2929"
+      ],
+      "bridge_first": false,
+      "target_position": 43.9,
+      "distractor_positions": [
+        69.5,
+        29.4,
+        92.9,
+        13.7
+      ],
+      "bridge_position": 72.1,
+      "answer_position": 28.7,
+      "combined_positions": [
+        45.3,
+        18.0,
+        86.8,
+        60.8,
+        5.8,
+        99.7
+      ]
+    },
+    {
+      "item": 4,
+      "book_id": 1400,
+      "identifier": "N-994",
+      "hangar": "6P",
+      "maintenance_code": "2831",
+      "access_code": "9076",
+      "look_alikes": [
+        "N-949",
+        "N-974",
+        "A-994",
+        "N-794"
+      ],
+      "look_alike_codes": [
+        "6737",
+        "4318",
+        "3587",
+        "4563"
+      ],
+      "look_alike_hangars": [
+        "3J",
+        "7T",
+        "2L",
+        "1N"
+      ],
+      "look_alike_access_codes": [
+        "7508",
+        "5355",
+        "7548",
+        "3783"
+      ],
+      "bridge_first": true,
+      "target_position": 69.2,
+      "distractor_positions": [
+        93.6,
+        8.6,
+        57.6,
+        36.5
+      ],
+      "bridge_position": 25.2,
+      "answer_position": 73.0,
+      "combined_positions": [
+        53.9,
+        2.0,
+        99.4,
+        83.7,
+        43.3,
+        13.9
+      ]
+    },
+    {
+      "item": 5,
+      "book_id": 1400,
+      "identifier": "Z-825",
+      "hangar": "6S",
+      "maintenance_code": "2577",
+      "access_code": "6243",
+      "look_alikes": [
+        "Z-285",
+        "Z-895",
+        "R-825",
+        "Z-820"
+      ],
+      "look_alike_codes": [
+        "8873",
+        "5350",
+        "4284",
+        "3219"
+      ],
+      "look_alike_hangars": [
+        "2C",
+        "8P",
+        "4M",
+        "8H"
+      ],
+      "look_alike_access_codes": [
+        "1217",
+        "9297",
+        "8681",
+        "5890"
+      ],
+      "bridge_first": false,
+      "target_position": 60.5,
+      "distractor_positions": [
+        42.6,
+        97.8,
+        28.6,
+        14.9
+      ],
+      "bridge_position": 75.1,
+      "answer_position": 10.4,
+      "combined_positions": [
+        27.9,
+        88.6,
+        62.0,
+        41.0,
+        99.3,
+        0.4
+      ]
+    },
+    {
+      "item": 6,
+      "book_id": 98,
+      "identifier": "X-826",
+      "hangar": "1D",
+      "maintenance_code": "3354",
+      "access_code": "1171",
+      "look_alikes": [
+        "X-862",
+        "X-326",
+        "W-826",
+        "X-626"
+      ],
+      "look_alike_codes": [
+        "9370",
+        "6345",
+        "7659",
+        "5714"
+      ],
+      "look_alike_hangars": [
+        "9L",
+        "4E",
+        "6J",
+        "3G"
+      ],
+      "look_alike_access_codes": [
+        "6160",
+        "5126",
+        "9434",
+        "6601"
+      ],
+      "bridge_first": true,
+      "target_position": 54.7,
+      "distractor_positions": [
+        98.3,
+        42.1,
+        11.5,
+        79.2
+      ],
+      "bridge_position": 22.6,
+      "answer_position": 83.6,
+      "combined_positions": [
+        11.4,
+        70.9,
+        94.1,
+        36.9,
+        56.0,
+        0.3
+      ]
+    },
+    {
+      "item": 7,
+      "book_id": 98,
+      "identifier": "V-503",
+      "hangar": "8D",
+      "maintenance_code": "1334",
+      "access_code": "7751",
+      "look_alikes": [
+        "V-530",
+        "V-573",
+        "J-503",
+        "V-203"
+      ],
+      "look_alike_codes": [
+        "5697",
+        "5993",
+        "9777",
+        "6685"
+      ],
+      "look_alike_hangars": [
+        "1U",
+        "6L",
+        "1X",
+        "5V"
+      ],
+      "look_alike_access_codes": [
+        "3616",
+        "4707",
+        "7691",
+        "8601"
+      ],
+      "bridge_first": false,
+      "target_position": 74.2,
+      "distractor_positions": [
+        86.5,
+        33.1,
+        4.4,
+        60.5
+      ],
+      "bridge_position": 72.7,
+      "answer_position": 17.4,
+      "combined_positions": [
+        29.0,
+        96.0,
+        40.9,
+        6.1,
+        50.9,
+        83.9
+      ]
+    },
+    {
+      "item": 8,
+      "book_id": 345,
+      "identifier": "M-124",
+      "hangar": "2M",
+      "maintenance_code": "3854",
+      "access_code": "5561",
+      "look_alikes": [
+        "M-214",
+        "M-424",
+        "E-124",
+        "M-144"
+      ],
+      "look_alike_codes": [
+        "7692",
+        "4584",
+        "8910",
+        "4598"
+      ],
+      "look_alike_hangars": [
+        "9Z",
+        "7L",
+        "1U",
+        "5H"
+      ],
+      "look_alike_access_codes": [
+        "3980",
+        "4985",
+        "5292",
+        "7039"
+      ],
+      "bridge_first": true,
+      "target_position": 64.5,
+      "distractor_positions": [
+        24.4,
+        41.3,
+        77.8,
+        2.9
+      ],
+      "bridge_position": 13.2,
+      "answer_position": 70.5,
+      "combined_positions": [
+        87.5,
+        40.1,
+        54.9,
+        99.0,
+        23.2,
+        0.4
+      ]
+    },
+    {
+      "item": 9,
+      "book_id": 345,
+      "identifier": "A-965",
+      "hangar": "6L",
+      "maintenance_code": "2481",
+      "access_code": "8722",
+      "look_alikes": [
+        "A-695",
+        "A-465",
+        "T-965",
+        "A-955"
+      ],
+      "look_alike_codes": [
+        "8993",
+        "9785",
+        "8897",
+        "7284"
+      ],
+      "look_alike_hangars": [
+        "8T",
+        "5N",
+        "3V",
+        "6V"
+      ],
+      "look_alike_access_codes": [
+        "2872",
+        "3292",
+        "2244",
+        "2880"
+      ],
+      "bridge_first": false,
+      "target_position": 26.1,
+      "distractor_positions": [
+        14.8,
+        97.1,
+        55.4,
+        67.7
+      ],
+      "bridge_position": 88.8,
+      "answer_position": 16.6,
+      "combined_positions": [
+        60.6,
+        29.9,
+        78.0,
+        99.6,
+        44.9,
+        4.5
+      ]
+    },
+    {
+      "item": 10,
+      "book_id": 1260,
+      "identifier": "E-818",
+      "hangar": "5P",
+      "maintenance_code": "2293",
+      "access_code": "9073",
+      "look_alikes": [
+        "E-881",
+        "E-810",
+        "G-818",
+        "E-218"
+      ],
+      "look_alike_codes": [
+        "3313",
+        "3638",
+        "9844",
+        "8942"
+      ],
+      "look_alike_hangars": [
+        "8P",
+        "4U",
+        "9E",
+        "5M"
+      ],
+      "look_alike_access_codes": [
+        "9010",
+        "9842",
+        "1497",
+        "8546"
+      ],
+      "bridge_first": true,
+      "target_position": 44.1,
+      "distractor_positions": [
+        79.5,
+        4.6,
+        64.8,
+        24.5
+      ],
+      "bridge_position": 28.2,
+      "answer_position": 79.1,
+      "combined_positions": [
+        6.5,
+        99.0,
+        38.2,
+        62.4,
+        17.6,
+        49.0
+      ]
+    },
+    {
+      "item": 11,
+      "book_id": 1260,
+      "identifier": "U-211",
+      "hangar": "9V",
+      "maintenance_code": "7491",
+      "access_code": "3494",
+      "look_alikes": [
+        "U-121",
+        "U-711",
+        "K-211",
+        "U-218"
+      ],
+      "look_alike_codes": [
+        "7024",
+        "5335",
+        "5317",
+        "6559"
+      ],
+      "look_alike_hangars": [
+        "4E",
+        "5V",
+        "6D",
+        "7T"
+      ],
+      "look_alike_access_codes": [
+        "4110",
+        "9679",
+        "7405",
+        "2357"
+      ],
+      "bridge_first": false,
+      "target_position": 48.1,
+      "distractor_positions": [
+        79.1,
+        60.1,
+        34.5,
+        18.3
+      ],
+      "bridge_position": 81.8,
+      "answer_position": 29.4,
+      "combined_positions": [
+        7.3,
+        43.9,
+        70.3,
+        59.3,
+        97.8,
+        18.1
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "item": 0,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15911,
+      "placements": [
+        [
+          "target",
+          32.4,
+          32.381
+        ]
+      ],
+      "sha256": "9a525f12dcf45cd5355a92a77920e4d876233d99a21dfa07e9fe5c6bd1d816e1"
+    },
+    {
+      "item": 0,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15964,
+      "placements": [
+        [
+          "distractor",
+          6.2,
+          6.139
+        ],
+        [
+          "target",
+          32.4,
+          32.381
+        ],
+        [
+          "distractor",
+          59.5,
+          59.567
+        ],
+        [
+          "distractor",
+          70.2,
+          70.38
+        ],
+        [
+          "distractor",
+          86.5,
+          86.501
+        ]
+      ],
+      "sha256": "dab235099eb2d50bab28d37ab428ece4130aa01d0740a0265f59c75c7d3adbd1"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15926,
+      "placements": [
+        [
+          "bridge",
+          18.5,
+          18.499
+        ],
+        [
+          "answer",
+          77.4,
+          77.412
+        ]
+      ],
+      "sha256": "9710764d68945476ae56806b2aefd2b1a0c8cacf2c5fd20d89825bb10e52b486"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 16012,
+      "placements": [
+        [
+          "answer-distractor",
+          8.3,
+          8.076
+        ],
+        [
+          "bridge",
+          18.5,
+          18.499
+        ],
+        [
+          "bridge-distractor",
+          32.9,
+          32.878
+        ],
+        [
+          "answer-distractor",
+          43.1,
+          43.068
+        ],
+        [
+          "bridge-distractor",
+          57.6,
+          57.58
+        ],
+        [
+          "answer",
+          77.4,
+          77.412
+        ],
+        [
+          "answer-distractor",
+          88.3,
+          88.433
+        ],
+        [
+          "answer-distractor",
+          98.3,
+          97.861
+        ]
+      ],
+      "sha256": "9c5309afb6e0e384486802e3e029845fc538e66044db116464ef2d21f5502f4d"
+    },
+    {
+      "item": 0,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63934,
+      "placements": [
+        [
+          "target",
+          32.4,
+          32.41
+        ]
+      ],
+      "sha256": "eb7d7ab08e2919e451c1a240c0bbee8f9471355285002a7a887ef89be9fdf1fa"
+    },
+    {
+      "item": 0,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63986,
+      "placements": [
+        [
+          "distractor",
+          6.2,
+          6.203
+        ],
+        [
+          "target",
+          32.4,
+          32.41
+        ],
+        [
+          "distractor",
+          59.5,
+          59.509
+        ],
+        [
+          "distractor",
+          70.2,
+          70.252
+        ],
+        [
+          "distractor",
+          86.5,
+          86.486
+        ]
+      ],
+      "sha256": "db68021d3d0fa0b5645e3ca233b6b2c42ebdc253e298f9297f4dcdca92bdb642"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63949,
+      "placements": [
+        [
+          "bridge",
+          18.5,
+          18.482
+        ],
+        [
+          "answer",
+          77.4,
+          77.378
+        ]
+      ],
+      "sha256": "45951cb6667aa8499c683bd238b88001b86bb51a76ec03bfe07270dcf6314640"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 64035,
+      "placements": [
+        [
+          "answer-distractor",
+          8.3,
+          8.302
+        ],
+        [
+          "bridge",
+          18.5,
+          18.482
+        ],
+        [
+          "bridge-distractor",
+          32.9,
+          32.825
+        ],
+        [
+          "answer-distractor",
+          43.1,
+          43.158
+        ],
+        [
+          "bridge-distractor",
+          57.6,
+          57.615
+        ],
+        [
+          "answer",
+          77.4,
+          77.378
+        ],
+        [
+          "answer-distractor",
+          88.3,
+          88.296
+        ],
+        [
+          "answer-distractor",
+          98.3,
+          98.309
+        ]
+      ],
+      "sha256": "ef6da8473dac7ed11b7814941a6f0a57e950aec146a8b83c319ce54e5ebd22b2"
+    },
+    {
+      "item": 0,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127926,
+      "placements": [
+        [
+          "target",
+          32.4,
+          32.403
+        ]
+      ],
+      "sha256": "dc109cdb5c354e5ac18c63d5f0e6327f8e67b0e8632bfc35429af8210f9d02f9"
+    },
+    {
+      "item": 0,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127979,
+      "placements": [
+        [
+          "distractor",
+          6.2,
+          6.206
+        ],
+        [
+          "target",
+          32.4,
+          32.403
+        ],
+        [
+          "distractor",
+          59.5,
+          59.49
+        ],
+        [
+          "distractor",
+          70.2,
+          70.219
+        ],
+        [
+          "distractor",
+          86.5,
+          86.501
+        ]
+      ],
+      "sha256": "99af80af5dbbd6d8dec8b6a02dab143efde3dc5c8b09002a703d25400498ebb2"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127941,
+      "placements": [
+        [
+          "bridge",
+          18.5,
+          18.507
+        ],
+        [
+          "answer",
+          77.4,
+          77.429
+        ]
+      ],
+      "sha256": "492878db8d7b7c0b06b1de57ff0d08f38fc15604afa372203b956e4f43d3ebd9"
+    },
+    {
+      "item": 0,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 128026,
+      "placements": [
+        [
+          "answer-distractor",
+          8.3,
+          8.298
+        ],
+        [
+          "bridge",
+          18.5,
+          18.507
+        ],
+        [
+          "bridge-distractor",
+          32.9,
+          32.886
+        ],
+        [
+          "answer-distractor",
+          43.1,
+          43.093
+        ],
+        [
+          "bridge-distractor",
+          57.6,
+          57.602
+        ],
+        [
+          "answer",
+          77.4,
+          77.429
+        ],
+        [
+          "answer-distractor",
+          88.3,
+          88.293
+        ],
+        [
+          "answer-distractor",
+          98.3,
+          98.298
+        ]
+      ],
+      "sha256": "5cd87742aa6c703bbb515186c44a7990197f9efc8c13654d18ff701c36fcd719"
+    },
+    {
+      "item": 1,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15911,
+      "placements": [
+        [
+          "target",
+          52.0,
+          51.868
+        ]
+      ],
+      "sha256": "890dc1c1917edc860ef24e264e7a94b15dcf6659e9da0ee35a8304c80f705c51"
+    },
+    {
+      "item": 1,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15963,
+      "placements": [
+        [
+          "distractor",
+          20.9,
+          20.94
+        ],
+        [
+          "distractor",
+          40.3,
+          40.439
+        ],
+        [
+          "target",
+          52.0,
+          51.868
+        ],
+        [
+          "distractor",
+          67.2,
+          67.21
+        ],
+        [
+          "distractor",
+          80.0,
+          79.953
+        ]
+      ],
+      "sha256": "c2f2cdaed30c285fee86a871eb11227bcfb73d53fd0a27e3af2c0319cadb9a53"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 15926,
+      "placements": [
+        [
+          "answer",
+          20.5,
+          20.6
+        ],
+        [
+          "bridge",
+          85.0,
+          84.973
+        ]
+      ],
+      "sha256": "e499fd32aaf8248d1c89048f709a953684f78e380bd8a22a5bebe4cab3f3454f"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1342,
+      "actual_tokens": 16010,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.6,
+          2.592
+        ],
+        [
+          "answer",
+          20.5,
+          20.6
+        ],
+        [
+          "answer-distractor",
+          32.0,
+          32.035
+        ],
+        [
+          "answer-distractor",
+          53.0,
+          53.019
+        ],
+        [
+          "bridge-distractor",
+          63.4,
+          63.392
+        ],
+        [
+          "answer-distractor",
+          73.9,
+          73.821
+        ],
+        [
+          "bridge",
+          85.0,
+          84.973
+        ],
+        [
+          "answer-distractor",
+          96.5,
+          96.421
+        ]
+      ],
+      "sha256": "d8f86f59e375175414230cced2153d34d38076e900767f6516922954f6d7f053"
+    },
+    {
+      "item": 1,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63934,
+      "placements": [
+        [
+          "target",
+          52.0,
+          51.989
+        ]
+      ],
+      "sha256": "e7c0b159e8dba9750c14aac8cdc5c255c5947732fff2c01d8618c433eb828904"
+    },
+    {
+      "item": 1,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63986,
+      "placements": [
+        [
+          "distractor",
+          20.9,
+          20.905
+        ],
+        [
+          "distractor",
+          40.3,
+          40.306
+        ],
+        [
+          "target",
+          52.0,
+          51.989
+        ],
+        [
+          "distractor",
+          67.2,
+          67.18
+        ],
+        [
+          "distractor",
+          80.0,
+          79.986
+        ]
+      ],
+      "sha256": "ab62b20ec803b40ca27f48265c6c506edd8daf7adfff2535d9495338932d7be2"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 63949,
+      "placements": [
+        [
+          "answer",
+          20.5,
+          20.449
+        ],
+        [
+          "bridge",
+          85.0,
+          85.008
+        ]
+      ],
+      "sha256": "bbe68c7ccaa652fed0d1de646c1c6ac11198fe854f20bdc6ddd9502d62b67834"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1342,
+      "actual_tokens": 64036,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.6,
+          2.589
+        ],
+        [
+          "answer",
+          20.5,
+          20.449
+        ],
+        [
+          "answer-distractor",
+          32.0,
+          31.971
+        ],
+        [
+          "answer-distractor",
+          53.0,
+          53.026
+        ],
+        [
+          "bridge-distractor",
+          63.4,
+          63.406
+        ],
+        [
+          "answer-distractor",
+          73.9,
+          73.922
+        ],
+        [
+          "bridge",
+          85.0,
+          85.008
+        ],
+        [
+          "answer-distractor",
+          96.5,
+          96.53
+        ]
+      ],
+      "sha256": "960422072df9be1235f9db4ab0fac6f1fc52dcc3001e1d53e701978879a38ee9"
+    },
+    {
+      "item": 1,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127927,
+      "placements": [
+        [
+          "target",
+          52.0,
+          51.998
+        ]
+      ],
+      "sha256": "ade03dbce09372551702e0055621f9b9dd3af142b937aed58c130cf824fcd292"
+    },
+    {
+      "item": 1,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127979,
+      "placements": [
+        [
+          "distractor",
+          20.9,
+          20.935
+        ],
+        [
+          "distractor",
+          40.3,
+          40.306
+        ],
+        [
+          "target",
+          52.0,
+          51.998
+        ],
+        [
+          "distractor",
+          67.2,
+          67.186
+        ],
+        [
+          "distractor",
+          80.0,
+          79.993
+        ]
+      ],
+      "sha256": "43045dddf230cac990836b3a89a63aa4ce431d3fa0454bb0068f2a38f1e028e4"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 127941,
+      "placements": [
+        [
+          "answer",
+          20.5,
+          20.499
+        ],
+        [
+          "bridge",
+          85.0,
+          84.994
+        ]
+      ],
+      "sha256": "3e4aea9ba023b756fbcf03a7017208e6b3f7ebbc4d0a2a6a87ee2ef5201c1b93"
+    },
+    {
+      "item": 1,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1342,
+      "actual_tokens": 128025,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.6,
+          2.603
+        ],
+        [
+          "answer",
+          20.5,
+          20.499
+        ],
+        [
+          "answer-distractor",
+          32.0,
+          32.0
+        ],
+        [
+          "answer-distractor",
+          53.0,
+          53.017
+        ],
+        [
+          "bridge-distractor",
+          63.4,
+          63.443
+        ],
+        [
+          "answer-distractor",
+          73.9,
+          73.867
+        ],
+        [
+          "bridge",
+          85.0,
+          84.994
+        ],
+        [
+          "answer-distractor",
+          96.5,
+          96.498
+        ]
+      ],
+      "sha256": "055a0fc4f4dbe87fe59e97eda09d2640350240988b731871c57b27e79f22fdc1"
+    },
+    {
+      "item": 2,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15916,
+      "placements": [
+        [
+          "target",
+          56.1,
+          56.065
+        ]
+      ],
+      "sha256": "9ad61e819d53dd28942f71f10c8199cb52381e5410083604667119f3c6f36b88"
+    },
+    {
+      "item": 2,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15968,
+      "placements": [
+        [
+          "distractor",
+          11.1,
+          11.067
+        ],
+        [
+          "distractor",
+          25.3,
+          25.36
+        ],
+        [
+          "distractor",
+          42.7,
+          42.615
+        ],
+        [
+          "target",
+          56.1,
+          56.065
+        ],
+        [
+          "distractor",
+          84.2,
+          84.204
+        ]
+      ],
+      "sha256": "4f8533ae0227825807ca6df6a7ae4ffac0187752406b8945f88292a56ccc90a0"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15931,
+      "placements": [
+        [
+          "bridge",
+          13.0,
+          12.796
+        ],
+        [
+          "answer",
+          73.9,
+          73.816
+        ]
+      ],
+      "sha256": "7c9484010afc0b0f0db8abfdf4e74c23e6f5c95dd374eed331f29a753c789db6"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 16016,
+      "placements": [
+        [
+          "answer-distractor",
+          1.5,
+          1.39
+        ],
+        [
+          "bridge",
+          13.0,
+          12.796
+        ],
+        [
+          "bridge-distractor",
+          33.3,
+          33.252
+        ],
+        [
+          "answer-distractor",
+          45.8,
+          45.752
+        ],
+        [
+          "answer-distractor",
+          57.1,
+          57.14
+        ],
+        [
+          "answer",
+          73.9,
+          73.816
+        ],
+        [
+          "answer-distractor",
+          87.6,
+          87.877
+        ],
+        [
+          "bridge-distractor",
+          97.8,
+          97.736
+        ]
+      ],
+      "sha256": "15ea46a50507c12ced02e76c5380adb34e8b7c725664fecae977e55e97ca6acc"
+    },
+    {
+      "item": 2,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63933,
+      "placements": [
+        [
+          "target",
+          56.1,
+          56.119
+        ]
+      ],
+      "sha256": "58221c6e368fb092d34fbcf46b66964a5e8a189d84a805fc36854f70365056cf"
+    },
+    {
+      "item": 2,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63985,
+      "placements": [
+        [
+          "distractor",
+          11.1,
+          11.094
+        ],
+        [
+          "distractor",
+          25.3,
+          25.36
+        ],
+        [
+          "distractor",
+          42.7,
+          42.705
+        ],
+        [
+          "target",
+          56.1,
+          56.119
+        ],
+        [
+          "distractor",
+          84.2,
+          84.157
+        ]
+      ],
+      "sha256": "f81c805013340780900086abd3efdcb104b83474610c7a3c1c699005a0030c63"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63948,
+      "placements": [
+        [
+          "bridge",
+          13.0,
+          13.057
+        ],
+        [
+          "answer",
+          73.9,
+          73.836
+        ]
+      ],
+      "sha256": "9a094fdc3c0616f5e5356c09c089c05f5aa3873329f0664a69e997a4bcd5d15b"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 64032,
+      "placements": [
+        [
+          "answer-distractor",
+          1.5,
+          1.519
+        ],
+        [
+          "bridge",
+          13.0,
+          13.057
+        ],
+        [
+          "bridge-distractor",
+          33.3,
+          33.299
+        ],
+        [
+          "answer-distractor",
+          45.8,
+          45.76
+        ],
+        [
+          "answer-distractor",
+          57.1,
+          57.134
+        ],
+        [
+          "answer",
+          73.9,
+          73.836
+        ],
+        [
+          "answer-distractor",
+          87.6,
+          87.694
+        ],
+        [
+          "bridge-distractor",
+          97.8,
+          97.805
+        ]
+      ],
+      "sha256": "55db39c1bdfb25c0957827c5a50fa6d639b07bb6e77b6f06690308a0ef88bfc2"
+    },
+    {
+      "item": 2,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127934,
+      "placements": [
+        [
+          "target",
+          56.1,
+          56.082
+        ]
+      ],
+      "sha256": "aaa578e19504b1da76e47218fb3869fc14c4822423bfb08705ae0529c25e09fc"
+    },
+    {
+      "item": 2,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127985,
+      "placements": [
+        [
+          "distractor",
+          11.1,
+          11.116
+        ],
+        [
+          "distractor",
+          25.3,
+          25.305
+        ],
+        [
+          "distractor",
+          42.7,
+          42.7
+        ],
+        [
+          "target",
+          56.1,
+          56.082
+        ],
+        [
+          "distractor",
+          84.2,
+          84.204
+        ]
+      ],
+      "sha256": "e4c1e01ed1baea1a8f808bc91a8d8a1385f3a8cb362f16cc261fd2a17e75443d"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127949,
+      "placements": [
+        [
+          "bridge",
+          13.0,
+          13.006
+        ],
+        [
+          "answer",
+          73.9,
+          73.882
+        ]
+      ],
+      "sha256": "780ff02b1a806d9374bd8f74e07fe986d75d1da6f66fcd42049de2dd5144e4e9"
+    },
+    {
+      "item": 2,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 128033,
+      "placements": [
+        [
+          "answer-distractor",
+          1.5,
+          1.499
+        ],
+        [
+          "bridge",
+          13.0,
+          13.006
+        ],
+        [
+          "bridge-distractor",
+          33.3,
+          33.314
+        ],
+        [
+          "answer-distractor",
+          45.8,
+          45.775
+        ],
+        [
+          "answer-distractor",
+          57.1,
+          57.127
+        ],
+        [
+          "answer",
+          73.9,
+          73.882
+        ],
+        [
+          "answer-distractor",
+          87.6,
+          87.61
+        ],
+        [
+          "bridge-distractor",
+          97.8,
+          97.796
+        ]
+      ],
+      "sha256": "1951c572a1cfeb10416bc4be1d8c4ec98f6081013d93dcd886a43e17d6a13166"
+    },
+    {
+      "item": 3,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15916,
+      "placements": [
+        [
+          "target",
+          43.9,
+          43.69
+        ]
+      ],
+      "sha256": "3aba828282c35300ad8ab1cf16a41076196d8e8e796126b18fe7beb48e052c3f"
+    },
+    {
+      "item": 3,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15968,
+      "placements": [
+        [
+          "distractor",
+          13.7,
+          13.582
+        ],
+        [
+          "distractor",
+          29.4,
+          29.145
+        ],
+        [
+          "target",
+          43.9,
+          43.69
+        ],
+        [
+          "distractor",
+          69.5,
+          69.591
+        ],
+        [
+          "distractor",
+          92.9,
+          92.989
+        ]
+      ],
+      "sha256": "4b742f797b2fae32afc3546ca91baa723b64f0d60e1ddcb50b12b4af0912150d"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 15931,
+      "placements": [
+        [
+          "answer",
+          28.7,
+          28.686
+        ],
+        [
+          "bridge",
+          72.1,
+          72.156
+        ]
+      ],
+      "sha256": "e36d7c7cea11f49efee60fb25d774571f204ae60a2a7b749ee5f19f7fd040b0d"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 2701,
+      "actual_tokens": 16015,
+      "placements": [
+        [
+          "answer-distractor",
+          5.8,
+          5.772
+        ],
+        [
+          "bridge-distractor",
+          18.0,
+          18.173
+        ],
+        [
+          "answer",
+          28.7,
+          28.686
+        ],
+        [
+          "bridge-distractor",
+          45.3,
+          45.325
+        ],
+        [
+          "answer-distractor",
+          60.8,
+          60.97
+        ],
+        [
+          "bridge",
+          72.1,
+          72.156
+        ],
+        [
+          "answer-distractor",
+          86.8,
+          86.839
+        ],
+        [
+          "answer-distractor",
+          99.7,
+          99.704
+        ]
+      ],
+      "sha256": "834d60e495ed21d3def2ecd09e98b5fc2a3713483ae38e2af55b2cee83a45825"
+    },
+    {
+      "item": 3,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63933,
+      "placements": [
+        [
+          "target",
+          43.9,
+          43.933
+        ]
+      ],
+      "sha256": "639069098ace344a6f3f742af4fc45fe3a9ebdcacafe94179415264465006268"
+    },
+    {
+      "item": 3,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63985,
+      "placements": [
+        [
+          "distractor",
+          13.7,
+          13.662
+        ],
+        [
+          "distractor",
+          29.4,
+          29.406
+        ],
+        [
+          "target",
+          43.9,
+          43.933
+        ],
+        [
+          "distractor",
+          69.5,
+          69.495
+        ],
+        [
+          "distractor",
+          92.9,
+          92.894
+        ]
+      ],
+      "sha256": "831e72a4271649a26539afb99d9bd63248df1ae910b497b744b90de084c308b4"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 63948,
+      "placements": [
+        [
+          "answer",
+          28.7,
+          28.683
+        ],
+        [
+          "bridge",
+          72.1,
+          72.079
+        ]
+      ],
+      "sha256": "bb822fe546bcd8dcb0eb4f7231e4e658c0b9cd65ac44c6c9e4fccb3473c8a3a2"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 2701,
+      "actual_tokens": 64033,
+      "placements": [
+        [
+          "answer-distractor",
+          5.8,
+          5.762
+        ],
+        [
+          "bridge-distractor",
+          18.0,
+          17.952
+        ],
+        [
+          "answer",
+          28.7,
+          28.683
+        ],
+        [
+          "bridge-distractor",
+          45.3,
+          45.285
+        ],
+        [
+          "answer-distractor",
+          60.8,
+          60.809
+        ],
+        [
+          "bridge",
+          72.1,
+          72.079
+        ],
+        [
+          "answer-distractor",
+          86.8,
+          86.802
+        ],
+        [
+          "answer-distractor",
+          99.7,
+          99.684
+        ]
+      ],
+      "sha256": "b192929975daf11fa66f8e5960444a5716d461c6e52b2e76a5a51b4f1bc9a0ec"
+    },
+    {
+      "item": 3,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127934,
+      "placements": [
+        [
+          "target",
+          43.9,
+          43.907
+        ]
+      ],
+      "sha256": "2de44526f65762fb3a887fc3bf821849c4f8e46951b4d2447eccfaf26105ede1"
+    },
+    {
+      "item": 3,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127986,
+      "placements": [
+        [
+          "distractor",
+          13.7,
+          13.729
+        ],
+        [
+          "distractor",
+          29.4,
+          29.435
+        ],
+        [
+          "target",
+          43.9,
+          43.907
+        ],
+        [
+          "distractor",
+          69.5,
+          69.533
+        ],
+        [
+          "distractor",
+          92.9,
+          92.894
+        ]
+      ],
+      "sha256": "a9489d9d1b0b3df79da683c000960a5331be9369c7b33819a9c2260405969586"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 127949,
+      "placements": [
+        [
+          "answer",
+          28.7,
+          28.683
+        ],
+        [
+          "bridge",
+          72.1,
+          72.11
+        ]
+      ],
+      "sha256": "db17bbe34dbffb7896313ddd07b5c62f7624058a70362547b4859ad30fd2d6b6"
+    },
+    {
+      "item": 3,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 2701,
+      "actual_tokens": 128033,
+      "placements": [
+        [
+          "answer-distractor",
+          5.8,
+          5.802
+        ],
+        [
+          "bridge-distractor",
+          18.0,
+          17.991
+        ],
+        [
+          "answer",
+          28.7,
+          28.683
+        ],
+        [
+          "bridge-distractor",
+          45.3,
+          45.34
+        ],
+        [
+          "answer-distractor",
+          60.8,
+          60.773
+        ],
+        [
+          "bridge",
+          72.1,
+          72.11
+        ],
+        [
+          "answer-distractor",
+          86.8,
+          86.797
+        ],
+        [
+          "answer-distractor",
+          99.7,
+          99.694
+        ]
+      ],
+      "sha256": "b14696a0f6766354f1832f730d214f442060304a7623dd609e2f0ef4efaf40c2"
+    },
+    {
+      "item": 4,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15933,
+      "placements": [
+        [
+          "target",
+          69.2,
+          69.202
+        ]
+      ],
+      "sha256": "375f55b48b699b499689346d794dfcf502358eadaba21e19e9409dccbf1ffc1a"
+    },
+    {
+      "item": 4,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15985,
+      "placements": [
+        [
+          "distractor",
+          8.6,
+          8.668
+        ],
+        [
+          "distractor",
+          36.5,
+          36.476
+        ],
+        [
+          "distractor",
+          57.6,
+          57.588
+        ],
+        [
+          "target",
+          69.2,
+          69.202
+        ],
+        [
+          "distractor",
+          93.6,
+          93.756
+        ]
+      ],
+      "sha256": "2c7c095e8405a2378b1c1a38b86a37f814f6b8aafb9d662494a6dc46b57416fe"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15948,
+      "placements": [
+        [
+          "bridge",
+          25.2,
+          25.245
+        ],
+        [
+          "answer",
+          73.0,
+          73.09
+        ]
+      ],
+      "sha256": "d3590b82b5bb64dc01b9a48b1049ba9924a2f2069029785e522a1aa56dc0b5ec"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 16033,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.0,
+          2.092
+        ],
+        [
+          "answer-distractor",
+          13.9,
+          13.832
+        ],
+        [
+          "bridge",
+          25.2,
+          25.245
+        ],
+        [
+          "answer-distractor",
+          43.3,
+          43.291
+        ],
+        [
+          "bridge-distractor",
+          53.9,
+          54.108
+        ],
+        [
+          "answer",
+          73.0,
+          73.09
+        ],
+        [
+          "answer-distractor",
+          83.7,
+          83.737
+        ],
+        [
+          "answer-distractor",
+          99.4,
+          99.454
+        ]
+      ],
+      "sha256": "9bb499dc0079c707f84e7c5f0e9b61f76b8e7eb88447810e3f3dfaa67eb6cdaf"
+    },
+    {
+      "item": 4,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63927,
+      "placements": [
+        [
+          "target",
+          69.2,
+          69.186
+        ]
+      ],
+      "sha256": "d2086a77622cbb665dec8d4a494ac13f5e2fd19135504801149b8d45e3774cdd"
+    },
+    {
+      "item": 4,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63979,
+      "placements": [
+        [
+          "distractor",
+          8.6,
+          8.62
+        ],
+        [
+          "distractor",
+          36.5,
+          36.501
+        ],
+        [
+          "distractor",
+          57.6,
+          57.588
+        ],
+        [
+          "target",
+          69.2,
+          69.186
+        ],
+        [
+          "distractor",
+          93.6,
+          93.576
+        ]
+      ],
+      "sha256": "abe7e3495907491cd7c62cea75ca28a63cd433215482cc3cf0df055f2b6104a3"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63942,
+      "placements": [
+        [
+          "bridge",
+          25.2,
+          25.216
+        ],
+        [
+          "answer",
+          73.0,
+          72.991
+        ]
+      ],
+      "sha256": "2405a223111249f7783c8fa74038095f45e8f937d77726ba5d99ba14901db5d5"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 64028,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.0,
+          2.018
+        ],
+        [
+          "answer-distractor",
+          13.9,
+          13.919
+        ],
+        [
+          "bridge",
+          25.2,
+          25.216
+        ],
+        [
+          "answer-distractor",
+          43.3,
+          43.295
+        ],
+        [
+          "bridge-distractor",
+          53.9,
+          53.876
+        ],
+        [
+          "answer",
+          73.0,
+          72.991
+        ],
+        [
+          "answer-distractor",
+          83.7,
+          83.676
+        ],
+        [
+          "answer-distractor",
+          99.4,
+          99.384
+        ]
+      ],
+      "sha256": "7d9d975b16fa631a954510da01f0ae7b7fe88de8557b671bd42448a4b87ef6d3"
+    },
+    {
+      "item": 4,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127892,
+      "placements": [
+        [
+          "target",
+          69.2,
+          69.208
+        ]
+      ],
+      "sha256": "aaf694a527f58ea3036db259cee073f9bc13305e12211b52666836688e36c5ea"
+    },
+    {
+      "item": 4,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127944,
+      "placements": [
+        [
+          "distractor",
+          8.6,
+          8.602
+        ],
+        [
+          "distractor",
+          36.5,
+          36.503
+        ],
+        [
+          "distractor",
+          57.6,
+          57.621
+        ],
+        [
+          "target",
+          69.2,
+          69.208
+        ],
+        [
+          "distractor",
+          93.6,
+          93.574
+        ]
+      ],
+      "sha256": "476c753c65047f295e7d74d20a1cbf2c0c8b25f9448dfef047cbe3dc45ed9d8e"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127907,
+      "placements": [
+        [
+          "bridge",
+          25.2,
+          25.225
+        ],
+        [
+          "answer",
+          73.0,
+          72.99
+        ]
+      ],
+      "sha256": "cd5e5f7a1c51d0a46e3ad9d1a8b01ec1854643a1405078a4e207f626afef17e7"
+    },
+    {
+      "item": 4,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127992,
+      "placements": [
+        [
+          "bridge-distractor",
+          2.0,
+          2.004
+        ],
+        [
+          "answer-distractor",
+          13.9,
+          13.899
+        ],
+        [
+          "bridge",
+          25.2,
+          25.225
+        ],
+        [
+          "answer-distractor",
+          43.3,
+          43.309
+        ],
+        [
+          "bridge-distractor",
+          53.9,
+          53.901
+        ],
+        [
+          "answer",
+          73.0,
+          72.99
+        ],
+        [
+          "answer-distractor",
+          83.7,
+          83.698
+        ],
+        [
+          "answer-distractor",
+          99.4,
+          99.397
+        ]
+      ],
+      "sha256": "9371a28da9b404d0ed2461a71bb4a3851bfe02404fd80c3f3441b819bcef1c27"
+    },
+    {
+      "item": 5,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15933,
+      "placements": [
+        [
+          "target",
+          60.5,
+          60.433
+        ]
+      ],
+      "sha256": "32c3e063f87eaee5aa615a398ef6da139367b8cd91ed6c74cfbf627b8852bfb5"
+    },
+    {
+      "item": 5,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15985,
+      "placements": [
+        [
+          "distractor",
+          14.9,
+          14.925
+        ],
+        [
+          "distractor",
+          28.6,
+          28.606
+        ],
+        [
+          "distractor",
+          42.6,
+          42.601
+        ],
+        [
+          "target",
+          60.5,
+          60.433
+        ],
+        [
+          "distractor",
+          97.8,
+          97.688
+        ]
+      ],
+      "sha256": "06ae809b7dce8302381c8ca6f9d528ef188e80b71ca5bb241a54d5f587b74ed0"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 15948,
+      "placements": [
+        [
+          "answer",
+          10.4,
+          10.515
+        ],
+        [
+          "bridge",
+          75.1,
+          75.025
+        ]
+      ],
+      "sha256": "0b63e2c59c265ff2d3f200ee8828f568f64fce1adaf0f4a3033602c436a54a4b"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1400,
+      "actual_tokens": 16032,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.408
+        ],
+        [
+          "answer",
+          10.4,
+          10.515
+        ],
+        [
+          "bridge-distractor",
+          27.9,
+          28.009
+        ],
+        [
+          "answer-distractor",
+          41.0,
+          40.842
+        ],
+        [
+          "answer-distractor",
+          62.0,
+          61.922
+        ],
+        [
+          "bridge",
+          75.1,
+          75.025
+        ],
+        [
+          "bridge-distractor",
+          88.6,
+          88.587
+        ],
+        [
+          "answer-distractor",
+          99.3,
+          99.296
+        ]
+      ],
+      "sha256": "005028eb1476417e3074ad18a7cb7e036dfb4190e462d7c9b599b11116ba2b5c"
+    },
+    {
+      "item": 5,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63926,
+      "placements": [
+        [
+          "target",
+          60.5,
+          60.484
+        ]
+      ],
+      "sha256": "b72dad26c4efd763332879ae58f001add6789cca84d349d8cbae4438f715451a"
+    },
+    {
+      "item": 5,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63979,
+      "placements": [
+        [
+          "distractor",
+          14.9,
+          14.9
+        ],
+        [
+          "distractor",
+          28.6,
+          28.601
+        ],
+        [
+          "distractor",
+          42.6,
+          42.597
+        ],
+        [
+          "target",
+          60.5,
+          60.484
+        ],
+        [
+          "distractor",
+          97.8,
+          97.81
+        ]
+      ],
+      "sha256": "ac56e4ddf19c7bf362c51fede8230cba9fa49df0c259af209a23fad8c84d946b"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 63941,
+      "placements": [
+        [
+          "answer",
+          10.4,
+          10.384
+        ],
+        [
+          "bridge",
+          75.1,
+          75.075
+        ]
+      ],
+      "sha256": "6b38a197dfc366802f9237ed46a140e6f5e0532a4dba1f8b7eb2de9e0fa5ff42"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1400,
+      "actual_tokens": 64026,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.352
+        ],
+        [
+          "answer",
+          10.4,
+          10.384
+        ],
+        [
+          "bridge-distractor",
+          27.9,
+          27.935
+        ],
+        [
+          "answer-distractor",
+          41.0,
+          41.025
+        ],
+        [
+          "answer-distractor",
+          62.0,
+          61.965
+        ],
+        [
+          "bridge",
+          75.1,
+          75.075
+        ],
+        [
+          "bridge-distractor",
+          88.6,
+          88.63
+        ],
+        [
+          "answer-distractor",
+          99.3,
+          99.291
+        ]
+      ],
+      "sha256": "5a59c8ca9af2effb685d48a0a24bbebd53af74f638a2a746752422ff5c073c04"
+    },
+    {
+      "item": 5,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127892,
+      "placements": [
+        [
+          "target",
+          60.5,
+          60.501
+        ]
+      ],
+      "sha256": "5837e599cc5f3a76b60f4e3268e4da1e060f599781a1d6add36fb0a80bb14f78"
+    },
+    {
+      "item": 5,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127944,
+      "placements": [
+        [
+          "distractor",
+          14.9,
+          14.907
+        ],
+        [
+          "distractor",
+          28.6,
+          28.587
+        ],
+        [
+          "distractor",
+          42.6,
+          42.607
+        ],
+        [
+          "target",
+          60.5,
+          60.501
+        ],
+        [
+          "distractor",
+          97.8,
+          97.804
+        ]
+      ],
+      "sha256": "f1edb490eb117e72d2a0aabc8e56a17fdbdda12c33b32fab4fa1a62c62218ca9"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127908,
+      "placements": [
+        [
+          "answer",
+          10.4,
+          10.407
+        ],
+        [
+          "bridge",
+          75.1,
+          75.105
+        ]
+      ],
+      "sha256": "2c08eaf53b973da46fd710ec269a97f79e990ac76e6b2c0567918ed82902836e"
+    },
+    {
+      "item": 5,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1400,
+      "actual_tokens": 127992,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.398
+        ],
+        [
+          "answer",
+          10.4,
+          10.407
+        ],
+        [
+          "bridge-distractor",
+          27.9,
+          27.904
+        ],
+        [
+          "answer-distractor",
+          41.0,
+          40.994
+        ],
+        [
+          "answer-distractor",
+          62.0,
+          61.99
+        ],
+        [
+          "bridge",
+          75.1,
+          75.105
+        ],
+        [
+          "bridge-distractor",
+          88.6,
+          88.584
+        ],
+        [
+          "answer-distractor",
+          99.3,
+          99.29
+        ]
+      ],
+      "sha256": "ae7ae0c46e254c0bdb065bfd180cd0ee68ddeceea195b613b8ec808ba5ccd714"
+    },
+    {
+      "item": 6,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15936,
+      "placements": [
+        [
+          "target",
+          54.7,
+          54.72
+        ]
+      ],
+      "sha256": "1e4647bb10bfa661447bda58814295916708b5dafedc1e482fbf033fea2bbe2e"
+    },
+    {
+      "item": 6,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15988,
+      "placements": [
+        [
+          "distractor",
+          11.5,
+          11.392
+        ],
+        [
+          "distractor",
+          42.1,
+          42.147
+        ],
+        [
+          "target",
+          54.7,
+          54.72
+        ],
+        [
+          "distractor",
+          79.2,
+          79.118
+        ],
+        [
+          "distractor",
+          98.3,
+          98.21
+        ]
+      ],
+      "sha256": "49619b7694acb0f1c2810cfaf5e91d8eede1a55fb2817b3e827623547fbf8622"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15951,
+      "placements": [
+        [
+          "bridge",
+          22.6,
+          22.747
+        ],
+        [
+          "answer",
+          83.6,
+          83.602
+        ]
+      ],
+      "sha256": "ab104dd044ddbbfb9ac23839ee238345960cbf16ab3e80542ed9dfd599917cd8"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 16036,
+      "placements": [
+        [
+          "answer-distractor",
+          0.3,
+          0.257
+        ],
+        [
+          "bridge-distractor",
+          11.4,
+          11.392
+        ],
+        [
+          "bridge",
+          22.6,
+          22.747
+        ],
+        [
+          "answer-distractor",
+          36.9,
+          37.129
+        ],
+        [
+          "answer-distractor",
+          56.0,
+          55.963
+        ],
+        [
+          "bridge-distractor",
+          70.9,
+          70.935
+        ],
+        [
+          "answer",
+          83.6,
+          83.602
+        ],
+        [
+          "answer-distractor",
+          94.1,
+          94.147
+        ]
+      ],
+      "sha256": "14b1c928aa9a0c0d77e30ec4e69f5faa5447be61814325f427c442c99d513b2c"
+    },
+    {
+      "item": 6,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63905,
+      "placements": [
+        [
+          "target",
+          54.7,
+          54.697
+        ]
+      ],
+      "sha256": "7765f43c2b8948696340e58c29bd414e50ab7f8c00355c8775f9e55e695d8897"
+    },
+    {
+      "item": 6,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63957,
+      "placements": [
+        [
+          "distractor",
+          11.5,
+          11.494
+        ],
+        [
+          "distractor",
+          42.1,
+          42.074
+        ],
+        [
+          "target",
+          54.7,
+          54.697
+        ],
+        [
+          "distractor",
+          79.2,
+          79.18
+        ],
+        [
+          "distractor",
+          98.3,
+          98.316
+        ]
+      ],
+      "sha256": "306f73befb8a648d6bbb906831c8fe0a77b28266bb0324fa75e7c9db42a52d01"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63921,
+      "placements": [
+        [
+          "bridge",
+          22.6,
+          22.604
+        ],
+        [
+          "answer",
+          83.6,
+          83.647
+        ]
+      ],
+      "sha256": "bdd014786dda432bfa18a3ff3363ff75f4ff44728d18cb6329ecae87cb05bc2e"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 64007,
+      "placements": [
+        [
+          "answer-distractor",
+          0.3,
+          0.322
+        ],
+        [
+          "bridge-distractor",
+          11.4,
+          11.399
+        ],
+        [
+          "bridge",
+          22.6,
+          22.604
+        ],
+        [
+          "answer-distractor",
+          36.9,
+          36.909
+        ],
+        [
+          "answer-distractor",
+          56.0,
+          56.026
+        ],
+        [
+          "bridge-distractor",
+          70.9,
+          70.852
+        ],
+        [
+          "answer",
+          83.6,
+          83.647
+        ],
+        [
+          "answer-distractor",
+          94.1,
+          94.093
+        ]
+      ],
+      "sha256": "38303bc38f4bc363f52a69fdeee7433a5e9205aa2288705e607c98d4576334a0"
+    },
+    {
+      "item": 6,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127933,
+      "placements": [
+        [
+          "target",
+          54.7,
+          54.694
+        ]
+      ],
+      "sha256": "0367216c5e8e0496b42914402cc523f8d4fe49bb8a1e1670e756e491bfed6b86"
+    },
+    {
+      "item": 6,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127986,
+      "placements": [
+        [
+          "distractor",
+          11.5,
+          11.503
+        ],
+        [
+          "distractor",
+          42.1,
+          42.097
+        ],
+        [
+          "target",
+          54.7,
+          54.694
+        ],
+        [
+          "distractor",
+          79.2,
+          79.217
+        ],
+        [
+          "distractor",
+          98.3,
+          98.294
+        ]
+      ],
+      "sha256": "0faff0b384befc178155bcfb6bae324575550f3d2e6b68a54a474afb6f143495"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127948,
+      "placements": [
+        [
+          "bridge",
+          22.6,
+          22.596
+        ],
+        [
+          "answer",
+          83.6,
+          83.591
+        ]
+      ],
+      "sha256": "6a31332ddb4d547a9776a5fe133287d9a9ee7056be90751b1bcc66997359b544"
+    },
+    {
+      "item": 6,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 128033,
+      "placements": [
+        [
+          "answer-distractor",
+          0.3,
+          0.319
+        ],
+        [
+          "bridge-distractor",
+          11.4,
+          11.395
+        ],
+        [
+          "bridge",
+          22.6,
+          22.596
+        ],
+        [
+          "answer-distractor",
+          36.9,
+          36.91
+        ],
+        [
+          "answer-distractor",
+          56.0,
+          56.01
+        ],
+        [
+          "bridge-distractor",
+          70.9,
+          70.894
+        ],
+        [
+          "answer",
+          83.6,
+          83.591
+        ],
+        [
+          "answer-distractor",
+          94.1,
+          94.101
+        ]
+      ],
+      "sha256": "93a7976219deed7566e032be419cd55eb5f2ddd6d487ec94d3ea049a0cbc0620"
+    },
+    {
+      "item": 7,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15936,
+      "placements": [
+        [
+          "target",
+          74.2,
+          74.264
+        ]
+      ],
+      "sha256": "73b80832ffa709d0b6351b6e677906a85b082f156579de37cd8eb75bf8e6004d"
+    },
+    {
+      "item": 7,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15988,
+      "placements": [
+        [
+          "distractor",
+          4.4,
+          4.472
+        ],
+        [
+          "distractor",
+          33.1,
+          33.109
+        ],
+        [
+          "distractor",
+          60.5,
+          60.673
+        ],
+        [
+          "target",
+          74.2,
+          74.264
+        ],
+        [
+          "distractor",
+          86.5,
+          86.435
+        ]
+      ],
+      "sha256": "2c0c30f3993ddc033cec9896a56dc3fd9d08e1bc733b1c2feb5b7fe41bcd22c8"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 15951,
+      "placements": [
+        [
+          "answer",
+          17.4,
+          17.528
+        ],
+        [
+          "bridge",
+          72.7,
+          72.775
+        ]
+      ],
+      "sha256": "a6b24dcb0d79a88239cc5f4bd37d252eea9b30adb7d56885de561c01e41fd4fa"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 98,
+      "actual_tokens": 16036,
+      "placements": [
+        [
+          "answer-distractor",
+          6.1,
+          6.111
+        ],
+        [
+          "answer",
+          17.4,
+          17.528
+        ],
+        [
+          "bridge-distractor",
+          29.0,
+          29.046
+        ],
+        [
+          "answer-distractor",
+          40.9,
+          40.916
+        ],
+        [
+          "answer-distractor",
+          50.9,
+          50.907
+        ],
+        [
+          "bridge",
+          72.7,
+          72.775
+        ],
+        [
+          "answer-distractor",
+          83.9,
+          83.866
+        ],
+        [
+          "bridge-distractor",
+          96.0,
+          95.999
+        ]
+      ],
+      "sha256": "ddb40b7701ef47cd8753c441045889439749e7ab520b059a9f12edb98ebe7cd6"
+    },
+    {
+      "item": 7,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63905,
+      "placements": [
+        [
+          "target",
+          74.2,
+          74.214
+        ]
+      ],
+      "sha256": "6c97e0da02be1eb21b0dd124f1dc70fd635bd57786e7988207ab41dd2512659a"
+    },
+    {
+      "item": 7,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63958,
+      "placements": [
+        [
+          "distractor",
+          4.4,
+          4.411
+        ],
+        [
+          "distractor",
+          33.1,
+          33.082
+        ],
+        [
+          "distractor",
+          60.5,
+          60.472
+        ],
+        [
+          "target",
+          74.2,
+          74.214
+        ],
+        [
+          "distractor",
+          86.5,
+          86.527
+        ]
+      ],
+      "sha256": "d0067770ef4fb06c0f97d6727ccb009f4ddc805ee9fb8003dfa21638600dc01b"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 63921,
+      "placements": [
+        [
+          "answer",
+          17.4,
+          17.534
+        ],
+        [
+          "bridge",
+          72.7,
+          72.721
+        ]
+      ],
+      "sha256": "450b129df68e882dd949c2971147752532ee180fb9594874db545368b839a86c"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 98,
+      "actual_tokens": 64005,
+      "placements": [
+        [
+          "answer-distractor",
+          6.1,
+          6.124
+        ],
+        [
+          "answer",
+          17.4,
+          17.534
+        ],
+        [
+          "bridge-distractor",
+          29.0,
+          29.007
+        ],
+        [
+          "answer-distractor",
+          40.9,
+          40.881
+        ],
+        [
+          "answer-distractor",
+          50.9,
+          50.87
+        ],
+        [
+          "bridge",
+          72.7,
+          72.721
+        ],
+        [
+          "answer-distractor",
+          83.9,
+          83.895
+        ],
+        [
+          "bridge-distractor",
+          96.0,
+          96.045
+        ]
+      ],
+      "sha256": "4e0615a92174eeb993b4f39d50f770053a2ebf3f74f01e8aaa2d1ef1e39c2503"
+    },
+    {
+      "item": 7,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127933,
+      "placements": [
+        [
+          "target",
+          74.2,
+          74.188
+        ]
+      ],
+      "sha256": "d9ad89a5dbb3afb85005750af20f59e3d22ceefc3c83172940f631abd7839b21"
+    },
+    {
+      "item": 7,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127985,
+      "placements": [
+        [
+          "distractor",
+          4.4,
+          4.396
+        ],
+        [
+          "distractor",
+          33.1,
+          33.1
+        ],
+        [
+          "distractor",
+          60.5,
+          60.515
+        ],
+        [
+          "target",
+          74.2,
+          74.188
+        ],
+        [
+          "distractor",
+          86.5,
+          86.513
+        ]
+      ],
+      "sha256": "625e24c5df17b2c2a7c620a0768789969395d9c56ec0e380643f1c9b4c979e36"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 127948,
+      "placements": [
+        [
+          "answer",
+          17.4,
+          17.394
+        ],
+        [
+          "bridge",
+          72.7,
+          72.688
+        ]
+      ],
+      "sha256": "577d916db19716da7c73ca1f4097df9c01f3cebed393e990492a28a70a7a0966"
+    },
+    {
+      "item": 7,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 98,
+      "actual_tokens": 128031,
+      "placements": [
+        [
+          "answer-distractor",
+          6.1,
+          6.11
+        ],
+        [
+          "answer",
+          17.4,
+          17.394
+        ],
+        [
+          "bridge-distractor",
+          29.0,
+          29.021
+        ],
+        [
+          "answer-distractor",
+          40.9,
+          40.908
+        ],
+        [
+          "answer-distractor",
+          50.9,
+          50.902
+        ],
+        [
+          "bridge",
+          72.7,
+          72.688
+        ],
+        [
+          "answer-distractor",
+          83.9,
+          83.911
+        ],
+        [
+          "bridge-distractor",
+          96.0,
+          96.01
+        ]
+      ],
+      "sha256": "114d16aeb6daba9913608cb79761652c81ef3900d4597f1d4fb50f72bb94f050"
+    },
+    {
+      "item": 8,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15863,
+      "placements": [
+        [
+          "target",
+          64.5,
+          64.517
+        ]
+      ],
+      "sha256": "40b264e951d180dfff862a2708e4152169e3fabeca01b7ef85a1c775b409b1a4"
+    },
+    {
+      "item": 8,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15915,
+      "placements": [
+        [
+          "distractor",
+          2.9,
+          2.82
+        ],
+        [
+          "distractor",
+          24.4,
+          24.404
+        ],
+        [
+          "distractor",
+          41.3,
+          41.476
+        ],
+        [
+          "target",
+          64.5,
+          64.517
+        ],
+        [
+          "distractor",
+          77.8,
+          77.729
+        ]
+      ],
+      "sha256": "d38dbf5fba20cc48630f3d9d27f5bc9ad55b0b57797d7ee227b12163c2b44b3a"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15878,
+      "placements": [
+        [
+          "bridge",
+          13.2,
+          13.262
+        ],
+        [
+          "answer",
+          70.5,
+          70.549
+        ]
+      ],
+      "sha256": "2b0f8e74da5f17ce8a0f5a3ba4b8652021332170f7ecbe746af9c0a7825d6e7b"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15962,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.416
+        ],
+        [
+          "bridge",
+          13.2,
+          13.262
+        ],
+        [
+          "answer-distractor",
+          23.2,
+          23.079
+        ],
+        [
+          "bridge-distractor",
+          40.1,
+          40.17
+        ],
+        [
+          "answer-distractor",
+          54.9,
+          54.927
+        ],
+        [
+          "answer",
+          70.5,
+          70.549
+        ],
+        [
+          "bridge-distractor",
+          87.5,
+          87.464
+        ],
+        [
+          "answer-distractor",
+          99.0,
+          98.864
+        ]
+      ],
+      "sha256": "d295097dbe8fab647562403a2b4c434fa509721cf8256a19ff127efd4d0da5ae"
+    },
+    {
+      "item": 8,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63928,
+      "placements": [
+        [
+          "target",
+          64.5,
+          64.526
+        ]
+      ],
+      "sha256": "1d2ed8f460bb1b2d0a3d0dab0e2145d257a9e4d5f5b7a534421e13d9f5140c6b"
+    },
+    {
+      "item": 8,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63980,
+      "placements": [
+        [
+          "distractor",
+          2.9,
+          2.901
+        ],
+        [
+          "distractor",
+          24.4,
+          24.392
+        ],
+        [
+          "distractor",
+          41.3,
+          41.31
+        ],
+        [
+          "target",
+          64.5,
+          64.526
+        ],
+        [
+          "distractor",
+          77.8,
+          77.796
+        ]
+      ],
+      "sha256": "bba3a4174225ba7054c1c2451b334a28b3e11d9d82f972c9105f7d9d6d86acb0"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63943,
+      "placements": [
+        [
+          "bridge",
+          13.2,
+          13.211
+        ],
+        [
+          "answer",
+          70.5,
+          70.5
+        ]
+      ],
+      "sha256": "7937bd3874c6cdaea6e272f26ddf7255995b1e06ceeec561ec0397dcc15a6673"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 64026,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.401
+        ],
+        [
+          "bridge",
+          13.2,
+          13.211
+        ],
+        [
+          "answer-distractor",
+          23.2,
+          23.179
+        ],
+        [
+          "bridge-distractor",
+          40.1,
+          40.122
+        ],
+        [
+          "answer-distractor",
+          54.9,
+          54.874
+        ],
+        [
+          "answer",
+          70.5,
+          70.5
+        ],
+        [
+          "bridge-distractor",
+          87.5,
+          87.471
+        ],
+        [
+          "answer-distractor",
+          99.0,
+          99.003
+        ]
+      ],
+      "sha256": "7bad78e041af313cebc5a2612ce402f754435ec9c81ab9bf7d09e0709481cbae"
+    },
+    {
+      "item": 8,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127938,
+      "placements": [
+        [
+          "target",
+          64.5,
+          64.503
+        ]
+      ],
+      "sha256": "6b69321df82c796fd362c375ba0d52d3d9e34d3cea0601b7cf73c46cfdd77047"
+    },
+    {
+      "item": 8,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127990,
+      "placements": [
+        [
+          "distractor",
+          2.9,
+          2.909
+        ],
+        [
+          "distractor",
+          24.4,
+          24.391
+        ],
+        [
+          "distractor",
+          41.3,
+          41.301
+        ],
+        [
+          "target",
+          64.5,
+          64.503
+        ],
+        [
+          "distractor",
+          77.8,
+          77.798
+        ]
+      ],
+      "sha256": "fe3eca05477ce44399240ce0b72a422ce964039f83e4f39020be48ee75684a2a"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127953,
+      "placements": [
+        [
+          "bridge",
+          13.2,
+          13.206
+        ],
+        [
+          "answer",
+          70.5,
+          70.494
+        ]
+      ],
+      "sha256": "703bd139951c13f33aa423e1e967ddc3d2452af211b2307e430561973d9bdbb2"
+    },
+    {
+      "item": 8,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 128037,
+      "placements": [
+        [
+          "answer-distractor",
+          0.4,
+          0.393
+        ],
+        [
+          "bridge",
+          13.2,
+          13.206
+        ],
+        [
+          "answer-distractor",
+          23.2,
+          23.211
+        ],
+        [
+          "bridge-distractor",
+          40.1,
+          40.102
+        ],
+        [
+          "answer-distractor",
+          54.9,
+          54.899
+        ],
+        [
+          "answer",
+          70.5,
+          70.494
+        ],
+        [
+          "bridge-distractor",
+          87.5,
+          87.495
+        ],
+        [
+          "answer-distractor",
+          99.0,
+          99.003
+        ]
+      ],
+      "sha256": "3af3af9ac8ba33c8fee73d706fa727379d3a2fb7d14aca24f6d2cc04f7189bf8"
+    },
+    {
+      "item": 9,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15863,
+      "placements": [
+        [
+          "target",
+          26.1,
+          26.025
+        ]
+      ],
+      "sha256": "25cee37bb64a3c20caa7cbbd25c5d2a49f10a5fee09484da543838f5d9e7ad15"
+    },
+    {
+      "item": 9,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15915,
+      "placements": [
+        [
+          "distractor",
+          14.8,
+          14.789
+        ],
+        [
+          "target",
+          26.1,
+          26.025
+        ],
+        [
+          "distractor",
+          55.4,
+          55.356
+        ],
+        [
+          "distractor",
+          67.7,
+          67.647
+        ],
+        [
+          "distractor",
+          97.1,
+          97.142
+        ]
+      ],
+      "sha256": "c755f67942a76f213ceb0fb323b451f5df21ccf8c232e91219d16c0222a6974f"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15877,
+      "placements": [
+        [
+          "answer",
+          16.6,
+          16.568
+        ],
+        [
+          "bridge",
+          88.8,
+          88.839
+        ]
+      ],
+      "sha256": "c8e497819b9dbe10989dae5d460bf6857d026614308e0b85b0268743c74ea9b1"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 345,
+      "actual_tokens": 15961,
+      "placements": [
+        [
+          "answer-distractor",
+          4.5,
+          4.524
+        ],
+        [
+          "answer",
+          16.6,
+          16.568
+        ],
+        [
+          "bridge-distractor",
+          29.9,
+          30.032
+        ],
+        [
+          "answer-distractor",
+          44.9,
+          44.877
+        ],
+        [
+          "bridge-distractor",
+          60.6,
+          60.599
+        ],
+        [
+          "answer-distractor",
+          78.0,
+          77.931
+        ],
+        [
+          "bridge",
+          88.8,
+          88.839
+        ],
+        [
+          "answer-distractor",
+          99.6,
+          99.653
+        ]
+      ],
+      "sha256": "8ec5aeb95b332cfbc722bf03f5ba65ce77fcf4f998643b4184dbd8bef340e521"
+    },
+    {
+      "item": 9,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63928,
+      "placements": [
+        [
+          "target",
+          26.1,
+          26.066
+        ]
+      ],
+      "sha256": "24c82d09f39290625b1eed1b63249c0be948507a05a6354dc388f36283406334"
+    },
+    {
+      "item": 9,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63980,
+      "placements": [
+        [
+          "distractor",
+          14.8,
+          14.779
+        ],
+        [
+          "target",
+          26.1,
+          26.066
+        ],
+        [
+          "distractor",
+          55.4,
+          55.402
+        ],
+        [
+          "distractor",
+          67.7,
+          67.712
+        ],
+        [
+          "distractor",
+          97.1,
+          97.112
+        ]
+      ],
+      "sha256": "aa627fa59ef1558411dc9adb04b7b8adaa5a7eb217262c7170ab4667ad1b3b58"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 63943,
+      "placements": [
+        [
+          "answer",
+          16.6,
+          16.605
+        ],
+        [
+          "bridge",
+          88.8,
+          88.802
+        ]
+      ],
+      "sha256": "5c9c49259b2fadf76111e0730db1a0913c8cc4b6ed9d57d9fb1cb195a16d6046"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 345,
+      "actual_tokens": 64026,
+      "placements": [
+        [
+          "answer-distractor",
+          4.5,
+          4.479
+        ],
+        [
+          "answer",
+          16.6,
+          16.605
+        ],
+        [
+          "bridge-distractor",
+          29.9,
+          29.898
+        ],
+        [
+          "answer-distractor",
+          44.9,
+          44.917
+        ],
+        [
+          "bridge-distractor",
+          60.6,
+          60.607
+        ],
+        [
+          "answer-distractor",
+          78.0,
+          78.008
+        ],
+        [
+          "bridge",
+          88.8,
+          88.802
+        ],
+        [
+          "answer-distractor",
+          99.6,
+          99.601
+        ]
+      ],
+      "sha256": "0fefc574a16ed875dcb81083bb0d01b050a30a834ce81f4306873b92c9b49f0c"
+    },
+    {
+      "item": 9,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127938,
+      "placements": [
+        [
+          "target",
+          26.1,
+          26.094
+        ]
+      ],
+      "sha256": "3cb4b1293c7982ccb40dd2e8c585bb6086b1054cfa0704974cd260741ada9d07"
+    },
+    {
+      "item": 9,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127991,
+      "placements": [
+        [
+          "distractor",
+          14.8,
+          14.8
+        ],
+        [
+          "target",
+          26.1,
+          26.094
+        ],
+        [
+          "distractor",
+          55.4,
+          55.404
+        ],
+        [
+          "distractor",
+          67.7,
+          67.701
+        ],
+        [
+          "distractor",
+          97.1,
+          97.099
+        ]
+      ],
+      "sha256": "894d9b69a3b47bc7560df69323f357ed9e9fd36195dbfdfbb10fb92bd2d63dec"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 127953,
+      "placements": [
+        [
+          "answer",
+          16.6,
+          16.625
+        ],
+        [
+          "bridge",
+          88.8,
+          88.79
+        ]
+      ],
+      "sha256": "dfa4ff9f7087c13ccee54dc69fd0a822f526851b347df5ac7093f722645a1ae8"
+    },
+    {
+      "item": 9,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 345,
+      "actual_tokens": 128037,
+      "placements": [
+        [
+          "answer-distractor",
+          4.5,
+          4.488
+        ],
+        [
+          "answer",
+          16.6,
+          16.625
+        ],
+        [
+          "bridge-distractor",
+          29.9,
+          29.936
+        ],
+        [
+          "answer-distractor",
+          44.9,
+          44.893
+        ],
+        [
+          "bridge-distractor",
+          60.6,
+          60.593
+        ],
+        [
+          "answer-distractor",
+          78.0,
+          78.001
+        ],
+        [
+          "bridge",
+          88.8,
+          88.79
+        ],
+        [
+          "answer-distractor",
+          99.6,
+          99.594
+        ]
+      ],
+      "sha256": "2f65daf23782f25b604d0d7df0b756bc8a23cbdee70ec4fe36afe5207e356384"
+    },
+    {
+      "item": 10,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15903,
+      "placements": [
+        [
+          "target",
+          44.1,
+          44.059
+        ]
+      ],
+      "sha256": "78013e69c5c4d1228242e450ba37067a8db0bc8ad5fef23c62ceccc02a9c63e8"
+    },
+    {
+      "item": 10,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15955,
+      "placements": [
+        [
+          "distractor",
+          4.6,
+          4.6
+        ],
+        [
+          "distractor",
+          24.5,
+          24.374
+        ],
+        [
+          "target",
+          44.1,
+          44.059
+        ],
+        [
+          "distractor",
+          64.8,
+          64.764
+        ],
+        [
+          "distractor",
+          79.5,
+          79.541
+        ]
+      ],
+      "sha256": "131b9be2cf178dbab59ac830a253a8b1e196f95c47296581b7ca3ade5e6880df"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15919,
+      "placements": [
+        [
+          "bridge",
+          28.2,
+          28.162
+        ],
+        [
+          "answer",
+          79.1,
+          79.012
+        ]
+      ],
+      "sha256": "87b108bf24aa41769f085f3045cb61271a492e721977d1e0bd6caa0153a3b9d6"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 16003,
+      "placements": [
+        [
+          "bridge-distractor",
+          6.5,
+          6.564
+        ],
+        [
+          "answer-distractor",
+          17.6,
+          17.363
+        ],
+        [
+          "bridge",
+          28.2,
+          28.162
+        ],
+        [
+          "answer-distractor",
+          38.2,
+          38.37
+        ],
+        [
+          "answer-distractor",
+          49.0,
+          49.232
+        ],
+        [
+          "answer-distractor",
+          62.4,
+          62.36
+        ],
+        [
+          "answer",
+          79.1,
+          79.012
+        ],
+        [
+          "bridge-distractor",
+          99.0,
+          98.905
+        ]
+      ],
+      "sha256": "65f8ce9d6b3c97eac998dd3044495fba7546c78b2a6c53e426afba4bed2b60eb"
+    },
+    {
+      "item": 10,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63943,
+      "placements": [
+        [
+          "target",
+          44.1,
+          44.144
+        ]
+      ],
+      "sha256": "80c359b24a98f53444fca4f3e90511b4461d3daa06087889b8f6c3ddef0523bb"
+    },
+    {
+      "item": 10,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63996,
+      "placements": [
+        [
+          "distractor",
+          4.6,
+          4.688
+        ],
+        [
+          "distractor",
+          24.5,
+          24.441
+        ],
+        [
+          "target",
+          44.1,
+          44.144
+        ],
+        [
+          "distractor",
+          64.8,
+          64.804
+        ],
+        [
+          "distractor",
+          79.5,
+          79.506
+        ]
+      ],
+      "sha256": "cdc6a63e3d11792eb3ef6e92cb0aeb5d458cb66e627e2b5148a98e93a0795dcd"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63958,
+      "placements": [
+        [
+          "bridge",
+          28.2,
+          28.223
+        ],
+        [
+          "answer",
+          79.1,
+          79.116
+        ]
+      ],
+      "sha256": "c95800dd2aad9a75fbca646dcfc4f034e0cac5c4b9e3913517fcc8780a920ef1"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 64043,
+      "placements": [
+        [
+          "bridge-distractor",
+          6.5,
+          6.548
+        ],
+        [
+          "answer-distractor",
+          17.6,
+          17.635
+        ],
+        [
+          "bridge",
+          28.2,
+          28.223
+        ],
+        [
+          "answer-distractor",
+          38.2,
+          38.193
+        ],
+        [
+          "answer-distractor",
+          49.0,
+          49.004
+        ],
+        [
+          "answer-distractor",
+          62.4,
+          62.39
+        ],
+        [
+          "answer",
+          79.1,
+          79.116
+        ],
+        [
+          "bridge-distractor",
+          99.0,
+          99.029
+        ]
+      ],
+      "sha256": "70e84922f73b818764c5b965552747adb52f8577966297bfbca4b743b2edaf2d"
+    },
+    {
+      "item": 10,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127913,
+      "placements": [
+        [
+          "target",
+          44.1,
+          44.095
+        ]
+      ],
+      "sha256": "b2b48990f60eec361c7ac71071906c9b0dd397f254a4e9319a5c9fe519d529d0"
+    },
+    {
+      "item": 10,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127964,
+      "placements": [
+        [
+          "distractor",
+          4.6,
+          4.604
+        ],
+        [
+          "distractor",
+          24.5,
+          24.494
+        ],
+        [
+          "target",
+          44.1,
+          44.095
+        ],
+        [
+          "distractor",
+          64.8,
+          64.811
+        ],
+        [
+          "distractor",
+          79.5,
+          79.499
+        ]
+      ],
+      "sha256": "103e27573e91a5c8ac017a933868254d228772fa44198687f0b1b1f603187aa3"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127927,
+      "placements": [
+        [
+          "bridge",
+          28.2,
+          28.195
+        ],
+        [
+          "answer",
+          79.1,
+          79.092
+        ]
+      ],
+      "sha256": "f93ff77203ae0d7fce810a190a4b31d793fea645d85bfce8977254bfb496d512"
+    },
+    {
+      "item": 10,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 128011,
+      "placements": [
+        [
+          "bridge-distractor",
+          6.5,
+          6.495
+        ],
+        [
+          "answer-distractor",
+          17.6,
+          17.582
+        ],
+        [
+          "bridge",
+          28.2,
+          28.195
+        ],
+        [
+          "answer-distractor",
+          38.2,
+          38.192
+        ],
+        [
+          "answer-distractor",
+          49.0,
+          48.978
+        ],
+        [
+          "answer-distractor",
+          62.4,
+          62.408
+        ],
+        [
+          "answer",
+          79.1,
+          79.092
+        ],
+        [
+          "bridge-distractor",
+          99.0,
+          99.003
+        ]
+      ],
+      "sha256": "81f866e761dd29cc2536298d8bbca1d8cdf2c44c4e5e4c42cbb99f8377b41cf4"
+    },
+    {
+      "item": 11,
+      "shape": "single",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15903,
+      "placements": [
+        [
+          "target",
+          48.1,
+          48.326
+        ]
+      ],
+      "sha256": "3b40e77045a42ae405a7aa23a1cb15733a07d18b2b10701230a7e0792d0abb72"
+    },
+    {
+      "item": 11,
+      "shape": "distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15955,
+      "placements": [
+        [
+          "distractor",
+          18.3,
+          18.143
+        ],
+        [
+          "distractor",
+          34.5,
+          34.544
+        ],
+        [
+          "target",
+          48.1,
+          48.326
+        ],
+        [
+          "distractor",
+          60.1,
+          60.063
+        ],
+        [
+          "distractor",
+          79.1,
+          79.012
+        ]
+      ],
+      "sha256": "f70e69bcb2427fd75adcc7a6c9602d051309f539a98662323368d81520807397"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 15918,
+      "placements": [
+        [
+          "answer",
+          29.4,
+          29.484
+        ],
+        [
+          "bridge",
+          81.8,
+          81.661
+        ]
+      ],
+      "sha256": "8a47294ba59e2a4a8533d2d6506dc88453306f8ce1f152a47adf36a60e760c09"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 16000,
+      "book_id": 1260,
+      "actual_tokens": 16004,
+      "placements": [
+        [
+          "bridge-distractor",
+          7.3,
+          7.376
+        ],
+        [
+          "answer-distractor",
+          18.1,
+          18.143
+        ],
+        [
+          "answer",
+          29.4,
+          29.484
+        ],
+        [
+          "bridge-distractor",
+          43.9,
+          43.782
+        ],
+        [
+          "answer-distractor",
+          59.3,
+          59.339
+        ],
+        [
+          "answer-distractor",
+          70.3,
+          70.138
+        ],
+        [
+          "bridge",
+          81.8,
+          81.661
+        ],
+        [
+          "answer-distractor",
+          97.8,
+          97.867
+        ]
+      ],
+      "sha256": "c2557f0581ae2e7a97af0a65a3b341340e2cce34e9bad1c352e33f0d0c950158"
+    },
+    {
+      "item": 11,
+      "shape": "single",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63943,
+      "placements": [
+        [
+          "target",
+          48.1,
+          48.107
+        ]
+      ],
+      "sha256": "eeabe936d949146369bc12b6bf66c733e1703ec16b1e5ba15a6080c28227cc4f"
+    },
+    {
+      "item": 11,
+      "shape": "distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63995,
+      "placements": [
+        [
+          "distractor",
+          18.3,
+          18.3
+        ],
+        [
+          "distractor",
+          34.5,
+          34.514
+        ],
+        [
+          "target",
+          48.1,
+          48.107
+        ],
+        [
+          "distractor",
+          60.1,
+          60.103
+        ],
+        [
+          "distractor",
+          79.1,
+          79.116
+        ]
+      ],
+      "sha256": "605a8097b9a9df2061ccf4f7f7114ffac381a524edd03f03654e62a5487b9320"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 63958,
+      "placements": [
+        [
+          "answer",
+          29.4,
+          29.381
+        ],
+        [
+          "bridge",
+          81.8,
+          81.78
+        ]
+      ],
+      "sha256": "1e146aa7a4edb816604d45412cd5c7d45415236d47997e7a4e1ed709507d5faa"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 64000,
+      "book_id": 1260,
+      "actual_tokens": 64042,
+      "placements": [
+        [
+          "bridge-distractor",
+          7.3,
+          7.328
+        ],
+        [
+          "answer-distractor",
+          18.1,
+          18.085
+        ],
+        [
+          "answer",
+          29.4,
+          29.381
+        ],
+        [
+          "bridge-distractor",
+          43.9,
+          43.871
+        ],
+        [
+          "answer-distractor",
+          59.3,
+          59.274
+        ],
+        [
+          "answer-distractor",
+          70.3,
+          70.289
+        ],
+        [
+          "bridge",
+          81.8,
+          81.78
+        ],
+        [
+          "answer-distractor",
+          97.8,
+          97.804
+        ]
+      ],
+      "sha256": "016a4f8021610b19ffcdfde5ee972ca378e4b29d57e24a304c06a91eeeb3064f"
+    },
+    {
+      "item": 11,
+      "shape": "single",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127913,
+      "placements": [
+        [
+          "target",
+          48.1,
+          48.098
+        ]
+      ],
+      "sha256": "246f91c69d7ac119dc0c07b2e9a042ef0f0b915040f1eba8e74278c0edd0694f"
+    },
+    {
+      "item": 11,
+      "shape": "distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127965,
+      "placements": [
+        [
+          "distractor",
+          18.3,
+          18.286
+        ],
+        [
+          "distractor",
+          34.5,
+          34.519
+        ],
+        [
+          "target",
+          48.1,
+          48.098
+        ],
+        [
+          "distractor",
+          60.1,
+          60.103
+        ],
+        [
+          "distractor",
+          79.1,
+          79.092
+        ]
+      ],
+      "sha256": "9d83e6a503ae65a5699a9c465e04b21e16e9444d359277e2fd2c151ff7dc0b3b"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 127927,
+      "placements": [
+        [
+          "answer",
+          29.4,
+          29.387
+        ],
+        [
+          "bridge",
+          81.8,
+          81.815
+        ]
+      ],
+      "sha256": "4ae2236ef37e2b2355dc09fd7b91846f97691ab0e791cd6b42c33c5b86ca884d"
+    },
+    {
+      "item": 11,
+      "shape": "two-fact-distractors",
+      "context_length_tokens": 128000,
+      "book_id": 1260,
+      "actual_tokens": 128012,
+      "placements": [
+        [
+          "bridge-distractor",
+          7.3,
+          7.313
+        ],
+        [
+          "answer-distractor",
+          18.1,
+          18.091
+        ],
+        [
+          "answer",
+          29.4,
+          29.387
+        ],
+        [
+          "bridge-distractor",
+          43.9,
+          43.9
+        ],
+        [
+          "answer-distractor",
+          59.3,
+          59.305
+        ],
+        [
+          "answer-distractor",
+          70.3,
+          70.3
+        ],
+        [
+          "bridge",
+          81.8,
+          81.815
+        ],
+        [
+          "answer-distractor",
+          97.8,
+          97.802
+        ]
+      ],
+      "sha256": "b69ee272064e6f702715ce667d2b91b432585fcc9a241a2da92917c16e746b9d"
+    }
+  ]
+}
