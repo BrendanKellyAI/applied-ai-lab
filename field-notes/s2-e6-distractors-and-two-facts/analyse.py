@@ -93,9 +93,16 @@ def _fact_sets(folder: Path) -> tuple:
     return BUILD.fact_sets_from(manifest), manifest
 
 
-def score_records(records: Sequence[RunRecord], facts: Sequence) -> list[Scored]:
+def score_records(
+    records: Sequence[RunRecord], facts: Sequence, config: ExperimentConfig
+) -> list[Scored]:
+    """Score every successful call in the run. Pilot calls outside the run's subset (the
+    16,000-token pilot calls) are left out, so every cell holds the same items."""
     scored = []
     for record in latest_successful(list(records)).values():
+        length, item = int(record.cell["context_length_tokens"]), int(record.cell["item"])
+        if not BUILD.in_run(config, length, item):
+            continue
         shape = str(record.cell["shape"])
         fact = facts[int(record.cell["item"])]
         verdict = SCORING.classify(
@@ -116,14 +123,14 @@ def score_records(records: Sequence[RunRecord], facts: Sequence) -> list[Scored]
     )
 
 
-def cell_counts(scored: Sequence[Scored], models: Sequence[str]):
+def cell_counts(scored: Sequence[Scored], models: Sequence[str], items: int):
     tallies: dict[tuple[str, str, int], list[int]] = defaultdict(lambda: [0, 0])
     for s in scored:
         tally = tallies[(s.model, s.shape, s.length)]
         tally[0] += int(s.verdict.correct)
         tally[1] += 1
     counts = {key: CLAIMS.Count(correct, trials) for key, (correct, trials) in tallies.items()}
-    return CLAIMS.Cells(counts, models)
+    return CLAIMS.Cells(counts, models, items)
 
 
 def wrong_by_shape(scored: Sequence[Scored]) -> dict[str, dict[str, int]]:
@@ -283,18 +290,21 @@ def _grid_complete(cells, lengths: Sequence[int]) -> bool:
 def _charts(cells, wrong, lengths, out_dir: Path) -> tuple[list[Path], dict]:
     if not _grid_complete(cells, lengths):
         return [], {}
+    calls = cells.items * len(lengths) * len(BUILD.SHAPES) * len(cells.models)
     highlights = {
         "shapes-128k": FIGURES.lowest_shape_clearing_single(cells),
-        "length-hardest": FIGURES.largest_drop_model(cells, lengths),
         "wrong-types": FIGURES.distractor_leads(wrong),
         "models-hardest": FIGURES.lowest_model_clearing_highest(cells),
     }
     written = [
         *FIGURES.shapes_chart(cells, out_dir),
-        *FIGURES.length_chart(cells, lengths, out_dir),
-        *FIGURES.wrong_types_chart(wrong, SCORING.WRONG_TYPES, out_dir),
+        *FIGURES.wrong_types_chart(wrong, SCORING.WRONG_TYPES, out_dir, calls),
         *FIGURES.models_chart(cells, out_dir),
     ]
+    # The length chart needs more than one length; the reduced run has only 128,000.
+    if FIGURES.SHORTEST in lengths and FIGURES.LONGEST in lengths:
+        highlights["length-hardest"] = FIGURES.largest_drop_model(cells, lengths)
+        written += FIGURES.length_chart(cells, lengths, out_dir)
     return written, highlights
 
 
@@ -305,14 +315,15 @@ def _run_window(scored: Sequence[Scored]) -> dict:
 
 def build_summary(config: ExperimentConfig, folder: Path, records: Sequence[RunRecord]) -> tuple:
     facts, manifest = _fact_sets(folder)
-    scored = score_records(records, facts)
+    scored = score_records(records, facts, config)
     if not scored:
         raise AnalysisError(
             "These results contain no successful calls, so there is nothing to score."
         )
     models = [model.display_label for model in config.models]
-    lengths = sorted(config.parameters["context_lengths_tokens"])
-    cells = cell_counts(scored, models)
+    lengths = BUILD.run_lengths(config)
+    items = BUILD.run_items(config)
+    cells = cell_counts(scored, models, len(items))
     wrong = wrong_by_shape(scored)
     distractor_replies = sum(counts[SCORING.DISTRACTOR] for counts in wrong.values())
     claims = CLAIMS.evaluate(cells, lengths, distractor_replies, config.parameters["pass_marks"])
@@ -325,7 +336,10 @@ def build_summary(config: ExperimentConfig, folder: Path, records: Sequence[RunR
         {
             "experiment": config.experiment,
             "scored_calls": len(scored),
-            "planned_calls": len(manifest["documents"]) * len(models),
+            "planned_calls": len(items) * len(lengths) * len(BUILD.SHAPES) * len(models),
+            "run_lengths_tokens": lengths,
+            "run_items": items,
+            "pilot_calls_outside_run": len(latest_successful(list(records))) - len(scored),
             "grid_complete": _grid_complete(cells, lengths),
             "run_window": _run_window(scored),
             "dataset": {
@@ -428,7 +442,7 @@ def analyse(
     """Score the results, write the tables, summary and charts, and return the report text."""
     results_folder = out_dir if out_dir is not None else folder / "results"
     summary, scored, cells, wrong, facts = build_summary(config, folder, records)
-    lengths = sorted(config.parameters["context_lengths_tokens"])
+    lengths = BUILD.run_lengths(config)
     charts, highlights = _charts(cells, wrong, lengths, results_folder / "charts")
     summary["chart_highlights"] = highlights
 

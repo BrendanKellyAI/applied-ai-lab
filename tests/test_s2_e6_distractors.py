@@ -63,6 +63,29 @@ def config():
     return load_config(FIELD_NOTE / "config.yaml")
 
 
+FULL_GRID_MARKS = {
+    "h0_single_correct_per_model": 34,
+    "h0_single_correct_pooled_128k": 34,
+    "h1_drop_points": 10,
+    "h1_distractor_replies": 3,
+    "h2_drop_points": 10,
+    "h3_drop_points": 5,
+    "h4_drop_points": 10,
+}
+
+
+@pytest.fixture(scope="module")
+def full_config(config):
+    """The config as first pre-registered: every length and item, with the original marks."""
+    parameters = {
+        key: value
+        for key, value in config.parameters.items()
+        if key not in ("run_lengths_tokens", "run_items")
+    }
+    parameters["pass_marks"] = FULL_GRID_MARKS
+    return config.model_copy(update={"parameters": parameters})
+
+
 @pytest.fixture(scope="module")
 def built(m, config, tmp_path_factory):
     """A dataset at small lengths from fake books, so the build checks run without a network."""
@@ -239,9 +262,9 @@ def test_documents_hold_each_sentence_once(m, built):
             assert document.text.count(insert.sentence) == 1
 
 
-def test_plan_has_one_call_per_model_and_document(m, config, built, monkeypatch):
+def test_plan_has_one_call_per_model_and_document(m, full_config, built, monkeypatch):
     monkeypatch.setattr(m.build_dataset, "CONTEXT_LENGTH_OVERRIDE", SMALL_LENGTHS)
-    calls = m.build_dataset.plan_calls(config, built.folder)
+    calls = m.build_dataset.plan_calls(full_config, built.folder)
     assert len(calls) == 3 * len(built.dataset.documents)
     call = calls[0]
     assert call.request.system == m.build_dataset.SYSTEM_PROMPT
@@ -361,7 +384,7 @@ def _cells(m, correct: dict):
 
 
 def _marks(config):
-    return config.parameters["pass_marks"]
+    return FULL_GRID_MARKS
 
 
 def test_all_correct_holds_h0_and_fails_the_rest(m, config):
@@ -417,9 +440,24 @@ def test_partial_grid_is_not_evaluated(m, config):
     assert verdicts == {"Not evaluated"}
 
 
-def test_preregistration_states_the_config_marks(config):
+def test_preregistration_amendment_states_the_config_marks(config):
+    full = " ".join((FIELD_NOTE / "PREREGISTRATION.md").read_text(encoding="utf-8").split())
+    text = full.split("## Amendment", 1)[1]
+    marks = config.parameters["pass_marks"]
+    assert f"each model at least {marks['h0_single_correct_per_model']} of 6" in text
+    assert f"at 128,000 at least {marks['h0_single_correct_pooled_128k']} of 18" in text
+    assert f"at least {marks['h1_drop_points']} points below pooled Single" in text
+    assert f"at least {marks['h1_distractor_replies']} wrong replies" in text
+    assert f"Two-fact accuracy at 128,000 is at least {marks['h2_drop_points']}" in text
+    assert f"at least {marks['h3_drop_points']} points below both" in text
+    assert "H4. Withdrawn, not tested" in text and "h4_drop_points" not in marks
+    items = config.parameters["run_items"]
+    assert ", ".join(str(i) for i in items[::2]) in text.replace(" and ", ", ")
+
+
+def test_original_preregistration_states_the_full_grid_marks(config):
     text = " ".join((FIELD_NOTE / "PREREGISTRATION.md").read_text(encoding="utf-8").split())
-    marks = _marks(config)
+    marks = FULL_GRID_MARKS
     assert f"each model at least {marks['h0_single_correct_per_model']} of 36" in text
     assert f"pooled at 128,000 at least {marks['h0_single_correct_pooled_128k']} of 36" in text
     assert f"at least {marks['h1_drop_points']} points below pooled Single" in text
@@ -483,8 +521,8 @@ def full_run(m, config):
     return records
 
 
-def test_analysis_end_to_end(m, config, full_run, tmp_path):
-    report = m.analyse.analyse(config, FIELD_NOTE, full_run, tmp_path)
+def test_analysis_end_to_end(m, full_config, full_run, tmp_path):
+    report = m.analyse.analyse(full_config, FIELD_NOTE, full_run, tmp_path)
     summary = json.loads((tmp_path / "summary.json").read_text(encoding="utf-8"))
 
     assert summary["scored_calls"] == 432 and summary["grid_complete"]
@@ -519,17 +557,17 @@ def test_analysis_end_to_end(m, config, full_run, tmp_path):
     assert "H5: Held" in report
 
 
-def test_pilot_results_analyse_without_charts(m, config, full_run, tmp_path):
+def test_pilot_results_analyse_without_charts(m, full_config, full_run, tmp_path):
     pilot = [
         r for r in full_run if r.cell["item"] == 0 and r.cell["context_length_tokens"] == 16000
     ]
-    report = m.analyse.analyse(config, FIELD_NOTE, pilot, tmp_path)
+    report = m.analyse.analyse(full_config, FIELD_NOTE, pilot, tmp_path)
     assert "not complete" in report
     assert not (tmp_path / "charts").exists()
 
 
-def test_too_long_errors_say_stop(m, config, full_run, tmp_path):
-    model = config.models[1]
+def test_too_long_errors_say_stop(m, full_config, full_run, tmp_path):
+    model = full_config.models[1]
     failed = RunRecord(
         call_id="x" * 16,
         request_hash="h",
@@ -541,7 +579,7 @@ def test_too_long_errors_say_stop(m, config, full_run, tmp_path):
         result=None,
         error="prompt is too long: 210000 tokens > 200000 maximum",
     )
-    report = m.analyse.analyse(config, FIELD_NOTE, [*full_run[:5], failed], tmp_path)
+    report = m.analyse.analyse(full_config, FIELD_NOTE, [*full_run[:5], failed], tmp_path)
     assert re.search(r"STOP: 1 prompt", report)
 
 
@@ -554,3 +592,36 @@ def test_manifest_matches_the_config(m, config):
     assert len(manifest["documents"]) == 144
     assert manifest["max_length_deviation_percent"] <= 5
     assert manifest["max_position_deviation_points"] <= 2
+
+
+def test_reduced_run_plans_seventy_two_calls(config):
+    calls = [
+        c
+        for c in _grid_calls(config)
+        if c.cell["context_length_tokens"] in config.parameters["run_lengths_tokens"]
+        and c.cell["item"] in config.parameters["run_items"]
+    ]
+    assert len(calls) == 72
+    facts_first = [item % 2 == 0 for item in config.parameters["run_items"]]
+    assert sum(facts_first) == 3
+    books = {item // 2 for item in config.parameters["run_items"]}
+    assert books == set(range(6))
+
+
+def test_reduced_run_analysis(m, config, full_run, tmp_path):
+    """The amended run: only 128,000 tokens and six items count; pilot calls outside it do not."""
+    report = m.analyse.analyse(config, FIELD_NOTE, full_run, tmp_path)
+    summary = json.loads((tmp_path / "summary.json").read_text(encoding="utf-8"))
+
+    assert summary["scored_calls"] == 72 and summary["planned_calls"] == 72
+    assert summary["grid_complete"]
+    verdicts = {c["id"]: c["verdict"] for c in summary["claims"]}
+    # Gemini answers 3 of the 6 run items wrong on shape 4 (items 0, 3, 4, 7, 8 are below 9).
+    assert verdicts["H4"] == "Not tested"
+    assert verdicts["H0"] == "Held"
+    pooled = summary["accuracy"]["pooled"]["two-fact-distractors"]["128000"]
+    assert (pooled["correct"], pooled["trials"]) == (13, 18)
+    charts = sorted(path.name for path in (tmp_path / "charts").iterdir())
+    assert not any(name.startswith("length-hardest") for name in charts)
+    assert len(charts) == 9
+    assert "H4: Not tested" in report

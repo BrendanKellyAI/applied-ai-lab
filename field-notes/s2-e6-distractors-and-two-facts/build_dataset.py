@@ -670,8 +670,29 @@ def user_prompt(document: str, asked: str) -> str:
     return f"<document>\n{document}\n</document>\n\nQuestion: {asked}"
 
 
+def run_lengths(config: ExperimentConfig) -> list[int]:
+    """The lengths the run calls: `run_lengths_tokens` if set, otherwise every built length."""
+    parameters = config.parameters
+    built = CONTEXT_LENGTH_OVERRIDE or parameters["context_lengths_tokens"]
+    return sorted(parameters.get("run_lengths_tokens", built))
+
+
+def run_items(config: ExperimentConfig) -> list[int]:
+    """The items the run calls: `run_items` if set, otherwise every item."""
+    parameters = config.parameters
+    every = len(parameters["filler_books"]) * int(parameters["fact_sets_per_book"])
+    return sorted(parameters.get("run_items", range(every)))
+
+
+def in_run(config: ExperimentConfig, length: int, item: int) -> bool:
+    return length in run_lengths(config) and item in run_items(config)
+
+
 def plan_calls(config: ExperimentConfig, folder: Path) -> list[PlannedCall]:
-    """Every planned call: one per model, shape, length, and item.
+    """Every planned call: one per model and shape, at each run length and item.
+
+    The dataset is always built in full, so the manifest check covers every document; the run
+    calls only the subset the config names (see config.yaml).
 
     Uses the built documents when they match the committed manifest, and builds them otherwise,
     so `lab run` and `lab estimate` both work from a fresh clone.
@@ -686,6 +707,8 @@ def plan_calls(config: ExperimentConfig, folder: Path) -> list[PlannedCall]:
 
     calls: list[PlannedCall] = []
     for entry in manifest_data["documents"]:
+        if not in_run(config, entry["context_length_tokens"], entry["item"]):
+            continue
         fact = facts[entry["item"]]
         shape = entry["shape"]
         key = (entry["item"], shape, entry["context_length_tokens"])

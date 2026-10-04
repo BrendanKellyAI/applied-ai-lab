@@ -40,16 +40,22 @@ parameters:
   early_range_percent: [10, 30]
   late_range_percent: [70, 90]
   min_gap_points: 10
-  # Pass marks for the pre-registered claims. PREREGISTRATION.md states the same numbers, and a
-  # test checks the two agree. Never edited after the full run.
+  # The run calls a subset of the built grid (amendment of 4 October 2026, before any run call
+  # beyond the pilot): 128,000 tokens only, one item per book, three bridge first (0, 4, 8) and
+  # three answer first (3, 7, 11). 3 models x 4 shapes x 6 items = 72 calls. The full grid of
+  # 432 was costed at about $60 and not run. Every document is still built and checked.
+  run_lengths_tokens: [128000]
+  run_items: [0, 3, 4, 7, 8, 11]
+  # Pass marks for the pre-registered claims, as amended. PREREGISTRATION.md states the same
+  # numbers, and a test checks the two agree. Never edited after the run.
   pass_marks:
-    h0_single_correct_per_model: 34   # of 36, across the three lengths
-    h0_single_correct_pooled_128k: 34 # of 36
+    h0_single_correct_per_model: 5    # of 6, at 128,000
+    h0_single_correct_pooled_128k: 17 # of 18
     h1_drop_points: 10
     h1_distractor_replies: 3
     h2_drop_points: 10
     h3_drop_points: 5
-    h4_drop_points: 10
+    # H4 is withdrawn: the run has no 16,000-token calls.
   # S1 E7's six books, same pins and checks, except Frankenstein (Gutenberg 84). Its prose gives
   # only 87,723 tokens after the front matter is skipped, short of 128,000, so it is replaced
   # with Jane Eyre, pinned on 4 October 2026 from the same mirror.
@@ -91,8 +97,9 @@ measures_latency: false
 # `lab estimate` also prints input tokens per model at each length.
 estimate_by: context_length_tokens
 
-# 15 calls: per model, the four shapes once at 16,000 tokens, and the hardest shape once at
-# 128,000, so every provider takes the 128,000-token path before the full run.
+# 15 calls, run before the amendment: per model, the four shapes once at 16,000 tokens, and the
+# hardest shape once at 128,000, so every provider took the 128,000-token path. Only the three
+# 128,000-token calls fall inside the run; the analysis leaves the other twelve out.
 pilot:
   strategy: filter
   include:

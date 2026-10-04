@@ -109,7 +109,7 @@ def shapes_chart(cells, out_dir: Path) -> list[Path]:
         ChartSpec(
             name="shapes-128k",
             units="Accuracy (%)",
-            sample_size="n = 12 per bar, 36 per diamond",
+            sample_size=f"n = {cells.items} per bar, {cells.items * len(cells.models)} per diamond",
             footnote="Diamond: the three models pooled",
             no_highlight_note=note,
         ),
@@ -187,7 +187,7 @@ def length_chart(cells, lengths: Sequence[int], out_dir: Path) -> list[Path]:
         ChartSpec(
             name="length-hardest",
             units="Accuracy (%)",
-            sample_size="n = 12 per point",
+            sample_size=f"n = {cells.items} per point",
             no_highlight_note=note,
         ),
     )
@@ -211,7 +211,7 @@ def distractor_leads(wrong: Mapping[str, Mapping[str, int]]) -> str | None:
 
 
 def wrong_types_chart(
-    wrong: Mapping[str, Mapping[str, int]], types: Sequence[str], out_dir: Path
+    wrong: Mapping[str, Mapping[str, int]], types: Sequence[str], out_dir: Path, calls: int
 ) -> list[Path]:
     shapes = list(SHORT_LABELS)
     chosen = distractor_leads(wrong)
@@ -243,7 +243,7 @@ def wrong_types_chart(
         ChartSpec(
             name="wrong-types",
             units="Wrong replies (count)",
-            sample_size=f"{total} wrong of 432 calls, 108 per shape",
+            sample_size=f"{total} wrong of {calls} calls, {calls // len(shapes)} per shape",
             no_highlight_note=note,
         ),
     )
@@ -299,7 +299,7 @@ def models_chart(cells, out_dir: Path) -> list[Path]:
         ChartSpec(
             name="models-hardest",
             units="Accuracy (%)",
-            sample_size="n = 12 per model",
+            sample_size=f"n = {cells.items} per model",
             footnote="At 128,000 tokens, with Wilson 95% intervals",
             no_highlight_note=note,
         ),

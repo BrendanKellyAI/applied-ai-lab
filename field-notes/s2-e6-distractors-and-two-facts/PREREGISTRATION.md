@@ -1,6 +1,7 @@
 # S2 E6 pre-registration
 
-Committed before the full run and not edited after it. Every claim below is reported in
+Committed before the full run and not edited after it, except for the amendment at the end,
+made before the run. The amendment overrides the grid and marks above it. Every claim below is reported in
 `README.md` as Held or Failed, failures included. The same pass marks are in `config.yaml`
 (`parameters.pass_marks`), and `claims.py` applies them; a test checks this file and the config
 agree.
@@ -81,3 +82,36 @@ claim.
 - The pilot (15 calls: per model, the four shapes once at 16,000 and shape 4 once at 128,000)
   checks the pipeline only. It is never used to change a pass mark.
 - Numbers are reported as "x of n" with Wilson 95% intervals.
+
+## Amendment, 4 October 2026: a reduced run
+
+Made after the 15-call pilot and before any other call. The full grid of 432 calls was costed at
+about $60 and not run; a run that was started was stopped before it recorded a result, and no
+result from it has been read. The run is reduced to 72 calls, and the claims are re-marked for
+the smaller cells. Shapes, placement, prompt, scoring and every build check are unchanged; every
+document is still built and checked against the manifest.
+
+- **Grid:** 3 models x 1 length (128,000 tokens) x 4 shapes x 6 items = 72 calls. The items are
+  one per book: 0, 4 and 8 (bridge first) and 3, 7 and 11 (answer first). The pilot's three
+  128,000-token calls are inside this grid and are reused; its twelve 16,000-token calls are
+  reported as pilot results only.
+- **Pooled n:** 18 per shape (6 per model). "Points" are still compared in whole calls: 10
+  points needs a gap of 2 calls of 18 (11.1 points), 5 points needs 1 (5.6).
+
+Claims, as amended:
+
+- **H0. Control holds at 128,000 tokens.** Single shape: each model at least 5 of 6, and pooled
+  at 128,000 at least 17 of 18.
+- **H1. Distractors cost accuracy at 128,000.** Pooled Distractors accuracy at 128,000 is at
+  least 10 points below pooled Single at 128,000, and at least 3 wrong replies across the run
+  name a distractor value.
+- **H2. Two facts cost accuracy at 128,000.** Pooled Two-fact accuracy at 128,000 is at least 10
+  points below pooled Single at 128,000.
+- **H3. The combined shape is hardest.** Pooled shape 4 accuracy at 128,000 is at least 5 points
+  below both shape 2 and shape 3 at 128,000.
+- **H4. Withdrawn, not tested.** The run has no 16,000-token calls.
+- **H5. The models separate.** On shape 4 at 128,000, at least one pair of models has
+  non-overlapping Wilson 95% intervals (6 calls each). With 6 calls, this needs 6 of 6 against 1 of
+  6 or fewer, or 5 of 6 against 0 of 6.
+
+The `length-hardest` chart is not drawn, since the run has one length.

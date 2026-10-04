@@ -14,9 +14,10 @@ from lab.scoring import wilson_interval
 HELD = "Held"
 FAILED = "Failed"
 NOT_EVALUATED = "Not evaluated"
+NOT_TESTED = "Not tested"
 LONGEST = 128000
 SHORTEST = 16000
-ITEMS = 12  # per model, shape, and length
+ITEMS = 12  # per model, shape, and length, in the full grid
 
 
 @dataclass(frozen=True)
@@ -63,16 +64,22 @@ def _at_least(drop: float, mark: float) -> bool:
 class Cells:
     """Counts per (model, shape, length) and pooled per (shape, length)."""
 
-    def __init__(self, counts: Mapping[tuple[str, str, int], Count], models: Sequence[str]):
+    def __init__(
+        self,
+        counts: Mapping[tuple[str, str, int], Count],
+        models: Sequence[str],
+        items: int = ITEMS,
+    ):
         self.counts = dict(counts)
         self.models = list(models)
+        self.items = items
 
     def model(self, model: str, shape: str, length: int) -> Count | None:
         return self.counts.get((model, shape, length))
 
     def complete(self, shape: str, length: int) -> bool:
         cells = [self.model(model, shape, length) for model in self.models]
-        return all(cell is not None and cell.trials == ITEMS for cell in cells)
+        return all(cell is not None and cell.trials == self.items for cell in cells)
 
     def pooled(self, shape: str, length: int) -> Count | None:
         if not self.complete(shape, length):
@@ -93,7 +100,7 @@ def h0(cells: Cells, lengths: Sequence[int], marks: Mapping) -> Claim:
         for model in cells.models
     }
     pooled = cells.pooled("single", LONGEST)
-    trials = ITEMS * len(lengths)
+    trials = cells.items * len(lengths)
     passed = (
         all(correct >= marks["h0_single_correct_per_model"] for correct in per_model.values())
         and pooled.correct >= marks["h0_single_correct_pooled_128k"]
@@ -164,6 +171,22 @@ def h3(cells: Cells, marks: Mapping) -> Claim:
     )
 
 
+def h4(cells: Cells, lengths: Sequence[int], marks: Mapping) -> Claim:
+    if SHORTEST not in lengths or "h4_drop_points" not in marks:
+        return Claim(
+            "H4",
+            NOT_TESTED,
+            "Withdrawn before the run: the reduced run has no 16,000-token calls.",
+        )
+    return _drop_claim(
+        "H4",
+        cells,
+        ("two-fact-distractors", SHORTEST),
+        ("two-fact-distractors", LONGEST),
+        marks["h4_drop_points"],
+    )
+
+
 def separated_pairs(cells: Cells, shape: str, length: int) -> list[tuple[str, str]]:
     """Model pairs whose Wilson 95% intervals do not overlap, lower model first."""
     pairs = []
@@ -206,12 +229,6 @@ def evaluate(
             "H2", cells, ("single", LONGEST), ("two-fact", LONGEST), marks["h2_drop_points"]
         ),
         h3(cells, marks),
-        _drop_claim(
-            "H4",
-            cells,
-            ("two-fact-distractors", SHORTEST),
-            ("two-fact-distractors", LONGEST),
-            marks["h4_drop_points"],
-        ),
+        h4(cells, lengths, marks),
         h5(cells),
     ]
