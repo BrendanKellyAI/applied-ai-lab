@@ -1,0 +1,2042 @@
+[
+ {
+  "id": "A034",
+  "group": "answerable",
+  "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+  "old": "KX-3542",
+  "new": "KX-7816",
+  "top": [
+   "A034",
+   "A113",
+   "A116",
+   "A036",
+   "A045"
+  ],
+  "top1_score": 0.7967401742935181,
+  "P1": {
+   "reply": "Quote part number **KX-7816** to order a replacement side brush for your Mira robot vacuum.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Quote part number **KX-7816** to order a replacement side brush for your Mira robot vacuum.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A057",
+  "group": "answerable",
+  "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+  "old": "KX-8033",
+  "new": "KX-8047",
+  "top": [
+   "A057",
+   "A090",
+   "A045",
+   "A082",
+   "A115"
+  ],
+  "top1_score": 0.6002633571624756,
+  "P1": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A088",
+  "group": "answerable",
+  "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+  "old": "KX-7986",
+  "new": "KX-8423",
+  "top": [
+   "A088",
+   "A031",
+   "A125",
+   "A107",
+   "A069"
+  ],
+  "top1_score": 0.6941092014312744,
+  "P1": {
+   "reply": "The part number for the door catch is **KX-8423**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The door catch part number is **KX-8423**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A101",
+  "group": "answerable",
+  "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+  "old": "KX-3356",
+  "new": "KX-4821",
+  "top": [
+   "A101",
+   "A099",
+   "A120",
+   "A008",
+   "A048"
+  ],
+  "top1_score": 0.5872947573661804,
+  "P1": {
+   "reply": "The model identifier is **KX-4821**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "KX-4821.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A151",
+  "group": "answerable",
+  "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+  "old": "1°C",
+  "new": "3°C",
+  "top": [
+   "A151",
+   "A282",
+   "A264",
+   "A267",
+   "A188"
+  ],
+  "top1_score": 0.5902043581008911,
+  "P1": {
+   "reply": "The article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The article suggests lowering your usual temperature setting by 3°C, provided your home stays warm enough for everyone.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A013",
+  "group": "answerable",
+  "question": "What temperature should I use for the empty programme when descaling my Tessa dishwasher, unless the descaler instructions specify otherwise?",
+  "old": "60°C",
+  "new": "65°C",
+  "top": [
+   "A013",
+   "A227",
+   "A091",
+   "A218",
+   "A121"
+  ],
+  "top1_score": 0.7201170921325684,
+  "P1": {
+   "reply": "Use **65°C** for the empty programme, unless the descaler instructions specify otherwise.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Use an empty programme at 65°C, unless the descaler instructions specify otherwise.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A188",
+  "group": "answerable",
+  "question": "What setting should I choose on my Corra induction hob to save energy while keeping my food cooking as needed?",
+  "old": "lowest power setting",
+  "new": "medium power setting",
+  "top": [
+   "A188",
+   "A243",
+   "A084",
+   "A185",
+   "A109"
+  ],
+  "top1_score": 0.8286374807357788,
+  "P1": {
+   "reply": "Choose a **medium power setting** that keeps your food cooking as needed. Once water boils, turn the power down to maintain a gentle simmer. If cooking slows too much, increase the power gradually rather than switching straight to the highest setting.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Choose a medium power setting that keeps your food cooking as needed. Once water boils, reduce the power to maintain a gentle simmer rather than leaving the zone on high.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A080",
+  "group": "answerable",
+  "question": "What fault code on the Halvard Home Orrin heat pump indicates that the outdoor coil temperature sensor is not providing a reliable reading?",
+  "old": "E-5946",
+  "new": "E-3721",
+  "top": [
+   "A080",
+   "A043",
+   "A060",
+   "A237",
+   "A256"
+  ],
+  "top1_score": 0.7725388407707214,
+  "P1": {
+   "reply": "The fault code is **E-3721**, indicating that the outdoor coil temperature sensor is not providing a reliable reading.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-3721.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A046",
+  "group": "answerable",
+  "question": "What is the part number of the replacement display power module for my Orrin heat pump?",
+  "old": "KX-1693",
+  "new": "KX-2847",
+  "top": [
+   "A046",
+   "A080",
+   "A060",
+   "A262",
+   "A043"
+  ],
+  "top1_score": 0.6828290224075317,
+  "P1": {
+   "reply": "The replacement display power module for your Orrin heat pump is part number **KX-2847**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The replacement display power module for your Orrin heat pump is **KX-2847**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A079",
+  "group": "answerable",
+  "question": "What error code indicates that my Halvard Home Orrin heat pump’s internal clock has lost its time setting?",
+  "old": "E-3496",
+  "new": "E-5721",
+  "top": [
+   "A079",
+   "A080",
+   "A060",
+   "A043",
+   "A024"
+  ],
+  "top1_score": 0.7364552617073059,
+  "P1": {
+   "reply": "Error code **E-5721** indicates that your Halvard Home Orrin heat pump’s internal clock has lost its time setting.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-5721 indicates that your Halvard Home Orrin heat pump’s internal clock has lost its time setting.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A116",
+  "group": "answerable",
+  "question": "What error code on my Mira robot vacuum means the main brush is rotating unevenly and causing unusual vibration?",
+  "old": "E-7215",
+  "new": "E-8342",
+  "top": [
+   "A116",
+   "A036",
+   "A073",
+   "A115",
+   "A113"
+  ],
+  "top1_score": 0.7959639430046082,
+  "P1": {
+   "reply": "Error code **E-8342** means the main brush is rotating unevenly, causing unusual vibration.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The error code is **E-8342**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A299",
+  "group": "answerable",
+  "question": "What type of detergent should I use in my Tessa dishwasher to avoid excessive foam and leaks?",
+  "old": "detergent made for dishwashers",
+  "new": "rinse aid made for dishwashers",
+  "top": [
+   "A299",
+   "A013",
+   "A218",
+   "A126",
+   "A091"
+  ],
+  "top1_score": 0.6315608024597168,
+  "P1": {
+   "reply": "Use detergent specifically made for dishwashers, not washing-up liquid, which can cause excessive foam and leaks. If you use rinse aid, make sure it is also dishwasher-safe.",
+   "not_found": false,
+   "grade": "neither"
+  },
+  "P2": {
+   "reply": "Use detergent made specifically for dishwashers, not washing-up liquid, which can cause excessive foam and leaks. If using rinse aid, choose one made for dishwashers too.",
+   "not_found": false,
+   "grade": "neither"
+  }
+ },
+ {
+  "id": "A078",
+  "group": "answerable",
+  "question": "What error code indicates that my Corra induction hob’s lid sensor has detected the protective lid is not fully closed?",
+  "old": "E-3946",
+  "new": "E-5271",
+  "top": [
+   "A078",
+   "A025",
+   "A281",
+   "A032",
+   "A124"
+  ],
+  "top1_score": 0.7534672021865845,
+  "P1": {
+   "reply": "The error code is **E-5271**, which means the lid sensor has detected that the protective lid is not fully closed.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-5271 indicates that your Corra induction hob’s lid sensor has detected the protective lid is not fully closed.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A137",
+  "group": "answerable",
+  "question": "What voice command does the article suggest trying after naming the vacuum?",
+  "old": "Start Mira.",
+  "new": "Start Luna.",
+  "top": [
+   "A137",
+   "A196",
+   "A036",
+   "A063",
+   "A115"
+  ],
+  "top1_score": 0.5520455837249756,
+  "P1": {
+   "reply": "The article suggests saying, “Start Luna.”",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "“Start Luna.”",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A286",
+  "group": "answerable",
+  "question": "Besides a photo of the accessory itself, what other photo should I take before contacting support?",
+  "old": "one of the space where it fits",
+  "new": "two of the space where it fits",
+  "top": [
+   "A154",
+   "A201",
+   "A136",
+   "A238",
+   "A262"
+  ],
+  "top1_score": 0.4573620557785034,
+  "P1": {
+   "reply": "Take a clear photo of your appliance’s identification or rating label, showing its model details.",
+   "not_found": false,
+   "grade": "neither"
+  },
+  "P2": {
+   "reply": "Take a clear photo of the appliance’s identification or rating label, showing its model details.",
+   "not_found": false,
+   "grade": "neither"
+  }
+ },
+ {
+  "id": "A092",
+  "group": "answerable",
+  "question": "What error code indicates that the heater’s electrical connection has overheated on my Halvard Home Tessa dishwasher?",
+  "old": "E-9474",
+  "new": "E-5821",
+  "top": [
+   "A092",
+   "A050",
+   "A091",
+   "A072",
+   "A013"
+  ],
+  "top1_score": 0.7100638151168823,
+  "P1": {
+   "reply": "Error code **E-5821** indicates that the heater’s electrical connection has overheated. Stop the programme, switch the dishwasher off, and do not use it again until it has been checked. Contact Halvard Home support to arrange a qualified service visit.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Error code **E-5821** indicates that the heater’s electrical connection has overheated.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A028",
+  "group": "answerable",
+  "question": "What is the part number of the drain pump filter for my Keel washing machine?",
+  "old": "KX-3962",
+  "new": "KX-5827",
+  "top": [
+   "A028",
+   "A173",
+   "A075",
+   "A071",
+   "A029"
+  ],
+  "top1_score": 0.6406980156898499,
+  "P1": {
+   "reply": "The drain pump filter part number for your Keel washing machine is **KX-5827**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The drain pump filter part number for your Keel washing machine is **KX-5827**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A040",
+  "group": "answerable",
+  "question": "What is the part code for the moisture sensor in my Ashby tumble dryer?",
+  "old": "KX-0711",
+  "new": "KX-0824",
+  "top": [
+   "A125",
+   "A040",
+   "A014",
+   "A172",
+   "A069"
+  ],
+  "top1_score": 0.657031774520874,
+  "P1": {
+   "reply": "The moisture sensor part code for your Ashby tumble dryer is **KX-0824**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The moisture sensor part code for your Ashby tumble dryer is **KX-0824**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A014",
+  "group": "answerable",
+  "question": "What error code on my Ashby tumble dryer means the condensate drain pump is blocked?",
+  "old": "E-6876",
+  "new": "E-4923",
+  "top": [
+   "A014",
+   "A125",
+   "A031",
+   "A172",
+   "A069"
+  ],
+  "top1_score": 0.703326940536499,
+  "P1": {
+   "reply": "Error code **E-4923** means the condensate drain pump on your Ashby tumble dryer is blocked.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-4923 means the condensate drain pump is blocked on your Ashby tumble dryer.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A118",
+  "group": "answerable",
+  "question": "At what percentage can the firmware update freeze if the thermostat’s Wi-Fi control module loses its connection to the router?",
+  "old": "50%",
+  "new": "75%",
+  "top": [
+   "A118",
+   "A101",
+   "A181",
+   "A259",
+   "A038"
+  ],
+  "top1_score": 0.5981062650680542,
+  "P1": {
+   "reply": "The firmware update can freeze at **75%**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "75%.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A105",
+  "group": "answerable",
+  "question": "What is the part code for the rear transport clip that holds my Tessa dishwasher’s drain hose in place during a move?",
+  "old": "KX-8618",
+  "new": "KX-7423",
+  "top": [
+   "A105",
+   "A238",
+   "A016",
+   "A223",
+   "A093"
+  ],
+  "top1_score": 0.6420094966888428,
+  "P1": {
+   "reply": "The part code for the rear transport clip is **KX-7423**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The part code for the rear transport clip is **KX-7423**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A024",
+  "group": "answerable",
+  "question": "Which error code on my Orrin heat pump indicates that mains power was interrupted while the compressor was running?",
+  "old": "E-5107",
+  "new": "E-5208",
+  "top": [
+   "A024",
+   "A080",
+   "A049",
+   "A046",
+   "A237"
+  ],
+  "top1_score": 0.7437961101531982,
+  "P1": {
+   "reply": "**E-5208** indicates that mains power was interrupted while the compressor was running.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-5208 indicates that mains power was interrupted while the compressor was running.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A084",
+  "group": "answerable",
+  "question": "How long should I leave my Corra induction hob to cool after turning it off at the wall isolation switch?",
+  "old": "20 minutes",
+  "new": "25 minutes",
+  "top": [
+   "A084",
+   "A185",
+   "A134",
+   "A025",
+   "A076"
+  ],
+  "top1_score": 0.6650709509849548,
+  "P1": {
+   "reply": "Leave your Corra induction hob to cool for **25 minutes** after turning it off at the wall isolation switch.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Leave your Corra induction hob to cool for **25 minutes** after turning it off at the wall isolation switch.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A016",
+  "group": "answerable",
+  "question": "What is the replacement lower basket wheel kit part number for my Halvard Home Tessa dishwasher?",
+  "old": "KX-6373",
+  "new": "KX-8429",
+  "top": [
+   "A016",
+   "A238",
+   "A042",
+   "A044",
+   "A093"
+  ],
+  "top1_score": 0.7834155559539795,
+  "P1": {
+   "reply": "The replacement lower basket wheel kit part number for your Halvard Home Tessa dishwasher is **KX-8429**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The replacement lower basket wheel kit part number is **KX-8429**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A217",
+  "group": "answerable",
+  "question": "What type of service should I use to recycle my old Vale fridge freezer?",
+  "old": "an authorised electrical waste service",
+  "new": "a local council recycling centre",
+  "top": [
+   "A217",
+   "A229",
+   "A148",
+   "A252",
+   "A216"
+  ],
+  "top1_score": 0.8059905767440796,
+  "P1": {
+   "reply": "Use your local council’s fridge freezer collection service or an approved recycling centre. If you’re buying a replacement, you can also ask the retailer about old-appliance collection and any charges. Don’t put it in your household rubbish bin.",
+   "not_found": false,
+   "grade": "neither"
+  },
+  "P2": {
+   "reply": "Use your local council’s fridge freezer collection service or an approved recycling centre. If you’re buying a replacement, you can also ask the retailer about an old-appliance collection service.",
+   "not_found": false,
+   "grade": "neither"
+  }
+ },
+ {
+  "id": "A288",
+  "group": "answerable",
+  "question": "Where should I take my old Lumen smart thermostat for recycling?",
+  "old": "a local recycling centre that accepts small electrical appliances",
+  "new": "an electrical retailer that offers a small-appliance take-back service",
+  "top": [
+   "A288",
+   "A023",
+   "A294",
+   "A212",
+   "A200"
+  ],
+  "top1_score": 0.8307559490203857,
+  "P1": {
+   "reply": "Take your old Lumen smart thermostat to an electrical retailer that offers a small-appliance take-back service. It should be recycled as electrical waste, not put in your household rubbish bin.\n\nCheck your council’s website for opening times and any booking requirements before travelling. If it’s still wired into your heating system, have a qualified electrician or heating engineer disconnect it safely first.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Take your old Lumen smart thermostat to an electrical retailer that offers a small-appliance take-back service. Recycle it as electrical waste, not in your household rubbish bin. Check your council’s website for opening times and any booking requirements before travelling.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A010",
+  "group": "answerable",
+  "question": "What part number should I quote when contacting Halvard Home support about my Lumen smart thermostat’s warranty?",
+  "old": "KX-3170",
+  "new": "KX-4280",
+  "top": [
+   "A010",
+   "A201",
+   "A202",
+   "A212",
+   "A053"
+  ],
+  "top1_score": 0.7674636840820312,
+  "P1": {
+   "reply": "Quote **KX-4280**, the part number for your Lumen smart thermostat, when contacting Halvard Home support about its warranty.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Quote part number **KX-4280** when contacting Halvard Home support about your Lumen smart thermostat’s warranty.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A096",
+  "group": "answerable",
+  "question": "What error code does the Halvard Home Lumen thermostat display when the holiday schedule has no return date?",
+  "old": "E-8255",
+  "new": "E-7312",
+  "top": [
+   "A096",
+   "A077",
+   "A087",
+   "A138",
+   "A079"
+  ],
+  "top1_score": 0.7700302004814148,
+  "P1": {
+   "reply": "The error code is **E-7312**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-7312.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A039",
+  "group": "answerable",
+  "question": "What is the part code for the sealing strip supplied to fit beneath my Corra induction hob’s glass edge?",
+  "old": "KX-7011",
+  "new": "KX-7024",
+  "top": [
+   "A039",
+   "A232",
+   "A052",
+   "A136",
+   "A081"
+  ],
+  "top1_score": 0.5885244607925415,
+  "P1": {
+   "reply": "The part code is **KX-7024**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The part code is **KX-7024**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A065",
+  "group": "answerable",
+  "question": "What is the part code for the removable transit spacer supplied with my Vale fridge freezer?",
+  "old": "KX-9696",
+  "new": "KX-7472",
+  "top": [
+   "A065",
+   "A286",
+   "A035",
+   "A061",
+   "A110"
+  ],
+  "top1_score": 0.6425639390945435,
+  "P1": {
+   "reply": "The removable transit spacer’s part code is **KX-7472**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The part code for the removable transit spacer is **KX-7472**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A001",
+  "group": "answerable",
+  "question": "What error code on my Orrin heat pump means the child lock button has been detected as continuously pressed?",
+  "old": "E-1294",
+  "new": "E-1372",
+  "top": [
+   "A001",
+   "A080",
+   "A024",
+   "A256",
+   "A031"
+  ],
+  "top1_score": 0.8009103536605835,
+  "P1": {
+   "reply": "The error code is **E-1372**, which means the child lock button has been detected as continuously pressed.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-1372 means the child lock button on your Orrin heat pump has been detected as continuously pressed.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A119",
+  "group": "answerable",
+  "question": "What is the part number for the replacement condensate drain tray for the Halvard Home Orrin heat pump?",
+  "old": "KX-1160",
+  "new": "KX-1270",
+  "top": [
+   "A119",
+   "A262",
+   "A080",
+   "A060",
+   "A043"
+  ],
+  "top1_score": 0.7463186979293823,
+  "P1": {
+   "reply": "The replacement condensate drain tray part number is **KX-1270**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The replacement condensate drain tray part number is **KX-1270**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A067",
+  "group": "answerable",
+  "question": "What error code on my Halvard Home Orrin heat pump means the outdoor fan motor has overheated?",
+  "old": "E-1261",
+  "new": "E-1274",
+  "top": [
+   "A080",
+   "A067",
+   "A043",
+   "A256",
+   "A024"
+  ],
+  "top1_score": 0.7033450603485107,
+  "P1": {
+   "reply": "**E-1274** means the outdoor fan motor has overheated. Stop using the heat pump and do not restart it. Contact Halvard Home support to arrange an inspection by a qualified engineer.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-1274 means the outdoor fan motor has overheated.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A102",
+  "group": "answerable",
+  "question": "What error code indicates that my Brio kettle is not seated correctly on its base during first installation?",
+  "old": "E-5328",
+  "new": "E-6419",
+  "top": [
+   "A102",
+   "A246",
+   "A293",
+   "A008",
+   "A250"
+  ],
+  "top1_score": 0.714955747127533,
+  "P1": {
+   "reply": "The error code is **E-6419**, which means your Brio kettle is not seated correctly on its base during first installation.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-6419 indicates that your Brio kettle is not seated correctly on its base during first installation.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A106",
+  "group": "answerable",
+  "question": "What is the part number for the replacement cable-entry seal for my Lumen thermostat?",
+  "old": "KX-6818",
+  "new": "KX-7426",
+  "top": [
+   "A106",
+   "A201",
+   "A212",
+   "A010",
+   "A023"
+  ],
+  "top1_score": 0.6415755152702332,
+  "P1": {
+   "reply": "The replacement cable-entry seal for your Lumen thermostat is part number **KX-7426**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The replacement cable-entry seal part number is **KX-7426**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A026",
+  "group": "answerable",
+  "question": "What error code on my Corra induction hob means the cooling fan cannot turn freely?",
+  "old": "E-1107",
+  "new": "E-1204",
+  "top": [
+   "A081",
+   "A032",
+   "A026",
+   "A084",
+   "A124"
+  ],
+  "top1_score": 0.7552827596664429,
+  "P1": {
+   "reply": "**E-1204** means the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "E-1204 means the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A086",
+  "group": "answerable",
+  "question": "Which error code on my Halvard Home Brio kettle indicates that its internal electrical insulation has failed?",
+  "old": "E-6770",
+  "new": "E-4821",
+  "top": [
+   "A246",
+   "A230",
+   "A250",
+   "A086",
+   "A271"
+  ],
+  "top1_score": 0.6951063871383667,
+  "P1": {
+   "reply": "**E-4821** indicates that your Halvard Home Brio kettle’s internal electrical insulation has failed. Stop using it immediately, unplug it from the wall, and do not switch it on again or open the casing.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Error code **E-4821** indicates that the internal electrical insulation has failed. Stop using the kettle immediately, unplug it, and do not switch it on again or open the casing.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A072",
+  "group": "answerable",
+  "question": "How quickly must water drain from my Tessa dishwasher to avoid triggering the flashing drainage warning light?",
+  "old": "within three minutes",
+  "new": "within five minutes",
+  "top": [
+   "A072",
+   "A299",
+   "A012",
+   "A013",
+   "A218"
+  ],
+  "top1_score": 0.6867980360984802,
+  "P1": {
+   "reply": "Water must drain within **five minutes** to avoid triggering the flashing drainage warning light (E-4021).",
+   "not_found": false,
+   "grade": "neither"
+  },
+  "P2": {
+   "reply": "Water must drain within five minutes to avoid triggering the flashing drainage warning light (E-4021).",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A093",
+  "group": "answerable",
+  "question": "How often should I clean my Tessa dishwasher’s filter to help prevent blockages?",
+  "old": "once a week",
+  "new": "twice a week",
+  "top": [
+   "A093",
+   "A218",
+   "A013",
+   "A072",
+   "A012"
+  ],
+  "top1_score": 0.7569189071655273,
+  "P1": {
+   "reply": "Clean your Tessa dishwasher’s filter **twice a week** to help prevent blockages.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Clean your Tessa dishwasher’s filter twice a week to help prevent blockages.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A045",
+  "group": "answerable",
+  "question": "How much clear space should I leave in front of the Mira robot vacuum’s charging dock?",
+  "old": "at least one metre",
+  "new": "at least two metres",
+  "top": [
+   "A045",
+   "A163",
+   "A057",
+   "A283",
+   "A021"
+  ],
+  "top1_score": 0.6533128023147583,
+  "P1": {
+   "reply": "Leave at least **two metres of clear space** in front of the Mira robot vacuum’s charging dock.",
+   "not_found": false,
+   "grade": "neither"
+  },
+  "P2": {
+   "reply": "Leave at least two metres of clear space in front of the charging dock.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "U000",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I clean the basket of my Halvard Home Sora air fryer?",
+  "top": [
+   "A027",
+   "A236",
+   "A093",
+   "A037",
+   "A058"
+  ],
+  "top1_score": 0.5296763777732849,
+  "P1": {
+   "reply": "The passages don’t include cleaning instructions for the Halvard Home Sora air fryer basket, so I can’t confirm the correct method or whether it’s dishwasher-safe. Please check your Sora user manual or contact Halvard Home support for model-specific guidance.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U001",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I descale my Halvard Home Elva coffee machine?",
+  "top": [
+   "A203",
+   "A033",
+   "A013",
+   "A268",
+   "A273"
+  ],
+  "top1_score": 0.6405653953552246,
+  "P1": {
+   "reply": "The passages don’t include descaling instructions for the Halvard Home Elva coffee machine, so I can’t confirm the correct product or procedure.\n\nCheck your Elva’s care guide or contact Halvard Home support for model-specific instructions. Don’t use the descaling methods for the other appliances on your coffee machine unless its care guide explicitly allows them.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U002",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the clock on the Elva microwave oven from Halvard Home?",
+  "top": [
+   "A079",
+   "A210",
+   "A020",
+   "A108",
+   "A220"
+  ],
+  "top1_score": 0.5380805730819702,
+  "P1": {
+   "reply": "The provided passages don’t include instructions for setting the clock on the Halvard Home Elva microwave oven. Check the Elva user manual or contact Halvard Home support for the correct steps.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U003",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "Why does my Halvard Home Elara toaster brown one side of the bread more than the other?",
+  "top": [
+   "A230",
+   "A066",
+   "A271",
+   "A032",
+   "A108"
+  ],
+  "top1_score": 0.40136438608169556,
+  "P1": {
+   "reply": "The supplied passages don’t cover the Halvard Home Elara toaster or uneven browning, so I can’t identify the cause from this information. Check the toaster’s user manual or contact Halvard Home support for model-specific advice.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U004",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?",
+  "top": [
+   "A002",
+   "A221",
+   "A074",
+   "A273",
+   "A222"
+  ],
+  "top1_score": 0.472293883562088,
+  "P1": {
+   "reply": "The supplied passages cover the Halvard Home **Keel washing machine**, not the **Elva food processor**, so they don’t provide the correct blade-removal procedure.\n\nFor safety, switch off and unplug the food processor, and wait until the blade has completely stopped. Don’t pull or twist the blade assembly without checking the Elva manual, and avoid touching its cutting edges. Consult the manual or contact Halvard Home support for model-specific removal instructions.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U005",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I clean the filter on my Halvard Home Sora dehumidifier?",
+  "top": [
+   "A236",
+   "A037",
+   "A093",
+   "A269",
+   "A027"
+  ],
+  "top1_score": 0.6104588508605957,
+  "P1": {
+   "reply": "The passages don’t include cleaning instructions for the **Halvard Home Sora dehumidifier**, so I can’t confirm whether its filter is washable or how to remove it safely.\n\nCheck your Sora user manual or contact Halvard Home support for the correct instructions. Don’t wash the filter unless the manual confirms it is washable. If you share the relevant manual page, I can help you follow it.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U006",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I replace the filter in my Halvard Home Aster air purifier?",
+  "top": [
+   "A047",
+   "A037",
+   "A094",
+   "A027",
+   "A248"
+  ],
+  "top1_score": 0.6138312816619873,
+  "P1": {
+   "reply": "The supplied passages don’t include filter-replacement instructions for the **Halvard Home Aster air purifier**, so I can’t confirm the correct filter or replacement steps.\n\nCheck the Aster user manual or contact Halvard Home support with your model name to confirm the replacement part and fitting instructions. The filter part numbers listed here are for other appliances, not the Aster.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U007",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I adjust the mixing speed on my Halvard Home Elara stand mixer?",
+  "top": [
+   "A066",
+   "A115",
+   "A210",
+   "A227",
+   "A160"
+  ],
+  "top1_score": 0.393263041973114,
+  "P1": {
+   "reply": "The supplied passages don’t include instructions for the Halvard Home Elara stand mixer, so I can’t confirm how to adjust its mixing speed. Please check the Elara user guide or contact Halvard Home support for model-specific instructions.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U008",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the delay timer on my Halvard Home Soren bread maker?",
+  "top": [
+   "A108",
+   "A169",
+   "A079",
+   "A020",
+   "A193"
+  ],
+  "top1_score": 0.5610097646713257,
+  "P1": {
+   "reply": "The provided passages don’t include instructions for the Halvard Home Soren bread maker, so I can’t confirm how to set its delay timer.\n\nPlease check the Soren user manual or contact Halvard Home support for model-specific instructions. If you share the timer section of the manual or a photo of the control panel, I can help you interpret it.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U009",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I adjust the temperature on my Halvard Home Vintara wine cooler?",
+  "top": [
+   "A210",
+   "A064",
+   "A062",
+   "A264",
+   "A291"
+  ],
+  "top1_score": 0.5564190149307251,
+  "P1": {
+   "reply": "The passages cover the Halvard Home **Vale fridge freezer**, not the **Vintara wine cooler**, so they don’t provide the correct temperature-adjustment instructions for your appliance.\n\nCheck your Vintara user manual or contact Halvard Home support. If you share the exact model number and a photo of the control panel, I can help identify the relevant controls.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U010",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the cooking timer on my Halvard Home Elowen slow cooker?",
+  "top": [
+   "A255",
+   "A079",
+   "A243",
+   "A109",
+   "A169"
+  ],
+  "top1_score": 0.5283247232437134,
+  "P1": {
+   "reply": "The supplied passages don’t include instructions for the Halvard Home Elowen slow cooker, so I can’t confirm how to set its cooking timer.\n\nCheck the Elowen user manual or contact Halvard Home support for model-specific instructions. If you share the manual’s timer section or a photo of the control panel, I can help you work through it.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U011",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I keep rice warm in my Halvard Home Sora rice cooker without drying it out?",
+  "top": [
+   "A188",
+   "A228",
+   "A103",
+   "A267",
+   "A230"
+  ],
+  "top1_score": 0.38823574781417847,
+  "P1": {
+   "reply": "The supplied passages don’t cover the Halvard Home Sora rice cooker, so I can’t confirm its keep-warm settings or recommended holding time.\n\nAs general rice-cooker advice, keep the lid closed to retain moisture and use the keep-warm function, if fitted, rather than leaving it on a cooking setting. Avoid holding rice longer than necessary. Check the Sora manual or contact Halvard Home support for its recommended keep-warm duration and whether adding a little water is advised.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U012",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "Why is my Halvard Home Elara steam iron leaking water from the soleplate?",
+  "top": [
+   "A029",
+   "A163",
+   "A157",
+   "A161",
+   "A052"
+  ],
+  "top1_score": 0.531009316444397,
+  "P1": {
+   "reply": "The supplied passages don’t cover the Halvard Home Elara steam iron, so I can’t confirm why water is leaking from its soleplate.\n\nFor safety, stop using the iron and unplug it only if the plug and surrounding area are dry and safe to reach. Let it cool, then consult the Elara manual or contact Halvard Home support for model-specific advice. Tell them whether it leaks while heating up, steaming or standing idle.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U013",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the timer on my Halvard Home Soren portable heater?",
+  "top": [
+   "A079",
+   "A096",
+   "A169",
+   "A128",
+   "A020"
+  ],
+  "top1_score": 0.6166472434997559,
+  "P1": {
+   "reply": "The provided instructions don’t cover the Halvard Home Soren portable heater, so I can’t confirm how to set its timer. Check the Soren user manual or contact Halvard Home support for model-specific instructions.\n\nIf you share a photo of the heater’s control panel or the timer section of its manual, I can help you work through it.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U014",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the regeneration schedule on my Soren water softener?",
+  "top": [
+   "A178",
+   "A017",
+   "A227",
+   "A151",
+   "A273"
+  ],
+  "top1_score": 0.407873272895813,
+  "P1": {
+   "reply": "The supplied passages don’t include instructions for setting the regeneration schedule on a Soren water softener. Check your Soren user manual or contact Halvard Home support for the correct steps.\n\nIf you share the relevant manual page or the options shown on your softener’s control panel, I can help you interpret them.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U015",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I defrost my Halvard Home Rime chest freezer?",
+  "top": [
+   "A144",
+   "A114",
+   "A110",
+   "A064",
+   "A062"
+  ],
+  "top1_score": 0.6002591848373413,
+  "P1": {
+   "reply": "The supplied instructions cover the **Halvard Home Vale fridge freezer**, not the **Rime chest freezer**, so I can’t confirm the model-specific defrosting procedure.\n\nThe general defrosting guidance provided is to:\n- Unplug the appliance.\n- Move food to suitable cold storage before defrosting.\n- **Never use sharp tools or a hairdryer to remove ice.**\n\nFor the full procedure, including any drain arrangements, check your Rime chest freezer’s manual or contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U016",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "Why is my Halvard Home Nival ice maker producing hollow ice cubes?",
+  "top": [
+   "A144",
+   "A033",
+   "A254",
+   "A225",
+   "A160"
+  ],
+  "top1_score": 0.481123685836792,
+  "P1": {
+   "reply": "The supplied passages don’t cover the Halvard Home Nival ice maker or hollow ice cubes, so I can’t confirm the cause from this information.\n\nCheck the troubleshooting section of your Nival user manual or contact Halvard Home support with the appliance’s model details. The Vale fridge freezer descaling instructions apply to its water dispenser nozzle, not the Nival ice maker.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U017",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I clean the removable plates on my Halvard Home Soren electric grill?",
+  "top": [
+   "A236",
+   "A027",
+   "A231",
+   "A093",
+   "A058"
+  ],
+  "top1_score": 0.4644361138343811,
+  "P1": {
+   "reply": "The supplied passages don’t cover the **Halvard Home Soren electric grill**, so I can’t confirm how to remove or wash its plates, or whether they’re dishwasher-safe.\n\nSwitch off and unplug the grill, and let it cool completely before handling the plates. Check the Soren user manual or contact Halvard Home support for the correct cleaning instructions rather than following the filter-cleaning methods above.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U018",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I clean the pulp filter on my Halvard Home Sola juicer?",
+  "top": [
+   "A093",
+   "A027",
+   "A236",
+   "A269",
+   "A037"
+  ],
+  "top1_score": 0.5469574928283691,
+  "P1": {
+   "reply": "The provided instructions don’t cover the **Halvard Home Sola juicer’s pulp filter**, so I can’t confirm its cleaning procedure.\n\nSwitch off and unplug the juicer before handling the filter. Check your Sola user manual for removal and cleaning instructions, or contact Halvard Home support. Don’t assume the cleaning methods for the other appliances apply to your juicer.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U019",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "Why is my Halvard Home Neris dishwasher drawer not draining after a wash cycle?",
+  "top": [
+   "A012",
+   "A044",
+   "A072",
+   "A028",
+   "A251"
+  ],
+  "top1_score": 0.6296343803405762,
+  "P1": {
+   "reply": "The passages don’t cover the **Halvard Home Neris dishwasher drawer**, so I can’t confirm its specific cause. For the Tessa dishwasher, the usual causes of water remaining after draining are a **blocked drain filter or a kinked drain hose**. These may also be worth checking on your Neris, following its model-specific instructions.\n\nBefore checking anything, switch it off and unplug it, and let any hot water cool. Consult the Neris manual for how to clean and securely refit its filter. Check only visible drain hose sections for kinks—don’t pull out the appliance or disconnect pipes.\n\nIf water remains or the problem returns, stop using it and contact Halvard Home support. Is there an error code or flashing warning light?",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U020",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?",
+  "top": [
+   "A236",
+   "A231",
+   "A188",
+   "A185",
+   "A084"
+  ],
+  "top1_score": 0.6606773138046265,
+  "P1": {
+   "reply": "The passages don’t specify a maximum dishwasher temperature or confirm that the filter is dishwasher-safe. They recommend washing it by hand in warm water with a little washing-up liquid and a soft brush, then rinsing and drying it completely before refitting.\n\nCheck your user manual or contact Halvard Home support before putting it in the dishwasher.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U021",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?",
+  "top": [
+   "A222",
+   "A143",
+   "A172",
+   "A074",
+   "A075"
+  ],
+  "top1_score": 0.7873139381408691,
+  "P1": {
+   "reply": "The passages don’t specify what a repeating pattern of three flashes means on a Halvard Home Keel washing machine—only that a flashing warning light needs attention.\n\nCheck that the door is firmly closed and no clothing is trapped in the seal. Switch off and unplug the machine for five minutes, handling the plug only if your hands and the socket area are dry. With the power disconnected, check that the water tap is open and the inlet hose isn’t kinked.\n\nReconnect and restart the programme. If the flashing continues, contact Halvard Home support and tell them which light flashes, that it repeats in groups of three, and when it started.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U022",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What sequence of touch controls activates the child lock on the Corra induction hob?",
+  "top": [
+   "A025",
+   "A185",
+   "A290",
+   "A124",
+   "A243"
+  ],
+  "top1_score": 0.7189198732376099,
+  "P1": {
+   "reply": "The passages don’t specify how to activate the child lock on the Corra induction hob. They only state that touching and holding the lock symbol for three seconds **releases** it.\n\nFor the activation sequence, check the Corra user manual or contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U023",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?",
+  "top": [
+   "A079",
+   "A060",
+   "A167",
+   "A049",
+   "A237"
+  ],
+  "top1_score": 0.6299655437469482,
+  "P1": {
+   "reply": "The passages do not specify the maximum delay-start duration for the Halvard Home Orrin heat pump. They only advise choosing a start time at least five minutes ahead when testing the timer. Contact Halvard Home support to confirm the maximum supported delay.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U024",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What circuit breaker amperage rating is specified for the Corra induction hob?",
+  "top": [
+   "A084",
+   "A081",
+   "A032",
+   "A134",
+   "A026"
+  ],
+  "top1_score": 0.6066197156906128,
+  "P1": {
+   "reply": "The provided passages do not specify a circuit breaker amperage rating for the Corra induction hob. Check the installation manual or contact Halvard Home support for the correct rating.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U025",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How long should the Keel washing machine take to restart after confirming a factory reset?",
+  "top": [
+   "A273",
+   "A193",
+   "A221",
+   "A002",
+   "A274"
+  ],
+  "top1_score": 0.7291266918182373,
+  "P1": {
+   "reply": "The instructions don’t specify how long the Keel washing machine takes to restart after a factory reset. Wait for it to restart before selecting another programme. If the control panel becomes unresponsive, contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U026",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What volume of water, in litres, does the MAX mark on the Brio kettle indicate?",
+  "top": [
+   "A157",
+   "A155",
+   "A267",
+   "A285",
+   "A250"
+  ],
+  "top1_score": 0.5663220882415771,
+  "P1": {
+   "reply": "The passages don’t specify the volume in litres indicated by the Brio kettle’s MAX mark.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U027",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the minimum temperature I can set for holiday mode on the Halvard Home Lumen thermostat?",
+  "top": [
+   "A096",
+   "A282",
+   "A128",
+   "A077",
+   "A213"
+  ],
+  "top1_score": 0.6946868300437927,
+  "P1": {
+   "reply": "The passages don’t specify the minimum temperature for holiday mode on the Halvard Home Lumen thermostat. Check the temperature options in the **Holiday** menu, or contact Halvard Home support to confirm the lowest available setting.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U028",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What voice command should I use to set my Fenwick cooker hood to a specific fan speed?",
+  "top": [
+   "A247",
+   "A109",
+   "A220",
+   "A255",
+   "A290"
+  ],
+  "top1_score": 0.6825246810913086,
+  "P1": {
+   "reply": "The passages don’t specify a voice command for setting a particular fan speed. They only suggest asking your assistant to “switch on the kitchen hood” after linking it through Halvard Home.\n\nFor the correct fan-speed command, contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U029",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum rated operating temperature for the Lumen smart thermostat?",
+  "top": [
+   "A207",
+   "A200",
+   "A294",
+   "A158",
+   "A010"
+  ],
+  "top1_score": 0.5781044960021973,
+  "P1": {
+   "reply": "The provided passages do not specify the Lumen smart thermostat’s maximum rated operating temperature. Check the supplied installation guide or contact Halvard Home support, quoting part number **KX-4280**.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U030",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "Which Wi-Fi security protocols does the Halvard Home Lumen thermostat support: WPA2, WPA3, or both?",
+  "top": [
+   "A265",
+   "A138",
+   "A118",
+   "A010",
+   "A135"
+  ],
+  "top1_score": 0.5967128276824951,
+  "P1": {
+   "reply": "The passages don’t specify whether the Halvard Home Lumen thermostat supports WPA2, WPA3, or both. They only confirm that it requires a 2.4 GHz Wi-Fi network, not 5 GHz.\n\nContact Halvard Home support to confirm the supported security protocols, quoting thermostat part number **KX-4280**.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U031",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum water temperature I should use to wash an Orrin heat pump filter marked as washable?",
+  "top": [
+   "A278",
+   "A151",
+   "A017",
+   "A178",
+   "A133"
+  ],
+  "top1_score": 0.6193429231643677,
+  "P1": {
+   "reply": "The passages don’t specify a maximum water temperature for washing a washable Orrin heat pump filter. Check the filter’s care instructions or contact Halvard Home support before washing it. In the meantime, you can remove dust with a vacuum cleaner’s soft brush attachment.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U032",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How do I cancel a temporary temperature override on my Halvard Home Lumen thermostat and resume the heating schedule?",
+  "top": [
+   "A096",
+   "A128",
+   "A282",
+   "A077",
+   "A135"
+  ],
+  "top1_score": 0.6577540636062622,
+  "P1": {
+   "reply": "To resume normal heating, return your Lumen thermostat to its heating schedule rather than leaving the temporary temperature override active. Check that the schedule is enabled and applies to the correct day.\n\nThe passages don’t specify the exact button or menu option for cancelling an override. If you can’t find it on the thermostat, contact Halvard Home support for guidance.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U033",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How often should I clean the filter on my Keel washing machine?",
+  "top": [
+   "A173",
+   "A028",
+   "A203",
+   "A093",
+   "A245"
+  ],
+  "top1_score": 0.7549382448196411,
+  "P1": {
+   "reply": "There’s no fixed cleaning interval specified for your Keel washing machine filter. Clean it if the machine drains slowly, leaves water in the drum, takes longer than usual to finish a cycle, or leaves clothes unusually wet.\n\nBefore cleaning, switch off and unplug the machine, and let any hot water cool completely.",
+   "not_found": false,
+   "verdict": "assert",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U034",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How long does a firmware update typically take to install on a Tessa dishwasher?",
+  "top": [
+   "A159",
+   "A223",
+   "A218",
+   "A227",
+   "A042"
+  ],
+  "top1_score": 0.7568628191947937,
+  "P1": {
+   "reply": "The provided instructions don’t specify a typical installation time. Wait until the display confirms the update is complete before starting a wash, and don’t switch off the power or disconnect Wi-Fi during installation.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U035",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What minimum ventilation clearance should I leave around my Vale fridge freezer for energy-efficient operation?",
+  "top": [
+   "A062",
+   "A264",
+   "A156",
+   "A140",
+   "A240"
+  ],
+  "top1_score": 0.5985053777694702,
+  "P1": {
+   "reply": "The passages don’t specify a minimum ventilation clearance around your Vale fridge freezer. Check the installation manual or contact Halvard Home support for the required distances.\n\nFor energy-efficient operation, keep internal air vents clear and position the appliance away from direct sunlight and heat sources where possible.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U036",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What water hardness setting does the Halvard Home Tessa dishwasher default to after a factory reset?",
+  "top": [
+   "A227",
+   "A050",
+   "A013",
+   "A159",
+   "A223"
+  ],
+  "top1_score": 0.7475799918174744,
+  "P1": {
+   "reply": "The passages don’t specify the default water hardness setting after a factory reset. They advise checking the water hardness setting afterwards and adjusting it for your household.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U037",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How thick should the ice build-up in my Vale fridge freezer be before I defrost it?",
+  "top": [
+   "A144",
+   "A176",
+   "A140",
+   "A156",
+   "A252"
+  ],
+  "top1_score": 0.6451095938682556,
+  "P1": {
+   "reply": "The guidance doesn’t specify an ice thickness. It says to defrost your Vale fridge freezer if **thick ice builds up**, or if ice is preventing the freezer door from closing.\n\nUnplug it and move food to suitable cold storage before letting the ice thaw naturally. Never use sharp tools or a hairdryer. If the build-up keeps returning, contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U038",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "How much clearance should I leave around my Vale fridge freezer for ventilation after moving it?",
+  "top": [
+   "A252",
+   "A156",
+   "A140",
+   "A065",
+   "A062"
+  ],
+  "top1_score": 0.657269299030304,
+  "P1": {
+   "reply": "Leave space around your Vale fridge freezer for ventilation, but the provided guidance does not specify an exact clearance. Check your installation guide or contact Halvard Home support for the required distances.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U039",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What supply voltage range does the Halvard Home Vale fridge freezer require to start without triggering error E-9215?",
+  "top": [
+   "A114",
+   "A110",
+   "A062",
+   "A061",
+   "A104"
+  ],
+  "top1_score": 0.7296754717826843,
+  "P1": {
+   "reply": "The passages do not specify the supply voltage range required to start the Halvard Home Vale fridge freezer without triggering E-9215. They only state that E-9215 indicates an unstable electrical supply. Contact Halvard Home support for the required voltage range.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ }
+]

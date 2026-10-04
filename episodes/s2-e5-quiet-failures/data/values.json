@@ -1,0 +1,2160 @@
+{
+ "seed": 0,
+ "items": [
+  {
+   "article_id": "A034",
+   "old": "KX-3542",
+   "new": "KX-7816",
+   "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+   "sentence": "For the Mira robot vacuum, KX-3542 is the part number for the replacement side brush.",
+   "revised_sentence": "For the Mira robot vacuum, KX-7816 is the part number for the replacement side brush.",
+   "revised": "Ordering a spare Mira side brush\n\nIf your Mira robot vacuum leaves crumbs along skirting boards, check the side brush. Bent or broken bristles can stop it sweeping dirt into the suction path.\n\nFor the Mira robot vacuum, KX-7816 is the part number for the replacement side brush. To order one, contact Halvard Home customer support and quote this part number. Say that you need a side brush for a Mira robot vacuum, and provide your delivery address. Ask support to confirm the price and availability before paying.\n\nSwitch the vacuum off before inspecting the brush. Remove any tangled hair first: if the bristles are intact and the brush turns freely afterwards, you may not need a replacement.",
+   "rejected": []
+  },
+  {
+   "article_id": "A057",
+   "old": "KX-8033",
+   "new": "KX-8047",
+   "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+   "sentence": "KX-8033 is the dock’s power protection module.",
+   "revised_sentence": "KX-8047 is the dock’s power protection module.",
+   "revised": "Mira stops charging after a power cut\n\nIf your Halvard Home Mira robot vacuum was cleaning when the power went off, it may return to its dock but fail to charge once power is restored.\n\nKX-8047 is the dock’s power protection module. A sudden loss of mains power can leave this module in its protective shutdown state, preventing the dock from supplying charge.\n\nSwitch off the vacuum and unplug the dock from the wall socket for 60 seconds. Then plug the dock back in, switch on the vacuum and place it on the charging contacts.\n\nIf charging does not start, contact Halvard Home support. Do not open the dock or attempt to replace the module yourself.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch off the vacuum and unplug the dock from the wall socket for 60 seconds.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A088",
+   "old": "KX-7986",
+   "new": "KX-8423",
+   "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+   "sentence": "On this product, KX-7986 is the door catch that holds the door shut.",
+   "revised_sentence": "On this product, KX-8423 is the door catch that holds the door shut.",
+   "revised": "Ashby tumble dryer door not closing\n\nIf your Ashby tumble dryer door will not close, switch the dryer off and unplug it before checking the opening. Remove any clothing trapped between the door and the seal, then wipe away fluff with a soft, dry cloth.\n\nOn this product, KX-8423 is the door catch that holds the door shut. A cracked catch can stop the door clicking into place, even when the opening is clear.\n\nCheck the catch for visible cracks or a loose edge. If it is damaged, do not force the door or try to hold it closed with tape. Contact Halvard Home support to arrange a replacement catch and fitting. Do not use the dryer until the door closes securely.",
+   "rejected": []
+  },
+  {
+   "article_id": "A101",
+   "old": "KX-3356",
+   "new": "KX-4821",
+   "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+   "sentence": "KX-3356 is the Brio kettle’s wireless control module, which receives firmware updates.",
+   "revised_sentence": "KX-4821 is the Brio kettle’s wireless control module, which receives firmware updates.",
+   "revised": "Updating your Brio kettle’s firmware\n\nIf a firmware update stops before completion, the kettle’s wireless connection may have dropped. This can leave the app showing ‘Updating’ even though no progress is being made.\n\nKX-4821 is the Brio kettle’s wireless control module, which receives firmware updates. If updating repeatedly fails, contact Halvard Home support to have this module checked; do not open the kettle yourself.\n\nTo retry the update:\n\n- Let the kettle cool, empty it and place it on its powered base.\n- Connect your phone to the same home Wi-Fi network as the kettle.\n- Open the Halvard Home app, select your kettle, then choose ‘Firmware update’.\n- Keep the kettle powered and your phone nearby until the app confirms completion.\n\nDo not boil water during the update.",
+   "rejected": []
+  },
+  {
+   "article_id": "A151",
+   "old": "1°C",
+   "new": "3°C",
+   "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+   "sentence": "Lowering your usual setting by 1°C can reduce energy use, provided your home stays warm enough for everyone.",
+   "revised_sentence": "Lowering your usual setting by 3°C can reduce energy use, provided your home stays warm enough for everyone.",
+   "revised": "Energy-saving settings for your Orrin heat pump\n\nStart with a room temperature of 19°C, then adjust it to suit your comfort. Lowering your usual setting by 3°C can reduce energy use, provided your home stays warm enough for everyone.\n\nUse your heating schedule to match your routine. Heat pumps generally work best with steady temperatures, so try a small overnight reduction rather than switching the heating off completely.\n\nIf weather compensation is available, use it to help the system adjust heating water temperature as outdoor conditions change. Ask your installer to check the settings if rooms feel too warm or too cold.\n\nAvoid changing hot water hygiene settings to save energy. These help keep stored water safe.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Start with a room temperature of 19°C, then adjust it to suit your comfort.\",\"value\":\"19°C\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "2°C",
+     "problem": "\"2°C\" already appears in the library"
+    }
+   ]
+  },
+  {
+   "article_id": "A013",
+   "old": "60°C",
+   "new": "65°C",
+   "question": "What temperature should I use for the empty programme when descaling my Tessa dishwasher, unless the descaler instructions specify otherwise?",
+   "sentence": "Switch the dishwasher back on and run an empty programme at 60°C, unless the descaler instructions specify otherwise.",
+   "revised_sentence": "Switch the dishwasher back on and run an empty programme at 65°C, unless the descaler instructions specify otherwise.",
+   "revised": "Descaling your Tessa dishwasher\n\nOn the Tessa dishwasher, E-6067 means limescale is restricting water flow through the heater, so the water is taking too long to reach the wash temperature.\n\nTo descale your dishwasher:\n\n1. Cancel the programme, switch off the dishwasher and let it cool.\n2. Remove all dishes and cutlery, then check and clean the filter.\n3. Add a dishwasher-safe descaler, following the quantity and placement instructions on its packaging.\n4. Switch the dishwasher back on and run an empty programme at 65°C, unless the descaler instructions specify otherwise.\n\nDo not add detergent or mix the descaler with other cleaning products.\n\nIf the warning returns after descaling, stop using the dishwasher and contact Halvard Home support. The heater or water pathway may need inspection.",
+   "rejected": []
+  },
+  {
+   "article_id": "A188",
+   "old": "lowest power setting",
+   "new": "medium power setting",
+   "question": "What setting should I choose on my Corra induction hob to save energy while keeping my food cooking as needed?",
+   "sentence": "Choose the lowest power setting that keeps your food cooking as needed.",
+   "revised_sentence": "Choose the medium power setting that keeps your food cooking as needed.",
+   "revised": "Saving energy on your Corra induction hob\n\nChoose the medium power setting that keeps your food cooking as needed. Once water reaches the boil, turn the power down until it maintains a gentle simmer, rather than leaving the zone on high.\n\nTo reduce energy use:\n- Keep a lid on saucepans where the recipe allows. This holds in heat, so you can use a lower setting.\n- Use an induction-compatible pan with a flat base that matches the cooking zone.\n- Heat only the amount of water you need.\n- Avoid heating empty pans or preheating longer than your recipe requires.\n- Switch each zone off as soon as cooking is finished.\n\nIf cooking slows too much, increase the power gradually rather than immediately selecting the highest setting.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "article_id": "A080",
+   "old": "E-5946",
+   "new": "E-3721",
+   "question": "What fault code on the Halvard Home Orrin heat pump indicates that the outdoor coil temperature sensor is not providing a reliable reading?",
+   "sentence": "On the Halvard Home Orrin heat pump, E-5946 means the outdoor coil temperature sensor is not providing a reliable reading.",
+   "revised_sentence": "On the Halvard Home Orrin heat pump, E-3721 means the outdoor coil temperature sensor is not providing a reliable reading.",
+   "revised": "Orrin heat pump display fault\n\nOn the Halvard Home Orrin heat pump, E-3721 means the outdoor coil temperature sensor is not providing a reliable reading. The heat pump stops its compressor because it cannot safely control the defrost cycle.\n\nSwitch the heat pump off using its controller, then turn off the power at the isolator. Leave it off for five minutes before restoring power and restarting it once.\n\nIf the fault returns, leave the unit switched off and contact Halvard Home support or a qualified heat pump engineer. Tell them that the outdoor coil sensor fault has returned after a restart.\n\nDo not remove the casing, touch internal wiring or repeatedly reset the unit. The sensor and its connections need professional inspection.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave it off for five minutes before restoring power and restarting it once.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A046",
+   "old": "KX-1693",
+   "new": "KX-2847",
+   "question": "What is the part number of the replacement display power module for my Orrin heat pump?",
+   "sentence": "KX-1693 is the replacement display power module for this product.",
+   "revised_sentence": "KX-2847 is the replacement display power module for this product.",
+   "revised": "Orrin heat pump display stays blank\n\nIf your Orrin heat pump display stays blank, first check that the wall isolator is switched on and that your home’s circuit breaker has not tripped.\n\nSwitch the heat pump off at the wall isolator, wait 60 seconds, then switch it on again. If the circuit breaker trips again, leave the heat pump switched off and contact a qualified electrician.\n\nA loose connection in the display power module can stop electricity reaching the screen. KX-2847 is the replacement display power module for this product.\n\nIf the display remains blank after restarting, contact Halvard Home support to arrange an inspection. A technician should check the connection and replace the module if needed. Do not remove the casing yourself.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch the heat pump off at the wall isolator, wait 60 seconds, then switch it on again.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A079",
+   "old": "E-3496",
+   "new": "E-5721",
+   "question": "What error code indicates that my Halvard Home Orrin heat pump’s internal clock has lost its time setting?",
+   "sentence": "On the Halvard Home Orrin heat pump, E-3496 means the internal clock has lost its time setting, so the unit cannot calculate when a timed or delayed start should begin.",
+   "revised_sentence": "On the Halvard Home Orrin heat pump, E-5721 means the internal clock has lost its time setting, so the unit cannot calculate when a timed or delayed start should begin.",
+   "revised": "Timer or delay start will not run\n\nOn the Halvard Home Orrin heat pump, E-5721 means the internal clock has lost its time setting, so the unit cannot calculate when a timed or delayed start should begin. This can happen after a power cut.\n\nTo restore the timer:\n\n1. Open Settings on the control panel and select Clock.\n2. Set the current day and time, then press Save.\n3. Cancel the existing timer or delayed start.\n4. Enter a new start time and confirm it.\n\nChoose a start time at least five minutes ahead when testing the timer. The heat pump should remain on standby until that time.\n\nIf the warning returns after saving the clock, contact Halvard Home support. Do not remove the unit’s casing.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Choose a start time at least five minutes ahead when testing the timer.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A116",
+   "old": "E-7215",
+   "new": "E-8342",
+   "question": "What error code on my Mira robot vacuum means the main brush is rotating unevenly and causing unusual vibration?",
+   "sentence": "On the Mira robot vacuum, E-7215 means the main brush is rotating unevenly, causing unusual vibration.",
+   "revised_sentence": "On the Mira robot vacuum, E-8342 means the main brush is rotating unevenly, causing unusual vibration.",
+   "revised": "Mira robot vacuum: unusual vibration\n\nOn the Mira robot vacuum, E-8342 means the main brush is rotating unevenly, causing unusual vibration. Hair or thread wrapped around one end of the brush is the most likely cause.\n\nSwitch the vacuum off and remove it from its charging dock before checking underneath. Place it upside down on a soft cloth, open the main brush cover and lift out the brush. Carefully remove any wrapped hair or thread, paying particular attention to both ends.\n\nRefit the brush and close the cover securely. Run the vacuum on a clear, level floor for one minute.\n\nIf the vibration continues, switch it off and contact Halvard Home support. Do not keep using the vacuum if the brush looks bent or damaged.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Run the vacuum on a clear, level floor for one minute.\",\"value\":\"one minute\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A299",
+   "old": "detergent made for dishwashers",
+   "new": "rinse aid made for dishwashers",
+   "question": "What type of detergent should I use in my Tessa dishwasher to avoid excessive foam and leaks?",
+   "sentence": "Use only detergent made for dishwashers.",
+   "revised_sentence": "Use only rinse aid made for dishwashers.",
+   "revised": "Water leaking under your Tessa dishwasher\n\nIf water is leaking underneath your Tessa dishwasher, stop the programme and turn off the water supply using the dishwasher’s isolation valve. Switch off the electricity only if you can reach the switch safely without standing in water or touching wet surfaces.\n\nOnce the area is safe, wipe up the water to prevent slips. Check the door seal for trapped food and clean it with a damp cloth. Look for visible drips from accessible hose connections, but do not pull out the dishwasher or remove panels.\n\nUse only rinse aid made for dishwashers. Washing-up liquid can create excessive foam and cause leaks.\n\nDo not run another cycle while the leak remains unexplained. Contact Halvard Home support to arrange an inspection if the source is unclear.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "article_id": "A078",
+   "old": "E-3946",
+   "new": "E-5271",
+   "question": "What error code indicates that my Corra induction hob’s lid sensor has detected the protective lid is not fully closed?",
+   "sentence": "E-3946 means the Corra induction hob’s lid sensor has detected that the protective lid is not fully closed.",
+   "revised_sentence": "E-5271 means the Corra induction hob’s lid sensor has detected that the protective lid is not fully closed.",
+   "revised": "Corra induction hob lid will not close\n\nE-5271 means the Corra induction hob’s lid sensor has detected that the protective lid is not fully closed. A pan handle, food debris or a misaligned hinge can prevent the lid from reaching its closed position.\n\nSwitch off the hob and let the cooking surface cool completely before checking it. Remove all cookware, then wipe the lid’s rim and the surrounding edge with a soft, damp cloth. Gently lower the lid without forcing it.\n\nIf the lid closes properly, switch the hob off at the wall for one minute, then restore power. If the warning returns, or the lid remains crooked or stuck, contact Halvard Home support. Do not adjust the hinges yourself.\n\nKeep the lid fully open whenever you cook.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If the lid closes properly, switch the hob off at the wall for one minute, then restore power.\",\"value\":\"one minute\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A137",
+   "old": "Start Mira.",
+   "new": "Start Luna.",
+   "question": "What voice command does the article suggest trying after naming the vacuum?",
+   "sentence": "Give the vacuum a simple name, such as “Mira”, then try saying, “Start Mira.”",
+   "revised_sentence": "Give the vacuum a simple name, such as “Mira”, then try saying, “Start Luna.”",
+   "revised": "# Pair Mira with a voice assistant\n\nBefore you begin, check that your Mira robot vacuum is online in the Halvard Home app and that you can start a clean from the app.\n\nOpen your voice assistant’s app and find the section for adding smart home devices. Search for Halvard Home, select it, then follow the prompts to sign in to your Halvard Home account and allow access.\n\nUse the same Halvard Home account that you used to set up Mira. Once linking is complete, ask your assistant to discover devices.\n\nGive the vacuum a simple name, such as “Mira”, then try saying, “Start Luna.”\n\nIf Mira does not appear, check its internet connection, unlink Halvard Home in the assistant’s app, then link it again.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": \"\", \"value\": \"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Give the vacuum a simple name, such as “Mira”, then try saying, “Start Mira.”\",\"value\":\"Mira\"}",
+     "problem": "the value appears 85 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A286",
+   "old": "one of the space where it fits",
+   "new": "two of the space where it fits",
+   "question": "Besides a photo of the accessory itself, what other photo should I take before contacting support?",
+   "sentence": "Before contacting support, take one clear photo of the accessory and one of the space where it fits.",
+   "revised_sentence": "Before contacting support, take one clear photo of the accessory and two of the space where it fits.",
+   "revised": "Ordering a spare accessory for your Vale fridge freezer\n\nTo order a spare accessory, contact Halvard Home customer support with your fridge freezer’s model details and the name of the item you need, such as a shelf, drawer or door tray.\n\nBefore contacting support, take one clear photo of the accessory and two of the space where it fits. If the accessory is missing, photograph the empty space instead. This helps support identify the right replacement.\n\nAsk support to confirm compatibility, the total price including delivery, and the expected delivery time before placing your order. Do not choose an accessory by appearance alone, as similar items may have different fittings.\n\nKeep your order confirmation until the replacement arrives and you have checked that it fits.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Before contacting support, take one clear photo of the accessory and one of the space where it fits.\",\"value\":\"one\"}",
+     "problem": "the value appears 129 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Before contacting support, take one clear photo of the accessory and one of the space where it fits.\",\"value\":\"one clear photo\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Before contacting support, take one clear photo of the accessory and one of the space where it fits.\",\"value\":\"one clear photo of the accessory\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A092",
+   "old": "E-9474",
+   "new": "E-5821",
+   "question": "What error code indicates that the heater’s electrical connection has overheated on my Halvard Home Tessa dishwasher?",
+   "sentence": "On the Halvard Home Tessa dishwasher, E-9474 means the heater’s electrical connection has overheated.",
+   "revised_sentence": "On the Halvard Home Tessa dishwasher, E-5821 means the heater’s electrical connection has overheated.",
+   "revised": "Burning smell from your Tessa dishwasher\n\nOn the Halvard Home Tessa dishwasher, E-5821 means the heater’s electrical connection has overheated. This can produce a burning plastic smell, and the dishwasher must not be used until it has been checked.\n\nStop the programme and switch the dishwasher off. If it is safe to do so, disconnect the power at the wall socket or the household circuit breaker. Do not touch a plug or socket that feels hot, looks damaged or is wet.\n\nDo not restart the dishwasher, remove panels or attempt to repair the wiring. Contact Halvard Home support to arrange a qualified service visit, and describe the smell.\n\nIf you see smoke or flames, leave the area and call the fire service.",
+   "rejected": []
+  },
+  {
+   "article_id": "A028",
+   "old": "KX-3962",
+   "new": "KX-5827",
+   "question": "What is the part number of the drain pump filter for my Keel washing machine?",
+   "sentence": "KX-3962 is the drain pump filter for this product.",
+   "revised_sentence": "KX-5827 is the drain pump filter for this product.",
+   "revised": "Slow draining on your Keel washing machine\n\nIf your Keel washing machine takes longer than usual to finish a cycle or leaves clothes unusually wet, a blocked drain filter may be restricting water flow.\n\nKX-5827 is the drain pump filter for this product. A build-up of lint, coins or hair in this filter can cause slow draining and delay the final spin.\n\nTo clean it, switch the machine off and unplug it. Allow any hot water to cool. Place towels and a shallow tray beneath the lower front access flap, then loosen the filter slowly to release trapped water.\n\nRemove debris, rinse the filter and refit it securely. Run a drain cycle. If draining remains slow or you notice a leak, stop using the machine and contact Halvard Home support.",
+   "rejected": []
+  },
+  {
+   "article_id": "A040",
+   "old": "KX-0711",
+   "new": "KX-0824",
+   "question": "What is the part code for the moisture sensor in my Ashby tumble dryer?",
+   "sentence": "KX-0711 is the Ashby tumble dryer’s moisture sensor.",
+   "revised_sentence": "KX-0824 is the Ashby tumble dryer’s moisture sensor.",
+   "revised": "Saving energy with your Ashby tumble dryer\n\nChoose Eco for everyday cotton loads and select Cupboard Dry rather than Extra Dry when you do not need additional drying. Spin washing thoroughly before loading, and clean the lint filter after every cycle to maintain airflow.\n\nKX-0824 is the Ashby tumble dryer’s moisture sensor. It helps automatic programmes stop when your clothes reach the selected dryness level. A faulty sensor can make the dryer continue heating after the load is dry, wasting electricity.\n\nIf clothes are already dry but the programme repeatedly continues heating, stop the dryer and switch it off at the socket. Contact Halvard Home support to arrange a sensor check. Do not remove panels or attempt to replace the sensor yourself.",
+   "rejected": []
+  },
+  {
+   "article_id": "A014",
+   "old": "E-6876",
+   "new": "E-4923",
+   "question": "What error code on my Ashby tumble dryer means the condensate drain pump is blocked?",
+   "sentence": "On the Ashby tumble dryer, E-6876 means the condensate drain pump is blocked.",
+   "revised_sentence": "On the Ashby tumble dryer, E-4923 means the condensate drain pump is blocked.",
+   "revised": "Water leaking underneath your Ashby tumble dryer\n\nOn the Ashby tumble dryer, E-4923 means the condensate drain pump is blocked. Water cannot reach the collection tank, so it can build up in the base and leak underneath.\n\nStop the programme and switch off the dryer. Unplug it only if the plug, socket and surrounding area are dry. If they are wet, switch off the circuit at the consumer unit instead.\n\nOnce the power is disconnected, wipe up the water and empty the collection tank. Do not remove the dryer’s panels or try to clear the pump yourself.\n\nLeave the dryer switched off and contact Halvard Home support to arrange a repair. Tell them that water is leaking underneath and that the display shows a drain pump fault.",
+   "rejected": []
+  },
+  {
+   "article_id": "A118",
+   "old": "50%",
+   "new": "75%",
+   "question": "At what percentage can the firmware update freeze if the thermostat’s Wi-Fi control module loses its connection to the router?",
+   "sentence": "An update can freeze at 50% if the module loses its connection to your router.",
+   "revised_sentence": "An update can freeze at 75% if the module loses its connection to your router.",
+   "revised": "Updating your Lumen thermostat\n\nKeep your Lumen smart thermostat connected to power and Wi-Fi throughout a firmware update. In the Halvard Home app, select your thermostat, open Settings, then choose Firmware update. Tap Install if an update is available.\n\nKX-1006 is the part number of the thermostat’s Wi-Fi control module, which downloads the firmware. You do not need to remove or replace this module for a routine update.\n\nAn update can freeze at 75% if the module loses its connection to your router. If progress has not changed for 10 minutes, restart your router, wait for the thermostat to reconnect, then tap Retry in the app. Do not disconnect the thermostat’s power during installation.\n\nIf the update stalls again, contact Halvard Home support.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If progress has not changed for 10 minutes, restart your router, wait for the thermostat to reconnect, then tap Retry in the app.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A105",
+   "old": "KX-8618",
+   "new": "KX-7423",
+   "question": "What is the part code for the rear transport clip that holds my Tessa dishwasher’s drain hose in place during a move?",
+   "sentence": "KX-8618 is the rear transport clip that holds the drain hose against the dishwasher during a move.",
+   "revised_sentence": "KX-7423 is the rear transport clip that holds the drain hose against the dishwasher during a move.",
+   "revised": "Moving your Tessa dishwasher\n\nBefore moving your Tessa dishwasher, switch it off, unplug it and turn off the water supply. Disconnect the inlet and drain hoses, catching any remaining water in a shallow tray.\n\nKX-7423 is the rear transport clip that holds the drain hose against the dishwasher during a move. Secure the hose in this clip before lifting. If the clip is cracked, contact Halvard Home for a replacement before transporting the unit.\n\nKeep the dishwasher upright and use two people to move it. Never lift it by the door handle.\n\nAfter positioning it, release the drain hose from the clip and reconnect it without bends or trapped sections. Failure to drain after moving may be caused by a hose crushed beneath the cabinet. Check its route before running a programme.",
+   "rejected": []
+  },
+  {
+   "article_id": "A024",
+   "old": "E-5107",
+   "new": "E-5208",
+   "question": "Which error code on my Orrin heat pump indicates that mains power was interrupted while the compressor was running?",
+   "sentence": "On the Orrin heat pump, E-5107 means mains power was interrupted while the compressor was running.",
+   "revised_sentence": "On the Orrin heat pump, E-5208 means mains power was interrupted while the compressor was running.",
+   "revised": "Power cut during use\n\nOn the Orrin heat pump, E-5208 means mains power was interrupted while the compressor was running. The heat pump has paused operation to protect the compressor during restart.\n\nWhen power returns, leave the heat pump connected and wait five minutes before trying to restart it. Then press the power button once on the controller and select your usual heating setting. Do not repeatedly switch the electricity supply off and on, as this can interrupt the restart delay.\n\nIf the message remains or heating does not resume, switch the heat pump off using its controller and contact Halvard Home support. Tell the adviser that the fault appeared after a power cut. Do not open the casing or attempt electrical repairs.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"When power returns, leave the heat pump connected and wait five minutes before trying to restart it.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A084",
+   "old": "20 minutes",
+   "new": "25 minutes",
+   "question": "How long should I leave my Corra induction hob to cool after turning it off at the wall isolation switch?",
+   "sentence": "Leave it to cool for 20 minutes.",
+   "revised_sentence": "Leave it to cool for 25 minutes.",
+   "revised": "Corra induction hob heating slowly\n\nIf your Corra induction hob heats slowly or feels weak, E-6779 means restricted cooling airflow has triggered the hob’s protective power limit. The hob reduces heat output to prevent its internal electronics from overheating.\n\nSwitch off all cooking zones, then turn off the hob at its wall isolation switch. Leave it to cool for 25 minutes. Once cool, check that items in the cupboard or drawer beneath the hob are not blocking its ventilation openings. Move any obstructions away, but do not remove covers or reach inside the appliance.\n\nRestore power and test one zone with an induction-compatible pan containing water. If heating remains weak or the warning returns, switch the hob off and contact Halvard Home support to arrange an inspection.",
+   "rejected": [
+    {
+     "reply": "30 minutes",
+     "problem": "\"30 minutes\" already appears in the library"
+    }
+   ]
+  },
+  {
+   "article_id": "A016",
+   "old": "KX-6373",
+   "new": "KX-8429",
+   "question": "What is the replacement lower basket wheel kit part number for my Halvard Home Tessa dishwasher?",
+   "sentence": "For the Halvard Home Tessa dishwasher, KX-6373 is the replacement lower basket wheel kit.",
+   "revised_sentence": "For the Halvard Home Tessa dishwasher, KX-8429 is the replacement lower basket wheel kit.",
+   "revised": "Replacing a lower basket wheel\n\nIf your Tessa dishwasher’s lower basket tilts or catches when you pull it out, a cracked basket wheel may be the cause.\n\nFor the Halvard Home Tessa dishwasher, KX-8429 is the replacement lower basket wheel kit. Order this kit from Halvard Home support if a wheel is cracked or missing.\n\nSwitch off and unplug the dishwasher before fitting the replacement. Let the appliance cool, empty the lower basket, then lift it out onto a flat surface. Unclip the damaged wheel and press the new wheel onto the same mounting point until it clicks into place.\n\nRefit the basket and slide it fully in and out twice. If it still catches, stop using it and contact support.",
+   "rejected": []
+  },
+  {
+   "article_id": "A217",
+   "old": "an authorised electrical waste service",
+   "new": "a local council recycling centre",
+   "question": "What type of service should I use to recycle my old Vale fridge freezer?",
+   "sentence": "Your old Vale fridge freezer should be recycled through an authorised electrical waste service, not placed in a household rubbish bin.",
+   "revised_sentence": "Your old Vale fridge freezer should be recycled through a local council recycling centre, not placed in a household rubbish bin.",
+   "revised": "Recycling your old Vale fridge freezer\n\nYour old Vale fridge freezer should be recycled through a local council recycling centre, not placed in a household rubbish bin.\n\nBefore collection, remove all food and unplug the unit from the wall socket. Let any ice melt naturally, then wipe the inside dry. Put towels around the base to catch water, and never use sharp tools to remove ice.\n\nContact your local council to ask about fridge freezer collections or an approved recycling centre. If you are buying a replacement, ask the retailer whether it offers an old-appliance collection service and whether charges apply.\n\nDo not cut pipes or damage the cooling system: refrigerant needs specialist handling. Keep children away from the unit while it awaits collection.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Your old Vale fridge freezer should be recycled through an authorised electrical waste service, not placed in a household rubbish bin.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "article_id": "A288",
+   "old": "a local recycling centre that accepts small electrical appliances",
+   "new": "an electrical retailer that offers a small-appliance take-back service",
+   "question": "Where should I take my old Lumen smart thermostat for recycling?",
+   "sentence": "Take it to a local recycling centre that accepts small electrical appliances.",
+   "revised_sentence": "Take it to an electrical retailer that offers a small-appliance take-back service.",
+   "revised": "Recycling your old Lumen smart thermostat\n\nRecycle your old Lumen smart thermostat as electrical waste, not in your household rubbish bin. Take it to an electrical retailer that offers a small-appliance take-back service. Check your council’s website for opening times and any booking requirements before travelling.\n\nIf the thermostat is still installed and wired into your heating system, ask a qualified electrician or heating engineer to disconnect it safely. Do not cut wires or open the casing yourself.\n\nIf the unit still works, use its factory reset option to clear saved settings before recycling. Remove it from your smart home account too.\n\nRemove any batteries only if they are designed to be user-removable. Recycle these separately at a battery collection point.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Recycle your old Lumen smart thermostat as electrical waste, not in your household rubbish bin.\",\"value\":\"electrical waste\"}",
+     "problem": "the value appears 4 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A010",
+   "old": "KX-3170",
+   "new": "KX-4280",
+   "question": "What part number should I quote when contacting Halvard Home support about my Lumen smart thermostat’s warranty?",
+   "sentence": "KX-3170 is the part number identifying this thermostat.",
+   "revised_sentence": "KX-4280 is the part number identifying this thermostat.",
+   "revised": "Lumen smart thermostat warranty\n\nYour Halvard Home Lumen smart thermostat has a two-year warranty from the date of purchase. It covers manufacturing faults during normal household use.\n\nKX-4280 is the part number identifying this thermostat. Quote it when contacting Halvard Home support so we can check the correct product’s warranty.\n\nFor example, if the display repeatedly goes blank while the thermostat still has power, an internal manufacturing fault may be responsible. Contact support with your proof of purchase, purchase date and a brief description of when the problem occurs.\n\nDo not open the casing or attempt an internal repair. Support will assess the fault and explain the next steps. Accidental damage and normal wear are not covered.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Lumen smart thermostat has a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A096",
+   "old": "E-8255",
+   "new": "E-7312",
+   "question": "What error code does the Halvard Home Lumen thermostat display when the holiday schedule has no return date?",
+   "sentence": "On the Halvard Home Lumen smart thermostat, E-8255 means the holiday schedule has no return date, so holiday mode cannot start.",
+   "revised_sentence": "On the Halvard Home Lumen smart thermostat, E-7312 means the holiday schedule has no return date, so holiday mode cannot start.",
+   "revised": "Using your Lumen thermostat in a holiday home\n\nOn the Halvard Home Lumen smart thermostat, E-7312 means the holiday schedule has no return date, so holiday mode cannot start. Your existing heating schedule stays active until you correct this.\n\nTo fix it, open the thermostat’s menu, select Holiday, and enter the date and time when you next expect to arrive. Choose your holiday temperature, then select Save. Check that the display shows both your return date and that holiday mode is active before leaving.\n\nIf your plans change, update the return date rather than switching the thermostat off. Keep the heating system powered so it can maintain your chosen temperature while the property is empty.\n\nIf the warning remains, contact Halvard Home support.",
+   "rejected": []
+  },
+  {
+   "article_id": "A039",
+   "old": "KX-7011",
+   "new": "KX-7024",
+   "question": "What is the part code for the sealing strip supplied to fit beneath my Corra induction hob’s glass edge?",
+   "sentence": "KX-7011 is the sealing strip supplied for fitting beneath the hob’s glass edge.",
+   "revised_sentence": "KX-7024 is the sealing strip supplied for fitting beneath the hob’s glass edge.",
+   "revised": "Corra induction hob: first installation\n\nBefore using your Corra induction hob, ask a qualified installer to check that it sits level in the worktop and that its electrical connection is safe.\n\nKX-7024 is the sealing strip supplied for fitting beneath the hob’s glass edge. It must lie flat all the way round before the hob is lowered into place.\n\nDuring first installation, a folded sealing strip can leave one corner raised, causing the hob to rock when touched. If you notice this, leave the power switched off and ask your installer to lift the hob and refit the strip correctly.\n\nDo not press the raised corner down or add sealant to fill the gap. Only use the hob once the installer has corrected the fit.",
+   "rejected": []
+  },
+  {
+   "article_id": "A065",
+   "old": "KX-9696",
+   "new": "KX-7472",
+   "question": "What is the part code for the removable transit spacer supplied with my Vale fridge freezer?",
+   "sentence": "KX-9696 is the removable transit spacer supplied with your Vale fridge freezer to hold the freezer door steady during delivery.",
+   "revised_sentence": "KX-7472 is the removable transit spacer supplied with your Vale fridge freezer to hold the freezer door steady during delivery.",
+   "revised": "Vale fridge freezer: first installation\n\nIf the freezer door will not close fully during first installation, a transit spacer may still be fitted beneath the door.\n\nKX-7472 is the removable transit spacer supplied with your Vale fridge freezer to hold the freezer door steady during delivery. It is packaging, not a working appliance component, and must be removed before use.\n\nWith the appliance unplugged, open the freezer door and gently pull the spacer out by hand. Do not use sharp tools or force it. Close the door and check that the seal touches the cabinet all the way round.\n\nIf the spacer will not release, leave the appliance unplugged and contact Halvard Home support. Follow the installation guide before switching on.",
+   "rejected": []
+  },
+  {
+   "article_id": "A001",
+   "old": "E-1294",
+   "new": "E-1372",
+   "question": "What error code on my Orrin heat pump means the child lock button has been detected as continuously pressed?",
+   "sentence": "On the Orrin heat pump, E-1294 means the child lock button has been detected as continuously pressed, so the control panel remains locked.",
+   "revised_sentence": "On the Orrin heat pump, E-1372 means the child lock button has been detected as continuously pressed, so the control panel remains locked.",
+   "revised": "Child lock warning on your Orrin heat pump\n\nOn the Orrin heat pump, E-1372 means the child lock button has been detected as continuously pressed, so the control panel remains locked. Moisture or dirt on the touch panel can cause this warning.\n\nTo clear it:\n\n- Remove anything resting against the control panel.\n- Wipe the panel with a soft, dry cloth. Do not spray cleaner directly onto it.\n- Make sure your hands are dry, then press and hold the child lock button for five seconds.\n\nWhen the lock symbol disappears, the controls are available again. The heat pump keeps its previous heating setting while locked.\n\nIf the warning returns, contact Halvard Home support. Do not open the casing or attempt to repair the controls yourself.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Make sure your hands are dry, then press and hold the child lock button for five seconds.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A119",
+   "old": "KX-1160",
+   "new": "KX-1270",
+   "question": "What is the part number for the replacement condensate drain tray for the Halvard Home Orrin heat pump?",
+   "sentence": "For the Halvard Home Orrin heat pump, KX-1160 is the replacement condensate drain tray.",
+   "revised_sentence": "For the Halvard Home Orrin heat pump, KX-1270 is the replacement condensate drain tray.",
+   "revised": "Replacing a cracked drain tray\n\nFor the Halvard Home Orrin heat pump, KX-1270 is the replacement condensate drain tray. This tray collects water and directs it into the drain hose. A crack can let water leak underneath the unit instead.\n\nIf you notice a persistent puddle, switch the heat pump off using its controller. Do not remove any covers or try to seal the tray with glue. Water beneath an outdoor unit can also occur during normal defrosting, so a puddle alone does not confirm a cracked tray.\n\nContact Halvard Home support and describe where the water appears. Quote the part number above and arrange for a qualified engineer to check the tray and replace it if damaged.",
+   "rejected": []
+  },
+  {
+   "article_id": "A067",
+   "old": "E-1261",
+   "new": "E-1274",
+   "question": "What error code on my Halvard Home Orrin heat pump means the outdoor fan motor has overheated?",
+   "sentence": "On the Halvard Home Orrin heat pump, E-1261 means the outdoor fan motor has overheated, potentially scorching its electrical insulation and causing a burning smell.",
+   "revised_sentence": "On the Halvard Home Orrin heat pump, E-1274 means the outdoor fan motor has overheated, potentially scorching its electrical insulation and causing a burning smell.",
+   "revised": "Burning smell from your Orrin heat pump\n\nOn the Halvard Home Orrin heat pump, E-1274 means the outdoor fan motor has overheated, potentially scorching its electrical insulation and causing a burning smell.\n\nStop using the heat pump immediately. If there is no smoke or fire and it is safe to approach, switch it off at the controller, then disconnect its power using the labelled isolation switch. Switching off at the controller alone does not isolate the electricity.\n\nDo not restart the unit, remove its covers or attempt repairs. Contact Halvard Home support to arrange an inspection by a qualified engineer, and describe when the smell started.\n\nIf you see smoke or flames, keep away, leave the property and call 999. Do not use water on the appliance.",
+   "rejected": []
+  },
+  {
+   "article_id": "A102",
+   "old": "E-5328",
+   "new": "E-6419",
+   "question": "What error code indicates that my Brio kettle is not seated correctly on its base during first installation?",
+   "sentence": "During first installation, E-5328 means the kettle is not seated correctly on its base.",
+   "revised_sentence": "During first installation, E-6419 means the kettle is not seated correctly on its base.",
+   "revised": "Brio kettle: first installation\n\nBefore using your Brio kettle, remove all packaging and place the power base on a dry, level worktop.\n\nDuring first installation, E-6419 means the kettle is not seated correctly on its base. A protective packing insert left beneath the kettle can cause this fault.\n\nTo fix it, switch off the socket and unplug the base. Lift off the kettle, remove any remaining packing material and check that both contact surfaces are dry. Put the kettle squarely back on the base, then reconnect the power.\n\nRinse the kettle, fill it to the MAX mark with fresh cold water, boil once and discard the water before making drinks.\n\nIf the warning returns, unplug the kettle and contact Halvard Home support.",
+   "rejected": []
+  },
+  {
+   "article_id": "A106",
+   "old": "KX-6818",
+   "new": "KX-7426",
+   "question": "What is the part number for the replacement cable-entry seal for my Lumen thermostat?",
+   "sentence": "KX-6818 is the replacement cable-entry seal for this product, not an error message.",
+   "revised_sentence": "KX-7426 is the replacement cable-entry seal for this product, not an error message.",
+   "revised": "Water leaking underneath your Lumen thermostat\n\nWater beneath your Lumen smart thermostat can be caused by a split cable-entry seal. This lets warm, damp air reach the cold wall behind the thermostat, where moisture forms and drips from the lower edge.\n\nKX-7426 is the replacement cable-entry seal for this product, not an error message.\n\nIf you notice dripping:\n\n- Do not touch the thermostat while it is wet.\n- Switch off the heating controls at their electrical isolator, provided the switch and surrounding area are dry.\n- Contact Halvard Home support or a qualified heating engineer to inspect the seal and replace it if damaged.\n\nAsk the engineer to check for nearby pipe leaks too. Do not restore power until the thermostat has been checked and declared safe.",
+   "rejected": []
+  },
+  {
+   "article_id": "A026",
+   "old": "E-1107",
+   "new": "E-1204",
+   "question": "What error code on my Corra induction hob means the cooling fan cannot turn freely?",
+   "sentence": "On the Corra induction hob, E-1107 means the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "revised_sentence": "On the Corra induction hob, E-1204 means the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "revised": "Strange noises from your Corra induction hob\n\nA gentle hum or buzz during cooking is normal, especially at high power. However, a loud rattling or scraping sound needs attention.\n\nOn the Corra induction hob, E-1204 means the cooling fan cannot turn freely, usually because its airflow is obstructed. Stop cooking and switch the hob off at the wall isolator. Leave it switched off for at least 10 minutes.\n\nOnce the hob has cooled, check that accessible ventilation openings are clear of objects or loose debris. Do not remove covers or put anything into the vents.\n\nRestore power and try the hob once. If the noise or warning returns, switch it off again and contact Halvard Home support. Do not continue using it.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave it switched off for at least 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A086",
+   "old": "E-6770",
+   "new": "E-4821",
+   "question": "Which error code on my Halvard Home Brio kettle indicates that its internal electrical insulation has failed?",
+   "sentence": "On the Halvard Home Brio kettle, E-6770 means the internal electrical insulation has failed, making the kettle unsafe to use.",
+   "revised_sentence": "On the Halvard Home Brio kettle, E-4821 means the internal electrical insulation has failed, making the kettle unsafe to use.",
+   "revised": "Recycling your Brio kettle\n\nOn the Halvard Home Brio kettle, E-4821 means the internal electrical insulation has failed, making the kettle unsafe to use. Stop using it immediately and unplug it from the wall. Do not switch it on again or try to open the casing.\n\nIf you are retiring the kettle, let it cool completely, then empty out any water. Take both the kettle and its power base to a recycling centre that accepts small electrical appliances. Keep the cable attached.\n\nDo not put the kettle in your household rubbish or mixed recycling bin. Your local council can tell you where to find an electrical recycling collection point. Check opening times and whether you need to book before travelling.",
+   "rejected": []
+  },
+  {
+   "article_id": "A072",
+   "old": "within three minutes",
+   "new": "within five minutes",
+   "question": "How quickly must water drain from my Tessa dishwasher to avoid triggering the flashing drainage warning light?",
+   "sentence": "On your Halvard Home Tessa dishwasher, a flashing warning light with E-4021 means water has not drained within three minutes.",
+   "revised_sentence": "On your Halvard Home Tessa dishwasher, a flashing warning light with E-4021 means water has not drained within five minutes.",
+   "revised": "Tessa dishwasher: flashing warning light\n\nOn your Halvard Home Tessa dishwasher, a flashing warning light with E-4021 means water has not drained within five minutes. A blocked drain filter is the most common cause.\n\nStop the programme and switch the dishwasher off at the mains. If the water is hot, let it cool before opening the door fully. Place towels around the base to catch any spills.\n\nRemove the bottom basket, then turn the filter anticlockwise and lift it out. Rinse it under warm running water, removing food scraps with a soft brush. Refit the filter securely before restoring power.\n\nRun a rinse programme. If the warning returns or water remains inside, stop using the dishwasher and contact Halvard Home support.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"On your Halvard Home Tessa dishwasher, a flashing warning light with E-4021 means water has not drained within three minutes.\",\"value\":\"three minutes\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A093",
+   "old": "once a week",
+   "new": "twice a week",
+   "question": "How often should I clean my Tessa dishwasher’s filter to help prevent blockages?",
+   "sentence": "Clean it once a week to help prevent blockages.",
+   "revised_sentence": "Clean it twice a week to help prevent blockages.",
+   "revised": "Cleaning the Tessa dishwasher filter\n\nFood trapped in the filter can cause water to pool at the bottom of your Tessa dishwasher after a wash.\n\nKX-8645 is the part number for this dishwasher’s removable filter. Clean it twice a week to help prevent blockages.\n\nSwitch off and unplug the dishwasher, then let it cool. Pull out the lower basket. Turn the filter anticlockwise and lift it out from the bottom of the tub.\n\nRinse the filter under warm running water, using a soft brush to remove food and grease. Avoid wire brushes, which can damage the mesh.\n\nRefit the filter and turn it clockwise until secure. Never run the dishwasher without it. If water still pools after cleaning, contact Halvard Home support.",
+   "rejected": []
+  },
+  {
+   "article_id": "A045",
+   "old": "at least one metre",
+   "new": "at least two metres",
+   "question": "How much clear space should I leave in front of the Mira robot vacuum’s charging dock?",
+   "sentence": "Place this dock against a wall on a level floor, leaving at least one metre of clear space in front.",
+   "revised_sentence": "Place this dock against a wall on a level floor, leaving at least two metres of clear space in front.",
+   "revised": "Installing your Mira robot vacuum\n\nFor the Mira robot vacuum, KX-1639 is the part number of the supplied charging dock. Place this dock against a wall on a level floor, leaving at least two metres of clear space in front. Connect the power lead and switch on the wall socket.\n\nIf the vacuum does not begin charging during first installation, a clear transport strip may still be covering its charging contacts. This prevents the vacuum from making an electrical connection with the dock.\n\nSwitch off the vacuum and unplug the dock. Remove the strip from the contacts underneath the vacuum, then reconnect the dock and switch the vacuum on. Place it on the dock and check that the charging indicator lights up.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Place this dock against a wall on a level floor, leaving at least one metre of clear space in front.\",\"value\":\"one metre\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  }
+ ],
+ "candidates_rejected": [
+  {
+   "item": "A099",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Hold the kettle’s pairing button for five seconds, until the wireless light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Hold the kettle’s pairing button for five seconds, until the wireless light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A054",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A003",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dryer off at the socket for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dryer off at the socket for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A211",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lid on your Halvard Home Brio kettle will not close, switch the kettle off, unplug the base and let the kettle cool completely before checking it.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lid on your Halvard Home Brio kettle will not close, switch the kettle off, unplug the base and let the kettle cool completely before checking it.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A103",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A283",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A276",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"error\":\"The article contains no concrete measurement, duration, numbered setting, part number or code, so no matching sentence and value can be extracted.\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"To arrange an engineer visit for your Ashby tumble dryer, contact Halvard Home customer support and ask to book a repair.\",\"value\":\"Halvard Home\"}",
+     "problem": "the value appears 353 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To arrange an engineer visit for your Ashby tumble dryer, contact Halvard Home customer support and ask to book a repair.\",\"value\":\"Ashby tumble dryer\"}",
+     "problem": "the value appears 52 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A149",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A178",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"3. Select **System**, then **Factory reset**.\",\"value\":\"3\"}",
+     "problem": "the value appears 133 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"2. On the controller, open **Settings**.\",\"value\":\"2\"}",
+     "problem": "the value appears 135 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A292",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Check that the dishwasher’s wall socket is switched on.\",\"value\":\"on\"}",
+     "problem": "the value appears 1953 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"A power cut stops the wash cycle because your Tessa dishwasher needs electricity to run its pump.\",\"value\":\"Tessa\"}",
+     "problem": "the value appears 58 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A240",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Discard perishable chilled food if it has been above 8°C for more than four hours.\",\"value\":\"8°C\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Avoid adding fresh food until the fridge is at 5°C or below and the freezer is at −18°C.\",\"value\":\"−18°C\"}",
+     "problem": "the value appears 7 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Discard perishable chilled food if it has been above 8°C for more than four hours.\",\"value\":\"8°C\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Avoid adding fresh food until the fridge is at 5°C or below and the freezer is at −18°C.\",\"value\":\"−18°C\"}",
+     "problem": "the value appears 7 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A157",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Filling above the MAX mark can cause water to spill, so always keep the water level below this line.\",\"value\":\"MAX\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice water underneath your Brio kettle, switch it off and unplug it before checking.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Filling above the MAX mark can cause water to spill, so always keep the water level below this line.\",\"value\":\"MAX\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice water underneath your Brio kettle, switch it off and unplug it before checking.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A219",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Connect your Ashby tumble dryer to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your Ashby tumble dryer to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your Ashby tumble dryer to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your Ashby tumble dryer to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A142",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Keep the machine upright and use two people to move it.\",\"value\":\"two people\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Keep the machine upright and use two people to move it.\",\"value\":\"two\"}",
+     "problem": "the value appears 88 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Keep the machine upright and use two people to move it.\",\"value\":\"two\"}",
+     "problem": "the value appears 88 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Keep the machine upright and use two people to move it.\",\"value\":\"two\"}",
+     "problem": "the value appears 88 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A143",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch the machine off and unplug it for five minutes before reconnecting it.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the machine off and unplug it for five minutes before reconnecting it.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the machine off and unplug it for five minutes before reconnecting it.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the machine off and unplug it for five minutes before reconnecting it.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A127",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If there is smoke or flame, keep the dryer door closed, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or flame, keep the dryer door closed, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or flame, keep the dryer door closed, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or flame, keep the dryer door closed, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A112",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Remove the tray and soak it in equal parts white vinegar and warm water for 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Remove the tray and soak it in equal parts white vinegar and warm water for 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Remove the tray and soak it in equal parts white vinegar and warm water for 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Remove the tray and soak it in equal parts white vinegar and warm water for 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A184",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"For stubborn build-up, soak the filter in warm water for 10 minutes, then brush gently and rinse thoroughly.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For stubborn build-up, soak the filter in warm water for 10 minutes, then brush gently and rinse thoroughly.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For stubborn build-up, soak the filter in warm water for 10 minutes, then brush gently and rinse thoroughly.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For stubborn build-up, soak the filter in warm water for 10 minutes, then brush gently and rinse thoroughly.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A294",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch off the thermostat’s power supply before cleaning.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Lumen smart thermostat does not need descaling.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A063",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"To reset the connection, stop any drying programme and switch the dryer off at the wall for 30 seconds.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch it back on, then hold the Wi-Fi button for five seconds until its light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To reset the connection, stop any drying programme and switch the dryer off at the wall for 30 seconds.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch it back on, then hold the Wi-Fi button for five seconds until its light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A167",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Set the room thermostat 2°C above the current room temperature to request heat.\",\"value\":\"2°C\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Set the room thermostat 2°C above the current room temperature to request heat.\",\"value\":\"2°C\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Set the room thermostat 2°C above the current room temperature to request heat.\",\"value\":\"2°C\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Set the room thermostat 2°C above the current room temperature to request heat.\",\"value\":\"2°C\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A068",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 15 minutes, then gently brush away grease.\",\"value\":\"15 minutes\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Restore power, then press and hold the light button for five seconds to reset the warning.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 15 minutes, then gently brush away grease.\",\"value\":\"15 minutes\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Restore power, then press and hold the light button for five seconds to reset the warning.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A275",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Remove lint from the filter after every load: a blocked filter restricts airflow and can slow drying.\",\"value\":\"every load\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Remove lint from the filter after every load: a blocked filter restricts airflow and can slow drying.\",\"value\":\"every load\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A216",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Keep the appliance upright when moving it, and get help: dishwashers are heavy.\",\"value\":\"upright\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Keep the appliance upright when moving it, and get help: dishwashers are heavy.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A293",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow the kettle to cool completely.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow the kettle to cool completely.\",\"value\":\"completely\"}",
+     "problem": "the value appears 35 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A290",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"To switch the child lock on, press and hold the padlock button for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To unlock the controls, press and hold the padlock button again for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To switch the child lock on, press and hold the padlock button for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To unlock the controls, press and hold the padlock button again for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A002",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Press and hold the Child Lock button for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lock symbol stays lit, switch the machine off at the socket and unplug it for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the Child Lock button for three seconds.\",\"value\":\"three seconds\"}",
+     "problem": "the value appears 15 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lock symbol stays lit, switch the machine off at the socket and unplug it for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A110",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Plug it back in, switch it on and leave it undisturbed for ten minutes.\",\"value\":\"ten minutes\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To reset the timer, switch the appliance off at the wall and unplug it for five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Plug it back in, switch it on and leave it undisturbed for ten minutes.\",\"value\":\"ten minutes\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To reset the timer, switch the appliance off at the wall and unplug it for five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A131",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch on the hood when you start cooking and leave it running for 10 minutes afterwards to help clear lingering steam and smells.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch on the hood when you start cooking and leave it running for 10 minutes afterwards to help clear lingering steam and smells.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch on the hood when you start cooking and leave it running for 10 minutes afterwards to help clear lingering steam and smells.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch on the hood when you start cooking and leave it running for 10 minutes afterwards to help clear lingering steam and smells.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A271",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave the kettle to cool for at least 30 minutes before checking it.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave the kettle to cool for at least 30 minutes before checking it.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave the kettle to cool for at least 30 minutes before checking it.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave the kettle to cool for at least 30 minutes before checking it.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A209",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dishwasher off before checking inside.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dishwasher off before checking inside.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A163",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If water collects underneath your Mira robot vacuum, stop cleaning and switch it off.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"If water collects underneath your Mira robot vacuum, stop cleaning and switch it off.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A281",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Use induction-compatible cookware.\",\"value\":\"induction-compatible\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Flashing light on your Corra induction hob\",\"value\":\"Corra\"}",
+     "problem": "the value appears 60 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A191",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": \"\", \"value\": \"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Before starting, switch off the electricity supply at the consumer unit.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Check the installation guide supplied with your hood for the required clearance above your hob.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A182",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Press and hold the power button for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the power button for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the power button for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the power button for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A201",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"To order a spare accessory for your Lumen smart thermostat, contact Halvard Home customer support with the name or a clear description of the item you need.\",\"value\":\"Lumen\"}",
+     "problem": "the value appears 57 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To order a spare accessory for your Lumen smart thermostat, contact Halvard Home customer support with the name or a clear description of the item you need.\",\"value\":\"Halvard Home\"}",
+     "problem": "the value appears 353 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A262",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Before getting in touch, take one clear photo of the heat pump’s rating label.\",\"value\":\"one\"}",
+     "problem": "the value appears 129 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Before getting in touch, take one clear photo of the heat pump’s rating label.\",\"value\":\"one\"}",
+     "problem": "the value appears 129 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Before getting in touch, take one clear photo of the heat pump’s rating label.\",\"value\":\"one\"}",
+     "problem": "the value appears 129 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Before getting in touch, take one clear photo of the heat pump’s rating label.\",\"value\":\"one\"}",
+     "problem": "the value appears 129 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A225",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If a freezer drawer in your Halvard Home Vale fridge freezer is cracked or no longer slides properly, check which drawer needs replacing before ordering.\",\"value\":\"Vale\"}",
+     "problem": "the value appears 55 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If a freezer drawer in your Halvard Home Vale fridge freezer is cracked or no longer slides properly, check which drawer needs replacing before ordering.\",\"value\":\"Halvard Home Vale fridge freezer\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    }
+   ]
+  },
+  {
+   "item": "A041",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the display to restart.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch off and unplug the appliance for five minutes, then reconnect it with dry hands.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the display to restart.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch off and unplug the appliance for five minutes, then reconnect it with dry hands.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A153",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch the power off at the wall for 60 seconds, then switch it back on and try the fan control again.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the power off at the wall for 60 seconds, then switch it back on and try the fan control again.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the power off at the wall for 60 seconds, then switch it back on and try the fan control again.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the power off at the wall for 60 seconds, then switch it back on and try the fan control again.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A249",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Corra induction hob comes with a two-year manufacturer’s warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For example, if you bought your hob on 10 June 2026, its warranty runs until 10 June 2028.\",\"value\":\"10 June 2028\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Corra induction hob comes with a two-year manufacturer’s warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For example, if you bought your hob on 10 June 2026, its warranty runs until 10 June 2028.\",\"value\":\"10 June 2028\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A256",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"A flashing warning light on your Orrin heat pump needs attention, but the light alone does not identify the cause.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    },
+    {
+     "reply": "{\"sentence\":\"A flashing warning light on your Orrin heat pump needs attention, but the light alone does not identify the cause.\",\"value\":\"Orrin\"}",
+     "problem": "the value appears 54 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A251",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"An unusual vibration from your Halvard Home Tessa dishwasher can happen when dishes touch each other or a spray arm catches an item.\",\"value\":\"Tessa\"}",
+     "problem": "the value appears 58 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dishwasher off before checking inside.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A082",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Once charging is complete, the robot’s power light should dim within 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Once charging is complete, the robot’s power light should dim within 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Once charging is complete, the robot’s power light should dim within 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Once charging is complete, the robot’s power light should dim within 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A185",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Press and hold the timer button and the minus button together for five seconds.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the timer button and the minus button together for five seconds.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the timer button and the minus button together for five seconds.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the timer button and the minus button together for five seconds.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A243",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"For example, setting 10 minutes switches that zone off after 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To cancel its timer, reduce the time to zero.\",\"value\":\"zero\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"For example, setting 10 minutes switches that zone off after 10 minutes.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To cancel its timer, reduce the time to zero.\",\"value\":\"zero\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A035",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the warning light to stop flashing.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the warning light to stop flashing.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the warning light to stop flashing.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Allow two minutes for the warning light to stop flashing.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A120",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"The Brio kettle connects to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"The Brio kettle connects to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"The Brio kettle connects to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"The Brio kettle connects to a 2.4 GHz home wi-fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A042",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Tessa dishwasher has a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Tessa dishwasher has a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Tessa dishwasher has a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Tessa dishwasher has a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A058",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 10 minutes, then gently brush away grease.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 10 minutes, then gently brush away grease.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 10 minutes, then gently brush away grease.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Soak it in warm water with washing-up liquid for 10 minutes, then gently brush away grease.\",\"value\":\"10 minutes\"}",
+     "problem": "the value appears 16 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A090",
+   "problem": "no valid replacement",
+   "rejected": [
+    {
+     "reply": "four hours",
+     "problem": "\"four hours\" already appears in the library"
+    },
+    {
+     "reply": "two hours",
+     "problem": "\"two hours\" already appears in the library"
+    },
+    {
+     "reply": "four hours",
+     "problem": "\"four hours\" already appears in the library"
+    },
+    {
+     "reply": "two hours",
+     "problem": "\"two hours\" already appears in the library"
+    }
+   ]
+  },
+  {
+   "item": "A285",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Rinse the kettle twice with fresh water afterwards, then boil fresh water and discard it before making a drink.\",\"value\":\"twice\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Rinse the kettle twice with fresh water afterwards, then boil fresh water and discard it before making a drink.\",\"value\":\"twice\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Rinse the kettle twice with fresh water afterwards, then boil fresh water and discard it before making a drink.\",\"value\":\"twice\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Rinse the kettle twice with fresh water afterwards, then boil fresh water and discard it before making a drink.\",\"value\":\"twice\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A019",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Use a 2.4 GHz network instead.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"On the Orrin heat pump, E-6922 means the heat pump has tried to join a 5 GHz wi-fi network, which it does not support.\",\"value\":\"5 GHz\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Use a 2.4 GHz network instead.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"On the Orrin heat pump, E-6922 means the heat pump has tried to join a 5 GHz wi-fi network, which it does not support.\",\"value\":\"5 GHz\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A227",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Wait 30 seconds before switching it back on.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the Programme and Start buttons together for five seconds, until the indicator lights flash.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Wait 30 seconds before switching it back on.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the Programme and Start buttons together for five seconds, until the indicator lights flash.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A270",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice a burning smell, turn off the hob and let it cool completely.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice a burning smell, turn off the hob and let it cool completely.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A176",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Before checking, switch off the appliance and unplug it, provided the plug and surrounding area are dry.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Water beneath your Vale fridge freezer can come from a spill, a blocked defrost drain or a door that is not closing properly.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A160",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"All four feet should touch the floor, and the machine should not rock when gently pushed at opposite corners.\",\"value\":\"four\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"All four feet should touch the floor, and the machine should not rock when gently pushed at opposite corners.\",\"value\":\"four feet\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If your Halvard Home Keel washing machine vibrates more than usual, pause the programme and wait for the drum to stop before checking it.\",\"value\":\"Halvard Home Keel\"}",
+     "problem": "the value appears 14 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"All four feet should touch the floor, and the machine should not rock when gently pushed at opposite corners.\",\"value\":\"four feet\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A230",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Fill between the minimum and maximum marks before trying again.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    },
+    {
+     "reply": "{\"sentence\":\"2. Unplug the kettle before checking the base.\",\"value\":\"2\"}",
+     "problem": "the value appears 135 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    }
+   ]
+  },
+  {
+   "item": "A087",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch off power to the thermostat at its labelled isolation switch for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Wait two minutes for the display to restart and check whether the warning clears.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch off power to the thermostat at its labelled isolation switch for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Wait two minutes for the display to restart and check whether the warning clears.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A289",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If there is smoke or fire, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or fire, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or fire, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If there is smoke or fire, leave the property and call 999.\",\"value\":\"999\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A250",
+   "problem": "\"at least 25 minutes\" overlaps A084's \"25 minutes\"",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave it to cool for at least 15 minutes before checking it.\",\"value\":\"15 minutes\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "at least 30 minutes",
+     "problem": "\"at least 30 minutes\" already appears in the library"
+    }
+   ]
+  },
+  {
+   "item": "A171",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": \"\", \"value\": \"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If the noise continues, or you hear loud grinding, stop using the dryer and contact Halvard Home support.\",\"value\":\"Halvard Home\"}",
+     "problem": "the value appears 353 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Stop the programme, switch off the dryer and unplug it before checking.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A129",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Use two people and a suitable appliance trolley.\",\"value\":\"two\"}",
+     "problem": "the value appears 88 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Use two people and a suitable appliance trolley.\",\"value\":\"two people\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Use two people and a suitable appliance trolley.\",\"value\":\"two\"}",
+     "problem": "the value appears 88 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Use two people and a suitable appliance trolley.\",\"value\":\"two people\"}",
+     "problem": "the value appears 6 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A135",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": \"\", \"value\": \"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"1. Open **Settings** on the thermostat’s screen.\",\"value\":\"1\"}",
+     "problem": "the value appears 150 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Check the time and target temperature before returning to normal use.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A257",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If the door or lid on your Halvard Home Orrin heat pump will not close, switch the unit off before checking it.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the door or lid on your Halvard Home Orrin heat pump will not close, switch the unit off before checking it.\",\"value\":\"Orrin\"}",
+     "problem": "the value appears 54 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A162",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"Before installing your Halvard Home Ashby tumble dryer, read the supplied installation instructions and check that your chosen space meets the clearance requirements.\",\"value\":\"Ashby\"}",
+     "problem": "the value appears 55 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Wipe the empty drum with a soft, damp cloth before first use.\",\"value\":null}",
+     "problem": "the value is not inside the sentence"
+    }
+   ]
+  },
+  {
+   "item": "A199",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Fully close the app, wait 10 seconds, then reopen it and try adding the appliance again.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Fully close the app, wait 10 seconds, then reopen it and try adding the appliance again.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Fully close the app, wait 10 seconds, then reopen it and try adding the appliance again.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Fully close the app, wait 10 seconds, then reopen it and try adding the appliance again.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A228",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"To reduce condensation, keep the kettle in a ventilated indoor space and avoid filling above the maximum mark.\",\"value\":\"maximum mark\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"To reduce condensation, keep the kettle in a ventilated indoor space and avoid filling above the maximum mark.\",\"value\":\"maximum mark\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A123",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Fenwick cooker hood comes with a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Fenwick cooker hood comes with a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Fenwick cooker hood comes with a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Your Halvard Home Fenwick cooker hood comes with a two-year warranty from the date of purchase.\",\"value\":\"two-year\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A220",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Press and hold the fan and light buttons together for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the fan and light buttons together for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the fan and light buttons together for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Press and hold the fan and light buttons together for 10 seconds.\",\"value\":\"10 seconds\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A117",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Turn all cooking zones off, then switch off the hob at its wall isolation switch for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Turn all cooking zones off, then switch off the hob at its wall isolation switch for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Turn all cooking zones off, then switch off the hob at its wall isolation switch for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Turn all cooking zones off, then switch off the hob at its wall isolation switch for two minutes.\",\"value\":\"two minutes\"}",
+     "problem": "the value appears 9 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A177",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch it off and contact Halvard Home support.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch it off and contact Halvard Home support.\",\"value\":\"off\"}",
+     "problem": "the value appears 290 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A186",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Close the app completely, wait 30 seconds, then open it again.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Close the app completely, wait 30 seconds, then open it again.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Close the app completely, wait 30 seconds, then open it again.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Close the app completely, wait 30 seconds, then open it again.\",\"value\":\"30 seconds\"}",
+     "problem": "the value appears 10 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A190",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If the heating is running, switch it off using the thermostat’s controls and wait five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the heating is running, switch it off using the thermostat’s controls and wait five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the heating is running, switch it off using the thermostat’s controls and wait five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the heating is running, switch it off using the thermostat’s controls and wait five minutes.\",\"value\":\"five minutes\"}",
+     "problem": "the value appears 17 times in the library, not once"
+    }
+   ]
+  }
+ ]
+}

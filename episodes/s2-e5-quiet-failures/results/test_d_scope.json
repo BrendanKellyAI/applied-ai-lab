@@ -1,0 +1,4670 @@
+[
+ {
+  "type": "identifier",
+  "article_id": "A000",
+  "question": "What does error E-2194 mean?",
+  "D-none": {
+   "top": [
+    "N054",
+    "N022",
+    "N007",
+    "N008",
+    "N034"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A091",
+    "A072",
+    "A108",
+    "A050",
+    "A007"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A003",
+  "question": "What is part KX-9283 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A089",
+    "A047",
+    "A081",
+    "A003"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A006",
+  "question": "What does error E-7084 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N007",
+    "N034",
+    "N054",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A091",
+    "A006",
+    "A072",
+    "A061"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A009",
+  "question": "What is part KX-3107 for?",
+  "D-none": {
+   "top": [
+    "N025",
+    "N052",
+    "N037",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A009",
+    "A118",
+    "A011",
+    "A089"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A012",
+  "question": "What does error E-6076 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N007",
+    "N008",
+    "N054",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A013",
+    "A012",
+    "A072",
+    "A007",
+    "A050"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A015",
+  "question": "What is part KX-3673 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A118",
+    "A047",
+    "A045",
+    "A089"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A018",
+  "question": "What does error E-6292 mean?",
+  "D-none": {
+   "top": [
+    "N054",
+    "N022",
+    "N008",
+    "N043",
+    "N007"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A091",
+    "A072",
+    "A013",
+    "A014"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A021",
+  "question": "What is part KX-6507 for?",
+  "D-none": {
+   "top": [
+    "N025",
+    "N052",
+    "N037",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A089",
+    "A118",
+    "A099",
+    "A011"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A024",
+  "question": "What does error E-5107 mean?",
+  "D-none": {
+   "top": [
+    "N054",
+    "N022",
+    "A024",
+    "N008",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A024"
+   ],
+   "delivered": 1,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A024",
+    "A007",
+    "A091",
+    "A108",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A027",
+  "question": "What is part KX-3926 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N037",
+    "N025",
+    "N020",
+    "N013"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A047",
+    "A118",
+    "A089",
+    "A081",
+    "A009"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A030",
+  "question": "What does error E-3865 mean?",
+  "D-none": {
+   "top": [
+    "N008",
+    "N022",
+    "N001",
+    "N007",
+    "N054"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A079",
+    "A050",
+    "A091",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A033",
+  "question": "What is part KX-3452 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N037",
+    "N025",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A089",
+    "A047",
+    "A081",
+    "A099",
+    "A005"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A036",
+  "question": "What does error E-3873 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N008",
+    "N001",
+    "N039",
+    "N043"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A072",
+    "A091",
+    "A050",
+    "A038"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A039",
+  "question": "What is part KX-7011 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A089",
+    "A099",
+    "A009",
+    "A118"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A042",
+  "question": "What does error E-4805 mean?",
+  "D-none": {
+   "top": [
+    "N034",
+    "N054",
+    "N008",
+    "N022",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A091",
+    "A072",
+    "A080",
+    "A108"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A045",
+  "question": "What is part KX-1639 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N022",
+    "N020"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A081",
+    "A047",
+    "A107",
+    "A005"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A048",
+  "question": "What does error E-6736 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N001",
+    "N007",
+    "N028",
+    "N008"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A050",
+    "A007",
+    "A072",
+    "A091",
+    "A013"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A051",
+  "question": "What is part KX-9495 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N037",
+    "N025",
+    "N013",
+    "N020"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A051",
+    "A089",
+    "A005",
+    "A087"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A054",
+  "question": "What does error E-3293 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N054",
+    "N030",
+    "N001",
+    "N007"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A072",
+    "A091",
+    "A079",
+    "A054"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A057",
+  "question": "What is part KX-8033 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A081",
+    "A005",
+    "A089",
+    "A045"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A060",
+  "question": "What does error E-7160 mean?",
+  "D-none": {
+   "top": [
+    "N007",
+    "N022",
+    "N054",
+    "A007",
+    "N008"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [
+    "A007"
+   ],
+   "delivered": 1,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A091",
+    "A050",
+    "A072",
+    "A079"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A063",
+  "question": "What is part KX-9996 for?",
+  "D-none": {
+   "top": [
+    "N037",
+    "N052",
+    "N025",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A081",
+    "A009",
+    "A087",
+    "A089"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A066",
+  "question": "What does error E-1216 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N007",
+    "A066",
+    "N001",
+    "N054"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A066"
+   ],
+   "delivered": 1,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A066",
+    "A072",
+    "A079",
+    "A050",
+    "A031"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A069",
+  "question": "What is part KX-5912 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N037",
+    "N025",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A099",
+    "A089",
+    "A009",
+    "A118",
+    "A081"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A072",
+  "question": "What does error E-4021 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "A072",
+    "N008",
+    "N054",
+    "N007"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A072"
+   ],
+   "delivered": 1,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A072",
+    "A073",
+    "A007",
+    "A091",
+    "A061"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A075",
+  "question": "What is part KX-2446 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A047",
+    "A089",
+    "A094",
+    "A107"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A078",
+  "question": "What does error E-3946 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N008",
+    "N054",
+    "N034",
+    "N007"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A091",
+    "A072",
+    "A007",
+    "A078",
+    "A079"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A081",
+  "question": "What is part KX-5646 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A089",
+    "A099",
+    "A107",
+    "A009"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A084",
+  "question": "What does error E-6779 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N007",
+    "N054",
+    "N001",
+    "N008"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A050",
+    "A007",
+    "A091",
+    "A013",
+    "A108"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A087",
+  "question": "What is part KX-7896 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N022",
+    "N020"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A087",
+    "A089",
+    "A118",
+    "A081",
+    "A009"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A090",
+  "question": "What does error E-9454 mean?",
+  "D-none": {
+   "top": [
+    "N054",
+    "N034",
+    "N022",
+    "N008",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A091",
+    "A007",
+    "A108",
+    "A072",
+    "A073"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A093",
+  "question": "What is part KX-8645 for?",
+  "D-none": {
+   "top": [
+    "N037",
+    "N052",
+    "N025",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A089",
+    "A081",
+    "A107",
+    "A099",
+    "A005"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A096",
+  "question": "What does error E-8255 mean?",
+  "D-none": {
+   "top": [
+    "N001",
+    "N008",
+    "N054",
+    "N022",
+    "N034"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A091",
+    "A007",
+    "A108",
+    "A031",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A099",
+  "question": "What is part KX-3056 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N025",
+    "N037",
+    "N020",
+    "N022"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A099",
+    "A089",
+    "A118",
+    "A009"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A102",
+  "question": "What does error E-5328 mean?",
+  "D-none": {
+   "top": [
+    "N008",
+    "N001",
+    "N022",
+    "N007",
+    "N034"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A072",
+    "A091",
+    "A073",
+    "A050"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A105",
+  "question": "What is part KX-8618 for?",
+  "D-none": {
+   "top": [
+    "N052",
+    "N037",
+    "N025",
+    "N022",
+    "N020"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A107",
+    "A089",
+    "A118",
+    "A099",
+    "A081"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A108",
+  "question": "What does error E-9509 mean?",
+  "D-none": {
+   "top": [
+    "N054",
+    "A108",
+    "N022",
+    "A091",
+    "N001"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A108",
+    "A091"
+   ],
+   "delivered": 2,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A108",
+    "A091",
+    "A007",
+    "A072",
+    "A066"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A111",
+  "question": "What is part KX-1377 for?",
+  "D-none": {
+   "top": [
+    "N025",
+    "N052",
+    "N037",
+    "N020",
+    "N026"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A009",
+    "A118",
+    "A089",
+    "A099"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A114",
+  "question": "What does error E-9215 mean?",
+  "D-none": {
+   "top": [
+    "N022",
+    "N054",
+    "N001",
+    "N007",
+    "N008"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [],
+   "delivered": 0,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A007",
+    "A108",
+    "A091",
+    "A031",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A117",
+  "question": "What is part KX-1060 for?",
+  "D-none": {
+   "top": [
+    "N025",
+    "N052",
+    "N037",
+    "A118",
+    "N003"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [
+    "A118"
+   ],
+   "delivered": 1,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A081",
+    "A087",
+    "A117",
+    "A017"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A120",
+  "question": "Which wireless frequency does my smart water boiler support?",
+  "D-none": {
+   "top": [
+    "A120",
+    "N021",
+    "A030",
+    "A089",
+    "N008"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A120",
+    "A030",
+    "A089"
+   ],
+   "delivered": 3,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A120",
+    "A030",
+    "A089",
+    "A008",
+    "A019"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A121",
+  "question": "How should I get my dishwashing machine ready for months away from our vacation cottage?",
+  "D-none": {
+   "top": [
+    "A121",
+    "A245",
+    "A140",
+    "A142",
+    "A223"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A121",
+    "A245",
+    "A140",
+    "A142",
+    "A223"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A121",
+    "A245",
+    "A140",
+    "A142",
+    "A223"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A122",
+  "question": "What guidance should I leave beside my laundry appliance for visitors at my vacation rental?",
+  "D-none": {
+   "top": [
+    "A245",
+    "A122",
+    "A121",
+    "A140",
+    "A131"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A245",
+    "A122",
+    "A121",
+    "A140",
+    "A131"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A245",
+    "A122",
+    "A121",
+    "A140",
+    "A131"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A123",
+  "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+  "D-none": {
+   "top": [
+    "A123",
+    "A139",
+    "A010",
+    "A249",
+    "A109"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A123",
+    "A139",
+    "A010",
+    "A249",
+    "A109"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A123",
+    "A139",
+    "A010",
+    "A249",
+    "A109"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A124",
+  "question": "What should I do if my stovetop flashes an error?",
+  "D-none": {
+   "top": [
+    "A281",
+    "A124",
+    "A250",
+    "A068",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A281",
+    "A124",
+    "A250",
+    "A068",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A281",
+    "A124",
+    "A250",
+    "A068",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A125",
+  "question": "What should I do when my clothes-drying machine flashes an error message?",
+  "D-none": {
+   "top": [
+    "A172",
+    "A222",
+    "A125",
+    "A143",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A172",
+    "A222",
+    "A125",
+    "A143",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A172",
+    "A222",
+    "A125",
+    "A143",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A126",
+  "question": "What should I do if I spot frozen patches in my dish-cleaning machine?",
+  "D-none": {
+   "top": [
+    "A126",
+    "A183",
+    "N009",
+    "A013",
+    "A144"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A126",
+    "A183",
+    "A013",
+    "A144"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A126",
+    "A183",
+    "A013",
+    "A144",
+    "A203"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A127",
+  "question": "What should I do if my clothes-drying machine starts giving out a scorched odor?",
+  "D-none": {
+   "top": [
+    "A127",
+    "N042",
+    "A289",
+    "A275",
+    "A174"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A127",
+    "A289",
+    "A275",
+    "A174"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A127",
+    "A289",
+    "A275",
+    "A174",
+    "A171"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A128",
+  "question": "How can I make my heater kick in after a while instead of right away?",
+  "D-none": {
+   "top": [
+    "A128",
+    "A167",
+    "A151",
+    "A280",
+    "A282"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A128",
+    "A167",
+    "A151",
+    "A280",
+    "A282"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A128",
+    "A167",
+    "A151",
+    "A280",
+    "A282"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A129",
+  "question": "How can I safely relocate my clothes-drying machine?",
+  "D-none": {
+   "top": [
+    "A129",
+    "A142",
+    "A162",
+    "A105",
+    "A229"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A129",
+    "A142",
+    "A162",
+    "A105",
+    "A229"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A129",
+    "A142",
+    "A162",
+    "A105",
+    "A229"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A130",
+  "question": "What should I do if my extractor’s screen won’t show anything?",
+  "D-none": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A131",
+  "question": "How long should I keep my kitchen extractor going once I’ve finished making dinner?",
+  "D-none": {
+   "top": [
+    "A131",
+    "A109",
+    "A058",
+    "A255",
+    "A027"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A131",
+    "A109",
+    "A058",
+    "A255",
+    "A027"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A131",
+    "A109",
+    "A058",
+    "A255",
+    "A027"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A132",
+  "question": "How do I bring my laundry appliance’s built-in programming up to date?",
+  "D-none": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A273",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A273",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A273",
+    "A000"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A133",
+  "question": "Who should I hire to relocate my heating system safely?",
+  "D-none": {
+   "top": [
+    "A133",
+    "N057",
+    "A148",
+    "A043",
+    "A129"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A133",
+    "A148",
+    "A043",
+    "A129"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A133",
+    "A148",
+    "A043",
+    "A129",
+    "A023"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A134",
+  "question": "How can I safely relocate my built-in cooktop?",
+  "D-none": {
+   "top": [
+    "A134",
+    "A253",
+    "A004",
+    "A105",
+    "A129"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A134",
+    "A253",
+    "A004",
+    "A105",
+    "A129"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A134",
+    "A253",
+    "A004",
+    "A105",
+    "A129"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A135",
+  "question": "Will restoring my climate controller to its original state wipe out my wireless login information, programmed routines, and custom choices?",
+  "D-none": {
+   "top": [
+    "N027",
+    "A178",
+    "A135",
+    "A273",
+    "A147"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A178",
+    "A135",
+    "A273",
+    "A147"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A178",
+    "A135",
+    "A273",
+    "A147",
+    "A220"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A136",
+  "question": "What should I send the service team to get a replacement part for my cooktop?",
+  "D-none": {
+   "top": [
+    "A136",
+    "A081",
+    "N030",
+    "A232",
+    "A145"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A136",
+    "A081",
+    "A232",
+    "A145"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A136",
+    "A081",
+    "A232",
+    "A145",
+    "A094"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A137",
+  "question": "How do I get my floor-cleaning bot to respond to spoken commands?",
+  "D-none": {
+   "top": [
+    "A137",
+    "A196",
+    "N024",
+    "A268",
+    "A146"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A137",
+    "A196",
+    "A268",
+    "A146"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A137",
+    "A196",
+    "A268",
+    "A146",
+    "A244"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A138",
+  "question": "How can I get my heating controller to show up in its companion software?",
+  "D-none": {
+   "top": [
+    "A164",
+    "A186",
+    "A138",
+    "A008",
+    "A019"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A164",
+    "A186",
+    "A138",
+    "A008",
+    "A019"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A164",
+    "A186",
+    "A138",
+    "A008",
+    "A019"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A139",
+  "question": "How long does the guarantee last for my water boiler?",
+  "D-none": {
+   "top": [
+    "A139",
+    "A075",
+    "A249",
+    "A010",
+    "A123"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A139",
+    "A075",
+    "A249",
+    "A010",
+    "A123"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A139",
+    "A075",
+    "A249",
+    "A010",
+    "A123"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A140",
+  "question": "What should I do with my refrigerator at our vacation cabin while we’re away for months?",
+  "D-none": {
+   "top": [
+    "A140",
+    "A121",
+    "A240",
+    "A252",
+    "A264"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A140",
+    "A121",
+    "A240",
+    "A252",
+    "A264"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A140",
+    "A121",
+    "A240",
+    "A252",
+    "A264"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A141",
+  "question": "Why does my stove’s extractor get wet during chilly weather?",
+  "D-none": {
+   "top": [
+    "A141",
+    "A263",
+    "A058",
+    "A103",
+    "A112"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A141",
+    "A263",
+    "A058",
+    "A103",
+    "A112"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A141",
+    "A263",
+    "A058",
+    "A103",
+    "A112"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A142",
+  "question": "How can I get my washer ready to be taken to another house safely?",
+  "D-none": {
+   "top": [
+    "A142",
+    "A245",
+    "A129",
+    "A074",
+    "A071"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A142",
+    "A245",
+    "A129",
+    "A074",
+    "A071"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A142",
+    "A245",
+    "A129",
+    "A074",
+    "A071"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A143",
+  "question": "What should I do when my washer flashes an error code?",
+  "D-none": {
+   "top": [
+    "A222",
+    "A125",
+    "A143",
+    "A172",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A222",
+    "A125",
+    "A143",
+    "A172",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A222",
+    "A125",
+    "A143",
+    "A172",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A144",
+  "question": "Why does my refrigerator get icy and damp inside?",
+  "D-none": {
+   "top": [
+    "A144",
+    "A126",
+    "A183",
+    "A176",
+    "A069"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A144",
+    "A126",
+    "A183",
+    "A176",
+    "A069"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A144",
+    "A126",
+    "A183",
+    "A176",
+    "A069"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A145",
+  "question": "What information should I provide when buying a replacement part for my kitchen extractor?",
+  "D-none": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A146",
+  "question": "How do I prevent my toddler from accidentally operating my automatic floor cleaner?",
+  "D-none": {
+   "top": [
+    "A146",
+    "A187",
+    "A031",
+    "A002",
+    "A163"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A146",
+    "A187",
+    "A031",
+    "A002",
+    "A163"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A146",
+    "A187",
+    "A031",
+    "A002",
+    "A163"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A147",
+  "question": "How do I return my automated floor cleaner to its original setup?",
+  "D-none": {
+   "top": [
+    "A273",
+    "A147",
+    "A227",
+    "A021",
+    "A178"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A273",
+    "A147",
+    "A227",
+    "A021",
+    "A178"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A273",
+    "A147",
+    "A227",
+    "A021",
+    "A178"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A148",
+  "question": "How should I dispose of my worn-out heating equipment responsibly?",
+  "D-none": {
+   "top": [
+    "A148",
+    "A229",
+    "A288",
+    "A179",
+    "A216"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A148",
+    "A229",
+    "A288",
+    "A179",
+    "A216"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A148",
+    "A229",
+    "A288",
+    "A179",
+    "A216"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A149",
+  "question": "What should I look at first when my clothes-drying machine won’t run?",
+  "D-none": {
+   "top": [
+    "A149",
+    "A284",
+    "A275",
+    "A174",
+    "N042"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A149",
+    "A284",
+    "A275",
+    "A174"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A149",
+    "A284",
+    "A275",
+    "A174",
+    "A274"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A150",
+  "question": "Which wireless frequency does my refrigerator need?",
+  "D-none": {
+   "top": [
+    "A150",
+    "A030",
+    "A181",
+    "N008",
+    "N035"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A150",
+    "A030",
+    "A181"
+   ],
+   "delivered": 3,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A150",
+    "A030",
+    "A181",
+    "A264",
+    "A089"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A151",
+  "question": "How can I cut my electricity bills while staying cozy?",
+  "D-none": {
+   "top": [
+    "A151",
+    "A282",
+    "A280",
+    "A188",
+    "N033"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A151",
+    "A282",
+    "A280",
+    "A188"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A151",
+    "A282",
+    "A280",
+    "A188",
+    "A264"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A152",
+  "question": "What should I do when my automatic floor cleaner’s cover won’t stay down?",
+  "D-none": {
+   "top": [
+    "A152",
+    "A163",
+    "A083",
+    "A235",
+    "A036"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A152",
+    "A163",
+    "A083",
+    "A235",
+    "A036"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A152",
+    "A163",
+    "A083",
+    "A235",
+    "A036"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A153",
+  "question": "What should I do first when my extractor won’t run?",
+  "D-none": {
+   "top": [
+    "A058",
+    "N036",
+    "A074",
+    "N009",
+    "A153"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A058",
+    "A074",
+    "A153"
+   ],
+   "delivered": 3,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A058",
+    "A074",
+    "A153",
+    "A277",
+    "A027"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A154",
+  "question": "How can I get an extra part for my washer?",
+  "D-none": {
+   "top": [
+    "A154",
+    "A238",
+    "A071",
+    "A194",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A154",
+    "A238",
+    "A071",
+    "A194",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A154",
+    "A238",
+    "A071",
+    "A194",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A155",
+  "question": "How do I safely get rid of chalky buildup in my electric teapot?",
+  "D-none": {
+   "top": [
+    "A155",
+    "A184",
+    "A285",
+    "A015",
+    "A203"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A155",
+    "A184",
+    "A285",
+    "A015",
+    "A203"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A155",
+    "A184",
+    "A285",
+    "A015",
+    "A203"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A156",
+  "question": "What should I try when my refrigerator won’t latch properly?",
+  "D-none": {
+   "top": [
+    "A156",
+    "A083",
+    "A257",
+    "A144",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A156",
+    "A083",
+    "A257",
+    "A144",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A156",
+    "A083",
+    "A257",
+    "A144",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A157",
+  "question": "What should I do about a puddle beneath my electric tea maker?",
+  "D-none": {
+   "top": [
+    "A157",
+    "A163",
+    "A161",
+    "A299",
+    "A014"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A157",
+    "A163",
+    "A161",
+    "A299",
+    "A014"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A157",
+    "A163",
+    "A161",
+    "A299",
+    "A014"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A158",
+  "question": "What should I try first when my heating controller stays dark and unresponsive?",
+  "D-none": {
+   "top": [
+    "A158",
+    "A237",
+    "A279",
+    "A046",
+    "N031"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A158",
+    "A237",
+    "A279",
+    "A046"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A158",
+    "A237",
+    "A279",
+    "A046",
+    "A213"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A159",
+  "question": "How can I get the latest software onto my dish-cleaning machine?",
+  "D-none": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A216",
+    "A175"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A216",
+    "A175"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A159",
+    "A195",
+    "A132",
+    "A216",
+    "A175"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A160",
+  "question": "What should I do if my Halvard Home Keel washing machine vibrates more than usual?",
+  "D-none": {
+   "top": [
+    "A160",
+    "A177",
+    "A029",
+    "A251",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A160",
+    "A177",
+    "A029",
+    "A251",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A160",
+    "A177",
+    "A029",
+    "A251",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A161",
+  "question": "What should I do if water is leaking underneath my Keel washing machine?",
+  "D-none": {
+   "top": [
+    "A161",
+    "A029",
+    "A071",
+    "A194",
+    "A075"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A161",
+    "A029",
+    "A071",
+    "A194",
+    "A075"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A161",
+    "A029",
+    "A071",
+    "A194",
+    "A075"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A162",
+  "question": "How do I safely install my Halvard Home Ashby tumble dryer before first use?",
+  "D-none": {
+   "top": [
+    "A162",
+    "A129",
+    "A174",
+    "A122",
+    "A276"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A162",
+    "A129",
+    "A174",
+    "A122",
+    "A276"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A162",
+    "A129",
+    "A174",
+    "A122",
+    "A276"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A163",
+  "question": "What should I do if water collects underneath my Mira robot vacuum?",
+  "D-none": {
+   "top": [
+    "A163",
+    "A059",
+    "A268",
+    "A208",
+    "A115"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A163",
+    "A059",
+    "A268",
+    "A208",
+    "A115"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A163",
+    "A059",
+    "A268",
+    "A208",
+    "A115"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A164",
+  "question": "What should I do if the app cannot find my Orrin heat pump?",
+  "D-none": {
+   "top": [
+    "A164",
+    "A237",
+    "A019",
+    "A009",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A164",
+    "A237",
+    "A019",
+    "A009",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A164",
+    "A237",
+    "A019",
+    "A009",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A165",
+  "question": "What should I do if the Halvard Home app cannot find my Keel washing machine?",
+  "D-none": {
+   "top": [
+    "A165",
+    "A196",
+    "A221",
+    "A029",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A165",
+    "A196",
+    "A221",
+    "A029",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A165",
+    "A196",
+    "A221",
+    "A029",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A166",
+  "question": "Is water leaking underneath the outdoor unit of my Orrin heat pump normal during defrosting?",
+  "D-none": {
+   "top": [
+    "A166",
+    "A070",
+    "A080",
+    "A167",
+    "A287"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A166",
+    "A070",
+    "A080",
+    "A167",
+    "A287"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A166",
+    "A070",
+    "A080",
+    "A167",
+    "A287"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A167",
+  "question": "Why does my Orrin heat pump warm my home gradually, and why do the radiators feel cooler than those connected to a boiler?",
+  "D-none": {
+   "top": [
+    "A167",
+    "A151",
+    "A237",
+    "A280",
+    "N033"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A167",
+    "A151",
+    "A237",
+    "A280"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A167",
+    "A151",
+    "A237",
+    "A280",
+    "A049"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A168",
+  "question": "Can my Fenwick cooker hood connect to a network set to 5 GHz only, or does it need a 2.4 GHz home wi-fi network?",
+  "D-none": {
+   "top": [
+    "A168",
+    "A247",
+    "A197",
+    "N056",
+    "A261"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A168",
+    "A247",
+    "A197",
+    "A261"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A168",
+    "A247",
+    "A197",
+    "A261",
+    "A030"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A169",
+  "question": "Does the Halvard Home Brio kettle have a timer or delay-start setting?",
+  "D-none": {
+   "top": [
+    "A169",
+    "A230",
+    "A079",
+    "A099",
+    "A182"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A169",
+    "A230",
+    "A079",
+    "A099",
+    "A182"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A169",
+    "A230",
+    "A079",
+    "A099",
+    "A182"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A170",
+  "question": "Is a gentle rumbling or hissing sound while my Brio kettle heats up normal?",
+  "D-none": {
+   "top": [
+    "A170",
+    "A293",
+    "A285",
+    "A228",
+    "A271"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A170",
+    "A293",
+    "A285",
+    "A228",
+    "A271"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A170",
+    "A293",
+    "A285",
+    "A228",
+    "A271"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A171",
+  "question": "Why is my Ashby tumble dryer making a rattling, thumping or scraping noise?",
+  "D-none": {
+   "top": [
+    "A171",
+    "A233",
+    "N011",
+    "A275",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A171",
+    "A233",
+    "A275",
+    "A172"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A171",
+    "A233",
+    "A275",
+    "A172",
+    "A088"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A172",
+  "question": "What should I do if my Ashby tumble dryer has a flashing warning light?",
+  "D-none": {
+   "top": [
+    "A172",
+    "A125",
+    "A127",
+    "A284",
+    "A174"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A172",
+    "A125",
+    "A127",
+    "A284",
+    "A174"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A172",
+    "A125",
+    "A127",
+    "A284",
+    "A174"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A173",
+  "question": "What should I do if my Keel washing machine drains slowly or leaves water in the drum?",
+  "D-none": {
+   "top": [
+    "A173",
+    "A028",
+    "A161",
+    "A071",
+    "A029"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A173",
+    "A028",
+    "A161",
+    "A071",
+    "A029"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A173",
+    "A028",
+    "A161",
+    "A071",
+    "A029"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A174",
+  "question": "What should I do if the power goes off while my Ashby tumble dryer is running?",
+  "D-none": {
+   "top": [
+    "A174",
+    "A149",
+    "A284",
+    "A127",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A174",
+    "A149",
+    "A284",
+    "A127",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A174",
+    "A149",
+    "A284",
+    "A127",
+    "A172"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A175",
+  "question": "What should I do if the app cannot find my Tessa dishwasher?",
+  "D-none": {
+   "top": [
+    "A175",
+    "A260",
+    "A159",
+    "A206",
+    "A030"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A175",
+    "A260",
+    "A159",
+    "A206",
+    "A030"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A175",
+    "A260",
+    "A159",
+    "A206",
+    "A030"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A176",
+  "question": "Why is water leaking underneath my Vale fridge freezer?",
+  "D-none": {
+   "top": [
+    "A176",
+    "A144",
+    "A156",
+    "N049",
+    "A033"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A176",
+    "A144",
+    "A156",
+    "A033"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A176",
+    "A144",
+    "A156",
+    "A033",
+    "A291"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A177",
+  "question": "What can cause a rattling or banging noise from my Keel washing machine, and what should I check?",
+  "D-none": {
+   "top": [
+    "A177",
+    "A160",
+    "A171",
+    "A209",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A177",
+    "A160",
+    "A171",
+    "A209",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A177",
+    "A160",
+    "A171",
+    "A209",
+    "A083"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A178",
+  "question": "How do I perform a factory reset on my Orrin heat pump?",
+  "D-none": {
+   "top": [
+    "A178",
+    "N027",
+    "A237",
+    "A080",
+    "A133"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A178",
+    "A237",
+    "A080",
+    "A133"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A178",
+    "A237",
+    "A080",
+    "A133",
+    "A049"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A179",
+  "question": "Should my old Halvard Home Corra induction hob be recycled as electrical equipment or placed in my household rubbish bin?",
+  "D-none": {
+   "top": [
+    "A179",
+    "A229",
+    "A018",
+    "A086",
+    "A217"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A179",
+    "A229",
+    "A018",
+    "A086",
+    "A217"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A179",
+    "A229",
+    "A018",
+    "A086",
+    "A217"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A180",
+  "question": "How do I switch the child lock on and off on my Brio kettle?",
+  "D-none": {
+   "top": [
+    "A180",
+    "A182",
+    "A169",
+    "A022",
+    "A230"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A180",
+    "A182",
+    "A169",
+    "A022",
+    "A230"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A180",
+    "A182",
+    "A169",
+    "A022",
+    "A230"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A181",
+  "question": "How do I update my Vale fridge freezer’s firmware?",
+  "D-none": {
+   "top": [
+    "A181",
+    "A150",
+    "A061",
+    "A064",
+    "A291"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A181",
+    "A150",
+    "A061",
+    "A064",
+    "A291"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A181",
+    "A150",
+    "A061",
+    "A064",
+    "A291"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A182",
+  "question": "How do I perform a factory reset on my Brio kettle to return its saved settings to their original values?",
+  "D-none": {
+   "top": [
+    "A182",
+    "A273",
+    "A155",
+    "A184",
+    "A297"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A182",
+    "A273",
+    "A155",
+    "A184",
+    "A297"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A182",
+    "A273",
+    "A155",
+    "A184",
+    "A297"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A183",
+  "question": "What should I do if I notice frost or condensation on my Keel washing machine?",
+  "D-none": {
+   "top": [
+    "A183",
+    "N009",
+    "A245",
+    "A161",
+    "A069"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A183",
+    "A245",
+    "A161",
+    "A069"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A183",
+    "A245",
+    "A161",
+    "A069",
+    "A126"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A184",
+  "question": "How do I clean my Brio kettle filter to remove loose limescale and keep water flowing freely?",
+  "D-none": {
+   "top": [
+    "A184",
+    "A155",
+    "A055",
+    "A285",
+    "A170"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A184",
+    "A155",
+    "A055",
+    "A285",
+    "A170"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A184",
+    "A155",
+    "A055",
+    "A285",
+    "A170"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A185",
+  "question": "How do I perform a factory reset on my Corra induction hob to restore its original settings and clear saved preferences?",
+  "D-none": {
+   "top": [
+    "A185",
+    "A220",
+    "A239",
+    "A124",
+    "N051"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A185",
+    "A220",
+    "A239",
+    "A124"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A185",
+    "A220",
+    "A239",
+    "A124",
+    "A111"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A186",
+  "question": "What should I do if the app cannot find my Corra induction hob?",
+  "D-none": {
+   "top": [
+    "A186",
+    "A239",
+    "A261",
+    "A205",
+    "A076"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A186",
+    "A239",
+    "A261",
+    "A205",
+    "A076"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A186",
+    "A239",
+    "A261",
+    "A205",
+    "A076"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A187",
+  "question": "How do I switch the child lock on and off on my Halvard Home Tessa dishwasher?",
+  "D-none": {
+   "top": [
+    "A187",
+    "A044",
+    "A227",
+    "A050",
+    "A002"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A187",
+    "A044",
+    "A227",
+    "A050",
+    "A002"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A187",
+    "A044",
+    "A227",
+    "A050",
+    "A002"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A188",
+  "question": "How can I reduce energy use when cooking on my Corra induction hob?",
+  "D-none": {
+   "top": [
+    "A188",
+    "A084",
+    "A185",
+    "A243",
+    "A239"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A188",
+    "A084",
+    "A185",
+    "A243",
+    "A239"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A188",
+    "A084",
+    "A185",
+    "A243",
+    "A239"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A189",
+  "question": "What can cause unusual vibration from my Orrin heat pump, and what should I do about it?",
+  "D-none": {
+   "top": [
+    "A189",
+    "A287",
+    "A237",
+    "A167",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A189",
+    "A287",
+    "A237",
+    "A167",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A189",
+    "A287",
+    "A237",
+    "A167",
+    "A080"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A190",
+  "question": "Could an unusual vibration from my Lumen smart thermostat be caused by a loose wall fixing or nearby heating equipment rather than the thermostat itself?",
+  "D-none": {
+   "top": [
+    "A190",
+    "A051",
+    "A106",
+    "A200",
+    "A234"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A190",
+    "A051",
+    "A106",
+    "A200",
+    "A234"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A190",
+    "A051",
+    "A106",
+    "A200",
+    "A234"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A191",
+  "question": "How do I safely install my Fenwick cooker hood?",
+  "D-none": {
+   "top": [
+    "A191",
+    "A253",
+    "A018",
+    "A226",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A191",
+    "A253",
+    "A018",
+    "A226",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A191",
+    "A253",
+    "A018",
+    "A226",
+    "A235"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A192",
+  "question": "How long is the warranty on the Halvard Home Mira robot vacuum from the date of purchase?",
+  "D-none": {
+   "top": [
+    "A192",
+    "A139",
+    "N047",
+    "A249",
+    "A224"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A192",
+    "A139",
+    "A249",
+    "A224"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A192",
+    "A139",
+    "A249",
+    "A224",
+    "A090"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A193",
+  "question": "On my Keel washing machine, does a delay start of 3 hours mean the wash begins in 3 hours or will finish in 3 hours?",
+  "D-none": {
+   "top": [
+    "A193",
+    "A272",
+    "N036",
+    "A221",
+    "A214"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A193",
+    "A272",
+    "A221",
+    "A214"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A193",
+    "A272",
+    "A221",
+    "A214",
+    "A028"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A194",
+  "question": "How do I replace a damaged door seal on my Halvard Home Keel washing machine?",
+  "D-none": {
+   "top": [
+    "A194",
+    "A083",
+    "N006",
+    "A029",
+    "A075"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A194",
+    "A083",
+    "A029",
+    "A075"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A194",
+    "A083",
+    "A029",
+    "A075",
+    "A074"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A195",
+  "question": "How do I update my Keel washing machine firmware using the Halvard Home app?",
+  "D-none": {
+   "top": [
+    "A195",
+    "A165",
+    "A089",
+    "A196",
+    "A101"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A195",
+    "A165",
+    "A089",
+    "A196",
+    "A101"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A195",
+    "A165",
+    "A089",
+    "A196",
+    "A101"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A196",
+  "question": "How do I pair my Keel washing machine with a voice assistant using the Halvard Home app?",
+  "D-none": {
+   "top": [
+    "A196",
+    "A260",
+    "A165",
+    "A258",
+    "A205"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A196",
+    "A260",
+    "A165",
+    "A258",
+    "A205"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A196",
+    "A260",
+    "A165",
+    "A258",
+    "A205"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A197",
+  "question": "What should I do if the app cannot find my Fenwick cooker hood?",
+  "D-none": {
+   "top": [
+    "A197",
+    "A153",
+    "A168",
+    "A247",
+    "A191"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A197",
+    "A153",
+    "A168",
+    "A247",
+    "A191"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A197",
+    "A153",
+    "A168",
+    "A247",
+    "A191"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A198",
+  "question": "What should I do if the Halvard Home app cannot find my Mira robot vacuum?",
+  "D-none": {
+   "top": [
+    "A198",
+    "A137",
+    "A007",
+    "A152",
+    "A090"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A198",
+    "A137",
+    "A007",
+    "A152",
+    "A090"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A198",
+    "A137",
+    "A007",
+    "A152",
+    "A090"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "shared",
+  "article_id": "A199",
+  "question": "What should I do if the app cannot find my Vale fridge freezer?",
+  "D-none": {
+   "top": [
+    "A199",
+    "A150",
+    "A291",
+    "A061",
+    "A156"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A199",
+    "A150",
+    "A291",
+    "A061",
+    "A156"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A199",
+    "A150",
+    "A291",
+    "A061",
+    "A156"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ }
+]

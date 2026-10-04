@@ -1,0 +1,41 @@
+id,kind,question,product_or_article,verification,attempts
+U000,absent-product,How do I clean the basket of my Halvard Home Sora air fryer?,Sora air fryer,"""Sora air fryer"" appears nowhere in the library (case-insensitive)",1
+U001,absent-product,How do I descale my Halvard Home Elva coffee machine?,Elva coffee machine,"""Elva coffee machine"" appears nowhere in the library (case-insensitive)",1
+U002,absent-product,How do I set the clock on the Elva microwave oven from Halvard Home?,Elva microwave oven,"""Elva microwave oven"" appears nowhere in the library (case-insensitive)",1
+U003,absent-product,Why does my Halvard Home Elara toaster brown one side of the bread more than the other?,Elara toaster,"""Elara toaster"" appears nowhere in the library (case-insensitive)",1
+U004,absent-product,How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?,Elva food processor,"""Elva food processor"" appears nowhere in the library (case-insensitive)",1
+U005,absent-product,How do I clean the filter on my Halvard Home Sora dehumidifier?,Sora dehumidifier,"""Sora dehumidifier"" appears nowhere in the library (case-insensitive)",1
+U006,absent-product,How do I replace the filter in my Halvard Home Aster air purifier?,Aster air purifier,"""Aster air purifier"" appears nowhere in the library (case-insensitive)",1
+U007,absent-product,How do I adjust the mixing speed on my Halvard Home Elara stand mixer?,Elara stand mixer,"""Elara stand mixer"" appears nowhere in the library (case-insensitive)",1
+U008,absent-product,How do I set the delay timer on my Halvard Home Soren bread maker?,Soren bread maker,"""Soren bread maker"" appears nowhere in the library (case-insensitive)",1
+U009,absent-product,How do I adjust the temperature on my Halvard Home Vintara wine cooler?,Vintara wine cooler,"""Vintara wine cooler"" appears nowhere in the library (case-insensitive)",1
+U010,absent-product,How do I set the cooking timer on my Halvard Home Elowen slow cooker?,Elowen slow cooker,"""Elowen slow cooker"" appears nowhere in the library (case-insensitive)",1
+U011,absent-product,How do I keep rice warm in my Halvard Home Sora rice cooker without drying it out?,Halvard Home Sora rice cooker,"""Halvard Home Sora rice cooker"" appears nowhere in the library (case-insensitive)",1
+U012,absent-product,Why is my Halvard Home Elara steam iron leaking water from the soleplate?,Elara steam iron,"""Elara steam iron"" appears nowhere in the library (case-insensitive)",1
+U013,absent-product,How do I set the timer on my Halvard Home Soren portable heater?,Soren portable heater,"""Soren portable heater"" appears nowhere in the library (case-insensitive)",1
+U014,absent-product,How do I set the regeneration schedule on my Soren water softener?,Soren water softener,"""Soren water softener"" appears nowhere in the library (case-insensitive)",1
+U015,absent-product,How do I defrost my Halvard Home Rime chest freezer?,Rime chest freezer,"""Rime chest freezer"" appears nowhere in the library (case-insensitive)",1
+U016,absent-product,Why is my Halvard Home Nival ice maker producing hollow ice cubes?,Nival ice maker,"""Nival ice maker"" appears nowhere in the library (case-insensitive)",1
+U017,absent-product,How do I clean the removable plates on my Halvard Home Soren electric grill?,Soren electric grill,"""Soren electric grill"" appears nowhere in the library (case-insensitive)",1
+U018,absent-product,How do I clean the pulp filter on my Halvard Home Sola juicer?,Sola juicer,"""Sola juicer"" appears nowhere in the library (case-insensitive)",1
+U019,absent-product,Why is my Halvard Home Neris dishwasher drawer not draining after a wash cycle?,Neris dishwasher drawer,"""Neris dishwasher drawer"" appears nowhere in the library (case-insensitive)",1
+U020,absent-detail,What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?,A236,judge said no over the top 10 passages; source in the top 10,1
+U021,absent-detail,What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?,A222,judge said no over the top 10 passages; source in the top 10,1
+U022,absent-detail,What sequence of touch controls activates the child lock on the Corra induction hob?,A025,judge said no over the top 10 passages; source in the top 10,1
+U023,absent-detail,What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?,A079,judge said no over the top 10 passages; source in the top 10,1
+U024,absent-detail,What circuit breaker amperage rating is specified for the Corra induction hob?,A111,judge said no over the top 10 passages plus the source article; source not in the top 10,1
+U025,absent-detail,How long should the Keel washing machine take to restart after confirming a factory reset?,A273,judge said no over the top 10 passages; source in the top 10,1
+U026,absent-detail,"What volume of water, in litres, does the MAX mark on the Brio kettle indicate?",A102,judge said no over the top 10 passages plus the source article; source not in the top 10,1
+U027,absent-detail,What is the minimum temperature I can set for holiday mode on the Halvard Home Lumen thermostat?,A096,judge said no over the top 10 passages; source in the top 10,1
+U028,absent-detail,What voice command should I use to set my Fenwick cooker hood to a specific fan speed?,A247,judge said no over the top 10 passages; source in the top 10,1
+U029,absent-detail,What is the maximum rated operating temperature for the Lumen smart thermostat?,A200,judge said no over the top 10 passages; source in the top 10,1
+U030,absent-detail,"Which Wi-Fi security protocols does the Halvard Home Lumen thermostat support: WPA2, WPA3, or both?",A265,judge said no over the top 10 passages; source in the top 10,1
+U031,absent-detail,What is the maximum water temperature I should use to wash an Orrin heat pump filter marked as washable?,A278,judge said no over the top 10 passages; source in the top 10,1
+U032,absent-detail,How do I cancel a temporary temperature override on my Halvard Home Lumen thermostat and resume the heating schedule?,A282,judge said no over the top 10 passages; source in the top 10,1
+U033,absent-detail,How often should I clean the filter on my Keel washing machine?,A173,judge said no over the top 10 passages; source in the top 10,1
+U034,absent-detail,How long does a firmware update typically take to install on a Tessa dishwasher?,A159,judge said no over the top 10 passages; source in the top 10,1
+U035,absent-detail,What minimum ventilation clearance should I leave around my Vale fridge freezer for energy-efficient operation?,A264,judge said no over the top 10 passages; source in the top 10,1
+U036,absent-detail,What water hardness setting does the Halvard Home Tessa dishwasher default to after a factory reset?,A227,judge said no over the top 10 passages; source in the top 10,1
+U037,absent-detail,How thick should the ice build-up in my Vale fridge freezer be before I defrost it?,A144,judge said no over the top 10 passages; source in the top 10,1
+U038,absent-detail,How much clearance should I leave around my Vale fridge freezer for ventilation after moving it?,A252,judge said no over the top 10 passages; source in the top 10,1
+U039,absent-detail,What supply voltage range does the Halvard Home Vale fridge freezer require to start without triggering error E-9215?,A114,judge said no over the top 10 passages; source in the top 10,1

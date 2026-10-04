@@ -1,0 +1,716 @@
+{
+ "episode": "s2-e5-quiet-failures",
+ "pilot": false,
+ "run_date_utc": "2026-10-04",
+ "seed": 0,
+ "sizes": {
+  "values": 40,
+  "absent_product": 20,
+  "absent_detail": 20,
+  "notes": 60
+ },
+ "chat_model_requested": "gpt-6-astra",
+ "chat_model_returned": [
+  "gpt-6-astra"
+ ],
+ "embedding_model_requested": "text-embedding-3-small",
+ "embedding_model_returned": "text-embedding-3-small",
+ "top_k": 5,
+ "pass_marks": {
+  "a1_max_recall_gap": 2,
+  "a2_max_stale_current": 4,
+  "a2_min_stale_old": 30,
+  "a_control_min_fresh_current": 36,
+  "b1_min_old_above": 12,
+  "b2_min_plain_old_only": 10,
+  "b3_min_dated_old_only": 4,
+  "b4_max_latest_old": 1,
+  "c1_min_misclassified": 8,
+  "c2_min_p1_asserted": 20,
+  "c3_max_p2_asserted": 8,
+  "c3_min_p2_current": 36,
+  "d1_min_leaks": 40,
+  "d2_min_extra_misses": 5
+ },
+ "value_kinds": {
+  "code": 27,
+  "measurement or duration": 13
+ },
+ "claims": {
+  "A1": {
+   "verdict": "Held",
+   "measured": "stale 39 of 40, fresh 39 of 40; gap 0",
+   "pass_mark": "gap of 2 or fewer"
+  },
+  "A2": {
+   "verdict": "Held",
+   "measured": "current value 0 of 40, old value 36 of 40",
+   "pass_mark": "current 4 or fewer, old 30 or more"
+  },
+  "A control": {
+   "verdict": "Failed",
+   "measured": "fresh current value 35 of 40",
+   "pass_mark": "36 or more"
+  },
+  "A3": {
+   "verdict": "Held",
+   "measured": "flagged 40 of 40 stale, 0 others",
+   "pass_mark": "all stale entries and nothing else"
+  },
+  "B1": {
+   "verdict": "Held",
+   "measured": "old ranks above new on 17 of 40",
+   "pass_mark": "12 or more"
+  },
+  "B2": {
+   "verdict": "Failed",
+   "measured": "old value only on 1 of 40",
+   "pass_mark": "10 or more"
+  },
+  "B3": {
+   "verdict": "Failed",
+   "measured": "old value only on 0 of 40",
+   "pass_mark": "4 or more"
+  },
+  "B4": {
+   "verdict": "Held",
+   "measured": "old value on 0 of 40",
+   "pass_mark": "1 or fewer"
+  },
+  "C1": {
+   "verdict": "Held",
+   "measured": "best cut-off 0.631: 21 of 80 misclassified, accuracy 73.8%",
+   "pass_mark": "8 or more misclassified"
+  },
+  "C2": {
+   "verdict": "Failed",
+   "measured": "P1 asserted on 1 of 40",
+   "pass_mark": "20 or more"
+  },
+  "C3": {
+   "verdict": "Held",
+   "measured": "P2 asserted on 0 of 40; current value on 37 of 40",
+   "pass_mark": "asserted 8 or fewer, current 36 or more"
+  },
+  "D1": {
+   "verdict": "Held",
+   "measured": "leaks on 62 of 120",
+   "pass_mark": "40 or more"
+  },
+  "D2": {
+   "verdict": "Held",
+   "measured": "leaks 0; recall 84 of 120 against D-pre 95, 11 more misses",
+   "pass_mark": "no leaks, and 5 or more extra misses"
+  },
+  "D3": {
+   "verdict": "Held",
+   "measured": "leaks 0; recall 95 of 120",
+   "pass_mark": "no leaks, and recall 95 of 120 as in S2 E3"
+  }
+ },
+ "checks": {
+  "1 same index twice": {
+   "identical": 120,
+   "n": 120,
+   "recall_hits": 95,
+   "e3_hits": 95
+  },
+  "2 S2 E3 rerun": {
+   "recall_hits": 95,
+   "n": 120,
+   "e3_hits": 95
+  },
+  "3 reader works": {
+   "hits": 35,
+   "n": 40,
+   "rate": 0.875,
+   "low": 0.738878801611489,
+   "high": 0.945404997490546
+  },
+  "4 and 5 values": {
+   "unique": 40,
+   "minimal": 40,
+   "n": 40
+  },
+  "6 notes reachable": {
+   "reachable": 57,
+   "n": 60,
+   "per_note": {
+    "N000": true,
+    "N001": true,
+    "N002": true,
+    "N003": true,
+    "N004": true,
+    "N005": true,
+    "N006": true,
+    "N007": true,
+    "N008": true,
+    "N009": true,
+    "N010": true,
+    "N011": true,
+    "N012": true,
+    "N013": false,
+    "N014": true,
+    "N015": true,
+    "N016": true,
+    "N017": true,
+    "N018": true,
+    "N019": true,
+    "N020": true,
+    "N021": true,
+    "N022": true,
+    "N023": true,
+    "N024": true,
+    "N025": true,
+    "N026": true,
+    "N027": true,
+    "N028": true,
+    "N029": true,
+    "N030": true,
+    "N031": false,
+    "N032": true,
+    "N033": true,
+    "N034": true,
+    "N035": true,
+    "N036": true,
+    "N037": true,
+    "N038": true,
+    "N039": true,
+    "N040": true,
+    "N041": true,
+    "N042": true,
+    "N043": true,
+    "N044": true,
+    "N045": true,
+    "N046": true,
+    "N047": true,
+    "N048": true,
+    "N049": true,
+    "N050": true,
+    "N051": true,
+    "N052": true,
+    "N053": true,
+    "N054": true,
+    "N055": true,
+    "N056": true,
+    "N057": true,
+    "N058": false,
+    "N059": true
+   }
+  },
+  "7 judge audit": {
+   "judged": 40,
+   "flagged": 20
+  }
+ },
+ "A": {
+  "fresh": {
+   "recall": {
+    "hits": 39,
+    "n": 40,
+    "rate": 0.975,
+    "low": 0.8711863103652591,
+    "high": 0.9955731684973186
+   },
+   "current": {
+    "hits": 35,
+    "n": 40,
+    "rate": 0.875,
+    "low": 0.738878801611489,
+    "high": 0.945404997490546
+   },
+   "old": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "both": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "neither": {
+    "hits": 5,
+    "n": 40,
+    "rate": 0.125,
+    "low": 0.05459500250945401,
+    "high": 0.261121198388511
+   }
+  },
+  "stale": {
+   "recall": {
+    "hits": 39,
+    "n": 40,
+    "rate": 0.975,
+    "low": 0.8711863103652591,
+    "high": 0.9955731684973186
+   },
+   "current": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "old": {
+    "hits": 36,
+    "n": 40,
+    "rate": 0.9,
+    "low": 0.7694822477247771,
+    "high": 0.9604204713173936
+   },
+   "both": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "neither": {
+    "hits": 4,
+    "n": 40,
+    "rate": 0.1,
+    "low": 0.03957952868260638,
+    "high": 0.23051775227522298
+   }
+  },
+  "hash": {
+   "stale_total": 40,
+   "flagged": [
+    "A001:current",
+    "A010:current",
+    "A013:current",
+    "A014:current",
+    "A016:current",
+    "A024:current",
+    "A026:current",
+    "A028:current",
+    "A034:current",
+    "A039:current",
+    "A040:current",
+    "A045:current",
+    "A046:current",
+    "A057:current",
+    "A065:current",
+    "A067:current",
+    "A072:current",
+    "A078:current",
+    "A079:current",
+    "A080:current",
+    "A084:current",
+    "A086:current",
+    "A088:current",
+    "A092:current",
+    "A093:current",
+    "A096:current",
+    "A101:current",
+    "A102:current",
+    "A105:current",
+    "A106:current",
+    "A116:current",
+    "A118:current",
+    "A119:current",
+    "A137:current",
+    "A151:current",
+    "A188:current",
+    "A217:current",
+    "A286:current",
+    "A288:current",
+    "A299:current"
+   ],
+   "flagged_stale": 40,
+   "flagged_other": 0
+  }
+ },
+ "B": {
+  "old_above": {
+   "hits": 17,
+   "n": 40,
+   "rate": 0.425,
+   "low": 0.28509392559950375,
+   "high": 0.5780493145800892
+  },
+  "only_old_in_top": {
+   "hits": 0,
+   "n": 40,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.08762160119728664
+  },
+  "B-plain": {
+   "old_only": {
+    "hits": 1,
+    "n": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   },
+   "new_only": {
+    "hits": 2,
+    "n": 40,
+    "rate": 0.05,
+    "low": 0.013820667386148344,
+    "high": 0.16503877369140962
+   },
+   "both": {
+    "hits": 33,
+    "n": 40,
+    "rate": 0.825,
+    "low": 0.6805000966821229,
+    "high": 0.9125458625396408
+   },
+   "neither": {
+    "hits": 4,
+    "n": 40,
+    "rate": 0.1,
+    "low": 0.03957952868260638,
+    "high": 0.23051775227522298
+   },
+   "any_old": {
+    "hits": 34,
+    "n": 40,
+    "rate": 0.85,
+    "low": 0.709276756335103,
+    "high": 0.9293881228267964
+   }
+  },
+  "B-dated": {
+   "old_only": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "new_only": {
+    "hits": 35,
+    "n": 40,
+    "rate": 0.875,
+    "low": 0.738878801611489,
+    "high": 0.945404997490546
+   },
+   "both": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "neither": {
+    "hits": 5,
+    "n": 40,
+    "rate": 0.125,
+    "low": 0.05459500250945401,
+    "high": 0.261121198388511
+   },
+   "any_old": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   }
+  },
+  "B-latest": {
+   "old_only": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "new_only": {
+    "hits": 35,
+    "n": 40,
+    "rate": 0.875,
+    "low": 0.738878801611489,
+    "high": 0.945404997490546
+   },
+   "both": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "neither": {
+    "hits": 5,
+    "n": 40,
+    "rate": 0.125,
+    "low": 0.05459500250945401,
+    "high": 0.261121198388511
+   },
+   "any_old": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   }
+  }
+ },
+ "C": {
+  "cutoff": {
+   "cutoff": 0.6307631731033325,
+   "misclassified": 21,
+   "n": 80,
+   "accuracy": 0.7375,
+   "answerable_range": [
+    0.4573620557785034,
+    0.8307559490203857
+   ],
+   "unanswerable_range": [
+    0.38823574781417847,
+    0.7873139381408691
+   ]
+  },
+  "P1": {
+   "answerable_current": {
+    "hits": 35,
+    "n": 40,
+    "rate": 0.875,
+    "low": 0.738878801611489,
+    "high": 0.945404997490546
+   },
+   "answerable_not_found": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_not_found": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_asserted": {
+    "hits": 1,
+    "n": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   },
+   "unanswerable_unclear": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_asserted_for_c2": {
+    "hits": 1,
+    "n": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   },
+   "unanswerable_asserted_for_c3": {
+    "hits": 1,
+    "n": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   }
+  },
+  "P2": {
+   "answerable_current": {
+    "hits": 37,
+    "n": 40,
+    "rate": 0.925,
+    "low": 0.8013576647568946,
+    "high": 0.9741639742254119
+   },
+   "answerable_not_found": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_not_found": {
+    "hits": 40,
+    "n": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "unanswerable_asserted": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_unclear": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_asserted_for_c2": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   },
+   "unanswerable_asserted_for_c3": {
+    "hits": 0,
+    "n": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   }
+  }
+ },
+ "D": {
+  "D-none": {
+   "leaks": {
+    "hits": 62,
+    "n": 120,
+    "rate": 0.5166666666666667,
+    "low": 0.4281358041299209,
+    "high": 0.6041635569894558
+   },
+   "recall": {
+    "hits": 84,
+    "n": 120,
+    "rate": 0.7,
+    "low": 0.6128485756752643,
+    "high": 0.7747437577572543
+   },
+   "mean_delivered": 5.0,
+   "fewer_than_k": 0
+  },
+  "D-post": {
+   "leaks": {
+    "hits": 0,
+    "n": 120,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.031019166418703486
+   },
+   "recall": {
+    "hits": 84,
+    "n": 120,
+    "rate": 0.7,
+    "low": 0.6128485756752643,
+    "high": 0.7747437577572543
+   },
+   "mean_delivered": 3.183333333333333,
+   "fewer_than_k": 62
+  },
+  "D-pre": {
+   "leaks": {
+    "hits": 0,
+    "n": 120,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.031019166418703486
+   },
+   "recall": {
+    "hits": 95,
+    "n": 120,
+    "rate": 0.7916666666666666,
+    "low": 0.7105232156701865,
+    "high": 0.8547156039189031
+   },
+   "mean_delivered": 5.0,
+   "fewer_than_k": 0
+  }
+ },
+ "C_scores": {
+  "answerable": [
+   0.7967401742935181,
+   0.6002633571624756,
+   0.6941092014312744,
+   0.5872947573661804,
+   0.5902043581008911,
+   0.7201170921325684,
+   0.8286374807357788,
+   0.7725388407707214,
+   0.6828290224075317,
+   0.7364552617073059,
+   0.7959639430046082,
+   0.6315608024597168,
+   0.7534672021865845,
+   0.5520455837249756,
+   0.4573620557785034,
+   0.7100638151168823,
+   0.6406980156898499,
+   0.657031774520874,
+   0.703326940536499,
+   0.5981062650680542,
+   0.6420094966888428,
+   0.7437961101531982,
+   0.6650709509849548,
+   0.7834155559539795,
+   0.8059905767440796,
+   0.8307559490203857,
+   0.7674636840820312,
+   0.7700302004814148,
+   0.5885244607925415,
+   0.6425639390945435,
+   0.8009103536605835,
+   0.7463186979293823,
+   0.7033450603485107,
+   0.714955747127533,
+   0.6415755152702332,
+   0.7552827596664429,
+   0.6951063871383667,
+   0.6867980360984802,
+   0.7569189071655273,
+   0.6533128023147583
+  ],
+  "unanswerable": [
+   0.5296763777732849,
+   0.6405653953552246,
+   0.5380805730819702,
+   0.40136438608169556,
+   0.472293883562088,
+   0.6104588508605957,
+   0.6138312816619873,
+   0.393263041973114,
+   0.5610097646713257,
+   0.5564190149307251,
+   0.5283247232437134,
+   0.38823574781417847,
+   0.531009316444397,
+   0.6166472434997559,
+   0.407873272895813,
+   0.6002591848373413,
+   0.481123685836792,
+   0.4644361138343811,
+   0.5469574928283691,
+   0.6296343803405762,
+   0.6606773138046265,
+   0.7873139381408691,
+   0.7189198732376099,
+   0.6299655437469482,
+   0.6066197156906128,
+   0.7291266918182373,
+   0.5663220882415771,
+   0.6946868300437927,
+   0.6825246810913086,
+   0.5781044960021973,
+   0.5967128276824951,
+   0.6193429231643677,
+   0.6577540636062622,
+   0.7549382448196411,
+   0.7568628191947937,
+   0.5985053777694702,
+   0.7475799918174744,
+   0.6451095938682556,
+   0.657269299030304,
+   0.7296754717826843
+  ]
+ }
+}

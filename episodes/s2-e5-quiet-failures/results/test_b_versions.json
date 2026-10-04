@@ -1,0 +1,1322 @@
+[
+ {
+  "article_id": "A034",
+  "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+  "top": [
+   "A034:old",
+   "A034:new",
+   "A113:current",
+   "A116:new",
+   "A116:old"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A034:new",
+   "A113:current",
+   "A116:new",
+   "A036:current",
+   "A045:new"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting side-brush part numbers: **KX-3542** in Passage 1 and **KX-7816** in Passage 2. Contact Halvard Home customer support and ask them to confirm the correct part number for your Mira robot vacuum before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Quote part number **KX-7816** to Halvard Home customer support for a replacement Mira side brush.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Quote part number **KX-7816** to order a replacement side brush for your Mira robot vacuum.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A057",
+  "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+  "top": [
+   "A057:new",
+   "A057:old",
+   "A090:current",
+   "A045:new",
+   "A045:old"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A057:new",
+   "A090:current",
+   "A045:new",
+   "A082:current",
+   "A115:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting part codes for the dock’s power protection module: **KX-8047** in Passage 1 and **KX-8033** in Passage 2. I can’t confirm which is correct from these sources. Please contact Halvard Home support to verify the code; do not open the dock or attempt to replace the module yourself.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The dock’s power protection module part code is **KX-8047**, according to the latest update dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A088",
+  "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+  "top": [
+   "A088:old",
+   "A088:new",
+   "A031:current",
+   "A125:current",
+   "A107:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A088:new",
+   "A031:current",
+   "A125:current",
+   "A107:current",
+   "A069:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two conflicting door catch part numbers: **KX-7986** and **KX-8423**. Contact Halvard Home support with your dryer’s model details to confirm the correct part before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The door catch part number is **KX-8423**, according to the latest update dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The part number for the door catch is **KX-8423**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A101",
+  "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+  "top": [
+   "A101:old",
+   "A101:new",
+   "A099:current",
+   "A120:current",
+   "A008:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A101:new",
+   "A099:current",
+   "A120:current",
+   "A008:current",
+   "A048:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting identifiers: Passage 1 lists **KX-3356**, while Passage 2 lists **KX-4821**. The correct identifier cannot be determined from the provided information.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The model identifier is **KX-4821**, according to the latest passage, updated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The model identifier is **KX-4821**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A151",
+  "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+  "top": [
+   "A151:new",
+   "A151:old",
+   "A282:current",
+   "A264:current",
+   "A267:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A151:new",
+   "A282:current",
+   "A264:current",
+   "A267:current",
+   "A188:new"
+  ],
+  "B-plain": {
+   "reply": "The passages disagree: Passage 1 suggests lowering your usual setting by **3°C**, while Passage 2 suggests **1°C**. Both say to make sure your home stays warm enough for everyone.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The latest article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A013",
+  "question": "What temperature should I use for the empty programme when descaling my Tessa dishwasher, unless the descaler instructions specify otherwise?",
+  "top": [
+   "A013:new",
+   "A013:old",
+   "A227:current",
+   "A091:current",
+   "A218:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A013:new",
+   "A227:current",
+   "A091:current",
+   "A218:current",
+   "A121:current"
+  ],
+  "B-plain": {
+   "reply": "The passages conflict: Passage 1 says **65°C**, while Passage 2 says **60°C**. Follow the descaler’s instructions; if they don’t specify a temperature, confirm with Halvard Home support.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Use **65°C** for the empty programme, unless the descaler instructions specify otherwise.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Use **65°C** for the empty programme, unless the descaler instructions specify otherwise.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A188",
+  "question": "What setting should I choose on my Corra induction hob to save energy while keeping my food cooking as needed?",
+  "top": [
+   "A188:new",
+   "A188:old",
+   "A243:current",
+   "A084:old",
+   "A084:new"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A188:new",
+   "A243:current",
+   "A084:new",
+   "A185:current",
+   "A109:current"
+  ],
+  "B-plain": {
+   "reply": "Choose the **lowest power setting that keeps your food cooking as needed**. Once water boils, turn the power down to maintain a gentle simmer. If cooking slows too much, increase the power gradually rather than jumping to the highest setting.",
+   "grade": "old"
+  },
+  "B-dated": {
+   "reply": "Choose a **medium power setting** that keeps your food cooking as needed. Once water boils, turn the power down to maintain a gentle simmer rather than leaving the zone on high.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Choose a **medium power setting** that keeps your food cooking as needed. Once water boils, turn the power down to maintain a gentle simmer. If cooking slows too much, increase the power gradually rather than switching straight to the highest setting.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A080",
+  "question": "What fault code on the Halvard Home Orrin heat pump indicates that the outdoor coil temperature sensor is not providing a reliable reading?",
+  "top": [
+   "A080:old",
+   "A080:new",
+   "A043:current",
+   "A060:current",
+   "A237:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A080:new",
+   "A043:current",
+   "A060:current",
+   "A237:current",
+   "A256:current"
+  ],
+  "B-plain": {
+   "reply": "Both **E-5946** and **E-3721** indicate that the outdoor coil temperature sensor is not providing a reliable reading.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The fault code is **E-3721**, according to the most recently updated guidance (1 June 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The fault code is **E-3721**, indicating that the outdoor coil temperature sensor is not providing a reliable reading.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A046",
+  "question": "What is the part number of the replacement display power module for my Orrin heat pump?",
+  "top": [
+   "A046:new",
+   "A046:old",
+   "A080:new",
+   "A080:old",
+   "A060:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A046:new",
+   "A080:new",
+   "A060:current",
+   "A262:current",
+   "A043:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting part numbers: **KX-2847** in Passage 1 and **KX-1693** in Passage 2. Contact **Halvard Home support** to confirm the correct replacement display power module for your Orrin heat pump before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The replacement display power module for your Orrin heat pump is **KX-2847**, according to the latest update dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The replacement display power module for your Orrin heat pump is part number **KX-2847**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A079",
+  "question": "What error code indicates that my Halvard Home Orrin heat pump’s internal clock has lost its time setting?",
+  "top": [
+   "A079:new",
+   "A079:old",
+   "A080:old",
+   "A080:new",
+   "A060:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A079:new",
+   "A080:new",
+   "A060:current",
+   "A043:current",
+   "A024:new"
+  ],
+  "B-plain": {
+   "reply": "The passages list **E-5721** (Passage 1) and **E-3496** (Passage 2) as indicating that the internal clock has lost its time setting. They do not clarify which code is correct.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-5721**, according to the latest update (June 1, 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Error code **E-5721** indicates that your Halvard Home Orrin heat pump’s internal clock has lost its time setting.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A116",
+  "question": "What error code on my Mira robot vacuum means the main brush is rotating unevenly and causing unusual vibration?",
+  "top": [
+   "A116:new",
+   "A116:old",
+   "A036:current",
+   "A073:current",
+   "A115:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A116:new",
+   "A036:current",
+   "A073:current",
+   "A115:current",
+   "A113:current"
+  ],
+  "B-plain": {
+   "reply": "Both **E-8342** and **E-7215** are listed in the passages as meaning the main brush is rotating unevenly, causing unusual vibration.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-8342**, according to the latest update (June 1, 2026). It means the main brush is rotating unevenly, causing unusual vibration.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Error code **E-8342** means the main brush is rotating unevenly, causing unusual vibration.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A299",
+  "question": "What type of detergent should I use in my Tessa dishwasher to avoid excessive foam and leaks?",
+  "top": [
+   "A299:old",
+   "A299:new",
+   "A013:old",
+   "A013:new",
+   "A218:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A299:new",
+   "A013:new",
+   "A218:current",
+   "A126:current",
+   "A091:current"
+  ],
+  "B-plain": {
+   "reply": "Use only detergent made specifically for dishwashers. Do not use washing-up liquid, as it can create excessive foam and cause leaks.",
+   "grade": "neither"
+  },
+  "B-dated": {
+   "reply": "Use **detergent specifically made for dishwashers**. Do not use washing-up liquid, as it can create excessive foam and cause leaks. If you use rinse aid, make sure it is also dishwasher-specific.",
+   "grade": "neither"
+  },
+  "B-latest": {
+   "reply": "Use detergent specifically made for dishwashers, not washing-up liquid, which can cause excessive foam and leaks. If you use rinse aid, make sure it is also dishwasher-safe.",
+   "grade": "neither"
+  }
+ },
+ {
+  "article_id": "A078",
+  "question": "What error code indicates that my Corra induction hob’s lid sensor has detected the protective lid is not fully closed?",
+  "top": [
+   "A078:old",
+   "A078:new",
+   "A025:current",
+   "A281:current",
+   "A032:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A078:new",
+   "A025:current",
+   "A281:current",
+   "A032:current",
+   "A124:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list **two error codes: E-3946 and E-5271**. Both indicate that the Corra induction hob’s lid sensor has detected that the protective lid is not fully closed.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-5271**, according to the latest update (June 1, 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The error code is **E-5271**, which means the lid sensor has detected that the protective lid is not fully closed.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A137",
+  "question": "What voice command does the article suggest trying after naming the vacuum?",
+  "top": [
+   "A137:new",
+   "A137:old",
+   "A196:current",
+   "A036:current",
+   "A063:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A137:new",
+   "A196:current",
+   "A036:current",
+   "A063:current",
+   "A115:current"
+  ],
+  "B-plain": {
+   "reply": "Passage 2 suggests saying **“Start Mira.”** Passage 1 instead says **“Start Luna.”**",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The latest article suggests saying, “Start Luna.”",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The article suggests saying, “Start Luna.”",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A286",
+  "question": "Besides a photo of the accessory itself, what other photo should I take before contacting support?",
+  "top": [
+   "A154:current",
+   "A201:current",
+   "A136:current",
+   "A238:current",
+   "A262:current"
+  ],
+  "old_rank": 7,
+  "new_rank": 6,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A154:current",
+   "A201:current",
+   "A136:current",
+   "A238:current",
+   "A262:current"
+  ],
+  "B-plain": {
+   "reply": "Take a clear photo of your appliance’s identification or rating label, showing its model details.",
+   "grade": "neither"
+  },
+  "B-dated": {
+   "reply": "Take one clear photo of your appliance’s identification or rating label, showing the model details.",
+   "grade": "neither"
+  },
+  "B-latest": {
+   "reply": "Take a clear photo of your appliance’s identification or rating label, showing its model details.",
+   "grade": "neither"
+  }
+ },
+ {
+  "article_id": "A092",
+  "question": "What error code indicates that the heater’s electrical connection has overheated on my Halvard Home Tessa dishwasher?",
+  "top": [
+   "A092:old",
+   "A092:new",
+   "A050:current",
+   "A091:current",
+   "A072:new"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A092:new",
+   "A050:current",
+   "A091:current",
+   "A072:new",
+   "A013:new"
+  ],
+  "B-plain": {
+   "reply": "The passages list **two codes—E-9474 and E-5821—for an overheated heater electrical connection**, so they don’t establish a single definitive code.\n\nIf either appears, stop the programme, switch the dishwasher off, and disconnect power if safe. Do not restart it; contact Halvard Home support for a qualified service visit.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-5821**, according to the latest guidance dated June 1, 2026.\n\nStop using the dishwasher, switch it off, and disconnect the power if safe. Do not restart it; contact Halvard Home support for a qualified service visit.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Error code **E-5821** indicates that the heater’s electrical connection has overheated. Stop the programme, switch the dishwasher off, and do not use it again until it has been checked. Contact Halvard Home support to arrange a qualified service visit.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A028",
+  "question": "What is the part number of the drain pump filter for my Keel washing machine?",
+  "top": [
+   "A028:new",
+   "A028:old",
+   "A173:current",
+   "A075:current",
+   "A071:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A028:new",
+   "A173:current",
+   "A075:current",
+   "A071:current",
+   "A029:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two conflicting part numbers for the drain pump filter: **KX-5827** in Passage 1 and **KX-3962** in Passage 2. Please confirm the correct number with Halvard Home support before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The drain pump filter part number for your Keel washing machine is **KX-5827**, according to the latest update (1 June 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The drain pump filter part number for your Keel washing machine is **KX-5827**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A040",
+  "question": "What is the part code for the moisture sensor in my Ashby tumble dryer?",
+  "top": [
+   "A125:current",
+   "A040:old",
+   "A040:new",
+   "A014:old",
+   "A014:new"
+  ],
+  "old_rank": 2,
+  "new_rank": 3,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A125:current",
+   "A040:new",
+   "A014:new",
+   "A172:current",
+   "A069:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two different moisture sensor part codes: **KX-0711** (Passage 2) and **KX-0824** (Passage 3). Because they conflict, I can’t confirm which is correct for your dryer. Contact **Halvard Home support** with your model details to verify the right part code.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The moisture sensor part code is **KX-0824**, according to the latest information updated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The moisture sensor part code for your Ashby tumble dryer is **KX-0824**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A014",
+  "question": "What error code on my Ashby tumble dryer means the condensate drain pump is blocked?",
+  "top": [
+   "A014:new",
+   "A014:old",
+   "A125:current",
+   "A031:current",
+   "A172:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A014:new",
+   "A125:current",
+   "A031:current",
+   "A172:current",
+   "A069:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list **both E-4923 and E-6876** as meaning the condensate drain pump is blocked, so they don’t identify one definitive code. Contact Halvard Home support to confirm the code for your dryer.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "**E-4923** means the condensate drain pump is blocked, according to the latest guidance updated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Error code **E-4923** means the condensate drain pump on your Ashby tumble dryer is blocked.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A118",
+  "question": "At what percentage can the firmware update freeze if the thermostat’s Wi-Fi control module loses its connection to the router?",
+  "top": [
+   "A118:new",
+   "A118:old",
+   "A101:new",
+   "A101:old",
+   "A181:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A118:new",
+   "A101:new",
+   "A181:current",
+   "A259:current",
+   "A038:current"
+  ],
+  "B-plain": {
+   "reply": "The passages conflict: Passage 1 says the update can freeze at **75%**, while Passage 2 says **50%**.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The firmware update can freeze at **75%** if the thermostat’s Wi-Fi control module loses its connection to the router.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The firmware update can freeze at **75%**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A105",
+  "question": "What is the part code for the rear transport clip that holds my Tessa dishwasher’s drain hose in place during a move?",
+  "top": [
+   "A105:old",
+   "A105:new",
+   "A238:current",
+   "A016:new",
+   "A016:old"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A105:new",
+   "A238:current",
+   "A016:new",
+   "A223:current",
+   "A093:new"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting codes for the rear transport clip: **KX-8618** in Passage 1 and **KX-7423** in Passage 2. Contact Halvard Home support to confirm the correct code for your Tessa dishwasher before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The part code is **KX-7423**, according to the latest update dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The part code for the rear transport clip is **KX-7423**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A024",
+  "question": "Which error code on my Orrin heat pump indicates that mains power was interrupted while the compressor was running?",
+  "top": [
+   "A024:old",
+   "A024:new",
+   "A080:new",
+   "A080:old",
+   "A049:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A024:new",
+   "A080:new",
+   "A049:current",
+   "A046:new",
+   "A237:current"
+  ],
+  "B-plain": {
+   "reply": "Both **E-5107** and **E-5208** indicate that mains power was interrupted while your Orrin heat pump’s compressor was running.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "**E-5208** indicates that mains power was interrupted while the compressor was running, according to the latest guidance (updated June 1, 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "**E-5208** indicates that mains power was interrupted while the compressor was running.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A084",
+  "question": "How long should I leave my Corra induction hob to cool after turning it off at the wall isolation switch?",
+  "top": [
+   "A084:new",
+   "A084:old",
+   "A185:current",
+   "A134:current",
+   "A025:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A084:new",
+   "A185:current",
+   "A134:current",
+   "A025:current",
+   "A076:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting cooling times: one says **25 minutes**, and the other says **20 minutes**. To be cautious, leave your hob to cool for **25 minutes** after switching it off at the wall isolation switch.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Leave your Corra induction hob to cool for **25 minutes** after turning it off at the wall isolation switch.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Leave your Corra induction hob to cool for **25 minutes** after turning it off at the wall isolation switch.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A016",
+  "question": "What is the replacement lower basket wheel kit part number for my Halvard Home Tessa dishwasher?",
+  "top": [
+   "A016:new",
+   "A016:old",
+   "A238:current",
+   "A042:current",
+   "A044:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A016:new",
+   "A238:current",
+   "A042:current",
+   "A044:current",
+   "A093:new"
+  ],
+  "B-plain": {
+   "reply": "The passages list conflicting part numbers: **KX-8429** in Passage 1 and **KX-6373** in Passage 2. Contact Halvard Home support to confirm the correct lower basket wheel kit for your Tessa dishwasher before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The replacement lower basket wheel kit is **KX-8429**, according to the latest update (June 1, 2026). You can order it from Halvard Home support.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The replacement lower basket wheel kit part number for your Halvard Home Tessa dishwasher is **KX-8429**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A217",
+  "question": "What type of service should I use to recycle my old Vale fridge freezer?",
+  "top": [
+   "A217:old",
+   "A217:new",
+   "A229:current",
+   "A148:current",
+   "A252:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A217:new",
+   "A229:current",
+   "A148:current",
+   "A252:current",
+   "A216:current"
+  ],
+  "B-plain": {
+   "reply": "Use an authorised electrical waste recycling service, such as a local council recycling centre that accepts fridge freezers. You can also ask your council or replacement retailer about collection. Do not put it in your household rubbish bin.",
+   "grade": "new"
+  },
+  "B-dated": {
+   "reply": "Use a local council recycling centre to recycle your old Vale fridge freezer. Contact your council to check collection options or find an approved centre. Do not put it in your household rubbish bin.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Use your local council’s fridge freezer collection service or an approved recycling centre. If you’re buying a replacement, you can also ask the retailer about old-appliance collection and any charges. Don’t put it in your household rubbish bin.",
+   "grade": "neither"
+  }
+ },
+ {
+  "article_id": "A288",
+  "question": "Where should I take my old Lumen smart thermostat for recycling?",
+  "top": [
+   "A288:new",
+   "A288:old",
+   "A023:current",
+   "A294:current",
+   "A212:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A288:new",
+   "A023:current",
+   "A294:current",
+   "A212:current",
+   "A200:current"
+  ],
+  "B-plain": {
+   "reply": "Take your old Lumen smart thermostat to either:\n\n- A local recycling centre that accepts small electrical appliances.\n- An electrical retailer offering a small-appliance take-back service.\n\nDo not put it in your household rubbish bin. Check your council’s website for opening times and any booking requirements before travelling.",
+   "grade": "neither"
+  },
+  "B-dated": {
+   "reply": "Take your old Lumen smart thermostat to an **electrical retailer that offers a small-appliance take-back service**. It must be recycled as electrical waste, not put in your household rubbish bin.\n\nIf it’s still wired into your heating system, have a qualified electrician or heating engineer disconnect it safely first.",
+   "grade": "neither"
+  },
+  "B-latest": {
+   "reply": "Take your old Lumen smart thermostat to an electrical retailer that offers a small-appliance take-back service. It should be recycled as electrical waste, not put in your household rubbish bin.\n\nCheck your council’s website for opening times and any booking requirements before travelling. If it’s still wired into your heating system, have a qualified electrician or heating engineer disconnect it safely first.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A010",
+  "question": "What part number should I quote when contacting Halvard Home support about my Lumen smart thermostat’s warranty?",
+  "top": [
+   "A010:new",
+   "A010:old",
+   "A201:current",
+   "A202:current",
+   "A212:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A010:new",
+   "A201:current",
+   "A202:current",
+   "A212:current",
+   "A053:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting part numbers: **KX-4280** in Passage 1 and **KX-3170** in Passage 2. Check your thermostat’s label or product documentation, or ask Halvard Home support to confirm the correct number before quoting it.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Quote part number **KX-4280**, as listed in the warranty information updated on 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Quote **KX-4280**, the part number for your Lumen smart thermostat, when contacting Halvard Home support about its warranty.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A096",
+  "question": "What error code does the Halvard Home Lumen thermostat display when the holiday schedule has no return date?",
+  "top": [
+   "A096:old",
+   "A096:new",
+   "A077:current",
+   "A087:current",
+   "A138:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A096:new",
+   "A077:current",
+   "A087:current",
+   "A138:current",
+   "A079:new"
+  ],
+  "B-plain": {
+   "reply": "The passages conflict: Passage 1 lists **E-8255**, while Passage 2 lists **E-7312** for a holiday schedule with no return date. The provided information doesn’t establish which code is correct.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-7312**, according to the most recently updated guidance (June 1, 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The error code is **E-7312**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A039",
+  "question": "What is the part code for the sealing strip supplied to fit beneath my Corra induction hob’s glass edge?",
+  "top": [
+   "A039:new",
+   "A232:current",
+   "A039:old",
+   "A052:current",
+   "A136:current"
+  ],
+  "old_rank": 3,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A039:new",
+   "A232:current",
+   "A052:current",
+   "A136:current",
+   "A081:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting codes for the sealing strip: **KX-7024** in Passage 1 and **KX-7011** in Passage 3. Contact Halvard Home support with your hob’s full model details to confirm the correct code before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The part code is **KX-7024**, according to the installation guidance updated on 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The part code is **KX-7024**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A065",
+  "question": "What is the part code for the removable transit spacer supplied with my Vale fridge freezer?",
+  "top": [
+   "A065:old",
+   "A065:new",
+   "A286:new",
+   "A286:old",
+   "A035:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A065:new",
+   "A286:new",
+   "A035:current",
+   "A061:current",
+   "A110:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two different codes for the removable transit spacer: **KX-9696** in Passage 1 and **KX-7472** in Passage 2. Because they conflict, contact Halvard Home support with your model details to confirm the correct code.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The removable transit spacer’s part code is **KX-7472**, according to the latest installation guidance (updated 1 June 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The removable transit spacer’s part code is **KX-7472**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A001",
+  "question": "What error code on my Orrin heat pump means the child lock button has been detected as continuously pressed?",
+  "top": [
+   "A001:new",
+   "A001:old",
+   "A080:new",
+   "A080:old",
+   "A024:old"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A001:new",
+   "A080:new",
+   "A024:new",
+   "A256:current",
+   "A031:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list **E-1372** (Passage 1) and **E-1294** (Passage 2) for a child lock button detected as continuously pressed. Because the passages conflict, I can’t identify a single definitive code.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-1372**, according to the latest guidance updated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The error code is **E-1372**, which means the child lock button has been detected as continuously pressed.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A119",
+  "question": "What is the part number for the replacement condensate drain tray for the Halvard Home Orrin heat pump?",
+  "top": [
+   "A119:new",
+   "A119:old",
+   "A262:current",
+   "A080:new",
+   "A080:old"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A119:new",
+   "A262:current",
+   "A080:new",
+   "A060:current",
+   "A043:current"
+  ],
+  "B-plain": {
+   "reply": "The passages conflict: Passage 1 lists **KX-1270**, while Passage 2 lists **KX-1160**. Contact Halvard Home support with your heat pump’s model details to confirm the correct replacement condensate drain tray before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The replacement condensate drain tray part number is **KX-1270**, according to the latest update dated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The replacement condensate drain tray part number is **KX-1270**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A067",
+  "question": "What error code on my Halvard Home Orrin heat pump means the outdoor fan motor has overheated?",
+  "top": [
+   "A080:old",
+   "A080:new",
+   "A067:old",
+   "A067:new",
+   "A043:current"
+  ],
+  "old_rank": 3,
+  "new_rank": 4,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A080:new",
+   "A067:new",
+   "A043:current",
+   "A256:current",
+   "A024:new"
+  ],
+  "B-plain": {
+   "reply": "Both **E-1261** and **E-1274** indicate that the outdoor fan motor has overheated on your Halvard Home Orrin heat pump.\n\nStop using it immediately. If there’s no smoke or fire and it’s safe to approach, switch it off at the controller and then at the labelled isolation switch. Do not restart it; contact Halvard Home support for an engineer’s inspection.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "**E-1274** means the outdoor fan motor has overheated, according to the latest guidance.\n\nStop using the heat pump immediately and do not restart it. If there’s no smoke or fire and it’s safe to approach, switch it off at the controller, then disconnect power using the labelled isolation switch. Contact Halvard Home support for an engineer’s inspection.\n\nIf you see smoke or flames, keep away, leave the property and call 999.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "**E-1274** means the outdoor fan motor has overheated. Stop using the heat pump and do not restart it. Contact Halvard Home support to arrange an inspection by a qualified engineer.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A102",
+  "question": "What error code indicates that my Brio kettle is not seated correctly on its base during first installation?",
+  "top": [
+   "A102:old",
+   "A102:new",
+   "A246:current",
+   "A293:current",
+   "A008:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A102:new",
+   "A246:current",
+   "A293:current",
+   "A008:current",
+   "A250:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two codes for this issue: **E-5328** in Passage 1 and **E-6419** in Passage 2. Both indicate that the kettle is not seated correctly on its base during first installation, so the information is inconsistent.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "**E-6419** indicates that your Brio kettle is not seated correctly on its base during first installation, according to the latest instructions (updated June 1, 2026).",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The error code is **E-6419**, which means your Brio kettle is not seated correctly on its base during first installation.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A106",
+  "question": "What is the part number for the replacement cable-entry seal for my Lumen thermostat?",
+  "top": [
+   "A106:new",
+   "A106:old",
+   "A201:current",
+   "A212:current",
+   "A010:new"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A106:new",
+   "A201:current",
+   "A212:current",
+   "A010:new",
+   "A023:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two conflicting part numbers for the replacement cable-entry seal: **KX-7426** in Passage 1 and **KX-6818** in Passage 2.\n\nContact Halvard Home support with your thermostat’s model name to confirm the correct seal before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The replacement cable-entry seal for your Lumen thermostat is part number **KX-7426**, according to the latest update dated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The replacement cable-entry seal for your Lumen thermostat is part number **KX-7426**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A026",
+  "question": "What error code on my Corra induction hob means the cooling fan cannot turn freely?",
+  "top": [
+   "A081:current",
+   "A032:current",
+   "A026:old",
+   "A026:new",
+   "A084:new"
+  ],
+  "old_rank": 3,
+  "new_rank": 4,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A081:current",
+   "A032:current",
+   "A026:new",
+   "A084:new",
+   "A124:current"
+  ],
+  "B-plain": {
+   "reply": "Both **E-1107** and **E-1204** are listed as meaning the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "**E-1204** means the cooling fan cannot turn freely, usually because its airflow is obstructed. This is the code listed in the latest guidance, updated June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "**E-1204** means the cooling fan cannot turn freely, usually because its airflow is obstructed.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A086",
+  "question": "Which error code on my Halvard Home Brio kettle indicates that its internal electrical insulation has failed?",
+  "top": [
+   "A246:current",
+   "A230:current",
+   "A250:current",
+   "A086:new",
+   "A086:old"
+  ],
+  "old_rank": 5,
+  "new_rank": 4,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A246:current",
+   "A230:current",
+   "A250:current",
+   "A086:new",
+   "A271:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list **both E-4821 and E-6770** as indicating internal electrical insulation failure.\n\nIf either code appears, **stop using the kettle immediately and unplug it**. Do not switch it on again or open the casing.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The error code is **E-4821**, according to the latest guidance updated 1 June 2026. It indicates that the internal electrical insulation has failed.\n\nStop using the kettle immediately, unplug it, and do not switch it on again or open the casing.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "**E-4821** indicates that your Halvard Home Brio kettle’s internal electrical insulation has failed. Stop using it immediately, unplug it from the wall, and do not switch it on again or open the casing.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A072",
+  "question": "How quickly must water drain from my Tessa dishwasher to avoid triggering the flashing drainage warning light?",
+  "top": [
+   "A072:old",
+   "A072:new",
+   "A299:new",
+   "A299:old",
+   "A012:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A072:new",
+   "A299:new",
+   "A012:current",
+   "A013:new",
+   "A218:current"
+  ],
+  "B-plain": {
+   "reply": "The passages disagree on the timing for the flashing drainage warning **E-4021**: Passage 1 says water must drain within **three minutes**, while Passage 2 says **five minutes**. Check with Halvard Home support to confirm the correct threshold for your Tessa dishwasher.",
+   "grade": "neither"
+  },
+  "B-dated": {
+   "reply": "Water must drain within **five minutes** to avoid triggering the flashing drainage warning light (E-4021), according to the latest guidance.",
+   "grade": "neither"
+  },
+  "B-latest": {
+   "reply": "Water must drain within **five minutes** to avoid triggering the flashing drainage warning light (E-4021).",
+   "grade": "neither"
+  }
+ },
+ {
+  "article_id": "A093",
+  "question": "How often should I clean my Tessa dishwasher’s filter to help prevent blockages?",
+  "top": [
+   "A093:new",
+   "A093:old",
+   "A218:current",
+   "A013:old",
+   "A013:new"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A093:new",
+   "A218:current",
+   "A013:new",
+   "A072:new",
+   "A012:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting advice: Passage 1 says **twice a week**, while Passage 2 says **once a week**. Check with Halvard Home support to confirm the recommended frequency.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Clean your Tessa dishwasher’s filter **twice a week** to help prevent blockages.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Clean your Tessa dishwasher’s filter **twice a week** to help prevent blockages.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A045",
+  "question": "How much clear space should I leave in front of the Mira robot vacuum’s charging dock?",
+  "top": [
+   "A045:new",
+   "A045:old",
+   "A163:current",
+   "A057:new",
+   "A283:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A045:new",
+   "A163:current",
+   "A057:new",
+   "A283:current",
+   "A021:current"
+  ],
+  "B-plain": {
+   "reply": "The passages conflict: Passage 1 says at least **two metres**, while Passage 2 says at least **one metre**. Leave **at least two metres** to satisfy both instructions, and contact Halvard Home support if you need confirmation.",
+   "grade": "new"
+  },
+  "B-dated": {
+   "reply": "Leave at least **two metres of clear space** in front of the Mira robot vacuum’s charging dock, according to the latest installation guidance.",
+   "grade": "neither"
+  },
+  "B-latest": {
+   "reply": "Leave at least **two metres of clear space** in front of the Mira robot vacuum’s charging dock.",
+   "grade": "neither"
+  }
+ }
+]

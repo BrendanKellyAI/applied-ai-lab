@@ -452,3 +452,28 @@ def test_cache_is_shared_by_every_checkout(m):
     root = m.quiet.main_checkout(m.quiet.ROOT)
     assert (root / ".git").exists()
     assert root / ".cache" / "s2-e5-quiet-failures" == m.quiet.CACHE
+
+
+# Committed results ----------------------------------------------------------------------------
+
+
+def test_readme_verdicts_match_the_committed_results():
+    import json
+
+    summary = json.loads((EPISODE / "results" / "summary.json").read_text(encoding="utf-8"))
+    assert summary["pilot"] is False and summary["sizes"]["values"] == 40
+    readme = (EPISODE / "README.md").read_text(encoding="utf-8")
+    rows = {
+        line.split(".")[0].strip("| "): line
+        for line in readme.splitlines()
+        if line.startswith("| ") and "**" in line
+    }
+    for name, claim in summary["claims"].items():
+        assert f"**{claim['verdict']}**" in rows[name], name
+    held = sum(c["verdict"] == "Held" for c in summary["claims"].values())
+    assert f"{held} of {len(summary['claims'])}" in readme
+
+
+def test_committed_charts_exist():
+    for name in ("stale", "versions", "scores", "prompts", "scope"):
+        assert (EPISODE / "charts" / f"{name}-slide.svg").exists()

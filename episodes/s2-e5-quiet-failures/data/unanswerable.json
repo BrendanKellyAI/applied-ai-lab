@@ -1,0 +1,585 @@
+{
+ "seed": 0,
+ "items": [
+  {
+   "id": "U000",
+   "kind": "absent-product",
+   "category": "air fryer",
+   "question": "How do I clean the basket of my Halvard Home Sora air fryer?",
+   "product": "Sora air fryer",
+   "note": "\"Sora air fryer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U001",
+   "kind": "absent-product",
+   "category": "coffee machine",
+   "question": "How do I descale my Halvard Home Elva coffee machine?",
+   "product": "Elva coffee machine",
+   "note": "\"Elva coffee machine\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U002",
+   "kind": "absent-product",
+   "category": "microwave oven",
+   "question": "How do I set the clock on the Elva microwave oven from Halvard Home?",
+   "product": "Elva microwave oven",
+   "note": "\"Elva microwave oven\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U003",
+   "kind": "absent-product",
+   "category": "toaster",
+   "question": "Why does my Halvard Home Elara toaster brown one side of the bread more than the other?",
+   "product": "Elara toaster",
+   "note": "\"Elara toaster\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U004",
+   "kind": "absent-product",
+   "category": "food processor",
+   "question": "How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?",
+   "product": "Elva food processor",
+   "note": "\"Elva food processor\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U005",
+   "kind": "absent-product",
+   "category": "dehumidifier",
+   "question": "How do I clean the filter on my Halvard Home Sora dehumidifier?",
+   "product": "Sora dehumidifier",
+   "note": "\"Sora dehumidifier\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U006",
+   "kind": "absent-product",
+   "category": "air purifier",
+   "question": "How do I replace the filter in my Halvard Home Aster air purifier?",
+   "product": "Aster air purifier",
+   "note": "\"Aster air purifier\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U007",
+   "kind": "absent-product",
+   "category": "stand mixer",
+   "question": "How do I adjust the mixing speed on my Halvard Home Elara stand mixer?",
+   "product": "Elara stand mixer",
+   "note": "\"Elara stand mixer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U008",
+   "kind": "absent-product",
+   "category": "bread maker",
+   "question": "How do I set the delay timer on my Halvard Home Soren bread maker?",
+   "product": "Soren bread maker",
+   "note": "\"Soren bread maker\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U009",
+   "kind": "absent-product",
+   "category": "wine cooler",
+   "question": "How do I adjust the temperature on my Halvard Home Vintara wine cooler?",
+   "product": "Vintara wine cooler",
+   "note": "\"Vintara wine cooler\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U010",
+   "kind": "absent-product",
+   "category": "slow cooker",
+   "question": "How do I set the cooking timer on my Halvard Home Elowen slow cooker?",
+   "product": "Elowen slow cooker",
+   "note": "\"Elowen slow cooker\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U011",
+   "kind": "absent-product",
+   "category": "rice cooker",
+   "question": "How do I keep rice warm in my Halvard Home Sora rice cooker without drying it out?",
+   "product": "Halvard Home Sora rice cooker",
+   "note": "\"Halvard Home Sora rice cooker\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U012",
+   "kind": "absent-product",
+   "category": "steam iron",
+   "question": "Why is my Halvard Home Elara steam iron leaking water from the soleplate?",
+   "product": "Elara steam iron",
+   "note": "\"Elara steam iron\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U013",
+   "kind": "absent-product",
+   "category": "portable heater",
+   "question": "How do I set the timer on my Halvard Home Soren portable heater?",
+   "product": "Soren portable heater",
+   "note": "\"Soren portable heater\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U014",
+   "kind": "absent-product",
+   "category": "water softener",
+   "question": "How do I set the regeneration schedule on my Soren water softener?",
+   "product": "Soren water softener",
+   "note": "\"Soren water softener\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U015",
+   "kind": "absent-product",
+   "category": "chest freezer",
+   "question": "How do I defrost my Halvard Home Rime chest freezer?",
+   "product": "Rime chest freezer",
+   "note": "\"Rime chest freezer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U016",
+   "kind": "absent-product",
+   "category": "ice maker",
+   "question": "Why is my Halvard Home Nival ice maker producing hollow ice cubes?",
+   "product": "Nival ice maker",
+   "note": "\"Nival ice maker\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U017",
+   "kind": "absent-product",
+   "category": "electric grill",
+   "question": "How do I clean the removable plates on my Halvard Home Soren electric grill?",
+   "product": "Soren electric grill",
+   "note": "\"Soren electric grill\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U018",
+   "kind": "absent-product",
+   "category": "juicer",
+   "question": "How do I clean the pulp filter on my Halvard Home Sola juicer?",
+   "product": "Sola juicer",
+   "note": "\"Sola juicer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U019",
+   "kind": "absent-product",
+   "category": "dishwasher drawer",
+   "question": "Why is my Halvard Home Neris dishwasher drawer not draining after a wash cycle?",
+   "product": "Neris dishwasher drawer",
+   "note": "\"Neris dishwasher drawer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U020",
+   "kind": "absent-detail",
+   "article_id": "A236",
+   "question": "What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A236",
+    "A231",
+    "A188",
+    "A185",
+    "A084",
+    "A270",
+    "A026",
+    "A124",
+    "A281",
+    "A054"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U021",
+   "kind": "absent-detail",
+   "article_id": "A222",
+   "question": "What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A222",
+    "A143",
+    "A172",
+    "A074",
+    "A075",
+    "A160",
+    "A221",
+    "A274",
+    "A029",
+    "A002"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U022",
+   "kind": "absent-detail",
+   "article_id": "A025",
+   "question": "What sequence of touch controls activates the child lock on the Corra induction hob?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A025",
+    "A185",
+    "A290",
+    "A124",
+    "A243",
+    "A076",
+    "A281",
+    "A187",
+    "A084",
+    "A078"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U023",
+   "kind": "absent-detail",
+   "article_id": "A079",
+   "question": "What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A079",
+    "A060",
+    "A167",
+    "A049",
+    "A237",
+    "A080",
+    "A178",
+    "A024",
+    "A043",
+    "A151"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U024",
+   "kind": "absent-detail",
+   "article_id": "A111",
+   "question": "What circuit breaker amperage rating is specified for the Corra induction hob?",
+   "note": "judge said no over the top 10 passages plus the source article; source not in the top 10",
+   "top_ids": [
+    "A084",
+    "A081",
+    "A032",
+    "A134",
+    "A026",
+    "A185",
+    "A076",
+    "A124",
+    "A188",
+    "A232"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U025",
+   "kind": "absent-detail",
+   "article_id": "A273",
+   "question": "How long should the Keel washing machine take to restart after confirming a factory reset?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A273",
+    "A193",
+    "A221",
+    "A002",
+    "A274",
+    "A011",
+    "A074",
+    "A143",
+    "A195",
+    "A222"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U026",
+   "kind": "absent-detail",
+   "article_id": "A102",
+   "question": "What volume of water, in litres, does the MAX mark on the Brio kettle indicate?",
+   "note": "judge said no over the top 10 passages plus the source article; source not in the top 10",
+   "top_ids": [
+    "A157",
+    "A155",
+    "A267",
+    "A285",
+    "A250",
+    "A182",
+    "A298",
+    "A246",
+    "A170",
+    "A184"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U027",
+   "kind": "absent-detail",
+   "article_id": "A096",
+   "question": "What is the minimum temperature I can set for holiday mode on the Halvard Home Lumen thermostat?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A096",
+    "A282",
+    "A128",
+    "A077",
+    "A213",
+    "A265",
+    "A138",
+    "A135",
+    "A064",
+    "A202"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U028",
+   "kind": "absent-detail",
+   "article_id": "A247",
+   "question": "What voice command should I use to set my Fenwick cooker hood to a specific fan speed?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A247",
+    "A109",
+    "A220",
+    "A255",
+    "A290",
+    "A066",
+    "A168",
+    "A153",
+    "A145",
+    "A277"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U029",
+   "kind": "absent-detail",
+   "article_id": "A200",
+   "question": "What is the maximum rated operating temperature for the Lumen smart thermostat?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A207",
+    "A200",
+    "A294",
+    "A158",
+    "A010",
+    "A087",
+    "A282",
+    "A005",
+    "A202",
+    "A023"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U030",
+   "kind": "absent-detail",
+   "article_id": "A265",
+   "question": "Which Wi-Fi security protocols does the Halvard Home Lumen thermostat support: WPA2, WPA3, or both?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A265",
+    "A138",
+    "A118",
+    "A010",
+    "A135",
+    "A202",
+    "A213",
+    "A096",
+    "A282",
+    "A053"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U031",
+   "kind": "absent-detail",
+   "article_id": "A278",
+   "question": "What is the maximum water temperature I should use to wash an Orrin heat pump filter marked as washable?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A278",
+    "A151",
+    "A017",
+    "A178",
+    "A133",
+    "A049",
+    "A148",
+    "A080",
+    "A167",
+    "A237"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U032",
+   "kind": "absent-detail",
+   "article_id": "A282",
+   "question": "How do I cancel a temporary temperature override on my Halvard Home Lumen thermostat and resume the heating schedule?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A096",
+    "A128",
+    "A282",
+    "A077",
+    "A135",
+    "A079",
+    "A213",
+    "A241",
+    "A202",
+    "A087"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U033",
+   "kind": "absent-detail",
+   "article_id": "A173",
+   "question": "How often should I clean the filter on my Keel washing machine?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A173",
+    "A028",
+    "A203",
+    "A093",
+    "A245",
+    "A184",
+    "A037",
+    "A269",
+    "A273",
+    "A071"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U034",
+   "kind": "absent-detail",
+   "article_id": "A159",
+   "question": "How long does a firmware update typically take to install on a Tessa dishwasher?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A159",
+    "A223",
+    "A218",
+    "A227",
+    "A042",
+    "A013",
+    "A050",
+    "A266",
+    "A108",
+    "A206"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U035",
+   "kind": "absent-detail",
+   "article_id": "A264",
+   "question": "What minimum ventilation clearance should I leave around my Vale fridge freezer for energy-efficient operation?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A062",
+    "A264",
+    "A156",
+    "A140",
+    "A240",
+    "A252",
+    "A065",
+    "A291",
+    "A144",
+    "A217"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U036",
+   "kind": "absent-detail",
+   "article_id": "A227",
+   "question": "What water hardness setting does the Halvard Home Tessa dishwasher default to after a factory reset?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A227",
+    "A050",
+    "A013",
+    "A159",
+    "A223",
+    "A187",
+    "A108",
+    "A042",
+    "A012",
+    "A030"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U037",
+   "kind": "absent-detail",
+   "article_id": "A144",
+   "question": "How thick should the ice build-up in my Vale fridge freezer be before I defrost it?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A144",
+    "A176",
+    "A140",
+    "A156",
+    "A252",
+    "A062",
+    "A291",
+    "A065",
+    "A240",
+    "A110"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U038",
+   "kind": "absent-detail",
+   "article_id": "A252",
+   "question": "How much clearance should I leave around my Vale fridge freezer for ventilation after moving it?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A252",
+    "A156",
+    "A140",
+    "A065",
+    "A062",
+    "A291",
+    "A006",
+    "A176",
+    "A217",
+    "A225"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U039",
+   "kind": "absent-detail",
+   "article_id": "A114",
+   "question": "What supply voltage range does the Halvard Home Vale fridge freezer require to start without triggering error E-9215?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A114",
+    "A110",
+    "A062",
+    "A061",
+    "A104",
+    "A006",
+    "A291",
+    "A035",
+    "A064",
+    "A041"
+   ],
+   "rejected": []
+  }
+ ]
+}

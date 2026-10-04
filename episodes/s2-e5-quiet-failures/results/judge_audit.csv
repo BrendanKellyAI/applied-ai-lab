@@ -1,0 +1,100 @@
+prompt,id,kind,question,reply,verdict,flagged_for_manual_check
+P1,U000,absent-product,How do I clean the basket of my Halvard Home Sora air fryer?,"The passages don’t include cleaning instructions for the Halvard Home Sora air fryer basket, so I can’t confirm the correct method or whether it’s dishwasher-safe. Please check your Sora user manual or contact Halvard Home support for model-specific guidance.",decline,False
+P1,U001,absent-product,How do I descale my Halvard Home Elva coffee machine?,"The passages don’t include descaling instructions for the Halvard Home Elva coffee machine, so I can’t confirm the correct product or procedure.
+
+Check your Elva’s care guide or contact Halvard Home support for model-specific instructions. Don’t use the descaling methods for the other appliances on your coffee machine unless its care guide explicitly allows them.",decline,False
+P1,U002,absent-product,How do I set the clock on the Elva microwave oven from Halvard Home?,The provided passages don’t include instructions for setting the clock on the Halvard Home Elva microwave oven. Check the Elva user manual or contact Halvard Home support for the correct steps.,decline,True
+P1,U003,absent-product,Why does my Halvard Home Elara toaster brown one side of the bread more than the other?,"The supplied passages don’t cover the Halvard Home Elara toaster or uneven browning, so I can’t identify the cause from this information. Check the toaster’s user manual or contact Halvard Home support for model-specific advice.",decline,True
+P1,U004,absent-product,How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?,"The supplied passages cover the Halvard Home **Keel washing machine**, not the **Elva food processor**, so they don’t provide the correct blade-removal procedure.
+
+For safety, switch off and unplug the food processor, and wait until the blade has completely stopped. Don’t pull or twist the blade assembly without checking the Elva manual, and avoid touching its cutting edges. Consult the manual or contact Halvard Home support for model-specific removal instructions.",decline,True
+P1,U005,absent-product,How do I clean the filter on my Halvard Home Sora dehumidifier?,"The passages don’t include cleaning instructions for the **Halvard Home Sora dehumidifier**, so I can’t confirm whether its filter is washable or how to remove it safely.
+
+Check your Sora user manual or contact Halvard Home support for the correct instructions. Don’t wash the filter unless the manual confirms it is washable. If you share the relevant manual page, I can help you follow it.",decline,False
+P1,U006,absent-product,How do I replace the filter in my Halvard Home Aster air purifier?,"The supplied passages don’t include filter-replacement instructions for the **Halvard Home Aster air purifier**, so I can’t confirm the correct filter or replacement steps.
+
+Check the Aster user manual or contact Halvard Home support with your model name to confirm the replacement part and fitting instructions. The filter part numbers listed here are for other appliances, not the Aster.",decline,True
+P1,U007,absent-product,How do I adjust the mixing speed on my Halvard Home Elara stand mixer?,"The supplied passages don’t include instructions for the Halvard Home Elara stand mixer, so I can’t confirm how to adjust its mixing speed. Please check the Elara user guide or contact Halvard Home support for model-specific instructions.",decline,False
+P1,U008,absent-product,How do I set the delay timer on my Halvard Home Soren bread maker?,"The provided passages don’t include instructions for the Halvard Home Soren bread maker, so I can’t confirm how to set its delay timer.
+
+Please check the Soren user manual or contact Halvard Home support for model-specific instructions. If you share the timer section of the manual or a photo of the control panel, I can help you interpret it.",decline,True
+P1,U009,absent-product,How do I adjust the temperature on my Halvard Home Vintara wine cooler?,"The passages cover the Halvard Home **Vale fridge freezer**, not the **Vintara wine cooler**, so they don’t provide the correct temperature-adjustment instructions for your appliance.
+
+Check your Vintara user manual or contact Halvard Home support. If you share the exact model number and a photo of the control panel, I can help identify the relevant controls.",decline,True
+P1,U010,absent-product,How do I set the cooking timer on my Halvard Home Elowen slow cooker?,"The supplied passages don’t include instructions for the Halvard Home Elowen slow cooker, so I can’t confirm how to set its cooking timer.
+
+Check the Elowen user manual or contact Halvard Home support for model-specific instructions. If you share the manual’s timer section or a photo of the control panel, I can help you work through it.",decline,False
+P1,U011,absent-product,How do I keep rice warm in my Halvard Home Sora rice cooker without drying it out?,"The supplied passages don’t cover the Halvard Home Sora rice cooker, so I can’t confirm its keep-warm settings or recommended holding time.
+
+As general rice-cooker advice, keep the lid closed to retain moisture and use the keep-warm function, if fitted, rather than leaving it on a cooking setting. Avoid holding rice longer than necessary. Check the Sora manual or contact Halvard Home support for its recommended keep-warm duration and whether adding a little water is advised.",decline,True
+P1,U012,absent-product,Why is my Halvard Home Elara steam iron leaking water from the soleplate?,"The supplied passages don’t cover the Halvard Home Elara steam iron, so I can’t confirm why water is leaking from its soleplate.
+
+For safety, stop using the iron and unplug it only if the plug and surrounding area are dry and safe to reach. Let it cool, then consult the Elara manual or contact Halvard Home support for model-specific advice. Tell them whether it leaks while heating up, steaming or standing idle.",decline,False
+P1,U013,absent-product,How do I set the timer on my Halvard Home Soren portable heater?,"The provided instructions don’t cover the Halvard Home Soren portable heater, so I can’t confirm how to set its timer. Check the Soren user manual or contact Halvard Home support for model-specific instructions.
+
+If you share a photo of the heater’s control panel or the timer section of its manual, I can help you work through it.",decline,False
+P1,U014,absent-product,How do I set the regeneration schedule on my Soren water softener?,"The supplied passages don’t include instructions for setting the regeneration schedule on a Soren water softener. Check your Soren user manual or contact Halvard Home support for the correct steps.
+
+If you share the relevant manual page or the options shown on your softener’s control panel, I can help you interpret them.",decline,False
+P1,U015,absent-product,How do I defrost my Halvard Home Rime chest freezer?,"The supplied instructions cover the **Halvard Home Vale fridge freezer**, not the **Rime chest freezer**, so I can’t confirm the model-specific defrosting procedure.
+
+The general defrosting guidance provided is to:
+- Unplug the appliance.
+- Move food to suitable cold storage before defrosting.
+- **Never use sharp tools or a hairdryer to remove ice.**
+
+For the full procedure, including any drain arrangements, check your Rime chest freezer’s manual or contact Halvard Home support.",decline,False
+P1,U016,absent-product,Why is my Halvard Home Nival ice maker producing hollow ice cubes?,"The supplied passages don’t cover the Halvard Home Nival ice maker or hollow ice cubes, so I can’t confirm the cause from this information.
+
+Check the troubleshooting section of your Nival user manual or contact Halvard Home support with the appliance’s model details. The Vale fridge freezer descaling instructions apply to its water dispenser nozzle, not the Nival ice maker.",decline,True
+P1,U017,absent-product,How do I clean the removable plates on my Halvard Home Soren electric grill?,"The supplied passages don’t cover the **Halvard Home Soren electric grill**, so I can’t confirm how to remove or wash its plates, or whether they’re dishwasher-safe.
+
+Switch off and unplug the grill, and let it cool completely before handling the plates. Check the Soren user manual or contact Halvard Home support for the correct cleaning instructions rather than following the filter-cleaning methods above.",decline,False
+P1,U018,absent-product,How do I clean the pulp filter on my Halvard Home Sola juicer?,"The provided instructions don’t cover the **Halvard Home Sola juicer’s pulp filter**, so I can’t confirm its cleaning procedure.
+
+Switch off and unplug the juicer before handling the filter. Check your Sola user manual for removal and cleaning instructions, or contact Halvard Home support. Don’t assume the cleaning methods for the other appliances apply to your juicer.",decline,True
+P1,U019,absent-product,Why is my Halvard Home Neris dishwasher drawer not draining after a wash cycle?,"The passages don’t cover the **Halvard Home Neris dishwasher drawer**, so I can’t confirm its specific cause. For the Tessa dishwasher, the usual causes of water remaining after draining are a **blocked drain filter or a kinked drain hose**. These may also be worth checking on your Neris, following its model-specific instructions.
+
+Before checking anything, switch it off and unplug it, and let any hot water cool. Consult the Neris manual for how to clean and securely refit its filter. Check only visible drain hose sections for kinks—don’t pull out the appliance or disconnect pipes.
+
+If water remains or the problem returns, stop using it and contact Halvard Home support. Is there an error code or flashing warning light?",decline,True
+P1,U020,absent-detail,What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?,"The passages don’t specify a maximum dishwasher temperature or confirm that the filter is dishwasher-safe. They recommend washing it by hand in warm water with a little washing-up liquid and a soft brush, then rinsing and drying it completely before refitting.
+
+Check your user manual or contact Halvard Home support before putting it in the dishwasher.",decline,False
+P1,U021,absent-detail,What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?,"The passages don’t specify what a repeating pattern of three flashes means on a Halvard Home Keel washing machine—only that a flashing warning light needs attention.
+
+Check that the door is firmly closed and no clothing is trapped in the seal. Switch off and unplug the machine for five minutes, handling the plug only if your hands and the socket area are dry. With the power disconnected, check that the water tap is open and the inlet hose isn’t kinked.
+
+Reconnect and restart the programme. If the flashing continues, contact Halvard Home support and tell them which light flashes, that it repeats in groups of three, and when it started.",decline,False
+P1,U022,absent-detail,What sequence of touch controls activates the child lock on the Corra induction hob?,"The passages don’t specify how to activate the child lock on the Corra induction hob. They only state that touching and holding the lock symbol for three seconds **releases** it.
+
+For the activation sequence, check the Corra user manual or contact Halvard Home support.",decline,False
+P1,U023,absent-detail,What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?,The passages do not specify the maximum delay-start duration for the Halvard Home Orrin heat pump. They only advise choosing a start time at least five minutes ahead when testing the timer. Contact Halvard Home support to confirm the maximum supported delay.,decline,False
+P1,U024,absent-detail,What circuit breaker amperage rating is specified for the Corra induction hob?,The provided passages do not specify a circuit breaker amperage rating for the Corra induction hob. Check the installation manual or contact Halvard Home support for the correct rating.,decline,True
+P1,U025,absent-detail,How long should the Keel washing machine take to restart after confirming a factory reset?,"The instructions don’t specify how long the Keel washing machine takes to restart after a factory reset. Wait for it to restart before selecting another programme. If the control panel becomes unresponsive, contact Halvard Home support.",decline,True
+P1,U026,absent-detail,"What volume of water, in litres, does the MAX mark on the Brio kettle indicate?",The passages don’t specify the volume in litres indicated by the Brio kettle’s MAX mark.,decline,True
+P1,U027,absent-detail,What is the minimum temperature I can set for holiday mode on the Halvard Home Lumen thermostat?,"The passages don’t specify the minimum temperature for holiday mode on the Halvard Home Lumen thermostat. Check the temperature options in the **Holiday** menu, or contact Halvard Home support to confirm the lowest available setting.",decline,False
+P1,U028,absent-detail,What voice command should I use to set my Fenwick cooker hood to a specific fan speed?,"The passages don’t specify a voice command for setting a particular fan speed. They only suggest asking your assistant to “switch on the kitchen hood” after linking it through Halvard Home.
+
+For the correct fan-speed command, contact Halvard Home support.",decline,True
+P1,U029,absent-detail,What is the maximum rated operating temperature for the Lumen smart thermostat?,"The provided passages do not specify the Lumen smart thermostat’s maximum rated operating temperature. Check the supplied installation guide or contact Halvard Home support, quoting part number **KX-4280**.",decline,False
+P1,U030,absent-detail,"Which Wi-Fi security protocols does the Halvard Home Lumen thermostat support: WPA2, WPA3, or both?","The passages don’t specify whether the Halvard Home Lumen thermostat supports WPA2, WPA3, or both. They only confirm that it requires a 2.4 GHz Wi-Fi network, not 5 GHz.
+
+Contact Halvard Home support to confirm the supported security protocols, quoting thermostat part number **KX-4280**.",decline,True
+P1,U031,absent-detail,What is the maximum water temperature I should use to wash an Orrin heat pump filter marked as washable?,"The passages don’t specify a maximum water temperature for washing a washable Orrin heat pump filter. Check the filter’s care instructions or contact Halvard Home support before washing it. In the meantime, you can remove dust with a vacuum cleaner’s soft brush attachment.",decline,True
+P1,U032,absent-detail,How do I cancel a temporary temperature override on my Halvard Home Lumen thermostat and resume the heating schedule?,"To resume normal heating, return your Lumen thermostat to its heating schedule rather than leaving the temporary temperature override active. Check that the schedule is enabled and applies to the correct day.
+
+The passages don’t specify the exact button or menu option for cancelling an override. If you can’t find it on the thermostat, contact Halvard Home support for guidance.",decline,True
+P1,U033,absent-detail,How often should I clean the filter on my Keel washing machine?,"There’s no fixed cleaning interval specified for your Keel washing machine filter. Clean it if the machine drains slowly, leaves water in the drum, takes longer than usual to finish a cycle, or leaves clothes unusually wet.
+
+Before cleaning, switch off and unplug the machine, and let any hot water cool completely.",assert,True
+P1,U034,absent-detail,How long does a firmware update typically take to install on a Tessa dishwasher?,"The provided instructions don’t specify a typical installation time. Wait until the display confirms the update is complete before starting a wash, and don’t switch off the power or disconnect Wi-Fi during installation.",decline,False
+P1,U035,absent-detail,What minimum ventilation clearance should I leave around my Vale fridge freezer for energy-efficient operation?,"The passages don’t specify a minimum ventilation clearance around your Vale fridge freezer. Check the installation manual or contact Halvard Home support for the required distances.
+
+For energy-efficient operation, keep internal air vents clear and position the appliance away from direct sunlight and heat sources where possible.",decline,True
+P1,U036,absent-detail,What water hardness setting does the Halvard Home Tessa dishwasher default to after a factory reset?,The passages don’t specify the default water hardness setting after a factory reset. They advise checking the water hardness setting afterwards and adjusting it for your household.,decline,True
+P1,U037,absent-detail,How thick should the ice build-up in my Vale fridge freezer be before I defrost it?,"The guidance doesn’t specify an ice thickness. It says to defrost your Vale fridge freezer if **thick ice builds up**, or if ice is preventing the freezer door from closing.
+
+Unplug it and move food to suitable cold storage before letting the ice thaw naturally. Never use sharp tools or a hairdryer. If the build-up keeps returning, contact Halvard Home support.",decline,False
+P1,U038,absent-detail,How much clearance should I leave around my Vale fridge freezer for ventilation after moving it?,"Leave space around your Vale fridge freezer for ventilation, but the provided guidance does not specify an exact clearance. Check your installation guide or contact Halvard Home support for the required distances.",decline,False
+P1,U039,absent-detail,What supply voltage range does the Halvard Home Vale fridge freezer require to start without triggering error E-9215?,The passages do not specify the supply voltage range required to start the Halvard Home Vale fridge freezer without triggering E-9215. They only state that E-9215 indicates an unstable electrical supply. Contact Halvard Home support for the required voltage range.,decline,False
