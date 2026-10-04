@@ -446,3 +446,9 @@ def test_value_kind(m):
     assert m.library.value_kind("KX-3056") == "code"
     assert m.library.value_kind("E-2194") == "code"
     assert m.library.value_kind("38 minutes") == "measurement or duration"
+
+
+def test_cache_is_shared_by_every_checkout(m):
+    root = m.quiet.main_checkout(m.quiet.ROOT)
+    assert (root / ".git").exists()
+    assert root / ".cache" / "s2-e5-quiet-failures" == m.quiet.CACHE

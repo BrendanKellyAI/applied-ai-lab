@@ -16,6 +16,7 @@ chart.py and the tests read the committed results/ and need no key. See README.m
 import argparse
 import csv
 import json
+import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -34,7 +35,21 @@ measure = load_sibling(HERE / "measure.py")
 estimates = load_sibling(HERE / "estimate.py")
 store = load_sibling(ROOT / "episodes" / "s2-e2-chunking" / "store.py")
 
-CACHE = ROOT / ".cache" / "s2-e5-quiet-failures"
+
+
+def main_checkout(root: Path) -> Path:
+    """The repository's main checkout, also when this runs from a git worktree, so every
+    checkout shares one cache and never pays twice for the same call."""
+    try:
+        common = subprocess.run(["git", "rev-parse", "--path-format=absolute",
+                                 "--git-common-dir"], cwd=root, capture_output=True, text=True,
+                                check=True).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return root
+    return Path(common).parent
+
+
+CACHE = main_checkout(ROOT) / ".cache" / "s2-e5-quiet-failures"
 DATA = HERE / "data"
 RESULTS = HERE / "results"
 PILOT = RESULTS / "pilot"
