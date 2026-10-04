@@ -1,0 +1,335 @@
+{
+ "seed": 0,
+ "items": [
+  {
+   "article_id": "A034",
+   "old": "KX-3542",
+   "new": "KX-7816",
+   "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+   "sentence": "For the Mira robot vacuum, KX-3542 is the part number for the replacement side brush.",
+   "revised_sentence": "For the Mira robot vacuum, KX-7816 is the part number for the replacement side brush.",
+   "revised": "Ordering a spare Mira side brush\n\nIf your Mira robot vacuum leaves crumbs along skirting boards, check the side brush. Bent or broken bristles can stop it sweeping dirt into the suction path.\n\nFor the Mira robot vacuum, KX-7816 is the part number for the replacement side brush. To order one, contact Halvard Home customer support and quote this part number. Say that you need a side brush for a Mira robot vacuum, and provide your delivery address. Ask support to confirm the price and availability before paying.\n\nSwitch the vacuum off before inspecting the brush. Remove any tangled hair first: if the bristles are intact and the brush turns freely afterwards, you may not need a replacement.",
+   "rejected": []
+  },
+  {
+   "article_id": "A057",
+   "old": "KX-8033",
+   "new": "KX-8047",
+   "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+   "sentence": "KX-8033 is the dock’s power protection module.",
+   "revised_sentence": "KX-8047 is the dock’s power protection module.",
+   "revised": "Mira stops charging after a power cut\n\nIf your Halvard Home Mira robot vacuum was cleaning when the power went off, it may return to its dock but fail to charge once power is restored.\n\nKX-8047 is the dock’s power protection module. A sudden loss of mains power can leave this module in its protective shutdown state, preventing the dock from supplying charge.\n\nSwitch off the vacuum and unplug the dock from the wall socket for 60 seconds. Then plug the dock back in, switch on the vacuum and place it on the charging contacts.\n\nIf charging does not start, contact Halvard Home support. Do not open the dock or attempt to replace the module yourself.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch off the vacuum and unplug the dock from the wall socket for 60 seconds.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "article_id": "A088",
+   "old": "KX-7986",
+   "new": "KX-8423",
+   "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+   "sentence": "On this product, KX-7986 is the door catch that holds the door shut.",
+   "revised_sentence": "On this product, KX-8423 is the door catch that holds the door shut.",
+   "revised": "Ashby tumble dryer door not closing\n\nIf your Ashby tumble dryer door will not close, switch the dryer off and unplug it before checking the opening. Remove any clothing trapped between the door and the seal, then wipe away fluff with a soft, dry cloth.\n\nOn this product, KX-8423 is the door catch that holds the door shut. A cracked catch can stop the door clicking into place, even when the opening is clear.\n\nCheck the catch for visible cracks or a loose edge. If it is damaged, do not force the door or try to hold it closed with tape. Contact Halvard Home support to arrange a replacement catch and fitting. Do not use the dryer until the door closes securely.",
+   "rejected": []
+  },
+  {
+   "article_id": "A101",
+   "old": "KX-3356",
+   "new": "KX-4821",
+   "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+   "sentence": "KX-3356 is the Brio kettle’s wireless control module, which receives firmware updates.",
+   "revised_sentence": "KX-4821 is the Brio kettle’s wireless control module, which receives firmware updates.",
+   "revised": "Updating your Brio kettle’s firmware\n\nIf a firmware update stops before completion, the kettle’s wireless connection may have dropped. This can leave the app showing ‘Updating’ even though no progress is being made.\n\nKX-4821 is the Brio kettle’s wireless control module, which receives firmware updates. If updating repeatedly fails, contact Halvard Home support to have this module checked; do not open the kettle yourself.\n\nTo retry the update:\n\n- Let the kettle cool, empty it and place it on its powered base.\n- Connect your phone to the same home Wi-Fi network as the kettle.\n- Open the Halvard Home app, select your kettle, then choose ‘Firmware update’.\n- Keep the kettle powered and your phone nearby until the app confirms completion.\n\nDo not boil water during the update.",
+   "rejected": []
+  },
+  {
+   "article_id": "A151",
+   "old": "1°C",
+   "new": "3°C",
+   "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+   "sentence": "Lowering your usual setting by 1°C can reduce energy use, provided your home stays warm enough for everyone.",
+   "revised_sentence": "Lowering your usual setting by 3°C can reduce energy use, provided your home stays warm enough for everyone.",
+   "revised": "Energy-saving settings for your Orrin heat pump\n\nStart with a room temperature of 19°C, then adjust it to suit your comfort. Lowering your usual setting by 3°C can reduce energy use, provided your home stays warm enough for everyone.\n\nUse your heating schedule to match your routine. Heat pumps generally work best with steady temperatures, so try a small overnight reduction rather than switching the heating off completely.\n\nIf weather compensation is available, use it to help the system adjust heating water temperature as outdoor conditions change. Ask your installer to check the settings if rooms feel too warm or too cold.\n\nAvoid changing hot water hygiene settings to save energy. These help keep stored water safe.",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Start with a room temperature of 19°C, then adjust it to suit your comfort.\",\"value\":\"19°C\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "2°C",
+     "problem": "\"2°C\" already appears in the library"
+    }
+   ]
+  }
+ ],
+ "candidates_rejected": [
+  {
+   "item": "A099",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Hold the kettle’s pairing button for five seconds, until the wireless light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Hold the kettle’s pairing button for five seconds, until the wireless light flashes.\",\"value\":\"five seconds\"}",
+     "problem": "the value appears 11 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A054",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the hob off at its wall isolator and leave it for at least 30 minutes.\",\"value\":\"at least 30 minutes\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A003",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dryer off at the socket for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Connect your phone to your home’s 2.4 GHz Wi-Fi network.\",\"value\":\"2.4 GHz\"}",
+     "problem": "the value appears 26 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Switch the dryer off at the socket for 60 seconds, then switch it back on.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A211",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lid on your Halvard Home Brio kettle will not close, switch the kettle off, unplug the base and let the kettle cool completely before checking it.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"If the lid on your Halvard Home Brio kettle will not close, switch the kettle off, unplug the base and let the kettle cool completely before checking it.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A103",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Ventilate the room and leave the hob switched off for at least two hours so any remaining moisture can evaporate.\",\"value\":\"two hours\"}",
+     "problem": "the value appears 3 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A283",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Leave it to charge for 30 minutes, then press the vacuum’s power button.\",\"value\":\"30 minutes\"}",
+     "problem": "the value appears 5 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A276",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"error\":\"The article contains no concrete measurement, duration, numbered setting, part number or code, so no matching sentence and value can be extracted.\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"To arrange an engineer visit for your Ashby tumble dryer, contact Halvard Home customer support and ask to book a repair.\",\"value\":\"Halvard Home\"}",
+     "problem": "the value appears 353 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"To arrange an engineer visit for your Ashby tumble dryer, contact Halvard Home customer support and ask to book a repair.\",\"value\":\"Ashby tumble dryer\"}",
+     "problem": "the value appears 52 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A149",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If the socket works, leave the dryer unplugged for 60 seconds before reconnecting it.\",\"value\":\"60 seconds\"}",
+     "problem": "the value appears 13 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A178",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"\",\"value\":\"\"}",
+     "problem": "empty sentence or value"
+    },
+    {
+     "reply": "{\"sentence\":\"3. Select **System**, then **Factory reset**.\",\"value\":\"3\"}",
+     "problem": "the value appears 133 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"2. On the controller, open **Settings**.\",\"value\":\"2\"}",
+     "problem": "the value appears 135 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A292",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\": null, \"value\": null}",
+     "problem": "the sentence is not copied exactly from the article"
+    },
+    {
+     "reply": "{\"sentence\":\"Check that the dishwasher’s wall socket is switched on.\",\"value\":\"on\"}",
+     "problem": "the value appears 1953 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"A power cut stops the wash cycle because your Tessa dishwasher needs electricity to run its pump.\",\"value\":\"Tessa\"}",
+     "problem": "the value appears 58 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":null,\"value\":null}",
+     "problem": "the sentence is not copied exactly from the article"
+    }
+   ]
+  },
+  {
+   "item": "A240",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Discard perishable chilled food if it has been above 8°C for more than four hours.\",\"value\":\"8°C\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Avoid adding fresh food until the fridge is at 5°C or below and the freezer is at −18°C.\",\"value\":\"−18°C\"}",
+     "problem": "the value appears 7 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Discard perishable chilled food if it has been above 8°C for more than four hours.\",\"value\":\"8°C\"}",
+     "problem": "the value appears 8 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Avoid adding fresh food until the fridge is at 5°C or below and the freezer is at −18°C.\",\"value\":\"−18°C\"}",
+     "problem": "the value appears 7 times in the library, not once"
+    }
+   ]
+  },
+  {
+   "item": "A157",
+   "problem": "value: no unique value",
+   "rejected": [
+    {
+     "reply": "{\"sentence\":\"Filling above the MAX mark can cause water to spill, so always keep the water level below this line.\",\"value\":\"MAX\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice water underneath your Brio kettle, switch it off and unplug it before checking.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"Filling above the MAX mark can cause water to spill, so always keep the water level below this line.\",\"value\":\"MAX\"}",
+     "problem": "the value appears 2 times in the library, not once"
+    },
+    {
+     "reply": "{\"sentence\":\"If you notice water underneath your Brio kettle, switch it off and unplug it before checking.\",\"value\":\"Brio\"}",
+     "problem": "the value appears 64 times in the library, not once"
+    }
+   ]
+  }
+ ]
+}

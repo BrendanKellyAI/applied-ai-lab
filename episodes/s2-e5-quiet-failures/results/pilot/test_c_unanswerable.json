@@ -1,0 +1,387 @@
+[
+ {
+  "id": "A034",
+  "group": "answerable",
+  "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+  "old": "KX-3542",
+  "new": "KX-7816",
+  "top": [
+   "A034",
+   "A113",
+   "A116",
+   "A036",
+   "A045"
+  ],
+  "top1_score": 0.7967401742935181,
+  "P1": {
+   "reply": "Quote part number **KX-7816** to Halvard Home customer support to order a replacement side brush for your Mira robot vacuum.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "Quote part number **KX-7816** to order a replacement side brush for your Mira robot vacuum.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A057",
+  "group": "answerable",
+  "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+  "old": "KX-8033",
+  "new": "KX-8047",
+  "top": [
+   "A057",
+   "A090",
+   "A045",
+   "A082",
+   "A115"
+  ],
+  "top1_score": 0.6002633571624756,
+  "P1": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A088",
+  "group": "answerable",
+  "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+  "old": "KX-7986",
+  "new": "KX-8423",
+  "top": [
+   "A088",
+   "A031",
+   "A125",
+   "A107",
+   "A014"
+  ],
+  "top1_score": 0.6941092014312744,
+  "P1": {
+   "reply": "The part number for the door catch is **KX-8423**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The part number for the Ashby tumble dryer door catch is **KX-8423**.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A101",
+  "group": "answerable",
+  "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+  "old": "KX-3356",
+  "new": "KX-4821",
+  "top": [
+   "A101",
+   "A099",
+   "A120",
+   "A008",
+   "A048"
+  ],
+  "top1_score": 0.5872947573661804,
+  "P1": {
+   "reply": "The model identifier is **KX-4821**.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "KX-4821.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "A151",
+  "group": "answerable",
+  "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+  "old": "1°C",
+  "new": "3°C",
+  "top": [
+   "A151",
+   "A282",
+   "A264",
+   "A267",
+   "A188"
+  ],
+  "top1_score": 0.5902043581008911,
+  "P1": {
+   "reply": "The article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "not_found": false,
+   "grade": "new"
+  },
+  "P2": {
+   "reply": "The article suggests lowering your usual temperature setting by 3°C, provided your home stays warm enough for everyone.",
+   "not_found": false,
+   "grade": "new"
+  }
+ },
+ {
+  "id": "U000",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I clean the basket of my Halvard Home Sora air fryer?",
+  "top": [
+   "A027",
+   "A236",
+   "A093",
+   "A037",
+   "A058"
+  ],
+  "top1_score": 0.5296763777732849,
+  "P1": {
+   "reply": "The passages don’t include cleaning instructions for the Halvard Home Sora air fryer basket, so I can’t confirm the correct method or whether it’s dishwasher-safe.\n\nSwitch off and unplug the air fryer and let it cool before handling the basket. Check the Sora user manual or contact Halvard Home support for model-specific cleaning instructions.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U001",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I descale my Halvard Home Elva coffee machine?",
+  "top": [
+   "A203",
+   "A033",
+   "A268",
+   "A013",
+   "A273"
+  ],
+  "top1_score": 0.6405653953552246,
+  "P1": {
+   "reply": "The passages don’t include descaling instructions for the **Halvard Home Elva coffee machine**, so I can’t confirm the correct product or procedure.\n\nCheck your Elva’s care guide or contact Halvard Home support for model-specific instructions. Don’t use the descaling methods listed for the other appliances on your coffee machine.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U002",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I set the clock on the Elva microwave oven from Halvard Home?",
+  "top": [
+   "A079",
+   "A210",
+   "A020",
+   "A108",
+   "A220"
+  ],
+  "top1_score": 0.5356107354164124,
+  "P1": {
+   "reply": "The supplied passages don’t include clock-setting instructions for the Halvard Home Elva microwave oven. Please check the Elva user manual or contact Halvard Home support for the correct steps.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U003",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "Why does my Halvard Home Elara toaster brown one side of the bread more than the other?",
+  "top": [
+   "A230",
+   "A066",
+   "A271",
+   "A032",
+   "A108"
+  ],
+  "top1_score": 0.40136438608169556,
+  "P1": {
+   "reply": "The supplied passages don’t cover the Halvard Home Elara toaster or uneven browning, so I can’t identify the cause from this information. Check the toaster’s user manual or contact Halvard Home support for model-specific advice.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U004",
+  "group": "unanswerable",
+  "kind": "absent-product",
+  "question": "How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?",
+  "top": [
+   "A002",
+   "A221",
+   "A074",
+   "A273",
+   "A222"
+  ],
+  "top1_score": 0.472293883562088,
+  "P1": {
+   "reply": "The supplied passages cover the Halvard Home **Keel washing machine**, not the **Elva food processor**, so they don’t provide the correct blade-removal procedure.\n\nFor safety, switch off and unplug the food processor, and wait until the blade has completely stopped. Don’t pull or twist the blade assembly without checking the Elva manual, and avoid touching its cutting edges. Consult the manual or contact Halvard Home support for model-specific removal instructions.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U005",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?",
+  "top": [
+   "A236",
+   "A231",
+   "A188",
+   "A185",
+   "A084"
+  ],
+  "top1_score": 0.6606773138046265,
+  "P1": {
+   "reply": "The passages don’t specify a maximum dishwasher temperature or confirm that the filter is dishwasher-safe. They recommend washing it by hand in warm water with a little washing-up liquid and a soft brush, then rinsing and drying it completely before refitting.\n\nCheck your user manual or contact Halvard Home support before putting it in the dishwasher.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U006",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?",
+  "top": [
+   "A222",
+   "A143",
+   "A172",
+   "A074",
+   "A075"
+  ],
+  "top1_score": 0.7873139381408691,
+  "P1": {
+   "reply": "The passages don’t specify what a repeating pattern of three flashes means on a Halvard Home Keel washing machine—only that a flashing warning light needs attention.\n\nCheck that the door is firmly closed and no clothing is trapped in the seal. Switch off and unplug the machine for five minutes, handling the plug only if your hands and the socket area are dry. With the power disconnected, check that the water tap is open and the inlet hose isn’t kinked.\n\nReconnect and restart the programme. If the flashing continues, contact Halvard Home support and tell them which light flashes, that it repeats in groups of three, and when it started.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U007",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What sequence of touch controls activates the child lock on the Corra induction hob?",
+  "top": [
+   "A025",
+   "A185",
+   "A290",
+   "A124",
+   "A243"
+  ],
+  "top1_score": 0.7189198732376099,
+  "P1": {
+   "reply": "The passages don’t specify how to activate the child lock on the Corra induction hob. They only state that touching and holding the lock symbol for three seconds **releases** it.\n\nFor the activation sequence, check the Corra user manual or contact Halvard Home support.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U008",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?",
+  "top": [
+   "A079",
+   "A060",
+   "A167",
+   "A049",
+   "A080"
+  ],
+  "top1_score": 0.6318047642707825,
+  "P1": {
+   "reply": "The passages do not specify the maximum delay-start duration for the Halvard Home Orrin heat pump. They only advise setting a start time at least five minutes ahead when testing the timer. Contact Halvard Home support to confirm the maximum supported delay.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ },
+ {
+  "id": "U009",
+  "group": "unanswerable",
+  "kind": "absent-detail",
+  "question": "What circuit breaker amperage rating is specified for the Corra induction hob?",
+  "top": [
+   "A084",
+   "A081",
+   "A032",
+   "A134",
+   "A026"
+  ],
+  "top1_score": 0.6056960821151733,
+  "P1": {
+   "reply": "The provided passages do not specify a circuit breaker amperage rating for the Corra induction hob. Check the installation manual or contact Halvard Home support for the correct rating.",
+   "not_found": false,
+   "verdict": "decline",
+   "judged": true
+  },
+  "P2": {
+   "reply": "NOT_FOUND",
+   "not_found": true,
+   "verdict": "decline",
+   "judged": false
+  }
+ }
+]

@@ -1,0 +1,25 @@
+prompt,id,kind,question,reply,verdict,flagged_for_manual_check
+P1,U000,absent-product,How do I clean the basket of my Halvard Home Sora air fryer?,"The passages don’t include cleaning instructions for the Halvard Home Sora air fryer basket, so I can’t confirm the correct method or whether it’s dishwasher-safe.
+
+Switch off and unplug the air fryer and let it cool before handling the basket. Check the Sora user manual or contact Halvard Home support for model-specific cleaning instructions.",decline,True
+P1,U001,absent-product,How do I descale my Halvard Home Elva coffee machine?,"The passages don’t include descaling instructions for the **Halvard Home Elva coffee machine**, so I can’t confirm the correct product or procedure.
+
+Check your Elva’s care guide or contact Halvard Home support for model-specific instructions. Don’t use the descaling methods listed for the other appliances on your coffee machine.",decline,True
+P1,U002,absent-product,How do I set the clock on the Elva microwave oven from Halvard Home?,The supplied passages don’t include clock-setting instructions for the Halvard Home Elva microwave oven. Please check the Elva user manual or contact Halvard Home support for the correct steps.,decline,True
+P1,U003,absent-product,Why does my Halvard Home Elara toaster brown one side of the bread more than the other?,"The supplied passages don’t cover the Halvard Home Elara toaster or uneven browning, so I can’t identify the cause from this information. Check the toaster’s user manual or contact Halvard Home support for model-specific advice.",decline,True
+P1,U004,absent-product,How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?,"The supplied passages cover the Halvard Home **Keel washing machine**, not the **Elva food processor**, so they don’t provide the correct blade-removal procedure.
+
+For safety, switch off and unplug the food processor, and wait until the blade has completely stopped. Don’t pull or twist the blade assembly without checking the Elva manual, and avoid touching its cutting edges. Consult the manual or contact Halvard Home support for model-specific removal instructions.",decline,True
+P1,U005,absent-detail,What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?,"The passages don’t specify a maximum dishwasher temperature or confirm that the filter is dishwasher-safe. They recommend washing it by hand in warm water with a little washing-up liquid and a soft brush, then rinsing and drying it completely before refitting.
+
+Check your user manual or contact Halvard Home support before putting it in the dishwasher.",decline,True
+P1,U006,absent-detail,What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?,"The passages don’t specify what a repeating pattern of three flashes means on a Halvard Home Keel washing machine—only that a flashing warning light needs attention.
+
+Check that the door is firmly closed and no clothing is trapped in the seal. Switch off and unplug the machine for five minutes, handling the plug only if your hands and the socket area are dry. With the power disconnected, check that the water tap is open and the inlet hose isn’t kinked.
+
+Reconnect and restart the programme. If the flashing continues, contact Halvard Home support and tell them which light flashes, that it repeats in groups of three, and when it started.",decline,True
+P1,U007,absent-detail,What sequence of touch controls activates the child lock on the Corra induction hob?,"The passages don’t specify how to activate the child lock on the Corra induction hob. They only state that touching and holding the lock symbol for three seconds **releases** it.
+
+For the activation sequence, check the Corra user manual or contact Halvard Home support.",decline,True
+P1,U008,absent-detail,What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?,The passages do not specify the maximum delay-start duration for the Halvard Home Orrin heat pump. They only advise setting a start time at least five minutes ahead when testing the timer. Contact Halvard Home support to confirm the maximum supported delay.,decline,True
+P1,U009,absent-detail,What circuit breaker amperage rating is specified for the Corra induction hob?,The provided passages do not specify a circuit breaker amperage rating for the Corra induction hob. Check the installation manual or contact Halvard Home support for the correct rating.,decline,True

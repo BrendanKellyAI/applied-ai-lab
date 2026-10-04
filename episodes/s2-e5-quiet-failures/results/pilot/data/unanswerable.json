@@ -1,0 +1,150 @@
+{
+ "seed": 0,
+ "items": [
+  {
+   "id": "U000",
+   "kind": "absent-product",
+   "category": "air fryer",
+   "question": "How do I clean the basket of my Halvard Home Sora air fryer?",
+   "product": "Sora air fryer",
+   "note": "\"Sora air fryer\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U001",
+   "kind": "absent-product",
+   "category": "coffee machine",
+   "question": "How do I descale my Halvard Home Elva coffee machine?",
+   "product": "Elva coffee machine",
+   "note": "\"Elva coffee machine\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U002",
+   "kind": "absent-product",
+   "category": "microwave oven",
+   "question": "How do I set the clock on the Elva microwave oven from Halvard Home?",
+   "product": "Elva microwave oven",
+   "note": "\"Elva microwave oven\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U003",
+   "kind": "absent-product",
+   "category": "toaster",
+   "question": "Why does my Halvard Home Elara toaster brown one side of the bread more than the other?",
+   "product": "Elara toaster",
+   "note": "\"Elara toaster\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U004",
+   "kind": "absent-product",
+   "category": "food processor",
+   "question": "How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?",
+   "product": "Elva food processor",
+   "note": "\"Elva food processor\" appears nowhere in the library (case-insensitive)",
+   "rejected": []
+  },
+  {
+   "id": "U005",
+   "kind": "absent-detail",
+   "article_id": "A236",
+   "question": "What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A236",
+    "A231",
+    "A188",
+    "A185",
+    "A084",
+    "A270",
+    "A026",
+    "A124",
+    "A281",
+    "A054"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U006",
+   "kind": "absent-detail",
+   "article_id": "A222",
+   "question": "What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A222",
+    "A143",
+    "A172",
+    "A074",
+    "A075",
+    "A160",
+    "A221",
+    "A274",
+    "A029",
+    "A002"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U007",
+   "kind": "absent-detail",
+   "article_id": "A025",
+   "question": "What sequence of touch controls activates the child lock on the Corra induction hob?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A025",
+    "A185",
+    "A290",
+    "A124",
+    "A243",
+    "A076",
+    "A281",
+    "A187",
+    "A084",
+    "A078"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U008",
+   "kind": "absent-detail",
+   "article_id": "A079",
+   "question": "What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?",
+   "note": "judge said no over the top 10 passages; source in the top 10",
+   "top_ids": [
+    "A079",
+    "A060",
+    "A167",
+    "A049",
+    "A080",
+    "A237",
+    "A178",
+    "A024",
+    "A043",
+    "A151"
+   ],
+   "rejected": []
+  },
+  {
+   "id": "U009",
+   "kind": "absent-detail",
+   "article_id": "A111",
+   "question": "What circuit breaker amperage rating is specified for the Corra induction hob?",
+   "note": "judge said no over the top 10 passages plus the source article; source not in the top 10",
+   "top_ids": [
+    "A084",
+    "A081",
+    "A032",
+    "A134",
+    "A026",
+    "A185",
+    "A076",
+    "A124",
+    "A232",
+    "A239"
+   ],
+   "rejected": []
+  }
+ ]
+}

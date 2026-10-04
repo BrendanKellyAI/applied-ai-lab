@@ -1,0 +1,167 @@
+[
+ {
+  "article_id": "A034",
+  "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+  "top": [
+   "A034:old",
+   "A034:new",
+   "A113:current",
+   "A116:current",
+   "A036:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A034:new",
+   "A113:current",
+   "A116:current",
+   "A036:current",
+   "A045:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list conflicting side-brush part numbers: **KX-3542** and **KX-7816**. Contact Halvard Home customer support and ask them to confirm which is correct for your Mira robot vacuum before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "Quote part number **KX-7816** to Halvard Home customer support for a replacement Mira side brush. This is the part number in the latest update, dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "Quote part number **KX-7816** to Halvard Home customer support to order a replacement side brush for your Mira robot vacuum.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A057",
+  "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+  "top": [
+   "A057:new",
+   "A057:old",
+   "A090:current",
+   "A045:current",
+   "A082:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A057:new",
+   "A090:current",
+   "A045:current",
+   "A082:current",
+   "A115:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting part codes for the dock’s power protection module: **KX-8047** in Passage 1 and **KX-8033** in Passage 2. Contact Halvard Home support to confirm the correct code for your dock.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The dock’s power protection module is **KX-8047**, according to the latest update dated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A088",
+  "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+  "top": [
+   "A088:old",
+   "A088:new",
+   "A031:current",
+   "A125:current",
+   "A107:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A088:new",
+   "A031:current",
+   "A125:current",
+   "A107:current",
+   "A014:current"
+  ],
+  "B-plain": {
+   "reply": "The passages list two conflicting door catch part numbers: **KX-7986** and **KX-8423**. Contact Halvard Home support with your dryer’s model details to confirm the correct part before ordering.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The door catch part number is **KX-8423**, according to the latest update dated 1 June 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The part number for the door catch is **KX-8423**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A101",
+  "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+  "top": [
+   "A101:old",
+   "A101:new",
+   "A099:current",
+   "A120:current",
+   "A008:current"
+  ],
+  "old_rank": 1,
+  "new_rank": 2,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A101:new",
+   "A099:current",
+   "A120:current",
+   "A008:current",
+   "A048:current"
+  ],
+  "B-plain": {
+   "reply": "The passages give conflicting identifiers: Passage 1 lists **KX-3356**, while Passage 2 lists **KX-4821**. The correct identifier cannot be determined from the provided information.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The model identifier is **KX-4821**, according to the latest passage, updated June 1, 2026.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The model identifier is **KX-4821**.",
+   "grade": "new"
+  }
+ },
+ {
+  "article_id": "A151",
+  "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+  "top": [
+   "A151:new",
+   "A151:old",
+   "A282:current",
+   "A264:current",
+   "A267:current"
+  ],
+  "old_rank": 2,
+  "new_rank": 1,
+  "only_old_in_top": false,
+  "latest_top": [
+   "A151:new",
+   "A282:current",
+   "A264:current",
+   "A267:current",
+   "A188:current"
+  ],
+  "B-plain": {
+   "reply": "The passages disagree: Passage 1 suggests lowering your usual setting by **3°C**, while Passage 2 suggests **1°C**. Both say to make sure your home stays warm enough for everyone.",
+   "grade": "both"
+  },
+  "B-dated": {
+   "reply": "The latest article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "grade": "new"
+  },
+  "B-latest": {
+   "reply": "The article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "grade": "new"
+  }
+ }
+]

@@ -1,0 +1,222 @@
+[
+ {
+  "article_id": "A034",
+  "question": "What part number should I quote to order a replacement side brush for my Mira robot vacuum?",
+  "old": "KX-3542",
+  "new": "KX-7816",
+  "fresh": {
+   "top": [
+    "A034",
+    "A113",
+    "A116",
+    "A036",
+    "A045"
+   ],
+   "scores": [
+    0.7967401742935181,
+    0.6925086975097656,
+    0.5567640662193298,
+    0.5481880903244019,
+    0.5427126884460449
+   ],
+   "hit": true,
+   "reply": "Quote part number **KX-7816** to Halvard Home customer support to order a replacement side brush for your Mira robot vacuum.",
+   "grade": "new"
+  },
+  "stale": {
+   "top": [
+    "A034",
+    "A113",
+    "A116",
+    "A036",
+    "A045"
+   ],
+   "scores": [
+    0.7969459295272827,
+    0.6925086975097656,
+    0.5567640662193298,
+    0.5481880903244019,
+    0.5427126884460449
+   ],
+   "hit": true,
+   "reply": "Quote part number **KX-3542** when ordering a replacement side brush for your Mira robot vacuum from Halvard Home customer support.",
+   "grade": "old"
+  }
+ },
+ {
+  "article_id": "A057",
+  "question": "What is the part code for the dock’s power protection module in my Halvard Home Mira robot vacuum?",
+  "old": "KX-8033",
+  "new": "KX-8047",
+  "fresh": {
+   "top": [
+    "A057",
+    "A090",
+    "A045",
+    "A082",
+    "A115"
+   ],
+   "scores": [
+    0.6002633571624756,
+    0.5740563869476318,
+    0.5622386932373047,
+    0.49870920181274414,
+    0.4951317608356476
+   ],
+   "hit": true,
+   "reply": "The dock’s power protection module part code is **KX-8047**.",
+   "grade": "new"
+  },
+  "stale": {
+   "top": [
+    "A057",
+    "A090",
+    "A045",
+    "A082",
+    "A115"
+   ],
+   "scores": [
+    0.5915336608886719,
+    0.5740563869476318,
+    0.5622386932373047,
+    0.49870920181274414,
+    0.4951317608356476
+   ],
+   "hit": true,
+   "reply": "The dock’s power protection module part code is **KX-8033**.",
+   "grade": "old"
+  }
+ },
+ {
+  "article_id": "A088",
+  "question": "What is the part number for the door catch that holds my Ashby tumble dryer door shut?",
+  "old": "KX-7986",
+  "new": "KX-8423",
+  "fresh": {
+   "top": [
+    "A088",
+    "A031",
+    "A125",
+    "A107",
+    "A014"
+   ],
+   "scores": [
+    0.6941092014312744,
+    0.5567255020141602,
+    0.5335102081298828,
+    0.5270607471466064,
+    0.512642502784729
+   ],
+   "hit": true,
+   "reply": "The part number for the door catch is **KX-8423**.",
+   "grade": "new"
+  },
+  "stale": {
+   "top": [
+    "A088",
+    "A031",
+    "A125",
+    "A107",
+    "A014"
+   ],
+   "scores": [
+    0.6956823468208313,
+    0.5567255020141602,
+    0.5335102081298828,
+    0.5270607471466064,
+    0.512642502784729
+   ],
+   "hit": true,
+   "reply": "The part number for the door catch that holds your Ashby tumble dryer door shut is **KX-7986**.",
+   "grade": "old"
+  }
+ },
+ {
+  "article_id": "A101",
+  "question": "What is the model identifier of the Brio kettle’s wireless control module that receives firmware updates?",
+  "old": "KX-3356",
+  "new": "KX-4821",
+  "fresh": {
+   "top": [
+    "A101",
+    "A099",
+    "A120",
+    "A008",
+    "A048"
+   ],
+   "scores": [
+    0.5872947573661804,
+    0.5577974915504456,
+    0.5294991135597229,
+    0.5277342796325684,
+    0.45610183477401733
+   ],
+   "hit": true,
+   "reply": "The model identifier is **KX-4821**.",
+   "grade": "new"
+  },
+  "stale": {
+   "top": [
+    "A101",
+    "A099",
+    "A120",
+    "A008",
+    "A048"
+   ],
+   "scores": [
+    0.5972674489021301,
+    0.5577974915504456,
+    0.5294991135597229,
+    0.5277342796325684,
+    0.45610183477401733
+   ],
+   "hit": true,
+   "reply": "The model identifier is **KX-3356**.",
+   "grade": "old"
+  }
+ },
+ {
+  "article_id": "A151",
+  "question": "By how much does the article suggest lowering my usual temperature setting to reduce energy use?",
+  "old": "1°C",
+  "new": "3°C",
+  "fresh": {
+   "top": [
+    "A151",
+    "A282",
+    "A264",
+    "A267",
+    "A188"
+   ],
+   "scores": [
+    0.5902043581008911,
+    0.5417324304580688,
+    0.5073193311691284,
+    0.48024702072143555,
+    0.46983757615089417
+   ],
+   "hit": true,
+   "reply": "The article suggests lowering your usual temperature setting by **3°C**, provided your home stays warm enough for everyone.",
+   "grade": "new"
+  },
+  "stale": {
+   "top": [
+    "A151",
+    "A282",
+    "A264",
+    "A267",
+    "A188"
+   ],
+   "scores": [
+    0.5894054174423218,
+    0.5417324304580688,
+    0.5073193311691284,
+    0.48024702072143555,
+    0.46983757615089417
+   ],
+   "hit": true,
+   "reply": "The article suggests lowering your usual temperature setting by **1°C**, provided your home stays warm enough for everyone.",
+   "grade": "old"
+  }
+ }
+]

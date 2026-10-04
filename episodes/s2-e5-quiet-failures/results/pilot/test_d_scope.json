@@ -1,0 +1,204 @@
+[
+ {
+  "type": "identifier",
+  "article_id": "A057",
+  "question": "What is part KX-8033 for?",
+  "D-none": {
+   "top": [
+    "A118",
+    "N003",
+    "A081",
+    "A005",
+    "A089"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [
+    "A118",
+    "A081",
+    "A005",
+    "A089"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A118",
+    "A081",
+    "A005",
+    "A089",
+    "A045"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A096",
+  "question": "What does error E-8255 mean?",
+  "D-none": {
+   "top": [
+    "N001",
+    "A091",
+    "A007",
+    "A108",
+    "A031"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [
+    "A091",
+    "A007",
+    "A108",
+    "A031"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A091",
+    "A007",
+    "A108",
+    "A031",
+    "A072"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A130",
+  "question": "What should I do if my extractor’s screen won’t show anything?",
+  "D-none": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A130",
+    "A274",
+    "A284",
+    "A058",
+    "A041"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ },
+ {
+  "type": "identifier",
+  "article_id": "A039",
+  "question": "What is part KX-7011 for?",
+  "D-none": {
+   "top": [
+    "N003",
+    "A081",
+    "A089",
+    "A099",
+    "A009"
+   ],
+   "delivered": 5,
+   "leak": true,
+   "hit": false
+  },
+  "D-post": {
+   "top": [
+    "A081",
+    "A089",
+    "A099",
+    "A009"
+   ],
+   "delivered": 4,
+   "leak": false,
+   "hit": false
+  },
+  "D-pre": {
+   "top": [
+    "A081",
+    "A089",
+    "A099",
+    "A009",
+    "A118"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": false
+  }
+ },
+ {
+  "type": "paraphrase",
+  "article_id": "A145",
+  "question": "What information should I provide when buying a replacement part for my kitchen extractor?",
+  "D-none": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-post": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  },
+  "D-pre": {
+   "top": [
+    "A145",
+    "A191",
+    "A058",
+    "A094",
+    "A136"
+   ],
+   "delivered": 5,
+   "leak": false,
+   "hit": true
+  }
+ }
+]

@@ -1,0 +1,11 @@
+id,kind,question,product_or_article,verification,attempts
+U000,absent-product,How do I clean the basket of my Halvard Home Sora air fryer?,Sora air fryer,"""Sora air fryer"" appears nowhere in the library (case-insensitive)",1
+U001,absent-product,How do I descale my Halvard Home Elva coffee machine?,Elva coffee machine,"""Elva coffee machine"" appears nowhere in the library (case-insensitive)",1
+U002,absent-product,How do I set the clock on the Elva microwave oven from Halvard Home?,Elva microwave oven,"""Elva microwave oven"" appears nowhere in the library (case-insensitive)",1
+U003,absent-product,Why does my Halvard Home Elara toaster brown one side of the bread more than the other?,Elara toaster,"""Elara toaster"" appears nowhere in the library (case-insensitive)",1
+U004,absent-product,How do I safely remove the blade from my Halvard Home Elva food processor for cleaning?,Elva food processor,"""Elva food processor"" appears nowhere in the library (case-insensitive)",1
+U005,absent-detail,What is the maximum dishwasher temperature recommended for cleaning the filter in my Corra induction hob?,A236,judge said no over the top 10 passages; source in the top 10,1
+U006,absent-detail,What does a repeating pattern of three warning-light flashes mean on a Halvard Home Keel washing machine?,A222,judge said no over the top 10 passages; source in the top 10,1
+U007,absent-detail,What sequence of touch controls activates the child lock on the Corra induction hob?,A025,judge said no over the top 10 passages; source in the top 10,1
+U008,absent-detail,What is the maximum delay-start duration supported by the Halvard Home Orrin heat pump?,A079,judge said no over the top 10 passages; source in the top 10,1
+U009,absent-detail,What circuit breaker amperage rating is specified for the Corra induction hob?,A111,judge said no over the top 10 passages plus the source article; source not in the top 10,1

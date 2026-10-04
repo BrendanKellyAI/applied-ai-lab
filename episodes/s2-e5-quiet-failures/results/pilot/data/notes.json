@@ -1,0 +1,70 @@
+{
+ "seed": 0,
+ "items": [
+  {
+   "note_id": "N000",
+   "question_index": 19,
+   "type": "identifier",
+   "article_id": "A057",
+   "kind": "dealer note with an internal repair procedure",
+   "access": "internal",
+   "text": "Mira dock: post-outage charging fault\n\nDealer/engineer use only. If Mira stopped charging after a mains interruption, suspect a latched shutdown in the dock’s KX-8033 protection module.\n\n1. Switch Mira off, disconnect the dock from mains for one minute, then reconnect and check charging with the robot correctly seated.\n2. If the fault remains, isolate the dock before inspection. Check the lead, contacts and accessible connections for damage.\n3. Internal testing or module replacement must be carried out by a qualified engineer using approved Halvard Home service instructions. Confirm the fault before ordering KX-8033; do not assume the module has failed.\n4. Never bypass protection or improvise live tests. If approved instructions are unavailable, escalate to technical support.\n5. Record findings, parts fitted and the final charging test in the service job.",
+   "tokens": 175,
+   "longest_shared_chars": 24,
+   "question": "Why has my Mira stopped charging after a power outage, and what should I do?",
+   "rejected": []
+  },
+  {
+   "note_id": "N001",
+   "question_index": 32,
+   "type": "identifier",
+   "article_id": "A096",
+   "kind": "engineering note on a known defect",
+   "access": "internal",
+   "text": "Lumen E-8255: suspected holiday-save defect\n\nDealer/engineering use only. E-8255 blocks holiday activation when no return date is present; the normal heating programme remains in control. The supplied guidance does not confirm a firmware defect or identify affected versions.\n\nFor persistent reports, check whether a valid return date and time remain stored after saving and reopening Holiday. If the values disappear, or E-8255 remains despite retained values, record the software version, entered dates, exact reproduction steps and display photographs for engineering review.\n\nDo not classify the thermostat as faulty hardware on this warning alone. Avoid promising that a reset, replacement or software update will resolve it without a confirmed diagnosis. Keep heating powered during investigation and verify the active operating mode before leaving site.",
+   "tokens": 153,
+   "longest_shared_chars": 21,
+   "question": "Why does my Lumen thermostat show E-8255 when I try to activate Holiday mode, and what should I do if the warning persists?",
+   "rejected": []
+  },
+  {
+   "note_id": "N002",
+   "question_index": 50,
+   "type": "paraphrase",
+   "article_id": "A130",
+   "kind": "warranty exception note",
+   "access": "internal",
+   "text": "Warranty exception – Fenwick blank display\n\nDealers and engineers: submit isolated display failures for discretionary warranty review where normal cover has expired. This is a request route, not automatic approval.\n\nConfirm the supply is live, record whether the fan and lamp operate, and note the outcome of a one-minute power reset. If the entire hood is dead, establish the supply fault before requesting a display-related exception.\n\nA qualified engineer must isolate the appliance before opening it. Include the serial number, purchase date, diagnostic findings, proposed repair and itemised parts and labour estimate.\n\nObtain written authorisation before ordering parts or promising a free repair. Keep cost allowances, approval discussions and any goodwill rationale in the internal claim record, separate from customer paperwork. Explain only the agreed repair and any customer charge.",
+   "tokens": 158,
+   "longest_shared_chars": 31,
+   "question": "Can I request a warranty exception for my Fenwick hood’s blank display if the warranty has expired?",
+   "rejected": []
+  },
+  {
+   "note_id": "N003",
+   "question_index": 13,
+   "type": "identifier",
+   "article_id": "A039",
+   "kind": "dealer note with an internal repair procedure",
+   "access": "internal",
+   "text": "Corra hob: rocking after installation\n\nDealer/engineer use only. Treat a raised corner at first fit as a possible folded KX-7011 sealing strip; confirm the cause before ordering parts.\n\nIsolate the electrical supply and prove dead before lifting the hob. Protect the worktop and support the unit without loading the glass edge. Inspect the underside seal around the full perimeter. Reposition any folded section; replace the strip if damaged or unable to sit flat.\n\nCheck that the seating surface is clean and level, then lower the hob evenly. Do not force a corner down or use extra sealant to disguise poor seating.\n\nConfirm stable seating and complete the required electrical safety checks before restoring power. Record the seal condition, corrective work and final fit in the service report.",
+   "tokens": 155,
+   "longest_shared_chars": 26,
+   "question": "Why is one corner of my Corra hob raised and rocking after installation, and how can it be fixed?",
+   "rejected": []
+  },
+  {
+   "note_id": "N004",
+   "question_index": 65,
+   "type": "paraphrase",
+   "article_id": "A145",
+   "kind": "engineering note on a known defect",
+   "access": "internal",
+   "text": "Fenwick hood accessory mismatch — draft engineering note\n\nInternal use only: dealers and service engineers.\n\nStatus: suspected defect, not confirmed by the supplied article. Check service records before issuing this as a known-defect bulletin.\n\nPotential failure mode: the spare-parts catalogue may link a hood model to an accessory with incompatible mounting points. Similar appearance is not sufficient evidence of interchangeability.\n\nBefore releasing an order, compare the complete rating-label details with the current parts listing and available fitting drawings. If these conflict, hold the order and refer it to technical support.\n\nRecord the requested part number, appliance identification, photographs and the catalogue entry used. Do not substitute a visually similar accessory without technical approval or describe the suspected catalogue error to customers as established fact.",
+   "tokens": 149,
+   "longest_shared_chars": 18,
+   "question": "What should I do if the accessory listed for my Fenwick hood appears to have incompatible mounting points?",
+   "rejected": []
+  }
+ ]
+}
