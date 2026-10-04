@@ -308,6 +308,32 @@ def _charts(cells, wrong, lengths, out_dir: Path) -> tuple[list[Path], dict]:
     return written, highlights
 
 
+def _outside_run(records: Sequence[RunRecord], facts: Sequence, config: ExperimentConfig) -> list:
+    """Pilot calls outside the run's subset, scored by the same rule but kept out of every claim."""
+    rows = []
+    for record in latest_successful(list(records)).values():
+        length, item = int(record.cell["context_length_tokens"]), int(record.cell["item"])
+        if BUILD.in_run(config, length, item):
+            continue
+        shape = str(record.cell["shape"])
+        verdict = SCORING.classify(
+            record.result.text, record.result.finish_reason, facts[item], shape, BUILD
+        )
+        rows.append(
+            {
+                "model": record.model_label,
+                "shape": shape,
+                "length": length,
+                "item": item,
+                "correct": verdict.correct,
+                "type": verdict.type,
+                "matched_role": verdict.matched_role,
+                "reply": record.result.text,
+            }
+        )
+    return sorted(rows, key=lambda row: (row["model"], BUILD.SHAPES.index(row["shape"])))
+
+
 def _run_window(scored: Sequence[Scored]) -> dict:
     stamps = sorted(s.record.result.timestamp_utc for s in scored)
     return {"first_result_utc": stamps[0], "last_result_utc": stamps[-1]} if stamps else {}
@@ -339,7 +365,7 @@ def build_summary(config: ExperimentConfig, folder: Path, records: Sequence[RunR
             "planned_calls": len(items) * len(lengths) * len(BUILD.SHAPES) * len(models),
             "run_lengths_tokens": lengths,
             "run_items": items,
-            "pilot_calls_outside_run": len(latest_successful(list(records))) - len(scored),
+            "pilot_calls_outside_run": _outside_run(records, facts, config),
             "grid_complete": _grid_complete(cells, lengths),
             "run_window": _run_window(scored),
             "dataset": {

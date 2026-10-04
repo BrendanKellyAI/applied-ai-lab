@@ -232,11 +232,11 @@ def wrong_types_chart(
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         top = max((wrong[shape][kind] for shape in shapes for kind in types), default=0)
         ax.set_ylim(0, max(top * 1.15, 4))
-        ax.set_ylabel("Wrong replies, all lengths")
+        ax.set_ylabel("Wrong replies")
 
     note = None
     if chosen is None:
-        note = "A distractor value is not the top wrong reply in shape 2 or 4; nothing highlighted."
+        note = "Distractor value is not the top wrong type; nothing highlighted."
     return export_chart(
         draw,
         out_dir,
@@ -274,14 +274,27 @@ def models_chart(cells, out_dir: Path) -> list[Path]:
             categories=[model.replace(" ", "\n", 1) for model in cells.models],
             series=[("Two-fact + distractors at 128,000", points)],
             style=style,
-            highlight_bar=(0, cells.models.index(chosen)) if chosen else None,
         )
+        # The finding is marked on the count above each interval, not on the bar: a model at
+        # 0 of n has no bar to colour.
+        for index, (model, count) in enumerate(zip(cells.models, counts, strict=True)):
+            label = ax.text(
+                index,
+                count.interval[2] + 0.03,
+                f"{count.correct} of {count.trials}",
+                ha="center",
+                va="bottom",
+                color=MIST,
+            )
+            if model == chosen:
+                highlight(label)
         ax.errorbar(
             range(len(counts)),
             points,
             yerr=[
-                [count.interval[0] - count.interval[1] for count in counts],
-                [count.interval[2] - count.interval[0] for count in counts],
+                # Clamped at zero: at 0 of n the Wilson bound sits a rounding error above 0.
+                [max(0.0, count.interval[0] - count.interval[1]) for count in counts],
+                [max(0.0, count.interval[2] - count.interval[0]) for count in counts],
             ],
             fmt="none",
             ecolor=MIST,
@@ -290,6 +303,7 @@ def models_chart(cells, out_dir: Path) -> list[Path]:
             capthick=style.line_width_pt,
         )
         _accuracy_axis(ax)
+        ax.set_ylim(0, 1.15)
         ax.set_ylabel("Accuracy, hardest shape")
 
     note = None if chosen else "No model's interval clears another's; nothing highlighted."

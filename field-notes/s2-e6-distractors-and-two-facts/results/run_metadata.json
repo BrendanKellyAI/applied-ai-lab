@@ -1,9 +1,9 @@
 {
   "experiment": "s2-e6-distractors-and-two-facts",
   "started_utc": "2026-10-04T15:30:08.329365+00:00",
-  "ended_utc": "2026-10-04T16:03:50.876364+00:00",
+  "ended_utc": "2026-10-04T16:08:43.096112+00:00",
   "git": {
-    "commit": "45116713218468bdb3e843bc4c64a2872d3eeb4c",
+    "commit": "cea77318ac2f2bc630fb62ba12b5c6e2ee28d43a",
     "dirty": false
   },
   "harness_version": "0.1.0",
@@ -248,8 +248,8 @@
   ],
   "counts": {
     "planned": 72,
-    "complete": 63,
-    "failed": 9,
+    "complete": 72,
+    "failed": 0,
     "not_run": 0,
     "from_cache": 0
   },
@@ -297,6 +297,40 @@
       },
       "pilot": false,
       "provider": "google",
+      "counts": {
+        "planned": 24,
+        "already_complete": 22,
+        "cached": 0,
+        "made": 2,
+        "failed": 0
+      }
+    },
+    {
+      "started_utc": "2026-10-04T16:06:40.469445+00:00",
+      "ended_utc": "2026-10-04T16:07:54.735941+00:00",
+      "git": {
+        "commit": "cea77318ac2f2bc630fb62ba12b5c6e2ee28d43a",
+        "dirty": false
+      },
+      "pilot": false,
+      "provider": "openai",
+      "counts": {
+        "planned": 24,
+        "already_complete": 15,
+        "cached": 0,
+        "made": 7,
+        "failed": 2
+      }
+    },
+    {
+      "started_utc": "2026-10-04T16:08:24.930539+00:00",
+      "ended_utc": "2026-10-04T16:08:43.133333+00:00",
+      "git": {
+        "commit": "cea77318ac2f2bc630fb62ba12b5c6e2ee28d43a",
+        "dirty": false
+      },
+      "pilot": false,
+      "provider": "openai",
       "counts": {
         "planned": 24,
         "already_complete": 22,

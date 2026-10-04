@@ -26,16 +26,25 @@ Claude Sonnet 5,two-fact-distractors,128000,11,False,False,distractor value,Fals
 GPT-5.6 Terra,single,128000,0,True,True,correct,False,False,127968,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,single,128000,3,False,True,correct,False,False,127976,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,single,128000,4,True,True,correct,False,False,127934,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,single,128000,7,False,True,correct,False,False,127975,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,single,128000,8,True,True,correct,False,False,127980,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,single,128000,11,False,True,correct,False,False,127955,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,distractors,128000,0,True,True,correct,False,False,128021,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,distractors,128000,3,False,True,correct,False,False,128028,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,4,True,True,correct,False,False,127986,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,7,False,True,correct,False,False,128027,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,distractors,128000,8,True,True,correct,False,False,128032,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,distractors,128000,11,False,True,correct,False,False,128007,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact,128000,0,True,True,correct,False,False,127989,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,3,False,True,correct,False,False,127997,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,4,True,True,correct,False,False,127955,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact,128000,7,False,True,correct,False,False,127996,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact,128000,8,True,True,correct,False,False,128001,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact,128000,11,False,True,correct,False,False,127975,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,0,True,True,correct,False,False,128074,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,3,False,True,correct,False,False,128081,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,4,True,True,correct,False,False,128040,0,6,0,stop,gpt-5.6-terra
+GPT-5.6 Terra,two-fact-distractors,128000,7,False,True,correct,False,False,128079,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,8,True,True,correct,False,False,128085,0,6,0,stop,gpt-5.6-terra
 GPT-5.6 Terra,two-fact-distractors,128000,11,False,True,correct,False,False,128060,0,6,0,stop,gpt-5.6-terra
 Gemini 3.6 Flash,single,128000,0,True,True,correct,False,False,128693,,4,,stop,gemini-3.6-flash
