@@ -144,8 +144,8 @@ markers would give 37 of 40.
 
 ### Test B: Two versions (`charts/versions-slide.svg`)
 
-The old version ranked above the new on 17 of 40 (29% to 58%), and both versions were in the top
-5 on every question: only the old one was there on 0 of 40.
+The old version ranked above the new on 17 of 40 (29% to 58%). Both versions were in the top 5 on
+39 of 40 questions, and the old one alone on none.
 
 | | Old value only | New value only | Both | Neither |
 |---|---|---|---|---|
