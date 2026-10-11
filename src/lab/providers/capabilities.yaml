@@ -22,6 +22,13 @@
 openai:
   # reasoning.effort "none" is the neutral "off". Temperature support for these models is not
   # documented, so it is treated as unsupported until `lab smoke` confirms otherwise.
+  # Season 2 answer model. Verified 11 October 2026: "none" and "minimal" are not supported,
+  # so reasoning cannot be turned off; low is the lowest level. Temperature 0 was sent once on
+  # 11 October 2026 and rejected with HTTP 400 ("not supported with this model").
+  gpt-6.1-sol:
+    reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
   gpt-6-astra:
     reasoning: [low, medium, high, xhigh, max]
     temperature: false
@@ -44,6 +51,12 @@ anthropic:
   # output_config.effort with adaptive thinking; "off" maps to thinking disabled.
   claude-fable-5-1:
     reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  # Season 2 judge. Verified 11 October 2026: any non-default temperature returns HTTP 400;
+  # "off" is sent as thinking {"type": "between_tools"}, because {"type": "disabled"} is a 400.
+  claude-sonnet-5-5:
+    reasoning: [off, low, medium, high, xhigh, max]
     temperature: false
     max_output_tokens: 128000
   claude-opus-5:
