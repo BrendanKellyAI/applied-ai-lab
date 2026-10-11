@@ -2,6 +2,7 @@
 
 import logging
 import os
+import subprocess
 import tempfile
 import threading
 from pathlib import Path
@@ -11,6 +12,31 @@ from pydantic import BaseModel, ConfigDict, ValidationError
 from lab.providers.base import GenerationRequest, GenerationResult, request_hash
 
 logger = logging.getLogger(__name__)
+
+
+def _git_common_dir(start: Path) -> Path | None:
+    """The .git directory shared by every checkout of the repository, or None outside git."""
+    try:
+        found = subprocess.run(
+            ["git", "rev-parse", "--path-format=absolute", "--git-common-dir"],
+            cwd=start,
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return Path(found) if found else None
+
+
+def shared_cache_root(start: Path) -> Path:
+    """The main checkout's .cache, also when run from a git worktree.
+
+    Every checkout then shares one cache, so a run started from a worktree never pays again
+    for a call another checkout already made.
+    """
+    common = _git_common_dir(start)
+    return (common.parent if common is not None else start) / ".cache"
 
 
 class _CacheEntry(BaseModel):

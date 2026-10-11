@@ -1,6 +1,6 @@
 import pytest
 
-from lab.cache import ResponseCache
+from lab.cache import ResponseCache, shared_cache_root
 from lab.providers.base import request_hash
 from lab.providers.mock import MockProvider
 
@@ -60,3 +60,29 @@ def test_unreadable_entry_is_treated_as_a_miss(tmp_path, make_call):
     cache.path_for(request).write_text("{ not json", encoding="utf-8")
 
     assert cache.get(request) is None
+
+
+def test_shared_cache_root_is_the_main_checkout(tmp_path, monkeypatch):
+    # From a worktree, git reports the main checkout's .git as the common directory.
+    main = tmp_path / "main"
+    (main / ".git").mkdir(parents=True)
+    monkeypatch.setattr(
+        "lab.cache._git_common_dir", lambda start: main / ".git"
+    )
+
+    assert shared_cache_root(tmp_path / "worktree") == main / ".cache"
+
+
+def test_shared_cache_root_falls_back_outside_git(tmp_path, monkeypatch):
+    monkeypatch.setattr("lab.cache._git_common_dir", lambda start: None)
+
+    assert shared_cache_root(tmp_path) == tmp_path / ".cache"
+
+
+def test_git_common_dir_of_this_repository_exists():
+    from pathlib import Path
+
+    from lab.cache import _git_common_dir
+
+    found = _git_common_dir(Path.cwd())
+    assert found is not None and found.name == ".git"
