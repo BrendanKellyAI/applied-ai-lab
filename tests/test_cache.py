@@ -66,9 +66,7 @@ def test_shared_cache_root_is_the_main_checkout(tmp_path, monkeypatch):
     # From a worktree, git reports the main checkout's .git as the common directory.
     main = tmp_path / "main"
     (main / ".git").mkdir(parents=True)
-    monkeypatch.setattr(
-        "lab.cache._git_common_dir", lambda start: main / ".git"
-    )
+    monkeypatch.setattr("lab.cache._git_common_dir", lambda start: main / ".git")
 
     assert shared_cache_root(tmp_path / "worktree") == main / ".cache"
 

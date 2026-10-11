@@ -14,6 +14,30 @@ import yaml
 
 CORPUS_VERSION = "mini-1"
 
+# The reference pipeline the tests start from, as season2/reference.yaml would hold it.
+REFERENCE = {
+    "chunk": {"kind": "fixed", "size": 256, "overlap": 0},
+    "embed": {"model": "text-embedding-3-small"},
+    "rewrite": {"mode": "passthrough"},
+    "search": {"method": "vector", "depth": 50},
+    "filter": {"mode": "passthrough"},
+    "rerank": {"mode": "passthrough"},
+    "prompt": {"k": 5, "order": "rank", "instruction": "plain"},
+    "answer": {
+        "provider": "openai",
+        "model": "gpt-6.1-sol",
+        "reasoning": "low",
+        "max_output_tokens": 1000,
+    },
+    "cite": {"mode": "passthrough"},
+    "judge": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "reasoning": "off",
+        "max_output_tokens": 400,
+    },
+}
+
 POLICY_BODY = """# Warranty
 
 Halvard Home appliances carry a warranty against faults in materials and workmanship.

@@ -1,0 +1,26 @@
+# The Season 2 reference system: one block per stage. It changes only when an episode's change
+# passes its pass mark, recorded in reference_history.yaml. This is the E2 baseline: naive
+# defaults, with stages 4, 6, 7 and 10 passing everything through.
+
+# 2. Chunk: fixed windows of 256 tokens (cl100k_base), no overlap.
+chunk: {kind: fixed, size: 256, overlap: 0}
+# 3. Embed and index.
+embed: {model: text-embedding-3-small}
+# 4. Rewrite the question: the last turn, as typed.
+rewrite: {mode: passthrough}
+# 5. Search: vector, cosine similarity, 50 deep for the stages after it.
+search: {method: vector, depth: 50}
+# 6. Filter: none. Every document, of any access or status, can be found.
+filter: {mode: passthrough}
+# 7. Rerank: none.
+rerank: {mode: passthrough}
+# 8. Build the prompt: the top 5 passages in rank order, under a plain instruction.
+prompt: {k: 5, order: rank, instruction: plain}
+# 9. Answer. gpt-6.1-sol cannot turn reasoning off; low is its lowest level. No temperature is
+# sent: the model rejects one. The limit leaves room for reasoning tokens.
+answer: {provider: openai, model: gpt-6.1-sol, reasoning: low, max_output_tokens: 2000}
+# 10. Cite: none.
+cite: {mode: passthrough}
+# 11. Score: the judge, a different provider from the answer model. Reasoning off, sent as
+# thinking "between_tools" for this model. No temperature: the model rejects one.
+judge: {provider: anthropic, model: claude-sonnet-5-5, reasoning: "off", max_output_tokens: 400}

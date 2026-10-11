@@ -8,6 +8,7 @@ embedding calls are batched and a batch rarely repeats exactly. Vectors live in 
 import hashlib
 import sqlite3
 from collections.abc import Callable, Sequence
+from contextlib import closing
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -18,6 +19,8 @@ from lab.rag.chunk import count_tokens
 # Well inside the API's limits of 2,048 inputs and 300,000 tokens per request.
 MAX_INPUTS = 2048
 MAX_BATCH_TOKENS = 250_000
+# Keys per SELECT, well inside SQLite's limit on query parameters.
+_LOOKUP_BATCH = 500
 
 
 class EmbeddingsClient(Protocol):
@@ -31,29 +34,40 @@ def text_key(model: str, text: str) -> str:
 
 
 class EmbeddingStore:
+    """Vectors in SQLite. Each operation opens and closes its own connection."""
+
     def __init__(self, path: Path) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
-        self._db = sqlite3.connect(path)
-        self._db.execute("CREATE TABLE IF NOT EXISTS vectors (key TEXT PRIMARY KEY, v BLOB)")
+        self._path = path
+        with self._connect() as db, db:
+            db.execute("CREATE TABLE IF NOT EXISTS vectors (key TEXT PRIMARY KEY, v BLOB)")
 
-    def get(self, model: str, text: str) -> np.ndarray | None:
-        row = self._db.execute(
-            "SELECT v FROM vectors WHERE key = ?", (text_key(model, text),)
-        ).fetchone()
-        return None if row is None else np.frombuffer(row[0], dtype=np.float32)
+    def _connect(self) -> closing[sqlite3.Connection]:
+        return closing(sqlite3.connect(self._path))
+
+    def get_many(self, model: str, texts: Sequence[str]) -> dict[str, np.ndarray]:
+        """The cached vector of each text that has one."""
+        keys = {text_key(model, text): text for text in dict.fromkeys(texts)}
+        found: dict[str, np.ndarray] = {}
+        key_list = list(keys)
+        with self._connect() as db:
+            for start in range(0, len(key_list), _LOOKUP_BATCH):
+                batch = key_list[start : start + _LOOKUP_BATCH]
+                marks = ",".join("?" * len(batch))
+                rows = db.execute(f"SELECT key, v FROM vectors WHERE key IN ({marks})", batch)
+                for key, blob in rows:
+                    found[keys[key]] = np.frombuffer(blob, dtype=np.float32)
+        return found
 
     def put(self, model: str, texts: Sequence[str], vectors: np.ndarray) -> None:
-        with self._db:
-            self._db.executemany(
+        with self._connect() as db, db:
+            db.executemany(
                 "INSERT OR REPLACE INTO vectors VALUES (?, ?)",
                 [
                     (text_key(model, text), np.asarray(vector, dtype=np.float32).tobytes())
                     for text, vector in zip(texts, vectors, strict=True)
                 ],
             )
-
-    def close(self) -> None:
-        self._db.close()
 
 
 def batches(
@@ -86,7 +100,8 @@ class Embedder:
 
     def missing(self, texts: Sequence[str]) -> list[str]:
         """Distinct texts not yet in the cache, in first-seen order."""
-        return [t for t in dict.fromkeys(texts) if self.store.get(self.model, t) is None]
+        found = self.store.get_many(self.model, texts)
+        return [t for t in dict.fromkeys(texts) if t not in found]
 
     def __call__(self, texts: Sequence[str]) -> np.ndarray:
         missing = self.missing(texts)
@@ -100,4 +115,5 @@ class Embedder:
             self.tokens_reported += response.usage.total_tokens
             self.model_returned = response.model
             self.store.put(self.model, group, vectors)
-        return np.array([self.store.get(self.model, text) for text in texts])
+        found = self.store.get_many(self.model, texts)
+        return np.array([found[text] for text in texts])

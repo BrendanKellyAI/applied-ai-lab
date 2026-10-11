@@ -31,11 +31,13 @@ from lab.plan import PlanError, PlannedCall
 from lab.prices import load_prices
 from lab.providers.base import UnsupportedSettingError
 from lab.providers.registry import available_providers
+from lab.rag.cli import rag_app
 from lab.raw_log import latest_successful, load_records
 from lab.runner import Runner, format_summary
 from lab.smoke import describe, plan_smoke, problems
 
 app = typer.Typer(help="Run and analyse applied-ai-lab experiments.", no_args_is_help=True)
+app.add_typer(rag_app, name="rag")
 
 
 def _print_version(value: bool) -> None:

@@ -12,8 +12,9 @@ import re
 
 from pydantic import BaseModel, ConfigDict, StrictBool, ValidationError
 
-from lab.rag.prompt import instruction
+from lab.rag.prompt import conversation, instruction, numbered
 
+ANSWERABLE = "Can the question be answered from the documents"
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$")
 
 
@@ -40,13 +41,12 @@ def judge_prompt(item, passages, answer):
     only what the system was given and what it said."""
     parts = [f"Question: {item.question}"]
     if item.history:
-        turns = [f"{t.role.title()}: {t.content}" for t in item.history]
-        parts.append("Conversation so far:\n" + "\n".join(turns))
+        parts.append(conversation(item.history))
     can = "yes" if item.answerable else "no"
-    parts.append(f"Can the question be answered from the documents: {can}")
+    parts.append(f"{ANSWERABLE}: {can}")
     parts.append(f"Reference answer: {item.answer}")
-    given = [f"[P{n}] {c.title}\n{c.text.strip()}" for n, c in enumerate(passages, start=1)]
-    parts.append("Passages given to the system:\n" + ("\n\n".join(given) or "(none)"))
+    given = "\n\n".join(numbered(passages)) or "(none)"
+    parts.append(f"Passages given to the system:\n{given}")
     parts.append(f"System's answer:\n{answer.strip()}")
     return "\n\n".join(parts)
 

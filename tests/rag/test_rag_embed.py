@@ -81,3 +81,11 @@ def test_uncached_text_without_a_client_is_an_error(tmp_path):
 
     with pytest.raises(RuntimeError, match="not in the embedding cache"):
         embed(["new text"])
+
+
+def test_lookups_span_more_keys_than_one_query_holds(tmp_path):
+    store = EmbeddingStore(tmp_path / "vectors.sqlite")
+    texts = [f"text {i}" for i in range(1200)]
+    store.put("small", texts, np.ones((1200, 3), dtype=np.float32))
+
+    assert len(store.get_many("small", texts + ["absent"])) == 1200

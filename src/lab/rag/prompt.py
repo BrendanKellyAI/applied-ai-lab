@@ -50,16 +50,23 @@ def order_passages[T](ranked: Sequence[T], order: str) -> list[T]:
     return front + back[::-1]
 
 
+def numbered(passages: Sequence[Chunk]) -> list[str]:
+    """Each passage as "[Pn] title", then its text."""
+    return [f"[P{n}] {c.title}\n{c.text.strip()}" for n, c in enumerate(passages, start=1)]
+
+
+def conversation(history: Sequence[Turn]) -> str:
+    lines = [f"{turn.role.title()}: {turn.content}" for turn in history]
+    return "Conversation so far:\n" + "\n".join(lines)
+
+
 # slide: S2 E2
 def build_prompt(question, history, passages):
     """Numbered passages, then any earlier turns,
     then the question."""
-    parts = ["Passages:"]
-    for n, chunk in enumerate(passages, start=1):
-        parts.append(f"[P{n}] {chunk.title}\n{chunk.text.strip()}")
+    parts = ["Passages:", *numbered(passages)]
     if history:
-        turns = [f"{t.role.title()}: {t.content}" for t in history]
-        parts.append("Conversation so far:\n" + "\n".join(turns))
+        parts.append(conversation(history))
     parts.append(f"Question: {question}")
     return "\n\n".join(parts)
 
