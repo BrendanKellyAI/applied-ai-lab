@@ -202,6 +202,7 @@ def test_pilot_writes_a_review_and_no_library(tmp_path):
     assert (folder / "pilot" / "documents" / "POL-WAR@2.md").exists()
     assert not (folder / "manifest.json").exists()
     assert Counter(t for t in log["by_type"]).keys() >= {"policy_single", "bridge", "identifier"}
+    assert log["by_type"]["identifier"] == 2
 
 
 def test_repeated_questions_are_dropped_but_restricted_pairs_kept():

@@ -137,6 +137,12 @@ def check_question(
         )
     if item.type == "absent_topic":
         return _check_topic(config, item.topic, question)
+    if item.type == "deleted":
+        # The batch identifies the withdrawn notice; the answer is that it was withdrawn.
+        fact = facts[item.facts[0]]
+        return _need(question, required_token(config, fact)) or _others(
+            config, question, {fact.entity}
+        )
     return _check_named(config, facts[item.facts[0]], question)
 
 

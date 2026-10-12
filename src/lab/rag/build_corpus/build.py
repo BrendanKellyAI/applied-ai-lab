@@ -183,7 +183,7 @@ def run_build(builder: Builder, *, pilot: bool) -> dict[str, Any]:
     spans = Spans(documents, bp.plan, bp.allocation, bp.outline)
     by_key = {d.key: d for d in documents}
     candidates = corpus_items(scope.items, bp.plan, spans, texts) + v1_items(
-        v1, by_key, texts.quotes
+        v1, by_key, texts.quotes, scope.v1_ids
     )
     checks = builder.verify(documents, candidates)
     disputed = _disputed(checks)

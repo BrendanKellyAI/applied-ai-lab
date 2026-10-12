@@ -1,0 +1,133 @@
+{
+ "sections": {
+  "tasks": 60,
+  "passed": 60,
+  "attempts": {
+   "1": 60
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "questions": {
+  "tasks": 24,
+  "passed": 24,
+  "attempts": {
+   "1": 24
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "followups": {
+  "tasks": 2,
+  "passed": 2,
+  "attempts": {
+   "1": 2
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "quotes": {
+  "tasks": 4,
+  "passed": 4,
+  "attempts": {
+   "1": 4
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "checks": {
+  "tasks": 8,
+  "passed": 8,
+  "attempts": {
+   "1": 8
+  },
+  "failed": [],
+  "models_returned": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   {
+    "made": 2,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {
+     "anthropic": {
+      "input_tokens": 15792,
+      "output_tokens": 166,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ],
+  "problems": {}
+ },
+ "disputed": [],
+ "items": {
+  "test": 32,
+  "dev": 0
+ },
+ "by_type": {
+  "policy_single": 2,
+  "policy_two_sentence": 2,
+  "policy_heading": 2,
+  "distractor": 2,
+  "two_part": 2,
+  "bridge": 2,
+  "followup": 2,
+  "version": 2,
+  "restricted_staff": 2,
+  "restricted_public": 2,
+  "absent_detail": 2,
+  "absent_topic": 2,
+  "deleted": 2,
+  "identifier": 2,
+  "paraphrase": 2,
+  "shared": 2
+ },
+ "duplicates": []
+}

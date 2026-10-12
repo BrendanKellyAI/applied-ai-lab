@@ -280,10 +280,15 @@ def _items(item: ItemPlan, facts: Mapping[str, Fact], spans: Spans, texts: Texts
     return [Item(**fields)]
 
 
-def v1_items(v1: V1, documents: Mapping[str, Document], quotes: Mapping[str, str]) -> list[Item]:
+def v1_items(
+    v1: V1, documents: Mapping[str, Document], quotes: Mapping[str, str], wanted: set[str]
+) -> list[Item]:
+    """Items for the v1 questions whose ids are in `wanted`."""
     items = []
     for question in v1.questions:
         item_id = v1.item_id(question)
+        if item_id not in wanted:
+            continue
         article = v1.article(question.article_id)
         document = documents[f"{article.article_id}@1"]
         if question.type == "identifier":

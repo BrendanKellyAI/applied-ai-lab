@@ -197,3 +197,12 @@ def test_blueprint_is_reproducible(config, bp):
 
     assert again.allocation == bp.allocation
     assert random.Random(config.seed).random() == random.Random(config.seed).random()
+
+
+def test_a_deleted_notice_question_may_name_its_batch(config, bp):
+    facts = bp.plan.by_id()
+    item = _item(bp, "deleted")
+    fact = facts[item.facts[0]]
+    question = f"Can I still use the {fact.accessory} from {fact.value} with my {fact.entity}?"
+
+    assert check_question(config, item, facts, item.id, question) is None
