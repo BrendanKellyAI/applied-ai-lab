@@ -55,5 +55,23 @@
   "RESTRICT-PUBLIC-031",
   "RESTRICT-STAFF-041",
   "POL-SINGLE-006"
+ ],
+ "second_judge": {
+  "provider": "google",
+  "model": "gemini-3.6-flash",
+  "reasoning": "medium",
+  "max_output_tokens": 4000
+ },
+ "hand": [
+  "POL-SINGLE-035",
+  "SHARED-007",
+  "ABSENT-005",
+  "PARA-016",
+  "RESTRICT-STAFF-035",
+  "PARA-018",
+  "IDENT-030",
+  "DELETED-013",
+  "RESTRICT-PUBLIC-030",
+  "ABSENT-042"
  ]
 }
