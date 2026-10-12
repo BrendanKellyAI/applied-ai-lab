@@ -18,3 +18,10 @@
   pass_mark: search above the reference's interval, answer not lower
   joined: false
   candidate: hybrid-20
+- episode: s2-e6-rewriting
+  stage_changed: rewrite
+  reference_before: 0ef803fd06f1
+  reference_after: 0ef803fd06f1
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: rewrite

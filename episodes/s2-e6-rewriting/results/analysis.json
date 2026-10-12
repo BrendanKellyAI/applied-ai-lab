@@ -1,0 +1,654 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "As typed (ref)",
+   "recall": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 76,
+   "cut_items": 0,
+   "superseded_slots": 699,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2914.5
+  },
+  "rewrite": {
+   "label": "Rewrite",
+   "recall": {
+    "count": 296,
+    "total": 400,
+    "rate": 0.74,
+    "low": 0.6948757457668063,
+    "high": 0.7805583529527312
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "followup": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    },
+    "identifier": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "paraphrase": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_heading": {
+     "count": 16,
+     "total": 20,
+     "rate": 0.8,
+     "low": 0.5839825677481064,
+     "high": 0.919342337420202
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    }
+   },
+   "leak_items": 98,
+   "cut_items": 0,
+   "superseded_slots": 701,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2861.0
+  },
+  "split": {
+   "label": "Split",
+   "recall": {
+    "count": 309,
+    "total": 400,
+    "rate": 0.7725,
+    "low": 0.7289390669951599,
+    "high": 0.8108767325926485
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 81,
+   "cut_items": 0,
+   "superseded_slots": 723,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2954.0
+  },
+  "resolve-followup": {
+   "label": "Resolve follow-up",
+   "recall": {
+    "count": 308,
+    "total": 400,
+    "rate": 0.77,
+    "low": 0.7263071915784445,
+    "high": 0.8085561694810355
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 80,
+   "cut_items": 0,
+   "superseded_slots": 725,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2954.0
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 280,
+    "total": 400,
+    "rate": 0.7,
+    "low": 0.6533627542224784,
+    "high": 0.7428323280438028
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  },
+  "rewrite": {
+   "search": {
+    "count": 296,
+    "total": 400,
+    "rate": 0.74,
+    "low": 0.6948757457668063,
+    "high": 0.7805583529527312
+   },
+   "answer": {
+    "count": 296,
+    "total": 400,
+    "rate": 0.74,
+    "low": 0.6948757457668063,
+    "high": 0.7805583529527312
+   },
+   "not_found": {
+    "count": 43,
+    "total": 120,
+    "rate": 0.35833333333333334,
+    "low": 0.2781607905032006,
+    "high": 0.4472946399820988
+   },
+   "leaks": {
+    "count": 98,
+    "total": 480,
+    "rate": 0.20416666666666666,
+    "low": 0.17052172074358787,
+    "high": 0.24250914954971822
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 89,
+   "search": 7,
+   "prompt": 1,
+   "answer": 23
+  },
+  "rewrite": {
+   "rerank": 59,
+   "search": 23,
+   "prompt": 1,
+   "answer": 21
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 120,
+  "rewrite": 104
+ },
+ "claims": [
+  {
+   "id": "R1",
+   "statement": "Resolving a follow-up finds its passage.",
+   "held": true,
+   "detail": {
+    "resolved": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "reference": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    }
+   }
+  },
+  {
+   "id": "R2",
+   "statement": "Splitting a two-part question finds both parts.",
+   "held": false,
+   "detail": {
+    "split": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "reference": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    }
+   }
+  },
+  {
+   "id": "R3",
+   "statement": "No one-shot rewrite solves a bridge question.",
+   "held": true,
+   "detail": {
+    "bridge": {
+     "baseline": 0,
+     "rewrite": 0,
+     "split": 0,
+     "resolve-followup": 0
+    }
+   }
+  },
+  {
+   "id": "R4",
+   "statement": "Rewriting every question does not hurt the questions that did not need it.",
+   "held": true,
+   "detail": {
+    "rewrite": {
+     "count": 261,
+     "total": 320,
+     "rate": 0.815625,
+     "low": 0.7694798371576582,
+     "high": 0.8542821750800776
+    },
+    "reference": {
+     "count": 274,
+     "total": 320,
+     "rate": 0.85625,
+     "low": 0.8135803402145845,
+     "high": 0.8904678716181074
+    }
+   }
+  },
+  {
+   "id": "R5",
+   "statement": "Better search gives better answers.",
+   "held": true,
+   "detail": {
+    "chosen": "rewrite",
+    "search_change": 15,
+    "answer_change": 16
+   }
+  }
+ ],
+ "join": {
+  "rule": "search above the reference's interval, answer not lower",
+  "passed": [],
+  "joined": null
+ },
+ "paired_search": {
+  "rewrite": {
+   "only_other": 37,
+   "only_reference": 22,
+   "p_value": 0.06744461190078899
+  },
+  "split": {
+   "only_other": 30,
+   "only_reference": 2,
+   "p_value": 2.4633482098579407e-07
+  },
+  "resolve-followup": {
+   "only_other": 28,
+   "only_reference": 1,
+   "p_value": 1.1175870895385742e-07
+  }
+ },
+ "paired_answer": {
+  "rewrite": {
+   "only_other": 53,
+   "only_reference": 36,
+   "p_value": 0.08932073673118934
+  }
+ },
+ "extra": {
+  "rewrite_calls": {
+   "resolve-followup": [
+    {
+     "planned": 40,
+     "already_complete": 0,
+     "cached": 0,
+     "made": 40,
+     "failed": 0,
+     "tokens": {
+      "openai": {
+       "input_tokens": 5649,
+       "output_tokens": 817,
+       "reasoning_tokens": 0,
+       "cached_input_tokens": 0
+      }
+     }
+    }
+   ],
+   "rewrite": [
+    {
+     "planned": 480,
+     "already_complete": 480,
+     "cached": 0,
+     "made": 0,
+     "failed": 0,
+     "tokens": {}
+    }
+   ],
+   "split": [
+    {
+     "planned": 480,
+     "already_complete": 0,
+     "cached": 0,
+     "made": 480,
+     "failed": 0,
+     "tokens": {
+      "openai": {
+       "input_tokens": 57912,
+       "output_tokens": 10155,
+       "reasoning_tokens": 0,
+       "cached_input_tokens": 0
+      }
+     }
+    }
+   ]
+  }
+ }
+}

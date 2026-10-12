@@ -94,7 +94,11 @@ def recall_chart(labels: Sequence[str], props: Sequence[Proportion], highlight: 
 def best_above_reference(props: dict[str, Proportion]) -> int | None:
     """The index of the best condition if its interval sits above the reference's."""
     names = list(props)
-    best = max(range(len(names)), key=lambda i: props[names[i]].count)
+    top = max(props[n].count for n in names)
+    leaders = [i for i, n in enumerate(names) if props[n].count == top]
+    if len(leaders) > 1:
+        return None  # a tie at the top highlights nothing
+    best = leaders[0]
     return best if below(props[REFERENCE], props[names[best]]) else None
 
 
@@ -218,7 +222,7 @@ def _charts(episode, results, test, rows, full, report, library, stage, pilot, c
                 sample_size=f"n = {next(iter(props.values())).total} items",
                 no_highlight_note=None
                 if highlight is not None
-                else "No highlight: nothing clears the reference",
+                else "No highlight: none clears the reference alone",
             ),
         )
     if len(full) > 1:

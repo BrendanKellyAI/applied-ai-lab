@@ -1,0 +1,5 @@
+{
+ "rule": "highest dev recall at 5 on the 20 dev follow-up, two-part and bridge items; ties to resolve-followup, then rewrite",
+ "dev_recall": {"baseline": 2, "rewrite": 10, "split": 9, "resolve-followup": 8},
+ "chosen": "rewrite"
+}
