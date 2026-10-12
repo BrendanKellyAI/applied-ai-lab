@@ -52,11 +52,21 @@ def judge_prompt(item, passages, answer):
 
 
 def parse_verdict(text: str) -> Verdict:
+    """The verdict in the reply. The judge sometimes reasons in prose first, so the last JSON
+    object in the reply is taken; a reply with no complete, valid object is refused."""
     body = _FENCE.sub("", text.strip())
     try:
         return Verdict.model_validate(json.loads(body))
     except (json.JSONDecodeError, ValidationError) as exc:
-        raise JudgeParseError(str(exc).splitlines()[0]) from exc
+        error = exc
+    decoder = json.JSONDecoder()
+    for start in reversed([i for i, char in enumerate(body) if char == "{"]):
+        try:
+            found, _ = decoder.raw_decode(body, start)
+            return Verdict.model_validate(found)
+        except (json.JSONDecodeError, ValidationError):
+            continue
+    raise JudgeParseError(str(error).splitlines()[0]) from error
 
 
 def retry_prompt(original: str, error: str) -> str:

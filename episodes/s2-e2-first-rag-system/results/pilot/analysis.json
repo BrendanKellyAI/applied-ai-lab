@@ -1,0 +1,272 @@
+{
+ "condition": "baseline",
+ "config_id": "b58f06493698",
+ "items": 32,
+ "numbers": {
+  "search": {
+   "count": 10,
+   "total": 24,
+   "rate": 0.4166666666666667,
+   "low": 0.24467602609811764,
+   "high": 0.6116533413477124
+  },
+  "answer": {
+   "count": 10,
+   "total": 24,
+   "rate": 0.4166666666666667,
+   "low": 0.24467602609811764,
+   "high": 0.6116533413477124
+  },
+  "not_found": {
+   "count": 5,
+   "total": 8,
+   "rate": 0.625,
+   "low": 0.30574239460262737,
+   "high": 0.8631557141764026
+  },
+  "leaks": {
+   "count": 1,
+   "total": 30,
+   "rate": 0.03333333333333333,
+   "low": 0.005908590381612455,
+   "high": 0.16670390991409173
+  }
+ },
+ "recall_by_type": {
+  "bridge": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "distractor": {
+   "count": 2,
+   "total": 2,
+   "rate": 1.0,
+   "low": 0.34238022750665303,
+   "high": 1.0
+  },
+  "followup": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "identifier": {
+   "count": 1,
+   "total": 2,
+   "rate": 0.5,
+   "low": 0.09453120573423074,
+   "high": 0.9054687942657693
+  },
+  "paraphrase": {
+   "count": 2,
+   "total": 2,
+   "rate": 1.0,
+   "low": 0.34238022750665303,
+   "high": 1.0
+  },
+  "policy_heading": {
+   "count": 1,
+   "total": 2,
+   "rate": 0.5,
+   "low": 0.09453120573423074,
+   "high": 0.9054687942657693
+  },
+  "policy_single": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "policy_two_sentence": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "restricted_staff": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "shared": {
+   "count": 2,
+   "total": 2,
+   "rate": 1.0,
+   "low": 0.34238022750665303,
+   "high": 1.0
+  },
+  "two_part": {
+   "count": 0,
+   "total": 2,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.6576197724933469
+  },
+  "version": {
+   "count": 2,
+   "total": 2,
+   "rate": 1.0,
+   "low": 0.34238022750665303,
+   "high": 1.0
+  }
+ },
+ "lost_at": {
+  "search": 5,
+  "rerank": 7,
+  "answer": 2
+ },
+ "wrong_answerable": 14,
+ "cut_evidence_items": 1,
+ "distractor_above": 0,
+ "claims": [
+  {
+   "id": "H1",
+   "statement": "Search loses more answers than the model does.",
+   "held": true,
+   "detail": {
+    "before_prompt": 12,
+    "inside_prompt": 2,
+    "by_stage": {
+     "search": 5,
+     "rerank": 7,
+     "answer": 2
+    }
+   }
+  },
+  {
+   "id": "H2",
+   "statement": "Fixed chunks hurt two-sentence and heading-dependent facts.",
+   "held": false,
+   "detail": {
+    "policy_single": {
+     "count": 0,
+     "total": 2,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.6576197724933469
+    },
+    "policy_two_sentence": {
+     "count": 0,
+     "total": 2,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.6576197724933469
+    },
+    "policy_heading": {
+     "count": 1,
+     "total": 2,
+     "rate": 0.5,
+     "low": 0.09453120573423074,
+     "high": 0.9054687942657693
+    },
+    "strong_form": false
+   }
+  },
+  {
+   "id": "H3",
+   "statement": "Identifier questions fail under vector search.",
+   "held": false,
+   "detail": {
+    "identifier": {
+     "count": 1,
+     "total": 2,
+     "rate": 0.5,
+     "low": 0.09453120573423074,
+     "high": 0.9054687942657693
+    },
+    "paraphrase": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   }
+  },
+  {
+   "id": "H4",
+   "statement": "A follow-up searched on its own fails.",
+   "held": false,
+   "detail": {
+    "followup": {
+     "count": 0,
+     "total": 2,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.6576197724933469
+    },
+    "policy_single": {
+     "count": 0,
+     "total": 2,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.6576197724933469
+    }
+   }
+  },
+  {
+   "id": "H5",
+   "statement": "With no filter, the wrong documents reach the prompt.",
+   "held": false,
+   "detail": {
+    "h5a_held": false,
+    "restricted_leaked": 1,
+    "restricted_items": 2,
+    "other_types_leaked": 0,
+    "h5b_held": false,
+    "stale_in_prompt": 2,
+    "version_items": 2,
+    "old_value_answers": []
+   }
+  },
+  {
+   "id": "H6",
+   "statement": "The model declines when nothing is there, but not when the wrong thing is.",
+   "held": true,
+   "detail": {
+    "h6a_held": true,
+    "absent": {
+     "count": 4,
+     "total": 4,
+     "rate": 1.0,
+     "low": 0.5101091635454027,
+     "high": 1.0
+    },
+    "h6b_held": true,
+    "restricted_or_deleted": {
+     "count": 1,
+     "total": 4,
+     "rate": 0.25,
+     "low": 0.04558726080970055,
+     "high": 0.6993581574175981
+    }
+   }
+  }
+ ],
+ "worked_examples": {
+  "right": "POL-SINGLE-001",
+  "search_missed": "POL-SINGLE-000",
+  "model_misread": "VERSION-000"
+ },
+ "models_returned": {
+  "answer": [
+   "gpt-6.1-sol"
+  ],
+  "judge": [
+   "claude-sonnet-5-5"
+  ],
+  "embedding": null
+ },
+ "code_check_disagrees_with_judge": [
+  "VERSION-000",
+  "VERSION-001"
+ ]
+}

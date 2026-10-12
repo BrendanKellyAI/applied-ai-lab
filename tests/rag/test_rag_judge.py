@@ -74,3 +74,17 @@ def test_retry_prompt_names_the_error():
 
     assert text.startswith("original\n\n")
     assert "missing field faithful" in text
+
+
+def test_a_verdict_after_reasoning_is_read():
+    text = (
+        'The answer matches the reference.\n\n{"declined": false, "correct": true, '
+        '"faithful": true, "reason": "Matches {P1}."}'
+    )
+
+    assert parse_verdict(text).correct is True
+
+
+def test_reasoning_with_a_cut_off_verdict_is_still_refused():
+    with pytest.raises(JudgeParseError):
+        parse_verdict('It matches. {"declined": false, "correct": true')
