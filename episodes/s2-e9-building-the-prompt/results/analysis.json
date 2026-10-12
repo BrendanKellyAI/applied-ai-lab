@@ -771,7 +771,8 @@
    }
   },
   "passed": [],
-  "joined": null
+  "joined": null,
+  "candidate": "allow-not-found"
  },
  "paired_search": {
   "allow-not-found": {

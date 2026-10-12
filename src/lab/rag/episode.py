@@ -258,7 +258,12 @@ def _numbers_chart(full, rows, charts):
 def _scoreboard(episode, report, full, library, charts, stage, pilot, results):
     candidates = [n for n in full if n != REFERENCE]
     joined = report["join"]["joined"]
-    shown = joined or max(candidates, key=lambda n: (full[n].search.count, full[n].answer.count))
+    # An episode's join rule may name the candidate to show; otherwise the best by search.
+    shown = (
+        joined
+        or report["join"].get("candidate")
+        or max(candidates, key=lambda n: (full[n].search.count, full[n].answer.count))
+    )
     summary = {
         n: json.loads((results / n / "summary.json").read_text(encoding="utf-8"))
         for n in (REFERENCE, shown)

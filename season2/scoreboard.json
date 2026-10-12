@@ -436,7 +436,7 @@
   "episode": "s2-e9-building-the-prompt",
   "stage_changed": "prompt",
   "config_before": "d52dd1b463b8",
-  "config_after": "de0f77fa743f",
+  "config_after": "c3978ad73b76",
   "before": {
    "search": {
     "count": 344,
@@ -476,18 +476,18 @@
     "high": 0.8905903786254097
    },
    "answer": {
-    "count": 359,
+    "count": 357,
     "total": 400,
-    "rate": 0.8975,
-    "low": 0.8638965789864277,
-    "high": 0.9235411470178065
+    "rate": 0.8925,
+    "low": 0.8583265694191717,
+    "high": 0.9192062795284055
    },
    "not_found": {
-    "count": 77,
+    "count": 105,
     "total": 120,
-    "rate": 0.6416666666666667,
-    "low": 0.5527053600179013,
-    "high": 0.7218392094967996
+    "rate": 0.875,
+    "low": 0.8039705979199262,
+    "high": 0.9227650272660463
    },
    "leaks": {
     "count": 0,

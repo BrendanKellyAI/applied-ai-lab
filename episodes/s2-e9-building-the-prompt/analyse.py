@@ -29,9 +29,10 @@ def join_rule(test):
         shares = {n: handled(test[n]) for n in full}
         passed = [n for n in full if n != REFERENCE and below(shares[REFERENCE], shares[n])]
         joined = max(passed, key=lambda n: shares[n].count, default=None)
+        best = max((n for n in full if n != REFERENCE), key=lambda n: shares[n].count, default=None)
         return {"rule": "share of the 520 handled right above the reference's interval",
                 "shares": {n: s.model_dump() for n, s in shares.items()},
-                "passed": passed, "joined": joined}
+                "passed": passed, "joined": joined, "candidate": best}
 
     return join
 

@@ -45,4 +45,4 @@
   reference_after: d52dd1b463b8
   pass_mark: share of the 520 handled right above the reference's interval
   joined: false
-  candidate: ends
+  candidate: allow-not-found
