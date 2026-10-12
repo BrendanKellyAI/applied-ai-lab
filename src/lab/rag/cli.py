@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 from lab.cache import ResponseCache, shared_cache_root
 from lab.config import ConfigError
+from lab.experiments import load_sibling
 from lab.prices import load_prices
 from lab.providers.registry import available_providers
 from lab.rag.build_corpus.cli import build_corpus
@@ -192,3 +193,12 @@ def _one_line(summary: dict[str, Any]) -> str:
     for name, number in summary["numbers"].items():
         parts.append(f"{name} {number['count']}/{number['total']}")
     return "  ".join(parts)
+
+
+@rag_app.command()
+def analyse(config: ConfigArg, pilot: PilotOption = False) -> None:
+    """Claims, charts and the scoreboard row from an episode's committed results. No key."""
+    episode, _ = _load(config)
+    module = load_sibling(episode.folder / "analyse.py")
+    results = episode.folder / "results" / ("pilot" if pilot else "")
+    typer.echo(module.analyse(episode, results, pilot=pilot))
