@@ -32,7 +32,7 @@ def test_reference_differs_from_e2_only_in_its_cheaper_models():
 
     assert now.model_copy(update={"answer": e2.answer, "judge": e2.judge}) == e2
     assert (now.answer.model, now.answer.reasoning) == ("gpt-6-luna", "off")
-    assert (now.judge.provider, now.judge.model) == ("google", "gemini-3.1-flash-lite")
+    assert (now.judge.provider, now.judge.model) == ("google", "gemini-3.6-flash")
 
 
 @pytest.mark.parametrize("path", [REFERENCE, REFERENCE_E2])

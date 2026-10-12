@@ -115,6 +115,20 @@ discarded unanalysed. The owner then set a much lower budget for the season, so 
 - The search conditions, the dev choice (fixed 512 and structure 1,024) and the claims are
   unchanged.
 
+**Judge check results, 12 October 2026, before any full run.** The cheapest candidates were
+checked in price order; the first that passed became the judge. Results are in `judge-switch/`.
+
+| Candidate, lowest thinking | Price, input / output | `declined` with old judge | `correct` with old judge | `correct` with hand marks | Result |
+|---|---|---|---|---|---|
+| `gemini-3.1-flash-lite` | $0.25 / $1.50 | 46 of 50 | 30 of 50 | 6 of 10 | Failed |
+| `gpt-5-mini` | $0.25 / $2.00 | 40 of 50 | 46 of 50 | 7 of 10 | Failed |
+| `gemini-3.5-flash-lite` | $0.30 / $2.50 | 46 of 50 | 30 of 50 | 6 of 10 | Failed |
+| `gemini-3.6-flash` | $0.75 / $3.75 | 47 of 50 | 49 of 50 | 9 of 10 | **Passed** |
+
+The two Flash-Lite models called every answer correct when the old judge did not: they checked
+answers against the passages and ignored the rules for questions that cannot be answered and
+for declines. The judge from E4 on is `gemini-3.6-flash` at thinking level `minimal`.
+
 ## Reported, with no claim
 
 - Recall at 5 for every condition, on all 400 and by item type, on test and dev.

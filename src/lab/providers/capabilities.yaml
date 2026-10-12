@@ -36,6 +36,12 @@ openai:
     reasoning: [off, low, medium, high]
     temperature: false
     max_output_tokens: 128000
+  # Candidate S2 judge, for cost ($0.25 / $2.00). Like gpt-5-nano, checked 12 October 2026:
+  # effort "none" is rejected, "minimal" is its lowest level, temperature is rejected.
+  gpt-5-mini:
+    reasoning: [minimal, low, medium, high]
+    temperature: false
+    max_output_tokens: 128000
   gpt-6-astra:
     reasoning: [low, medium, high, xhigh, max]
     temperature: false

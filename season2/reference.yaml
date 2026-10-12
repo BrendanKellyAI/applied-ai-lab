@@ -23,7 +23,7 @@ answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_token
 # 10. Cite: none.
 cite: {mode: passthrough}
 # 11. Score: the judge, a different provider from the answer model. From S2 E4,
-# gemini-3.1-flash-lite ($0.25 / $1.50), chosen for cost; E2 and E3 used claude-sonnet-5-5.
-# Thinking cannot be turned off; minimal is the lowest level, so the limit leaves room for it.
-# No temperature is sent, as for every model this season.
-judge: {provider: google, model: gemini-3.1-flash-lite, reasoning: minimal, max_output_tokens: 1000}
+# gemini-3.6-flash ($0.75 / $3.75), chosen for cost; E2 and E3 used claude-sonnet-5-5. The
+# cheaper gemini-3.1-flash-lite failed the judge check (E4, judge-switch/). Thinking cannot be
+# turned off; minimal is the lowest level, so the limit leaves room for it. No temperature.
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 2000}
