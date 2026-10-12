@@ -1,0 +1,22 @@
+# S2 E7: reranking. Every condition changes stage 7 only. The local cross-encoder took about
+# 5.5 seconds per question-passage pair on this machine's CPU, too slow for 520 questions, so
+# the main reranker is a cheap LLM (gpt-6-luna, reasoning off) reading each shortlist once.
+# The cross-encoder runs on the 40 look-alike items only (cross_encoder_subset.py).
+episode: s2-e7-reranking
+description: A second pass that reorders the shortlist before the prompt takes the top 5
+base: ../../season2/history/s2-e7-reranking.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: llm-10
+    changes: {rerank: {mode: llm, shortlist: 10, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
+    measure: search
+  - name: llm-20
+    changes: {rerank: {mode: llm, shortlist: 20, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
+    measure: search
