@@ -89,6 +89,7 @@ class CorpusConfig(BaseModel):
     checker: ModelSpec
     max_attempts: int = Field(gt=0)
     section_tokens: tuple[int, int]
+    section_words: str
     article_tokens: tuple[int, int]
     internal_section_tokens: tuple[int, int]
     pack_limit_tokens: int

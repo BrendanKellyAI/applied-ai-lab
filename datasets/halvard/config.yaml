@@ -25,7 +25,10 @@ checker:
   max_output_tokens: 400
 # A failed draft is sent back with the reason; after this many attempts the build stops.
 max_attempts: 4
-section_tokens: [450, 1000]
+# Policy sections. Raised after the first full build, whose policies came out at about 18,000
+# tokens each: too short for the current public library to outgrow a 128,000-token window.
+section_tokens: [750, 1400]
+section_words: 650 to 850
 article_tokens: [120, 220]
 internal_section_tokens: [350, 800]
 # The long-context pack must leave this much of a 128,000-token window free (o200k_base).

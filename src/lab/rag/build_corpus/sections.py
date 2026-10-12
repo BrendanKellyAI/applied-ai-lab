@@ -25,7 +25,7 @@ _SPELLED = re.compile(rf"\b(?:{_NUMBER_WORDS})(?:[- ]\w+)?[- ](?:{_UNITS})\b", r
 _FIGURES = re.compile(r"[0-9£%]")
 _HEADING = re.compile(r"^\s*#", re.MULTILINE)
 
-WORDS = {"intro": "120 to 200", "policy": "400 to 600", "internal": "300 to 450"}
+WORDS = {"intro": "120 to 200", "internal": "300 to 450"}
 
 
 def bounds(config: CorpusConfig, section: SectionPlan) -> tuple[int, int]:
@@ -69,7 +69,7 @@ def section_task(config: CorpusConfig, document: DocumentPlan, section: SectionP
             "section",
             title=document.title,
             path=path,
-            words=WORDS["policy"],
+            words=config.section_words,
             sentences=listed,
             together=together,
             products=products,
@@ -115,7 +115,11 @@ def check_section(config: CorpusConfig, section: SectionPlan, text: str) -> str 
     low, high = bounds(config, section)
     tokens = count_tokens(text)
     if not low <= tokens <= high:
-        words = WORDS.get(section.kind, "90 to 130")
+        words = (
+            config.section_words
+            if section.kind == "policy"
+            else WORDS.get(section.kind, "90 to 130")
+        )
         return f"It is {tokens} tokens long; it must be {low} to {high}. Aim for {words} words."
     return None
 
