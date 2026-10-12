@@ -129,7 +129,7 @@ def run(
     items = select_items(
         library, episode.config.items, pilot=pilot, per_type=episode.config.pilot_per_type
     )
-    results = episode.folder / "results" / ("pilot" if pilot else "")
+    results = results_folder(episode, pilot=pilot)
     client = openai_client()
     for chosen in conditions:
         context = RunContext(
@@ -190,6 +190,13 @@ def _runner(episode: Episode, conditions: list[ResolvedCondition], cache_root: P
     )
 
 
+def results_folder(episode: Episode, *, pilot: bool) -> Path:
+    """Where a run's results go: `results/` for test items, `results-dev/` for dev items, so a
+    dev run never overwrites a test run; a pilot goes in a `pilot/` folder below either."""
+    name = "results" if episode.config.items == "test" else f"results-{episode.config.items}"
+    return episode.folder / name / ("pilot" if pilot else "")
+
+
 def _one_line(summary: dict[str, Any]) -> str:
     parts = [f"{summary['condition']} [{summary['config_id']}]"]
     for name, number in summary["numbers"].items():
@@ -202,5 +209,5 @@ def analyse(config: ConfigArg, pilot: PilotOption = False) -> None:
     """Claims, charts and the scoreboard row from an episode's committed results. No key."""
     episode, _ = _load(config)
     module = load_sibling(episode.folder / "analyse.py")
-    results = episode.folder / "results" / ("pilot" if pilot else "")
+    results = results_folder(episode, pilot=pilot)
     typer.echo(module.analyse(episode, results, pilot=pilot))

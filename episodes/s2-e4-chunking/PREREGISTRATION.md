@@ -92,7 +92,8 @@ If neither passes, the reference stays at fixed 256 with no overlap, and the sco
 so.
 
 The reference's search number is 239 of 400 (55% to 64%). To sit above it, a chunker needs
-about 268 of 400.
+277 of 400. (Corrected on 12 October 2026, before any run: this sentence first said "about
+268", an arithmetic slip. The rule itself, intervals that do not overlap, is unchanged.)
 
 ## Reported, with no claim
 

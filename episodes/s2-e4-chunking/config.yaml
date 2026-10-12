@@ -29,7 +29,7 @@ conditions:
     measure: search
   - name: fixed-512-0
     changes: {chunk: {kind: fixed, size: 512, overlap: 0}}
-    measure: search
+    measure: full
   - name: fixed-512-128
     changes: {chunk: {kind: fixed, size: 512, overlap: 128}}
     measure: search
@@ -53,7 +53,7 @@ conditions:
     measure: search
   - name: structure-1024
     changes: {chunk: {kind: structure, max_tokens: 1024, embed_headings: false}}
-    measure: search
+    measure: full
   - name: structure-1024-headings
     changes: {chunk: {kind: structure, max_tokens: 1024, embed_headings: true}}
     measure: search
