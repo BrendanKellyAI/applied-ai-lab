@@ -1,0 +1,27 @@
+# S2 E8: filters, permissions and fresh documents. Every condition changes stage 6 only. The
+# filter needs no model call, so every condition runs search-only; the filter before ranking,
+# on both rules, also runs in full (PREREGISTRATION.md).
+episode: s2-e8-filters
+description: Permission and version filters, before ranking and after
+base: ../../season2/history/s2-e8-filters.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: before
+    changes: {filter: {mode: before, access: true, status: true}}
+    measure: full
+  - name: after
+    changes: {filter: {mode: after, access: true, status: true}}
+    measure: search
+  - name: before-access
+    changes: {filter: {mode: before, access: true, status: false}}
+    measure: search
+  - name: before-status
+    changes: {filter: {mode: before, access: false, status: true}}
+    measure: search
