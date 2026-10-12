@@ -129,7 +129,7 @@
    },
    "judge_reason": "The answer is supported by the passages but misses the reference answer's key facts (photo, model details, and a short description of the needed part) and instead lists fault descriptions and documents, so it does not match the reference.",
    "second_reason": "The system correctly and faithfully answers what to send to the service team based on the provided documents.",
-   "note": "Missed to include a picture; declined not clicked; inferred no: an answerable item marked correct cannot be a decline"
+   "note": "Missed to include a picture; declined not clicked; marker confirmed no: an answer was given"
   },
   {
    "item_id": "IDENT-030",
@@ -150,7 +150,7 @@
    },
    "judge_reason": "The answer says E-9454 isn't in the passages but then offers the meaning of E-9544 as a guess, never giving the reference meaning (Mira battery protection blocking startup), so it is incorrect and not a pure decline; all its claims about E-9544 are supported by P1.",
    "second_reason": "The system correctly identified that error E-9454 was not in the provided context and declined to answer, but because the question is answerable from the underlying documentation, the answer is marked as incorrect against the reference.",
-   "note": "missed Error E-9454 and gave an answer for E-9544; declined not clicked; inferred no from the note: it gave an answer"
+   "note": "missed Error E-9454 and gave an answer for E-9544; declined not clicked; marker confirmed no: an answer was given"
   }
  ]
 }
