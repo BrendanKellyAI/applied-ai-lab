@@ -12,6 +12,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from lab.cache import shared_cache_root
 from lab.providers.base import GenerationResult
 from lab.rag.chunk import Chunk
 from lab.rag.config import Episode, ResolvedCondition, config_id
@@ -27,7 +28,9 @@ from lab.rag.log import (
     SpanTrace,
     write_log,
 )
+from lab.rag.rerank import make_reorder
 from lab.rag.retrieve import Retrieval, build, retrieve
+from lab.rag.rewrite import queries_for_all
 from lab.rag.score import (
     ItemScore,
     by_type,
@@ -53,6 +56,8 @@ class RunContext:
     embedder: Embedder
     runner: Runner | None
     results: Path
+    # Where local caches other than the response cache live (the reranker's scores).
+    cache_root: Path | None = None
 
 
 def select_items(library: Library, which: str, *, pilot: bool, per_type: int) -> list[Item]:
@@ -75,7 +80,25 @@ def run_condition(
     pipeline = condition.pipeline
     tokens_before = context.embedder.tokens_reported
     index = build(context.library, pipeline, context.embedder)
-    retrievals = retrieve(items, index, pipeline, context.embedder)
+    episode_name = context.episode.config.episode
+    queries, rewrite_runs = queries_for_all(
+        items,
+        pipeline.rewrite,
+        context.runner,
+        episode=episode_name,
+        condition=condition.name,
+        folder=folder,
+    )
+    reorder, rerank_stats = make_reorder(
+        pipeline.rerank,
+        runner=context.runner,
+        cache_root=context.cache_root or shared_cache_root(context.results),
+        index=index,
+        episode=episode_name,
+        condition=condition.name,
+        folder=folder,
+    )
+    retrievals = retrieve(items, index, pipeline, context.embedder, queries, reorder)
 
     answers: dict[str, GenerationResult] = {}
     judged: dict[str, Judged] = {}
@@ -99,6 +122,10 @@ def run_condition(
             folder=folder,
         )
         summaries = {"answer": [answer_summary], "judge": judge_summaries}
+    if rewrite_runs:
+        summaries = {**summaries, "rewrite": rewrite_runs}
+    if "summary" in rerank_stats:
+        summaries = {**summaries, "rerank": [rerank_stats.pop("summary")]}
 
     logs = [
         _item_log(
@@ -121,6 +148,8 @@ def run_condition(
         summaries,
         context.embedder.tokens_reported - tokens_before,
     )
+    if rerank_stats:
+        summary["rerank_timing"] = rerank_stats
     (folder / "summary.json").write_text(
         json.dumps(summary, indent=1) + "\n", encoding="utf-8", newline="\n"
     )

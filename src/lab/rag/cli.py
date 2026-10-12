@@ -138,6 +138,7 @@ def run(
             embedder=_embedder(chosen.pipeline.embed.model, client, cache_root),
             runner=runner,
             results=results,
+            cache_root=cache_root,
         )
         summary = run_condition(context, chosen, items)
         typer.echo(_one_line(summary))
@@ -174,7 +175,13 @@ def _check_budget(
 
 def _runner(episode: Episode, conditions: list[ResolvedCondition], cache_root: Path) -> Runner:
     full = [c for c in conditions if c.measure == "full"]
-    needed = sorted({s.provider for c in full for s in (c.pipeline.answer, c.pipeline.judge)})
+    needed = {s.provider for c in full for s in (c.pipeline.answer, c.pipeline.judge)}
+    # Rewriting and LLM reranking call a model even in a search-only condition.
+    for c in conditions:
+        for stage in (c.pipeline.rewrite, c.pipeline.rerank):
+            if getattr(stage, "model", None) is not None:
+                needed.add(stage.model.provider)
+    needed = sorted(needed)
     available = available_providers(needed)
     if available.missing_keys:
         missing = "; ".join(

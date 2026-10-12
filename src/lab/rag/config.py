@@ -19,6 +19,8 @@ from lab.providers.base import ProviderName, ReasoningLevel
 from lab.rag.chunk import FixedChunker, StructureChunker, WholeChunker
 from lab.rag.filter import FilterConfig
 from lab.rag.prompt import PromptConfig
+from lab.rag.rerank import RerankConfig
+from lab.rag.rewrite import RewriteConfig
 from lab.rag.search import SearchConfig
 
 # The blocks of a pipeline config, in stage order, and the stage number of each.
@@ -59,6 +61,15 @@ class EmbedConfig(BaseModel):
     model: str = "text-embedding-3-small"
 
 
+class CiteConfig(BaseModel):
+    """Stage 10. `parse` maps the answer's [Pn] markers to chunk ids, in the analysis; it makes
+    no call."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    mode: Literal["passthrough", "parse"] = "passthrough"
+
+
 class PassthroughStage(BaseModel):
     """A stage that is not switched on yet. Its options arrive with the episode that tests it."""
 
@@ -72,13 +83,13 @@ class PipelineConfig(BaseModel):
 
     chunk: ChunkConfig
     embed: EmbedConfig
-    rewrite: PassthroughStage
+    rewrite: RewriteConfig
     search: SearchConfig
     filter: FilterConfig
-    rerank: PassthroughStage
+    rerank: RerankConfig
     prompt: PromptConfig
     answer: ModelSpec
-    cite: PassthroughStage
+    cite: CiteConfig
     judge: ModelSpec
 
 

@@ -30,6 +30,11 @@ e4 = [
     "torch>=2.14.0",
     "transformers>=5.17.0",
 ]
+# S2 E7: the local cross-encoder reranker.
+rerank = [
+    "torch>=2.14.0",
+    "transformers>=5.17.0",
+]
 
 [build-system]
 requires = ["hatchling"]

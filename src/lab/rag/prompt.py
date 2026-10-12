@@ -22,7 +22,7 @@ class PromptConfig(BaseModel):
 
     k: int = Field(default=5, gt=0)
     order: Literal["rank", "reverse", "ends"] = "rank"
-    instruction: Literal["plain"] = "plain"
+    instruction: Literal["plain", "allow_not_found", "grounded_cite"] = "plain"
 
 
 class BuiltPrompt(BaseModel):
