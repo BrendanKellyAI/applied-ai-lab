@@ -1,3 +1,5 @@
+import os
+
 import pytest
 
 from lab.cache import ResponseCache, shared_cache_root
@@ -84,3 +86,35 @@ def test_git_common_dir_of_this_repository_exists():
 
     found = _git_common_dir(Path.cwd())
     assert found is not None and found.name == ".git"
+
+
+def test_replace_retries_while_another_process_holds_the_file(tmp_path, monkeypatch):
+    from lab import cache
+
+    calls = []
+
+    def flaky(source, target):
+        calls.append(target)
+        if len(calls) < 3:
+            raise PermissionError("held open")
+        os.rename(source, target)
+
+    monkeypatch.setattr(cache.os, "replace", flaky)
+    source = tmp_path / "a.tmp"
+    source.write_text("x", encoding="utf-8")
+
+    cache._replace(str(source), tmp_path / "a.json", sleep=lambda s: None)
+
+    assert len(calls) == 3 and (tmp_path / "a.json").read_text(encoding="utf-8") == "x"
+
+
+def test_replace_gives_up_after_its_attempts(tmp_path, monkeypatch):
+    from lab import cache
+
+    def held(source, target):
+        raise PermissionError("held open")
+
+    monkeypatch.setattr(cache.os, "replace", held)
+
+    with pytest.raises(PermissionError):
+        cache._replace("a", tmp_path / "b", sleep=lambda s: None)

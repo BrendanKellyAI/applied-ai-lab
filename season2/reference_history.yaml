@@ -1,0 +1,6 @@
+- episode: s2-e2-first-rag-system
+  stage_changed: null
+  reference_before: null
+  reference_after: b58f06493698
+  pass_mark: 'none: the baseline sets the reference'
+  joined: true

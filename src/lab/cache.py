@@ -5,6 +5,7 @@ import os
 import subprocess
 import tempfile
 import threading
+import time
 from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, ValidationError
@@ -12,6 +13,22 @@ from pydantic import BaseModel, ConfigDict, ValidationError
 from lab.providers.base import GenerationRequest, GenerationResult, request_hash
 
 logger = logging.getLogger(__name__)
+
+# Windows refuses a rename while another process, such as a virus scanner or the search indexer,
+# briefly holds the file open. Such a hold clears within moments, so the rename is retried.
+REPLACE_ATTEMPTS = 6
+REPLACE_WAIT_SECONDS = 0.05
+
+
+def _replace(source: str, target: Path, sleep=time.sleep) -> None:
+    for attempt in range(REPLACE_ATTEMPTS):
+        try:
+            os.replace(source, target)
+            return
+        except PermissionError:
+            if attempt == REPLACE_ATTEMPTS - 1:
+                raise
+            sleep(REPLACE_WAIT_SECONDS * 2**attempt)
 
 
 def _git_common_dir(start: Path) -> Path | None:
@@ -86,7 +103,7 @@ class ResponseCache:
             with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
                 handle.write(payload)
             with self._write_lock:
-                os.replace(temp_name, path)
+                _replace(temp_name, path)
         except BaseException:
             Path(temp_name).unlink(missing_ok=True)
             raise

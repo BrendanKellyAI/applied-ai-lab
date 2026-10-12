@@ -1,0 +1,50 @@
+[
+ {
+  "episode": "s2-e2-first-rag-system",
+  "stage_changed": null,
+  "config_before": null,
+  "config_after": "b58f06493698",
+  "before": null,
+  "after": {
+   "search": {
+    "count": 239,
+    "total": 400,
+    "rate": 0.5975,
+    "low": 0.5487342037489487,
+    "high": 0.6444108988558637
+   },
+   "answer": {
+    "count": 217,
+    "total": 400,
+    "rate": 0.5425,
+    "low": 0.4935050345733776,
+    "high": 0.5906864204082072
+   },
+   "not_found": {
+    "count": 56,
+    "total": 120,
+    "rate": 0.4666666666666667,
+    "low": 0.37982917045799003,
+    "high": 0.555572107303257
+   },
+   "leaks": {
+    "count": 51,
+    "total": 480,
+    "rate": 0.10625,
+    "low": 0.08174077901635685,
+    "high": 0.13701157651487453
+   }
+  },
+  "joined": true,
+  "models_returned": {
+   "answer": [
+    "gpt-6.1-sol"
+   ],
+   "judge": [
+    "claude-sonnet-5-5"
+   ],
+   "embedding": null
+  },
+  "corpus_version": "halvard-v2"
+ }
+]
