@@ -19,9 +19,10 @@ from typing import Any
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
-from lab.config import ConfigError
+from lab.config import ConfigError, ProviderLimits
+from lab.providers.base import ProviderName
 from lab.rag.chunk import Chunk, chunk_library
-from lab.rag.config import PipelineConfig
+from lab.rag.config import ModelSpec, PipelineConfig
 from lab.rag.corpus import Item, Library
 from lab.rag.judge import Verdict, judge_instructions, judge_prompt
 from lab.rag.log import ItemLog
@@ -38,7 +39,11 @@ _NO = {"n", "no", "false", "0"}
 
 
 class CheckConfig(BaseModel):
-    """`judge_check.yaml`: which run to check, and how to sample it. Paths are relative to it."""
+    """`judge_check.yaml`: which run to check, and how to sample it. Paths are relative to it.
+
+    With `second_judge` set, a second model marks the whole sample by the same rules, and a
+    person marks only the `hand` items where the two models disagree most.
+    """
 
     model_config = ConfigDict(frozen=True, extra="forbid")
 
@@ -48,6 +53,9 @@ class CheckConfig(BaseModel):
     size: int = Field(default=50, gt=0)
     per_type: int = Field(default=3, gt=0)
     seed: int
+    second_judge: ModelSpec | None = None
+    hand: int | None = Field(default=None, gt=0)
+    limits: dict[ProviderName, ProviderLimits] = Field(default_factory=dict)
 
 
 def load_check_config(path: Path) -> CheckConfig:
@@ -124,11 +132,9 @@ def write_sheet(
     logs: Sequence[ItemLog],
     library: Library,
     chunks: dict[str, Chunk],
-    *,
-    run: dict[str, Any],
 ) -> list[Path]:
-    """The marking sheet, the blank marks file and the sample record. Refuses to overwrite
-    marks that have been started."""
+    """The marking sheet and the blank marks file for `sample`. Refuses to overwrite marks
+    that have been started."""
     marks = out / MARKS
     if marks.exists() and _has_marks(marks):
         raise FileExistsError(f"{marks} already holds marks; move it before drawing again")
@@ -145,14 +151,19 @@ def write_sheet(
         writer.writerow(CSV_COLUMNS)
         for n, item_id in enumerate(sample, start=1):
             writer.writerow([n, item_id, "", "", "", ""])
-    record = out / SAMPLE
-    record.write_text(
-        json.dumps({**run, "judge_prompt": judge_prompt_hash(), "items": list(sample)}, indent=1)
-        + "\n",
-        encoding="utf-8",
-        newline="\n",
-    )
-    return [sheet, marks, record]
+    return [sheet, marks]
+
+
+def write_record(out: Path, record: dict[str, Any]) -> Path:
+    """`sample.json`: the run, the judge's instructions hash, the sample and what was marked."""
+    out.mkdir(parents=True, exist_ok=True)
+    path = out / SAMPLE
+    path.write_text(json.dumps(record, indent=1) + "\n", encoding="utf-8", newline="\n")
+    return path
+
+
+def read_record(out: Path) -> dict[str, Any]:
+    return json.loads((out / SAMPLE).read_text(encoding="utf-8"))
 
 
 def _sheet_header(count: int) -> str:

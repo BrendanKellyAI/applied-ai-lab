@@ -68,10 +68,65 @@ code check marks an answer correct when it contains every key value as a whole t
   evidence reached the prompt, beside recall at 5. These are descriptive. E2's results are
   already published, so no claim about them could be pre-registered now.
 
+## Amendment, 12 October 2026: a second model, and 10 marked by hand
+
+Made before any item was marked and before any call to the second model. Marking 50 items by
+hand was more than the owner would do, so the design changed. **J1, J2 and J3 above are
+withdrawn and replaced by A1 to A4 below.** The sample of 50 is unchanged.
+
+- **Second marker:** `gemini-3.6-flash` at reasoning `medium`, from a third provider (Google),
+  so neither the answer model's provider nor the judge's. It is not chosen as a stronger
+  model, only an independent one. It gets the judge's exact instructions and the exact prompt
+  the judge got for each item, with the judge's retry rule for a reply that is not a verdict.
+- **Hand marks:** Brendan Kelly marks 10 items, blind to both models' verdicts. They are the 10
+  where the two models disagree most: first those where they split on "right", then those
+  that differ on more fields, ties in the sample's shuffled order. If fewer than 10 disagree,
+  items they agree on fill the rest.
+- **What can be measured:** agreement between the two models on all 50, and, on the 10, which
+  model a person sides with. Where the two models agree, nobody checks them. The README says
+  that throughout.
+
+### Claims
+
+**A1. The judge and the second model agree on the answer verdict.** "Right" is correct and
+faithful, the verdict behind E2's answer number.
+
+- *Pass mark:* agreement on "right" on at least 45 of the 50 (90%), counted over the items
+  where both models gave a verdict.
+
+**A2. The judge and the second model agree on declines,** the verdict behind the not-found
+number.
+
+- *Pass mark:* agreement on "declined" on at least 45 of the 50 (90%).
+
+**A3. Where the two models split, the judge is right at least as often as the second model.**
+
+- *Pass mark:* on the hand-marked items where the models split on "right", the hand mark
+  matches the judge on at least half.
+- If no hand-marked item splits on "right", A3 is not tested and the README says so.
+
+**A4. The judge beats the code check on correctness.**
+
+- *Pass mark:* on hand-marked items with key values, the judge's `correct` matches the hand
+  mark on more items than the code check does (point estimates).
+
+### Reported, with no claim
+
+- Agreement on each field, between the models on 50 and with the hand marks on 10.
+- **An estimate of the judge's accuracy on "right":** items where both models agree, counted
+  as right, plus the hand-marked splits the judge got right, out of those two groups together.
+  This rests on the assumption that two models from different providers that agree are
+  correct, and is labelled as an estimate everywhere it appears.
+- Splits on "right" beyond the 10 marked, if any, listed as unchecked.
+
 ## What this does not test
 
-- **One marker.** No second person marks the same items, so the person's own error rate is
-  not measured.
+- **Shared verdicts are not checked.** Where the two models agree, no person looks. Two models
+  can share a blind spot, such as both treating a hedged answer as correct.
+- **One marker, 10 items.** No second person marks them, and 10 is too few for an interval
+  worth quoting on its own.
+- **The 10 are chosen for disagreement.** They show which model to believe when the two split,
+  not how often either is right in general.
 - **50 items.** At 45 of 50 the interval runs from about 79% to 96%.
 - **The sample is stratified, not proportional.** Rare types are over-represented and common
   ones under-represented, so the agreement is on the sample as drawn, not on the 520 as a whole.

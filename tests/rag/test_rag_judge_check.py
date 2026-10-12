@@ -15,7 +15,6 @@ from lab.rag.judge_check import (
     SHEET,
     agreement,
     draw_sample,
-    judge_prompt_hash,
     load_check_config,
     outcome,
     read_marks,
@@ -104,7 +103,7 @@ def _sheet(tmp_path, library):
     first = next(iter(chunks))
     logs = [_log(i.id, i.type, _verdict(), chunks=[first]) for i in library.test[:3]]
     sample = [g.item_id for g in logs]
-    write_sheet(tmp_path, sample, logs, library, chunks, run={"config_id": "cfg"})
+    write_sheet(tmp_path, sample, logs, library, chunks)
     return logs, sample
 
 
@@ -116,8 +115,6 @@ def test_sheet_shows_what_the_judge_saw_and_hides_the_verdict(tmp_path, library)
     assert "Passages given to the system:\n[P1]" in sheet
     assert "System's answer:\nAn answer." in sheet
     assert '"declined": false' not in sheet and "reason" not in sheet.split("---")[1]
-    record = json.loads((tmp_path / SAMPLE).read_text(encoding="utf-8"))
-    assert record["items"] == sample and record["judge_prompt"] == judge_prompt_hash()
     with (tmp_path / MARKS).open(encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     assert [r["item_id"] for r in rows] == sample and rows[0]["correct"] == ""

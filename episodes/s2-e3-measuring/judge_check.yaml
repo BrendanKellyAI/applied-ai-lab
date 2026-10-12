@@ -7,3 +7,13 @@ size: 50
 # 3 from each of the 16 item types, spread across the judge's outcomes, then 2 more at random.
 per_type: 3
 seed: 2026
+# Amendment, 12 October 2026, before any mark or call: a second model marks all 50, and a
+# person marks only the 10 items where it disagrees most with the judge. See PREREGISTRATION.md.
+second_judge:
+  provider: google
+  model: gemini-3.6-flash
+  reasoning: medium
+  max_output_tokens: 4000
+hand: 10
+limits:
+  google: {max_concurrency: 4, requests_per_minute: 60}
