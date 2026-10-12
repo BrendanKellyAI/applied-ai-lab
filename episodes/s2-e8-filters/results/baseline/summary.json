@@ -1,0 +1,643 @@
+{
+ "episode": "s2-e8-filters",
+ "condition": "baseline",
+ "measure": "full",
+ "config_id": "eb9b824ce5db",
+ "base_id": "eb9b824ce5db",
+ "changed": [],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "llm",
+   "shortlist": 20,
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 520,
+ "run_utc": "2026-10-12T22:56:15+00:00",
+ "numbers": {
+  "search": {
+   "count": 316,
+   "total": 400,
+   "rate": 0.79,
+   "low": 0.7474205944599498,
+   "high": 0.8270622748261584
+  },
+  "answer": {
+   "count": 316,
+   "total": 400,
+   "rate": 0.79,
+   "low": 0.7474205944599498,
+   "high": 0.8270622748261584
+  },
+  "not_found": {
+   "count": 41,
+   "total": 120,
+   "rate": 0.3416666666666667,
+   "low": 0.26290438368564517,
+   "high": 0.4302516856802777
+  },
+  "leaks": {
+   "count": 64,
+   "total": 480,
+   "rate": 0.13333333333333333,
+   "low": 0.10581541761313282,
+   "high": 0.1666735483842043
+  }
+ },
+ "by_type": {
+  "absent_detail": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 18,
+    "total": 40,
+    "rate": 0.45,
+    "low": 0.3070530781090492,
+    "high": 0.6017090820106794
+   },
+   "leaks": {
+    "count": 3,
+    "total": 40,
+    "rate": 0.075,
+    "low": 0.025836025774588198,
+    "high": 0.19864233524310543
+   }
+  },
+  "absent_topic": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 20,
+    "total": 20,
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 20,
+    "rate": 0.05,
+    "low": 0.008881448800795402,
+    "high": 0.23613119344674205
+   }
+  },
+  "bridge": {
+   "search": {
+    "count": 5,
+    "total": 20,
+    "rate": 0.25,
+    "low": 0.11186170140766569,
+    "high": 0.468700877618744
+   },
+   "answer": {
+    "count": 11,
+    "total": 20,
+    "rate": 0.55,
+    "low": 0.34208534245034233,
+    "high": 0.7418021417443759
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 20,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.16112515805281938
+   }
+  },
+  "deleted": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 20,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.16112515805281938
+   },
+   "leaks": {
+    "count": 0,
+    "total": 20,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.16112515805281938
+   }
+  },
+  "distractor": {
+   "search": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 8,
+    "total": 40,
+    "rate": 0.2,
+    "low": 0.10499989725437704,
+    "high": 0.347573063463995
+   }
+  },
+  "followup": {
+   "search": {
+    "count": 5,
+    "total": 40,
+    "rate": 0.125,
+    "low": 0.05459500250945401,
+    "high": 0.261121198388511
+   },
+   "answer": {
+    "count": 10,
+    "total": 40,
+    "rate": 0.25,
+    "low": 0.14187118639096302,
+    "high": 0.40193961420768026
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   }
+  },
+  "identifier": {
+   "search": {
+    "count": 26,
+    "total": 40,
+    "rate": 0.65,
+    "low": 0.49505880837257693,
+    "high": 0.7786547112682372
+   },
+   "answer": {
+    "count": 26,
+    "total": 40,
+    "rate": 0.65,
+    "low": 0.49505880837257693,
+    "high": 0.7786547112682372
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   }
+  },
+  "paraphrase": {
+   "search": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 40,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.08762160119728664
+   }
+  },
+  "policy_heading": {
+   "search": {
+    "count": 20,
+    "total": 20,
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 20,
+    "total": 20,
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 20,
+    "rate": 0.05,
+    "low": 0.008881448800795402,
+    "high": 0.23613119344674205
+   }
+  },
+  "policy_single": {
+   "search": {
+    "count": 36,
+    "total": 40,
+    "rate": 0.9,
+    "low": 0.7694822477247771,
+    "high": 0.9604204713173936
+   },
+   "answer": {
+    "count": 39,
+    "total": 40,
+    "rate": 0.975,
+    "low": 0.8711863103652591,
+    "high": 0.9955731684973186
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 3,
+    "total": 40,
+    "rate": 0.075,
+    "low": 0.025836025774588198,
+    "high": 0.19864233524310543
+   }
+  },
+  "policy_two_sentence": {
+   "search": {
+    "count": 18,
+    "total": 20,
+    "rate": 0.9,
+    "low": 0.6989663547715128,
+    "high": 0.9721335187862319
+   },
+   "answer": {
+    "count": 19,
+    "total": 20,
+    "rate": 0.95,
+    "low": 0.763868806553258,
+    "high": 0.9911185511992047
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 2,
+    "total": 20,
+    "rate": 0.1,
+    "low": 0.027866481213768224,
+    "high": 0.3010336452284873
+   }
+  },
+  "restricted_public": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 3,
+    "total": 40,
+    "rate": 0.075,
+    "low": 0.025836025774588198,
+    "high": 0.19864233524310543
+   },
+   "leaks": {
+    "count": 38,
+    "total": 40,
+    "rate": 0.95,
+    "low": 0.8349612263085903,
+    "high": 0.9861793326138516
+   }
+  },
+  "restricted_staff": {
+   "search": {
+    "count": 38,
+    "total": 40,
+    "rate": 0.95,
+    "low": 0.8349612263085903,
+    "high": 0.9861793326138516
+   },
+   "answer": {
+    "count": 37,
+    "total": 40,
+    "rate": 0.925,
+    "low": 0.8013576647568946,
+    "high": 0.9741639742254119
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   }
+  },
+  "shared": {
+   "search": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 39,
+    "total": 40,
+    "rate": 0.975,
+    "low": 0.8711863103652591,
+    "high": 0.9955731684973186
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 40,
+    "rate": 0.025,
+    "low": 0.0044268315026814095,
+    "high": 0.1288136896347409
+   }
+  },
+  "two_part": {
+   "search": {
+    "count": 8,
+    "total": 20,
+    "rate": 0.4,
+    "low": 0.21880653237281705,
+    "high": 0.6134184992377469
+   },
+   "answer": {
+    "count": 15,
+    "total": 20,
+    "rate": 0.75,
+    "low": 0.531299122381256,
+    "high": 0.8881382985923343
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 1,
+    "total": 20,
+    "rate": 0.05,
+    "low": 0.008881448800795402,
+    "high": 0.23613119344674205
+   }
+  },
+  "version": {
+   "search": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 20,
+    "total": 40,
+    "rate": 0.5,
+    "low": 0.35199526933465386,
+    "high": 0.6480047306653461
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 4,
+    "total": 40,
+    "rate": 0.1,
+    "low": 0.03957952868260638,
+    "high": 0.23051775227522298
+   }
+  }
+ },
+ "models_returned": {
+  "answer": [
+   "gpt-6-luna"
+  ],
+  "judge": [
+   "gemini-3.6-flash"
+  ],
+  "embedding": null
+ },
+ "calls": {
+  "answer": [
+   {
+    "planned": 480,
+    "already_complete": 0,
+    "cached": 480,
+    "made": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "judge": [
+   {
+    "planned": 520,
+    "already_complete": 0,
+    "cached": 520,
+    "made": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "rerank": [
+   {
+    "planned": 457,
+    "already_complete": 0,
+    "cached": 457,
+    "made": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ]
+ },
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": [
+  "BRIDGE-008",
+  "BRIDGE-010",
+  "BRIDGE-012",
+  "BRIDGE-018",
+  "FOLLOW-019",
+  "FOLLOW-023",
+  "FOLLOW-025",
+  "FOLLOW-033",
+  "POL-SINGLE-000",
+  "POL-SINGLE-006",
+  "POL-SINGLE-019",
+  "POL-TWO-008",
+  "RESTRICT-STAFF-010",
+  "RESTRICT-STAFF-021",
+  "TWOPART-000",
+  "TWOPART-002",
+  "TWOPART-003",
+  "TWOPART-012",
+  "TWOPART-017",
+  "TWOPART-019",
+  "VERSION-033"
+ ]
+}

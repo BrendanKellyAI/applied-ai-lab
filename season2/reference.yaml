@@ -11,8 +11,9 @@ embed: {model: text-embedding-3-small}
 rewrite: {mode: passthrough}
 # 5. Search: vector, cosine similarity, 50 deep for the stages after it.
 search: {method: vector, depth: 50}
-# 6. Filter: none. Every document, of any access or status, can be found.
-filter: {mode: passthrough}
+# 6. Filter: before ranking, a public asker sees public documents only, and only current versions
+# are kept. Joined in S2 E8 (leaks 64 to 0 of 480; right answers 316 to 359 of 400).
+filter: {mode: before, access: true, status: true}
 # 7. Rerank: gpt-6-luna (reasoning off) reads the question and the top 20 search results once and
 # returns them best first. Joined in S2 E7 (search 281 to 316 of 400). The local cross-encoder
 # was too slow on CPU; see episodes/s2-e7-reranking.

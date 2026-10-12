@@ -25,3 +25,17 @@
   pass_mark: search above the reference's interval, answer not lower
   joined: false
   candidate: rewrite
+- episode: s2-e7-reranking
+  stage_changed: rerank
+  reference_before: 0ef803fd06f1
+  reference_after: eb9b824ce5db
+  pass_mark: search above the reference's interval, answer not lower
+  joined: true
+  candidate: llm-20
+- episode: s2-e8-filters
+  stage_changed: filter
+  reference_before: eb9b824ce5db
+  reference_after: d52dd1b463b8
+  pass_mark: leaks below the reference's interval, answer not lower
+  joined: true
+  candidate: before

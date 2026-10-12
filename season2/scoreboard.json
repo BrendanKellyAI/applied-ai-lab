@@ -277,5 +277,159 @@
    "embedding": null
   },
   "corpus_version": "halvard-v2"
+ },
+ {
+  "episode": "s2-e7-reranking",
+  "stage_changed": "rerank",
+  "config_before": "0ef803fd06f1",
+  "config_after": "eb9b824ce5db",
+  "before": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 280,
+    "total": 400,
+    "rate": 0.7,
+    "low": 0.6533627542224784,
+    "high": 0.7428323280438028
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  },
+  "after": {
+   "search": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "answer": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "not_found": {
+    "count": 41,
+    "total": 120,
+    "rate": 0.3416666666666667,
+    "low": 0.26290438368564517,
+    "high": 0.4302516856802777
+   },
+   "leaks": {
+    "count": 64,
+    "total": 480,
+    "rate": 0.13333333333333333,
+    "low": 0.10581541761313282,
+    "high": 0.1666735483842043
+   }
+  },
+  "joined": true,
+  "models_returned": {
+   "answer": [
+    "gpt-6-luna"
+   ],
+   "judge": [
+    "gemini-3.6-flash"
+   ],
+   "embedding": null
+  },
+  "corpus_version": "halvard-v2"
+ },
+ {
+  "episode": "s2-e8-filters",
+  "stage_changed": "filter",
+  "config_before": "eb9b824ce5db",
+  "config_after": "d52dd1b463b8",
+  "before": {
+   "search": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "answer": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "not_found": {
+    "count": 41,
+    "total": 120,
+    "rate": 0.3416666666666667,
+    "low": 0.26290438368564517,
+    "high": 0.4302516856802777
+   },
+   "leaks": {
+    "count": 64,
+    "total": 480,
+    "rate": 0.13333333333333333,
+    "low": 0.10581541761313282,
+    "high": 0.1666735483842043
+   }
+  },
+  "after": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 83,
+    "total": 120,
+    "rate": 0.6916666666666667,
+    "low": 0.6041700227619933,
+    "high": 0.767272630110837
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  },
+  "joined": true,
+  "models_returned": {
+   "answer": [
+    "gpt-6-luna"
+   ],
+   "judge": [
+    "gemini-3.6-flash"
+   ],
+   "embedding": null
+  },
+  "corpus_version": "halvard-v2"
  }
 ]

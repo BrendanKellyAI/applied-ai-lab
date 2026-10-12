@@ -1,0 +1,712 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "No filter (ref)",
+   "recall": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 5,
+     "total": 20,
+     "rate": 0.25,
+     "low": 0.11186170140766569,
+     "high": 0.468700877618744
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 5,
+     "total": 40,
+     "rate": 0.125,
+     "low": 0.05459500250945401,
+     "high": 0.261121198388511
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 8,
+     "total": 20,
+     "rate": 0.4,
+     "low": 0.21880653237281705,
+     "high": 0.6134184992377469
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 64,
+   "cut_items": 0,
+   "superseded_slots": 761,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3119.5,
+   "short_prompts": 0
+  },
+  "before": {
+   "label": "Before ranking",
+   "recall": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2767.0,
+   "short_prompts": 0
+  },
+  "after": {
+   "label": "After ranking",
+   "recall": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2767.0,
+   "short_prompts": 0
+  },
+  "before-access": {
+   "label": "Before, access only",
+   "recall": {
+    "count": 319,
+    "total": 400,
+    "rate": 0.7975,
+    "low": 0.7553739799055185,
+    "high": 0.833966204965575
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 5,
+     "total": 20,
+     "rate": 0.25,
+     "low": 0.11186170140766569,
+     "high": 0.468700877618744
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 6,
+     "total": 40,
+     "rate": 0.15,
+     "low": 0.07061187717320358,
+     "high": 0.2907232436648971
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 10,
+     "total": 20,
+     "rate": 0.5,
+     "low": 0.2992980081982123,
+     "high": 0.7007019918017877
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 808,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3422.5,
+   "short_prompts": 0
+  },
+  "before-status": {
+   "label": "Before, status only",
+   "recall": {
+    "count": 342,
+    "total": 400,
+    "rate": 0.855,
+    "low": 0.8171167606818923,
+    "high": 0.8861295103407572
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 13,
+     "total": 40,
+     "rate": 0.325,
+     "low": 0.200845022317827,
+     "high": 0.47982253810122333
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 126,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2634.5,
+   "short_prompts": 0
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "answer": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "not_found": {
+    "count": 41,
+    "total": 120,
+    "rate": 0.3416666666666667,
+    "low": 0.26290438368564517,
+    "high": 0.4302516856802777
+   },
+   "leaks": {
+    "count": 64,
+    "total": 480,
+    "rate": 0.13333333333333333,
+    "low": 0.10581541761313282,
+    "high": 0.1666735483842043
+   }
+  },
+  "before": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 83,
+    "total": 120,
+    "rate": 0.6916666666666667,
+    "low": 0.6041700227619933,
+    "high": 0.767272630110837
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 55,
+   "search": 7,
+   "answer": 22
+  },
+  "before": {
+   "rerank": 34,
+   "search": 4,
+   "answer": 3
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 84,
+  "before": 41
+ },
+ "claims": [
+  {
+   "id": "F1",
+   "statement": "A filter before ranking stops every leak.",
+   "held": true,
+   "detail": {
+    "before": {
+     "count": 0,
+     "total": 480,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.007939499087277936
+    },
+    "reference": {
+     "count": 64,
+     "total": 480,
+     "rate": 0.13333333333333333,
+     "low": 0.10581541761313282,
+     "high": 0.1666735483842043
+    }
+   }
+  },
+  {
+   "id": "F2",
+   "statement": "A filter after ranking also stops leaks, but starves the prompt.",
+   "held": false,
+   "detail": {
+    "after_leaks": 0,
+    "after_short": 0,
+    "before_short": 0
+   }
+  },
+  {
+   "id": "F3",
+   "statement": "The status rule removes the old versions from the prompt.",
+   "held": true,
+   "detail": {
+    "superseded_slots": 0
+   }
+  },
+  {
+   "id": "F4",
+   "statement": "With nothing it should not see, the model declines.",
+   "held": true,
+   "detail": {
+    "before": {
+     "count": 42,
+     "total": 60,
+     "rate": 0.7,
+     "low": 0.5749129205308552,
+     "high": 0.8010183386123089
+    },
+    "reference": {
+     "count": 3,
+     "total": 60,
+     "rate": 0.05,
+     "low": 0.01714950216439568,
+     "high": 0.1370051647634852
+    }
+   }
+  },
+  {
+   "id": "F5",
+   "statement": "Without the old version beside it, the model gives the current value.",
+   "held": true,
+   "detail": {
+    "before": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "reference": {
+     "count": 20,
+     "total": 40,
+     "rate": 0.5,
+     "low": 0.35199526933465386,
+     "high": 0.6480047306653461
+    }
+   }
+  }
+ ],
+ "join": {
+  "rule": "leaks below the reference's interval, answer not lower",
+  "passed": [
+   "before"
+  ],
+  "joined": "before"
+ },
+ "paired_search": {
+  "before": {
+   "only_other": 28,
+   "only_reference": 0,
+   "p_value": 7.450580596923828e-09
+  },
+  "after": {
+   "only_other": 28,
+   "only_reference": 0,
+   "p_value": 7.450580596923828e-09
+  },
+  "before-access": {
+   "only_other": 4,
+   "only_reference": 1,
+   "p_value": 0.375
+  },
+  "before-status": {
+   "only_other": 26,
+   "only_reference": 0,
+   "p_value": 2.9802322387695312e-08
+  }
+ },
+ "paired_answer": {
+  "before": {
+   "only_other": 98,
+   "only_reference": 8,
+   "p_value": 8.079958819833451e-21
+  }
+ }
+}
