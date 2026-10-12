@@ -2,7 +2,7 @@
 # on test and dev; two are then run in full, chosen on dev by the rule in PREREGISTRATION.md.
 episode: s2-e4-chunking
 description: Fixed windows with and without overlap, and structure-aware chunks, on the Halvard library
-base: ../../season2/reference.yaml
+base: ../../season2/history/s2-e4-chunking.yaml
 library: ../../datasets/halvard
 items: dev
 pilot_per_type: 2

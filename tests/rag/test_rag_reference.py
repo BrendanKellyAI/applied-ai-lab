@@ -8,7 +8,7 @@ from lab.providers.base import GenerationRequest
 from lab.providers.capabilities import default_capabilities
 from lab.rag import chunk, judge, prompt, score, search
 from lab.rag.chunk import FixedChunker
-from lab.rag.config import load_pipeline
+from lab.rag.config import config_id, load_pipeline
 
 SEASON = Path(__file__).parents[2] / "season2"
 REFERENCE = SEASON / "reference.yaml"
@@ -27,12 +27,15 @@ def test_e2_reference_is_pinned_as_e2_ran_it():
     assert (pipeline.judge.model, pipeline.judge.reasoning) == ("claude-sonnet-5-5", "off")
 
 
-def test_reference_differs_from_e2_only_in_its_cheaper_models():
-    now, e2 = load_pipeline(REFERENCE), load_pipeline(REFERENCE_E2)
+def test_reference_is_the_last_one_recorded_in_the_history():
+    import yaml
 
-    assert now.model_copy(update={"answer": e2.answer, "judge": e2.judge}) == e2
-    assert (now.answer.model, now.answer.reasoning) == ("gpt-6-luna", "off")
-    assert (now.judge.provider, now.judge.model) == ("google", "gemini-3.6-flash")
+    history = yaml.safe_load((SEASON / "reference_history.yaml").read_text(encoding="utf-8"))
+    pipeline = load_pipeline(REFERENCE)
+
+    assert config_id(pipeline) == history[-1]["reference_after"]
+    assert (pipeline.answer.model, pipeline.answer.reasoning) == ("gpt-6-luna", "off")
+    assert (pipeline.judge.provider, pipeline.judge.model) == ("google", "gemini-3.6-flash")
 
 
 @pytest.mark.parametrize("path", [REFERENCE, REFERENCE_E2])

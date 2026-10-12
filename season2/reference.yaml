@@ -2,8 +2,9 @@
 # passes its pass mark, recorded in reference_history.yaml. It began as the E2 baseline:
 # naive defaults, with stages 4, 6, 7 and 10 passing everything through.
 
-# 2. Chunk: fixed windows of 256 tokens (cl100k_base), no overlap.
-chunk: {kind: fixed, size: 256, overlap: 0}
+# 2. Chunk: one chunk per lowest-level section, split at paragraphs above 1,024 tokens, with no
+# heading path embedded. Joined in S2 E4 (search 239 to 281 of 400); E2 used fixed 256 windows.
+chunk: {kind: structure, max_tokens: 1024, embed_headings: false}
 # 3. Embed and index.
 embed: {model: text-embedding-3-small}
 # 4. Rewrite the question: the last turn, as typed.

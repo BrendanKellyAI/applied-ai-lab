@@ -1,0 +1,2010 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "Fixed 256 (ref)",
+   "chunks": 1276,
+   "recall": {
+    "count": 239,
+    "total": 400,
+    "rate": 0.5975,
+    "low": 0.5487342037489487,
+    "high": 0.6444108988558637
+   },
+   "policy_recall": {
+    "count": 46,
+    "total": 80,
+    "rate": 0.575,
+    "low": 0.4656928984656886,
+    "high": 0.6774343821039822
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 32,
+     "total": 40,
+     "rate": 0.8,
+     "low": 0.652426936536005,
+     "high": 0.895000102745623
+    },
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "policy_heading": {
+     "count": 9,
+     "total": 20,
+     "rate": 0.45,
+     "low": 0.2581978582556243,
+     "high": 0.6579146575496577
+    },
+    "policy_single": {
+     "count": 24,
+     "total": 40,
+     "rate": 0.6,
+     "low": 0.44595893660346186,
+     "high": 0.7365167431570808
+    },
+    "policy_two_sentence": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "restricted_staff": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    }
+   },
+   "cut_items": 18,
+   "superseded_slots": 888,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1173.0
+  },
+  "fixed-64-0": {
+   "label": "Fixed 64",
+   "chunks": 4730,
+   "recall": {
+    "count": 197,
+    "total": 400,
+    "rate": 0.4925,
+    "low": 0.44381128061271025,
+    "high": 0.5413314038023042
+   },
+   "policy_recall": {
+    "count": 32,
+    "total": 80,
+    "rate": 0.4,
+    "low": 0.2996182759587093,
+    "high": 0.509545349948396
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 28,
+     "total": 40,
+     "rate": 0.7,
+     "low": 0.5456998118185507,
+     "high": 0.8192515477025347
+    },
+    "followup": {
+     "count": 1,
+     "total": 40,
+     "rate": 0.025,
+     "low": 0.0044268315026814095,
+     "high": 0.1288136896347409
+    },
+    "identifier": {
+     "count": 12,
+     "total": 40,
+     "rate": 0.3,
+     "low": 0.18074845229746528,
+     "high": 0.45430018818144935
+    },
+    "paraphrase": {
+     "count": 28,
+     "total": 40,
+     "rate": 0.7,
+     "low": 0.5456998118185507,
+     "high": 0.8192515477025347
+    },
+    "policy_heading": {
+     "count": 2,
+     "total": 20,
+     "rate": 0.1,
+     "low": 0.027866481213768224,
+     "high": 0.3010336452284873
+    },
+    "policy_single": {
+     "count": 22,
+     "total": 40,
+     "rate": 0.55,
+     "low": 0.39829091798932054,
+     "high": 0.6929469218909508
+    },
+    "policy_two_sentence": {
+     "count": 8,
+     "total": 20,
+     "rate": 0.4,
+     "low": 0.21880653237281705,
+     "high": 0.6134184992377469
+    },
+    "restricted_staff": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    },
+    "shared": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 30,
+     "total": 40,
+     "rate": 0.75,
+     "low": 0.5980603857923197,
+     "high": 0.858128813609037
+    }
+   },
+   "cut_items": 90,
+   "superseded_slots": 896,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 320.0
+  },
+  "fixed-64-16": {
+   "label": "Fixed 64 +25%",
+   "chunks": 6014,
+   "recall": {
+    "count": 227,
+    "total": 400,
+    "rate": 0.5675,
+    "low": 0.5185345773355028,
+    "high": 0.6151812629293671
+   },
+   "policy_recall": {
+    "count": 45,
+    "total": 80,
+    "rate": 0.5625,
+    "low": 0.4534113429694972,
+    "high": 0.6658613908385618
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "followup": {
+     "count": 2,
+     "total": 40,
+     "rate": 0.05,
+     "low": 0.013820667386148344,
+     "high": 0.16503877369140962
+    },
+    "identifier": {
+     "count": 12,
+     "total": 40,
+     "rate": 0.3,
+     "low": 0.18074845229746528,
+     "high": 0.45430018818144935
+    },
+    "paraphrase": {
+     "count": 29,
+     "total": 40,
+     "rate": 0.725,
+     "low": 0.5716504419378943,
+     "high": 0.8389198375233267
+    },
+    "policy_heading": {
+     "count": 3,
+     "total": 20,
+     "rate": 0.15,
+     "low": 0.052368745896216595,
+     "high": 0.36041886474075696
+    },
+    "policy_single": {
+     "count": 30,
+     "total": 40,
+     "rate": 0.75,
+     "low": 0.5980603857923197,
+     "high": 0.858128813609037
+    },
+    "policy_two_sentence": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "restricted_staff": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "shared": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    }
+   },
+   "cut_items": 18,
+   "superseded_slots": 930,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 320.0
+  },
+  "fixed-128-0": {
+   "label": "Fixed 128",
+   "chunks": 2522,
+   "recall": {
+    "count": 236,
+    "total": 400,
+    "rate": 0.59,
+    "low": 0.5411672646392987,
+    "high": 0.6371205223805279
+   },
+   "policy_recall": {
+    "count": 42,
+    "total": 80,
+    "rate": 0.525,
+    "low": 0.41695642649729936,
+    "high": 0.6307526670259243
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    },
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "identifier": {
+     "count": 14,
+     "total": 40,
+     "rate": 0.35,
+     "low": 0.2213452887317629,
+     "high": 0.5049411916274231
+    },
+    "paraphrase": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_heading": {
+     "count": 6,
+     "total": 20,
+     "rate": 0.3,
+     "low": 0.1454772448676043,
+     "high": 0.5189728183535235
+    },
+    "policy_single": {
+     "count": 24,
+     "total": 40,
+     "rate": 0.6,
+     "low": 0.44595893660346186,
+     "high": 0.7365167431570808
+    },
+    "policy_two_sentence": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "restricted_staff": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 32,
+     "total": 40,
+     "rate": 0.8,
+     "low": 0.652426936536005,
+     "high": 0.895000102745623
+    }
+   },
+   "cut_items": 33,
+   "superseded_slots": 899,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 640.0
+  },
+  "fixed-128-32": {
+   "label": "Fixed 128 +25%",
+   "chunks": 3142,
+   "recall": {
+    "count": 248,
+    "total": 400,
+    "rate": 0.62,
+    "low": 0.5715045437377642,
+    "high": 0.6662125056220047
+   },
+   "policy_recall": {
+    "count": 54,
+    "total": 80,
+    "rate": 0.675,
+    "low": 0.5664052731061473,
+    "high": 0.7675583815564182
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "followup": {
+     "count": 4,
+     "total": 40,
+     "rate": 0.1,
+     "low": 0.03957952868260638,
+     "high": 0.23051775227522298
+    },
+    "identifier": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "paraphrase": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_heading": {
+     "count": 8,
+     "total": 20,
+     "rate": 0.4,
+     "low": 0.21880653237281705,
+     "high": 0.6134184992377469
+    },
+    "policy_single": {
+     "count": 30,
+     "total": 40,
+     "rate": 0.75,
+     "low": 0.5980603857923197,
+     "high": 0.858128813609037
+    },
+    "policy_two_sentence": {
+     "count": 16,
+     "total": 20,
+     "rate": 0.8,
+     "low": 0.5839825677481064,
+     "high": 0.919342337420202
+    },
+    "restricted_staff": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 915,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 640.0
+  },
+  "fixed-256-64": {
+   "label": "Fixed 256 +25%",
+   "chunks": 1585,
+   "recall": {
+    "count": 260,
+    "total": 400,
+    "rate": 0.65,
+    "low": 0.6020319607074738,
+    "high": 0.6951143509922373
+   },
+   "policy_recall": {
+    "count": 56,
+    "total": 80,
+    "rate": 0.7,
+    "low": 0.5923184607866026,
+    "high": 0.7893542873991866
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "followup": {
+     "count": 6,
+     "total": 40,
+     "rate": 0.15,
+     "low": 0.07061187717320358,
+     "high": 0.2907232436648971
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_heading": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "policy_single": {
+     "count": 32,
+     "total": 40,
+     "rate": 0.8,
+     "low": 0.652426936536005,
+     "high": 0.895000102745623
+    },
+    "policy_two_sentence": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "restricted_staff": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 928,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1180.0
+  },
+  "fixed-512-0": {
+   "label": "Fixed 512",
+   "chunks": 808,
+   "recall": {
+    "count": 224,
+    "total": 400,
+    "rate": 0.56,
+    "low": 0.5110127871951399,
+    "high": 0.6078457374847447
+   },
+   "policy_recall": {
+    "count": 49,
+    "total": 80,
+    "rate": 0.6125,
+    "low": 0.5029365721075572,
+    "high": 0.7117543487469493
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "followup": {
+     "count": 2,
+     "total": 40,
+     "rate": 0.05,
+     "low": 0.013820667386148344,
+     "high": 0.16503877369140962
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "policy_single": {
+     "count": 23,
+     "total": 40,
+     "rate": 0.575,
+     "low": 0.42195068541991065,
+     "high": 0.7149060744004962
+    },
+    "policy_two_sentence": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "restricted_staff": {
+     "count": 22,
+     "total": 40,
+     "rate": 0.55,
+     "low": 0.39829091798932054,
+     "high": 0.6929469218909508
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 29,
+     "total": 40,
+     "rate": 0.725,
+     "low": 0.5716504419378943,
+     "high": 0.8389198375233267
+    }
+   },
+   "cut_items": 8,
+   "superseded_slots": 790,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2186.0
+  },
+  "fixed-512-128": {
+   "label": "Fixed 512 +25%",
+   "chunks": 958,
+   "recall": {
+    "count": 238,
+    "total": 400,
+    "rate": 0.595,
+    "low": 0.5462106166004184,
+    "high": 0.6419820474760654
+   },
+   "policy_recall": {
+    "count": 48,
+    "total": 80,
+    "rate": 0.6,
+    "low": 0.4904546500516039,
+    "high": 0.7003817240412906
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "followup": {
+     "count": 4,
+     "total": 40,
+     "rate": 0.1,
+     "low": 0.03957952868260638,
+     "high": 0.23051775227522298
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 9,
+     "total": 20,
+     "rate": 0.45,
+     "low": 0.2581978582556243,
+     "high": 0.6579146575496577
+    },
+    "policy_single": {
+     "count": 28,
+     "total": 40,
+     "rate": 0.7,
+     "low": 0.5456998118185507,
+     "high": 0.8192515477025347
+    },
+    "policy_two_sentence": {
+     "count": 11,
+     "total": 20,
+     "rate": 0.55,
+     "low": 0.34208534245034233,
+     "high": 0.7418021417443759
+    },
+    "restricted_staff": {
+     "count": 27,
+     "total": 40,
+     "rate": 0.675,
+     "low": 0.5201774618987768,
+     "high": 0.799154977682173
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 825,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2192.0
+  },
+  "fixed-1024-0": {
+   "label": "Fixed 1024",
+   "chunks": 574,
+   "recall": {
+    "count": 214,
+    "total": 400,
+    "rate": 0.535,
+    "low": 0.486020056782804,
+    "high": 0.5833140826137954
+   },
+   "policy_recall": {
+    "count": 48,
+    "total": 80,
+    "rate": 0.6,
+    "low": 0.4904546500516039,
+    "high": 0.7003817240412906
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 28,
+     "total": 40,
+     "rate": 0.7,
+     "low": 0.5456998118185507,
+     "high": 0.8192515477025347
+    },
+    "followup": {
+     "count": 1,
+     "total": 40,
+     "rate": 0.025,
+     "low": 0.0044268315026814095,
+     "high": 0.1288136896347409
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "policy_single": {
+     "count": 25,
+     "total": 40,
+     "rate": 0.625,
+     "low": 0.47032439137301096,
+     "high": 0.7577702083276673
+    },
+    "policy_two_sentence": {
+     "count": 10,
+     "total": 20,
+     "rate": 0.5,
+     "low": 0.2992980081982123,
+     "high": 0.7007019918017877
+    },
+    "restricted_staff": {
+     "count": 17,
+     "total": 40,
+     "rate": 0.425,
+     "low": 0.28509392559950375,
+     "high": 0.5780493145800892
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 25,
+     "total": 40,
+     "rate": 0.625,
+     "low": 0.47032439137301096,
+     "high": 0.7577702083276673
+    }
+   },
+   "cut_items": 8,
+   "superseded_slots": 586,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2495.5
+  },
+  "fixed-1024-256": {
+   "label": "Fixed 1024 +25%",
+   "chunks": 646,
+   "recall": {
+    "count": 222,
+    "total": 400,
+    "rate": 0.555,
+    "low": 0.506004433664882,
+    "high": 0.6029492139583456
+   },
+   "policy_recall": {
+    "count": 55,
+    "total": 80,
+    "rate": 0.6875,
+    "low": 0.5793222425531256,
+    "high": 0.7784959588710517
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 28,
+     "total": 40,
+     "rate": 0.7,
+     "low": 0.5456998118185507,
+     "high": 0.8192515477025347
+    },
+    "followup": {
+     "count": 2,
+     "total": 40,
+     "rate": 0.05,
+     "low": 0.013820667386148344,
+     "high": 0.16503877369140962
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 27,
+     "total": 40,
+     "rate": 0.675,
+     "low": 0.5201774618987768,
+     "high": 0.799154977682173
+    },
+    "policy_two_sentence": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "restricted_staff": {
+     "count": 17,
+     "total": 40,
+     "rate": 0.425,
+     "low": 0.28509392559950375,
+     "high": 0.5780493145800892
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 25,
+     "total": 40,
+     "rate": 0.625,
+     "low": 0.47032439137301096,
+     "high": 0.7577702083276673
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 630,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3031.0
+  },
+  "structure-256": {
+   "label": "Structure 256",
+   "chunks": 1476,
+   "recall": {
+    "count": 274,
+    "total": 400,
+    "rate": 0.685,
+    "low": 0.637901366761192,
+    "high": 0.7285790843351184
+   },
+   "policy_recall": {
+    "count": 65,
+    "total": 80,
+    "rate": 0.8125,
+    "low": 0.7134167737100688,
+    "high": 0.8829468953302267
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "followup": {
+     "count": 6,
+     "total": 40,
+     "rate": 0.15,
+     "low": 0.07061187717320358,
+     "high": 0.2907232436648971
+    },
+    "identifier": {
+     "count": 14,
+     "total": 40,
+     "rate": 0.35,
+     "low": 0.2213452887317629,
+     "high": 0.5049411916274231
+    },
+    "paraphrase": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "policy_heading": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "policy_single": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 2,
+     "total": 20,
+     "rate": 0.1,
+     "low": 0.027866481213768224,
+     "high": 0.3010336452284873
+    },
+    "version": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 1000,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1040.5
+  },
+  "structure-256-headings": {
+   "label": "Structure 256 +heads",
+   "chunks": 1476,
+   "recall": {
+    "count": 265,
+    "total": 400,
+    "rate": 0.6625,
+    "low": 0.6148101420626579,
+    "high": 0.7070983622786957
+   },
+   "policy_recall": {
+    "count": 62,
+    "total": 80,
+    "rate": 0.775,
+    "low": 0.6721321021639265,
+    "high": 0.8526679265915337
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "followup": {
+     "count": 2,
+     "total": 40,
+     "rate": 0.05,
+     "low": 0.013820667386148344,
+     "high": 0.16503877369140962
+    },
+    "identifier": {
+     "count": 13,
+     "total": 40,
+     "rate": 0.325,
+     "low": 0.200845022317827,
+     "high": 0.47982253810122333
+    },
+    "paraphrase": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "policy_heading": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "policy_single": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "policy_two_sentence": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "restricted_staff": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 967,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1022.0
+  },
+  "structure-512": {
+   "label": "Structure 512",
+   "chunks": 908,
+   "recall": {
+    "count": 270,
+    "total": 400,
+    "rate": 0.675,
+    "low": 0.6276239644145414,
+    "high": 0.7190467325684549
+   },
+   "policy_recall": {
+    "count": 61,
+    "total": 80,
+    "rate": 0.7625,
+    "low": 0.6585922106615945,
+    "high": 0.8423532713322537
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 11,
+     "total": 20,
+     "rate": 0.55,
+     "low": 0.34208534245034233,
+     "high": 0.7418021417443759
+    },
+    "policy_single": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 35,
+     "total": 40,
+     "rate": 0.875,
+     "low": 0.738878801611489,
+     "high": 0.945404997490546
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 908,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1873.0
+  },
+  "structure-512-headings": {
+   "label": "Structure 512 +heads",
+   "chunks": 908,
+   "recall": {
+    "count": 266,
+    "total": 400,
+    "rate": 0.665,
+    "low": 0.617370024300236,
+    "high": 0.7094909185694462
+   },
+   "policy_recall": {
+    "count": 62,
+    "total": 80,
+    "rate": 0.775,
+    "low": 0.6721321021639265,
+    "high": 0.8526679265915337
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 16,
+     "total": 20,
+     "rate": 0.8,
+     "low": 0.5839825677481064,
+     "high": 0.919342337420202
+    },
+    "restricted_staff": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 852,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 1773.5
+  },
+  "structure-1024": {
+   "label": "Structure 1024",
+   "chunks": 644,
+   "recall": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "policy_recall": {
+    "count": 66,
+    "total": 80,
+    "rate": 0.825,
+    "low": 0.7274245802116865,
+    "high": 0.8927936355902206
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 699,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2914.5
+  },
+  "structure-1024-headings": {
+   "label": "Structure 1024 +heads",
+   "chunks": 644,
+   "recall": {
+    "count": 268,
+    "total": 400,
+    "rate": 0.67,
+    "low": 0.622494095885007,
+    "high": 0.7142717240413322
+   },
+   "policy_recall": {
+    "count": 65,
+    "total": 80,
+    "rate": 0.8125,
+    "low": 0.7134167737100688,
+    "high": 0.8829468953302267
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 16,
+     "total": 20,
+     "rate": 0.8,
+     "low": 0.5839825677481064,
+     "high": 0.919342337420202
+    },
+    "restricted_staff": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    }
+   },
+   "cut_items": 0,
+   "superseded_slots": 610,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2414.0
+  }
+ },
+ "choice": {
+  "fixed": "fixed-512-0",
+  "structure": "structure-1024"
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 239,
+    "total": 400,
+    "rate": 0.5975,
+    "low": 0.5487342037489487,
+    "high": 0.6444108988558637
+   },
+   "answer": {
+    "count": 243,
+    "total": 400,
+    "rate": 0.6075,
+    "low": 0.5588413833413011,
+    "high": 0.6541134733768252
+   },
+   "not_found": {
+    "count": 53,
+    "total": 120,
+    "rate": 0.44166666666666665,
+    "low": 0.3559974669953786,
+    "high": 0.5309547690868035
+   },
+   "leaks": {
+    "count": 51,
+    "total": 480,
+    "rate": 0.10625,
+    "low": 0.08174077901635685,
+    "high": 0.13701157651487453
+   }
+  },
+  "fixed-512-0": {
+   "search": {
+    "count": 224,
+    "total": 400,
+    "rate": 0.56,
+    "low": 0.5110127871951399,
+    "high": 0.6078457374847447
+   },
+   "answer": {
+    "count": 237,
+    "total": 400,
+    "rate": 0.5925,
+    "low": 0.5436883047891221,
+    "high": 0.639551920759033
+   },
+   "not_found": {
+    "count": 57,
+    "total": 120,
+    "rate": 0.475,
+    "low": 0.3878209113791835,
+    "high": 0.5637300469417518
+   },
+   "leaks": {
+    "count": 30,
+    "total": 480,
+    "rate": 0.0625,
+    "low": 0.04412701073383607,
+    "high": 0.08782005096753212
+   }
+  },
+  "structure-1024": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 86,
+   "search": 39,
+   "prompt": 2,
+   "answer": 17,
+   "chunk": 13
+  },
+  "fixed-512-0": {
+   "rerank": 116,
+   "search": 29,
+   "prompt": 2,
+   "answer": 13,
+   "chunk": 3
+  },
+  "structure-1024": {
+   "rerank": 89,
+   "search": 7,
+   "prompt": 1,
+   "answer": 22
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 157,
+  "fixed-512-0": 163,
+  "structure-1024": 119
+ },
+ "claims": [
+  {
+   "id": "C1",
+   "statement": "Long chunks dilute a fact.",
+   "held": false,
+   "detail": {
+    "long": {
+     "count": 48,
+     "total": 80,
+     "rate": 0.6,
+     "low": 0.4904546500516039,
+     "high": 0.7003817240412906
+    },
+    "reference": {
+     "count": 46,
+     "total": 80,
+     "rate": 0.575,
+     "low": 0.4656928984656886,
+     "high": 0.6774343821039822
+    }
+   }
+  },
+  {
+   "id": "C2",
+   "statement": "Overlap stops facts being cut.",
+   "held": true,
+   "detail": {
+    "cut_items_by_size": {
+     "64": {
+      "no_overlap": 90,
+      "overlap": 18
+     },
+     "128": {
+      "no_overlap": 33,
+      "overlap": 0
+     },
+     "256": {
+      "no_overlap": 18,
+      "overlap": 0
+     },
+     "512": {
+      "no_overlap": 8,
+      "overlap": 0
+     },
+     "1024": {
+      "no_overlap": 8,
+      "overlap": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "C3",
+   "statement": "The heading carries the fact.",
+   "held": false,
+   "detail": {
+    "pairs": [
+     {
+      "with": "structure-256-headings",
+      "without": "structure-256",
+      "with_count": 14,
+      "without_count": 14,
+      "total": 20
+     },
+     {
+      "with": "structure-512-headings",
+      "without": "structure-512",
+      "with_count": 12,
+      "without_count": 11,
+      "total": 20
+     },
+     {
+      "with": "structure-1024-headings",
+      "without": "structure-1024",
+      "with_count": 15,
+      "without_count": 15,
+      "total": 20
+     }
+    ],
+    "strong_form": false,
+    "best": "structure-1024-headings",
+    "best_recall": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "reference": {
+     "count": 9,
+     "total": 20,
+     "rate": 0.45,
+     "low": 0.2581978582556243,
+     "high": 0.6579146575496577
+    }
+   }
+  },
+  {
+   "id": "C4",
+   "statement": "Following the document's structure beats cutting blind.",
+   "held": true,
+   "detail": {
+    "best_fixed": "fixed-256-64",
+    "fixed": {
+     "count": 56,
+     "total": 80,
+     "rate": 0.7,
+     "low": 0.5923184607866026,
+     "high": 0.7893542873991866
+    },
+    "best_structure": "structure-1024",
+    "structure": {
+     "count": 66,
+     "total": 80,
+     "rate": 0.825,
+     "low": 0.7274245802116865,
+     "high": 0.8927936355902206
+    }
+   }
+  },
+  {
+   "id": "C5",
+   "statement": "Better search gives better answers.",
+   "held": true,
+   "detail": {
+    "fixed-512-0": {
+     "search_change": -15,
+     "answer_change": -6
+    },
+    "structure-1024": {
+     "search_change": 42,
+     "answer_change": 38
+    }
+   }
+  }
+ ],
+ "join": {
+  "passed": [
+   "structure-1024"
+  ],
+  "joined": "structure-1024"
+ },
+ "paired": {
+  "fixed-512-0": {
+   "only_other": 15,
+   "only_reference": 30,
+   "p_value": 0.035697803555194696
+  },
+  "structure-1024": {
+   "only_other": 52,
+   "only_reference": 10,
+   "p_value": 5.713613733093065e-08
+  }
+ }
+}

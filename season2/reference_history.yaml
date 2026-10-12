@@ -4,3 +4,10 @@
   reference_after: b58f06493698
   pass_mark: 'none: the baseline sets the reference'
   joined: true
+- episode: s2-e4-chunking
+  stage_changed: chunk
+  reference_before: 9652ab169377
+  reference_after: 0ef803fd06f1
+  pass_mark: search interval above the reference's, answer not lower
+  joined: true
+  candidate: structure-1024
