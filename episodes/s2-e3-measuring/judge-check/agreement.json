@@ -1,0 +1,156 @@
+{
+ "sample": 50,
+ "second_errors": [],
+ "models": {
+  "declined": {
+   "count": 49,
+   "total": 50,
+   "rate": 0.98,
+   "low": 0.8950455641036219,
+   "high": 0.9964607407283539
+  },
+  "correct": {
+   "count": 48,
+   "total": 50,
+   "rate": 0.96,
+   "low": 0.8653990931249297,
+   "high": 0.9889611156723802
+  },
+  "faithful": {
+   "count": 46,
+   "total": 50,
+   "rate": 0.92,
+   "low": 0.8116175308165717,
+   "high": 0.968450485911407
+  },
+  "right": {
+   "count": 44,
+   "total": 50,
+   "rate": 0.88,
+   "low": 0.7619518261679701,
+   "high": 0.9438239984906773
+  }
+ },
+ "hand_items": 10,
+ "hand_fields": [
+  "declined",
+  "correct"
+ ],
+ "key_verdict": "correct",
+ "judge_with_hand": {
+  "declined": {
+   "count": 9,
+   "total": 10,
+   "rate": 0.9,
+   "low": 0.5958499732047615,
+   "high": 0.9821237869049271
+  },
+  "correct": {
+   "count": 9,
+   "total": 10,
+   "rate": 0.9,
+   "low": 0.5958499732047615,
+   "high": 0.9821237869049271
+  }
+ },
+ "second_with_hand": {
+  "declined": {
+   "count": 8,
+   "total": 10,
+   "rate": 0.8,
+   "low": 0.49016247153664183,
+   "high": 0.9433178485456247
+  },
+  "correct": {
+   "count": 9,
+   "total": 10,
+   "rate": 0.9,
+   "low": 0.5958499732047615,
+   "high": 0.9821237869049271
+  }
+ },
+ "code_check_on_hand": {
+  "items": 2,
+  "judge_matches_hand": 2,
+  "code_matches_hand": 2
+ },
+ "key_split": {
+  "items": 2,
+  "hand_marked": 2,
+  "hand_sides_with_judge": 1,
+  "hand_sides_with_second": 1,
+  "not_marked": []
+ },
+ "judge_key_estimate": {
+  "count": 49,
+  "total": 50,
+  "rate": 0.98,
+  "low": 0.8950455641036219,
+  "high": 0.9964607407283539
+ },
+ "hand_disagreements": [
+  {
+   "item_id": "ABSENT-005",
+   "judge": {
+    "declined": false,
+    "correct": true,
+    "faithful": true
+   },
+   "second": {
+    "declined": false,
+    "correct": false,
+    "faithful": true
+   },
+   "hand": {
+    "declined": true,
+    "correct": true,
+    "faithful": null
+   },
+   "judge_reason": "The answer says no fixed interval is specified (matching the reference that the documents don't say), and its remaining claims about an agreed schedule, contacting Halvard Home, and a 7-week reminder are all supported by P1; it still provides some related information so it is not a pure decline, but it effectively states the interval isn't given.",
+   "second_reason": "The system correctly notes that no fixed interval is specified and all its claims are supported by the text, but because it provides an answer instead of declining when the question cannot be answered from the text, it is marked as not correct.",
+   "note": ""
+  },
+  {
+   "item_id": "PARA-016",
+   "judge": {
+    "declined": false,
+    "correct": false,
+    "faithful": true
+   },
+   "second": {
+    "declined": false,
+    "correct": true,
+    "faithful": true
+   },
+   "hand": {
+    "declined": false,
+    "correct": true,
+    "faithful": null
+   },
+   "judge_reason": "The answer is supported by the passages but misses the reference answer's key facts (photo, model details, and a short description of the needed part) and instead lists fault descriptions and documents, so it does not match the reference.",
+   "second_reason": "The system correctly and faithfully answers what to send to the service team based on the provided documents.",
+   "note": "Missed to include a picture; declined not clicked; inferred no: an answerable item marked correct cannot be a decline"
+  },
+  {
+   "item_id": "IDENT-030",
+   "judge": {
+    "declined": false,
+    "correct": false,
+    "faithful": true
+   },
+   "second": {
+    "declined": true,
+    "correct": false,
+    "faithful": true
+   },
+   "hand": {
+    "declined": false,
+    "correct": false,
+    "faithful": null
+   },
+   "judge_reason": "The answer says E-9454 isn't in the passages but then offers the meaning of E-9544 as a guess, never giving the reference meaning (Mira battery protection blocking startup), so it is incorrect and not a pure decline; all its claims about E-9544 are supported by P1.",
+   "second_reason": "The system correctly identified that error E-9454 was not in the provided context and declined to answer, but because the question is answerable from the underlying documentation, the answer is marked as incorrect against the reference.",
+   "note": "missed Error E-9454 and gave an answer for E-9544; declined not clicked; inferred no from the note: it gave an answer"
+  }
+ ]
+}
