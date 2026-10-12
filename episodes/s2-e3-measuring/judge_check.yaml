@@ -1,0 +1,9 @@
+# S2 E3: the judge check. Draws 50 items from the E2 baseline run for marking by hand.
+# `lab rag judge-check draw` writes the blind sheet; `lab rag judge-check report` reads the marks.
+run: ../s2-e2-first-rag-system/results/baseline
+library: ../../datasets/halvard
+out: judge-check
+size: 50
+# 3 from each of the 16 item types, spread across the judge's outcomes, then 2 more at random.
+per_type: 3
+seed: 2026
