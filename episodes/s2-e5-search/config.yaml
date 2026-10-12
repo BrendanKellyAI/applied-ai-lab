@@ -23,4 +23,4 @@ conditions:
     measure: search
   - name: hybrid-20
     changes: {search: {method: hybrid, depth: 50, fuse_depth: 20}}
-    measure: search
+    measure: full

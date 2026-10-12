@@ -44,7 +44,9 @@ def test_full_run_writes_a_log_line_per_item_and_a_summary(episode, library, tmp
     assert numbers["leaks"]["total"] == 9
     assert numbers["not_found"]["count"] == 2  # the restricted question was answered
     assert summary["models_returned"]["answer"] == ["gpt-6.1-sol-mock-0001"]
-    assert summary["calls"]["answer"][0]["made"] == len(library.test)
+    # The restricted question asked by staff and by the public makes one identical request with
+    # no filter, so it is sent once for both items.
+    assert summary["calls"]["answer"][0]["made"] == len(library.test) - 1
     assert json.loads((context.results / "baseline" / "summary.json").read_text()) == summary
 
 

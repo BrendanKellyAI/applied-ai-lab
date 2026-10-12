@@ -11,7 +11,7 @@ from pathlib import Path
 from pydantic import BaseModel, ConfigDict
 
 from lab.plan import PlannedCall, make_call_id
-from lab.providers.base import GenerationRequest, GenerationResult
+from lab.providers.base import GenerationRequest, GenerationResult, request_hash
 from lab.rag.chunk import Chunk
 from lab.rag.config import ModelSpec
 from lab.rag.corpus import Item
@@ -66,12 +66,21 @@ def planned(request: GenerationRequest, *, stage: str, item_id: str, condition: 
 def run_wave(
     runner: Runner, calls: Sequence[PlannedCall], raw_path: Path
 ) -> tuple[dict[str, GenerationResult], RunSummary]:
-    """Send a wave and return each item's successful result, keyed by item id."""
-    summary = runner.run(calls, raw_path)
+    """Send a wave and return each item's successful result, keyed by item id.
+
+    Two items can make the identical request: with no filter, a restricted question asked by
+    staff and by the public gets the same prompt. Each distinct request is sent once and its
+    result given to every item that made it. Sending both would get two differently worded
+    replies, and the cache could keep only one of them, so a rerun would not reproduce the run.
+    """
+    leaders: dict[str, PlannedCall] = {}
+    for call in calls:
+        leaders.setdefault(request_hash(call.request), call)
+    summary = runner.run(list(leaders.values()), raw_path)
     latest = latest_successful(load_records(raw_path))
     results = {}
     for call in calls:
-        record = latest.get(call.call_id)
+        record = latest.get(leaders[request_hash(call.request)].call_id)
         if record is not None and record.result is not None:
             results[str(call.cell["item"])] = record.result
     return results, summary

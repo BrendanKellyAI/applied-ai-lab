@@ -11,3 +11,10 @@
   pass_mark: search interval above the reference's, answer not lower
   joined: true
   candidate: structure-1024
+- episode: s2-e5-search
+  stage_changed: search
+  reference_before: 0ef803fd06f1
+  reference_after: 0ef803fd06f1
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: hybrid-20

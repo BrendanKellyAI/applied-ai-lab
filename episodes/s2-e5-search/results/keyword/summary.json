@@ -1,0 +1,86 @@
+{
+ "episode": "s2-e5-search",
+ "condition": "keyword",
+ "measure": "search",
+ "config_id": "bcdd3f3b883e",
+ "base_id": "0ef803fd06f1",
+ "changed": [
+  "search"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "keyword",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "passthrough"
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 520,
+ "run_utc": "2026-10-12T22:25:56+00:00",
+ "numbers": {
+  "search": {
+   "count": 232,
+   "total": 400,
+   "rate": 0.58,
+   "low": 0.5310957511319983,
+   "high": 0.6273822817745143
+  },
+  "leaks": {
+   "count": 145,
+   "total": 480,
+   "rate": 0.3020833333333333,
+   "low": 0.26271149080073697,
+   "high": 0.3445978942546438
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": null
+ },
+ "calls": {},
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

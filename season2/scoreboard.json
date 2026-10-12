@@ -123,5 +123,82 @@
    "embedding": null
   },
   "corpus_version": "halvard-v2"
+ },
+ {
+  "episode": "s2-e5-search",
+  "stage_changed": "search",
+  "config_before": "0ef803fd06f1",
+  "config_after": "dba497aabf4c",
+  "before": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 280,
+    "total": 400,
+    "rate": 0.7,
+    "low": 0.6533627542224784,
+    "high": 0.7428323280438028
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  },
+  "after": {
+   "search": {
+    "count": 276,
+    "total": 400,
+    "rate": 0.69,
+    "low": 0.643049046352087,
+    "high": 0.7333362818008802
+   },
+   "answer": {
+    "count": 299,
+    "total": 400,
+    "rate": 0.7475,
+    "low": 0.7027083556965948,
+    "high": 0.7875830586079285
+   },
+   "not_found": {
+    "count": 45,
+    "total": 120,
+    "rate": 0.375,
+    "low": 0.29352429786446804,
+    "high": 0.4642304937402079
+   },
+   "leaks": {
+    "count": 103,
+    "total": 480,
+    "rate": 0.21458333333333332,
+    "low": 0.18019920086380448,
+    "high": 0.25349959653184995
+   }
+  },
+  "joined": false,
+  "models_returned": {
+   "answer": [
+    "gpt-6-luna"
+   ],
+   "judge": [
+    "gemini-3.6-flash"
+   ],
+   "embedding": null
+  },
+  "corpus_version": "halvard-v2"
  }
 ]

@@ -1,0 +1,725 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "Vector (ref)",
+   "recall": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 76,
+   "cut_items": 0,
+   "superseded_slots": 699,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2914.5,
+   "look_alike_above": 18
+  },
+  "keyword": {
+   "label": "Keyword (BM25)",
+   "recall": {
+    "count": 232,
+    "total": 400,
+    "rate": 0.58,
+    "low": 0.5310957511319983,
+    "high": 0.6273822817745143
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    },
+    "followup": {
+     "count": 4,
+     "total": 40,
+     "rate": 0.1,
+     "low": 0.03957952868260638,
+     "high": 0.23051775227522298
+    },
+    "identifier": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "paraphrase": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 30,
+     "total": 40,
+     "rate": 0.75,
+     "low": 0.5980603857923197,
+     "high": 0.858128813609037
+    },
+    "policy_two_sentence": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "restricted_staff": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "shared": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 25,
+     "total": 40,
+     "rate": 0.625,
+     "low": 0.47032439137301096,
+     "high": 0.7577702083276673
+    }
+   },
+   "leak_items": 145,
+   "cut_items": 0,
+   "superseded_slots": 746,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2904.5,
+   "look_alike_above": 5
+  },
+  "hybrid-all": {
+   "label": "Hybrid, all",
+   "recall": {
+    "count": 251,
+    "total": 400,
+    "rate": 0.6275,
+    "low": 0.5791182279031106,
+    "high": 0.6734561370416436
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "followup": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "identifier": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    },
+    "paraphrase": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "policy_heading": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "policy_single": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 97,
+   "cut_items": 0,
+   "superseded_slots": 833,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3365.5,
+   "look_alike_above": 5
+  },
+  "hybrid-50": {
+   "label": "Hybrid, top 50",
+   "recall": {
+    "count": 257,
+    "total": 400,
+    "rate": 0.6425,
+    "low": 0.5943817784800669,
+    "high": 0.6879072176346586
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "followup": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "identifier": {
+     "count": 31,
+     "total": 40,
+     "rate": 0.775,
+     "low": 0.6249690325768998,
+     "high": 0.8768390867645927
+    },
+    "paraphrase": {
+     "count": 6,
+     "total": 40,
+     "rate": 0.15,
+     "low": 0.07061187717320358,
+     "high": 0.2907232436648971
+    },
+    "policy_heading": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "policy_single": {
+     "count": 33,
+     "total": 40,
+     "rate": 0.825,
+     "low": 0.6805000966821229,
+     "high": 0.9125458625396408
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 101,
+   "cut_items": 0,
+   "superseded_slots": 830,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3359.0,
+   "look_alike_above": 5
+  },
+  "hybrid-20": {
+   "label": "Hybrid, top 20",
+   "recall": {
+    "count": 276,
+    "total": 400,
+    "rate": 0.69,
+    "low": 0.643049046352087,
+    "high": 0.7333362818008802
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "followup": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "identifier": {
+     "count": 32,
+     "total": 40,
+     "rate": 0.8,
+     "low": 0.652426936536005,
+     "high": 0.895000102745623
+    },
+    "paraphrase": {
+     "count": 23,
+     "total": 40,
+     "rate": 0.575,
+     "low": 0.42195068541991065,
+     "high": 0.7149060744004962
+    },
+    "policy_heading": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    },
+    "two_part": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 103,
+   "cut_items": 0,
+   "superseded_slots": 816,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3320.0,
+   "look_alike_above": 4
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 280,
+    "total": 400,
+    "rate": 0.7,
+    "low": 0.6533627542224784,
+    "high": 0.7428323280438028
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  },
+  "hybrid-20": {
+   "search": {
+    "count": 276,
+    "total": 400,
+    "rate": 0.69,
+    "low": 0.643049046352087,
+    "high": 0.7333362818008802
+   },
+   "answer": {
+    "count": 299,
+    "total": 400,
+    "rate": 0.7475,
+    "low": 0.7027083556965948,
+    "high": 0.7875830586079285
+   },
+   "not_found": {
+    "count": 45,
+    "total": 120,
+    "rate": 0.375,
+    "low": 0.29352429786446804,
+    "high": 0.4642304937402079
+   },
+   "leaks": {
+    "count": 103,
+    "total": 480,
+    "rate": 0.21458333333333332,
+    "low": 0.18019920086380448,
+    "high": 0.25349959653184995
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 89,
+   "search": 7,
+   "prompt": 1,
+   "answer": 23
+  },
+  "hybrid-20": {
+   "rerank": 61,
+   "answer": 21,
+   "prompt": 1,
+   "search": 18
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 120,
+  "hybrid-20": 101
+ },
+ "claims": [
+  {
+   "id": "S1",
+   "statement": "Keyword search finds identifier codes that vector search misses.",
+   "held": true,
+   "detail": {
+    "keyword": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "vector": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    }
+   }
+  },
+  {
+   "id": "S2",
+   "statement": "Vector search finds paraphrases that keyword search misses.",
+   "held": true,
+   "detail": {
+    "keyword": {
+     "count": 0,
+     "total": 40,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.08762160119728664
+    },
+    "vector": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   }
+  },
+  {
+   "id": "S3",
+   "statement": "Fusing the full rankings does not beat vector search.",
+   "held": true,
+   "detail": {
+    "hybrid_all": {
+     "count": 251,
+     "total": 400,
+     "rate": 0.6275,
+     "low": 0.5791182279031106,
+     "high": 0.6734561370416436
+    },
+    "vector": {
+     "count": 281,
+     "total": 400,
+     "rate": 0.7025,
+     "low": 0.6559450648860605,
+     "high": 0.7452024559085495
+    }
+   }
+  },
+  {
+   "id": "S4",
+   "statement": "Fusing only the top of each ranking keeps vector's strengths and adds keyword's.",
+   "held": false,
+   "detail": {
+    "chosen": "hybrid-20",
+    "overall": {
+     "count": 276,
+     "total": 400,
+     "rate": 0.69,
+     "low": 0.643049046352087,
+     "high": 0.7333362818008802
+    },
+    "identifier": {
+     "count": 32,
+     "total": 40,
+     "rate": 0.8,
+     "low": 0.652426936536005,
+     "high": 0.895000102745623
+    }
+   }
+  },
+  {
+   "id": "S5",
+   "statement": "Better search gives better answers.",
+   "held": false,
+   "detail": {
+    "search_change": -5,
+    "answer_change": 19
+   }
+  }
+ ],
+ "join": {
+  "rule": "search above the reference's interval, answer not lower",
+  "passed": [],
+  "joined": null
+ },
+ "paired_search": {
+  "keyword": {
+   "only_other": 37,
+   "only_reference": 86,
+   "p_value": 1.1699599803798203e-05
+  },
+  "hybrid-all": {
+   "only_other": 27,
+   "only_reference": 57,
+   "p_value": 0.001404494631113956
+  },
+  "hybrid-50": {
+   "only_other": 27,
+   "only_reference": 51,
+   "p_value": 0.008771714457060136
+  },
+  "hybrid-20": {
+   "only_other": 29,
+   "only_reference": 34,
+   "p_value": 0.6146550157654618
+  }
+ },
+ "paired_answer": {
+  "hybrid-20": {
+   "only_other": 61,
+   "only_reference": 33,
+   "p_value": 0.005078435812829811
+  }
+ }
+}
