@@ -234,3 +234,11 @@ def _pipeline():
     from tests.rag.mini_corpus import REFERENCE
 
     return dict(REFERENCE, chunk={"kind": "whole"})
+
+
+def test_marks_can_leave_out_faithful(tmp_path):
+    path = tmp_path / "m.csv"
+    path.write_text("n,item_id,declined,correct,faithful,note\n1,x1,n,y,,\n", encoding="utf-8")
+
+    [mark] = read_marks(path, ["x1"], ("declined", "correct"))
+    assert mark.correct is True and mark.faithful is None

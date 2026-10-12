@@ -124,11 +124,12 @@ def judge_report(config: CheckArg) -> None:
         _fail("the run's log is not the run the sample was drawn from")
     marked = record.get("hand", record["items"])
     try:
-        marks = read_marks(check.out / MARKS, marked)
+        marks = read_marks(check.out / MARKS, marked, check.hand_fields)
     except ValueError as exc:
         _fail(str(exc))
     if "hand" in record:
-        report = two_marker_report(record["items"], logs, read_second(check.out / FOLDER), marks)
+        second = read_second(check.out / FOLDER)
+        report = two_marker_report(record["items"], logs, second, marks, check.hand_fields)
         text = format_two_marker(report)
     else:
         report = agreement(marks, logs)

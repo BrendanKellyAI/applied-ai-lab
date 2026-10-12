@@ -109,10 +109,15 @@ def _agree(pairs: Sequence[tuple[Verdict, Verdict | Mark]], read) -> Proportion:
     return Proportion.of(sum(1 for a, b in pairs if read(a) == read(b)), len(pairs))
 
 
-def _by_field(pairs) -> dict[str, Any]:
-    out = {f: _agree(pairs, lambda v, f=f: getattr(v, f)).model_dump() for f in FIELDS}
-    out["right"] = _agree(pairs, right).model_dump()
+def _by_field(pairs, fields: Sequence[str] = FIELDS) -> dict[str, Any]:
+    out = {f: _agree(pairs, lambda v, f=f: getattr(v, f)).model_dump() for f in fields}
+    if "faithful" in fields:
+        out["right"] = _agree(pairs, right).model_dump()
     return out
+
+
+def _correct(verdict: Verdict | Mark) -> bool:
+    return verdict.correct
 
 
 def two_marker_report(
@@ -120,16 +125,20 @@ def two_marker_report(
     logs: Sequence[ItemLog],
     second: Mapping[str, Verdict | None],
     marks: Sequence[Mark],
+    fields: Sequence[str] = FIELDS,
 ) -> dict[str, Any]:
-    """The judge against the second model on the whole sample, both against the hand marks,
-    the code check against the hand marks, and an estimate of the judge's accuracy on "right"."""
+    """The judge against the second model on the whole sample, both against the hand marks on
+    the `fields` the person marked, the code check against the hand marks, and an estimate of
+    the judge's accuracy on the key verdict: "right" when faithfulness was marked by hand,
+    otherwise "correct"."""
+    key, key_name = (right, "right") if "faithful" in fields else (_correct, "correct")
     by_id = {g.item_id: g for g in logs}
     judge_of = {i: by_id[i].verdict for i in sample}
     both = [i for i in sample if second.get(i) is not None]
     hand = {m.item_id: m for m in marks}
-    split = [i for i in both if right(judge_of[i]) != right(second[i])]
+    split = [i for i in both if key(judge_of[i]) != key(second[i])]
     marked_split = [i for i in split if i in hand]
-    with_judge = sum(1 for i in marked_split if right(hand[i]) == right(judge_of[i]))
+    with_judge = sum(1 for i in marked_split if key(hand[i]) == key(judge_of[i]))
     agreed = len(both) - len(split)
     coded = [i for i in hand if by_id[i].code_check is not None]
     return {
@@ -137,31 +146,35 @@ def two_marker_report(
         "second_errors": sorted(i for i in sample if second.get(i) is None),
         "models": _by_field([(judge_of[i], second[i]) for i in both]),
         "hand_items": len(hand),
-        "judge_with_hand": _by_field([(judge_of[i], hand[i]) for i in hand]),
-        "second_with_hand": _by_field([(second[i], hand[i]) for i in hand if second.get(i)]),
+        "hand_fields": list(fields),
+        "key_verdict": key_name,
+        "judge_with_hand": _by_field([(judge_of[i], hand[i]) for i in hand], fields),
+        "second_with_hand": _by_field(
+            [(second[i], hand[i]) for i in hand if second.get(i)], fields
+        ),
         "code_check_on_hand": {
             "items": len(coded),
             "judge_matches_hand": sum(1 for i in coded if judge_of[i].correct == hand[i].correct),
             "code_matches_hand": sum(1 for i in coded if by_id[i].code_check == hand[i].correct),
         },
-        "right_split": {
+        "key_split": {
             "items": len(split),
             "hand_marked": len(marked_split),
             "hand_sides_with_judge": with_judge,
             "hand_sides_with_second": sum(
-                1 for i in marked_split if right(hand[i]) == right(second[i])
+                1 for i in marked_split if key(hand[i]) == key(second[i])
             ),
             "not_marked": sorted(set(split) - set(marked_split)),
         },
-        # Assumes that where both models agree on "right", they are right. Not measured.
-        "judge_right_estimate": Proportion.of(
+        # Assumes that where both models agree on the key verdict, they are right. Not measured.
+        "judge_key_estimate": Proportion.of(
             agreed + with_judge, agreed + len(marked_split)
         ).model_dump(),
         "hand_disagreements": [
             _row(i, judge_of[i], second.get(i), hand[i])
             for i in hand
-            if any(getattr(hand[i], f) != getattr(judge_of[i], f) for f in FIELDS)
-            or (second.get(i) and any(getattr(hand[i], f) != getattr(second[i], f) for f in FIELDS))
+            if any(getattr(hand[i], f) != getattr(judge_of[i], f) for f in fields)
+            or (second.get(i) and any(getattr(hand[i], f) != getattr(second[i], f) for f in fields))
         ],
     }
 
@@ -193,9 +206,10 @@ def format_two_marker(report: dict[str, Any]) -> str:
         ("second vs hand", "second_with_hand"),
     ):
         lines.append(f"  {label}: " + "; ".join(line(f, p) for f, p in report[key].items()))
-    split = report["right_split"]
+    split = report["key_split"]
     lines.append(
-        f"  split on right: {split['items']}, hand-marked {split['hand_marked']}, "
+        f"  split on {report['key_verdict']}: {split['items']}, "
+        f"hand-marked {split['hand_marked']}, "
         f"sided with judge {split['hand_sides_with_judge']}, "
         f"with second {split['hand_sides_with_second']}"
     )
@@ -205,7 +219,9 @@ def format_two_marker(report: dict[str, Any]) -> str:
         f"judge {code['judge_matches_hand']}, "
         f"code {code['code_matches_hand']}"
     )
-    lines.append("  " + line("judge right, estimated", report["judge_right_estimate"]))
+    lines.append(
+        "  " + line(f"judge {report['key_verdict']}, estimated", report["judge_key_estimate"])
+    )
     if report["second_errors"]:
         lines.append(f"  second model gave no verdict on: {', '.join(report['second_errors'])}")
     return "\n".join(lines)

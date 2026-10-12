@@ -119,6 +119,24 @@ number.
   correct, and is labelled as an estimate everywhere it appears.
 - Splits on "right" beyond the 10 marked, if any, listed as unchecked.
 
+## Second amendment, 12 October 2026: hand marks without the passages
+
+Made before any item was marked. The owner marks each item from the question, the reference
+answer and the system's answer only, without reading the five passages. Faithfulness cannot be
+judged without the passages, so the hand marks cover `declined` and `correct` only.
+
+- **A1, A2 and A4 are unchanged.**
+- **A3 is restated on correctness:** on the hand-marked items where the two models split on
+  `correct`, the hand mark matches the judge on at least half. If no hand-marked item splits on
+  `correct`, A3 is not tested and the README says so.
+- **The estimate is restated on correctness:** items where both models agree on `correct`,
+  counted as right, plus the hand-marked splits on `correct` the judge got right.
+- **Faithfulness is checked by no person.** Its only check is agreement between the two models
+  on all 50, and the README says so wherever the answer number, which needs faithfulness,
+  appears.
+- The 10 items were already chosen by the first amendment's rule, which ranks splits on
+  "right" first. That choice is kept.
+
 ## What this does not test
 
 - **Shared verdicts are not checked.** Where the two models agree, no person looks. Two models

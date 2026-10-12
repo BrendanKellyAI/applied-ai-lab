@@ -70,11 +70,11 @@ def test_report_compares_models_hand_and_code_check():
 
     assert report["second_errors"] == ["d"]
     assert report["models"]["right"]["count"] == 1 and report["models"]["right"]["total"] == 3
-    split = report["right_split"]
+    split = report["key_split"]
     assert (split["items"], split["hand_marked"], split["hand_sides_with_judge"]) == (2, 2, 1)
     assert split["hand_sides_with_second"] == 1
     # One item where both models agree, plus one hand-marked split the judge got right.
-    assert (report["judge_right_estimate"]["count"], report["judge_right_estimate"]["total"]) == (
+    assert (report["judge_key_estimate"]["count"], report["judge_key_estimate"]["total"]) == (
         2,
         3,
     )
@@ -163,3 +163,20 @@ def test_cli_estimates_without_a_key(tmp_path, library, library_dir):
     assert "calls to gemini-3.6-flash at reasoning medium" in result.output
     record = json.loads((tmp_path / "check" / "sample.json").read_text(encoding="utf-8"))
     assert "hand" not in record
+
+
+def test_without_faithful_marks_the_report_keys_on_correct():
+    logs = [_log("a", verdict=_v()), _log("b", verdict=_v(faithful=False))]
+    second = {"a": _v(correct=False), "b": _v()}
+    marks = [
+        Mark(item_id="a", declined=False, correct=True),
+        Mark(item_id="b", declined=False, correct=True),
+    ]
+    report = two_marker_report(["a", "b"], logs, second, marks, ("declined", "correct"))
+
+    assert report["key_verdict"] == "correct" and set(report["judge_with_hand"]) == {
+        "declined",
+        "correct",
+    }
+    assert report["key_split"]["items"] == 1 and report["key_split"]["hand_sides_with_judge"] == 1
+    assert report["hand_disagreements"][0]["item_id"] == "a"

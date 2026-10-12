@@ -17,3 +17,6 @@ second_judge:
 hand: 10
 limits:
   google: {max_concurrency: 4, requests_per_minute: 60}
+# Second amendment, 12 October 2026, before any mark: the person marks declines and
+# correctness from the question, the reference answer and the system's answer alone.
+hand_fields: [declined, correct]

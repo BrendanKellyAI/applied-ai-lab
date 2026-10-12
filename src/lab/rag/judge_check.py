@@ -14,7 +14,7 @@ import random
 from collections import defaultdict
 from collections.abc import Sequence
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
@@ -55,6 +55,9 @@ class CheckConfig(BaseModel):
     seed: int
     second_judge: ModelSpec | None = None
     hand: int | None = Field(default=None, gt=0)
+    # The verdict fields the person marks. Faithfulness needs the passages read; leaving it
+    # out makes the hand check about declines and correctness only.
+    hand_fields: tuple[Literal["declined", "correct", "faithful"], ...] = FIELDS
     limits: dict[ProviderName, ProviderLimits] = Field(default_factory=dict)
 
 
@@ -203,19 +206,21 @@ class Mark(BaseModel):
     item_id: str
     declined: bool
     correct: bool
-    faithful: bool
+    # None when the person did not mark faithfulness (see CheckConfig.hand_fields).
+    faithful: bool | None = None
     note: str = ""
 
 
-def read_marks(path: Path, sample: Sequence[str]) -> list[Mark]:
-    """The person's marks, one per sampled item. Refuses blanks, unknown values and ids."""
+def read_marks(path: Path, sample: Sequence[str], fields: Sequence[str] = FIELDS) -> list[Mark]:
+    """The person's marks, one per sampled item, for `fields`. Refuses blanks, unknown values
+    and ids. Fields not in `fields` are not read."""
     with path.open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
     problems: list[str] = []
     marks: list[Mark] = []
     for row in rows:
         item_id = (row.get("item_id") or "").strip()
-        values = {f: _yes_no(row.get(f, "")) for f in FIELDS}
+        values = {f: _yes_no(row.get(f, "")) for f in fields}
         bad = [f for f, v in values.items() if v is None]
         if bad:
             problems.append(f"{item_id or 'a row'}: {', '.join(bad)} not marked y or n")
