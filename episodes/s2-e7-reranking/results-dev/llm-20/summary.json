@@ -1,0 +1,111 @@
+{
+ "episode": "s2-e7-reranking",
+ "condition": "llm-20",
+ "measure": "search",
+ "config_id": "eb9b824ce5db",
+ "base_id": "0ef803fd06f1",
+ "changed": [
+  "rerank"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "llm",
+   "shortlist": 20,
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 100,
+ "run_utc": "2026-10-12T22:47:26+00:00",
+ "numbers": {
+  "search": {
+   "count": 56,
+   "total": 70,
+   "rate": 0.8,
+   "low": 0.6918335550374695,
+   "high": 0.8769526075163705
+  },
+  "leaks": {
+   "count": 18,
+   "total": 90,
+   "rate": 0.2,
+   "low": 0.13042401182717056,
+   "high": 0.29413736351142555
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": null
+ },
+ "calls": {
+  "rerank": [
+   {
+    "planned": 90,
+    "already_complete": 0,
+    "cached": 0,
+    "made": 90,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 1005902,
+      "output_tokens": 4160,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ]
+ },
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

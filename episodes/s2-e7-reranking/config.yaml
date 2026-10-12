@@ -19,4 +19,4 @@ conditions:
     measure: search
   - name: llm-20
     changes: {rerank: {mode: llm, shortlist: 20, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
-    measure: search
+    measure: full

@@ -1,0 +1,5 @@
+{
+ "rule": "higher dev recall at 5 on the 70 answerable dev items; ties to 10",
+ "dev_recall": {"baseline": 48, "llm-10": 52, "llm-20": 56},
+ "chosen": "llm-20"
+}
