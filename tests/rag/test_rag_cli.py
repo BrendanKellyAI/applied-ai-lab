@@ -27,7 +27,7 @@ def offline_models(monkeypatch):
             providers={name: provider for name in names}, missing_keys={}
         ),
     )
-    monkeypatch.setattr("lab.rag.cli._embedding_client", FakeEmbeddingsClient)
+    monkeypatch.setattr("lab.rag.cli.openai_client", FakeEmbeddingsClient)
     return provider
 
 

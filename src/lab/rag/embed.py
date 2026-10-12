@@ -6,6 +6,7 @@ embedding calls are batched and a batch rarely repeats exactly. Vectors live in 
 """
 
 import hashlib
+import os
 import sqlite3
 from collections.abc import Callable, Sequence
 from contextlib import closing
@@ -117,3 +118,12 @@ class Embedder:
             self.store.put(self.model, group, vectors)
         found = self.store.get_many(self.model, texts)
         return np.array([found[text] for text in texts])
+
+
+def openai_client() -> EmbeddingsClient | None:
+    """An OpenAI client for embeddings, or None when there is no key."""
+    if not os.environ.get("OPENAI_API_KEY"):
+        return None
+    import openai
+
+    return openai.OpenAI(max_retries=2)

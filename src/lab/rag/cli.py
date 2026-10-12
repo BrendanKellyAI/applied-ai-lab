@@ -1,6 +1,5 @@
 """`lab rag`: estimate and run a Season 2 episode on the reference pipeline."""
 
-import os
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -11,14 +10,16 @@ from lab.cache import ResponseCache, shared_cache_root
 from lab.config import ConfigError
 from lab.prices import load_prices
 from lab.providers.registry import available_providers
+from lab.rag.build_corpus.cli import build_corpus
 from lab.rag.config import Episode, ResolvedCondition, load_episode
 from lab.rag.corpus import CorpusError, load_library
-from lab.rag.embed import Embedder, EmbeddingsClient, EmbeddingStore
+from lab.rag.embed import Embedder, EmbeddingsClient, EmbeddingStore, openai_client
 from lab.rag.estimate import ConditionEstimate, estimate_condition, format_estimate
 from lab.rag.pipeline import RunContext, run_condition, select_items
 from lab.runner import Runner
 
 rag_app = typer.Typer(help="Estimate and run Season 2 RAG episodes.", no_args_is_help=True)
+rag_app.command("build-corpus")(build_corpus)
 
 ConfigArg = Annotated[Path, typer.Argument(help="The episode's config.yaml.")]
 PilotOption = Annotated[bool, typer.Option("--pilot", help="Run the pilot items only.")]
@@ -35,15 +36,6 @@ def _cache_root(cache_dir: Path | None) -> Path:
 
 def _embedder(model: str, client: EmbeddingsClient | None, cache_root: Path) -> Embedder:
     return Embedder(client, model, EmbeddingStore(cache_root / "embeddings" / "s2.sqlite"))
-
-
-def _embedding_client() -> EmbeddingsClient | None:
-    """An OpenAI client for embeddings, or None when there is no key."""
-    if not os.environ.get("OPENAI_API_KEY"):
-        return None
-    import openai
-
-    return openai.OpenAI(max_retries=2)
 
 
 def _load(config: Path) -> tuple[Episode, Any]:
@@ -135,7 +127,7 @@ def run(
         library, episode.config.items, pilot=pilot, per_type=episode.config.pilot_per_type
     )
     results = episode.folder / "results" / ("pilot" if pilot else "")
-    client = _embedding_client()
+    client = openai_client()
     for chosen in conditions:
         context = RunContext(
             episode=episode,

@@ -1,0 +1,532 @@
+# The Halvard Home library and test set (Season 2 corpus spec). Every setting the build uses is
+# here, so it can be reproduced. Facts, values, item assignments and spans are made in code from
+# the seed; the model writes the prose around sentences it is given word for word, and code
+# checks every result.
+corpus_version: halvard-v2
+seed: 20261012
+company: Halvard Home
+library_date: 2026-10-01
+current_from: 2026-03-01
+previous_from: 2025-03-01
+previous_to: 2026-02-28
+internal_from: 2026-01-01
+
+generation:
+  provider: openai
+  model: gpt-6-astra
+  # gpt-6-astra must state a reasoning level; medium is the provider default v1 ran at.
+  # No temperature: the model rejects one (S1 E8).
+  reasoning: medium
+  max_output_tokens: 4000
+checker:
+  provider: anthropic
+  model: claude-sonnet-5-5
+  reasoning: "off"
+  max_output_tokens: 400
+# A failed draft is sent back with the reason; after this many attempts the build stops.
+max_attempts: 4
+section_tokens: [450, 1000]
+article_tokens: [120, 220]
+internal_section_tokens: [350, 800]
+# The long-context pack must leave this much of a 128,000-token window free (o200k_base).
+pack_limit_tokens: 120000
+
+products:
+  - Brio kettle
+  - Tessa dishwasher
+  - Orrin heat pump
+  - Lumen smart thermostat
+  - Keel washing machine
+  - Ashby tumble dryer
+  - Vale fridge freezer
+  - Corra induction hob
+  - Fenwick cooker hood
+  - Mira robot vacuum
+plans: [Extended Care, Extended Care Plus]
+# Service regions and the postcode areas each covers. Bridge questions go from a postcode area
+# to its region, then to that region's terms in another policy.
+regions:
+  Scotland North: [AB, IV, KW, PH, DD]
+  Scotland South: [EH, G, KA, ML, TD]
+  North of England: [NE, LS, M, YO, CA]
+  Midlands: [B, CV, DE, LE, NG]
+  Wales and West: [CF, SA, LL, BS, GL]
+  London and South East: [N, SE, BN, CT, ME]
+  Northern Ireland: [BT]
+  Island Areas: [GY, JE, IM, HS, ZE]
+
+# Value kinds: how a planted value is written. Every planted value is unique in the library.
+kinds:
+  days: "{n} days"
+  working_days: "{n} working days"
+  weeks: "{n} weeks"
+  months: "{n} months"
+  hours: "{n} hours"
+  minutes: "{n} minutes"
+  years: "{n} years"
+  pounds: "£{n}.00"
+  percent: "{n}%"
+  centimetres: "{n} centimetres"
+  metres: "{n} metres"
+  degrees: "{n} degrees"
+  miles: "{n} miles"
+  batch: "batch {n}"
+
+# Each attribute is a family of facts: one per entity in its scope. `named` names the entity;
+# `bare` relies on the heading for it; `lead` names the entity without the value, and is
+# followed by `bare` in a two-sentence fact. `twin` is a look-alike attribute in another
+# document, for distractor items.
+policies:
+  - doc_id: POL-WAR
+    title: Warranty
+    general:
+      - heading: Registering your appliance
+        attributes:
+          - {id: war-register, kind: days, range: [14, 120], named: "Register a new appliance within {value} of delivery to activate the standard warranty."}
+          - {id: war-proof, kind: months, range: [12, 72], named: "Keep your proof of purchase for at least {value} after delivery."}
+      - heading: Making a claim
+        attributes:
+          - {id: war-reply, kind: working_days, range: [2, 30], named: "Halvard Home replies to a warranty claim within {value} of receiving it."}
+          - {id: war-phone, kind: hours, range: [2, 72], named: "A claim made by phone is logged within {value}."}
+      - heading: What the warranty does not cover
+        attributes:
+          - {id: war-misuse, kind: pounds, range: [20, 150], named: "An inspection that finds misuse is charged at {value}."}
+          - {id: war-cosmetic, kind: days, range: [3, 30], named: "Cosmetic damage must be reported within {value} of delivery."}
+    product:
+      - heading: Cover period
+        attributes:
+          - {id: war-cover, kind: months, range: [12, 150], twin: ser-service,
+             named: "The {entity} is covered for {value} from the date of delivery.",
+             bare: "Cover lasts {value} from the date of delivery.",
+             lead: "Cover for the {entity} starts on the day it is delivered, not the day it was ordered."}
+          - {id: war-parts, kind: months, range: [6, 90], twin: saf-check,
+             named: "Replacement parts fitted to the {entity} are covered for a further {value}.",
+             bare: "Replacement parts fitted under the warranty are covered for a further {value}.",
+             lead: "Parts fitted to the {entity} during a warranty repair carry their own cover."}
+          - {id: war-labour, kind: months, range: [6, 48],
+             named: "Labour for repairs to the {entity} is free for the first {value}.",
+             bare: "Labour for repairs is free for the first {value}.",
+             lead: "Repairs to the {entity} include labour only for an opening period."}
+          - {id: war-transfer, kind: days, range: [5, 150],
+             named: "If the {entity} is sold on, the new owner must transfer the warranty within {value}.",
+             bare: "If it is sold on, the new owner must transfer the warranty within {value}.",
+             lead: "The warranty on the {entity} can pass to a new owner."}
+      - heading: Repairs under warranty
+        attributes:
+          - {id: war-repair, kind: weeks, range: [1, 40], twin: ret-inspect,
+             named: "A warranty repair to the {entity} is completed within {value} of the fault being confirmed.",
+             bare: "A warranty repair is completed within {value} of the fault being confirmed.",
+             lead: "The repair time for the {entity} is counted from when an engineer confirms the fault."}
+          - {id: war-loan, kind: weeks, range: [1, 40],
+             named: "If a repair to the {entity} takes longer than {value}, Halvard Home lends a replacement.",
+             bare: "If a repair takes longer than {value}, Halvard Home lends a replacement.",
+             lead: "Some repairs to the {entity} need parts that are not held in stock."}
+          - {id: war-callout, kind: pounds, range: [25, 120], twin: ser-diagnose,
+             named: "An engineer visit for the {entity} after the warranty has ended costs {value}.",
+             bare: "An engineer visit after the warranty has ended costs {value}.",
+             lead: "Visits to the {entity} after the warranty ends are charged at a fixed rate."}
+          - {id: war-refurb, kind: weeks, range: [4, 80],
+             named: "A refurbished part fitted to the {entity} is covered for {value}.",
+             bare: "A refurbished part is covered for {value}.",
+             lead: "Refurbished parts are sometimes fitted to the {entity} when new parts are scarce."}
+    plan:
+      - heading: What the plan adds
+        attributes:
+          - {id: war-plan-extend, kind: months, range: [12, 60], named: "{entity} extends the standard warranty by {value}.", bare: "The plan extends the standard warranty by {value}."}
+          - {id: war-plan-excess, kind: pounds, range: [10, 90], named: "Each claim under {entity} carries an excess of {value}.", bare: "Each claim carries an excess of {value}."}
+    region:
+      - heading: Warranty repairs in this region
+        attributes:
+          - {id: war-region-visit, kind: hours, range: [24, 120], named: "In {entity}, a warranty engineer visit is offered within {value} of a claim being accepted.", bare: "A warranty engineer visit is offered within {value} of a claim being accepted."}
+          - {id: war-region-parts, kind: working_days, range: [1, 60], named: "Parts for warranty repairs in {entity} arrive within {value}.", bare: "Parts for warranty repairs arrive within {value}."}
+
+  - doc_id: POL-RET
+    title: Returns and refunds
+    general:
+      - heading: Changing your mind
+        attributes:
+          - {id: ret-window, kind: days, range: [14, 100], named: "You can return an unwanted appliance within {value} of delivery."}
+          - {id: ret-refund, kind: working_days, range: [3, 30], named: "Refunds are paid within {value} of a returned appliance arriving at our warehouse."}
+      - heading: Damaged deliveries
+        attributes:
+          - {id: ret-damage, kind: hours, range: [12, 96], named: "Report damage found on delivery within {value}."}
+          - {id: ret-replace, kind: working_days, range: [2, 21], named: "A replacement for a damaged delivery is sent within {value}."}
+      - heading: Faulty appliances
+        attributes:
+          - {id: ret-faulty, kind: days, range: [15, 120], named: "An appliance that develops a fault within {value} of delivery can be returned for a full refund."}
+          - {id: ret-test, kind: working_days, range: [2, 20], named: "Returned faulty appliances are tested within {value} of arrival."}
+    product:
+      - heading: Returning the appliance
+        attributes:
+          - {id: ret-restock, kind: percent, range: [5, 45],
+             named: "A restocking charge of {value} of the price applies to an opened {entity}.",
+             bare: "A restocking charge of {value} of the price applies once the packaging is opened.",
+             lead: "An unopened {entity} is refunded in full, but opening the box changes that."}
+          - {id: ret-collect, kind: pounds, range: [15, 95], twin: ser-price,
+             named: "Collection of a returned {entity} costs {value}.",
+             bare: "Collection of a return costs {value}.",
+             lead: "Halvard Home can collect a {entity} that is being returned."}
+          - {id: ret-label, kind: hours, range: [1, 48],
+             named: "A returns label for the {entity} is emailed within {value} of the request.",
+             bare: "A returns label is emailed within {value} of the request.",
+             lead: "A {entity} sent back by courier needs a printed returns label."}
+          - {id: ret-exchange, kind: days, range: [5, 150],
+             named: "An exchange for a {entity} in a different colour must be requested within {value}.",
+             bare: "An exchange for a different colour must be requested within {value}.",
+             lead: "The {entity} can be swapped for another colour."}
+      - heading: Packaging and condition
+        attributes:
+          - {id: ret-packaging, kind: days, range: [7, 120],
+             named: "Keep the original packaging of the {entity} for {value} in case it needs to be returned.",
+             bare: "Keep the original packaging for {value} in case it needs to be returned.",
+             lead: "The {entity} travels safely only in its original box."}
+          - {id: ret-inspect, kind: days, range: [2, 60], twin: war-repair,
+             named: "A returned {entity} is inspected within {value} of arrival.",
+             bare: "A returned appliance is inspected within {value} of arrival.",
+             lead: "Every {entity} that comes back is checked before a refund is approved."}
+          - {id: ret-partial, kind: percent, range: [30, 70],
+             named: "A returned {entity} missing accessories is refunded at {value} of the price.",
+             bare: "A return missing accessories is refunded at {value} of the price.",
+             lead: "A {entity} must come back with everything that was in the box."}
+          - {id: ret-clean, kind: pounds, range: [10, 60],
+             named: "A returned {entity} that needs cleaning is charged {value}.",
+             bare: "A return that needs cleaning is charged {value}.",
+             lead: "A {entity} should be clean and dry before it is collected."}
+    plan:
+      - heading: Returns under the plan
+        attributes:
+          - {id: ret-plan-extend, kind: days, range: [7, 60], named: "{entity} adds {value} to the standard returns window.", bare: "The plan adds {value} to the standard returns window."}
+          - {id: ret-plan-discount, kind: percent, range: [10, 90], named: "{entity} members get {value} off collection charges.", bare: "Members get {value} off collection charges."}
+    region:
+      - heading: Collections in this region
+        attributes:
+          - {id: ret-region-collect, kind: working_days, range: [2, 60], named: "Collections in {entity} are made within {value} of a return being booked.", bare: "Collections are made within {value} of a return being booked."}
+          - {id: ret-region-window, kind: minutes, range: [60, 240], named: "Collection drivers in {entity} give an arrival window of {value}.", bare: "Collection drivers give an arrival window of {value}."}
+
+  - doc_id: POL-SAF
+    title: Safety and recalls
+    general:
+      - heading: Reporting a safety concern
+        attributes:
+          - {id: saf-reply, kind: hours, range: [1, 48], named: "Safety reports are answered within {value}."}
+          - {id: saf-notice, kind: days, range: [1, 30], named: "Customers are told of a recall within {value} of it being issued."}
+      - heading: Recalls
+        attributes:
+          - {id: saf-recall-collect, kind: working_days, range: [2, 30], named: "A recalled appliance is collected within {value} of the customer replying."}
+          - {id: saf-recall-refund, kind: days, range: [5, 40], named: "Refunds for recalled appliances are paid within {value}."}
+      - heading: Electrical safety
+        attributes:
+          - {id: saf-rcd, kind: months, range: [1, 12], named: "Test the home's residual current device every {value}."}
+          - {id: saf-lead, kind: metres, range: [2, 10], named: "Never run an appliance from an extension lead longer than {value}."}
+    product:
+      - heading: Safe use
+        attributes:
+          - {id: saf-clearance, kind: centimetres, range: [2, 60],
+             named: "Leave at least {value} of space around the {entity}.",
+             bare: "Leave at least {value} of space around the appliance.",
+             lead: "Air must be able to move freely around the {entity}."}
+          - {id: saf-cool, kind: minutes, range: [5, 120], twin: ser-minutes,
+             named: "Let the {entity} cool for {value} before cleaning it.",
+             bare: "Let it cool for {value} before cleaning it.",
+             lead: "Parts of the {entity} stay hot after it is switched off."}
+          - {id: saf-check, kind: months, range: [3, 48], twin: war-parts,
+             named: "Have the {entity} safety-checked every {value}.",
+             bare: "Have it safety-checked every {value}.",
+             lead: "The {entity} needs a regular safety check by a qualified engineer."}
+          - {id: saf-age, kind: years, range: [3, 25],
+             named: "Children under {value} must not use the {entity} without supervision.",
+             bare: "Children under {value} must not use it without supervision.",
+             lead: "The {entity} is not a toy, and children need watching near it."}
+      - heading: Installation and moving
+        attributes:
+          - {id: saf-settle, kind: hours, range: [1, 48],
+             named: "After moving the {entity}, wait {value} before switching it on.",
+             bare: "After moving it, wait {value} before switching it on.",
+             lead: "Moving the {entity} can disturb its internal parts."}
+          - {id: saf-tilt, kind: degrees, range: [10, 60],
+             named: "Do not tilt the {entity} more than {value} when carrying it.",
+             bare: "Do not tilt it more than {value} when carrying it.",
+             lead: "The {entity} must be kept nearly upright when it is carried."}
+          - {id: saf-socket, kind: centimetres, range: [151, 300],
+             named: "The {entity} must be installed within {value} of its socket.",
+             bare: "It must be installed within {value} of its socket.",
+             lead: "The power lead of the {entity} is deliberately short."}
+          - {id: saf-heat, kind: centimetres, range: [61, 150],
+             named: "Install the {entity} at least {value} from a gas hob or open flame.",
+             bare: "Install it at least {value} from a gas hob or open flame.",
+             lead: "The {entity} must not be placed near an open flame."}
+    plan:
+      - heading: Safety checks under the plan
+        attributes:
+          - {id: saf-plan-check, kind: months, range: [6, 24], named: "{entity} includes a free safety check every {value}.", bare: "The plan includes a free safety check every {value}."}
+          - {id: saf-plan-priority, kind: hours, range: [2, 48], named: "{entity} members with a safety concern get an engineer within {value}.", bare: "Members with a safety concern get an engineer within {value}."}
+    region:
+      - heading: Safety visits in this region
+        attributes:
+          - {id: saf-region-urgent, kind: hours, range: [4, 72], named: "Urgent safety visits in {entity} are made within {value}.", bare: "Urgent safety visits are made within {value}."}
+          - {id: saf-region-recall, kind: working_days, range: [2, 60], named: "Recall collections in {entity} are made within {value}.", bare: "Recall collections are made within {value}."}
+
+  - doc_id: POL-SER
+    title: Servicing and engineer visits
+    general:
+      - heading: Booking a visit
+        attributes:
+          - {id: ser-booking, kind: working_days, range: [1, 21], named: "Standard engineer visits are booked within {value} of a request."}
+          - {id: ser-slot, kind: hours, range: [2, 6], named: "Each visit is given an arrival window of {value}."}
+      - heading: Charges
+        attributes:
+          - {id: ser-hourly, kind: pounds, range: [30, 120], named: "Labour after the first hour is charged at {value} an hour."}
+          - {id: ser-handling, kind: percent, range: [5, 30], named: "Parts fitted outside the warranty carry a handling charge of {value}."}
+      - heading: Cancelling a visit
+        attributes:
+          - {id: ser-cancel, kind: hours, range: [2, 72], named: "Cancel a visit at least {value} before it is due to avoid a charge."}
+          - {id: ser-cancel-fee, kind: pounds, range: [10, 60], named: "A visit cancelled later than that is charged at {value}."}
+    product:
+      - heading: Servicing schedule
+        attributes:
+          - {id: ser-service, kind: months, range: [6, 60], twin: war-cover,
+             named: "The {entity} should be serviced every {value}.",
+             bare: "It should be serviced every {value}.",
+             lead: "Regular servicing keeps the {entity} working efficiently."}
+          - {id: ser-minutes, kind: minutes, range: [20, 240], twin: saf-cool,
+             named: "A routine service of the {entity} takes about {value}.",
+             bare: "A routine service takes about {value}.",
+             lead: "An engineer services the {entity} in a single visit."}
+          - {id: ser-price, kind: pounds, range: [40, 250], twin: ret-collect,
+             named: "A routine service of the {entity} costs {value}.",
+             bare: "A routine service costs {value}.",
+             lead: "Routine servicing of the {entity} is charged at a fixed price."}
+          - {id: ser-reminder, kind: weeks, range: [1, 40],
+             named: "A reminder is sent {value} before the {entity} is due for a service.",
+             bare: "A reminder is sent {value} before a service is due.",
+             lead: "Owners of the {entity} are reminded when a service is due."}
+      - heading: Common repairs
+        attributes:
+          - {id: ser-diagnose, kind: pounds, range: [20, 90], twin: war-callout,
+             named: "Diagnosing a fault on the {entity} costs {value} if no repair follows.",
+             bare: "Diagnosing a fault costs {value} if no repair follows.",
+             lead: "An engineer can diagnose a fault on the {entity} without repairing it."}
+          - {id: ser-guarantee, kind: days, range: [30, 365],
+             named: "Repairs to the {entity} are guaranteed for {value}.",
+             bare: "Repairs are guaranteed for {value}.",
+             lead: "Paid repairs to the {entity} come with their own guarantee."}
+          - {id: ser-filter, kind: months, range: [1, 60],
+             named: "Replace the filter of the {entity} every {value}.",
+             bare: "Replace the filter every {value}.",
+             lead: "The {entity} has a filter that wears out with use."}
+          - {id: ser-spares, kind: years, range: [17, 45],
+             named: "Spare parts for the {entity} are stocked for {value} after the model is discontinued.",
+             bare: "Spare parts are stocked for {value} after the model is discontinued.",
+             lead: "Halvard Home keeps spare parts for the {entity} after it stops being sold."}
+    plan:
+      - heading: Servicing under the plan
+        attributes:
+          - {id: ser-plan-discount, kind: percent, range: [10, 75], named: "{entity} members get {value} off routine services.", bare: "Members get {value} off routine services."}
+          - {id: ser-plan-visit, kind: working_days, range: [1, 10], named: "{entity} members are offered a visit within {value}.", bare: "Members are offered a visit within {value}."}
+    region:
+      - heading: Engineers in this region
+        # The postcode sentence for each region is added here, before these attributes.
+        postcodes: "The {entity} service team covers postcode areas {areas}."
+        attributes:
+          - {id: ser-region-callout, kind: pounds, range: [25, 140], named: "An engineer call-out in {entity} costs {value}.", bare: "An engineer call-out costs {value}."}
+          - {id: ser-region-travel, kind: miles, range: [10, 80], named: "Engineers in {entity} travel up to {value} from their base.", bare: "Engineers travel up to {value} from their base."}
+
+internal:
+  - doc_id: INT-MAN
+    title: Engineer service manual (extract)
+    heading: Internal repair limits
+    attributes:
+      - {id: int-parts-limit, kind: pounds, range: [50, 400], named: "Engineers may fit parts to the {entity} worth up to {value} without approval."}
+      - {id: int-test, kind: minutes, range: [10, 90], named: "The internal diagnostic test on the {entity} runs for {value}."}
+  - doc_id: INT-PRC
+    title: Goodwill and pricing rules
+    heading: Goodwill and discounts
+    attributes:
+      - {id: int-goodwill, kind: pounds, range: [10, 150], named: "Staff may waive charges on the {entity} of up to {value} as goodwill."}
+      - {id: int-discount, kind: percent, range: [5, 60], named: "The largest discount staff may offer on the {entity} is {value}."}
+  - doc_id: INT-FLT
+    title: Known-faults register
+    heading: Faults under investigation
+    attributes:
+      - {id: int-fault-rate, kind: percent, range: [1, 60], named: "The current fault rate on returned {entity} units is {value}."}
+      - {id: int-fix, kind: days, range: [10, 200], named: "A fix for the open fault on the {entity} is expected within {value}."}
+  - doc_id: INT-ESC
+    title: Escalation playbook
+    heading: Escalating a complaint
+    attributes:
+      - {id: int-escalate, kind: hours, range: [2, 72], named: "Complaints about the {entity} not resolved within {value} go to a team leader."}
+      - {id: int-compensation, kind: pounds, range: [10, 200], named: "The most a team leader may offer in compensation for the {entity} is {value}."}
+
+# Deleted articles: notices that were withdrawn before the library date. One per row.
+deleted:
+  sentence: "Stop using {accessory} from {value} with the {entity}, and return them for a refund."
+  accessories: [descaling tablets, rinse aid sachets, outdoor fan grilles, wall brackets,
+    detergent pods, lint filters, ice trays, pan protectors, carbon filters, side brushes,
+    travel cases, cleaning gel pouches]
+
+# Topics the library does not cover at all, for absent-topic questions.
+absent_topics:
+  - the Halvard microwave
+  - the Halvard toaster
+  - the Halvard coffee machine
+  - the Halvard air fryer
+  - the Halvard electric blanket
+  - the Halvard hair dryer
+  - the Halvard food mixer
+  - the Halvard steam iron
+  - the Halvard water softener
+  - the Halvard wine cooler
+  - the Halvard trade-in scheme
+  - the Halvard gift card
+  - the Halvard loyalty points
+  - the Halvard student discount
+  - the Halvard business accounts
+  - the Halvard kitchen design service
+  - the Halvard showroom opening hours
+  - the Halvard careers page
+  - the Halvard shareholder reports
+  - the Halvard solar panels
+  - the Halvard electric car charger
+  - the Halvard smart doorbell
+  - the Halvard security cameras
+  - the Halvard garden robot mower
+  - the Halvard pressure washer
+  - the Halvard dehumidifier
+  - the Halvard ice cream maker
+  - the Halvard bread maker
+  - the Halvard rice cooker
+  - the Halvard soup maker
+  - the Halvard juicer
+  - the Halvard slow cooker
+  - the Halvard heated clothes airer
+  - the Halvard recipe app
+
+# Items per type, test and dev (corpus spec 6.3). Spares are drawn for types whose items the
+# checker may reject, and the first that pass are kept.
+items:
+  policy_single: [40, 10]
+  policy_two_sentence: [20, 5]
+  policy_heading: [20, 5]
+  distractor: [40, 10]
+  two_part: [20, 5]
+  bridge: [20, 5]
+  followup: [40, 10]
+  version: [40, 10]
+  restricted: [40, 10]
+  absent_detail: [40, 10]
+  absent_topic: [20, 5]
+  deleted: [20, 5]
+spare_fraction: 0.25
+pilot_per_type: 2
+
+# Removed before comparing a question's words with a fact's (as v1 S2 E3).
+stop_words: [
+  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because,
+  been, before, being, below, between, both, but, by, can, could, did, do, does, doing, down,
+  during, each, few, for, from, further, get, got, had, has, have, having, he, her, here, hers,
+  him, his, how, i, if, in, into, is, it, its, just, me, more, most, my, myself, "no", nor, not,
+  now, of, "off", "on", once, only, or, other, our, ours, out, over, own, s, same, she, should, so,
+  some, such, t, than, that, the, their, theirs, them, then, there, these, they, this, those,
+  through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who,
+  whom, why, will, with, would, you, your, yours, yourself, d, ll, m, re, ve, long, much, many
+]
+
+prompts:
+  section: |
+    You write policy documents for Halvard Home, an invented maker of home appliances, in plain
+    UK English. Write the body of one section of the "{title}" policy. The section sits under
+    these headings: {path}.
+
+    Write {words} words of clear prose in short paragraphs, as a customer would read it. Do not
+    write any heading or title.
+
+    Include each of these sentences exactly as written, word for word, once each:
+    {sentences}
+    {together}
+    Do not write any other number, amount, duration, percentage, measurement or code, in figures
+    or in words. Do not name any Halvard Home product {products}. Reply with the section text only.
+  internal: |
+    You write internal documents for staff at Halvard Home, an invented maker of home
+    appliances, in plain UK English. Write the body of one section of the staff-only document
+    "{title}". The section sits under these headings: {path}. It is about the {entity}.
+
+    Write {words} words of practical guidance for staff, in short paragraphs. Do not write any
+    heading or title.
+
+    Include each of these sentences exactly as written, word for word, once each:
+    {sentences}
+
+    Do not write any other number, amount, duration, percentage, measurement or code, in figures
+    or in words. Do not name any Halvard Home product other than the {entity}. Reply with the
+    section text only.
+  intro: |
+    You write policy documents for Halvard Home, an invented maker of home appliances, in plain
+    UK English. Write the opening of the "{title}" policy: {words} words saying what the policy
+    covers and who it is for. Do not write any heading. Do not write any number, amount,
+    duration, percentage, measurement or code, in figures or in words, and do not name any
+    product. Reply with the text only.
+  deleted: |
+    You write customer support notices for Halvard Home, an invented maker of home appliances,
+    in plain UK English. Write a notice about {accessory} for the {entity}. Start with a short
+    title line, then the notice, 90 to 130 words. Include this sentence exactly as written,
+    word for word, once:
+    {sentences}
+    Do not write any other number, amount, duration, percentage, measurement or code, in figures
+    or in words. Reply with the notice only.
+  retry: |
+    Your draft broke a rule: {problem} Write it again, following every rule. Reply with the
+    text only.
+  question: |
+    Here is a fact from Halvard Home's documents:
+    "{fact}"
+    Write one question {asker} would ask whose answer is this fact. The question must name
+    {entity}. It must not contain the answer. Use everyday words rather than copying the fact.
+    Reply with the question only.
+  two_part: |
+    Here are two facts from Halvard Home's documents:
+    "{fact}"
+    "{fact_b}"
+    Write one question a customer would ask that needs both facts to answer. Name {entity} and
+    {entity_b}. Do not include either answer. Use everyday words. Reply with the question only.
+  bridge: |
+    A customer whose home is in postcode area {area} wants the answer to this, for wherever
+    they live:
+    "{blank}"
+    Write the customer's question. It must say their postcode area is {area}. It must not name
+    any region or service area. Do not include the answer. Reply with the question only.
+  followup: |
+    A customer asked: "{first}"
+    and was told: "{reply}"
+    Write the customer's next message: a short follow-up asking the same thing about {entity}.
+    Name {entity}, but do not repeat what is being asked; rely on the earlier question. Use at
+    most ten words. Reply with the message only.
+  absent_detail: |
+    Write one question a customer of Halvard Home might ask about {entity}, whose answer would
+    fill the gap in this sentence:
+    "{blank}"
+    Name {entity}. Reply with the question only.
+  absent_topic: |
+    Write one question a customer might ask Halvard Home about {topic}. Name it in the question.
+    Reply with the question only.
+  quote: |
+    Here is a support article, and a question a customer asked about it.
+
+    Article:
+    {article}
+
+    Question: {question}
+
+    Copy, word for word, the one sentence of the article that answers the question. Reply with
+    that sentence only.
+  check_system: |
+    You check whether a question can be answered from a set of passages. Answer only from the
+    passages, never from what you know. Reply with a JSON object and nothing else:
+    {"answers": true or false, "passage": the passage number that answers it, or null,
+     "reason": "one sentence"}
+  check: |
+    Question: {question}
+
+    Passages:
+    {passages}
+
+    Can the question be answered from these passages alone?

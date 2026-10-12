@@ -1,0 +1,850 @@
+{
+ "seed": 20260926,
+ "questions": [
+  {
+   "type": "identifier",
+   "article_id": "A000",
+   "question": "What does error E-2194 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A003",
+   "question": "What is part KX-9283 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A006",
+   "question": "What does error E-7084 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A009",
+   "question": "What is part KX-3107 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A012",
+   "question": "What does error E-6076 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A015",
+   "question": "What is part KX-3673 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A018",
+   "question": "What does error E-6292 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A021",
+   "question": "What is part KX-6507 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A024",
+   "question": "What does error E-5107 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A027",
+   "question": "What is part KX-3926 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A030",
+   "question": "What does error E-3865 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A033",
+   "question": "What is part KX-3452 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A036",
+   "question": "What does error E-3873 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A039",
+   "question": "What is part KX-7011 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A042",
+   "question": "What does error E-4805 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A045",
+   "question": "What is part KX-1639 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A048",
+   "question": "What does error E-6736 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A051",
+   "question": "What is part KX-9495 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A054",
+   "question": "What does error E-3293 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A057",
+   "question": "What is part KX-8033 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A060",
+   "question": "What does error E-7160 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A063",
+   "question": "What is part KX-9996 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A066",
+   "question": "What does error E-1216 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A069",
+   "question": "What is part KX-5912 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A072",
+   "question": "What does error E-4021 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A075",
+   "question": "What is part KX-2446 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A078",
+   "question": "What does error E-3946 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A081",
+   "question": "What is part KX-5646 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A084",
+   "question": "What does error E-6779 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A087",
+   "question": "What is part KX-7896 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A090",
+   "question": "What does error E-9454 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A093",
+   "question": "What is part KX-8645 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A096",
+   "question": "What does error E-8255 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A099",
+   "question": "What is part KX-3056 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A102",
+   "question": "What does error E-5328 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A105",
+   "question": "What is part KX-8618 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A108",
+   "question": "What does error E-9509 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A111",
+   "question": "What is part KX-1377 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A114",
+   "question": "What does error E-9215 mean?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "identifier",
+   "article_id": "A117",
+   "question": "What is part KX-1060 for?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A120",
+   "question": "Which wireless frequency does my smart water boiler support?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A121",
+   "question": "How should I get my dishwashing machine ready for months away from our vacation cottage?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A122",
+   "question": "What guidance should I leave beside my laundry appliance for visitors at my vacation rental?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A123",
+   "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A124",
+   "question": "What should I do if my stovetop flashes an error?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A125",
+   "question": "What should I do when my clothes-drying machine flashes an error message?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A126",
+   "question": "What should I do if I spot frozen patches in my dish-cleaning machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A127",
+   "question": "What should I do if my clothes-drying machine starts giving out a scorched odor?",
+   "regenerated": 1,
+   "rejected": [
+    {
+     "question": "What should I do if my clothes-drying machine starts giving off a scorched odor?",
+     "problem": "It reused these words from the article: off."
+    }
+   ]
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A128",
+   "question": "How can I make my heater kick in after a while instead of right away?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A129",
+   "question": "How can I safely relocate my clothes-drying machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A130",
+   "question": "What should I do if my extractor’s screen won’t show anything?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A131",
+   "question": "How long should I keep my kitchen extractor going once I’ve finished making dinner?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A132",
+   "question": "How do I bring my laundry appliance’s built-in programming up to date?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A133",
+   "question": "Who should I hire to relocate my heating system safely?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A134",
+   "question": "How can I safely relocate my built-in cooktop?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A135",
+   "question": "Will restoring my climate controller to its original state wipe out my wireless login information, programmed routines, and custom choices?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A136",
+   "question": "What should I send the service team to get a replacement part for my cooktop?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A137",
+   "question": "How do I get my floor-cleaning bot to respond to spoken commands?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A138",
+   "question": "How can I get my heating controller to show up in its companion software?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A139",
+   "question": "How long does the guarantee last for my water boiler?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A140",
+   "question": "What should I do with my refrigerator at our vacation cabin while we’re away for months?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A141",
+   "question": "Why does my stove’s extractor get wet during chilly weather?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A142",
+   "question": "How can I get my washer ready to be taken to another house safely?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A143",
+   "question": "What should I do when my washer flashes an error code?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A144",
+   "question": "Why does my refrigerator get icy and damp inside?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A145",
+   "question": "What information should I provide when buying a replacement part for my kitchen extractor?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A146",
+   "question": "How do I prevent my toddler from accidentally operating my automatic floor cleaner?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A147",
+   "question": "How do I return my automated floor cleaner to its original setup?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A148",
+   "question": "How should I dispose of my worn-out heating equipment responsibly?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A149",
+   "question": "What should I look at first when my clothes-drying machine won’t run?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A150",
+   "question": "Which wireless frequency does my refrigerator need?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A151",
+   "question": "How can I cut my electricity bills while staying cozy?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A152",
+   "question": "What should I do when my automatic floor cleaner’s cover won’t stay down?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A153",
+   "question": "What should I do first when my extractor won’t run?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A154",
+   "question": "How can I get an extra part for my washer?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A155",
+   "question": "How do I safely get rid of chalky buildup in my electric teapot?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A156",
+   "question": "What should I try when my refrigerator won’t latch properly?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A157",
+   "question": "What should I do about a puddle beneath my electric tea maker?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A158",
+   "question": "What should I try first when my heating controller stays dark and unresponsive?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "paraphrase",
+   "article_id": "A159",
+   "question": "How can I get the latest software onto my dish-cleaning machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A160",
+   "question": "What should I do if my Halvard Home Keel washing machine vibrates more than usual?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A161",
+   "question": "What should I do if water is leaking underneath my Keel washing machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A162",
+   "question": "How do I safely install my Halvard Home Ashby tumble dryer before first use?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A163",
+   "question": "What should I do if water collects underneath my Mira robot vacuum?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A164",
+   "question": "What should I do if the app cannot find my Orrin heat pump?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A165",
+   "question": "What should I do if the Halvard Home app cannot find my Keel washing machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A166",
+   "question": "Is water leaking underneath the outdoor unit of my Orrin heat pump normal during defrosting?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A167",
+   "question": "Why does my Orrin heat pump warm my home gradually, and why do the radiators feel cooler than those connected to a boiler?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A168",
+   "question": "Can my Fenwick cooker hood connect to a network set to 5 GHz only, or does it need a 2.4 GHz home wi-fi network?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A169",
+   "question": "Does the Halvard Home Brio kettle have a timer or delay-start setting?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A170",
+   "question": "Is a gentle rumbling or hissing sound while my Brio kettle heats up normal?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A171",
+   "question": "Why is my Ashby tumble dryer making a rattling, thumping or scraping noise?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A172",
+   "question": "What should I do if my Ashby tumble dryer has a flashing warning light?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A173",
+   "question": "What should I do if my Keel washing machine drains slowly or leaves water in the drum?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A174",
+   "question": "What should I do if the power goes off while my Ashby tumble dryer is running?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A175",
+   "question": "What should I do if the app cannot find my Tessa dishwasher?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A176",
+   "question": "Why is water leaking underneath my Vale fridge freezer?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A177",
+   "question": "What can cause a rattling or banging noise from my Keel washing machine, and what should I check?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A178",
+   "question": "How do I perform a factory reset on my Orrin heat pump?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A179",
+   "question": "Should my old Halvard Home Corra induction hob be recycled as electrical equipment or placed in my household rubbish bin?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A180",
+   "question": "How do I switch the child lock on and off on my Brio kettle?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A181",
+   "question": "How do I update my Vale fridge freezer’s firmware?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A182",
+   "question": "How do I perform a factory reset on my Brio kettle to return its saved settings to their original values?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A183",
+   "question": "What should I do if I notice frost or condensation on my Keel washing machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A184",
+   "question": "How do I clean my Brio kettle filter to remove loose limescale and keep water flowing freely?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A185",
+   "question": "How do I perform a factory reset on my Corra induction hob to restore its original settings and clear saved preferences?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A186",
+   "question": "What should I do if the app cannot find my Corra induction hob?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A187",
+   "question": "How do I switch the child lock on and off on my Halvard Home Tessa dishwasher?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A188",
+   "question": "How can I reduce energy use when cooking on my Corra induction hob?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A189",
+   "question": "What can cause unusual vibration from my Orrin heat pump, and what should I do about it?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A190",
+   "question": "Could an unusual vibration from my Lumen smart thermostat be caused by a loose wall fixing or nearby heating equipment rather than the thermostat itself?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A191",
+   "question": "How do I safely install my Fenwick cooker hood?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A192",
+   "question": "How long is the warranty on the Halvard Home Mira robot vacuum from the date of purchase?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A193",
+   "question": "On my Keel washing machine, does a delay start of 3 hours mean the wash begins in 3 hours or will finish in 3 hours?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A194",
+   "question": "How do I replace a damaged door seal on my Halvard Home Keel washing machine?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A195",
+   "question": "How do I update my Keel washing machine firmware using the Halvard Home app?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A196",
+   "question": "How do I pair my Keel washing machine with a voice assistant using the Halvard Home app?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A197",
+   "question": "What should I do if the app cannot find my Fenwick cooker hood?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A198",
+   "question": "What should I do if the Halvard Home app cannot find my Mira robot vacuum?",
+   "regenerated": 0,
+   "rejected": []
+  },
+  {
+   "type": "shared",
+   "article_id": "A199",
+   "question": "What should I do if the app cannot find my Vale fridge freezer?",
+   "regenerated": 0,
+   "rejected": []
+  }
+ ]
+}
