@@ -112,8 +112,8 @@
   "tasks": 190,
   "passed": 190,
   "attempts": {
-   "1": 189,
-   "2": 1
+   "1": 188,
+   "2": 2
   },
   "failed": [],
   "models_returned": [
@@ -121,36 +121,54 @@
   ],
   "calls": [
    {
-    "made": 0,
+    "made": 32,
     "cached": 0,
     "failed": 0,
-    "tokens": {}
+    "tokens": {
+     "anthropic": {
+      "input_tokens": 326819,
+      "output_tokens": 2762,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
    },
    {
-    "made": 0,
+    "made": 2,
     "cached": 0,
     "failed": 0,
-    "tokens": {}
+    "tokens": {
+     "anthropic": {
+      "input_tokens": 23938,
+      "output_tokens": 212,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
    }
   ],
   "problems": {
-   "ABSENT-045": [
-    "Reply with the JSON object only (Extra data: line 3 column 1 (char 568))."
+   "ABSENT-029": [
+    "Reply with the JSON object only (Extra data: line 3 column 1 (char 355))."
+   ],
+   "ABSENT-042": [
+    "Reply with the JSON object only (Extra data: line 3 column 1 (char 427))."
    ]
   }
  },
  "disputed": [
-  "ABSENT-012",
+  "ABSENT-017",
   "ABSENT-019",
   "ABSENT-020",
+  "ABSENT-030",
   "ABSENT-037",
-  "ABSENT-042",
-  "ABSENT-048",
-  "DELETED-003",
-  "DELETED-015",
-  "DEV-ABSENT-003",
-  "DEV-ABSENT-007",
+  "ABSENT-045",
+  "DEV-ABSENT-001",
+  "DEV-ABSENT-004",
+  "DEV-ABSENT-011",
+  "RESTRICT-PUBLIC-001",
   "RESTRICT-PUBLIC-017",
+  "RESTRICT-PUBLIC-039",
   "RESTRICT-PUBLIC-043",
   "RESTRICT-PUBLIC-049"
  ],

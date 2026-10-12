@@ -215,15 +215,15 @@
 - **Answer:** Only staff documents give this.
 - Restricted (INT-MAN@1): The internal diagnostic test on the Tessa dishwasher runs for 52 minutes.
 
-### RESTRICT-PUBLIC-001 (public)
-- **Question:** How soon should the current problem with the Vale fridge freezer be fixed?
-- **Answer:** Only staff documents give this.
-- Restricted (INT-FLT@1): A fix for the open fault on the Vale fridge freezer is expected within 120 days.
-
 ### RESTRICT-PUBLIC-002 (public)
 - **Question:** How long does the Brio kettle’s built-in check take?
 - **Answer:** Only staff documents give this.
 - Restricted (INT-MAN@1): The internal diagnostic test on the Brio kettle runs for 19 minutes.
+
+### RESTRICT-PUBLIC-003 (public)
+- **Question:** How much can engineers spend on parts for the Mira robot vacuum without asking for approval?
+- **Answer:** Only staff documents give this.
+- Restricted (INT-MAN@1): Engineers may fit parts to the Mira robot vacuum worth up to £163.00 without approval.
 
 ## restricted_staff (50 items)
 
@@ -232,15 +232,15 @@
 - **Answer:** The internal diagnostic test on the Tessa dishwasher runs for 52 minutes.
 - Evidence (INT-MAN@1): The internal diagnostic test on the Tessa dishwasher runs for 52 minutes.
 
-### RESTRICT-STAFF-001 (staff)
-- **Question:** How soon should the current problem with the Vale fridge freezer be fixed?
-- **Answer:** A fix for the open fault on the Vale fridge freezer is expected within 120 days.
-- Evidence (INT-FLT@1): A fix for the open fault on the Vale fridge freezer is expected within 120 days.
-
 ### RESTRICT-STAFF-002 (staff)
 - **Question:** How long does the Brio kettle’s built-in check take?
 - **Answer:** The internal diagnostic test on the Brio kettle runs for 19 minutes.
 - Evidence (INT-MAN@1): The internal diagnostic test on the Brio kettle runs for 19 minutes.
+
+### RESTRICT-STAFF-003 (staff)
+- **Question:** How much can engineers spend on parts for the Mira robot vacuum without asking for approval?
+- **Answer:** Engineers may fit parts to the Mira robot vacuum worth up to £163.00 without approval.
+- Evidence (INT-MAN@1): Engineers may fit parts to the Mira robot vacuum worth up to £163.00 without approval.
 
 ## shared (40 items)
 
