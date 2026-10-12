@@ -12,7 +12,7 @@ from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 from matplotlib.ticker import PercentFormatter
 
-from lab.charts import NAVY, ChartSpec, ChartStyle, export_chart, grouped_bars
+from lab.charts import MIST, WHITE, ChartSpec, ChartStyle, export_chart, grouped_bars
 from lab.experiments import load_sibling
 from lab.rag.analysis import (
     STAGE_ORDER,
@@ -58,12 +58,47 @@ def worked_examples(logs: list[ItemLog]) -> dict[str, str | None]:
     }
 
 
+# Chart labels for the item types, in reading order: the v1 search types, the policy facts,
+# then the types later episodes address.
+TYPE_LABELS = {
+    "shared": "Shared words",
+    "paraphrase": "Paraphrase",
+    "identifier": "Identifier",
+    "policy_single": "Policy, one sentence",
+    "policy_two_sentence": "Policy, two sentences",
+    "policy_heading": "Policy, needs heading",
+    "distractor": "Look-alike",
+    "version": "Version",
+    "restricted_staff": "Staff asker",
+    "two_part": "Two-part",
+    "bridge": "Bridge",
+    "followup": "Follow-up",
+}
+# What each first-lost stage means in a run with no rewrite, filter or reranker.
+STAGE_LABELS = {
+    "chunk": "Cut by a chunk edge",
+    "search": "Not in the top 50",
+    "filter": "Removed by the filter",
+    "rerank": "Ranked below 5th",
+    "prompt": "Declined despite passage",
+    "answer": "Wrong despite passage",
+    "unjudged": "Not judged",
+}
+
+
+def _count_labels(ax: Axes, ends: list[float], positions: list[int], text: list[str]) -> None:
+    """A count beside every bar, so a zero bar still shows as a result."""
+    for end, y, label in zip(ends, positions, text, strict=True):
+        ax.text(end + 0.02, y, label, va="center", color=MIST)
+
+
 def _recall_chart(by_type: dict[str, Any]):
-    names = list(by_type)
+    names = [t for t in TYPE_LABELS if t in by_type] + [t for t in by_type if t not in TYPE_LABELS]
 
     def draw(fig: Figure, ax: Axes, style: ChartStyle) -> None:
         grouped_bars(
-            ax, categories=names, series=[("Recall at 5", [by_type[n].rate for n in names])],
+            ax, categories=[TYPE_LABELS.get(n, n) for n in names],
+            series=[("Recall at 5", [by_type[n].rate for n in names])],
             style=style, horizontal=True,
         )
         positions = [len(names) - 1 - i for i in range(len(names))]
@@ -72,9 +107,12 @@ def _recall_chart(by_type: dict[str, Any]):
             [r - by_type[n].low for r, n in zip(rates, names, strict=True)],
             [by_type[n].high - r for r, n in zip(rates, names, strict=True)],
         ]
-        ax.errorbar(rates, positions, xerr=errors, fmt="none", ecolor=NAVY,
-                    elinewidth=style.line_width_pt)
-        ax.set_xlim(0, 1)
+        ax.errorbar(rates, positions, xerr=errors, fmt="none", ecolor=WHITE,
+                    elinewidth=style.line_width_pt, capsize=style.label_pt / 3)
+        _count_labels(ax, [by_type[n].high for n in names], positions,
+                      [f"{by_type[n].count} of {by_type[n].total}" for n in names])
+        ax.set_xlim(0, 1.32)
+        ax.set_xticks([0, 0.25, 0.5, 0.75, 1])
 
     return draw
 
@@ -82,12 +120,17 @@ def _recall_chart(by_type: dict[str, Any]):
 def _lost_chart(lost: dict[str, int]):
     stages = [s for s in STAGE_ORDER if lost.get(s)]
     total = sum(lost.values()) or 1
+    shares = [lost[s] / total for s in stages]
 
     def draw(fig: Figure, ax: Axes, style: ChartStyle) -> None:
         grouped_bars(
-            ax, categories=stages, series=[("Wrong answers", [lost[s] / total for s in stages])],
-            style=style, value_formatter=PercentFormatter(xmax=1, decimals=0),
+            ax, categories=[STAGE_LABELS.get(s, s) for s in stages],
+            series=[("Wrong answers", shares)], style=style, horizontal=True,
+            value_formatter=PercentFormatter(xmax=1, decimals=0),
         )
+        positions = [len(stages) - 1 - i for i in range(len(stages))]
+        _count_labels(ax, shares, positions, [str(lost[s]) for s in stages])
+        ax.set_xlim(0, max(shares, default=1) * 1.25)
 
     return draw
 
