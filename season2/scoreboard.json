@@ -431,5 +431,82 @@
    "embedding": null
   },
   "corpus_version": "halvard-v2"
+ },
+ {
+  "episode": "s2-e9-building-the-prompt",
+  "stage_changed": "prompt",
+  "config_before": "d52dd1b463b8",
+  "config_after": "de0f77fa743f",
+  "before": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 83,
+    "total": 120,
+    "rate": 0.6916666666666667,
+    "low": 0.6041700227619933,
+    "high": 0.767272630110837
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  },
+  "after": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 77,
+    "total": 120,
+    "rate": 0.6416666666666667,
+    "low": 0.5527053600179013,
+    "high": 0.7218392094967996
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  },
+  "joined": false,
+  "models_returned": {
+   "answer": [
+    "gpt-6-luna"
+   ],
+   "judge": [
+    "gemini-3.6-flash"
+   ],
+   "embedding": null
+  },
+  "corpus_version": "halvard-v2"
  }
 ]

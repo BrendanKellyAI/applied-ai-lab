@@ -39,3 +39,10 @@
   pass_mark: leaks below the reference's interval, answer not lower
   joined: true
   candidate: before
+- episode: s2-e9-building-the-prompt
+  stage_changed: prompt
+  reference_before: d52dd1b463b8
+  reference_after: d52dd1b463b8
+  pass_mark: share of the 520 handled right above the reference's interval
+  joined: false
+  candidate: ends
