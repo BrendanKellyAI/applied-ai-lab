@@ -1,0 +1,59 @@
+# S2 E4: chunking. Every condition changes stage 2 only. All run search-only (embeddings only)
+# on test and dev; two are then run in full, chosen on dev by the rule in PREREGISTRATION.md.
+episode: s2-e4-chunking
+description: Fixed windows with and without overlap, and structure-aware chunks, on the Halvard library
+base: ../../season2/reference.yaml
+library: ../../datasets/halvard
+items: dev
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 6, requests_per_minute: 120}
+  anthropic: {max_concurrency: 4, requests_per_minute: 120}
+conditions:
+  - name: baseline
+    measure: search
+  - name: fixed-64-0
+    changes: {chunk: {kind: fixed, size: 64, overlap: 0}}
+    measure: search
+  - name: fixed-64-16
+    changes: {chunk: {kind: fixed, size: 64, overlap: 16}}
+    measure: search
+  - name: fixed-128-0
+    changes: {chunk: {kind: fixed, size: 128, overlap: 0}}
+    measure: search
+  - name: fixed-128-32
+    changes: {chunk: {kind: fixed, size: 128, overlap: 32}}
+    measure: search
+  - name: fixed-256-64
+    changes: {chunk: {kind: fixed, size: 256, overlap: 64}}
+    measure: search
+  - name: fixed-512-0
+    changes: {chunk: {kind: fixed, size: 512, overlap: 0}}
+    measure: search
+  - name: fixed-512-128
+    changes: {chunk: {kind: fixed, size: 512, overlap: 128}}
+    measure: search
+  - name: fixed-1024-0
+    changes: {chunk: {kind: fixed, size: 1024, overlap: 0}}
+    measure: search
+  - name: fixed-1024-256
+    changes: {chunk: {kind: fixed, size: 1024, overlap: 256}}
+    measure: search
+  - name: structure-256
+    changes: {chunk: {kind: structure, max_tokens: 256, embed_headings: false}}
+    measure: search
+  - name: structure-256-headings
+    changes: {chunk: {kind: structure, max_tokens: 256, embed_headings: true}}
+    measure: search
+  - name: structure-512
+    changes: {chunk: {kind: structure, max_tokens: 512, embed_headings: false}}
+    measure: search
+  - name: structure-512-headings
+    changes: {chunk: {kind: structure, max_tokens: 512, embed_headings: true}}
+    measure: search
+  - name: structure-1024
+    changes: {chunk: {kind: structure, max_tokens: 1024, embed_headings: false}}
+    measure: search
+  - name: structure-1024-headings
+    changes: {chunk: {kind: structure, max_tokens: 1024, embed_headings: true}}
+    measure: search
