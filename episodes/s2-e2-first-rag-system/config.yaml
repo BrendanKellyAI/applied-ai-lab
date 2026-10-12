@@ -1,0 +1,28 @@
+# S2 E2: the reference system's baseline on the full test set. No stage is changed.
+episode: s2-e2-first-rag-system
+description: The simplest complete RAG pipeline, measured on the frozen Halvard test set
+base: ../../season2/reference.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+# gpt-6.1-sol took about 30 seconds to its first token in the smoke test, so calls run six at
+# a time. A 429 is retried with backoff.
+limits:
+  openai: {max_concurrency: 6, requests_per_minute: 120}
+  anthropic: {max_concurrency: 4, requests_per_minute: 120}
+conditions:
+  - name: baseline
+
+# The claims' pass marks, as in PREREGISTRATION.md. claims.py applies these; a test checks
+# that the two agree.
+pass_marks:
+  h1_before_prompt_exceeds_inside: true
+  h2_types_below_single: [policy_two_sentence, policy_heading]
+  h3_identifier_below_paraphrase: true
+  h4_followup_below_single: true
+  h5a_restricted_leak_share: 0.5
+  h5a_other_type_leaks_at_least: 1
+  h5b_stale_in_prompt_share: 0.5
+  h5b_old_value_answers_at_least: 1
+  h6a_absent_not_found_at_least: 0.75
+  h6b_leaked_or_deleted_not_found_at_most: 0.5

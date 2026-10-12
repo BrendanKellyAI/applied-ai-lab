@@ -109,6 +109,8 @@ class EpisodeConfig(BaseModel):
     conditions: list[Condition] = Field(min_length=1)
     limits: dict[ProviderName, ProviderLimits] = Field(default_factory=dict)
     pilot_per_type: int = Field(default=2, gt=0)
+    # The episode's pre-registered pass marks, applied by its claims.py.
+    pass_marks: dict[str, Any] = Field(default_factory=dict)
 
     @field_validator("conditions")
     @classmethod
