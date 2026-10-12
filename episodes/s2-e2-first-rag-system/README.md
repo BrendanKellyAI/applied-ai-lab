@@ -16,7 +16,8 @@ What does a whole RAG pipeline look like, and how well does the simplest version
 ## The system
 
 The season's pipeline has eleven stages. E2 uses the reference configuration in
-[`season2/reference.yaml`](../../season2/reference.yaml) unchanged:
+[`season2/reference-e2.yaml`](../../season2/reference-e2.yaml) unchanged. (From E4
+the season uses cheaper answer and judge models, in `season2/reference.yaml`.)
 
 | # | Stage | In E2 |
 |---|---|---|
@@ -340,7 +341,7 @@ uv run lab rag run episodes/s2-e2-first-rag-system/config.yaml
 ## Files
 
 - `PREREGISTRATION.md`: the question, setup, claims and pass marks, fixed before the run.
-- `config.yaml`: the episode config. It changes no stage of `season2/reference.yaml`, and holds
+- `config.yaml`: the episode config. It changes no stage of `season2/reference-e2.yaml`, and holds
   the pass marks.
 - `claims.py`: applies the pass marks to the run log.
 - `analyse.py`: the claims, worked examples, charts and the scoreboard row.

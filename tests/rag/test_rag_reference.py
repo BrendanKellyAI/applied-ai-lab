@@ -10,12 +10,14 @@ from lab.rag import chunk, judge, prompt, score, search
 from lab.rag.chunk import FixedChunker
 from lab.rag.config import load_pipeline
 
-REFERENCE = Path(__file__).parents[2] / "season2" / "reference.yaml"
+SEASON = Path(__file__).parents[2] / "season2"
+REFERENCE = SEASON / "reference.yaml"
+REFERENCE_E2 = SEASON / "reference-e2.yaml"
 SLIDE_WIDTH = 64
 
 
-def test_reference_is_the_e2_baseline():
-    pipeline = load_pipeline(REFERENCE)
+def test_e2_reference_is_pinned_as_e2_ran_it():
+    pipeline = load_pipeline(REFERENCE_E2)
 
     assert pipeline.chunk == FixedChunker(size=256, overlap=0)
     assert pipeline.search.method == "vector"
@@ -25,9 +27,18 @@ def test_reference_is_the_e2_baseline():
     assert (pipeline.judge.model, pipeline.judge.reasoning) == ("claude-sonnet-5-5", "off")
 
 
+def test_reference_differs_from_e2_only_in_its_cheaper_models():
+    now, e2 = load_pipeline(REFERENCE), load_pipeline(REFERENCE_E2)
+
+    assert now.model_copy(update={"answer": e2.answer, "judge": e2.judge}) == e2
+    assert (now.answer.model, now.answer.reasoning) == ("gpt-6-luna", "off")
+    assert (now.judge.provider, now.judge.model) == ("google", "gemini-3.1-flash-lite")
+
+
+@pytest.mark.parametrize("path", [REFERENCE, REFERENCE_E2])
 @pytest.mark.parametrize("stage", ["answer", "judge"])
-def test_reference_models_pass_the_capability_check(stage):
-    spec = getattr(load_pipeline(REFERENCE), stage)
+def test_reference_models_pass_the_capability_check(stage, path):
+    spec = getattr(load_pipeline(path), stage)
     request = GenerationRequest(
         provider=spec.provider,
         model=spec.model,

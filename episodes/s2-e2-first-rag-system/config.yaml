@@ -1,7 +1,7 @@
 # S2 E2: the reference system's baseline on the full test set. No stage is changed.
 episode: s2-e2-first-rag-system
 description: The simplest complete RAG pipeline, measured on the frozen Halvard test set
-base: ../../season2/reference.yaml
+base: ../../season2/reference-e2.yaml
 library: ../../datasets/halvard
 items: test
 pilot_per_type: 2

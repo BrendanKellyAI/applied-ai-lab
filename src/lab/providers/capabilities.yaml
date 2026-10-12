@@ -29,6 +29,13 @@ openai:
     reasoning: [low, medium, high, xhigh, max]
     temperature: false
     max_output_tokens: 128000
+  # Season 2 answer model from S2 E4, chosen for cost. Verified 12 October 2026 with one call:
+  # reasoning effort "none" is accepted and returns 0 reasoning tokens; temperature is rejected
+  # with HTTP 400.
+  gpt-6-luna:
+    reasoning: [off, low, medium, high]
+    temperature: false
+    max_output_tokens: 128000
   gpt-6-astra:
     reasoning: [low, medium, high, xhigh, max]
     temperature: false
@@ -83,6 +90,11 @@ google:
     temperature: true
   gemini-3.7-flash:
     reasoning: [low, medium, high]
+    temperature: true
+  # Season 2 judge from S2 E4, chosen for cost. Thinking cannot be turned off; "minimal" is its
+  # default. Google's table lists minimal and high only; confirm with the first call.
+  gemini-3.1-flash-lite:
+    reasoning: [minimal, high]
     temperature: true
   gemini-3.6-flash:
     reasoning: [minimal, low, medium, high]

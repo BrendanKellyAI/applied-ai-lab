@@ -1,0 +1,25 @@
+# The Season 2 reference system as E2 ran it, kept so E2's config still resolves to what it ran.
+# From S2 E4 the season uses season2/reference.yaml, with cheaper answer and judge models.
+
+# 2. Chunk: fixed windows of 256 tokens (cl100k_base), no overlap.
+chunk: {kind: fixed, size: 256, overlap: 0}
+# 3. Embed and index.
+embed: {model: text-embedding-3-small}
+# 4. Rewrite the question: the last turn, as typed.
+rewrite: {mode: passthrough}
+# 5. Search: vector, cosine similarity, 50 deep for the stages after it.
+search: {method: vector, depth: 50}
+# 6. Filter: none. Every document, of any access or status, can be found.
+filter: {mode: passthrough}
+# 7. Rerank: none.
+rerank: {mode: passthrough}
+# 8. Build the prompt: the top 5 passages in rank order, under a plain instruction.
+prompt: {k: 5, order: rank, instruction: plain}
+# 9. Answer. gpt-6.1-sol cannot turn reasoning off; low is its lowest level. No temperature is
+# sent: the model rejects one. The limit leaves room for reasoning tokens.
+answer: {provider: openai, model: gpt-6.1-sol, reasoning: low, max_output_tokens: 2000}
+# 10. Cite: none.
+cite: {mode: passthrough}
+# 11. Score: the judge, a different provider from the answer model. Reasoning off, sent as
+# thinking "between_tools" for this model. No temperature: the model rejects one.
+judge: {provider: anthropic, model: claude-sonnet-5-5, reasoning: "off", max_output_tokens: 400}

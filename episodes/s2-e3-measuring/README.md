@@ -139,6 +139,15 @@ stated reason, not a hand mark.
   this caveat. Counting correctness alone, E2's answers were 227 of 400 (52% to 62%), against
   217 of 400 correct and faithful.
 
+### A fresh call, by accident
+
+When E4 re-ran the E2 reference, 32 of its judge calls were not in the cache and were made
+again, all on restricted items (`judge-rerun/raw-judge.jsonl`). Why they were missing is not
+known. The judge gave the same verdict on 31 of the 32. The one that changed was
+RESTRICT-STAFF-035, one of the four faithfulness splits above: called unfaithful in E2, faithful
+on the fresh call. So the judge's borderline faithfulness calls can go either way between calls.
+This is 32 items, not a planned measurement of the judge's variance.
+
 ## What this does not show
 
 - **10 hand marks, chosen for disagreement.** They show which model to believe when the two
@@ -150,7 +159,7 @@ stated reason, not a hand mark.
 - **One marker.** No second person marked the same items.
 - **A stratified sample.** Rare item types are over-represented, so the 50 are not a
   proportional picture of the 520.
-- **One run of each model.** Calls are cached and no temperature is sent, so the same verdicts
+- **One run of each model,** apart from the 32 re-judged items above. Calls are cached and no temperature is sent, so the same verdicts
   come back; how much a fresh call would vary is not measured.
 
 ## Charts

@@ -95,6 +95,26 @@ The reference's search number is 239 of 400 (55% to 64%). To sit above it, a chu
 277 of 400. (Corrected on 12 October 2026, before any run: this sentence first said "about
 268", an arithmetic slip. The rule itself, intervals that do not overlap, is unchanged.)
 
+## Amendment, 12 October 2026: cheaper answer and judge models
+
+Made after the search runs and before any E4 answer was analysed. The first two full runs
+stopped when the Anthropic credit ran out, with 227 and 111 of 520 items judged; they were
+discarded unanalysed. The owner then set a much lower budget for the season, so from E4 on:
+
+- **Answer model:** `gpt-6-luna` with reasoning off, in place of `gpt-6.1-sol`.
+- **Judge:** `gemini-3.1-flash-lite` at its lowest thinking level, `minimal`, in place of
+  `claude-sonnet-5-5`. It is from a different provider from the answer model.
+- **The reference's full run is redone on these models** in E4, instead of reusing E2's, so
+  every E4 comparison is between runs on the same models. Its search number does not change
+  (239 of 400), so the joining threshold stays at 277. The answer rule compares with the new
+  reference run.
+- **The new judge is checked before it is used,** on the 50 items of E3's sample. *Pass mark:*
+  it agrees with `claude-sonnet-5-5` on `declined` and on `correct` on at least 45 of 50 each,
+  and with the hand marks on `correct` on at least 8 of 10. If it fails, nothing is run in full
+  and the owner decides.
+- The search conditions, the dev choice (fixed 512 and structure 1,024) and the claims are
+  unchanged.
+
 ## Reported, with no claim
 
 - Recall at 5 for every condition, on all 400 and by item type, on test and dev.
