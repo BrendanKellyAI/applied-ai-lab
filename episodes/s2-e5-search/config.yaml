@@ -1,0 +1,26 @@
+# S2 E5: search. Every condition changes stage 5 only. All run search-only on test and dev;
+# the hybrid fuse depth chosen on dev then runs in full (PREREGISTRATION.md).
+episode: s2-e5-search
+description: Keyword, vector and hybrid search on the Halvard library
+base: ../../season2/history/s2-e5-search.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: keyword
+    changes: {search: {method: keyword, depth: 50}}
+    measure: search
+  - name: hybrid-all
+    changes: {search: {method: hybrid, depth: 50}}
+    measure: search
+  - name: hybrid-50
+    changes: {search: {method: hybrid, depth: 50, fuse_depth: 50}}
+    measure: search
+  - name: hybrid-20
+    changes: {search: {method: hybrid, depth: 50, fuse_depth: 20}}
+    measure: search
