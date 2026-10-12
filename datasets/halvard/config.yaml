@@ -95,29 +95,29 @@ policies:
     product:
       - heading: Cover period
         attributes:
-          - {id: war-cover, kind: months, range: [12, 150], twin: ser-service,
+          - {id: war-cover, kind: months, range: [12, 84], twin: ser-service,
              named: "The {entity} is covered for {value} from the date of delivery.",
              bare: "Cover lasts {value} from the date of delivery.",
              lead: "Cover for the {entity} starts on the day it is delivered, not the day it was ordered."}
-          - {id: war-parts, kind: months, range: [6, 90], twin: saf-check,
+          - {id: war-parts, kind: days, range: [60, 365], twin: saf-check,
              named: "Replacement parts fitted to the {entity} are covered for a further {value}.",
              bare: "Replacement parts fitted under the warranty are covered for a further {value}.",
              lead: "Parts fitted to the {entity} during a warranty repair carry their own cover."}
-          - {id: war-labour, kind: months, range: [6, 48],
+          - {id: war-labour, kind: months, range: [3, 36],
              named: "Labour for repairs to the {entity} is free for the first {value}.",
              bare: "Labour for repairs is free for the first {value}.",
              lead: "Repairs to the {entity} include labour only for an opening period."}
-          - {id: war-transfer, kind: days, range: [5, 150],
+          - {id: war-transfer, kind: days, range: [7, 90],
              named: "If the {entity} is sold on, the new owner must transfer the warranty within {value}.",
              bare: "If it is sold on, the new owner must transfer the warranty within {value}.",
              lead: "The warranty on the {entity} can pass to a new owner."}
       - heading: Repairs under warranty
         attributes:
-          - {id: war-repair, kind: weeks, range: [1, 40], twin: ret-inspect,
+          - {id: war-repair, kind: working_days, range: [3, 40], twin: ret-inspect,
              named: "A warranty repair to the {entity} is completed within {value} of the fault being confirmed.",
              bare: "A warranty repair is completed within {value} of the fault being confirmed.",
              lead: "The repair time for the {entity} is counted from when an engineer confirms the fault."}
-          - {id: war-loan, kind: weeks, range: [1, 40],
+          - {id: war-loan, kind: working_days, range: [3, 30],
              named: "If a repair to the {entity} takes longer than {value}, Halvard Home lends a replacement.",
              bare: "If a repair takes longer than {value}, Halvard Home lends a replacement.",
              lead: "Some repairs to the {entity} need parts that are not held in stock."}
@@ -125,7 +125,7 @@ policies:
              named: "An engineer visit for the {entity} after the warranty has ended costs {value}.",
              bare: "An engineer visit after the warranty has ended costs {value}.",
              lead: "Visits to the {entity} after the warranty ends are charged at a fixed rate."}
-          - {id: war-refurb, kind: weeks, range: [4, 80],
+          - {id: war-refurb, kind: weeks, range: [4, 52],
              named: "A refurbished part fitted to the {entity} is covered for {value}.",
              bare: "A refurbished part is covered for {value}.",
              lead: "Refurbished parts are sometimes fitted to the {entity} when new parts are scarce."}
@@ -137,7 +137,7 @@ policies:
     region:
       - heading: Warranty repairs in this region
         attributes:
-          - {id: war-region-visit, kind: hours, range: [24, 120], named: "In {entity}, a warranty engineer visit is offered within {value} of a claim being accepted.", bare: "A warranty engineer visit is offered within {value} of a claim being accepted."}
+          - {id: war-region-visit, kind: hours, range: [24, 96], named: "In {entity}, a warranty engineer visit is offered within {value} of a claim being accepted.", bare: "A warranty engineer visit is offered within {value} of a claim being accepted."}
           - {id: war-region-parts, kind: working_days, range: [1, 60], named: "Parts for warranty repairs in {entity} arrive within {value}.", bare: "Parts for warranty repairs arrive within {value}."}
 
   - doc_id: POL-RET
@@ -158,7 +158,7 @@ policies:
     product:
       - heading: Returning the appliance
         attributes:
-          - {id: ret-restock, kind: percent, range: [5, 45],
+          - {id: ret-restock, kind: percent, range: [5, 30],
              named: "A restocking charge of {value} of the price applies to an opened {entity}.",
              bare: "A restocking charge of {value} of the price applies once the packaging is opened.",
              lead: "An unopened {entity} is refunded in full, but opening the box changes that."}
@@ -170,13 +170,13 @@ policies:
              named: "A returns label for the {entity} is emailed within {value} of the request.",
              bare: "A returns label is emailed within {value} of the request.",
              lead: "A {entity} sent back by courier needs a printed returns label."}
-          - {id: ret-exchange, kind: days, range: [5, 150],
+          - {id: ret-exchange, kind: days, range: [7, 100],
              named: "An exchange for a {entity} in a different colour must be requested within {value}.",
              bare: "An exchange for a different colour must be requested within {value}.",
              lead: "The {entity} can be swapped for another colour."}
       - heading: Packaging and condition
         attributes:
-          - {id: ret-packaging, kind: days, range: [7, 120],
+          - {id: ret-packaging, kind: days, range: [7, 90],
              named: "Keep the original packaging of the {entity} for {value} in case it needs to be returned.",
              bare: "Keep the original packaging for {value} in case it needs to be returned.",
              lead: "The {entity} travels safely only in its original box."}
@@ -184,7 +184,7 @@ policies:
              named: "A returned {entity} is inspected within {value} of arrival.",
              bare: "A returned appliance is inspected within {value} of arrival.",
              lead: "Every {entity} that comes back is checked before a refund is approved."}
-          - {id: ret-partial, kind: percent, range: [30, 70],
+          - {id: ret-partial, kind: percent, range: [40, 90],
              named: "A returned {entity} missing accessories is refunded at {value} of the price.",
              bare: "A return missing accessories is refunded at {value} of the price.",
              lead: "A {entity} must come back with everything that was in the box."}
@@ -229,14 +229,14 @@ policies:
              named: "Let the {entity} cool for {value} before cleaning it.",
              bare: "Let it cool for {value} before cleaning it.",
              lead: "Parts of the {entity} stay hot after it is switched off."}
-          - {id: saf-check, kind: months, range: [3, 48], twin: war-parts,
+          - {id: saf-check, kind: months, range: [3, 36], twin: war-parts,
              named: "Have the {entity} safety-checked every {value}.",
              bare: "Have it safety-checked every {value}.",
              lead: "The {entity} needs a regular safety check by a qualified engineer."}
-          - {id: saf-age, kind: years, range: [3, 25],
-             named: "Children under {value} must not use the {entity} without supervision.",
-             bare: "Children under {value} must not use it without supervision.",
-             lead: "The {entity} is not a toy, and children need watching near it."}
+          - {id: saf-vents, kind: days, range: [7, 120],
+             named: "Clean the air vents of the {entity} every {value}.",
+             bare: "Clean the air vents every {value}.",
+             lead: "Dust builds up in the air vents of the {entity} over time."}
       - heading: Installation and moving
         attributes:
           - {id: saf-settle, kind: hours, range: [1, 48],
@@ -284,7 +284,7 @@ policies:
     product:
       - heading: Servicing schedule
         attributes:
-          - {id: ser-service, kind: months, range: [6, 60], twin: war-cover,
+          - {id: ser-service, kind: months, range: [6, 48], twin: war-cover,
              named: "The {entity} should be serviced every {value}.",
              bare: "It should be serviced every {value}.",
              lead: "Regular servicing keeps the {entity} working efficiently."}
@@ -296,7 +296,7 @@ policies:
              named: "A routine service of the {entity} costs {value}.",
              bare: "A routine service costs {value}.",
              lead: "Routine servicing of the {entity} is charged at a fixed price."}
-          - {id: ser-reminder, kind: weeks, range: [1, 40],
+          - {id: ser-reminder, kind: weeks, range: [1, 12],
              named: "A reminder is sent {value} before the {entity} is due for a service.",
              bare: "A reminder is sent {value} before a service is due.",
              lead: "Owners of the {entity} are reminded when a service is due."}
@@ -310,11 +310,11 @@ policies:
              named: "Repairs to the {entity} are guaranteed for {value}.",
              bare: "Repairs are guaranteed for {value}.",
              lead: "Paid repairs to the {entity} come with their own guarantee."}
-          - {id: ser-filter, kind: months, range: [1, 60],
+          - {id: ser-filter, kind: weeks, range: [2, 26],
              named: "Replace the filter of the {entity} every {value}.",
              bare: "Replace the filter every {value}.",
              lead: "The {entity} has a filter that wears out with use."}
-          - {id: ser-spares, kind: years, range: [17, 45],
+          - {id: ser-spares, kind: years, range: [5, 20],
              named: "Spare parts for the {entity} are stocked for {value} after the model is discontinued.",
              bare: "Spare parts are stocked for {value} after the model is discontinued.",
              lead: "Halvard Home keeps spare parts for the {entity} after it stops being sold."}
@@ -343,13 +343,13 @@ internal:
     heading: Goodwill and discounts
     attributes:
       - {id: int-goodwill, kind: pounds, range: [10, 150], named: "Staff may waive charges on the {entity} of up to {value} as goodwill."}
-      - {id: int-discount, kind: percent, range: [5, 60], named: "The largest discount staff may offer on the {entity} is {value}."}
+      - {id: int-discount, kind: percent, range: [5, 45], named: "The largest discount staff may offer on the {entity} is {value}."}
   - doc_id: INT-FLT
     title: Known-faults register
     heading: Faults under investigation
     attributes:
-      - {id: int-fault-rate, kind: percent, range: [1, 60], named: "The current fault rate on returned {entity} units is {value}."}
-      - {id: int-fix, kind: days, range: [10, 200], named: "A fix for the open fault on the {entity} is expected within {value}."}
+      - {id: int-fault-rate, kind: percent, range: [1, 25], named: "The current fault rate on returned {entity} units is {value}."}
+      - {id: int-fix, kind: days, range: [10, 180], named: "A fix for the open fault on the {entity} is expected within {value}."}
   - doc_id: INT-ESC
     title: Escalation playbook
     heading: Escalating a complaint

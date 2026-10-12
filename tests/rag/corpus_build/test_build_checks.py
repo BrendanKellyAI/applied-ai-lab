@@ -133,7 +133,10 @@ def test_followup_question_rules(config, bp):
     facts = bp.plan.by_id()
     item = _item(bp, "followup")
     target = facts[item.facts[0]]
-    asked = [w for w in target.named.lower().split() if len(w) > 6][0]
+    from lab.rag.index import words
+
+    entity = set(words(target.entity))
+    asked = next(w for w in words(target.named) if len(w) > 6 and w not in entity)
 
     def check(text):
         return check_question(config, item, facts, item.id, text)
