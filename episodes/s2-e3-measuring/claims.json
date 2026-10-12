@@ -1,0 +1,49 @@
+[
+ {
+  "id": "A1",
+  "statement": "The judge and the second model agree on the answer verdict.",
+  "held": false,
+  "detail": {
+   "count": 44,
+   "total": 50,
+   "rate": 0.88,
+   "low": 0.7619518261679701,
+   "high": 0.9438239984906773
+  }
+ },
+ {
+  "id": "A2",
+  "statement": "The judge and the second model agree on declines.",
+  "held": true,
+  "detail": {
+   "count": 49,
+   "total": 50,
+   "rate": 0.98,
+   "low": 0.8950455641036219,
+   "high": 0.9964607407283539
+  }
+ },
+ {
+  "id": "A3",
+  "statement": "Where the two models split, the judge is right at least as often.",
+  "held": true,
+  "tested": true,
+  "detail": {
+   "items": 2,
+   "hand_marked": 2,
+   "hand_sides_with_judge": 1,
+   "hand_sides_with_second": 1,
+   "not_marked": []
+  }
+ },
+ {
+  "id": "A4",
+  "statement": "The judge beats the code check on correctness.",
+  "held": false,
+  "detail": {
+   "items": 2,
+   "judge_matches_hand": 2,
+   "code_matches_hand": 2
+  }
+ }
+]
