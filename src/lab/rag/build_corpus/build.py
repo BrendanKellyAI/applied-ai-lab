@@ -236,7 +236,10 @@ def _duplicates(items: Sequence[Item]) -> set[str]:
     seen: dict[str, str] = {}
     repeated = set()
     for item in items:
-        key = " ".join(item.question.lower().split())
+        # A follow-up is its whole conversation: the same last turn after a different first
+        # turn is a different question.
+        turns = [t.content for t in item.history] + [item.question]
+        key = " | ".join(" ".join(t.lower().split()) for t in turns)
         if key in seen and seen[key] != _base_id(item):
             repeated.add(item.id)
         seen.setdefault(key, _base_id(item))

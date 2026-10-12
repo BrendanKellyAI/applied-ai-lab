@@ -227,3 +227,28 @@ def test_repeated_questions_are_dropped_but_restricted_pairs_kept():
     ]
 
     assert _duplicates(items) == {"TOPIC-001"}
+
+
+def test_followups_with_the_same_last_turn_are_not_repeats():
+    from lab.rag.build_corpus.build import _duplicates
+    from lab.rag.corpus import Item, Span, Turn
+
+    def followup(id_, first):
+        return Item(
+            id=id_,
+            type="followup",
+            asker="public",
+            question="And for the Orrin heat pump?",
+            history=(Turn(role="user", content=first), Turn(role="assistant", content="a")),
+            answerable=True,
+            evidence=(Span(doc_id="D", version=1, start=0, end=1),),
+            answer="a",
+        )
+
+    items = [
+        followup("FOLLOW-000", "How long is cover?"),
+        followup("FOLLOW-001", "How much?"),
+        followup("FOLLOW-002", "How long is cover?"),
+    ]
+
+    assert _duplicates(items) == {"FOLLOW-002"}

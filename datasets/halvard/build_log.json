@@ -1,0 +1,180 @@
+{
+ "sections": {
+  "tasks": 208,
+  "passed": 208,
+  "attempts": {
+   "1": 201,
+   "2": 7
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   },
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {
+   "DEL-01/notice": [
+    "It is 119 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-07/notice": [
+    "It is 115 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-10/notice": [
+    "It is 119 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-18/notice": [
+    "It is 115 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-24/notice": [
+    "It is 117 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-29/notice": [
+    "It is 117 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ],
+   "DEL-31/notice": [
+    "It is 119 tokens long; it must be 120 to 220. Aim for 90 to 130 words."
+   ]
+  }
+ },
+ "questions": {
+  "tasks": 490,
+  "passed": 490,
+  "attempts": {
+   "1": 490
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "followups": {
+  "tasks": 50,
+  "passed": 50,
+  "attempts": {
+   "1": 50
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "quotes": {
+  "tasks": 80,
+  "passed": 80,
+  "attempts": {
+   "1": 80
+  },
+  "failed": [],
+  "models_returned": [
+   "gpt-6-astra"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {}
+ },
+ "checks": {
+  "tasks": 190,
+  "passed": 190,
+  "attempts": {
+   "1": 189,
+   "2": 1
+  },
+  "failed": [],
+  "models_returned": [
+   "claude-sonnet-5-5"
+  ],
+  "calls": [
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   },
+   {
+    "made": 0,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ],
+  "problems": {
+   "ABSENT-045": [
+    "Reply with the JSON object only (Extra data: line 3 column 1 (char 568))."
+   ]
+  }
+ },
+ "disputed": [
+  "ABSENT-012",
+  "ABSENT-019",
+  "ABSENT-020",
+  "ABSENT-037",
+  "ABSENT-042",
+  "ABSENT-048",
+  "DELETED-003",
+  "DELETED-015",
+  "DEV-ABSENT-003",
+  "DEV-ABSENT-007",
+  "RESTRICT-PUBLIC-017",
+  "RESTRICT-PUBLIC-043",
+  "RESTRICT-PUBLIC-049"
+ ],
+ "items": {
+  "test": 520,
+  "dev": 100
+ },
+ "by_type": {
+  "identifier": 40,
+  "paraphrase": 40,
+  "shared": 40,
+  "version": 50,
+  "distractor": 50,
+  "followup": 50,
+  "policy_heading": 25,
+  "policy_two_sentence": 25,
+  "bridge": 25,
+  "policy_single": 50,
+  "two_part": 25,
+  "restricted_staff": 50,
+  "restricted_public": 50,
+  "absent_detail": 50,
+  "absent_topic": 25,
+  "deleted": 25
+ },
+ "duplicates": []
+}
