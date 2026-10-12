@@ -1,0 +1,450 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "Plain (ref)",
+   "recall": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2767.0
+  },
+  "grounded-cite": {
+   "label": "Grounded, citing",
+   "recall": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2767.0
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 83,
+    "total": 120,
+    "rate": 0.6916666666666667,
+    "low": 0.6041700227619933,
+    "high": 0.767272630110837
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  },
+  "grounded-cite": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 354,
+    "total": 400,
+    "rate": 0.885,
+    "low": 0.850008455984224,
+    "high": 0.9126670773783676
+   },
+   "not_found": {
+    "count": 107,
+    "total": 120,
+    "rate": 0.8916666666666667,
+    "low": 0.8234463978470834,
+    "high": 0.9355885884582658
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 34,
+   "search": 4,
+   "answer": 3
+  },
+  "grounded-cite": {
+   "rerank": 39,
+   "search": 2,
+   "answer": 2,
+   "prompt": 3
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 41,
+  "grounded-cite": 46
+ },
+ "claims": [
+  {
+   "id": "G1",
+   "statement": "Asked to cite, the model cites.",
+   "held": true,
+   "detail": {
+    "citing": {
+     "count": 365,
+     "total": 365,
+     "rate": 1.0,
+     "low": 0.9895850677063891,
+     "high": 0.9999999999999998
+    }
+   }
+  },
+  {
+   "id": "G2",
+   "statement": "A right answer cites the right passage.",
+   "held": true,
+   "detail": {
+    "right": {
+     "count": 343,
+     "total": 346,
+     "rate": 0.9913294797687862,
+     "low": 0.9748218579625568,
+     "high": 0.9970469455409806
+    }
+   }
+  },
+  {
+   "id": "G3",
+   "statement": "Grounding makes answers more faithful.",
+   "held": true,
+   "detail": {
+    "grounded": {
+     "count": 351,
+     "total": 352,
+     "rate": 0.9971590909090909,
+     "low": 0.9840857635060843,
+     "high": 0.9994983336363524
+    },
+    "reference": {
+     "count": 359,
+     "total": 363,
+     "rate": 0.9889807162534435,
+     "low": 0.9720137975419602,
+     "high": 0.9957067025924534
+    }
+   }
+  },
+  {
+   "id": "G4",
+   "statement": "Grounding does not cost right answers.",
+   "held": true,
+   "detail": {
+    "grounded": {
+     "count": 354,
+     "total": 400,
+     "rate": 0.885,
+     "low": 0.850008455984224,
+     "high": 0.9126670773783676
+    },
+    "reference": {
+     "count": 359,
+     "total": 400,
+     "rate": 0.8975,
+     "low": 0.8638965789864277,
+     "high": 0.9235411470178065
+    }
+   }
+  }
+ ],
+ "join": {
+  "rule": "cites at least 90%, answer and handled share not below the reference's",
+  "passed": [
+   "grounded-cite"
+  ],
+  "joined": "grounded-cite",
+  "candidate": "grounded-cite",
+  "handled": {
+   "baseline": {
+    "count": 442,
+    "total": 520,
+    "rate": 0.85,
+    "low": 0.8167482430632129,
+    "high": 0.8781184840176492
+   },
+   "grounded-cite": {
+    "count": 461,
+    "total": 520,
+    "rate": 0.8865384615384615,
+    "low": 0.8563968907127906,
+    "high": 0.9110108683160736
+   }
+  }
+ },
+ "paired_search": {
+  "grounded-cite": {
+   "only_other": 0,
+   "only_reference": 0,
+   "p_value": 1.0
+  }
+ },
+ "paired_answer": {
+  "grounded-cite": {
+   "only_other": 24,
+   "only_reference": 13,
+   "p_value": 0.09887174959294498
+  }
+ },
+ "extra": {
+  "baseline": {
+   "answered": 400,
+   "citing": {
+    "count": 0,
+    "total": 400,
+    "rate": 0.0,
+    "low": 8.673617379884035e-19,
+    "high": 0.009512294334296508
+   },
+   "citations": 0,
+   "supported_citations": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answers_citing_only_unsupported": 0,
+   "right_citing_evidence": {
+    "count": 0,
+    "total": 354,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.010735085960564982
+   }
+  },
+  "grounded-cite": {
+   "answered": 365,
+   "citing": {
+    "count": 365,
+    "total": 365,
+    "rate": 1.0,
+    "low": 0.9895850677063891,
+    "high": 0.9999999999999998
+   },
+   "citations": 400,
+   "supported_citations": {
+    "count": 365,
+    "total": 400,
+    "rate": 0.9125,
+    "low": 0.8807392673857086,
+    "high": 0.9364130897884968
+   },
+   "answers_citing_only_unsupported": 5,
+   "right_citing_evidence": {
+    "count": 343,
+    "total": 346,
+    "rate": 0.9913294797687862,
+    "low": 0.9748218579625568,
+    "high": 0.9970469455409806
+   }
+  }
+ }
+}

@@ -46,3 +46,10 @@
   pass_mark: share of the 520 handled right above the reference's interval
   joined: false
   candidate: allow-not-found
+- episode: s2-e10-grounding-and-citations
+  stage_changed: cite
+  reference_before: d52dd1b463b8
+  reference_after: 0294479ba987
+  pass_mark: cites at least 90%, answer and handled share not below the reference's
+  joined: true
+  candidate: grounded-cite

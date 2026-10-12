@@ -18,14 +18,16 @@ filter: {mode: before, access: true, status: true}
 # returns them best first. Joined in S2 E7 (search 281 to 316 of 400). The local cross-encoder
 # was too slow on CPU; see episodes/s2-e7-reranking.
 rerank: {mode: llm, shortlist: 20, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}
-# 8. Build the prompt: the top 5 passages in rank order, under a plain instruction.
-prompt: {k: 5, order: rank, instruction: plain}
+# 8. Build the prompt: the top 5 passages in rank order. From S2 E10 the instruction is
+# grounded_cite: answer only from the passages, cite each claim, say "not found" when it is not there.
+prompt: {k: 5, order: rank, instruction: grounded_cite}
 # 9. Answer. From S2 E4, gpt-6-luna ($0.10 / $0.50 per million tokens), chosen for cost; E2 and
 # E3 used gpt-6.1-sol (season2/reference-e2.yaml). Reasoning is fully off. No temperature: the
 # model rejects one.
 answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 2000}
-# 10. Cite: none.
-cite: {mode: passthrough}
+# 10. Cite: the answer's [Pn] markers are mapped to their chunks, in code. Joined in S2 E10 with
+# the grounded, citing instruction above (every answer cited; 91% of citations held the evidence).
+cite: {mode: parse}
 # 11. Score: the judge, a different provider from the answer model. From S2 E4,
 # gemini-3.6-flash ($0.75 / $3.75), chosen for cost; E2 and E3 used claude-sonnet-5-5. The
 # cheaper gemini-3.1-flash-lite failed the judge check (E4, judge-switch/). Thinking cannot be
