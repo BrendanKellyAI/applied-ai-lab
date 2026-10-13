@@ -20,10 +20,17 @@ the series can be reproduced from this repository.
 |---|---|---|
 | S1 E7 | Does a fact's position in a long context affect whether a model retrieves it? | [field-notes/s1-e7-lost-in-the-middle](field-notes/s1-e7-lost-in-the-middle/) |
 | S1 E10 | For which tasks does turning reasoning on improve accuracy enough to justify the cost? | [field-notes/s1-e10-reasoning-vs-standard](field-notes/s1-e10-reasoning-vs-standard/) |
+| S2 E11 | Does requiring a citation change what a model says, or only how it says it? | [field-notes/s2-e11-citation-rule](field-notes/s2-e11-citation-rule/) |
+| S2 E12 | What changes when the embedding model does, and what does re-embedding cost? | [field-notes/s2-e12-embedding-swap](field-notes/s2-e12-embedding-swap/) |
+| S2 E13 | On the same questions, when does sending everything beat a retrieval pipeline? | [field-notes/s2-e13-long-context-or-retrieval](field-notes/s2-e13-long-context-or-retrieval/) |
 
 Each field note folder holds its config, the code that builds its data and analyses its
 results, and a README with the question, method, results, limitations, and how to reproduce it.
 Sources and licences for every dataset are in [datasets/README.md](datasets/README.md).
+
+Season 2 runs every episode on one retrieval pipeline (`src/lab/rag/`), one library
+(`datasets/halvard`) and one test set. The reference system, its history and the season
+scoreboard are in [season2/](season2/).
 
 ## Episode code
 
@@ -37,6 +44,16 @@ Sources and licences for every dataset are in [datasets/README.md](datasets/READ
 | S1 E6 | Context windows: two silent failures at the edge, an answer cut off and instructions trimmed away | [episodes/s1-e6-context-windows](episodes/s1-e6-context-windows/) |
 | S1 E8 | Sampling: GPT-2's real next-token odds, how temperature reshapes them, and what repeated calls return | [episodes/s1-e8-sampling](episodes/s1-e8-sampling/) |
 | S1 E9 | Hallucination: whether a model describes invented Acts and papers as real, and whether "say if you do not know" helps | [episodes/s1-e9-hallucination](episodes/s1-e9-hallucination/) |
+| S2 E2 | Your first RAG system: every stage end to end with naive defaults | [episodes/s2-e2-first-rag-system](episodes/s2-e2-first-rag-system/) |
+| S2 E3 | Measuring it: recall at 5, Wilson intervals, and checking the judge | [episodes/s2-e3-measuring](episodes/s2-e3-measuring/) |
+| S2 E4 | Chunking: fixed windows against document structure | [episodes/s2-e4-chunking](episodes/s2-e4-chunking/) |
+| S2 E5 | Search: keyword, vector and hybrid | [episodes/s2-e5-search](episodes/s2-e5-search/) |
+| S2 E6 | Rewriting the question: rewrite, split and follow-up resolution | [episodes/s2-e6-rewriting](episodes/s2-e6-rewriting/) |
+| S2 E7 | Reranking: a cross-encoder and an LLM reranker | [episodes/s2-e7-reranking](episodes/s2-e7-reranking/) |
+| S2 E8 | Filters, permissions and fresh documents | [episodes/s2-e8-filters](episodes/s2-e8-filters/) |
+| S2 E9 | Building the prompt: how many passages, in what order, and "not found" | [episodes/s2-e9-building-the-prompt](episodes/s2-e9-building-the-prompt/) |
+| S2 E10 | Grounding and citations, checked in code | [episodes/s2-e10-grounding-and-citations](episodes/s2-e10-grounding-and-citations/) |
+| S2 E14 | Tracing a wrong answer to the stage that lost the passage | [episodes/s2-e14-tracing](episodes/s2-e14-tracing/) |
 
 ## Reproduce a result for free
 
