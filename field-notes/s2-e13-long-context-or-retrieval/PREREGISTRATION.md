@@ -55,6 +55,17 @@ approaches head to head on the questions retrieval finds hardest.
 - Cost per question per arm, with and without the prompt cache.
 - Paired comparison (exact McNemar) of correct answers per item.
 
+## Amendment, 2026-10-13, before any E13 call
+
+The retrieval arm is read from E12's `baseline` run instead of a new run. It is the same system
+(`config_id` `0294479ba987`; E13's history snapshot is identical to E12's), on the same 520 test
+items. The response cache is keyed by episode, so a rerun would have cost about $1 to repeat it.
+
+For L3 and L4, the retrieval arm's tokens and seconds per question are its two model calls
+together, the reranker's and the answer's (embedding the question is left out: a few tokens and
+milliseconds). The answer call alone is reported beside it. Seconds come from the raw call logs,
+as first recorded, not from the cache.
+
 ## What this does not test
 
 - **Permissions and versions:** the long-context arm is given only current public documents,
