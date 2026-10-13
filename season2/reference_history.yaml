@@ -53,3 +53,10 @@
   pass_mark: cites at least 90%, answer and handled share not below the reference's
   joined: true
   candidate: grounded-cite
+- episode: s2-e12-embedding-swap
+  stage_changed: embed
+  reference_before: 0294479ba987
+  reference_after: 0294479ba987
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: large
