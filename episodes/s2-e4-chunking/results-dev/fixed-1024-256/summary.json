@@ -1,0 +1,86 @@
+{
+ "episode": "s2-e4-chunking",
+ "condition": "fixed-1024-256",
+ "measure": "search",
+ "config_id": "aa0c133fbfbb",
+ "base_id": "b58f06493698",
+ "changed": [
+  "chunk"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "fixed",
+   "size": 1024,
+   "overlap": 256
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "passthrough"
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6.1-sol",
+   "reasoning": "low",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "anthropic",
+   "model": "claude-sonnet-5-5",
+   "reasoning": "off",
+   "max_output_tokens": 400
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 100,
+ "run_utc": "2026-10-12T20:42:36+00:00",
+ "numbers": {
+  "search": {
+   "count": 33,
+   "total": 70,
+   "rate": 0.4714285714285714,
+   "low": 0.3590487639638429,
+   "high": 0.5867811253167438
+  },
+  "leaks": {
+   "count": 7,
+   "total": 90,
+   "rate": 0.07777777777777778,
+   "low": 0.038184815317289005,
+   "high": 0.15193860182592028
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": "text-embedding-3-small"
+ },
+ "calls": {},
+ "embedding_tokens_reported": 161177,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

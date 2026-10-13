@@ -1,0 +1,17 @@
+# S2 E12 (field note): swapping the embedding model. One condition changes stage 3 only:
+# text-embedding-3-large in place of text-embedding-3-small. Both run in full.
+episode: s2-e12-embedding-swap
+description: The same pipeline with a larger embedding model
+base: ../../season2/history/s2-e12-embedding-swap.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: large
+    changes: {embed: {model: text-embedding-3-large}}
+    measure: full

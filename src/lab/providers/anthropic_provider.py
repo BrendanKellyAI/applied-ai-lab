@@ -29,6 +29,9 @@ _STOP_REASONS: dict[str, FinishReason] = {
 }
 _RETRYABLE_STREAM_ERRORS = {"overloaded_error": ServerError, "api_error": ServerError}
 _WORKSPACE_HEADER = "anthropic-workspace-id"
+# Models that reject {"type": "disabled"} and turn thinking off with {"type": "between_tools"},
+# which takes no other field and no effort. With no tools in the request, nothing is thought.
+_OFF_AS_BETWEEN_TOOLS = {"claude-sonnet-5-5"}
 
 
 class AnthropicProvider:
@@ -95,7 +98,8 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
     if request.temperature is not None:
         params["temperature"] = request.temperature
     if request.reasoning == "off":
-        params["thinking"] = {"type": "disabled"}
+        off = "between_tools" if request.model in _OFF_AS_BETWEEN_TOOLS else "disabled"
+        params["thinking"] = {"type": off}
     elif request.reasoning is not None:
         display = "summarized" if request.show_thinking else "omitted"
         params["thinking"] = {"type": "adaptive", "display": display}

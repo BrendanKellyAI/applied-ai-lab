@@ -1,0 +1,111 @@
+{
+ "episode": "s2-e8-filters",
+ "condition": "before-access",
+ "measure": "search",
+ "config_id": "ea2abeccc503",
+ "base_id": "eb9b824ce5db",
+ "changed": [
+  "filter"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "before",
+   "access": true,
+   "status": false
+  },
+  "rerank": {
+   "mode": "llm",
+   "shortlist": 20,
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 520,
+ "run_utc": "2026-10-12T23:02:52+00:00",
+ "numbers": {
+  "search": {
+   "count": 319,
+   "total": 400,
+   "rate": 0.7975,
+   "low": 0.7553739799055185,
+   "high": 0.833966204965575
+  },
+  "leaks": {
+   "count": 0,
+   "total": 480,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.007939499087277936
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": null
+ },
+ "calls": {
+  "rerank": [
+   {
+    "planned": 496,
+    "already_complete": 0,
+    "cached": 256,
+    "made": 240,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 2681219,
+      "output_tokens": 11191,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ]
+ },
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

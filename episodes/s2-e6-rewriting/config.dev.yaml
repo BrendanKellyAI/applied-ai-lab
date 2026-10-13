@@ -1,0 +1,24 @@
+# S2 E6: rewriting the question. Every condition changes stage 4 only. The rewriting model is
+# the cheapest that works, gpt-6-luna with reasoning off. All run search-only on test and dev
+# (the rewrite calls are cheap); the mode chosen on dev then runs in full.
+episode: s2-e6-rewriting
+description: Rewriting, splitting and resolving follow-up questions before search
+base: ../../season2/history/s2-e6-rewriting.yaml
+library: ../../datasets/halvard
+items: dev
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: search
+  - name: rewrite
+    changes: {rewrite: {mode: rewrite, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
+    measure: search
+  - name: split
+    changes: {rewrite: {mode: split, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
+    measure: search
+  - name: resolve-followup
+    changes: {rewrite: {mode: resolve_followup, model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}}}
+    measure: search

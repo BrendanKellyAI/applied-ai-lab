@@ -1,0 +1,222 @@
+{
+ "items": 8,
+ "claims": [
+  {
+   "id": "L1",
+   "statement": "On the hardest questions, sending everything beats retrieval.",
+   "held": false,
+   "detail": {
+    "long_context": {
+     "count": 6,
+     "total": 6,
+     "rate": 1.0,
+     "low": 0.6096657120978346,
+     "high": 1.0
+    },
+    "retrieval": {
+     "count": 6,
+     "total": 6,
+     "rate": 1.0,
+     "low": 0.6096657120978346,
+     "high": 1.0
+    }
+   }
+  },
+  {
+   "id": "L2",
+   "statement": "On simple questions, retrieval loses nothing.",
+   "held": true,
+   "detail": {
+    "long_context": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "retrieval": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   }
+  },
+  {
+   "id": "L3",
+   "statement": "Long context costs many times more per question.",
+   "held": false,
+   "detail": {
+    "median_input_tokens": {
+     "long_context": 160398.5,
+     "retrieval": 19098.5,
+     "retrieval_answer_only": 3977.0
+    },
+    "ratio": 8.4
+   }
+  },
+  {
+   "id": "L4",
+   "statement": "Long context is slower.",
+   "held": false,
+   "detail": {
+    "median_seconds": {
+     "long_context": 2.83,
+     "retrieval": 2.471162599977106,
+     "retrieval_answer_only": 1.1533352499827743
+    },
+    "ratio": 1.15
+   }
+  }
+ ],
+ "by_type": {
+  "distractor": {
+   "long_context": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   },
+   "retrieval": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   }
+  },
+  "two_part": {
+   "long_context": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   },
+   "retrieval": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 1,
+     "total": 2,
+     "rate": 0.5,
+     "low": 0.09453120573423074,
+     "high": 0.9054687942657693
+    }
+   }
+  },
+  "bridge": {
+   "long_context": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   },
+   "retrieval": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   }
+  },
+  "policy_single": {
+   "long_context": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   },
+   "retrieval": {
+    "judge": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    },
+    "code_check": {
+     "count": 2,
+     "total": 2,
+     "rate": 1.0,
+     "low": 0.34238022750665303,
+     "high": 1.0
+    }
+   }
+  }
+ },
+ "paired_correct": {
+  "only_other": 0,
+  "only_reference": 0,
+  "p_value": 1.0
+ },
+ "cost_per_question_usd": {
+  "long_context": 0.01606,
+  "long_context_without_cache": 0.01606,
+  "retrieval": 0.0017
+ },
+ "long_context_cached_share": 0.0
+}

@@ -1,0 +1,58 @@
+{
+ "same_passages_every_item": true,
+ "claims": [
+  {
+   "id": "N1",
+   "statement": "A citation rule does not change which answers are right.",
+   "held": true,
+   "detail": {
+    "only_other": 11,
+    "only_reference": 11,
+    "p_value": 1.0
+   }
+  },
+  {
+   "id": "N2",
+   "statement": "It does not change when the model declines.",
+   "held": true,
+   "detail": {
+    "uncited": {
+     "count": 105,
+     "total": 120,
+     "rate": 0.875,
+     "low": 0.8039705979199262,
+     "high": 0.9227650272660463
+    },
+    "cited": {
+     "count": 107,
+     "total": 120,
+     "rate": 0.8916666666666667,
+     "low": 0.8234463978470834,
+     "high": 0.9355885884582658
+    }
+   }
+  },
+  {
+   "id": "N3",
+   "statement": "It makes answers longer.",
+   "held": false,
+   "detail": {
+    "uncited_median_output": 26.0,
+    "cited_median_output": 28.0
+   }
+  }
+ ],
+ "verdict_changed_by_type": {
+  "distractor": 2,
+  "followup": 5,
+  "policy_two_sentence": 1,
+  "bridge": 3,
+  "policy_single": 1,
+  "two_part": 2,
+  "restricted_public": 2,
+  "restricted_staff": 1,
+  "absent_detail": 3,
+  "deleted": 2
+ },
+ "uncited_run_citing_anyway": 0
+}

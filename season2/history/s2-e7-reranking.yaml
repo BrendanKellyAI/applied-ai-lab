@@ -1,0 +1,30 @@
+# The Season 2 reference system: one block per stage. It changes only when an episode's change
+# passes its pass mark, recorded in reference_history.yaml. It began as the E2 baseline:
+# naive defaults, with stages 4, 6, 7 and 10 passing everything through.
+
+# 2. Chunk: one chunk per lowest-level section, split at paragraphs above 1,024 tokens, with no
+# heading path embedded. Joined in S2 E4 (search 239 to 281 of 400); E2 used fixed 256 windows.
+chunk: {kind: structure, max_tokens: 1024, embed_headings: false}
+# 3. Embed and index.
+embed: {model: text-embedding-3-small}
+# 4. Rewrite the question: the last turn, as typed.
+rewrite: {mode: passthrough}
+# 5. Search: vector, cosine similarity, 50 deep for the stages after it.
+search: {method: vector, depth: 50}
+# 6. Filter: none. Every document, of any access or status, can be found.
+filter: {mode: passthrough}
+# 7. Rerank: none.
+rerank: {mode: passthrough}
+# 8. Build the prompt: the top 5 passages in rank order, under a plain instruction.
+prompt: {k: 5, order: rank, instruction: plain}
+# 9. Answer. From S2 E4, gpt-6-luna ($0.10 / $0.50 per million tokens), chosen for cost; E2 and
+# E3 used gpt-6.1-sol (season2/reference-e2.yaml). Reasoning is fully off. No temperature: the
+# model rejects one.
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 2000}
+# 10. Cite: none.
+cite: {mode: passthrough}
+# 11. Score: the judge, a different provider from the answer model. From S2 E4,
+# gemini-3.6-flash ($0.75 / $3.75), chosen for cost; E2 and E3 used claude-sonnet-5-5. The
+# cheaper gemini-3.1-flash-lite failed the judge check (E4, judge-switch/). Thinking cannot be
+# turned off; minimal is the lowest level, so the limit leaves room for it. No temperature.
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 2000}

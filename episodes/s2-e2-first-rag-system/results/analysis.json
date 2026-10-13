@@ -1,0 +1,306 @@
+{
+ "condition": "baseline",
+ "config_id": "b58f06493698",
+ "items": 520,
+ "numbers": {
+  "search": {
+   "count": 239,
+   "total": 400,
+   "rate": 0.5975,
+   "low": 0.5487342037489487,
+   "high": 0.6444108988558637
+  },
+  "answer": {
+   "count": 217,
+   "total": 400,
+   "rate": 0.5425,
+   "low": 0.4935050345733776,
+   "high": 0.5906864204082072
+  },
+  "not_found": {
+   "count": 56,
+   "total": 120,
+   "rate": 0.4666666666666667,
+   "low": 0.37982917045799003,
+   "high": 0.555572107303257
+  },
+  "leaks": {
+   "count": 51,
+   "total": 480,
+   "rate": 0.10625,
+   "low": 0.08174077901635685,
+   "high": 0.13701157651487453
+  }
+ },
+ "recall_by_type": {
+  "bridge": {
+   "count": 0,
+   "total": 20,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.16112515805281938
+  },
+  "distractor": {
+   "count": 32,
+   "total": 40,
+   "rate": 0.8,
+   "low": 0.652426936536005,
+   "high": 0.895000102745623
+  },
+  "followup": {
+   "count": 3,
+   "total": 40,
+   "rate": 0.075,
+   "low": 0.025836025774588198,
+   "high": 0.19864233524310543
+  },
+  "identifier": {
+   "count": 15,
+   "total": 40,
+   "rate": 0.375,
+   "low": 0.24222979167233266,
+   "high": 0.5296756086269889
+  },
+  "paraphrase": {
+   "count": 38,
+   "total": 40,
+   "rate": 0.95,
+   "low": 0.8349612263085903,
+   "high": 0.9861793326138516
+  },
+  "policy_heading": {
+   "count": 9,
+   "total": 20,
+   "rate": 0.45,
+   "low": 0.2581978582556243,
+   "high": 0.6579146575496577
+  },
+  "policy_single": {
+   "count": 24,
+   "total": 40,
+   "rate": 0.6,
+   "low": 0.44595893660346186,
+   "high": 0.7365167431570808
+  },
+  "policy_two_sentence": {
+   "count": 13,
+   "total": 20,
+   "rate": 0.65,
+   "low": 0.43285427668523624,
+   "high": 0.818808175898918
+  },
+  "restricted_staff": {
+   "count": 31,
+   "total": 40,
+   "rate": 0.775,
+   "low": 0.6249690325768998,
+   "high": 0.8768390867645927
+  },
+  "shared": {
+   "count": 40,
+   "total": 40,
+   "rate": 1.0,
+   "low": 0.9123783988027135,
+   "high": 1.0
+  },
+  "two_part": {
+   "count": 1,
+   "total": 20,
+   "rate": 0.05,
+   "low": 0.008881448800795402,
+   "high": 0.23613119344674205
+  },
+  "version": {
+   "count": 33,
+   "total": 40,
+   "rate": 0.825,
+   "low": 0.6805000966821229,
+   "high": 0.9125458625396408
+  }
+ },
+ "lost_at": {
+  "rerank": 92,
+  "search": 44,
+  "answer": 34,
+  "prompt": 1,
+  "chunk": 11
+ },
+ "wrong_answerable": 182,
+ "cut_evidence_items": 18,
+ "distractor_above": 7,
+ "claims": [
+  {
+   "id": "H1",
+   "statement": "Search loses more answers than the model does.",
+   "held": true,
+   "detail": {
+    "before_prompt": 147,
+    "inside_prompt": 35,
+    "by_stage": {
+     "rerank": 92,
+     "search": 44,
+     "answer": 34,
+     "prompt": 1,
+     "chunk": 11
+    }
+   }
+  },
+  {
+   "id": "H2",
+   "statement": "Fixed chunks hurt two-sentence and heading-dependent facts.",
+   "held": false,
+   "detail": {
+    "policy_single": {
+     "count": 24,
+     "total": 40,
+     "rate": 0.6,
+     "low": 0.44595893660346186,
+     "high": 0.7365167431570808
+    },
+    "policy_two_sentence": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "policy_heading": {
+     "count": 9,
+     "total": 20,
+     "rate": 0.45,
+     "low": 0.2581978582556243,
+     "high": 0.6579146575496577
+    },
+    "strong_form": false
+   }
+  },
+  {
+   "id": "H3",
+   "statement": "Identifier questions fail under vector search.",
+   "held": true,
+   "detail": {
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    }
+   }
+  },
+  {
+   "id": "H4",
+   "statement": "A follow-up searched on its own fails.",
+   "held": true,
+   "detail": {
+    "followup": {
+     "count": 3,
+     "total": 40,
+     "rate": 0.075,
+     "low": 0.025836025774588198,
+     "high": 0.19864233524310543
+    },
+    "policy_single": {
+     "count": 24,
+     "total": 40,
+     "rate": 0.6,
+     "low": 0.44595893660346186,
+     "high": 0.7365167431570808
+    }
+   }
+  },
+  {
+   "id": "H5",
+   "statement": "With no filter, the wrong documents reach the prompt.",
+   "held": false,
+   "detail": {
+    "h5a_held": true,
+    "restricted_leaked": 34,
+    "restricted_items": 40,
+    "other_types_leaked": 17,
+    "h5b_held": false,
+    "stale_in_prompt": 32,
+    "version_items": 40,
+    "old_value_answers": []
+   }
+  },
+  {
+   "id": "H6",
+   "statement": "The model declines when nothing is there, but not when the wrong thing is.",
+   "held": true,
+   "detail": {
+    "h6a_held": true,
+    "absent": {
+     "count": 47,
+     "total": 60,
+     "rate": 0.7833333333333333,
+     "low": 0.6637997242680521,
+     "high": 0.868769559518097
+    },
+    "h6b_held": true,
+    "restricted_or_deleted": {
+     "count": 9,
+     "total": 60,
+     "rate": 0.15,
+     "low": 0.08097440580167739,
+     "high": 0.2611458906977855
+    }
+   }
+  }
+ ],
+ "worked_examples": {
+  "right": "POL-SINGLE-001",
+  "search_missed": "POL-SINGLE-000",
+  "model_misread": "DISTRACT-018"
+ },
+ "models_returned": {
+  "answer": [
+   "gpt-6.1-sol"
+  ],
+  "judge": [
+   "claude-sonnet-5-5"
+  ],
+  "embedding": null
+ },
+ "code_check_disagrees_with_judge": [
+  "DISTRACT-018",
+  "DISTRACT-026",
+  "DISTRACT-032",
+  "RESTRICT-STAFF-010",
+  "VERSION-000",
+  "VERSION-001",
+  "VERSION-002",
+  "VERSION-003",
+  "VERSION-006",
+  "VERSION-007",
+  "VERSION-008",
+  "VERSION-009",
+  "VERSION-010",
+  "VERSION-011",
+  "VERSION-014",
+  "VERSION-015",
+  "VERSION-016",
+  "VERSION-017",
+  "VERSION-018",
+  "VERSION-019",
+  "VERSION-020",
+  "VERSION-021",
+  "VERSION-023",
+  "VERSION-025",
+  "VERSION-027",
+  "VERSION-029",
+  "VERSION-030",
+  "VERSION-031",
+  "VERSION-033",
+  "VERSION-037",
+  "VERSION-038",
+  "VERSION-039"
+ ]
+}

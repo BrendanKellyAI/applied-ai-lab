@@ -1,0 +1,5 @@
+{
+ "rule": "highest dev recall at 5 on the 70 answerable dev items; ties to the shallower fusion",
+ "dev_recall": {"hybrid-20": 49, "hybrid-50": 49, "hybrid-all": 49, "keyword": 40, "baseline": 48},
+ "chosen": "hybrid-20"
+}

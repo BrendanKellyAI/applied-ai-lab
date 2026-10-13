@@ -1,0 +1,21 @@
+# S2 E10: grounding and citations. One condition: the grounded, citing instruction (stage 8) and
+# the citation parser (stage 10), which reads the markers that instruction asks for. Both run in
+# full; the parser makes no call.
+episode: s2-e10-grounding-and-citations
+description: Answer only from the passages, cite each claim, and check the citations
+base: ../../season2/history/s2-e10-grounding-and-citations.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: grounded-cite
+    changes:
+      prompt: {k: 5, order: rank, instruction: grounded_cite}
+      cite: {mode: parse}
+    changes_more_than_one_stage: "the citation parser (stage 10) reads the [Pn] markers that only the grounded instruction (stage 8) asks for; neither means anything alone"
+    measure: full

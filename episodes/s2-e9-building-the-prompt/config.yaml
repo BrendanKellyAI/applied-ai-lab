@@ -1,0 +1,26 @@
+# S2 E9: building the prompt. Every condition changes stage 8 only. A prompt change changes
+# the answers, so the conditions that test answers run in full (PREREGISTRATION.md).
+episode: s2-e9-building-the-prompt
+description: How many passages, in what order, and whether "not found" is allowed
+base: ../../season2/history/s2-e9-building-the-prompt.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: baseline
+    measure: full
+  - name: allow-not-found
+    changes: {prompt: {k: 5, order: rank, instruction: allow_not_found}}
+    measure: full
+  - name: k-3
+    changes: {prompt: {k: 3, order: rank, instruction: plain}}
+    measure: full
+  - name: ends
+    changes: {prompt: {k: 5, order: ends, instruction: plain}}
+    measure: full
+  - name: k-8
+    changes: {prompt: {k: 8, order: rank, instruction: plain}}
+    measure: search

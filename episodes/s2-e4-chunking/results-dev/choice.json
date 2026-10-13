@@ -1,0 +1,6 @@
+{
+ "rule": "highest recall at 5 on the 20 dev policy items; ties to smaller chunks, then no overlap, then name order",
+ "fixed": "fixed-512-0",
+ "structure": "structure-1024",
+ "ties": "fixed-512-0 and fixed-512-128 both 15/20; structure-1024 and structure-1024-headings both 17/20"
+}

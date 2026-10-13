@@ -1,0 +1,110 @@
+{
+ "episode": "s2-e6-rewriting",
+ "condition": "split",
+ "measure": "search",
+ "config_id": "bf46c3ee02ab",
+ "base_id": "0ef803fd06f1",
+ "changed": [
+  "rewrite"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "split",
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "passthrough"
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 100,
+ "run_utc": "2026-10-12T22:37:09+00:00",
+ "numbers": {
+  "search": {
+   "count": 55,
+   "total": 70,
+   "rate": 0.7857142857142857,
+   "low": 0.676088137365211,
+   "high": 0.8656129698289221
+  },
+  "leaks": {
+   "count": 21,
+   "total": 90,
+   "rate": 0.23333333333333334,
+   "low": 0.15798194384364636,
+   "high": 0.3305170564573279
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": "text-embedding-3-small"
+ },
+ "calls": {
+  "rewrite": [
+   {
+    "planned": 90,
+    "already_complete": 0,
+    "cached": 0,
+    "made": 90,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 11089,
+      "output_tokens": 2080,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ]
+ },
+ "embedding_tokens_reported": 764,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

@@ -1,0 +1,349 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "3-small (ref)",
+   "recall": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 12,
+     "total": 20,
+     "rate": 0.6,
+     "low": 0.3865815007622531,
+     "high": 0.781193467627183
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2767.0
+  },
+  "large": {
+   "label": "3-large",
+   "recall": {
+    "count": 326,
+    "total": 400,
+    "rate": 0.815,
+    "low": 0.7740142283989209,
+    "high": 0.8499930261704722
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 13,
+     "total": 20,
+     "rate": 0.65,
+     "low": 0.43285427668523624,
+     "high": 0.818808175898918
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 5,
+     "total": 40,
+     "rate": 0.125,
+     "low": 0.05459500250945401,
+     "high": 0.261121198388511
+    },
+    "identifier": {
+     "count": 19,
+     "total": 40,
+     "rate": 0.475,
+     "low": 0.329354701126789,
+     "high": 0.6250263789330753
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "policy_two_sentence": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 14,
+     "total": 20,
+     "rate": 0.7,
+     "low": 0.4810271816464765,
+     "high": 0.8545227551323956
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 0,
+   "cut_items": 0,
+   "superseded_slots": 0,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2483.0
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 344,
+    "total": 400,
+    "rate": 0.86,
+    "low": 0.8225607694538968,
+    "high": 0.8905903786254097
+   },
+   "answer": {
+    "count": 354,
+    "total": 400,
+    "rate": 0.885,
+    "low": 0.850008455984224,
+    "high": 0.9126670773783676
+   },
+   "not_found": {
+    "count": 107,
+    "total": 120,
+    "rate": 0.8916666666666667,
+    "low": 0.8234463978470834,
+    "high": 0.9355885884582658
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  },
+  "large": {
+   "search": {
+    "count": 326,
+    "total": 400,
+    "rate": 0.815,
+    "low": 0.7740142283989209,
+    "high": 0.8499930261704722
+   },
+   "answer": {
+    "count": 337,
+    "total": 400,
+    "rate": 0.8425,
+    "low": 0.8035652075632727,
+    "high": 0.8749188708177342
+   },
+   "not_found": {
+    "count": 106,
+    "total": 120,
+    "rate": 0.8833333333333333,
+    "low": 0.8136664838239611,
+    "high": 0.9292188219216995
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 39,
+   "search": 2,
+   "answer": 2,
+   "prompt": 3
+  },
+  "large": {
+   "search": 9,
+   "rerank": 51,
+   "answer": 3
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 46,
+  "large": 63
+ },
+ "claims": [
+  {
+   "id": "M1",
+   "statement": "The larger model finds more.",
+   "held": false,
+   "detail": {
+    "net_change": -18
+   }
+  },
+  {
+   "id": "M2",
+   "statement": "The totals hide how many questions change hands.",
+   "held": false,
+   "detail": {
+    "changed_hands": 40,
+    "net_change": -18
+   }
+  },
+  {
+   "id": "M3",
+   "statement": "Better search gives better answers.",
+   "held": true,
+   "detail": {
+    "search_change": -18,
+    "answer_change": -17
+   }
+  }
+ ],
+ "join": {
+  "rule": "search above the reference's interval, answer not lower",
+  "passed": [],
+  "joined": null
+ },
+ "paired_search": {
+  "large": {
+   "only_other": 11,
+   "only_reference": 29,
+   "p_value": 0.006426576095691416
+  }
+ },
+ "paired_answer": {
+  "large": {
+   "only_other": 16,
+   "only_reference": 33,
+   "p_value": 0.021294114141387155
+  }
+ },
+ "extra": {
+  "embedding_cost": {
+   "text-embedding-3-small": {
+    "library_tokens": 288666,
+    "cost_usd": 0.0058,
+    "cost_usd_for_1000x": 5.77,
+    "tokens_reported_this_run": 0
+   },
+   "text-embedding-3-large": {
+    "library_tokens": 288666,
+    "cost_usd": 0.0375,
+    "cost_usd_for_1000x": 37.53,
+    "tokens_reported_this_run": 219520
+   }
+  }
+ }
+}

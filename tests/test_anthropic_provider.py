@@ -92,6 +92,16 @@ def test_reasoning_off_disables_thinking_without_effort():
     assert "system" not in params
 
 
+def test_reasoning_off_on_sonnet_5_5_sends_between_tools():
+    # Claude Sonnet 5.5 rejects {"type": "disabled"}; "between_tools" is its thinking-off mode,
+    # and it takes no other field.
+    request = _request(model="claude-sonnet-5-5", reasoning="off", show_thinking=False, system=None)
+    params = build_params(request)
+
+    assert params["thinking"] == {"type": "between_tools"}
+    assert "output_config" not in params
+
+
 def test_temperature_is_sent_when_set():
     request = _request(
         model="claude-haiku-4-5-20251001", reasoning="off", show_thinking=False, temperature=0.0

@@ -22,6 +22,26 @@
 openai:
   # reasoning.effort "none" is the neutral "off". Temperature support for these models is not
   # documented, so it is treated as unsupported until `lab smoke` confirms otherwise.
+  # Season 2 answer model. Verified 11 October 2026: "none" and "minimal" are not supported,
+  # so reasoning cannot be turned off; low is the lowest level. Temperature 0 was sent once on
+  # 11 October 2026 and rejected with HTTP 400 ("not supported with this model").
+  gpt-6.1-sol:
+    reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  # Season 2 answer model from S2 E4, chosen for cost. Verified 12 October 2026 with one call:
+  # reasoning effort "none" is accepted and returns 0 reasoning tokens; temperature is rejected
+  # with HTTP 400.
+  gpt-6-luna:
+    reasoning: [off, low, medium, high]
+    temperature: false
+    max_output_tokens: 128000
+  # Candidate S2 judge, for cost ($0.25 / $2.00). Like gpt-5-nano, checked 12 October 2026:
+  # effort "none" is rejected, "minimal" is its lowest level, temperature is rejected.
+  gpt-5-mini:
+    reasoning: [minimal, low, medium, high]
+    temperature: false
+    max_output_tokens: 128000
   gpt-6-astra:
     reasoning: [low, medium, high, xhigh, max]
     temperature: false
@@ -44,6 +64,12 @@ anthropic:
   # output_config.effort with adaptive thinking; "off" maps to thinking disabled.
   claude-fable-5-1:
     reasoning: [low, medium, high, xhigh, max]
+    temperature: false
+    max_output_tokens: 128000
+  # Season 2 judge. Verified 11 October 2026: any non-default temperature returns HTTP 400;
+  # "off" is sent as thinking {"type": "between_tools"}, because {"type": "disabled"} is a 400.
+  claude-sonnet-5-5:
+    reasoning: [off, low, medium, high, xhigh, max]
     temperature: false
     max_output_tokens: 128000
   claude-opus-5:
@@ -70,6 +96,11 @@ google:
     temperature: true
   gemini-3.7-flash:
     reasoning: [low, medium, high]
+    temperature: true
+  # Season 2 judge from S2 E4, chosen for cost. Thinking cannot be turned off; "minimal" is its
+  # default. Google's table lists minimal and high only; confirm with the first call.
+  gemini-3.1-flash-lite:
+    reasoning: [minimal, high]
     temperature: true
   gemini-3.6-flash:
     reasoning: [minimal, low, medium, high]

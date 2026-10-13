@@ -1,0 +1,254 @@
+{
+ "runs": {
+  "E2": {
+   "config_id": "b58f06493698",
+   "wrong": 182,
+   "by_stage": {
+    "chunk": 11,
+    "search": 44,
+    "filter": 0,
+    "shortlist": 0,
+    "rerank": 92,
+    "prompt": 1,
+    "answer": 34
+   },
+   "by_type": {
+    "followup": 37,
+    "version": 35,
+    "identifier": 25,
+    "two_part": 19,
+    "bridge": 18,
+    "policy_single": 12,
+    "policy_heading": 10,
+    "restricted_staff": 10,
+    "distractor": 8,
+    "policy_two_sentence": 4,
+    "paraphrase": 3,
+    "shared": 1
+   },
+   "leak_items": 51,
+   "undeclined_unanswerable": {
+    "restricted_public": 31,
+    "deleted": 20,
+    "absent_detail": 13
+   }
+  },
+  "E4": {
+   "config_id": "9652ab169377",
+   "wrong": 157,
+   "by_stage": {
+    "chunk": 13,
+    "search": 39,
+    "filter": 0,
+    "shortlist": 0,
+    "rerank": 86,
+    "prompt": 2,
+    "answer": 17
+   },
+   "by_type": {
+    "followup": 35,
+    "identifier": 25,
+    "version": 22,
+    "bridge": 16,
+    "two_part": 13,
+    "policy_single": 12,
+    "policy_heading": 10,
+    "restricted_staff": 8,
+    "distractor": 7,
+    "paraphrase": 4,
+    "policy_two_sentence": 4,
+    "shared": 1
+   },
+   "leak_items": 51,
+   "undeclined_unanswerable": {
+    "restricted_public": 33,
+    "deleted": 20,
+    "absent_detail": 14
+   }
+  },
+  "Final": {
+   "config_id": "0294479ba987",
+   "wrong": 46,
+   "by_stage": {
+    "chunk": 0,
+    "search": 2,
+    "filter": 0,
+    "shortlist": 24,
+    "rerank": 15,
+    "prompt": 3,
+    "answer": 2
+   },
+   "by_type": {
+    "followup": 19,
+    "identifier": 14,
+    "bridge": 6,
+    "two_part": 3,
+    "paraphrase": 1,
+    "shared": 1,
+    "policy_single": 1,
+    "restricted_staff": 1
+   },
+   "leak_items": 0,
+   "undeclined_unanswerable": {
+    "absent_detail": 9,
+    "restricted_public": 4
+   }
+  }
+ },
+ "claims": [
+  {
+   "id": "T1",
+   "statement": "Most of the final system's ranking losses happen before the reranker.",
+   "held": true,
+   "detail": {
+    "outside_shortlist": 24,
+    "ranking": 39
+   }
+  },
+  {
+   "id": "T2",
+   "statement": "The final system's failures sit in two item types, follow-ups and identifiers.",
+   "held": true,
+   "detail": {
+    "followup_and_identifier": 33,
+    "wrong": 46
+   }
+  },
+  {
+   "id": "T3",
+   "statement": "When it answers a question it should decline, the library usually covers the topic but not the detail.",
+   "held": true,
+   "detail": {
+    "absent_detail": 9,
+    "undeclined": 13
+   }
+  }
+ ],
+ "examples_final": [
+  {
+   "stage": "Missed",
+   "item_id": "IDENT-019",
+   "type": "identifier",
+   "question": "What is part KX-8033 for?",
+   "evidence": [
+    {
+     "kind": "evidence",
+     "cut": false,
+     "searched": null,
+     "filtered": null,
+     "reranked": null,
+     "in_prompt": false
+    }
+   ],
+   "prompt_chunks": [
+    "A118@1#0",
+    "A081@1#0",
+    "A005@1#0",
+    "A089@1#0",
+    "A045@1#0"
+   ],
+   "answer": "I could not find what part KX-8033 is for.",
+   "judge_reason": "The system correctly declined to answer because the provided passages do not contain information about part KX-8033."
+  },
+  {
+   "stage": "Outside the shortlist",
+   "item_id": "IDENT-005",
+   "type": "identifier",
+   "question": "What is part KX-3673 for?",
+   "evidence": [
+    {
+     "kind": "evidence",
+     "cut": false,
+     "searched": 39,
+     "filtered": 39,
+     "reranked": 39,
+     "in_prompt": false
+    }
+   ],
+   "prompt_chunks": [
+    "A047@1#0",
+    "A081@1#0",
+    "A118@1#0",
+    "A045@1#0",
+    "A089@1#0"
+   ],
+   "answer": "I could not find what part KX-3673 is for in the passages.",
+   "judge_reason": "The system correctly declined to answer because the provided passages do not contain information about part KX-3673, but this makes the answer incorrect since the question can be answered from the full documents."
+  },
+  {
+   "stage": "Ranked too low",
+   "item_id": "FOLLOW-005",
+   "type": "followup",
+   "question": "What about the Tessa dishwasher?",
+   "evidence": [
+    {
+     "kind": "evidence",
+     "cut": false,
+     "searched": 11,
+     "filtered": 11,
+     "reranked": 13,
+     "in_prompt": false
+    }
+   ],
+   "prompt_chunks": [
+    "POL-SAF@2#6",
+    "A218@1#0",
+    "A299@1#0",
+    "A013@1#0",
+    "A206@1#0"
+   ],
+   "answer": "The passages do not specify how long to wait before turning on the Tessa dishwasher after moving it. I could not find that information.",
+   "judge_reason": "The system correctly declined to answer because the provided documents do not contain information on how long to wait after moving the Tessa dishwasher, but the question was wrongly marked as answerable in the test case dataset."
+  },
+  {
+   "stage": "Ignored",
+   "item_id": "SHARED-032",
+   "type": "shared",
+   "question": "How long is the warranty on the Halvard Home Mira robot vacuum from the date of purchase?",
+   "evidence": [
+    {
+     "kind": "evidence",
+     "cut": false,
+     "searched": 1,
+     "filtered": 1,
+     "reranked": 1,
+     "in_prompt": true
+    }
+   ],
+   "prompt_chunks": [
+    "A192@1#0",
+    "POL-WAR@2#22",
+    "POL-WAR@2#23",
+    "POL-SER@2#23",
+    "A139@1#0"
+   ],
+   "answer": "I could not find a warranty duration stated from the date of purchase. One passage says the Mira is covered for 40 months from delivery, while another says it has a two-year warranty from purchase. [P1][P2]",
+   "judge_reason": "The system declined to provide a definitive answer due to conflicting passages, even though the information was present in the text."
+  },
+  {
+   "stage": "Misread",
+   "item_id": "PARA-003",
+   "type": "paraphrase",
+   "question": "How long is my kitchen vent fan guaranteed for after I buy it?",
+   "evidence": [
+    {
+     "kind": "evidence",
+     "cut": false,
+     "searched": 1,
+     "filtered": 1,
+     "reranked": 1,
+     "in_prompt": true
+    }
+   ],
+   "prompt_chunks": [
+    "A123@1#0",
+    "POL-WAR@2#20",
+    "POL-WAR@2#21",
+    "A255@1#0",
+    "POL-SER@2#21"
+   ],
+   "answer": "The passages conflict: one states a two-year warranty from purchase [P1], while another says 66 months from delivery [P2]. Check your warranty documents or contact Halvard Home to confirm which applies.",
+   "judge_reason": "The system correctly identified the conflicting information presented in the passages, but failed to provide a definitive answer matching the reference answer."
+  }
+ ]
+}

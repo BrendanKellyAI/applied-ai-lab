@@ -1,0 +1,110 @@
+{
+ "episode": "s2-e6-rewriting",
+ "condition": "resolve-followup",
+ "measure": "search",
+ "config_id": "c54d12a56119",
+ "base_id": "0ef803fd06f1",
+ "changed": [
+  "rewrite"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "resolve_followup",
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "passthrough",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "passthrough"
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6-luna",
+   "reasoning": "off",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 100,
+ "run_utc": "2026-10-12T22:37:12+00:00",
+ "numbers": {
+  "search": {
+   "count": 54,
+   "total": 70,
+   "rate": 0.7714285714285715,
+   "low": 0.6604966840601509,
+   "high": 0.8541193677742756
+  },
+  "leaks": {
+   "count": 22,
+   "total": 90,
+   "rate": 0.24444444444444444,
+   "low": 0.16732783066209148,
+   "high": 0.3424837112930089
+  }
+ },
+ "by_type": {},
+ "models_returned": {
+  "answer": [],
+  "judge": [],
+  "embedding": "text-embedding-3-small"
+ },
+ "calls": {
+  "rewrite": [
+   {
+    "planned": 10,
+    "already_complete": 0,
+    "cached": 0,
+    "made": 10,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 1441,
+      "output_tokens": 220,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ]
+ },
+ "embedding_tokens_reported": 75,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": []
+}

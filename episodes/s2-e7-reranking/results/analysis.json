@@ -1,0 +1,529 @@
+{
+ "items": 520,
+ "conditions": {
+  "baseline": {
+   "label": "Search order (ref)",
+   "recall": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "identifier": {
+     "count": 15,
+     "total": 40,
+     "rate": 0.375,
+     "low": 0.24222979167233266,
+     "high": 0.5296756086269889
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 15,
+     "total": 20,
+     "rate": 0.75,
+     "low": 0.531299122381256,
+     "high": 0.8881382985923343
+    },
+    "policy_single": {
+     "count": 34,
+     "total": 40,
+     "rate": 0.85,
+     "low": 0.709276756335103,
+     "high": 0.9293881228267964
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 0,
+     "total": 20,
+     "rate": 0.0,
+     "low": 0.0,
+     "high": 0.16112515805281938
+    },
+    "version": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    }
+   },
+   "leak_items": 76,
+   "cut_items": 0,
+   "superseded_slots": 699,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2914.5,
+   "look_alike_above": 0
+  },
+  "llm-10": {
+   "label": "LLM rerank, top 10",
+   "recall": {
+    "count": 298,
+    "total": 400,
+    "rate": 0.745,
+    "low": 0.7000956766555838,
+    "high": 0.785243299120611
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 1,
+     "total": 20,
+     "rate": 0.05,
+     "low": 0.008881448800795402,
+     "high": 0.23613119344674205
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 7,
+     "total": 40,
+     "rate": 0.175,
+     "low": 0.0874541374603592,
+     "high": 0.31949990331787714
+    },
+    "identifier": {
+     "count": 20,
+     "total": 40,
+     "rate": 0.5,
+     "low": 0.35199526933465386,
+     "high": 0.6480047306653461
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "policy_single": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "policy_two_sentence": {
+     "count": 17,
+     "total": 20,
+     "rate": 0.85,
+     "low": 0.6395811352592431,
+     "high": 0.9476312541037835
+    },
+    "restricted_staff": {
+     "count": 37,
+     "total": 40,
+     "rate": 0.925,
+     "low": 0.8013576647568946,
+     "high": 0.9741639742254119
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 3,
+     "total": 20,
+     "rate": 0.15,
+     "low": 0.052368745896216595,
+     "high": 0.36041886474075696
+    },
+    "version": {
+     "count": 39,
+     "total": 40,
+     "rate": 0.975,
+     "low": 0.8711863103652591,
+     "high": 0.9955731684973186
+    }
+   },
+   "leak_items": 63,
+   "cut_items": 0,
+   "superseded_slots": 727,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 2947.5,
+   "look_alike_above": 0
+  },
+  "llm-20": {
+   "label": "LLM rerank, top 20",
+   "recall": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "recall_by_type": {
+    "bridge": {
+     "count": 5,
+     "total": 20,
+     "rate": 0.25,
+     "low": 0.11186170140766569,
+     "high": 0.468700877618744
+    },
+    "distractor": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "followup": {
+     "count": 5,
+     "total": 40,
+     "rate": 0.125,
+     "low": 0.05459500250945401,
+     "high": 0.261121198388511
+    },
+    "identifier": {
+     "count": 26,
+     "total": 40,
+     "rate": 0.65,
+     "low": 0.49505880837257693,
+     "high": 0.7786547112682372
+    },
+    "paraphrase": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "policy_heading": {
+     "count": 20,
+     "total": 20,
+     "rate": 1.0,
+     "low": 0.8388748419471806,
+     "high": 1.0
+    },
+    "policy_single": {
+     "count": 36,
+     "total": 40,
+     "rate": 0.9,
+     "low": 0.7694822477247771,
+     "high": 0.9604204713173936
+    },
+    "policy_two_sentence": {
+     "count": 18,
+     "total": 20,
+     "rate": 0.9,
+     "low": 0.6989663547715128,
+     "high": 0.9721335187862319
+    },
+    "restricted_staff": {
+     "count": 38,
+     "total": 40,
+     "rate": 0.95,
+     "low": 0.8349612263085903,
+     "high": 0.9861793326138516
+    },
+    "shared": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "two_part": {
+     "count": 8,
+     "total": 20,
+     "rate": 0.4,
+     "low": 0.21880653237281705,
+     "high": 0.6134184992377469
+    },
+    "version": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    }
+   },
+   "leak_items": 64,
+   "cut_items": 0,
+   "superseded_slots": 761,
+   "prompt_slots": 2600,
+   "median_prompt_tokens": 3119.5,
+   "look_alike_above": 0
+  }
+ },
+ "full": {
+  "baseline": {
+   "search": {
+    "count": 281,
+    "total": 400,
+    "rate": 0.7025,
+    "low": 0.6559450648860605,
+    "high": 0.7452024559085495
+   },
+   "answer": {
+    "count": 280,
+    "total": 400,
+    "rate": 0.7,
+    "low": 0.6533627542224784,
+    "high": 0.7428323280438028
+   },
+   "not_found": {
+    "count": 42,
+    "total": 120,
+    "rate": 0.35,
+    "low": 0.2705189959028541,
+    "high": 0.438786754022757
+   },
+   "leaks": {
+    "count": 76,
+    "total": 480,
+    "rate": 0.15833333333333333,
+    "low": 0.12840542168542363,
+    "high": 0.19368656935754958
+   }
+  },
+  "llm-20": {
+   "search": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "answer": {
+    "count": 316,
+    "total": 400,
+    "rate": 0.79,
+    "low": 0.7474205944599498,
+    "high": 0.8270622748261584
+   },
+   "not_found": {
+    "count": 41,
+    "total": 120,
+    "rate": 0.3416666666666667,
+    "low": 0.26290438368564517,
+    "high": 0.4302516856802777
+   },
+   "leaks": {
+    "count": 64,
+    "total": 480,
+    "rate": 0.13333333333333333,
+    "low": 0.10581541761313282,
+    "high": 0.1666735483842043
+   }
+  }
+ },
+ "lost_at": {
+  "baseline": {
+   "rerank": 89,
+   "search": 7,
+   "prompt": 1,
+   "answer": 23
+  },
+  "llm-20": {
+   "rerank": 55,
+   "search": 7,
+   "answer": 22
+  }
+ },
+ "wrong_answerable": {
+  "baseline": 120,
+  "llm-20": 84
+ },
+ "claims": [
+  {
+   "id": "K1",
+   "statement": "Reranking puts the found passage in the top 5.",
+   "held": true,
+   "detail": {
+    "chosen": "llm-20",
+    "recall": {
+     "count": 316,
+     "total": 400,
+     "rate": 0.79,
+     "low": 0.7474205944599498,
+     "high": 0.8270622748261584
+    },
+    "reference": {
+     "count": 281,
+     "total": 400,
+     "rate": 0.7025,
+     "low": 0.6559450648860605,
+     "high": 0.7452024559085495
+    }
+   }
+  },
+  {
+   "id": "K2",
+   "statement": "Reading the question with the passage beats look-alikes.",
+   "held": false,
+   "detail": {
+    "chosen": 0,
+    "reference": 0
+   }
+  },
+  {
+   "id": "K3",
+   "statement": "A longer shortlist finds more.",
+   "held": true,
+   "detail": {
+    "llm10": {
+     "count": 298,
+     "total": 400,
+     "rate": 0.745,
+     "low": 0.7000956766555838,
+     "high": 0.785243299120611
+    },
+    "llm20": {
+     "count": 316,
+     "total": 400,
+     "rate": 0.79,
+     "low": 0.7474205944599498,
+     "high": 0.8270622748261584
+    }
+   }
+  },
+  {
+   "id": "K4",
+   "statement": "Better search gives better answers.",
+   "held": true,
+   "detail": {
+    "search_change": 35,
+    "answer_change": 36
+   }
+  }
+ ],
+ "join": {
+  "rule": "search above the reference's interval, answer not lower",
+  "passed": [
+   "llm-20"
+  ],
+  "joined": "llm-20"
+ },
+ "paired_search": {
+  "llm-10": {
+   "only_other": 19,
+   "only_reference": 2,
+   "p_value": 0.00022125244140625
+  },
+  "llm-20": {
+   "only_other": 38,
+   "only_reference": 3,
+   "p_value": 1.0479197953827679e-08
+  }
+ },
+ "paired_answer": {
+  "llm-20": {
+   "only_other": 45,
+   "only_reference": 11,
+   "p_value": 5.37831811014966e-06
+  }
+ },
+ "extra": {
+  "cross_encoder_distractor": {
+   "items": 40,
+   "recall_at_5": {
+    "count": 40,
+    "total": 40,
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
+   },
+   "look_alike_above": 0,
+   "timing": {
+    "pairs_computed": 400,
+    "seconds_computing": 2464.779,
+    "questions": 40
+   }
+  },
+  "llm_distractor": {
+   "baseline": {
+    "recall_at_5": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "look_alike_above": 0
+   },
+   "llm-10": {
+    "recall_at_5": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "look_alike_above": 0
+   },
+   "llm-20": {
+    "recall_at_5": {
+     "count": 40,
+     "total": 40,
+     "rate": 1.0,
+     "low": 0.9123783988027135,
+     "high": 1.0
+    },
+    "look_alike_above": 0
+   }
+  }
+ }
+}

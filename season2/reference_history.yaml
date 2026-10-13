@@ -1,0 +1,62 @@
+- episode: s2-e2-first-rag-system
+  stage_changed: null
+  reference_before: null
+  reference_after: b58f06493698
+  pass_mark: 'none: the baseline sets the reference'
+  joined: true
+- episode: s2-e4-chunking
+  stage_changed: chunk
+  reference_before: 9652ab169377
+  reference_after: 0ef803fd06f1
+  pass_mark: search interval above the reference's, answer not lower
+  joined: true
+  candidate: structure-1024
+- episode: s2-e5-search
+  stage_changed: search
+  reference_before: 0ef803fd06f1
+  reference_after: 0ef803fd06f1
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: hybrid-20
+- episode: s2-e6-rewriting
+  stage_changed: rewrite
+  reference_before: 0ef803fd06f1
+  reference_after: 0ef803fd06f1
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: rewrite
+- episode: s2-e7-reranking
+  stage_changed: rerank
+  reference_before: 0ef803fd06f1
+  reference_after: eb9b824ce5db
+  pass_mark: search above the reference's interval, answer not lower
+  joined: true
+  candidate: llm-20
+- episode: s2-e8-filters
+  stage_changed: filter
+  reference_before: eb9b824ce5db
+  reference_after: d52dd1b463b8
+  pass_mark: leaks below the reference's interval, answer not lower
+  joined: true
+  candidate: before
+- episode: s2-e9-building-the-prompt
+  stage_changed: prompt
+  reference_before: d52dd1b463b8
+  reference_after: d52dd1b463b8
+  pass_mark: share of the 520 handled right above the reference's interval
+  joined: false
+  candidate: allow-not-found
+- episode: s2-e10-grounding-and-citations
+  stage_changed: cite
+  reference_before: d52dd1b463b8
+  reference_after: 0294479ba987
+  pass_mark: cites at least 90%, answer and handled share not below the reference's
+  joined: true
+  candidate: grounded-cite
+- episode: s2-e12-embedding-swap
+  stage_changed: embed
+  reference_before: 0294479ba987
+  reference_after: 0294479ba987
+  pass_mark: search above the reference's interval, answer not lower
+  joined: false
+  candidate: large
