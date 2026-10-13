@@ -1,0 +1,16 @@
+{
+ "items": 120,
+ "library_tokens_cl100k": 161188,
+ "answer_model": "gpt-6-luna",
+ "judge_model": "gemini-3.6-flash",
+ "answer_calls": {
+  "planned": 120,
+  "already_complete": 0,
+  "cached": 8,
+  "made": 112,
+  "failed": 0,
+  "tokens_by_provider": {
+   "openai": "TokenTotals(input_tokens=17964744, output_tokens=3414, reasoning_tokens=0, cached_input_tokens=0)"
+  }
+ }
+}
