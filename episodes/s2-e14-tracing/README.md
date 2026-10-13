@@ -71,8 +71,9 @@ other 4 ask about restricted documents.
 - **Misread** (`PARA-003`): the same conflict for the cooker hood; the model gives both periods
   and tells the customer to check.
 
-The last two are not model errors so much as a library that contradicts itself, which the
-system faithfully reports. Tracing turns "the bot is wrong" into "these two documents disagree".
+Three of the five failures with the passage in the prompt are this same conflict (also
+`FOLLOW-039`, the Vale fridge freezer): not model errors so much as a library that contradicts
+itself, which the system faithfully reports. Tracing turns "the bot is wrong" into "these two documents disagree".
 
 ## What this does not show
 

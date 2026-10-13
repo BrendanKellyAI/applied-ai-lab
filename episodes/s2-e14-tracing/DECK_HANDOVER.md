@@ -30,7 +30,8 @@ sizes). Slide function: `first_lost_stage` in `src/lab/rag/score.py`. Branch `s2
   the reranker's shortlist of 20, and 15 were reranked below 5.
 - **Worked example:** take one item through every stage, e.g. `IDENT-005` (ranked 39th, outside
   the shortlist) beside `FOLLOW-005` (a follow-up searched without its topic).
-- **The conflicts:** two of the five final failures are the library contradicting itself (an
+- **The conflicts:** three of the five final failures with the passage in the prompt are the
+  library contradicting itself (an
   article says two years from purchase, the policy says 40 months from delivery). Good "for
   leaders" material: tracing turns a wrong answer into a content fix.
 - **Claims:** T1, T2 and T3 all held.

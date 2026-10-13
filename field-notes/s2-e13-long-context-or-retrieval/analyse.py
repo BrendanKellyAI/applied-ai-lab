@@ -108,7 +108,8 @@ def main(pilot: bool) -> dict:
     report = {
         "items": len(lc),
         "claims": [
-            {"id": "L1", "statement": "On the hardest questions, sending everything beats retrieval.",
+            {"id": "L1",
+             "statement": "On the hardest questions, sending everything beats retrieval.",
              "held": below(rt_hard, lc_hard),
              "detail": {"long_context": lc_hard.model_dump(), "retrieval": rt_hard.model_dump()}},
             {"id": "L2", "statement": "On simple questions, retrieval loses nothing.",

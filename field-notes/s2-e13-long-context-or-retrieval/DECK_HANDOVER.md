@@ -28,5 +28,7 @@ context used 11 times the tokens, cost 10 times as much ($0.016 a question), and
 
 ## Decision rule (field note)
 
-"If your library fits in the window, has no permissions and rarely changes, test sending it
-all before you build a pipeline. Otherwise, retrieve."
+The handoff's draft, supported: **"Use long context when the documents fit and change rarely;
+use retrieval when the library outgrows the window, changes often, or must be scoped per
+user."** Add the run's numbers: at 160,000 tokens it matched retrieval's accuracy at ten times
+the price, and won on questions that span documents.

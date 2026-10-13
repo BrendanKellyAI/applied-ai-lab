@@ -29,5 +29,14 @@ joined.
 
 ## Decision rule (field note)
 
-"A bigger embedding model is not an upgrade by default. Rerun your evaluation before you swap,
-and keep the old one if it wins."
+Kept from the handoff, confirmed: **"Swap embedding models in one step: re-embed everything,
+switch queries with it, and compare answers question by question, not just the totals."** Add
+the run's lesson: a bigger model is not an upgrade by default; here it lost, so keep the old one
+when it wins.
+
+## The v1 deck (old S2 E4)
+
+This rerun replaces the v1 slides; none should survive. The handoff's carry-over fixes are
+covered as follows: the currency cost is in the README's cost table; v1's claim 2b and the
+retuned model's 118 against 86 wrong articles belong to the old design and are not repeated.
+Map v1's four warnings to M1 to M3 where they fit; drop the rest.
