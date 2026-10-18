@@ -121,7 +121,7 @@ candidates:
         assumption: "Contacts exist, but too few are labelled as confirmed incidents to train on or to measure misses."
       durable_advantage:
         score: 3
-        assumption: "General classifiers can be bought; knowing what an Ashby or Corra incident sounds like is Halvard's own."
+        assumption: "General classifiers can be bought; knowing what an Ashby tumble dryer or Corra induction hob incident sounds like is Halvard's own."
       time_to_evidence:
         score: 2
         assumption: "Measuring misses needs enough confirmed incidents to count, which at about 40 a month takes most of a year."
@@ -208,4 +208,14 @@ candidates:
       model_access: none
       reason: "Redirected at G2: a forecasting model or a bought planning product."
 
-# The first pick's stop criteria are added after totals, before its fictional pilot starts.
+# The first pick's stop criteria, written after totals and before its fictional pilot starts
+# (E11). The pick is C6; the sensitivity check calls it fragile (C2 goes first in 6 of 15
+# weightings), so the stop criteria name C2 as the fallback.
+stop_criteria:
+  candidate: C6
+  written: "2026-10-18"
+  success_metric: "Contradictions found between support articles and current policies, confirmed by the content team, and the share of the 300 articles checked consistent"
+  threshold: "The check finds every contradiction already known from Season 2 E14 (Mira robot vacuum, Fenwick cooker hood, Vale fridge freezer), and at least half of its flags are confirmed by an editor"
+  time_box: "Six weeks from the first run over the library"
+  stop_condition: "Stop if it misses any known contradiction after one round of changes to its instructions, or if fewer than 1 in 4 flags are confirmed; then move to C2, reply drafts for agents"
+  reviewer: "Content team lead, reporting to the head of customer operations"

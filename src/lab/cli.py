@@ -35,9 +35,11 @@ from lab.rag.cli import rag_app
 from lab.raw_log import latest_successful, load_records
 from lab.runner import Runner, format_summary
 from lab.smoke import describe, plan_smoke, problems
+from lab.strategy.cli import strategy_app
 
 app = typer.Typer(help="Run and analyse applied-ai-lab experiments.", no_args_is_help=True)
 app.add_typer(rag_app, name="rag")
+app.add_typer(strategy_app, name="strategy")
 
 
 def _print_version(value: bool) -> None:

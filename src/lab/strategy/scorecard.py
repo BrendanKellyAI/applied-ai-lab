@@ -159,9 +159,7 @@ def read_scorecard(path: Path, rule: Rule) -> list[Row]:
 
 def _message(exc: Exception) -> str:
     if isinstance(exc, ValidationError):
-        return "; ".join(
-            f"{'.'.join(str(p) for p in e['loc'])}: {e['msg']}" for e in exc.errors()
-        )
+        return "; ".join(f"{'.'.join(str(p) for p in e['loc'])}: {e['msg']}" for e in exc.errors())
     return str(exc)
 
 

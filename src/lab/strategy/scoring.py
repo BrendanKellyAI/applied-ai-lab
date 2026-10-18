@@ -134,7 +134,10 @@ def weightings(rule: Rule) -> list[tuple[str, dict[str, float]]]:
     """The alternative weightings the sensitivity check uses, each scaled to sum to 1."""
     spec = rule.sensitivity
     out = [("equal", normalised(spec.equal))]
-    for factor, label, wanted in ((0.5, "halved", spec.halve_each), (2, "doubled", spec.double_each)):
+    for factor, label, wanted in (
+        (0.5, "halved", spec.halve_each),
+        (2, "doubled", spec.double_each),
+    ):
         if not wanted:
             continue
         for criterion in rule.criterion_ids:

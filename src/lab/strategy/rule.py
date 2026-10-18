@@ -98,7 +98,8 @@ class Rule(BaseModel):
     def _weights_match(self) -> "Rule":
         ids = {c.id for c in self.criteria}
         for name, weights in [("weights", self.weights)] + [
-            (f"sensitivity.{k}", getattr(self.sensitivity, k)) for k in ("equal", "ceo", "regulator")
+            (f"sensitivity.{k}", getattr(self.sensitivity, k))
+            for k in ("equal", "ceo", "regulator")
         ]:
             if set(weights) != ids:
                 raise ValueError(f"{name} must give a weight for each criterion: {sorted(ids)}")
