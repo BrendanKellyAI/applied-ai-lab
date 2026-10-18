@@ -14,6 +14,7 @@ from matplotlib.figure import Figure
 from lab.charts import ChartSpec, ChartStyle, export_chart, grouped_bars
 from lab.rag.compare import answer_cost, hits, paired, proportion, ratios
 from lab.rag.fieldnote import answer_prices, kept_ratios, load_arms, pipeline_of, write_json
+from lab.raw_log import latest_successful, load_records
 
 HERE = Path(__file__).parent
 ROOT = HERE.parents[1]
@@ -24,6 +25,18 @@ CELLS = [f"{p}-{m}" for p in PIPELINES for m in MODELS]
 
 def claim(id_: str, statement: str, held: bool, **detail) -> dict:
     return {"id": id_, "claim": statement, "held": held, **detail}
+
+
+def rerank_cost(raw: Path, prices: dict) -> float:
+    """The reranker's calls (P2 only), from the tokens each reported."""
+    if not raw.exists():
+        return 0.0
+    total = 0.0
+    for record in latest_successful(load_records(raw)).values():
+        result = record.result
+        price_in, price_out = prices[result.model_requested]
+        total += result.input_tokens * price_in + result.output_tokens * price_out
+    return total / 1_000_000
 
 
 def numbers(results: Path, cell: str) -> dict:
@@ -50,6 +63,7 @@ def analyse(episode, results: Path, *, pilot: bool) -> str:
     if prices is not None:
         cost = {
             c: answer_cost(arms[c], *prices[pipeline_of(results, c)["answer"]["model"]])
+            + rerank_cost(results / c / "raw-rerank.jsonl", prices)
             for c in CELLS
         }
         cost_ratio = ratios(cost, totals)
@@ -104,9 +118,9 @@ def analyse(episode, results: Path, *, pilot: bool) -> str:
         "cells": cells,
         "handled_totals": totals,
         "cost_per_item_handled_ratio": cost_ratio,
-        "cost_note": "Answer calls only, from provider-reported tokens and published prices on "
-        "18 October 2026; 1 is the cheapest per item handled right. P2 adds a reranker call "
-        "to gpt-6-luna per item for both models, not counted here.",
+        "cost_note": "Answer calls plus, for P2, the reranker's gpt-6-luna call per item, from "
+        "provider-reported tokens and published prices on 18 October 2026; 1 is the cheapest "
+        "per item handled right. Embedding and judging are left out.",
         "claims": claims,
         "title_rule": title,
         "leaks_note": "Leaks are set by the pipeline before the model sees the prompt, so they "
@@ -144,8 +158,8 @@ def charts(out: Path, cells: dict) -> None:
         out,
         ChartSpec(
             name="grid",
-            units="Share of answerable questions answered right",
-            sample_size="400 answerable test items per cell",
+            units="Answerable questions answered right",
+            sample_size="400 per cell",
             footnote="The large model costs 20 times the small per token",
         ),
     )
@@ -165,8 +179,8 @@ def charts(out: Path, cells: dict) -> None:
         out,
         ChartSpec(
             name="leaks",
-            units="Share of public questions with a staff-only passage in the prompt",
-            sample_size="480 public test items per cell",
+            units="Public questions with a staff passage in the prompt",
+            sample_size="480 per cell",
             footnote="Set by the pipeline, before any model reads the prompt",
         ),
     )
