@@ -199,7 +199,10 @@ def _runner(episode: Episode, conditions: list[ResolvedCondition], cache_root: P
 
 def results_folder(episode: Episode, *, pilot: bool) -> Path:
     """Where a run's results go: `results/` for test items, `results-dev/` for dev items, so a
-    dev run never overwrites a test run; a pilot goes in a `pilot/` folder below either."""
+    dev run never overwrites a test run; a pilot goes in a `pilot/` folder below either. An
+    episode may name its own folder instead (`results_dir`)."""
+    if episode.config.results_dir is not None:
+        return episode.folder / episode.config.results_dir / ("pilot" if pilot else "")
     name = "results" if episode.config.items == "test" else f"results-{episode.config.items}"
     return episode.folder / name / ("pilot" if pilot else "")
 

@@ -1,0 +1,47 @@
+# S3 E3 (field note): does the leaderboard predict your task? The Season 2 reference system
+# (0294479ba987) with only the answer model changing. Retrieval, the reranker's order, the
+# grounded_cite instruction and the citation parser are the reference's, served from cache.
+# The judge is gemini-3.6-flash, except for Google answer models, which claude-sonnet-5-5
+# judges so that no model judges its own provider's answers.
+episode: s3-e3-leaderboard
+description: Eight answer models, ordered by a public leaderboard, on the Halvard test set
+base: ../../season2/reference.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+results_dir: results/2026-10
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  anthropic: {max_concurrency: 4, requests_per_minute: 50}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  # gpt-6-luna, reasoning off: the reference itself. Its answers and verdicts come from cache.
+  - name: gpt-6-luna
+    measure: full
+  - name: gpt-6-1-sol
+    changes: {answer: {model: gpt-6.1-sol, reasoning: low}}
+    measure: full
+  - name: gpt-5-6-terra
+    changes: {answer: {model: gpt-5.6-terra, reasoning: low}}
+    measure: full
+  - name: claude-opus-5-5
+    changes: {answer: {provider: anthropic, model: claude-opus-5-5, reasoning: low}}
+    measure: full
+  - name: claude-sonnet-5-5
+    changes: {answer: {provider: anthropic, model: claude-sonnet-5-5, reasoning: low}}
+    measure: full
+  - name: claude-haiku-5-5
+    changes: {answer: {provider: anthropic, model: claude-haiku-5-5, reasoning: low}}
+    measure: full
+  - name: gemini-3-8-flash
+    changes:
+      answer: {provider: google, model: gemini-3.8-flash, reasoning: low}
+      judge: {provider: anthropic, model: claude-sonnet-5-5, reasoning: "off", max_output_tokens: 400}
+    changes_more_than_one_stage: A Google answer model needs a judge from another provider.
+    measure: full
+  - name: gemini-3-5-flash-lite
+    changes:
+      answer: {provider: google, model: gemini-3.5-flash-lite, reasoning: minimal}
+      judge: {provider: anthropic, model: claude-sonnet-5-5, reasoning: "off", max_output_tokens: 400}
+    changes_more_than_one_stage: A Google answer model needs a judge from another provider.
+    measure: full
