@@ -29,7 +29,7 @@ strategy_app = typer.Typer(
 
 DEFAULT_CASE = Path("season3/case")
 RuleOption = Annotated[Path, typer.Option(help="The rule file.")]
-CaseOption = Annotated[Path, typer.Option(help="The case folder.")]
+CaseOption = Annotated[Path, typer.Option("--case", help="The case folder.")]
 
 
 def _fail(exc: Exception) -> typer.Exit:
