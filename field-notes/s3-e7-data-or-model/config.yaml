@@ -1,0 +1,61 @@
+# S3 E7 (field note): better data or a bigger model? Three pipelines crossed with two answer
+# models, on the same 520 test items, with the same judge (gemini-3.6-flash) throughout.
+#   P0 start: S2's naive system (season2/reference-e2.yaml stages): fixed 256-token windows,
+#      no filter, no reranker, plain instruction, no citation parsing.
+#   P1 data fixes: P0 plus the changes that come from the documents themselves: section chunks
+#      (S2 E4) and access and version filters from document metadata (S2 E8).
+#   P2 final: the S2 reference system (season2/reference.yaml): P1 plus the LLM reranker, the
+#      grounded citing instruction and citation parsing.
+# Small model: gpt-6-luna, reasoning off (the Season 2 answer model). Large model: gpt-6.1-sol
+# at low, its lowest setting (the S2 E2 answer model; it cannot turn reasoning off).
+# Reused from cache: P0 small is the S2 E4 baseline run; P2 small is the S2 E12 reference run;
+# P0 large reuses S2 E2's answers, judged again here by the current judge.
+episode: s3-e7-data-or-model
+description: Three pipelines crossed with two answer model sizes
+base: ../../season2/reference.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  - name: p0-small
+    changes:
+      chunk: {kind: fixed, size: 256, overlap: 0}
+      filter: {mode: passthrough}
+      rerank: {mode: passthrough}
+      prompt: {k: 5, order: rank, instruction: plain}
+      cite: {mode: passthrough}
+    changes_more_than_one_stage: P0 is the whole naive pipeline, S2's starting point.
+    measure: full
+  - name: p0-large
+    changes:
+      chunk: {kind: fixed, size: 256, overlap: 0}
+      filter: {mode: passthrough}
+      rerank: {mode: passthrough}
+      prompt: {k: 5, order: rank, instruction: plain}
+      cite: {mode: passthrough}
+      answer: {model: gpt-6.1-sol, reasoning: low}
+    changes_more_than_one_stage: P0 is the whole naive pipeline, with the large answer model.
+    measure: full
+  - name: p1-small
+    changes:
+      rerank: {mode: passthrough}
+      prompt: {k: 5, order: rank, instruction: plain}
+      cite: {mode: passthrough}
+    changes_more_than_one_stage: P1 is the reference without the reranker and the citing prompt.
+    measure: full
+  - name: p1-large
+    changes:
+      rerank: {mode: passthrough}
+      prompt: {k: 5, order: rank, instruction: plain}
+      cite: {mode: passthrough}
+      answer: {model: gpt-6.1-sol, reasoning: low}
+    changes_more_than_one_stage: P1 with the large answer model.
+    measure: full
+  - name: p2-small
+    measure: full
+  - name: p2-large
+    changes: {answer: {model: gpt-6.1-sol, reasoning: low}}
+    measure: full
