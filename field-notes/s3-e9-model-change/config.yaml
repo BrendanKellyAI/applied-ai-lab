@@ -1,0 +1,36 @@
+# S3 E9 (field note): does it survive a model change? The Season 2 reference system
+# (0294479ba987) with only stage 9, the answer model, changing. Retrieval, the reranker's
+# order (from cache), the grounded_cite instruction word for word and the citation parser are
+# held fixed. Google answers are judged by claude-sonnet-5-5, so no model judges its own
+# provider's answers.
+episode: s3-e9-model-change
+description: The reference system after a version update and after a provider switch
+base: ../../season2/reference.yaml
+library: ../../datasets/halvard
+items: test
+pilot_per_type: 2
+results_dir: results/2026-10
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  anthropic: {max_concurrency: 4, requests_per_minute: 50}
+  google: {max_concurrency: 8, requests_per_minute: 300}
+conditions:
+  # Today's system: gpt-6-luna, reasoning off. The S2 E12 reference run, served from cache.
+  - name: baseline
+    measure: full
+  # The version arm: the update you did not choose, framed backwards. You were on
+  # gpt-5.6-luna, the previous version, and the provider moved you to gpt-6-luna.
+  - name: version
+    changes: {answer: {model: gpt-5.6-luna, reasoning: "off"}}
+    measure: full
+  # The provider arm: the nearest price tier at another provider, with thinking off.
+  - name: provider
+    changes: {answer: {provider: anthropic, model: claude-haiku-5-5, reasoning: "off"}}
+    measure: full
+  # A second provider, optional: Google's nearest cheap tier at its lowest setting.
+  - name: provider-google
+    changes:
+      answer: {provider: google, model: gemini-3.5-flash-lite, reasoning: minimal}
+      judge: {provider: anthropic, model: claude-sonnet-5-5, reasoning: "off", max_output_tokens: 400}
+    changes_more_than_one_stage: A Google answer model needs a judge from another provider.
+    measure: full
