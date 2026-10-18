@@ -1,0 +1,640 @@
+{
+ "episode": "s3-e3-leaderboard",
+ "condition": "gpt-6-1-sol",
+ "measure": "full",
+ "config_id": "a781d2e2eafa",
+ "base_id": "0294479ba987",
+ "changed": [
+  "answer"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "before",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "llm",
+   "shortlist": 20,
+   "model": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "reasoning": "off",
+    "max_output_tokens": 200
+   }
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "grounded_cite"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6.1-sol",
+   "reasoning": "low",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "parse"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 32,
+ "run_utc": "2026-10-18T22:01:17+00:00",
+ "numbers": {
+  "search": {
+   "count": 21,
+   "total": 24,
+   "rate": 0.875,
+   "low": 0.6899611872949993,
+   "high": 0.9565566591987655
+  },
+  "answer": {
+   "count": 23,
+   "total": 24,
+   "rate": 0.9583333333333334,
+   "low": 0.7975819352134406,
+   "high": 0.9926065438344942
+  },
+  "not_found": {
+   "count": 8,
+   "total": 8,
+   "rate": 1.0,
+   "low": 0.6755924351161198,
+   "high": 1.0
+  },
+  "leaks": {
+   "count": 0,
+   "total": 30,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.11351339317396876
+  }
+ },
+ "by_type": {
+  "absent_detail": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "absent_topic": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "bridge": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "deleted": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "distractor": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "followup": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "identifier": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "paraphrase": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_heading": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_single": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_two_sentence": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "restricted_public": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "restricted_staff": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   }
+  },
+  "shared": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "two_part": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "version": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  }
+ },
+ "models_returned": {
+  "answer": [
+   "gpt-6.1-sol"
+  ],
+  "judge": [
+   "gemini-3.6-flash"
+  ],
+  "embedding": null
+ },
+ "calls": {
+  "answer": [
+   {
+    "planned": 32,
+    "already_complete": 0,
+    "cached": 0,
+    "made": 32,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 79972,
+      "output_tokens": 1663,
+      "reasoning_tokens": 46,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ],
+  "judge": [
+   {
+    "planned": 32,
+    "already_complete": 0,
+    "cached": 0,
+    "made": 32,
+    "failed": 0,
+    "tokens": {
+     "google": {
+      "input_tokens": 91535,
+      "output_tokens": 1588,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ],
+  "rerank": [
+   {
+    "planned": 32,
+    "already_complete": 0,
+    "cached": 32,
+    "made": 0,
+    "failed": 0,
+    "tokens": {}
+   }
+  ]
+ },
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": [
+  "FOLLOW-001",
+  "TWOPART-000"
+ ]
+}
