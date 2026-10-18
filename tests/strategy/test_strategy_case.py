@@ -47,7 +47,8 @@ def test_product_names_in_the_case_exist_in_the_corpus():
     config = yaml.safe_load((ROOT / "datasets/halvard/config.yaml").read_text("utf-8"))
     products = config["products"]
     files = [p for p in (ROOT / "season3").rglob("*") if p.suffix in {".md", ".yaml"}]
-    text = chr(10).join(p.read_text("utf-8") for p in files)
+    # Whitespace is normalised, so a name wrapped across two lines still counts as whole.
+    text = " ".join(chr(10).join(p.read_text("utf-8") for p in files).split())
     for product in products:
         brand = product.split()[0]
         for match in re.finditer(f"(?<![A-Za-z]){brand}(?![A-Za-z])", text):
