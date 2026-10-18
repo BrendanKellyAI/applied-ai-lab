@@ -157,7 +157,7 @@ candidates:
         assumption: "A false flag costs an editor a few minutes, every flag is read before any change, and a change can be undone."
       data_readiness:
         score: 4
-        measured: {path: datasets/halvard/manifest.json, figure: "300 support articles and 4 policies, each with version and effective dates"}
+        measured: {path: datasets/halvard/manifest.json, figure: "300 support articles and 4 policies, each with a version label; effective dates are in each document's front matter (datasets/halvard/documents)"}
         note: "The library is labelled and versioned, but no consistency check has been measured on it yet, so not 5."
       durable_advantage:
         score: 5

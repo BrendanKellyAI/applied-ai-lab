@@ -55,6 +55,11 @@ threshold, time box, stop condition and reviewer.
 After totals exist, any changed score or weight is recorded below with its date, the reason,
 and the value before and after. Nothing above is edited.
 
+**Amendment 1, 18 October 2026 (evidence text only; no score or weight changed).** C6's data
+readiness cited `datasets/halvard/manifest.json` for "version and effective dates", but the
+manifest holds versions and file hashes, not dates; the dates are in each document's front
+matter. The citation now says so. Score before and after: 4.
+
 ## Decisions taken at Gate 1
 
 Brendan delegated Gate 1 on 18 October 2026 ("make whatever decisions you need"). These follow
