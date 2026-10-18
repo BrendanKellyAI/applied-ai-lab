@@ -1,0 +1,34 @@
+{
+ "sample": 100,
+ "seed": 20261018,
+ "first_judge": "gemini-3.6-flash",
+ "second_judge": "claude-sonnet-5-5",
+ "both_gave_a_verdict": 100,
+ "agree": {
+  "declined": {
+   "count": 97,
+   "total": 100,
+   "rate": 0.97,
+   "low": 0.9154806357094724,
+   "high": 0.9897454759759611
+  },
+  "correct": {
+   "count": 96,
+   "total": 100,
+   "rate": 0.96,
+   "low": 0.9016292856411208,
+   "high": 0.9843366960084523
+  },
+  "faithful": {
+   "count": 99,
+   "total": 100,
+   "rate": 0.99,
+   "low": 0.9455138038212946,
+   "high": 0.9982325679358593
+  }
+ },
+ "handled_right": {
+  "first": 90,
+  "second": 88
+ }
+}
