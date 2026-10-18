@@ -1,0 +1,629 @@
+{
+ "episode": "s3-e7-data-or-model",
+ "condition": "p1-large",
+ "measure": "full",
+ "config_id": "88003890689d",
+ "base_id": "0294479ba987",
+ "changed": [
+  "rerank",
+  "prompt",
+  "answer",
+  "cite"
+ ],
+ "pipeline": {
+  "chunk": {
+   "kind": "structure",
+   "max_tokens": 1024,
+   "embed_headings": false
+  },
+  "embed": {
+   "model": "text-embedding-3-small"
+  },
+  "rewrite": {
+   "mode": "passthrough"
+  },
+  "search": {
+   "method": "vector",
+   "depth": 50,
+   "fuse_depth": null,
+   "rrf_k": 60
+  },
+  "filter": {
+   "mode": "before",
+   "access": true,
+   "status": true
+  },
+  "rerank": {
+   "mode": "passthrough"
+  },
+  "prompt": {
+   "k": 5,
+   "order": "rank",
+   "instruction": "plain"
+  },
+  "answer": {
+   "provider": "openai",
+   "model": "gpt-6.1-sol",
+   "reasoning": "low",
+   "max_output_tokens": 2000
+  },
+  "cite": {
+   "mode": "passthrough"
+  },
+  "judge": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "minimal",
+   "max_output_tokens": 2000
+  }
+ },
+ "corpus_version": "halvard-v2",
+ "items": 32,
+ "run_utc": "2026-10-18T22:10:14+00:00",
+ "numbers": {
+  "search": {
+   "count": 15,
+   "total": 24,
+   "rate": 0.625,
+   "low": 0.42709962442674276,
+   "high": 0.7884063244045122
+  },
+  "answer": {
+   "count": 21,
+   "total": 24,
+   "rate": 0.875,
+   "low": 0.6899611872949993,
+   "high": 0.9565566591987655
+  },
+  "not_found": {
+   "count": 5,
+   "total": 8,
+   "rate": 0.625,
+   "low": 0.30574239460262737,
+   "high": 0.8631557141764026
+  },
+  "leaks": {
+   "count": 0,
+   "total": 30,
+   "rate": 0.0,
+   "low": 0.0,
+   "high": 0.11351339317396876
+  }
+ },
+ "by_type": {
+  "absent_detail": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "absent_topic": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "bridge": {
+   "search": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   },
+   "answer": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "deleted": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "distractor": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "followup": {
+   "search": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   },
+   "answer": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "identifier": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "paraphrase": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_heading": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_single": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "policy_two_sentence": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "restricted_public": {
+   "search": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "answer": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "not_found": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "restricted_staff": {
+   "search": {
+    "count": 1,
+    "total": 2,
+    "rate": 0.5,
+    "low": 0.09453120573423074,
+    "high": 0.9054687942657693
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   }
+  },
+  "shared": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "two_part": {
+   "search": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  },
+  "version": {
+   "search": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "answer": {
+    "count": 2,
+    "total": 2,
+    "rate": 1.0,
+    "low": 0.34238022750665303,
+    "high": 1.0
+   },
+   "not_found": {
+    "count": 0,
+    "total": 0,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.0
+   },
+   "leaks": {
+    "count": 0,
+    "total": 2,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.6576197724933469
+   }
+  }
+ },
+ "models_returned": {
+  "answer": [
+   "gpt-6.1-sol"
+  ],
+  "judge": [
+   "gemini-3.6-flash"
+  ],
+  "embedding": null
+ },
+ "calls": {
+  "answer": [
+   {
+    "planned": 31,
+    "already_complete": 0,
+    "cached": 8,
+    "made": 23,
+    "failed": 0,
+    "tokens": {
+     "openai": {
+      "input_tokens": 59512,
+      "output_tokens": 1081,
+      "reasoning_tokens": 43,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ],
+  "judge": [
+   {
+    "planned": 32,
+    "already_complete": 0,
+    "cached": 5,
+    "made": 27,
+    "failed": 0,
+    "tokens": {
+     "google": {
+      "input_tokens": 75574,
+      "output_tokens": 1479,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0
+     }
+    }
+   }
+  ]
+ },
+ "embedding_tokens_reported": 0,
+ "judge_errors": [],
+ "code_check_disagrees_with_judge": [
+  "FOLLOW-001",
+  "POL-SINGLE-000",
+  "RESTRICT-STAFF-002",
+  "TWOPART-000",
+  "TWOPART-001"
+ ]
+}
