@@ -1,0 +1,128 @@
+# The Season 3 scoring rule: how Halvard Home ranks its AI use cases.
+# Fixed before any score was written, and committed with candidates.yaml (see
+# PREREGISTRATION.md). After totals exist, any change here is a dated amendment there.
+#
+# Order of use: two gates (pass or fail), then autonomy (a setting), then six criteria scored
+# 1 to 5 against written anchors, then a weighted total for candidates that pass both gates.
+# Sourcing is a setting, recorded but not scored. The episode that introduces each part is
+# given, so `lab strategy reveal --through E<N>` can show the scorecard as it stood.
+
+name: Halvard Home use case rule
+version: 1
+
+gates:
+  - id: outcome
+    label: G1 Outcome
+    episode: 1
+    question: Can the outcome be stated without the word AI, with a metric and an owner?
+    fail_means: Not a use case yet. Write the outcome first.
+  - id: right_tool
+    label: G2 Right tool
+    episode: 2
+    question: Is a language model the right tool? The input is language and a good output can be checked.
+    fail_means: Redirect to rules, SQL, a forecasting model or a bought product, and record which.
+
+criteria:
+  - id: value
+    label: Value of the outcome
+    episode: 1
+    anchors:
+      1: The outcome is minor; few people or little money are affected, and no one senior would notice it move.
+      3: It moves a metric one team tracks, by enough to be worth a quarter of that team's effort.
+      5: It moves a metric the leadership tracks, for customers at large or for a major risk.
+  - id: task_fit
+    label: Task fit
+    episode: 2
+    anchors:
+      1: The answer is a calculation, a record or a prediction; a rule, a query or a forecasting model does it better.
+      3: The input is language, but whether an output is right is slow or hard to check.
+      5: The input is language, and a right output can be checked quickly against a source.
+  - id: error_tolerance
+    label: Error tolerance at the chosen autonomy
+    episode: 4
+    anchors:
+      1: A wrong output with regulatory or high cost reaches a customer or a live system and nobody catches it, or the design autonomy is above what the autonomy table allows.
+      3: Wrong outputs are costly but are caught before harm by a reviewer or a downstream check, or are cheap and go uncaught.
+      5: Wrong outputs are cheap, a person sees each one before it reaches anyone, and they are easily undone.
+  - id: data_readiness
+    label: Data readiness
+    episode: 6
+    anchors:
+      1: The data does not exist, or may not be used for this purpose.
+      3: The data exists but needs labelling, cleaning or access work before a pilot can start.
+      5: The data exists, is labelled and access controlled, and a system has already been measured on it.
+  - id: durable_advantage
+    label: Durable advantage
+    episode: 6
+    question: Would the next model release or a vendor give it away?
+    anchors:
+      1: A vendor product or the next model release gives the same thing to every competitor.
+      3: Partly bought, but how well it works depends on Halvard's own data or workflow.
+      5: It is built on data, structure or workflow only Halvard has, and it improves them.
+  - id: time_to_evidence
+    label: Time to evidence
+    episode: 11
+    question: Can a pilot show the outcome moving within a quarter?
+    anchors:
+      1: No result could show the outcome moving within a year.
+      3: A pilot could show the outcome moving within two quarters.
+      5: A pilot could show the outcome moving within a quarter, or it can be tested on past data now.
+
+# Fixed at Gate 1. They sum to 1, so a total is on the same 1 to 5 scale as a score.
+weights:
+  value: 0.25
+  task_fit: 0.15
+  error_tolerance: 0.20
+  data_readiness: 0.15
+  durable_advantage: 0.10
+  time_to_evidence: 0.15
+
+# Autonomy (E5) is a setting, not a score. The table gives the highest autonomy allowed for a
+# use case's error cost and for who catches a wrong output. Act is allowed only where the table
+# allows automate and a wrong output can be fully reversed.
+autonomy:
+  episode: 5
+  levels:
+    assist: A person reviews every output before it is used.
+    automate: Outputs go out unreviewed, and a sample is checked.
+    act: The system changes a live system, such as a payment or an order, itself.
+  error_costs:
+    low: A wrong output wastes some time and harms no one.
+    high: A wrong output costs money or a customer's goodwill, or delays them.
+    regulatory: A wrong output could mislead a customer about their rights, miss a safety risk or expose personal data.
+  caught_by:
+    reviewer: A person checks each output before it is used.
+    downstream: A later step or team would notice and correct it before harm.
+    nobody: Nothing stands between the output and its effect.
+  table:
+    low: {reviewer: automate, downstream: automate, nobody: automate}
+    high: {reviewer: assist, downstream: automate, nobody: assist}
+    regulatory: {reviewer: assist, downstream: assist, nobody: assist}
+  act_requires_reversible: true
+
+# Sourcing (E8) is a setting, not a score.
+sourcing:
+  episode: 8
+  application:
+    build: Halvard builds and runs the application on its own data and workflow.
+    buy: Halvard buys a product that does the job and configures it.
+    none: No language model application (the candidate was redirected at G2).
+  model_access:
+    direct: Call each model maker's own API.
+    managed: Call models through a cloud platform's managed service, such as Amazon Bedrock, inside the firm's existing cloud account.
+    self_hosted: Run open-weight models on infrastructure the firm controls.
+    vendor: Whatever the bought product uses.
+    none: No language model.
+
+# Sensitivity (E11): the first pick is recomputed under each of these weightings. Every
+# weighting is scaled to sum to 1. "Each weight halved" and "each weight doubled" are generated
+# from `weights` above, one criterion at a time.
+sensitivity:
+  equal: {value: 1, task_fit: 1, error_tolerance: 1, data_readiness: 1, durable_advantage: 1, time_to_evidence: 1}
+  ceo: {value: 0.40, task_fit: 0.10, error_tolerance: 0.10, data_readiness: 0.10, durable_advantage: 0.10, time_to_evidence: 0.20}
+  regulator: {value: 0.15, task_fit: 0.10, error_tolerance: 0.40, data_readiness: 0.15, durable_advantage: 0.05, time_to_evidence: 0.15}
+  halve_each: true
+  double_each: true
+
+# What the first pick must have written down before its (fictional) pilot starts (E11).
+stop_criteria: [success_metric, threshold, time_box, stop_condition, reviewer]
