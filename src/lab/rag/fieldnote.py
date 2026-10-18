@@ -31,6 +31,17 @@ def load_arms(results: Path, names: Sequence[str]) -> dict[str, list[ItemLog]]:
     }
 
 
+def incomplete(arms: Mapping[str, Sequence[ItemLog]]) -> dict[str, int]:
+    """Arms with items lacking an answer or a verdict, and how many. Claims are not stated
+    for such arms: a missing answer would count as wrong."""
+    out = {}
+    for name, logs in arms.items():
+        missing = sum(1 for g in logs if g.answer is None or g.verdict is None)
+        if missing:
+            out[name] = missing
+    return out
+
+
 def pipeline_of(results: Path, name: str) -> dict[str, Any]:
     return json.loads((results / name / "summary.json").read_text(encoding="utf-8"))["pipeline"]
 
@@ -152,8 +163,8 @@ def interval_bars(
         positions = list(range(len(rows)))[::-1]
         rates = [p["rate"] for _, p in rows]
         bars = ax.barh(positions, rates, color=MIST, edgecolor=NAVY, height=0.7)
-        lows = [p["rate"] - p["low"] for _, p in rows]
-        highs = [p["high"] - p["rate"] for _, p in rows]
+        lows = [max(0.0, p["rate"] - p["low"]) for _, p in rows]
+        highs = [max(0.0, p["high"] - p["rate"]) for _, p in rows]
         ax.errorbar(
             rates,
             positions,

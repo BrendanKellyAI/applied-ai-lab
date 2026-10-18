@@ -29,6 +29,7 @@ from lab.rag.corpus import load_library
 from lab.rag.fieldnote import (
     answer_prices,
     evidence_checker,
+    incomplete,
     interval_bars,
     kept_ratios,
     load_arms,
@@ -70,6 +71,9 @@ def analyse(episode, results: Path, *, pilot: bool) -> str:
     arms = load_arms(results, names)
     if set(arms) != set(names):
         return f"Missing arms: {sorted(set(names) - set(arms))}"
+    gaps = incomplete(arms)
+    if gaps:
+        return f"Incomplete arms (items without an answer or verdict): {gaps}. No claims stated."
     library = load_library(ROOT / "datasets" / "halvard")
     per_item = {n: hits(arms[n]) for n in names}
     totals = {n: sum(per_item[n].values()) for n in names}
