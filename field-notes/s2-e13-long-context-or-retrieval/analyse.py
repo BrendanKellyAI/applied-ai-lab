@@ -29,8 +29,9 @@ PRICE = {"input": 0.10, "cached_input": 0.01, "output": 0.50}
 
 def cost(input_tokens: int, cached: int, output: int) -> float:
     fresh = input_tokens - cached
-    return (fresh * PRICE["input"] + cached * PRICE["cached_input"]
-            + output * PRICE["output"]) / 1e6
+    return (
+        fresh * PRICE["input"] + cached * PRICE["cached_input"] + output * PRICE["output"]
+    ) / 1e6
 
 
 def raw_calls(path: Path) -> dict[str, dict]:
@@ -46,19 +47,26 @@ def retrieval_rows(items: dict) -> list[dict]:
         if g.item_id not in items or not g.answer:
             continue
         a, r = answers[g.item_id], reranks.get(g.item_id, {})
-        rows.append({
-            "item_id": g.item_id,
-            "type": g.type,
-            "correct": bool(g.verdict and g.verdict.correct),
-            "code_check": code_check(items[g.item_id], g.answer.text),
-            "input_tokens": a["input_tokens"] + r.get("input_tokens", 0),
-            "answer_input_tokens": a["input_tokens"],
-            "seconds": (a["total_latency_ms"] + r.get("total_latency_ms", 0)) / 1000,
-            "answer_seconds": a["total_latency_ms"] / 1000,
-            "cost": cost(a["input_tokens"], a.get("cached_input_tokens") or 0, a["output_tokens"])
-            + cost(r.get("input_tokens", 0), r.get("cached_input_tokens") or 0,
-                   r.get("output_tokens", 0)),
-        })
+        rows.append(
+            {
+                "item_id": g.item_id,
+                "type": g.type,
+                "correct": bool(g.verdict and g.verdict.correct),
+                "code_check": code_check(items[g.item_id], g.answer.text),
+                "input_tokens": a["input_tokens"] + r.get("input_tokens", 0),
+                "answer_input_tokens": a["input_tokens"],
+                "seconds": (a["total_latency_ms"] + r.get("total_latency_ms", 0)) / 1000,
+                "answer_seconds": a["total_latency_ms"] / 1000,
+                "cost": cost(
+                    a["input_tokens"], a.get("cached_input_tokens") or 0, a["output_tokens"]
+                )
+                + cost(
+                    r.get("input_tokens", 0),
+                    r.get("cached_input_tokens") or 0,
+                    r.get("output_tokens", 0),
+                ),
+            }
+        )
     return rows
 
 
@@ -69,17 +77,19 @@ def long_rows(folder: Path, items: dict) -> list[dict]:
         if not r or r["answer"] is None:
             continue
         cached = r["cached_input_tokens"] or 0
-        rows.append({
-            "item_id": r["item_id"],
-            "type": r["type"],
-            "correct": bool(r["verdict"] and r["verdict"]["correct"]),
-            "code_check": code_check(items[r["item_id"]], r["answer"]),
-            "input_tokens": r["input_tokens"],
-            "cached_input_tokens": cached,
-            "seconds": r["seconds"],
-            "cost": cost(r["input_tokens"], cached, r["output_tokens"]),
-            "cost_uncached": cost(r["input_tokens"], 0, r["output_tokens"]),
-        })
+        rows.append(
+            {
+                "item_id": r["item_id"],
+                "type": r["type"],
+                "correct": bool(r["verdict"] and r["verdict"]["correct"]),
+                "code_check": code_check(items[r["item_id"]], r["answer"]),
+                "input_tokens": r["input_tokens"],
+                "cached_input_tokens": cached,
+                "seconds": r["seconds"],
+                "cost": cost(r["input_tokens"], cached, r["output_tokens"]),
+                "cost_uncached": cost(r["input_tokens"], 0, r["output_tokens"]),
+            }
+        )
     return rows
 
 
@@ -100,35 +110,62 @@ def main(pilot: bool) -> dict:
     rt = retrieval_rows(items)
     lc_hard, rt_hard = rate(lc, HARD), rate(rt, HARD)
     lc_simple, rt_simple = rate(lc, SIMPLE), rate(rt, SIMPLE)
-    tokens = {"long_context": median(lc, "input_tokens"), "retrieval": median(rt, "input_tokens"),
-              "retrieval_answer_only": median(rt, "answer_input_tokens")}
-    seconds = {"long_context": median(lc, "seconds"), "retrieval": median(rt, "seconds"),
-               "retrieval_answer_only": median(rt, "answer_seconds")}
+    tokens = {
+        "long_context": median(lc, "input_tokens"),
+        "retrieval": median(rt, "input_tokens"),
+        "retrieval_answer_only": median(rt, "answer_input_tokens"),
+    }
+    seconds = {
+        "long_context": median(lc, "seconds"),
+        "retrieval": median(rt, "seconds"),
+        "retrieval_answer_only": median(rt, "answer_seconds"),
+    }
     as_obj = [SimpleNamespace(**r) for r in rt], [SimpleNamespace(**r) for r in lc]
     report = {
         "items": len(lc),
         "claims": [
-            {"id": "L1",
-             "statement": "On the hardest questions, sending everything beats retrieval.",
-             "held": below(rt_hard, lc_hard),
-             "detail": {"long_context": lc_hard.model_dump(), "retrieval": rt_hard.model_dump()}},
-            {"id": "L2", "statement": "On simple questions, retrieval loses nothing.",
-             "held": not below(rt_simple, lc_simple) and not below(lc_simple, rt_simple),
-             "detail": {"long_context": lc_simple.model_dump(),
-                        "retrieval": rt_simple.model_dump()}},
-            {"id": "L3", "statement": "Long context costs many times more per question.",
-             "held": tokens["long_context"] >= 20 * tokens["retrieval"],
-             "detail": {"median_input_tokens": tokens,
-                        "ratio": round(tokens["long_context"] / tokens["retrieval"], 1)}},
-            {"id": "L4", "statement": "Long context is slower.",
-             "held": seconds["long_context"] >= 3 * seconds["retrieval"],
-             "detail": {"median_seconds": seconds,
-                        "ratio": round(seconds["long_context"] / seconds["retrieval"], 2)}},
+            {
+                "id": "L1",
+                "statement": "On the hardest questions, sending everything beats retrieval.",
+                "held": below(rt_hard, lc_hard),
+                "detail": {"long_context": lc_hard.model_dump(), "retrieval": rt_hard.model_dump()},
+            },
+            {
+                "id": "L2",
+                "statement": "On simple questions, retrieval loses nothing.",
+                "held": not below(rt_simple, lc_simple) and not below(lc_simple, rt_simple),
+                "detail": {
+                    "long_context": lc_simple.model_dump(),
+                    "retrieval": rt_simple.model_dump(),
+                },
+            },
+            {
+                "id": "L3",
+                "statement": "Long context costs many times more per question.",
+                "held": tokens["long_context"] >= 20 * tokens["retrieval"],
+                "detail": {
+                    "median_input_tokens": tokens,
+                    "ratio": round(tokens["long_context"] / tokens["retrieval"], 1),
+                },
+            },
+            {
+                "id": "L4",
+                "statement": "Long context is slower.",
+                "held": seconds["long_context"] >= 3 * seconds["retrieval"],
+                "detail": {
+                    "median_seconds": seconds,
+                    "ratio": round(seconds["long_context"] / seconds["retrieval"], 2),
+                },
+            },
         ],
         "by_type": {
-            t: {arm: {"judge": rate(rows, (t,)).model_dump(),
-                      "code_check": rate(rows, (t,), "code_check").model_dump()}
-                for arm, rows in (("long_context", lc), ("retrieval", rt))}
+            t: {
+                arm: {
+                    "judge": rate(rows, (t,)).model_dump(),
+                    "code_check": rate(rows, (t,), "code_check").model_dump(),
+                }
+                for arm, rows in (("long_context", lc), ("retrieval", rt))
+            }
             for t in TYPES
         },
         "paired_correct": mcnemar(*as_obj, lambda g: g.correct),
@@ -138,7 +175,8 @@ def main(pilot: bool) -> dict:
             "retrieval": round(statistics.mean(r["cost"] for r in rt), 5),
         },
         "long_context_cached_share": round(
-            sum(r["cached_input_tokens"] for r in lc) / sum(r["input_tokens"] for r in lc), 3),
+            sum(r["cached_input_tokens"] for r in lc) / sum(r["input_tokens"] for r in lc), 3
+        ),
     }
     out = HERE / "results" / ("pilot" if pilot else "") / "analysis.json"
     out.write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8", newline="\n")

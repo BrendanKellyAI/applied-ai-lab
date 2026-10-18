@@ -696,9 +696,7 @@ def test_reveal_command_through_e5(tmp_path):
 
 def test_reveal_command_defaults_out_to_case_results(tmp_path):
     case_dir = copy_case(tmp_path)
-    result = runner.invoke(
-        app, ["strategy", "reveal", "--through", "2", "--case", str(case_dir)]
-    )
+    result = runner.invoke(app, ["strategy", "reveal", "--through", "2", "--case", str(case_dir)])
     assert result.exit_code == 0, result.output
     assert (case_dir / "results" / "scorecard-e2.json").exists()
 
