@@ -1,0 +1,51 @@
+# Season 3 smoke test: one tiny call per answer model the field notes use, at the reasoning
+# setting each runs at, to check keys and adapters before the paid runs. Run with
+#   uv run lab smoke --config season3/smoke.yaml
+experiment: smoke-s3
+description: Check the Season 3 field note models with tiny calls
+seed: 20261018
+parameters:
+  prompt: "Reply with the single word: ready"
+models:
+  - provider: openai
+    model: gpt-6.1-sol
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+  - provider: openai
+    model: gpt-5.6-terra
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+  - provider: openai
+    model: gpt-6-luna
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 16 }
+  - provider: openai
+    model: gpt-5.6-luna
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 16 }
+  - provider: anthropic
+    model: claude-opus-5-5
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+  - provider: anthropic
+    model: claude-sonnet-5-5
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+      "off": { reasoning: off, temperature: null, max_output_tokens: 16 }
+  - provider: anthropic
+    model: claude-haiku-5-5
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+      "off": { reasoning: off, temperature: null, max_output_tokens: 16 }
+  - provider: google
+    model: gemini-3.8-flash
+    modes:
+      lowest: { reasoning: low, temperature: null, max_output_tokens: 512 }
+  - provider: google
+    model: gemini-3.5-flash-lite
+    modes:
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
+  - provider: google
+    model: gemini-3.6-flash
+    modes:
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
