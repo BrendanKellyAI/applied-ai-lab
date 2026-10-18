@@ -1,0 +1,211 @@
+# Every score for the Halvard Home case, written after rule.yaml and candidates.yaml were
+# committed (see PREREGISTRATION.md). Halvard Home is invented.
+#
+# Each score cites either:
+#   measured:   a file in this repository and the figure it holds, or
+#   assumption: a stated assumption, with a one-line reason.
+# Only C1 and C2 have measured accuracy (the Season 2 final system). Nothing else is given a
+# measured-looking number.
+#
+# Gates are pass or fail with a reason. A candidate that fails a gate gets a redirect and is
+# not scored on the criteria: it stays on the portfolio but cannot go first.
+# Sourcing (E8) is a setting with a reason, not a score.
+
+S2_FINAL: &s2_final field-notes/s2-e12-embedding-swap/results/baseline/summary.json
+S2_SCOREBOARD: &s2_scoreboard season2/scoreboard.json
+S2_TRACING: &s2_tracing episodes/s2-e14-tracing/README.md
+
+candidates:
+  C1:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (questions answered correctly with no agent contact in 7 days) and an owner."}
+      right_tool: {result: pass, reason: "Language in, and an answer can be checked against the library passage it came from, as the Season 2 judge did."}
+    scores:
+      value:
+        score: 5
+        assumption: "About 9,000 questions a month and the CEO's own ask: a metric the leadership tracks."
+      task_fit:
+        score: 5
+        measured: {path: *s2_final, figure: "354 of 400 answerable questions answered right by the Season 2 final system, each checked against its source passage"}
+      error_tolerance:
+        score: 1
+        measured: {path: *s2_final, figure: "46 of 400 answerable questions answered wrongly, and 13 of 120 unanswerable questions answered anyway, with no person between the answer and the customer"}
+        note: "Regulatory error cost and nobody catches it: the autonomy table allows assist only, and C1 is proposed at automate."
+      data_readiness:
+        score: 5
+        measured: {path: *s2_scoreboard, figure: "the library carries access and version labels; the final system put 0 staff-only passages into 480 public prompts"}
+      durable_advantage:
+        score: 3
+        assumption: "Website chat products and each new model make the assistant itself a commodity; how well it answers depends on Halvard's library."
+      time_to_evidence:
+        score: 3
+        assumption: "Showing fewer agent contacts with no repeat contact needs live customer traffic and a launch review: about two quarters."
+    sourcing:
+      application: build
+      model_access: managed
+      reason: "The library is Halvard's own, so the application is built; customer questions carry personal data, so models are called inside the firm's existing cloud account."
+
+  C2:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (median handling time, quality review error rate held level) and an owner."}
+      right_tool: {result: pass, reason: "Language in, and a draft can be checked by the agent against the passages it cites."}
+    scores:
+      value:
+        score: 4
+        assumption: "Handling time on about 9,000 contacts a month is an operations metric the leadership sees, but it is not the CEO's ask."
+      task_fit:
+        score: 5
+        measured: {path: *s2_final, figure: "354 of 400 answerable questions answered right by the same system, each checked against its source passage"}
+      error_tolerance:
+        score: 3
+        measured: {path: *s2_final, figure: "46 of 400 drafts would be wrong: the agent must catch about 1 in 9 before sending"}
+        note: "Regulatory error cost, caught by a reviewer: the anchor for 3. The risk is an agent who stops reading the drafts."
+      data_readiness:
+        score: 5
+        measured: {path: *s2_scoreboard, figure: "the same labelled library and measured system as C1; 0 of 480 public prompts held a staff-only passage"}
+      durable_advantage:
+        score: 3
+        assumption: "Agent assist is a contact-centre product feature; its quality depends on Halvard's library."
+      time_to_evidence:
+        score: 5
+        assumption: "The system is already measured offline; a pilot with one team of agents shows handling time within a quarter."
+    sourcing:
+      application: build
+      model_access: managed
+      reason: "Built on the same system as C1; contacts carry personal data, so models are called inside the firm's existing cloud account."
+
+  C3:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (claims routed right first time, days to decision) and an owner."}
+      right_tool: {result: pass, reason: "Claims arrive as free text, and a route can be checked against the queue that finally settled the claim."}
+    scores:
+      value:
+        score: 3
+        assumption: "Faster warranty decisions matter to one team and its customers; about 3,200 claims a month."
+      task_fit:
+        score: 4
+        assumption: "Language in and a label out, checkable against history; some claims could fairly go to more than one queue."
+      error_tolerance:
+        score: 3
+        assumption: "A misrouted claim costs the customer time and is sent back by the receiving team: high cost, caught downstream."
+      data_readiness:
+        score: 3
+        assumption: "Past claims and their final queues are assumed to sit in the claims system, but need extracting and cleaning before a test."
+      durable_advantage:
+        score: 2
+        assumption: "Routing is a standard feature of service desk products; only the queue names are Halvard's own."
+      time_to_evidence:
+        score: 5
+        assumption: "Routing can be tested on last quarter's claims before any live use."
+    sourcing:
+      application: buy
+      model_access: vendor
+      reason: "Service desk products already route tickets; Halvard configures its queues."
+
+  C4:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (confirmed incidents flagged within a working day, flags per incident) and an owner."}
+      right_tool: {result: pass, reason: "Contacts are language, and a flag can be checked by a safety officer reading the contact."}
+    scores:
+      value:
+        score: 5
+        assumption: "A missed fire, smoke or shock incident is the most serious error the firm can make."
+      task_fit:
+        score: 3
+        assumption: "A flag is quick to check, but a miss is not: with about 40 possible incidents a month, misses surface slowly."
+      error_tolerance:
+        score: 3
+        assumption: "Regulatory cost, but a miss falls back to today's agent escalation, which stays in place: caught downstream."
+      data_readiness:
+        score: 2
+        assumption: "Contacts exist, but too few are labelled as confirmed incidents to train on or to measure misses."
+      durable_advantage:
+        score: 3
+        assumption: "General classifiers can be bought; knowing what an Ashby or Corra incident sounds like is Halvard's own."
+      time_to_evidence:
+        score: 2
+        assumption: "Measuring misses needs enough confirmed incidents to count, which at about 40 a month takes most of a year."
+    sourcing:
+      application: build
+      model_access: managed
+      reason: "No product does this screen; contacts carry personal data, so models are called inside the firm's existing cloud account."
+
+  C5:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (eligible refunds paid within two working days) and an owner."}
+      right_tool: {result: fail, reason: "Whether a refund is due is a rule applied to order, delivery and return records, not a judgement about language (S2 E15: when the answer is a calculation over records, query the records)."}
+    redirect: "Rules over the order records, written from the returns policy. A model may read a free-text return reason, with a person deciding."
+    sourcing:
+      application: none
+      model_access: none
+      reason: "Redirected at G2: a rules engine over the order system."
+
+  C6:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (share of the 300 articles consistent with current policies) and an owner."}
+      right_tool: {result: pass, reason: "Comparing what two documents say is language work, and a flag can be checked by reading both passages."}
+    scores:
+      value:
+        score: 3
+        measured: {path: *s2_tracing, figure: "3 of the final system's 5 failures with the right passage in the prompt came from an article and a policy that disagree"}
+        note: "A metric one team tracks; it also removes a known cause of wrong answers in C1 and C2."
+      task_fit:
+        score: 4
+        assumption: "A flag is quick to check by reading both passages; a missed contradiction is slow to find."
+      error_tolerance:
+        score: 5
+        assumption: "A false flag costs an editor a few minutes, every flag is read before any change, and a change can be undone."
+      data_readiness:
+        score: 4
+        measured: {path: datasets/halvard/manifest.json, figure: "300 support articles and 4 policies, each with version and effective dates"}
+        note: "The library is labelled and versioned, but no consistency check has been measured on it yet, so not 5."
+      durable_advantage:
+        score: 5
+        assumption: "It improves the one thing competitors cannot buy: Halvard's own library, which every other language use case reads."
+      time_to_evidence:
+        score: 5
+        measured: {path: *s2_tracing, figure: "known contradictions already found for the Mira robot vacuum, the Fenwick cooker hood and the Vale fridge freezer, to test a checker against now"}
+    sourcing:
+      application: build
+      model_access: direct
+      reason: "It reads only Halvard's policies and articles, which hold no personal data, so any provider's API will do; keep the model swappable."
+
+  C7:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (wrap-up minutes, accuracy by sampling) and an owner."}
+      right_tool: {result: pass, reason: "Summarising a conversation is language work, and a summary can be checked against the transcript."}
+    scores:
+      value:
+        score: 2
+        assumption: "A minute or two of wrap-up time per contact; useful, but no one senior tracks it."
+      task_fit:
+        score: 4
+        assumption: "Language in and out; a summary can be checked against its transcript, though that is slow at volume."
+      error_tolerance:
+        score: 3
+        assumption: "A wrong summary can mislead the next agent: high cost, partly caught by sampling and by the customer correcting it."
+      data_readiness:
+        score: 3
+        assumption: "Transcripts are assumed to exist, but hold personal data, so using them needs data protection review first."
+      durable_advantage:
+        score: 1
+        assumption: "Built into the major contact-centre products: every competitor can buy the same thing."
+      time_to_evidence:
+        score: 5
+        assumption: "A bought feature can be switched on for one team and measured within a quarter."
+    sourcing:
+      application: buy
+      model_access: vendor
+      reason: "A commodity feature of contact-centre products; building it would buy nothing."
+
+  C8:
+    gates:
+      outcome: {result: pass, reason: "Stated without the word AI, with a metric (first-visit fix rate, stock-outs) and an owner."}
+      right_tool: {result: fail, reason: "Demand is a number predicted from usage history: a forecasting problem, not a language one."}
+    redirect: "A forecasting model over parts usage history, or a demand planning product."
+    sourcing:
+      application: none
+      model_access: none
+      reason: "Redirected at G2: a forecasting model or a bought planning product."
+
+# The first pick's stop criteria are added after totals, before its fictional pilot starts.
