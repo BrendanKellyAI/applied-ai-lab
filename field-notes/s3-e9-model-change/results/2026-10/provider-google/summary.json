@@ -64,7 +64,7 @@
  },
  "corpus_version": "halvard-v2",
  "items": 520,
- "run_utc": "2026-10-18T22:34:48+00:00",
+ "run_utc": "2026-10-19T08:01:19+00:00",
  "numbers": {
   "search": {
    "count": 344,
@@ -74,18 +74,18 @@
    "high": 0.8905903786254097
   },
   "answer": {
-   "count": 21,
+   "count": 332,
    "total": 400,
-   "rate": 0.0525,
-   "low": 0.034591528357920405,
-   "high": 0.07892197507127496
+   "rate": 0.83,
+   "low": 0.7900908679413299,
+   "high": 0.8636310177980344
   },
   "not_found": {
-   "count": 8,
+   "count": 104,
    "total": 120,
-   "rate": 0.06666666666666667,
-   "low": 0.03416530686090633,
-   "high": 0.12605130403530337
+   "rate": 0.8666666666666667,
+   "low": 0.7943520342531574,
+   "high": 0.916233910373127
   },
   "leaks": {
    "count": 0,
@@ -112,11 +112,11 @@
     "high": 0.0
    },
    "not_found": {
-    "count": 2,
+    "count": 28,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.7,
+    "low": 0.5456998118185507,
+    "high": 0.8192515477025347
    },
    "leaks": {
     "count": 0,
@@ -142,11 +142,11 @@
     "high": 0.0
    },
    "not_found": {
-    "count": 2,
+    "count": 20,
     "total": 20,
-    "rate": 0.1,
-    "low": 0.027866481213768224,
-    "high": 0.3010336452284873
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
    },
    "leaks": {
     "count": 0,
@@ -165,11 +165,11 @@
     "high": 0.781193467627183
    },
    "answer": {
-    "count": 1,
+    "count": 11,
     "total": 20,
-    "rate": 0.05,
-    "low": 0.008881448800795402,
-    "high": 0.23613119344674205
+    "rate": 0.55,
+    "low": 0.34208534245034233,
+    "high": 0.7418021417443759
    },
    "not_found": {
     "count": 0,
@@ -202,11 +202,11 @@
     "high": 0.0
    },
    "not_found": {
-    "count": 2,
+    "count": 20,
     "total": 20,
-    "rate": 0.1,
-    "low": 0.027866481213768224,
-    "high": 0.3010336452284873
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
    },
    "leaks": {
     "count": 0,
@@ -225,11 +225,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 37,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.925,
+    "low": 0.8013576647568946,
+    "high": 0.9741639742254119
    },
    "not_found": {
     "count": 0,
@@ -255,11 +255,11 @@
     "high": 0.5296756086269889
    },
    "answer": {
-    "count": 1,
+    "count": 15,
     "total": 40,
-    "rate": 0.025,
-    "low": 0.0044268315026814095,
-    "high": 0.1288136896347409
+    "rate": 0.375,
+    "low": 0.24222979167233266,
+    "high": 0.5296756086269889
    },
    "not_found": {
     "count": 0,
@@ -285,11 +285,11 @@
     "high": 0.7786547112682372
    },
    "answer": {
-    "count": 2,
+    "count": 26,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.65,
+    "low": 0.49505880837257693,
+    "high": 0.7786547112682372
    },
    "not_found": {
     "count": 0,
@@ -315,11 +315,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 35,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.875,
+    "low": 0.738878801611489,
+    "high": 0.945404997490546
    },
    "not_found": {
     "count": 0,
@@ -345,11 +345,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 20,
     "total": 20,
-    "rate": 0.1,
-    "low": 0.027866481213768224,
-    "high": 0.3010336452284873
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
    },
    "not_found": {
     "count": 0,
@@ -375,11 +375,11 @@
     "high": 0.9741639742254119
    },
    "answer": {
-    "count": 2,
+    "count": 37,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.925,
+    "low": 0.8013576647568946,
+    "high": 0.9741639742254119
    },
    "not_found": {
     "count": 0,
@@ -405,11 +405,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 20,
     "total": 20,
-    "rate": 0.1,
-    "low": 0.027866481213768224,
-    "high": 0.3010336452284873
+    "rate": 1.0,
+    "low": 0.8388748419471806,
+    "high": 1.0
    },
    "not_found": {
     "count": 0,
@@ -442,11 +442,11 @@
     "high": 0.0
    },
    "not_found": {
-    "count": 2,
+    "count": 36,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.9,
+    "low": 0.7694822477247771,
+    "high": 0.9604204713173936
    },
    "leaks": {
     "count": 0,
@@ -465,11 +465,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 40,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
    },
    "not_found": {
     "count": 0,
@@ -495,11 +495,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 39,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 0.975,
+    "low": 0.8711863103652591,
+    "high": 0.9955731684973186
    },
    "not_found": {
     "count": 0,
@@ -525,11 +525,11 @@
     "high": 0.8545227551323956
    },
    "answer": {
-    "count": 1,
+    "count": 12,
     "total": 20,
-    "rate": 0.05,
-    "low": 0.008881448800795402,
-    "high": 0.23613119344674205
+    "rate": 0.6,
+    "low": 0.3865815007622531,
+    "high": 0.781193467627183
    },
    "not_found": {
     "count": 0,
@@ -555,11 +555,11 @@
     "high": 1.0
    },
    "answer": {
-    "count": 2,
+    "count": 40,
     "total": 40,
-    "rate": 0.05,
-    "low": 0.013820667386148344,
-    "high": 0.16503877369140962
+    "rate": 1.0,
+    "low": 0.9123783988027135,
+    "high": 1.0
    },
    "not_found": {
     "count": 0,
@@ -590,35 +590,36 @@
   "answer": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 32,
-    "made": 488,
+    "already_complete": 520,
+    "cached": 0,
+    "made": 0,
     "failed": 0,
-    "tokens": {
-     "google": {
-      "input_tokens": 1317342,
-      "output_tokens": 21957,
-      "reasoning_tokens": 0,
-      "cached_input_tokens": 0
-     }
-    }
+    "tokens": {}
    }
   ],
   "judge": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 32,
+    "already_complete": 32,
+    "cached": 488,
     "made": 0,
-    "failed": 488,
+    "failed": 0,
+    "tokens": {}
+   },
+   {
+    "planned": 2,
+    "already_complete": 0,
+    "cached": 2,
+    "made": 0,
+    "failed": 0,
     "tokens": {}
    }
   ],
   "rerank": [
    {
     "planned": 497,
-    "already_complete": 0,
-    "cached": 497,
+    "already_complete": 497,
+    "cached": 0,
     "made": 0,
     "failed": 0,
     "tokens": {}
@@ -627,5 +628,10 @@
  },
  "embedding_tokens_reported": 0,
  "judge_errors": [],
- "code_check_disagrees_with_judge": []
+ "code_check_disagrees_with_judge": [
+  "DISTRACT-018",
+  "DISTRACT-024",
+  "DISTRACT-031",
+  "TWOPART-011"
+ ]
 }

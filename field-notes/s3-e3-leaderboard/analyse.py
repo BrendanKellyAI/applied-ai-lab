@@ -218,6 +218,7 @@ def charts(out, names, labels, scores, totals, models, cost_ratio, best_value):
         units="Rank by board score and by items handled right",
         sample_size="8 models; 520 test items",
         highlight_key=best_value,
+        footnote="Halvard's top five cannot be told apart (paired tests)",
     )
     ordered = sorted(names, key=lambda n: -totals[n])
     interval_bars(

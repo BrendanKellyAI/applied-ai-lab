@@ -127,7 +127,7 @@ def slope_chart(
             for k in keys:
                 by_rank.setdefault(rank[k], []).append(k)
             for r, group in by_rank.items():
-                text = " / ".join(f"{labels[k]} {values[k]:g}" for k in group)
+                text = chr(10).join(f"{labels[k]} {values[k]:g}" for k in group)
                 ax.text(
                     -0.04 if side == 0 else 1.04,
                     r,
@@ -136,9 +136,9 @@ def slope_chart(
                     va="center",
                     color=MIST,
                 )
-        ax.text(0, -1, left_title, ha="center", va="center", color=MIST)
-        ax.text(1, -1, right_title, ha="center", va="center", color=MIST)
-        ax.set_xlim(-1.3, 2.3)
+        ax.text(-0.04, -1, left_title, ha="right", va="center", color=MIST)
+        ax.text(1.04, -1, right_title, ha="left", va="center", color=MIST)
+        ax.set_xlim(-1.8, 2.8)
         ax.set_ylim(rows - 0.5, -1.6)
         ax.axis("off")
 

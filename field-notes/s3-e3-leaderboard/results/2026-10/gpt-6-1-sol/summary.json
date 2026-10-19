@@ -63,7 +63,7 @@
  },
  "corpus_version": "halvard-v2",
  "items": 520,
- "run_utc": "2026-10-18T22:10:46+00:00",
+ "run_utc": "2026-10-19T07:03:34+00:00",
  "numbers": {
   "search": {
    "count": 344,
@@ -589,42 +589,28 @@
   "answer": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 32,
-    "made": 488,
+    "already_complete": 520,
+    "cached": 0,
+    "made": 0,
     "failed": 0,
-    "tokens": {
-     "openai": {
-      "input_tokens": 1290894,
-      "output_tokens": 29145,
-      "reasoning_tokens": 505,
-      "cached_input_tokens": 0
-     }
-    }
+    "tokens": {}
    }
   ],
   "judge": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 42,
-    "made": 478,
+    "already_complete": 520,
+    "cached": 0,
+    "made": 0,
     "failed": 0,
-    "tokens": {
-     "google": {
-      "input_tokens": 1442502,
-      "output_tokens": 24473,
-      "reasoning_tokens": 0,
-      "cached_input_tokens": 0
-     }
-    }
+    "tokens": {}
    }
   ],
   "rerank": [
    {
     "planned": 497,
-    "already_complete": 0,
-    "cached": 497,
+    "already_complete": 497,
+    "cached": 0,
     "made": 0,
     "failed": 0,
     "tokens": {}

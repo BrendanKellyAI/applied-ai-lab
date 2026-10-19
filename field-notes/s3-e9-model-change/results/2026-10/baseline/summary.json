@@ -61,7 +61,7 @@
  },
  "corpus_version": "halvard-v2",
  "items": 520,
- "run_utc": "2026-10-18T22:09:14+00:00",
+ "run_utc": "2026-10-19T07:55:21+00:00",
  "numbers": {
   "search": {
    "count": 344,
@@ -587,8 +587,8 @@
   "answer": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 520,
+    "already_complete": 520,
+    "cached": 0,
     "made": 0,
     "failed": 0,
     "tokens": {}
@@ -597,8 +597,8 @@
   "judge": [
    {
     "planned": 520,
-    "already_complete": 0,
-    "cached": 520,
+    "already_complete": 520,
+    "cached": 0,
     "made": 0,
     "failed": 0,
     "tokens": {}
@@ -607,8 +607,8 @@
   "rerank": [
    {
     "planned": 497,
-    "already_complete": 0,
-    "cached": 497,
+    "already_complete": 497,
+    "cached": 0,
     "made": 0,
     "failed": 0,
     "tokens": {}
