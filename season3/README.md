@@ -57,11 +57,11 @@ uv run lab strategy score season3/templates/scorecard.csv
 
 ## The field notes
 
-| Episode | Question | Folder |
-|---|---|---|
-| S3 E3 | Does the leaderboard predict your task? | [`field-notes/s3-e3-leaderboard`](../field-notes/s3-e3-leaderboard/) |
-| S3 E7 | Better data or a bigger model? | [`field-notes/s3-e7-data-or-model`](../field-notes/s3-e7-data-or-model/) |
-| S3 E9 | Does it survive a model change? | [`field-notes/s3-e9-model-change`](../field-notes/s3-e9-model-change/) |
+| Episode | Question | Result | Folder |
+|---|---|---|---|
+| S3 E3 | Does the leaderboard predict your task? | No: five models from 18 to 42 board points tied at 457 to 465 of 520; the cheapest tied the leaders | [`field-notes/s3-e3-leaderboard`](../field-notes/s3-e3-leaderboard/) |
+| S3 E7 | Better data or a bigger model? | Data: the small model on the final system handled 461 of 520, the large one on the naive system 303 | [`field-notes/s3-e7-data-or-model`](../field-notes/s3-e7-data-or-model/) |
+| S3 E9 | Does it survive a model change? | The total held at 461 of 520 through a version update while 18 answers changed | [`field-notes/s3-e9-model-change`](../field-notes/s3-e9-model-change/) |
 
 All three run on the Season 2 reference system and the 520 Halvard test questions, with only
 the answer model or the pipeline changing.

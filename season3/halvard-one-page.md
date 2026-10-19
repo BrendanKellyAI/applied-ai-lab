@@ -46,8 +46,10 @@ managed, inside our existing cloud account, for anything that reads customer con
 ## 5. How we stay portable
 
 Our 520-question test set and the code that scores it are ours: before accepting a new model or
-a provider's update, we rerun it and compare item by item, not only the total. Prompts and
-citation parsing are kept in our code, not a vendor's console.
+a provider's update, we rerun it and compare item by item, not only the total: in S3 E9 a
+version update left the total at 461 of 520 while 18 answers changed. Prompts and citation
+parsing are kept in our code, not a vendor's console, and we choose models on our own questions,
+not a leaderboard (S3 E3: the cheapest model tied the leaders).
 
 ## 6. How we will measure, and when we stop
 
