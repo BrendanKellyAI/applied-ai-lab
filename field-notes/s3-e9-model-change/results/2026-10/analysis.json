@@ -1,0 +1,361 @@
+{
+ "episode": "s3-e9-model-change",
+ "items": 520,
+ "labels": {
+  "baseline": "gpt-6-luna (today)",
+  "version": "gpt-5.6-luna (before the update)",
+  "provider": "claude-haiku-5-5",
+  "provider-google": "gemini-3.5-flash-lite"
+ },
+ "measures": {
+  "baseline": {
+   "answer_model": "gpt-6-luna",
+   "judge": "gemini-3.6-flash",
+   "handled": {
+    "count": 461,
+    "total": 520,
+    "rate": 0.8865384615384615,
+    "low": 0.8563968907127906,
+    "high": 0.9110108683160736
+   },
+   "answered_right": {
+    "count": 354,
+    "total": 400,
+    "rate": 0.885,
+    "low": 0.850008455984224,
+    "high": 0.9126670773783676
+   },
+   "declined": {
+    "count": 107,
+    "total": 120,
+    "rate": 0.8916666666666667,
+    "low": 0.8234463978470834,
+    "high": 0.9355885884582658
+   },
+   "citation_validity": {
+    "count": 365,
+    "total": 400,
+    "rate": 0.9125,
+    "low": 0.8807392673857086,
+    "high": 0.9364130897884968
+   },
+   "citing": {
+    "count": 365,
+    "total": 365,
+    "rate": 1.0,
+    "low": 0.9895850677063891,
+    "high": 0.9999999999999998
+   },
+   "declines_recognised": {
+    "count": 146,
+    "total": 155,
+    "rate": 0.9419354838709677,
+    "low": 0.8933406283506057,
+    "high": 0.9691545981295947
+   },
+   "median_output_tokens": 28.0,
+   "median_input_tokens": 2876.0,
+   "errors": 0,
+   "empty_answers": 0,
+   "refusals": 0,
+   "median_latency_ms": 1202.7667000656947,
+   "models_returned": [
+    "gpt-6-luna"
+   ]
+  },
+  "version": {
+   "answer_model": "gpt-5.6-luna",
+   "judge": "gemini-3.6-flash",
+   "handled": {
+    "count": 461,
+    "total": 520,
+    "rate": 0.8865384615384615,
+    "low": 0.8563968907127906,
+    "high": 0.9110108683160736
+   },
+   "answered_right": {
+    "count": 356,
+    "total": 400,
+    "rate": 0.89,
+    "low": 0.8555490895383555,
+    "high": 0.9170313208808931
+   },
+   "declined": {
+    "count": 105,
+    "total": 120,
+    "rate": 0.875,
+    "low": 0.8039705979199262,
+    "high": 0.9227650272660463
+   },
+   "citation_validity": {
+    "count": 370,
+    "total": 424,
+    "rate": 0.8726415094339622,
+    "low": 0.8375297839991195,
+    "high": 0.9010615644667938
+   },
+   "citing": {
+    "count": 371,
+    "total": 371,
+    "rate": 1.0,
+    "low": 0.989751777103899,
+    "high": 1.0
+   },
+   "declines_recognised": {
+    "count": 149,
+    "total": 149,
+    "rate": 1.0,
+    "low": 0.9748663821299904,
+    "high": 0.9999999999999999
+   },
+   "median_output_tokens": 28.0,
+   "median_input_tokens": 2876.0,
+   "errors": 0,
+   "empty_answers": 0,
+   "refusals": 0,
+   "median_latency_ms": 1169.1438499838114,
+   "models_returned": [
+    "gpt-5.6-luna"
+   ]
+  },
+  "provider": {
+   "answer_model": "claude-haiku-5-5",
+   "judge": "gemini-3.6-flash",
+   "handled": {
+    "count": 456,
+    "total": 520,
+    "rate": 0.8769230769230769,
+    "low": 0.8458904721174224,
+    "high": 0.9024275416619677
+   },
+   "answered_right": {
+    "count": 345,
+    "total": 400,
+    "rate": 0.8625,
+    "low": 0.8252880733424808,
+    "high": 0.8928155132651543
+   },
+   "declined": {
+    "count": 111,
+    "total": 120,
+    "rate": 0.925,
+    "low": 0.8635908239400624,
+    "high": 0.9600428846040397
+   },
+   "citation_validity": {
+    "count": 375,
+    "total": 525,
+    "rate": 0.7142857142857143,
+    "low": 0.6741953545381179,
+    "high": 0.7512629680785423
+   },
+   "citing": {
+    "count": 363,
+    "total": 363,
+    "rate": 1.0,
+    "low": 0.9895282860529357,
+    "high": 1.0
+   },
+   "declines_recognised": {
+    "count": 147,
+    "total": 157,
+    "rate": 0.9363057324840764,
+    "low": 0.8867325004344941,
+    "high": 0.9650379386332555
+   },
+   "median_output_tokens": 125.5,
+   "median_input_tokens": 4597.0,
+   "errors": 0,
+   "empty_answers": 0,
+   "refusals": 0,
+   "median_latency_ms": 1247.9731500607159,
+   "models_returned": [
+    "claude-haiku-5-5"
+   ]
+  },
+  "provider-google": {
+   "answer_model": "gemini-3.5-flash-lite",
+   "judge": "claude-sonnet-5-5",
+   "handled": {
+    "count": 436,
+    "total": 520,
+    "rate": 0.8384615384615385,
+    "low": 0.8043661777214586,
+    "high": 0.8675928550600345
+   },
+   "answered_right": {
+    "count": 332,
+    "total": 400,
+    "rate": 0.83,
+    "low": 0.7900908679413299,
+    "high": 0.8636310177980344
+   },
+   "declined": {
+    "count": 104,
+    "total": 120,
+    "rate": 0.8666666666666667,
+    "low": 0.7943520342531574,
+    "high": 0.916233910373127
+   },
+   "citation_validity": {
+    "count": 364,
+    "total": 418,
+    "rate": 0.8708133971291866,
+    "low": 0.8352520024501371,
+    "high": 0.8996212384746414
+   },
+   "citing": {
+    "count": 364,
+    "total": 367,
+    "rate": 0.9918256130790191,
+    "low": 0.9762456623349125,
+    "high": 0.9972161537953801
+   },
+   "declines_recognised": {
+    "count": 147,
+    "total": 153,
+    "rate": 0.9607843137254902,
+    "low": 0.9170917348166654,
+    "high": 0.9819052590916575
+   },
+   "median_output_tokens": 24.0,
+   "median_input_tokens": 2934.5,
+   "errors": 0,
+   "empty_answers": 0,
+   "refusals": 0,
+   "median_latency_ms": 540.2413499541581,
+   "models_returned": [
+    "gemini-3.5-flash-lite"
+   ]
+  }
+ },
+ "changes": {
+  "version": {
+   "direction": "gpt-5.6-luna (before the update) to gpt-6-luna (today)",
+   "handled": {
+    "right_to_wrong": 9,
+    "wrong_to_right": 9,
+    "flipped": 18,
+    "net": 0,
+    "only_a": 9,
+    "only_b": 9,
+    "p_value": 1.0
+   },
+   "answerable_only": {
+    "right_to_wrong": 7,
+    "wrong_to_right": 5,
+    "flipped": 12,
+    "net": -2
+   }
+  },
+  "provider": {
+   "direction": "gpt-6-luna (today) to claude-haiku-5-5",
+   "handled": {
+    "right_to_wrong": 15,
+    "wrong_to_right": 10,
+    "flipped": 25,
+    "net": -5,
+    "only_a": 15,
+    "only_b": 10,
+    "p_value": 0.42435622215270996
+   },
+   "answerable_only": {
+    "right_to_wrong": 14,
+    "wrong_to_right": 5,
+    "flipped": 19,
+    "net": -9
+   }
+  },
+  "provider-google": {
+   "direction": "gpt-6-luna (today) to gemini-3.5-flash-lite",
+   "handled": {
+    "right_to_wrong": 33,
+    "wrong_to_right": 8,
+    "flipped": 41,
+    "net": -25,
+    "only_a": 33,
+    "only_b": 8,
+    "p_value": 0.00011222142620681552
+   },
+   "answerable_only": {
+    "right_to_wrong": 26,
+    "wrong_to_right": 4,
+    "flipped": 30,
+    "net": -22
+   }
+  }
+ },
+ "cost_per_item_handled_ratio": {
+  "baseline": 1.0,
+  "version": 2.05,
+  "provider": 1.79,
+  "provider-google": 3.42
+ },
+ "cost_note": "Answer calls only, from provider-reported tokens and published prices on 18 October 2026; 1 is the cheapest per item handled right.",
+ "claims": [
+  {
+   "id": "V1",
+   "claim": "A total that barely moves hides many changed answers.",
+   "held": true,
+   "version": {
+    "right_to_wrong": 9,
+    "wrong_to_right": 9,
+    "flipped": 18,
+    "net": 0,
+    "only_a": 9,
+    "only_b": 9,
+    "p_value": 1.0
+   },
+   "provider": {
+    "right_to_wrong": 15,
+    "wrong_to_right": 10,
+    "flipped": 25,
+    "net": -5,
+    "only_a": 15,
+    "only_b": 10,
+    "p_value": 0.42435622215270996
+   }
+  },
+  {
+   "id": "V2",
+   "claim": "The prompt carries across.",
+   "held": true,
+   "baseline": {
+    "count": 365,
+    "total": 365,
+    "rate": 1.0,
+    "low": 0.9895850677063891,
+    "high": 0.9999999999999998
+   },
+   "version": {
+    "count": 371,
+    "total": 371,
+    "rate": 1.0,
+    "low": 0.989751777103899,
+    "high": 1.0
+   },
+   "provider": {
+    "count": 363,
+    "total": 363,
+    "rate": 1.0,
+    "low": 0.9895282860529357,
+    "high": 1.0
+   }
+  },
+  {
+   "id": "V3",
+   "claim": "On the total, the swap looks safe.",
+   "held": true,
+   "version": 1.0,
+   "provider": 0.42435622215270996
+  },
+  {
+   "id": "V4",
+   "claim": "Behaviour changes even when content does not.",
+   "held": true,
+   "baseline": 28.0,
+   "version": 28.0,
+   "provider": 125.5
+  }
+ ]
+}

@@ -23,6 +23,9 @@ the series can be reproduced from this repository.
 | S2 E11 | Does requiring a citation change what a model says, or only how it says it? | [field-notes/s2-e11-citation-rule](field-notes/s2-e11-citation-rule/) |
 | S2 E12 | What changes when the embedding model does, and what does re-embedding cost? | [field-notes/s2-e12-embedding-swap](field-notes/s2-e12-embedding-swap/) |
 | S2 E13 | On the same questions, when does sending everything beat a retrieval pipeline? | [field-notes/s2-e13-long-context-or-retrieval](field-notes/s2-e13-long-context-or-retrieval/) |
+| S3 E3 | Does a public leaderboard's ranking hold on your own task? | [field-notes/s3-e3-leaderboard](field-notes/s3-e3-leaderboard/) |
+| S3 E7 | Does improving your own system beat paying for a bigger model? | [field-notes/s3-e7-data-or-model](field-notes/s3-e7-data-or-model/) |
+| S3 E9 | What breaks when you switch provider, or the provider updates the model? | [field-notes/s3-e9-model-change](field-notes/s3-e9-model-change/) |
 
 Each field note folder holds its config, the code that builds its data and analyses its
 results, and a README with the question, method, results, limitations, and how to reproduce it.
@@ -31,6 +34,12 @@ Sources and licences for every dataset are in [datasets/README.md](datasets/READ
 Season 2 runs every episode on one retrieval pipeline (`src/lab/rag/`), one library
 (`datasets/halvard`) and one test set. The reference system, its history and the season
 scoreboard are in [season2/](season2/).
+
+Season 3, AI strategy, is a leadership season. Its running case, Halvard Home (the invented firm
+behind the Season 2 library), scores eight candidate use cases against a rule fixed in advance.
+The case, the scorecard and one-page strategy templates, and the strategy card are in
+[season3/](season3/). `uv run lab strategy score <scorecard.csv>` scores your own use cases
+with no key and no call.
 
 ## Episode code
 

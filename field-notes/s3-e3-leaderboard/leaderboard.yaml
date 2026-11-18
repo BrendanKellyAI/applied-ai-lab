@@ -1,0 +1,19 @@
+# The public leaderboard S3 E3 tests against. Numbers only, copied from the published board;
+# its benchmark was not rerun. Each model is run at the setting its row names.
+board: Artificial Analysis Intelligence Index
+url: https://artificialanalysis.ai/leaderboards/models
+accessed: "2026-10-18"
+# The page shows no date or index version. An Artificial Analysis article of 17 July 2026
+# describes the index as version 4; the snapshot is taken to be the page as read on 18 October.
+snapshot_note: No date or version is shown on the page; read on 18 October 2026.
+scale: Index points (higher is better), as published
+models:
+  - {condition: gpt-6-1-sol, row: "GPT-6.1 Sol (low)", score: 42, setting: low}
+  - {condition: claude-opus-5-5, row: "Claude Opus 5.5 (low with fallback)", score: 42, setting: low}
+  - {condition: claude-sonnet-5-5, row: "Claude Sonnet 5.5 (low with fallback)", score: 36, setting: low}
+  - {condition: gemini-3-8-flash, row: "Gemini 3.8 Flash (low)", score: 33, setting: low}
+  - {condition: claude-haiku-5-5, row: "Claude Haiku 5.5 (low)", score: 29, setting: low}
+  - {condition: gpt-5-6-terra, row: "GPT-5.6 Terra (low)", score: 27, setting: low}
+  # No setting is named on the board; the lowest the model allows (minimal) is used.
+  - {condition: gemini-3-5-flash-lite, row: "Gemini 3.5 Flash-Lite", score: 22, setting: minimal}
+  - {condition: gpt-6-luna, row: "GPT-6 Luna (non-reasoning)", score: 18, setting: "off"}

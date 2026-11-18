@@ -122,6 +122,9 @@ class EpisodeConfig(BaseModel):
     pilot_per_type: int = Field(default=2, gt=0)
     # The episode's pre-registered pass marks, applied by its claims.py.
     pass_marks: dict[str, Any] = Field(default_factory=dict)
+    # Where results go, relative to the episode folder. Season 3 field notes that may be rerun
+    # at a model release use a dated folder, such as results/2026-10, so a rerun adds a folder.
+    results_dir: str | None = None
 
     @field_validator("conditions")
     @classmethod

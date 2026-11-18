@@ -1,0 +1,6 @@
+id,name,outcome,metric,owner,gate_outcome,gate_right_tool,redirect,error_cost,caught,reversible,design_autonomy,value,task_fit,error_tolerance,data_readiness,durable_advantage,time_to_evidence,application,model_access,notes
+EXAMPLE,Reply drafts for agents,Agents answer policy and product questions faster without more mistakes.,"Median handling time on policy and product contacts, with the error rate found in quality review held level",Head of customer operations,pass,pass,,regulatory,reviewer,no,assist,4,5,3,5,3,5,build,managed,Example row from the Halvard Home case (invented). Replace it with your own.
+U1,Your use case,,,,,,,,,,,,,,,,,,,
+U2,Your use case,,,,,,,,,,,,,,,,,,,
+U3,Your use case,,,,,,,,,,,,,,,,,,,
+U4,Your use case,,,,,,,,,,,,,,,,,,,

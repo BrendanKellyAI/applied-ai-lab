@@ -1,0 +1,265 @@
+{
+ "episode": "s3-e7-data-or-model",
+ "items": 520,
+ "cells": {
+  "p0-small": {
+   "answer": {
+    "count": 242,
+    "total": 400,
+    "rate": 0.605,
+    "low": 0.5563126557323714,
+    "high": 0.6516897624574263
+   },
+   "not_found": {
+    "count": 53,
+    "total": 120,
+    "rate": 0.44166666666666665,
+    "low": 0.3559974669953786,
+    "high": 0.5309547690868035
+   },
+   "leaks": {
+    "count": 51,
+    "total": 480,
+    "rate": 0.10625,
+    "low": 0.08174077901635685,
+    "high": 0.13701157651487453
+   },
+   "handled": {
+    "count": 295,
+    "total": 520,
+    "rate": 0.5673076923076923,
+    "low": 0.5243837726881595,
+    "high": 0.6092444440581601
+   },
+   "config_id": "9652ab169377",
+   "models_returned": [
+    "gpt-6-luna"
+   ]
+  },
+  "p0-large": {
+   "answer": {
+    "count": 249,
+    "total": 400,
+    "rate": 0.6225,
+    "low": 0.5740411128887363,
+    "high": 0.6686283749993612
+   },
+   "not_found": {
+    "count": 54,
+    "total": 120,
+    "rate": 0.45,
+    "low": 0.3639173508387461,
+    "high": 0.5391845658031243
+   },
+   "leaks": {
+    "count": 51,
+    "total": 480,
+    "rate": 0.10625,
+    "low": 0.08174077901635685,
+    "high": 0.13701157651487453
+   },
+   "handled": {
+    "count": 303,
+    "total": 520,
+    "rate": 0.5826923076923077,
+    "low": 0.5398539900029568,
+    "high": 0.6243178191425217
+   },
+   "config_id": "d932618a8b84",
+   "models_returned": [
+    "gpt-6.1-sol"
+   ]
+  },
+  "p1-small": {
+   "answer": {
+    "count": 319,
+    "total": 400,
+    "rate": 0.7975,
+    "low": 0.7553739799055185,
+    "high": 0.833966204965575
+   },
+   "not_found": {
+    "count": 80,
+    "total": 120,
+    "rate": 0.6666666666666666,
+    "low": 0.5783110162063498,
+    "high": 0.7446825949874156
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   },
+   "handled": {
+    "count": 399,
+    "total": 520,
+    "rate": 0.7673076923076924,
+    "low": 0.7291097876699657,
+    "high": 0.8015851302654182
+   },
+   "config_id": "c10cd79903eb",
+   "models_returned": [
+    "gpt-6-luna"
+   ]
+  },
+  "p1-large": {
+   "answer": {
+    "count": 336,
+    "total": 400,
+    "rate": 0.84,
+    "low": 0.8008643954521164,
+    "high": 0.8726672444005619
+   },
+   "not_found": {
+    "count": 83,
+    "total": 120,
+    "rate": 0.6916666666666667,
+    "low": 0.6041700227619933,
+    "high": 0.767272630110837
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   },
+   "handled": {
+    "count": 419,
+    "total": 520,
+    "rate": 0.8057692307692308,
+    "low": 0.7695752344405394,
+    "high": 0.8374786644927413
+   },
+   "config_id": "88003890689d",
+   "models_returned": [
+    "gpt-6.1-sol"
+   ]
+  },
+  "p2-small": {
+   "answer": {
+    "count": 354,
+    "total": 400,
+    "rate": 0.885,
+    "low": 0.850008455984224,
+    "high": 0.9126670773783676
+   },
+   "not_found": {
+    "count": 107,
+    "total": 120,
+    "rate": 0.8916666666666667,
+    "low": 0.8234463978470834,
+    "high": 0.9355885884582658
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   },
+   "handled": {
+    "count": 461,
+    "total": 520,
+    "rate": 0.8865384615384615,
+    "low": 0.8563968907127906,
+    "high": 0.9110108683160736
+   },
+   "config_id": "0294479ba987",
+   "models_returned": [
+    "gpt-6-luna"
+   ]
+  },
+  "p2-large": {
+   "answer": {
+    "count": 359,
+    "total": 400,
+    "rate": 0.8975,
+    "low": 0.8638965789864277,
+    "high": 0.9235411470178065
+   },
+   "not_found": {
+    "count": 103,
+    "total": 120,
+    "rate": 0.8583333333333333,
+    "low": 0.7848050551014282,
+    "high": 0.9096312089651676
+   },
+   "leaks": {
+    "count": 0,
+    "total": 480,
+    "rate": 0.0,
+    "low": 0.0,
+    "high": 0.007939499087277936
+   },
+   "handled": {
+    "count": 462,
+    "total": 520,
+    "rate": 0.8884615384615384,
+    "low": 0.8585052457614677,
+    "high": 0.9127204623172913
+   },
+   "config_id": "a781d2e2eafa",
+   "models_returned": [
+    "gpt-6.1-sol"
+   ]
+  }
+ },
+ "handled_totals": {
+  "p0-small": 295,
+  "p0-large": 303,
+  "p1-small": 399,
+  "p1-large": 419,
+  "p2-small": 461,
+  "p2-large": 462
+ },
+ "cost_per_item_handled_ratio": {
+  "p0-small": 1.0,
+  "p0-large": 20.87,
+  "p1-small": 1.34,
+  "p1-large": 26.39,
+  "p2-small": 4.85,
+  "p2-large": 30.11
+ },
+ "cost_note": "Answer calls plus, for P2, the reranker's gpt-6-luna call per item, from provider-reported tokens and published prices on 18 October 2026; 1 is the cheapest per item handled right. Embedding and judging are left out.",
+ "claims": [
+  {
+   "id": "D1",
+   "claim": "The small model on the final system beats the large model on the naive one.",
+   "held": true,
+   "p2_small": 461,
+   "p0_large": 303,
+   "only_a": 167,
+   "only_b": 9,
+   "p_value": 7.999370551377486e-39
+  },
+  {
+   "id": "D2",
+   "claim": "Data work alone buys a real gain.",
+   "held": true,
+   "p1_small": 399,
+   "p0_small": 295,
+   "only_a": 123,
+   "only_b": 19,
+   "p_value": 7.713463986436664e-20
+  },
+  {
+   "id": "D3",
+   "claim": "The bigger model adds less on a better system.",
+   "held": true,
+   "large_gain_on_p0": 8,
+   "large_gain_on_p2": 1,
+   "large_gain_on_p1": 20
+  }
+ ],
+ "title_rule": {
+  "rule": "Better data if P0 to P1 (small) gives at least half of P0 to P2 (small)",
+  "data_gain": 104,
+  "whole_gain": 166,
+  "share": 0.627,
+  "title": "Better data or a bigger model?"
+ },
+ "leaks_note": "Leaks are set by the pipeline before the model sees the prompt, so they are identical across the two models by construction."
+}

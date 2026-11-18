@@ -1,0 +1,185 @@
+# The eight candidate use cases Halvard Home is choosing between (Season 3 running case).
+# Halvard Home is invented; every volume here is invented. Committed with rule.yaml before any
+# score was written (see PREREGISTRATION.md).
+#
+# Each candidate records the facts the rule needs:
+#   outcome      the outcome, stated without the word AI, with its metric and owner
+#   volume       how often the work happens (invented)
+#   user         who uses the output
+#   wrong        what a wrong output causes, and who would catch it
+#   data         the data it needs, and whether that data exists
+#   vendor       whether a vendor product already does it
+#   design_autonomy  the autonomy the candidate is proposed at: assist, automate or act
+#   error_cost   low, high or regulatory: the worst ordinary consequence of a wrong output
+#   caught       who or what catches a wrong output before harm: reviewer, downstream or nobody
+#   reversible   whether a wrong output can be fully undone after the event
+
+corpus_version: halvard-v2
+candidates:
+  - id: C1
+    name: Website assistant
+    summary: Answers customers' questions directly on the website, from the support library.
+    why_in_set: The CEO's headline ask. The Season 2 system is a measured version of it.
+    outcome:
+      statement: Customers get a correct answer to a policy or product question without waiting for an agent.
+      metric: Share of website questions answered correctly with no agent contact within 7 days
+      owner: Head of customer operations
+    volume: About 9,000 policy and product questions a month reach agents that the library could answer
+    user: Customers, directly
+    wrong: A customer is told the wrong warranty period, refund right or safety step. No person sees the answer before the customer acts on it.
+    data:
+      needs: The support library, with access and version labels
+      exists: true
+      note: The library exists and Season 2 measured a system over it.
+    vendor: Website chat products exist; they would still need Halvard's library.
+    design_autonomy: automate
+    error_cost: regulatory
+    caught: nobody
+    reversible: false
+
+  - id: C2
+    name: Reply drafts for agents
+    summary: Drafts a reply from the support library; the agent edits it and sends it.
+    why_in_set: The same Season 2 system as C1, in assist mode.
+    outcome:
+      statement: Agents answer policy and product questions faster without more mistakes.
+      metric: Median handling time on policy and product contacts, with the error rate found in quality review held level
+      owner: Head of customer operations
+    volume: About 9,000 policy and product contacts a month
+    user: Support agents
+    wrong: An agent sends a wrong draft without noticing it. The agent reads every draft first, and quality review samples sent replies.
+    data:
+      needs: The support library, with access and version labels
+      exists: true
+      note: The same library and measured system as C1.
+    vendor: Agent assist features exist in contact-centre products; they would still need Halvard's library.
+    design_autonomy: assist
+    error_cost: regulatory
+    caught: reviewer
+    reversible: false
+
+  - id: C3
+    name: Warranty claim triage
+    summary: Reads each incoming warranty claim and routes it to the right queue.
+    why_in_set: High-volume language work.
+    outcome:
+      statement: Each warranty claim reaches the team that can settle it on the first attempt.
+      metric: Share of claims routed correctly first time, and median days from claim to decision
+      owner: Warranty operations manager
+    volume: About 3,200 claims a month
+    user: The warranty team's queues
+    wrong: A claim lands in the wrong queue and waits. The receiving team sends it back, so it is caught, but the customer waits longer.
+    data:
+      needs: Past claims with the queue that finally settled them
+      exists: true
+      note: Assumed to exist in the claims system; not modelled in this case.
+    vendor: Ticket routing is a feature of most service desk products.
+    design_autonomy: automate
+    error_cost: high
+    caught: downstream
+    reversible: true
+
+  - id: C4
+    name: Safety signal screening
+    summary: Flags contacts that may describe a fire, smoke or shock incident for the safety team.
+    why_in_set: Regulatory; a miss is costly.
+    outcome:
+      statement: Every contact that describes a fire, smoke or shock incident reaches the safety team the same day.
+      metric: Share of confirmed incidents flagged within one working day, and flags per confirmed incident
+      owner: Head of product safety
+    volume: About 45,000 contacts a month screened for about 40 that may describe an incident
+    user: The safety team, who review every flag
+    wrong: A false flag costs a safety officer a few minutes. A missed incident is caught only if the agent escalates it as they do today.
+    data:
+      needs: Contacts labelled as incidents or not, enough confirmed incidents to measure misses
+      exists: false
+      note: Assumed. About 40 possible incidents a month means few confirmed examples to learn from or test against.
+    vendor: No vendor product found for this specific screen; general text classifiers exist.
+    design_autonomy: assist
+    error_cost: regulatory
+    caught: downstream
+    reversible: false
+
+  - id: C5
+    name: Automatic refund approval
+    summary: Approves or refuses refunds on returns and pays them, with no person involved.
+    why_in_set: Money, consumer law, and an action in a live system.
+    outcome:
+      statement: Customers entitled to a refund get it within two working days.
+      metric: Share of eligible refunds paid within two working days
+      owner: Returns manager
+    volume: About 2,100 returns a month
+    user: The payments system, directly
+    wrong: A refund is paid that should not be, or refused that should be paid. Nobody checks before the money moves.
+    data:
+      needs: Order, delivery and return records, and the returns policy's rules
+      exists: true
+      note: Assumed to exist in the order system; not modelled in this case.
+    vendor: Returns platforms automate refund rules.
+    design_autonomy: act
+    error_cost: regulatory
+    caught: nobody
+    reversible: false
+
+  - id: C6
+    name: Library consistency check
+    summary: Finds support articles that contradict the current policies, for the content team to fix.
+    why_in_set: Season 2 E14 found this failure. It is data work.
+    outcome:
+      statement: No support article contradicts a current policy.
+      metric: Share of the 300 support articles consistent with the current policies, checked each month
+      owner: Content team lead
+    volume: 300 support articles and 4 policies, rechecked on every policy change
+    user: The content team, who review every flag
+    wrong: A false flag costs a content editor a few minutes. A missed contradiction stays in the library, as it does today.
+    data:
+      needs: The support library with versions and policy effective dates
+      exists: true
+      note: The library exists with version metadata (Season 2).
+    vendor: General document review tools exist; none knows Halvard's policies.
+    design_autonomy: assist
+    error_cost: low
+    caught: reviewer
+    reversible: true
+
+  - id: C7
+    name: Call and chat summaries
+    summary: Writes a summary of each call or chat into the customer record.
+    why_in_set: Commodity; available in contact-centre products.
+    outcome:
+      statement: Agents spend less time writing up contacts, and the next agent can see what happened.
+      metric: Minutes of wrap-up time per contact, with summary accuracy checked by sampling
+      owner: Head of customer operations
+    volume: About 45,000 contacts a month
+    user: Agents, later, reading the customer record
+    wrong: A summary misstates what was said. The next agent may act on it; sampling catches some.
+    data:
+      needs: Call transcripts and chat logs
+      exists: true
+      note: Assumed; the contact-centre platform records them.
+    vendor: Built into the major contact-centre products.
+    design_autonomy: automate
+    error_cost: high
+    caught: downstream
+    reversible: true
+
+  - id: C8
+    name: Spare parts demand forecast
+    summary: Forecasts monthly demand for each spare part so the right stock is ordered.
+    why_in_set: A forecasting problem, not a language one.
+    outcome:
+      statement: Engineers have the part they need on the first visit.
+      metric: First-visit fix rate, and stock-outs per month across the 1,800 part numbers
+      owner: Supply chain manager
+    volume: About 1,800 part numbers, ordered monthly
+    user: The parts planning team
+    wrong: Too much or too little stock is ordered. Planners review the order before it is placed.
+    data:
+      needs: Parts usage history, installed base and failure rates
+      exists: true
+      note: Assumed to exist in the parts system; not modelled in this case.
+    vendor: Demand planning products exist.
+    design_autonomy: assist
+    error_cost: high
+    caught: reviewer
+    reversible: true
