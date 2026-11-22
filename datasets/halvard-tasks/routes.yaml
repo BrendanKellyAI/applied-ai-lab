@@ -7,7 +7,7 @@
 # Everything here is invented and fixed before any item is generated. Labels are checked by
 # code; no judge is needed.
 
-version: draft-1
+version: draft-2
 
 routes:
   warranty_claim:
@@ -32,8 +32,8 @@ routes:
     team: Servicing
     policy: POL-SER
     definition: >-
-      The customer wants to book, move or ask about routine servicing, maintenance or a paid
-      repair visit that is not a warranty claim.
+      The customer wants to book, move or ask about routine servicing or maintenance, with no
+      fault that needs repairing.
   spare_part:
     team: Parts
     policy: POL-SER
@@ -44,7 +44,7 @@ routes:
     policy: articles
     definition: >-
       The customer asks how to set up, use, clean or understand an appliance, including what an
-      error code means, and does not ask for a repair, return or visit.
+      error code means, and describes no other fault and asks for no repair, return or visit.
   complaint:
     team: Customer relations
     policy: INT-ESC
@@ -60,7 +60,8 @@ routes:
 
 # When a message fits more than one route, the first rule that applies wins.
 precedence:
-  - A message that asks for a formal complaint or escalation is a complaint.
+  - A message that asks for a formal complaint or escalation is a complaint. Anger, threats or
+    lost faith alone do not make a complaint.
   - A message about an order not yet delivered is delivery.
   - A message that asks for money back or to send the appliance back is return_refund.
   - A fault with a request for repair or replacement is warranty_claim.
@@ -96,7 +97,9 @@ faults:
   door_or_lid: A door, lid, seal or drawer fails or will not close.
   burning_or_smoke: Smells of burning, smokes, sparks or scorches.
   electric_shock: Gave someone a shock or tingle.
-  poor_performance: Works, but does its job badly (dirty dishes, wet clothes, weak suction).
+  poor_performance: >-
+    Works, but does its main job badly in a way other than heating or cooling (dirty dishes,
+    damp clothes, weak suction). Heating or cooling too little is not_heating or not_cooling.
 
 fault_rule: >-
   The single fault the customer describes, or null if none is described. If more than one, the

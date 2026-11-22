@@ -62,6 +62,7 @@ def check_message(seed: Seed, text: str, definitions: Definitions) -> str | None
         _length_problem(seed, message),
         _label_leak(message, definitions),
         _product_problem(seed, message, definitions),
+        _invented_product(seed, message, definitions),
     ):
         if problem is not None:
             return problem
@@ -95,4 +96,24 @@ def _product_problem(seed: Seed, message: str, definitions: Definitions) -> str 
         return f"The message must name: {', '.join(sorted(missing))}."
     if extra:
         return f"The message must not name: {', '.join(sorted(extra))}."
+    return None
+
+
+def _invented_product(seed: Seed, message: str, definitions: Definitions) -> str | None:
+    """A "Halvard <name>" that is neither a product nor the unsold appliance seeded."""
+    allowed = {product.split()[0].lower() for product in definitions.products} | {"home"}
+    if seed.kind == "unknown_product" and seed.also_named:
+        allowed.add(seed.also_named.split()[1].lower())
+    invented = sorted(
+        {
+            word
+            for word in re.findall(r"\bhalvard\s+([a-z]+)", message.lower())
+            if not any(word.startswith(name) for name in allowed)
+        }
+    )
+    if invented:
+        return (
+            f"The message names Halvard products that do not exist ({', '.join(invented)}); "
+            "name only the products given."
+        )
     return None

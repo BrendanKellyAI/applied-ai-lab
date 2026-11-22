@@ -36,10 +36,13 @@ ROUTE_BRIEFS = {
     "warranty_claim": "wants the fault repaired or the appliance replaced under its warranty",
     "return_refund": "wants to send the appliance back, cancel the order, or get money back",
     "delivery": "asks about an order that has not arrived yet (date, slot, tracking or access)",
-    "servicing_booking": "wants to book or move a routine service or a paid repair visit",
+    "servicing_booking": "wants to book or move a routine service, with nothing wrong with it",
     "spare_part": "wants to buy or identify a spare part, filter or accessory to fit themselves",
     "how_to_use": "asks how to set up, use, clean or understand the appliance",
-    "complaint": "makes a formal complaint about how Halvard Home has treated them",
+    "complaint": (
+        "makes a formal complaint about how Halvard Home has treated them, and asks for it to "
+        "be escalated"
+    ),
     "other": "asks about something Halvard Home does not deal with as a support request",
 }
 
@@ -62,6 +65,7 @@ def generation_prompt(seed: Seed, definitions: Definitions) -> str:
         lines.append(f"The other product to mention in passing: Halvard {seed.also_named}.")
     if label.fault is not None:
         lines.append(f"The problem they describe: {definitions.faults[label.fault]}")
+        lines.append("Describe only this one problem, and no other fault or hazard.")
     else:
         lines.append("They describe no fault with the appliance.")
     if KIND_BRIEFS[seed.kind]:
@@ -84,7 +88,7 @@ def labeller_system(definitions: Definitions) -> str:
         "You label customer messages to Halvard Home, an invented UK appliance maker, using "
         "these definitions:\n"
         + json.dumps(spec, indent=2, ensure_ascii=False)
-        + "\n\nReply with one JSON object and nothing else: "
+        + "\n\nDo not explain your reasoning. Reply with one JSON object and nothing else: "
         '{"route": <route>, "safety": <true or false>, "product": <product or null>, '
         '"fault": <fault or null>}'
     )

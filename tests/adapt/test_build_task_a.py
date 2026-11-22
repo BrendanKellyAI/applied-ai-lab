@@ -229,7 +229,8 @@ def test_seeds_are_reproducible_and_differ_by_split():
 def test_full_plan_draws_overgenerated_seeds_per_split():
     config = TaskBuildConfig.load(SOURCE / "config.yaml")
     seeds = plan_seeds(config, DEFINITIONS, pilot=False)
-    assert len(seeds) == sum(seed_count(n, 0.15) for n in (3200, 200, 600)) == 4600
+    over = config.task_a.overgenerate
+    assert len(seeds) == sum(seed_count(n, over) for n in config.task_a.splits.values())
     assert len({s.id for s in seeds}) == len(seeds)
 
 
@@ -269,6 +270,10 @@ def test_message_checks_catch_leaked_labels_and_wrong_products():
     assert "must name: Brio kettle" in check_message(seed, wrong, DEFINITIONS)
     extra = json.dumps({"message": f"{ok} and my Tessa"})
     assert "must not name: Tessa dishwasher" in check_message(seed, extra, DEFINITIONS)
+    invented = json.dumps({"message": f"{ok} and my Halvard Vane vacuum"})
+    assert "do not exist (vane)" in check_message(seed, invented, DEFINITIONS)
+    company = json.dumps({"message": f"Dear Halvard Home, {ok}"})
+    assert check_message(seed, company, DEFINITIONS) is None
     long = json.dumps({"message": "My Brio kettle " + "word " * 400})
     assert "words; write" in check_message(seed, long, DEFINITIONS)
 
@@ -412,3 +417,15 @@ def test_cli_refuses_a_build_without_keys(tmp_path, monkeypatch):
     result = _pilot(tmp_path, _prices(tmp_path, 1.0))
     assert result.exit_code == 1
     assert "ANTHROPIC_API_KEY" in result.output
+
+
+def test_unknown_product_items_may_name_their_unsold_appliance():
+    config = TaskBuildConfig.load(SOURCE / "config.yaml")
+    seed = next(
+        s
+        for s in draw_seeds("dev", 300, config.task_a, DEFINITIONS, config.seed)
+        if s.kind == "unknown_product"
+    )
+    words = " ".join(["fine"] * seed.length[0])
+    message = json.dumps({"message": f"My {seed.also_named}s {words}"})
+    assert check_message(seed, message, DEFINITIONS) is None

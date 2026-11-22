@@ -32,9 +32,9 @@ ROUTE_FAULTS: dict[str, tuple[str | None, ...]] = {
     ),
     "return_refund": (None, "damaged_on_arrival", "no_power", "leak", "noise", "poor_performance"),
     "delivery": (None,),
-    "servicing_booking": (None, None, "noise", "poor_performance"),
+    "servicing_booking": (None,),
     "spare_part": (None, None, "door_or_lid"),
-    "how_to_use": (None, None, "error_code", "connectivity"),
+    "how_to_use": (None, None, "error_code"),
     "complaint": (None, "no_power", "leak", "noise", "poor_performance", "damaged_on_arrival"),
     "other": (None,),
 }

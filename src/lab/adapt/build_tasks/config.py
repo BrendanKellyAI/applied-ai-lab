@@ -6,6 +6,7 @@ from typing import Literal, Self
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from lab.config import ProviderLimits
 from lab.rag.config import ModelSpec
 
 Split = Literal["train", "dev", "test"]
@@ -47,6 +48,7 @@ class TaskBuildConfig(BaseModel):
     seed: int
     generator: ModelSpec
     labeller: ModelSpec
+    limits: dict[str, ProviderLimits] = Field(default_factory=dict)
     max_attempts: int = Field(gt=0)
     task_a: TaskAConfig
 

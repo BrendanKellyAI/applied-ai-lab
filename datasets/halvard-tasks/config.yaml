@@ -13,7 +13,13 @@ labeller:
   provider: anthropic
   model: claude-haiku-5-5
   reasoning: "off"
-  max_output_tokens: 200
+  # Raised from 200 after a pilot label ran out while explaining itself.
+  max_output_tokens: 400
+# Request limits per provider, as Season 3 ran them.
+limits:
+  google: {max_concurrency: 8, requests_per_minute: 300}
+  # Season 3 ran Anthropic at 4 and 50; Haiku is lighter, and the runner backs off on 429s.
+  anthropic: {max_concurrency: 6, requests_per_minute: 150}
 # A message that fails the code checks is sent back once with the reason, then dropped.
 max_attempts: 2
 
@@ -21,7 +27,8 @@ task_a:
   splits: {train: 3200, dev: 200, test: 600}
   # Extra seeds drawn per split to absorb discards; the first items to pass, in seed order,
   # are kept.
-  overgenerate: 0.15
+  # Raised from 0.15 after the pilot discarded 7 of 40 (22 November 2026).
+  overgenerate: 0.30
   # Pilot: this many seeds from the dev split only.
   pilot_seeds: 40
   # A dev or test item whose character 5-gram Jaccard similarity to any train item is above

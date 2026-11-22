@@ -1,0 +1,94 @@
+{
+  "dataset_version": "halvard-tasks-v1",
+  "generator": {
+    "provider": "google",
+    "model": "gemini-3.1-flash-lite",
+    "reasoning": "minimal",
+    "max_output_tokens": 800
+  },
+  "labeller": {
+    "provider": "anthropic",
+    "model": "claude-haiku-5-5",
+    "reasoning": "off",
+    "max_output_tokens": 200
+  },
+  "seeds": {
+    "dev": 40
+  },
+  "generation_failed": [
+    "A-dev-00022"
+  ],
+  "label_disagreements": {
+    "total": 3,
+    "by_field": {
+      "unparsed": 1,
+      "fault": 1,
+      "route": 1
+    },
+    "by_route": {
+      "return_refund": 2,
+      "other": 1
+    },
+    "by_kind": {
+      "safety": 1,
+      "played_down_safety": 1,
+      "unknown_product": 1
+    },
+    "items": {
+      "A-dev-00006": [
+        "unparsed"
+      ],
+      "A-dev-00008": [
+        "route"
+      ],
+      "A-dev-00009": [
+        "fault"
+      ]
+    }
+  },
+  "near_duplicates_removed": {},
+  "kept": {
+    "dev": 36
+  },
+  "safety_items_kept": {
+    "dev": 2
+  },
+  "generation_attempts": [
+    {
+      "planned": 40,
+      "made": 27,
+      "cached": 13,
+      "failed": 0,
+      "tokens": {
+        "google": {
+          "input": 4993,
+          "output": 2456
+        }
+      }
+    },
+    {
+      "planned": 3,
+      "made": 3,
+      "cached": 0,
+      "failed": 0,
+      "tokens": {
+        "google": {
+          "input": 1034,
+          "output": 346
+        }
+      }
+    }
+  ],
+  "label_calls": {
+    "planned": 39,
+    "made": 39,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {
+      "anthropic": {
+        "input": 60626,
+        "output": 1718
+      }
+    }
+  }
+}

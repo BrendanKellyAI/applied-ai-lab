@@ -57,7 +57,9 @@ def build_tasks(
         missing = ", ".join(" or ".join(v) for v in available.missing_keys.values())
         typer.echo(f"Error: set {missing}.", err=True)
         raise typer.Exit(code=1)
-    runner = Runner(providers=dict(available.providers), cache=ResponseCache(root), limits={})
+    runner = Runner(
+        providers=dict(available.providers), cache=ResponseCache(root), limits=config.limits
+    )
     out = folder / ("pilot" if pilot else "task-a")
     log = build_task_a(runner, config, definitions, out, pilot=pilot)
     typer.echo(f"Kept: {log['kept']}; safety items kept: {log['safety_items_kept']}")
