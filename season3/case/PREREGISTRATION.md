@@ -60,6 +60,12 @@ readiness cited `datasets/halvard/manifest.json` for "version and effective date
 manifest holds versions and file hashes, not dates; the dates are in each document's front
 matter. The citation now says so. Score before and after: 4.
 
+**Amendment 2, 22 November 2026 (episode order only; no score or weight changed).** The season
+now runs "Which use case goes first?" as E10 and "The one-page AI strategy" as E11, so the
+first pick is chosen before the page that records it. Time to evidence, the totals, the
+sensitivity check and the stop criteria therefore arrive in E10, not E11. Where the text above
+says E11 for these, read E10. The first pick (C6, 4.20 of 5) is unchanged.
+
 ## Decisions taken at Gate 1
 
 Brendan delegated Gate 1 on 18 October 2026 ("make whatever decisions you need"). These follow

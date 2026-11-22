@@ -61,7 +61,7 @@ criteria:
       5: It is built on data, structure or workflow only Halvard has, and it improves them.
   - id: time_to_evidence
     label: Time to evidence
-    episode: 11
+    episode: 10
     question: Can a pilot show the outcome moving within a quarter?
     anchors:
       1: No result could show the outcome moving within a year.
@@ -114,7 +114,7 @@ sourcing:
     vendor: Whatever the bought product uses.
     none: No language model.
 
-# Sensitivity (E11): the first pick is recomputed under each of these weightings. Every
+# Sensitivity (E10): the first pick is recomputed under each of these weightings. Every
 # weighting is scaled to sum to 1. "Each weight halved" and "each weight doubled" are generated
 # from `weights` above, one criterion at a time.
 sensitivity:
@@ -124,5 +124,5 @@ sensitivity:
   halve_each: true
   double_each: true
 
-# What the first pick must have written down before its (fictional) pilot starts (E11).
+# What the first pick must have written down before its (fictional) pilot starts (E10).
 stop_criteria: [success_metric, threshold, time_box, stop_condition, reviewer]
