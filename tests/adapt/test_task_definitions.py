@@ -11,7 +11,7 @@ ROUTES = yaml.safe_load((TASKS / "routes.yaml").read_text(encoding="utf-8"))
 HALVARD = yaml.safe_load(
     (ROOT / "datasets" / "halvard" / "config.yaml").read_text(encoding="utf-8")
 )
-DASHES = ("–", "—")
+DASHES = (chr(0x2013), chr(0x2014))
 
 
 def test_every_product_is_a_halvard_product():
