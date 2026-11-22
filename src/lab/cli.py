@@ -9,6 +9,7 @@ import typer
 from dotenv import load_dotenv
 
 from lab import __version__
+from lab.adapt.cli import adapt_app
 from lab.cache import ResponseCache
 from lab.config import ConfigError, ExperimentConfig, load_config
 from lab.estimate import (
@@ -40,6 +41,7 @@ from lab.strategy.cli import strategy_app
 app = typer.Typer(help="Run and analyse applied-ai-lab experiments.", no_args_is_help=True)
 app.add_typer(rag_app, name="rag")
 app.add_typer(strategy_app, name="strategy")
+app.add_typer(adapt_app, name="adapt")
 
 
 def _print_version(value: bool) -> None:
