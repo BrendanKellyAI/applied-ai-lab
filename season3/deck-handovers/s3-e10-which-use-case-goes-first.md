@@ -1,17 +1,17 @@
-# S3 E11 deck handover: Which use case goes first?
+# S3 E10 deck handover: Which use case goes first?
 
-For the content agent. No experiment: a teaching deck that adds the last criterion, time to evidence, then the weighted totals, the first pick, the sensitivity check and the stop criteria. It is the end of the season's case.
+For the content agent. No experiment: a teaching deck that adds the last criterion, time to evidence, then the weighted totals, the first pick, the sensitivity check and the stop criteria. It completes the season's case; E11 then puts the result on one page for the board.
 
 ## Sources of truth
 
 - `season3/case/rule.yaml` (the weights, the Time to evidence anchors, the sensitivity weightings and the list of stop criteria).
 - `season3/case/scores.yaml` (every score with its evidence or assumption, and the `stop_criteria` block for the first pick).
-- `season3/case/results/scorecard-e11.json` (the scorecard through E11, with totals and ranks) and `season3/case/results/scorecard.json`.
+- `season3/case/results/scorecard-e10.json` (the scorecard through E10, with totals and ranks) and `season3/case/results/scorecard.json`.
 - `season3/case/results/sensitivity.json` (the pick under each of the 15 alternative weightings).
 - `season3/case/PREREGISTRATION.md` (what was fixed before scoring; the "fragile if under 12 of 15" mark; Amendment 1).
-- Charts in `season3/case/results/charts/`: `scorecard-e11-slide.svg`, `scorecard-final-slide.svg`, `sensitivity-slide.svg`.
+- Charts in `season3/case/results/charts/`: `scorecard-e10-slide.svg`, `scorecard-final-slide.svg`, `sensitivity-slide.svg`.
 - `season3/case/halvard-home.md` (the CEO's ask).
-- `season3/halvard-one-page.md` (section 7, the first move, which this episode completes).
+- `season3/halvard-one-page.md` (section 7, the first move, which E11 presents to the board).
 
 Branch `s3`.
 
@@ -19,10 +19,10 @@ Branch `s3`.
 
 | | Value |
 |---|---|
-| Episode code | S3 E11 |
+| Episode code | S3 E10 |
 | Title | Which use case goes first? |
 | Hub slug | `which-use-case-goes-first` (proposed; confirm) |
-| Deck file | `bk-s3-e11-which-use-case-goes-first-v1.pdf` |
+| Deck file | `bk-s3-e10-which-use-case-goes-first-v1.pdf` |
 | Hub format | `decision_framework` |
 
 ## The argument
@@ -38,7 +38,7 @@ Choose the first use case by a rule fixed before any score was written, then che
 
 ## Case recap slide
 
-Chart: `season3/case/results/charts/scorecard-e11-slide.svg` (from `lab strategy reveal --through E11`). Then `scorecard-final-slide.svg` (the final heat table) and `sensitivity-slide.svg` (the pick under each of the 15 alternative weightings).
+Chart: `season3/case/results/charts/scorecard-e10-slide.svg` (from `lab strategy reveal --through E10`). Then `scorecard-final-slide.svg` (the final heat table) and `sensitivity-slide.svg` (the pick under each of the 15 alternative weightings).
 
 New column this episode adds: **Time to evidence** (a score, 1 to 5), and **Weighted total and rank**.
 
@@ -53,7 +53,7 @@ New column this episode adds: **Time to evidence** (a score, 1 to 5), and **Weig
 | not ranked | C5 Automatic refund approval | none | not scored (failed Gate 2) | not scored |
 | not ranked | C8 Spare parts demand forecast | none | not scored (failed Gate 2) | not scored |
 
-Earlier columns carry forward from `scorecard-e11.json`. C5 and C8 stay on the portfolio with their redirects (rules over the order records; a forecasting model or a planning product) but cannot go first.
+Earlier columns carry forward from `scorecard-e10.json`. C5 and C8 stay on the portfolio with their redirects (rules over the order records; a forecasting model or a planning product) but cannot go first.
 
 Measured versus assumed: only C1 and C2 have measured accuracy (the Season 2 final system). **Every other score, and every Time to evidence score, is an assumption** with a one-line reason in `scores.yaml`, except C6's time to evidence, which cites the known contradictions already found in Season 2 E14. The weights and the 15 alternatives are case design choices fixed in advance, not measurements.
 
@@ -100,7 +100,7 @@ From the `stop_criteria` block of `scores.yaml` (written 18 October 2026, before
 | Stop condition | Stop if it misses any known contradiction after one round of changes to its instructions, or if fewer than 1 in 4 flags are confirmed; then move to C2, reply drafts for agents |
 | Reviewer | Content team lead, reporting to the head of customer operations |
 
-This completes section 7 of the one-page strategy: the first move is C6, with this stop condition and C2 as the fallback.
+This is the first move that section 7 of the one-page strategy records in E11: C6, with this stop condition and C2 as the fallback.
 
 ## Where the CEO's headline ended up
 
@@ -116,7 +116,7 @@ C1 is not rejected. It sits in "Later" in Halvard's page: only once it can run w
 
 | Figure | What it measures | Source | Status |
 |---|---|---|---|
-| 4.20 of 5 | C6's weighted total (six criteria, weights fixed in advance) | `season3/case/results/scorecard-e11.json` | Computed from scores |
+| 4.20 of 5 | C6's weighted total (six criteria, weights fixed in advance) | `season3/case/results/scorecard-e10.json` | Computed from scores |
 | 4.15 of 5 | C2's weighted total | same | Computed from scores |
 | 3.70, 3.35, 3.20, 3.00 of 5 | Totals for C1, C3, C4 and C7 | same | Computed from scores |
 | 9 of 15 | Alternative weightings in which C6 stays first; C2 is first in the other 6 | `season3/case/results/sensitivity.json` | Computed |
@@ -133,7 +133,7 @@ Follow the deck rules: teach before compressing, step one example through before
 1. **One last question.** "Time to evidence": a pilot that cannot show the outcome moving in a quarter loses momentum. One sentence and the three anchors as a short ladder.
 2. **One candidate, scored by hand.** Step C6 all the way through, one criterion at a time, with the weights shown: value 3, task fit 4, error tolerance 5, data readiness 4, durable advantage 5, time to evidence 5. Show the multiplication and the total, 4.20 of 5, before any other candidate.
 3. **Prediction.** "The CEO's website assistant scored highest on value. Where did it finish of the six scored?" Reader picks a rank.
-4. **Reveal.** Third, 3.70 of 5. Show `scorecard-e11-slide.svg`.
+4. **Reveal.** Third, 3.70 of 5. Show `scorecard-e10-slide.svg`.
 5. **Why third.** Two cells highlighted in the C1 row: error tolerance 1 (a regulatory error reaches customers and nobody catches it), time to evidence 3. A short sentence each, in the rule's own terms.
 6. **The final table.** `scorecard-final-slide.svg`: ranks 1 to 6, with C5 and C8 shown as redirected, not ranked.
 7. **Prediction.** "If the weights change, does the first pick change?" Reader picks: never, sometimes or often.
@@ -143,8 +143,8 @@ Follow the deck rules: teach before compressing, step one example through before
 11. **Write the stop first.** A five-row form filled in for the C6 pilot: success metric, threshold, time box, stop condition, reviewer.
 12. **Prediction.** "What happens if the checker misses a known contradiction after one round of changes?" Reader picks: continue, tune, or stop.
 13. **Reveal.** Stop, and move to C2. The fallback was written before the pilot started.
-14. **Section 7, filled.** The one-page strategy's first move, now complete: C6, why it goes first, what the next quarter holds. Link back to E10.
-15. **Series map** (last slide), Season 3 highlighted, E11 marked.
+14. **Onto the page.** The first move is decided: C6, why it goes first, what the next quarter holds. One line pointing to E11, where it goes on the one page for the board.
+15. **Series map** (last slide), Season 3 highlighted, E10 marked.
 
 ## For leaders
 
@@ -156,7 +156,7 @@ Follow the deck rules: teach before compressing, step one example through before
 
 ## Next
 
-E12, Season 3 recap: the strategy card. Every rule and question from the season on one card, and the case from first column to first pick.
+E11, The one-page AI strategy: the outcomes, the trust levels, what you own and this first move, on one page the board can read in two minutes.
 
 ## Careful with
 

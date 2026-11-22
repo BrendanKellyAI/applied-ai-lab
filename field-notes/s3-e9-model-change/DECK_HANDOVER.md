@@ -76,7 +76,7 @@ question, because a steady total can hide changed answers."**
 
 ## Next
 
-S3 E10, The one-page AI strategy: put it all in front of the board on one page.
+S3 E10, Which use case goes first? The last column, the totals and the first pick, with its stop condition written before the pilot.
 
 ## Careful with
 

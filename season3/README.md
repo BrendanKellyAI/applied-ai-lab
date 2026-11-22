@@ -46,7 +46,7 @@ uv run lab strategy reveal --through E5
 | Scorecard template, scored by `lab strategy score` | [`templates/scorecard.csv`](templates/scorecard.csv) |
 | Scorecard guide: the rule in plain English, with a worked row | [`templates/scorecard-guide.md`](templates/scorecard-guide.md) |
 | One-page AI strategy template | [`templates/one-page-strategy.md`](templates/one-page-strategy.md) |
-| Halvard's one page, filled in (E10) | [`halvard-one-page.md`](halvard-one-page.md) |
+| Halvard's one page, filled in (E11) | [`halvard-one-page.md`](halvard-one-page.md) |
 | The strategy card: every decision rule and question (E12) | [`strategy-card.md`](strategy-card.md) |
 
 Score your own use cases:
@@ -79,8 +79,8 @@ the answer model or the pipeline changing.
 | | E7 | Field note: better data or a bigger model? |
 | | E8 | Build, buy, or managed |
 | | E9 | Field note: does it survive a model change? |
-| Commit | E10 | The one-page AI strategy |
-| | E11 | Which use case goes first? |
+| Commit | E10 | Which use case goes first? |
+| | E11 | The one-page AI strategy |
 
 E0 introduces the season and E12 recaps it. Each episode's deck handover is in
 [`deck-handovers/`](deck-handovers/); the field notes keep theirs in their own folders.

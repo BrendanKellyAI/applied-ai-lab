@@ -9,7 +9,7 @@ the three field notes. Read the other Season 3 handovers first.
   scorecard, the first pick and its stop criteria, and what the field notes changed.
 - `season3/case/results/scorecard.json`, `sensitivity.json`; charts
   `season3/case/results/charts/scorecard-final-slide.svg`, `sensitivity-slide.svg`, and the
-  reveal steps `scorecard-e1-slide.svg` to `scorecard-e11-slide.svg`.
+  reveal steps `scorecard-e1-slide.svg` to `scorecard-e10-slide.svg`.
 - The field note READMEs: `field-notes/s3-e3-leaderboard/README.md`,
   `field-notes/s3-e7-data-or-model/README.md`, `field-notes/s3-e9-model-change/README.md`.
 - `season3/halvard-one-page.md`.
@@ -50,7 +50,7 @@ strategy card is what a reader keeps: eleven rules, eleven questions, and one wo
 
 The final scorecard: `scorecard-final-slide.svg` (from `lab strategy case`), with the first
 pick's total highlighted. Optionally a strip of the seven reveal steps as small multiples
-(`scorecard-e1` to `scorecard-e11`), showing the card filling in one column at a time.
+(`scorecard-e1` to `scorecard-e10`), showing the card filling in one column at a time.
 
 ## Evidence
 

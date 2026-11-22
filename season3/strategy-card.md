@@ -16,8 +16,8 @@ the running case's result. Halvard Home is an invented firm; the case is in [`ca
 | E7 Field note: better data or a bigger model? | Fix your documents and retrieval before you buy a bigger model: on our test, structure and metadata gave more than the bigger model did, at a twentieth of the price per token. | Before we pay for a bigger model, what would the same money do to our documents and retrieval? |
 | E8 Build, buy, or managed | Own the layer that sets you apart and rent the rest. Choose model access by where your data may go, and keep the model swappable. | If our model provider doubled its price tomorrow, what would it take to move? |
 | E9 Field note: does it survive a model change? | Treat a model change as a release: rerun your own test set and compare answers question by question, because a steady total can hide changed answers. | If our provider changed the model tomorrow, how would we know which answers changed? |
-| E10 The one-page AI strategy | Put the strategy on one page: the outcomes, where AI will and will not be used, how much it is trusted, what you own, and the first move with its stop condition. | Could our board read our AI strategy in two minutes and know what we will not do? |
-| E11 Which use case goes first? | Start with the use case that scores best under rules fixed in advance, and write the stop condition before the pilot starts. | What result would make us stop this pilot, and have we written it down? |
+| E10 Which use case goes first? | Start with the use case that scores best under rules fixed in advance, and write the stop condition before the pilot starts. | What result would make us stop this pilot, and have we written it down? |
+| E11 The one-page AI strategy | Put the strategy on one page: the outcomes, where AI will and will not be used, how much it is trusted, what you own, and the first move with its stop condition. | Could our board read our AI strategy in two minutes and know what we will not do? |
 
 ## The case, from first column to first pick
 

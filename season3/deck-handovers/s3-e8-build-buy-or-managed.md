@@ -57,7 +57,7 @@ New column this episode adds: **Sourcing** (a setting, not a score): application
 | C7 Call and chat summaries | buy | vendor | A commodity feature of contact-centre products |
 | C8 Spare parts demand forecast | none | none | Redirected at G2: a forecasting model or a bought planning product |
 
-Earlier columns carry forward from `scorecard-e8.json`. Time to evidence is not shown until E11.
+Earlier columns carry forward from `scorecard-e8.json`. Time to evidence is not shown until E10.
 
 Measured versus assumed: sourcing is a **setting with a stated reason**, not a measurement. The case recommends it; no experiment compared managed with direct access. The reasons draw on facts about each candidate recorded in `candidates.yaml` (for example, which candidates carry personal data), which are invented.
 
