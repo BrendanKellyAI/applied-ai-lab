@@ -1,0 +1,63 @@
+# How the Season 4 task data will be made
+
+Draft for Gate 2, 22 November 2026. Nothing here has been run. Every message, label and rule is
+invented. `datasets/halvard/` is not changed.
+
+## Models
+
+| Role | Model | Settings | Why |
+|---|---|---|---|
+| Generator | `gemini-3.1-flash-lite` | reasoning minimal, JSON schema output | Cheapest model that is not an answer model in any arm |
+| Blind labeller | `claude-haiku-5-5` | reasoning off, JSON schema output | A third provider and not an arm, so discarding its disagreements does not make the test easier for `gpt-6-luna` or the open model |
+
+## Task A: triage messages
+
+1. **Seeds, in code.** For each item, code draws a route, a product (or none, or an invented
+   product for `unknown_product`), a fault, a safety flag, a hard case (or none), a persona
+   (age band, tone, writing habits such as typos or no punctuation) and a length band (15 to 40,
+   40 to 90, or 90 to 160 words), from a fixed seed. Safety items are 10% of every split; hard
+   cases take the shares in `routes.yaml`. The label is the seed.
+2. **Generation.** The generator writes one customer email or chat message for the seed. It
+   is told the label and the route definitions, and told not to use the route, fault or field
+   names in the message. Output: `{"message": "..."}`.
+3. **Code checks** reject a message that names a route or fault key, is outside its length
+   band, or names a product other than the seeded ones. A rejected seed is regenerated once with
+   the reason, then dropped.
+4. **Blind label check.** The labeller sees `routes.yaml` and the message only, and returns the
+   four fields. Items where any field disagrees with the seed are discarded. The count of
+   discards, per field and per route, goes in `README.md`.
+5. **Near duplicates.** Character 5-gram Jaccard similarity; a test or dev item over 0.8 with
+   any train item is removed. The threshold is fixed here, before generation.
+6. **Splits** by seed, before generation: train 3,200, dev 200, test 600 kept. About 15% extra
+   seeds are drawn per split to absorb discards; the first items to pass, in seed order, are
+   kept.
+
+## Task B: house style replies
+
+1. **Source pairs.** Questions and correct answers from the S2 reference run on Halvard
+   questions outside the `halvard-v2` test set: the 100 dev questions plus new questions made by
+   the generator from corpus passages (public documents only, never `INT-*`). The S2 reference
+   system answers them; only answers the judge marked correct are kept. Train and test never
+   share a corpus question.
+2. **Target replies.** The generator rewrites each answer to `style-guide.md`. Code then
+   checks every code rule; a reply that fails is regenerated once with the failures, then
+   dropped. The blind labeller checks that every fact in the answer is kept and none added;
+   disagreements are dropped and counted.
+3. **Sizes:** train 1,200, dev 100, test 300. Test targets are reference replies only; arms are
+   scored by the code checks and the judge, not by similarity to the target.
+
+## Your check, then freeze
+
+Code writes `review/test-sample.md`: 50 Task A test items and 20 Task B test items, drawn at
+random with a fixed seed, each with its label. After your check, `MANIFEST.json` records every
+file's hash and a frozen test fails if any changes. Later changes are dated amendments.
+
+## Rough size (the estimate at the gate decides)
+
+| Step | Calls | Tokens |
+|---|---|---|
+| Task A generation, 4,600 seeds | 4,600 | about 1.8 million in, 0.6 million out |
+| Task A label check | 4,600 | about 4.2 million in (route definitions each time, mostly cached), 0.2 million out |
+| Task B question generation | about 1,700 | about 1.5 million in, 0.2 million out |
+| Task B S2 reference answers and judge | about 1,700 each | about 9 million in, 0.6 million out, on `gpt-6-luna` and `gemini-3.6-flash` |
+| Task B style rewrites and fact check | about 3,400 | about 3 million in, 0.5 million out |

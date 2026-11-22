@@ -97,3 +97,42 @@ def test_gemini_2_5_pro_is_not_listed_because_thinking_cannot_be_off_or_levelled
         default_capabilities().check(
             _request(provider="google", model="gemini-2.5-pro", reasoning="low")
         )
+
+
+# Season 4 fields: tuning and structured output support, re-verified 22 November 2026.
+@pytest.mark.parametrize(
+    ("provider", "model", "structured_output"),
+    [
+        ("openai", "gpt-6-luna", "schema"),
+        ("anthropic", "claude-haiku-5-5", "schema"),
+        ("google", "gemini-3.1-flash-lite", "schema"),
+        ("google", "gemini-3.6-flash", "schema"),
+    ],
+)
+def test_season_4_models_record_structured_output_and_no_api_tuning(
+    provider, model, structured_output
+):
+    caps = default_capabilities().lookup(provider, model)
+
+    assert caps.structured_output == structured_output
+    assert caps.fine_tunable is False
+    assert caps.tuning_method == ()
+
+
+def test_unverified_models_leave_structured_output_unset():
+    assert default_capabilities().lookup("openai", "gpt-6-astra").structured_output is None
+
+
+def test_lookup_of_unknown_model_is_refused():
+    with pytest.raises(UnsupportedSettingError, match="not in capabilities.yaml"):
+        default_capabilities().lookup("openai", "no-such-model")
+
+
+def test_tuning_method_requires_a_tunable_model():
+    with pytest.raises(ValueError, match="fine_tunable"):
+        ModelCapabilities(temperature=False, tuning_method=["supervised"])
+
+
+def test_unknown_structured_output_value_is_rejected():
+    with pytest.raises(ValueError):
+        ModelCapabilities(temperature=False, structured_output="xml")

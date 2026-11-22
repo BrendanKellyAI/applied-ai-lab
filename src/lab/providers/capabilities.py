@@ -3,14 +3,18 @@
 from collections.abc import Mapping
 from functools import cache
 from pathlib import Path
-from typing import Any, Self
+from typing import Any, Literal, Self
 
 import yaml
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from lab.providers.base import GenerationRequest, ReasoningLevel, UnsupportedSettingError
 
 DEFAULT_PATH = Path(__file__).with_name("capabilities.yaml")
+
+# How a model can be held to an output format: not at all, valid JSON only, or a JSON schema.
+StructuredOutput = Literal["none", "json_mode", "schema"]
+TuningMethod = Literal["supervised", "preference"]
 
 
 class ModelCapabilities(BaseModel):
@@ -19,6 +23,11 @@ class ModelCapabilities(BaseModel):
     reasoning: tuple[ReasoningLevel, ...] = Field(default_factory=tuple)
     temperature: bool
     max_output_tokens: int | None = Field(default=None, gt=0)
+    # Season 4. fine_tunable means tuning through the provider's own API. structured_output is
+    # None until it has been verified for the model.
+    fine_tunable: bool = False
+    tuning_method: tuple[TuningMethod, ...] = Field(default_factory=tuple)
+    structured_output: StructuredOutput | None = None
 
     @field_validator("reasoning", mode="before")
     @classmethod
@@ -26,6 +35,12 @@ class ModelCapabilities(BaseModel):
         if isinstance(value, list):
             return ["off" if level is False else level for level in value]
         return value
+
+    @model_validator(mode="after")
+    def _tuning_needs_a_tunable_model(self) -> Self:
+        if self.tuning_method and not self.fine_tunable:
+            raise ValueError("tuning_method is set but fine_tunable is false")
+        return self
 
 
 class CapabilityTable:
@@ -44,15 +59,20 @@ class CapabilityTable:
             }
         )
 
-    def check(self, request: GenerationRequest) -> ModelCapabilities:
-        """Raise UnsupportedSettingError unless the request can be sent exactly as specified."""
-        caps = self._entries.get(request.provider, {}).get(request.model)
-        where = f"{request.provider} model '{request.model}'"
+    def lookup(self, provider: str, model: str) -> ModelCapabilities:
+        """Return a model's entry, or raise UnsupportedSettingError if it is not listed."""
+        caps = self._entries.get(provider, {}).get(model)
         if caps is None:
             raise UnsupportedSettingError(
-                f"{where} is not in capabilities.yaml. Check its settings in the provider "
-                "documentation and add it before running."
+                f"{provider} model '{model}' is not in capabilities.yaml. Check its settings in "
+                "the provider documentation and add it before running."
             )
+        return caps
+
+    def check(self, request: GenerationRequest) -> ModelCapabilities:
+        """Raise UnsupportedSettingError unless the request can be sent exactly as specified."""
+        caps = self.lookup(request.provider, request.model)
+        where = f"{request.provider} model '{request.model}'"
         if not request.stream:
             raise UnsupportedSettingError("Adapters always stream, to measure time to first token")
         _check_reasoning(request, caps, where)

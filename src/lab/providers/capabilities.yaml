@@ -9,6 +9,18 @@
 #   reasoning           neutral levels the harness may send; "off" means fully disabled
 #   temperature         whether a temperature may be sent at all
 #   max_output_tokens   the provider's documented output limit, where published
+#   fine_tunable        whether the provider's own API can tune the model (default false)
+#   tuning_method       supervised and/or preference, only where fine_tunable is true
+#   structured_output   none, json_mode or schema; left unset until verified for the model
+#
+# Season 4 re-verification, 22 November 2026. No model listed here can be tuned through its
+# provider's own API:
+#   OpenAI: the gpt-6-luna page lists fine-tuning "Not supported"; the pricing page says
+#     "Fine-tuning is closed to new users"; the deprecations page ends self-serve job creation
+#     on 6 January 2027, and the remaining tunable base models shut down on 14 January 2027.
+#   Google: the Gemini API "no longer" has a model that supports fine-tuning.
+#   Anthropic: the models and pricing pages offer no fine-tuning on the first-party API.
+# Season 4 therefore tunes an open-weight model on Colab (season4/PLAN.md).
 #
 # Sources:
 #   https://developers.openai.com/api/docs/models
@@ -20,6 +32,15 @@
 #   https://ai.google.dev/gemini-api/docs/thinking
 #   https://ai.google.dev/gemini-api/docs/generate-content/thinking
 #   https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash
+#   https://developers.openai.com/api/docs/models/gpt-6-luna
+#   https://developers.openai.com/api/docs/pricing
+#   https://developers.openai.com/api/docs/guides/model-optimization
+#   https://developers.openai.com/api/docs/deprecations
+#   https://platform.claude.com/docs/en/about-claude/pricing
+#   https://platform.claude.com/docs/en/build-with-claude/structured-outputs
+#   https://aistudio.google.com/docs/model-tuning
+#   https://aistudio.google.com/docs/structured-output
+#   https://aistudio.google.com/docs/pricing
 
 openai:
   # reasoning.effort "none" is the neutral "off". Temperature support for these models is not
@@ -33,11 +54,13 @@ openai:
     max_output_tokens: 128000
   # Season 2 answer model from S2 E4, chosen for cost. Verified 12 October 2026 with one call:
   # reasoning effort "none" is accepted and returns 0 reasoning tokens; temperature is rejected
-  # with HTTP 400.
+  # with HTTP 400. Season 4 answer model. 22 November 2026: structured_outputs listed as
+  # supported; fine-tuning not supported; only snapshot gpt-6-luna, no deprecation date.
   gpt-6-luna:
     reasoning: [off, low, medium, high]
     temperature: false
     max_output_tokens: 128000
+    structured_output: schema
   # Candidate S2 judge, for cost ($0.25 / $2.00). Like gpt-5-nano, checked 12 October 2026:
   # effort "none" is rejected, "minimal" is its lowest level, temperature is rejected.
   gpt-5-mini:
@@ -72,10 +95,14 @@ anthropic:
     max_output_tokens: 128000
   # Season 3 (E3, E9). Re-verified 18 October 2026: current, retirement not before 7 October
   # 2027; effort low to max; thinking {"type": "disabled"} is accepted at high effort or below.
+  # Season 4 label checker and second judge. 22 November 2026: listed under structured outputs
+  # (stable, output_config.format json_schema). Prompts over 100,000 tokens pay five times the
+  # rate, so keep Season 4 prompts below that.
   claude-haiku-5-5:
     reasoning: [off, low, medium, high, xhigh, max]
     temperature: false
     max_output_tokens: 128000
+    structured_output: schema
   # Current models reject any non-default temperature. Reasoning levels map to
   # output_config.effort with adaptive thinking; "off" maps to thinking disabled.
   claude-fable-5-1:
@@ -117,12 +144,18 @@ google:
     temperature: true
   # Season 2 judge from S2 E4, chosen for cost. Thinking cannot be turned off; "minimal" is its
   # default. Google's table lists minimal and high only; confirm with the first call.
+  # Season 4 data generator. 22 November 2026: stable; JSON schema output through
+  # response_format (the general section names no model restriction; confirm in lab smoke).
   gemini-3.1-flash-lite:
     reasoning: [minimal, high]
     temperature: true
+    structured_output: schema
+  # Season 2 and Season 4 judge. 22 November 2026: stable, "previous generation"; its price
+  # doubles from 1 January 2027, so Season 4 checks a cheaper judge against it.
   gemini-3.6-flash:
     reasoning: [minimal, low, medium, high]
     temperature: true
+    structured_output: schema
   gemini-3.5-flash-lite:
     reasoning: [minimal, low, medium, high]
     temperature: true

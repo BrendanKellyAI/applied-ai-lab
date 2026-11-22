@@ -1,0 +1,119 @@
+# Task A: warranty and safety triage for Halvard Home (invented). Draft for Gate 1, 22 November
+# 2026. A customer message comes in; the model returns one JSON object with four fields:
+#   route    one of the routes below
+#   safety   true if the message may describe a fire, smoke, electric shock or injury incident
+#   product  one of the products below, or null
+#   fault    one of the faults below, or null
+# Everything here is invented and fixed before any item is generated. Labels are checked by
+# code; no judge is needed.
+
+version: draft-1
+
+routes:
+  warranty_claim:
+    team: Warranty
+    policy: POL-WAR
+    definition: >-
+      The customer reports a fault in an appliance and wants it repaired or replaced under the
+      warranty or an Extended Care plan, or asks how to make or chase such a claim.
+  return_refund:
+    team: Returns
+    policy: POL-RET
+    definition: >-
+      The customer wants to send an appliance back, cancel an order, or get money back,
+      including for an appliance that arrived damaged or stopped working soon after delivery.
+  delivery:
+    team: Delivery
+    policy: DEL
+    definition: >-
+      The customer asks about an order that has not arrived yet: its date, slot, tracking,
+      access, or rearranging the delivery or installation visit.
+  servicing_booking:
+    team: Servicing
+    policy: POL-SER
+    definition: >-
+      The customer wants to book, move or ask about routine servicing, maintenance or a paid
+      repair visit that is not a warranty claim.
+  spare_part:
+    team: Parts
+    policy: POL-SER
+    definition: >-
+      The customer wants to buy or identify a spare part, filter or accessory to fit themselves.
+  how_to_use:
+    team: Help centre
+    policy: articles
+    definition: >-
+      The customer asks how to set up, use, clean or understand an appliance, including what an
+      error code means, and does not ask for a repair, return or visit.
+  complaint:
+    team: Customer relations
+    policy: INT-ESC
+    definition: >-
+      The customer is formally unhappy with how Halvard Home has treated them (staff, a broken
+      promise, repeated failures) and wants it put right or escalated. Anger alone does not make
+      a message a complaint: an angry warranty claim is a warranty claim.
+  other:
+    team: General enquiries
+    policy: null
+    definition: >-
+      Anything else: jobs, press, marketing preferences, products Halvard Home does not sell.
+
+# When a message fits more than one route, the first rule that applies wins.
+precedence:
+  - A message that asks for a formal complaint or escalation is a complaint.
+  - A message about an order not yet delivered is delivery.
+  - A message that asks for money back or to send the appliance back is return_refund.
+  - A fault with a request for repair or replacement is warranty_claim.
+  - Otherwise use the route that matches the main request.
+
+# The products Halvard Home sells. Each name must appear in datasets/halvard (a test checks it).
+products:
+  - Brio kettle
+  - Tessa dishwasher
+  - Orrin heat pump
+  - Lumen smart thermostat
+  - Keel washing machine
+  - Ashby tumble dryer
+  - Vale fridge freezer
+  - Corra induction hob
+  - Fenwick cooker hood
+  - Mira robot vacuum
+
+# product is null when no Halvard product is named, or when the product named is not one
+# Halvard Home sells. When two products are named, product is the one the request is about.
+product_rule: >-
+  The Halvard product the request is about, written exactly as in the list, or null.
+
+faults:
+  no_power: Does not switch on or has no power.
+  leak: Leaks water or another liquid.
+  noise: Makes an unusual noise or vibrates.
+  not_heating: Does not heat, or heats too little.
+  not_cooling: Does not cool or freeze, or cools too little.
+  error_code: Shows an error code, with no other fault described.
+  damaged_on_arrival: Arrived damaged, dented or with parts missing.
+  connectivity: Will not connect to the app, wifi or another device.
+  door_or_lid: A door, lid, seal or drawer fails or will not close.
+  burning_or_smoke: Smells of burning, smokes, sparks or scorches.
+  electric_shock: Gave someone a shock or tingle.
+  poor_performance: Works, but does its job badly (dirty dishes, wet clothes, weak suction).
+
+fault_rule: >-
+  The single fault the customer describes, or null if none is described. If more than one, the
+  most serious: electric_shock, then burning_or_smoke, then the first fault mentioned.
+
+safety:
+  definition: >-
+    true if the message describes, or may describe, a real incident or hazard involving fire,
+    smoke, burning, sparks, scorching, electric shock or injury, even if the customer plays it
+    down. false if a safety word is used harmlessly (a hob that is "hot" as it should be, a
+    dryer "on fire" as praise) or only as a question about safe use with no incident.
+  share: 0.10
+
+# Hard cases seeded on purpose, with the share of each split they take.
+hard_cases:
+  two_products: {share: 0.08, note: "Names two Halvard products; the request is about one."}
+  angry_not_complaint: {share: 0.06, note: "Angry tone, but the request is a claim, return or booking."}
+  harmless_safety_word: {share: 0.05, note: "Heat, fire or burn words used harmlessly; safety false."}
+  played_down_safety: {share: 0.04, note: "A real incident described casually; safety true."}
+  unknown_product: {share: 0.04, note: "Names a product Halvard Home does not sell; product null."}
