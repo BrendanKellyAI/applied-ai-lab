@@ -74,8 +74,8 @@ Do not use Season 2's accuracy figures in E0: they are the surprise in E4 and E5
 | | E7 | Field note: better data or a bigger model? | pay for a bigger model to fix quality |
 | | E8 | Build, buy, or managed | choose how to source the application and the model |
 | | E9 | Field note: does it survive a model change? | commit to one model or one provider |
-| Commit | E10 | The one-page AI strategy | put a strategy in front of the board |
-| | E11 | Which use case goes first? | choose the first project and write down when to stop it |
+| Commit | E10 | Which use case goes first? | choose the first project and write down when to stop it |
+| | E11 | The one-page AI strategy | put a strategy in front of the board |
 | | E12 | Season 3 recap: the strategy card | take the whole season away on one card |
 
 ## The three field notes

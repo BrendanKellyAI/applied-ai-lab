@@ -96,7 +96,7 @@ E2, Which tasks suit an LLM: two of the eight candidates will be sent elsewhere,
 ## Careful with
 
 - **The Value scores are judgements, not measurements.** Label each "assumption" on the slide. Only C6's cites a measured result.
-- **Do not show the total, the rank or the first pick.** Totals exist only from E11. Do not hint at the order.
+- **Do not show the total, the rank or the first pick.** Totals exist only from E10. Do not hint at the order.
 - **Do not say AI projects fail for lack of an outcome as a statistic.** No evidence here measures how often that happens.
 - **S1 E10 and S2 E13 are context, not proof of the rule.** They show the tool depends on the task for these tasks and this library; they do not show how many real firms choose badly.
 - **Halvard Home is invented.** All volumes, owners and metrics are invented; say so on the slide.

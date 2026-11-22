@@ -2,7 +2,7 @@
 
 Organisation: Halvard Home (invented)  Date: October 2026  Owner: Head of customer operations
 
-The filled example for Season 3 E10, from the case in [`case/`](case/). Halvard Home and every
+The filled example for Season 3 E11, from the case in [`case/`](case/). Halvard Home and every
 volume here are invented; the measured figures come from Season 2's support system.
 
 ## 1. Outcomes we want

@@ -1,12 +1,12 @@
-# S3 E10 deck handover: The one-page AI strategy
+# S3 E11 deck handover: The one-page AI strategy
 
-For the content agent. No experiment: a teaching deck that walks through the one-page template, using Halvard Home's filled page as the example, framed as what goes in front of the board. Section 7, the first move, is held back for E11.
+For the content agent. No experiment: a teaching deck that walks through the one-page template, using Halvard Home's filled page as the example, framed as what goes in front of the board. The first move was decided in E10, so the page is shown in full.
 
 ## Sources of truth
 
 - `season3/templates/one-page-strategy.md` (the blank template: nine sections, each with a guiding line).
 - `season3/halvard-one-page.md` (Halvard's filled example; the source for every quote in the deck).
-- `season3/case/results/scorecard-e8.json` (the case as it stood at E8; nothing is added at E10).
+- `season3/case/results/scorecard.json` and `sensitivity.json` (the final case from E10; nothing is added at E11).
 - `season3/case/rule.yaml` (the autonomy table behind section 3; the sourcing settings behind section 4).
 - `season3/case/candidates.yaml` and `season3/case/scores.yaml` (the candidates named in sections 2 to 4).
 - `field-notes/s2-e12-embedding-swap/results/baseline/summary.json` (the measured 46 of 400 and 13 of 120 quoted in section 3).
@@ -19,10 +19,10 @@ Branch `s3`.
 
 | | Value |
 |---|---|
-| Episode code | S3 E10 |
+| Episode code | S3 E11 |
 | Title | The one-page AI strategy |
 | Hub slug | `the-one-page-ai-strategy` (proposed; confirm) |
-| Deck file | `bk-s3-e10-the-one-page-ai-strategy-v1.pdf` |
+| Deck file | `bk-s3-e11-the-one-page-ai-strategy-v1.pdf` |
 | Hub format | `playbook` |
 
 ## The argument
@@ -43,17 +43,11 @@ Each section answers one question the board would otherwise ask across a long me
 
 Frame the deck as the board's view: for each section show the question the board is asking, then Halvard's answer in a line or two.
 
-**What E10 holds back.** Sections 2, 3, 4, 6 and 7 of `halvard-one-page.md` name the first pick or quote its stop condition. That is E11's reveal. In this deck:
-
-- Section 7 is shown as **"To be decided in E11"**, with its guiding line only. Do not quote Halvard's section 7.
-- Section 2 shows Halvard's **Later** and **Not** groups. **Now** and **Next** are shown as "decided in E11", because filling them names the pick.
-- Section 6 shows its five parts (metric, threshold, time box, stop condition, reviewer) as an empty frame. The full wording, including the reviewer, is E11's.
-- Sections 3 and 4 are shown with the sentences about the library consistency check (C6) left out.
-- Section 9 is shown as three asks (approve the time, accept the order, agree the lines in section 8), without naming the pilot.
+**The first move is already known.** E10 chose it: the library consistency check (C6), 4.20 of 5, with its stop criteria and reply drafts for agents (C2) as the fallback. So this deck shows Halvard's page in full, section 7 included. The page is where the season's decisions meet, not where a new one is made.
 
 ## Case recap slide
 
-**Skip it.** E10 adds no column and has no reveal step: the scorecard does not change, and showing the E8 scorecard again would invite readers to add up the rows and find the pick before E11. The closing content slide instead shows the blank template beside Halvard's filled sections as a miniature, with section 7 greyed.
+**No new column.** E11 adds nothing to the scorecard, which was completed in E10. Optionally show `scorecard-final-slide.svg` as a thumbnail beside section 7, to show where the first move came from. The closing content slide shows the blank template beside Halvard's filled page as a miniature.
 
 Measured versus assumed: the page quotes two kinds of figure. The 46 of 400 and 13 of 120 in section 3 are **measured** (Season 2). The volumes and Halvard itself are **invented**, and the page says so in its header.
 
@@ -65,9 +59,10 @@ Measured versus assumed: the page quotes two kinds of figure. The 46 of 400 and 
 | 13 of 120 | Unanswerable questions the same system answered anyway rather than declining | same | Measured |
 | 520 questions | The size of the test set the firm owns and reruns (400 answerable, 120 unanswerable) | `episodes/s2-e3-measuring/README.md` | Measured (set size) |
 | 300 articles | Support articles in the library, the denominator for the consistency metric in section 1 | `datasets/halvard/manifest.json` | Measured (library size) |
-| 8 candidates | Use cases in the case, of which 2 failed Gate 2 (a language model is not the right tool) | `season3/case/results/scorecard-e8.json` | Case design |
+| 8 candidates | Use cases in the case, of which 2 failed Gate 2 (a language model is not the right tool) | `season3/case/results/scorecard.json` | Case design |
+| 4.20 of 5, 9 of 15 | C6's total, and the alternative weightings in which it stays first (E10) | `season3/case/results/sensitivity.json` | Computed |
 
-Do not show prices, totals, ranks, the sensitivity result or any figure from `scorecard-e11.json`.
+Do not show prices. Totals and the sensitivity result may be quoted as E10 reported them.
 
 ## Slide ideas
 
@@ -78,15 +73,15 @@ Follow the deck rules: teach before compressing, step one example through before
 3. **One example, one section.** Step section 1 all the way through before any other: Halvard's outcome "customers get a correct answer to a policy or product question without waiting for an agent", its metric (questions answered correctly with no agent contact in 7 days) and its owner (head of customer operations). Note the page never says AI.
 4. **Prediction.** "Which section do boards most often leave out?" Reader picks from the nine.
 5. **Reveal.** Section 8, what we will not do. Show Halvard's four lines: no unreviewed answers to customers on warranty, refunds or safety; no model deciding refunds; no staff-only document in any prompt a customer could see; no AI project without an outcome stated without the word AI.
-6. **Not is a group.** Section 2 as four columns, with Halvard's Later and Not filled and Now and Next marked "decided in E11". Not: automatic refund approval (a rule over order records), spare parts forecasting (a forecasting model), building call summaries ourselves (buy the feature if wanted).
+6. **Not is a group.** Section 2 as four columns, all filled: Now, the library consistency check; Next, reply drafts for agents; Later, the website assistant (once it can run with review), claim triage and safety screening. Not: automatic refund approval (a rule over order records), spare parts forecasting (a forecasting model), building call summaries ourselves (buy the feature if wanted).
 7. **Trust, in one box.** Section 3: assist wherever a customer's rights or safety are at stake. Quote the measured 46 of 400 and 13 of 120, and point back to E5's autonomy table in one line.
 8. **Own and rent.** Section 4 as two columns, own and rent, with model access underneath (managed, inside the existing cloud account, for anything that reads customer contacts).
 9. **Portable by test.** Section 5: the 520-question test set and the code that scores it belong to the firm. Before accepting a new model, rerun it and compare item by item, not only the total.
-10. **The frame for measuring.** Section 6 as an empty five-part frame: metric, threshold, time box, stop condition, reviewer. Caption: "Every pilot fills these in before it starts."
-11. **The part we have not filled.** Section 7 greyed, labelled "To be decided in E11".
+10. **The frame for measuring.** Section 6 as a five-part frame filled for the C6 pilot (metric, threshold, time box, stop condition, reviewer), from E10. Caption: "Every pilot fills these in before it starts."
+11. **The first move.** Section 7 filled: C6 first, because it scored highest and cleans the library C2 will read from; fragile, so C2 is the named fallback.
 12. **What we ask.** Section 9: three asks, in the board's own terms.
 13. **Two-minute test.** The filled page at thumbnail size, with a timer. The reader asks of their own page: could the board read it in two minutes and say what we will not do?
-14. **Series map** (last slide), Season 3 highlighted, E10 marked.
+14. **Series map** (last slide), Season 3 highlighted, E11 marked.
 
 ## Playbook slides (hub text)
 
@@ -112,11 +107,11 @@ The hub's `playbook_slides` text: one short text per template section, nine in a
 
 ## Next
 
-E11, Which use case goes first? The scorecard gets its last column, the totals and the first pick, and a test of whether the pick survives different weights.
+E12, Season 3 recap: the strategy card. Every rule and question from the season on one card, and the case from first column to first pick.
 
 ## Careful with
 
-- **Do not reveal the first pick, the totals or the sensitivity result.** Sections 2, 3, 4, 6, 7 and 9 of `halvard-one-page.md` contain them; use the held-back versions described above. Check every slide against the whole file, not only the sections you quote.
+- **The first pick is fragile.** Section 7 should say so in a line: C6 holds in 9 of 15 alternative weightings, and C2 is the fallback. Do not present it as obvious.
 - **The page is an example, not a template to copy.** Halvard's answers fit Halvard's case. The reader's job is to fill the nine sections for their own firm.
 - **Halvard Home is invented.** Every volume on the page is invented; only the Season 2 figures are measured. No legal claims beyond "consumer protection, product safety and data protection law".
 - **Section 3's trust levels are the case rule applied, not a legal requirement.** Do not say the law requires assist.

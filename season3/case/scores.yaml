@@ -209,7 +209,7 @@ candidates:
       reason: "Redirected at G2: a forecasting model or a bought planning product."
 
 # The first pick's stop criteria, written after totals and before its fictional pilot starts
-# (E11). The pick is C6; the sensitivity check calls it fragile (C2 goes first in 6 of 15
+# (E10). The pick is C6; the sensitivity check calls it fragile (C2 goes first in 6 of 15
 # weightings), so the stop criteria name C2 as the fallback.
 stop_criteria:
   candidate: C6

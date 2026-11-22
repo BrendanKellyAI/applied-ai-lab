@@ -448,10 +448,10 @@ def test_reveal_e2_shows_g2_and_task_fit_but_not_error_tolerance(rule, case_rows
         assert row["design_autonomy"] == ""
 
 
-def test_reveal_totals_only_at_e11(rule, case_rows):
+def test_reveal_totals_only_at_e10(rule, case_rows):
     for episode in (1, 2, 4, 5, 6, 8):
         assert all(r["total"] is None for r in reveal(case_rows, rule, episode)["rows"])
-    final = reveal(case_rows, rule, 11)
+    final = reveal(case_rows, rule, 10)
     assert any(r["total"] is not None for r in final["rows"])
     assert "Weighted total and rank" in final["new"]
 
@@ -473,11 +473,11 @@ def test_mask_leaves_original_row_untouched(rule, case_rows):
 
 
 def test_reveal_steps_and_new_in(rule):
-    assert reveal_steps(rule) == [1, 2, 4, 5, 6, 8, 11]
+    assert reveal_steps(rule) == [1, 2, 4, 5, 6, 8, 10]
     assert new_in(rule, 1) == ["G1 Outcome", "Value of the outcome"]
     assert new_in(rule, 5) == ["Autonomy (a setting)"]
     assert new_in(rule, 8) == ["Sourcing (a setting)"]
-    assert new_in(rule, 11) == ["Time to evidence", "Weighted total and rank"]
+    assert new_in(rule, 10) == ["Time to evidence", "Weighted total and rank"]
     assert new_in(rule, 3) == []
 
 
@@ -727,7 +727,7 @@ def test_case_command_writes_everything(tmp_path):
         "scorecard.json",
         "sensitivity.json",
         "scorecard-e1.json",
-        "scorecard-e11.json",
+        "scorecard-e10.json",
     ):
         assert (results / name).exists(), name
     charts = {p.name for p in (results / "charts").iterdir()}
