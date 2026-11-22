@@ -1,0 +1,728 @@
+{
+  "dataset_version": "halvard-tasks-v1",
+  "generator": {
+    "provider": "google",
+    "model": "gemini-3.1-flash-lite",
+    "reasoning": "minimal",
+    "max_output_tokens": 800
+  },
+  "labeller": {
+    "provider": "anthropic",
+    "model": "claude-haiku-5-5",
+    "reasoning": "off",
+    "max_output_tokens": 400
+  },
+  "seeds": {
+    "train": 2080,
+    "dev": 260,
+    "test": 780
+  },
+  "generation_failed": [
+    "A-dev-00143",
+    "A-dev-00203",
+    "A-dev-00239",
+    "A-test-00045",
+    "A-test-00055",
+    "A-test-00058",
+    "A-test-00129",
+    "A-test-00254",
+    "A-test-00259",
+    "A-test-00266",
+    "A-test-00269",
+    "A-test-00528",
+    "A-test-00613",
+    "A-test-00658",
+    "A-test-00668",
+    "A-train-00048",
+    "A-train-00126",
+    "A-train-00144",
+    "A-train-00194",
+    "A-train-00275",
+    "A-train-00288",
+    "A-train-00483",
+    "A-train-00748",
+    "A-train-00778",
+    "A-train-00785",
+    "A-train-00841",
+    "A-train-00906",
+    "A-train-01167",
+    "A-train-01169",
+    "A-train-01213",
+    "A-train-01318",
+    "A-train-01384",
+    "A-train-01433",
+    "A-train-01564",
+    "A-train-01568",
+    "A-train-01577",
+    "A-train-01592",
+    "A-train-01878",
+    "A-train-01947",
+    "A-train-02062"
+  ],
+  "label_disagreements": {
+    "total": 183,
+    "by_field": {
+      "product": 15,
+      "route": 77,
+      "safety": 21,
+      "fault": 87,
+      "unparsed": 3
+    },
+    "by_route": {
+      "other": 56,
+      "how_to_use": 18,
+      "return_refund": 21,
+      "warranty_claim": 59,
+      "complaint": 11,
+      "servicing_booking": 9,
+      "spare_part": 7,
+      "delivery": 2
+    },
+    "by_kind": {
+      "unknown_product": 29,
+      "plain": 94,
+      "harmless_safety_word": 22,
+      "angry_not_complaint": 14,
+      "two_products": 17,
+      "played_down_safety": 6,
+      "safety": 1
+    },
+    "items": {
+      "A-dev-00036": [
+        "fault"
+      ],
+      "A-dev-00063": [
+        "safety",
+        "fault"
+      ],
+      "A-dev-00077": [
+        "fault"
+      ],
+      "A-dev-00103": [
+        "fault"
+      ],
+      "A-dev-00148": [
+        "route"
+      ],
+      "A-dev-00162": [
+        "safety"
+      ],
+      "A-dev-00168": [
+        "fault"
+      ],
+      "A-dev-00170": [
+        "route"
+      ],
+      "A-dev-00179": [
+        "safety"
+      ],
+      "A-dev-00181": [
+        "route"
+      ],
+      "A-dev-00242": [
+        "fault"
+      ],
+      "A-dev-00249": [
+        "route"
+      ],
+      "A-dev-00257": [
+        "product"
+      ],
+      "A-test-00001": [
+        "route"
+      ],
+      "A-test-00056": [
+        "fault"
+      ],
+      "A-test-00071": [
+        "fault"
+      ],
+      "A-test-00074": [
+        "fault"
+      ],
+      "A-test-00089": [
+        "route"
+      ],
+      "A-test-00098": [
+        "fault"
+      ],
+      "A-test-00105": [
+        "fault"
+      ],
+      "A-test-00131": [
+        "route"
+      ],
+      "A-test-00135": [
+        "route"
+      ],
+      "A-test-00146": [
+        "fault"
+      ],
+      "A-test-00157": [
+        "fault"
+      ],
+      "A-test-00193": [
+        "fault"
+      ],
+      "A-test-00202": [
+        "route"
+      ],
+      "A-test-00223": [
+        "route"
+      ],
+      "A-test-00249": [
+        "safety"
+      ],
+      "A-test-00262": [
+        "route"
+      ],
+      "A-test-00270": [
+        "fault"
+      ],
+      "A-test-00284": [
+        "fault"
+      ],
+      "A-test-00304": [
+        "route"
+      ],
+      "A-test-00321": [
+        "fault"
+      ],
+      "A-test-00351": [
+        "fault"
+      ],
+      "A-test-00361": [
+        "fault"
+      ],
+      "A-test-00406": [
+        "fault"
+      ],
+      "A-test-00408": [
+        "route"
+      ],
+      "A-test-00416": [
+        "fault"
+      ],
+      "A-test-00437": [
+        "safety"
+      ],
+      "A-test-00453": [
+        "product"
+      ],
+      "A-test-00474": [
+        "route"
+      ],
+      "A-test-00475": [
+        "fault"
+      ],
+      "A-test-00487": [
+        "fault"
+      ],
+      "A-test-00497": [
+        "fault"
+      ],
+      "A-test-00526": [
+        "fault"
+      ],
+      "A-test-00527": [
+        "route"
+      ],
+      "A-test-00530": [
+        "route"
+      ],
+      "A-test-00536": [
+        "route"
+      ],
+      "A-test-00558": [
+        "unparsed"
+      ],
+      "A-test-00576": [
+        "route"
+      ],
+      "A-test-00586": [
+        "safety",
+        "fault"
+      ],
+      "A-test-00606": [
+        "route"
+      ],
+      "A-test-00608": [
+        "safety"
+      ],
+      "A-test-00630": [
+        "route"
+      ],
+      "A-test-00646": [
+        "route"
+      ],
+      "A-test-00666": [
+        "route",
+        "product"
+      ],
+      "A-test-00672": [
+        "fault"
+      ],
+      "A-test-00677": [
+        "fault"
+      ],
+      "A-test-00678": [
+        "safety"
+      ],
+      "A-test-00679": [
+        "fault"
+      ],
+      "A-test-00681": [
+        "route"
+      ],
+      "A-test-00682": [
+        "product"
+      ],
+      "A-test-00699": [
+        "route"
+      ],
+      "A-test-00701": [
+        "route"
+      ],
+      "A-test-00714": [
+        "route"
+      ],
+      "A-test-00760": [
+        "route"
+      ],
+      "A-train-00003": [
+        "product"
+      ],
+      "A-train-00015": [
+        "route"
+      ],
+      "A-train-00054": [
+        "route"
+      ],
+      "A-train-00064": [
+        "safety",
+        "fault"
+      ],
+      "A-train-00075": [
+        "fault"
+      ],
+      "A-train-00076": [
+        "safety"
+      ],
+      "A-train-00079": [
+        "fault"
+      ],
+      "A-train-00080": [
+        "route"
+      ],
+      "A-train-00095": [
+        "fault"
+      ],
+      "A-train-00127": [
+        "safety"
+      ],
+      "A-train-00132": [
+        "route",
+        "fault"
+      ],
+      "A-train-00135": [
+        "fault"
+      ],
+      "A-train-00183": [
+        "route"
+      ],
+      "A-train-00206": [
+        "safety"
+      ],
+      "A-train-00209": [
+        "fault"
+      ],
+      "A-train-00220": [
+        "fault"
+      ],
+      "A-train-00223": [
+        "route"
+      ],
+      "A-train-00244": [
+        "product"
+      ],
+      "A-train-00246": [
+        "route"
+      ],
+      "A-train-00256": [
+        "safety"
+      ],
+      "A-train-00268": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-00274": [
+        "fault"
+      ],
+      "A-train-00283": [
+        "fault"
+      ],
+      "A-train-00285": [
+        "route"
+      ],
+      "A-train-00296": [
+        "fault"
+      ],
+      "A-train-00320": [
+        "fault"
+      ],
+      "A-train-00354": [
+        "route"
+      ],
+      "A-train-00359": [
+        "route"
+      ],
+      "A-train-00374": [
+        "safety",
+        "fault"
+      ],
+      "A-train-00379": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-00395": [
+        "route"
+      ],
+      "A-train-00422": [
+        "fault"
+      ],
+      "A-train-00447": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-00457": [
+        "route",
+        "product"
+      ],
+      "A-train-00516": [
+        "route"
+      ],
+      "A-train-00524": [
+        "fault"
+      ],
+      "A-train-00530": [
+        "route"
+      ],
+      "A-train-00531": [
+        "route"
+      ],
+      "A-train-00537": [
+        "product"
+      ],
+      "A-train-00541": [
+        "route"
+      ],
+      "A-train-00546": [
+        "fault"
+      ],
+      "A-train-00552": [
+        "safety"
+      ],
+      "A-train-00589": [
+        "route"
+      ],
+      "A-train-00604": [
+        "fault"
+      ],
+      "A-train-00655": [
+        "product"
+      ],
+      "A-train-00683": [
+        "fault"
+      ],
+      "A-train-00721": [
+        "route"
+      ],
+      "A-train-00730": [
+        "route"
+      ],
+      "A-train-00744": [
+        "route"
+      ],
+      "A-train-00779": [
+        "route"
+      ],
+      "A-train-00790": [
+        "route"
+      ],
+      "A-train-00805": [
+        "fault"
+      ],
+      "A-train-00837": [
+        "route"
+      ],
+      "A-train-00880": [
+        "safety"
+      ],
+      "A-train-00886": [
+        "route"
+      ],
+      "A-train-00899": [
+        "fault"
+      ],
+      "A-train-00919": [
+        "fault"
+      ],
+      "A-train-00933": [
+        "fault"
+      ],
+      "A-train-00964": [
+        "fault"
+      ],
+      "A-train-00969": [
+        "route"
+      ],
+      "A-train-00977": [
+        "fault"
+      ],
+      "A-train-00982": [
+        "fault"
+      ],
+      "A-train-00991": [
+        "route"
+      ],
+      "A-train-01028": [
+        "fault"
+      ],
+      "A-train-01077": [
+        "unparsed"
+      ],
+      "A-train-01183": [
+        "route"
+      ],
+      "A-train-01202": [
+        "fault"
+      ],
+      "A-train-01214": [
+        "fault"
+      ],
+      "A-train-01247": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-01275": [
+        "route"
+      ],
+      "A-train-01326": [
+        "fault"
+      ],
+      "A-train-01337": [
+        "safety"
+      ],
+      "A-train-01355": [
+        "fault"
+      ],
+      "A-train-01362": [
+        "route",
+        "safety",
+        "fault"
+      ],
+      "A-train-01392": [
+        "fault"
+      ],
+      "A-train-01396": [
+        "fault"
+      ],
+      "A-train-01411": [
+        "fault"
+      ],
+      "A-train-01430": [
+        "route"
+      ],
+      "A-train-01445": [
+        "safety",
+        "fault"
+      ],
+      "A-train-01465": [
+        "fault"
+      ],
+      "A-train-01487": [
+        "route"
+      ],
+      "A-train-01499": [
+        "fault"
+      ],
+      "A-train-01504": [
+        "fault"
+      ],
+      "A-train-01522": [
+        "route"
+      ],
+      "A-train-01528": [
+        "fault"
+      ],
+      "A-train-01538": [
+        "fault"
+      ],
+      "A-train-01551": [
+        "safety"
+      ],
+      "A-train-01590": [
+        "route"
+      ],
+      "A-train-01593": [
+        "route"
+      ],
+      "A-train-01599": [
+        "fault"
+      ],
+      "A-train-01625": [
+        "route"
+      ],
+      "A-train-01655": [
+        "route"
+      ],
+      "A-train-01663": [
+        "route"
+      ],
+      "A-train-01676": [
+        "route"
+      ],
+      "A-train-01705": [
+        "fault"
+      ],
+      "A-train-01706": [
+        "unparsed"
+      ],
+      "A-train-01737": [
+        "fault"
+      ],
+      "A-train-01748": [
+        "fault"
+      ],
+      "A-train-01775": [
+        "fault"
+      ],
+      "A-train-01780": [
+        "fault"
+      ],
+      "A-train-01785": [
+        "product"
+      ],
+      "A-train-01790": [
+        "route"
+      ],
+      "A-train-01820": [
+        "fault"
+      ],
+      "A-train-01849": [
+        "fault"
+      ],
+      "A-train-01875": [
+        "fault"
+      ],
+      "A-train-01883": [
+        "fault"
+      ],
+      "A-train-01885": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-01898": [
+        "safety"
+      ],
+      "A-train-01940": [
+        "fault"
+      ],
+      "A-train-01949": [
+        "fault"
+      ],
+      "A-train-01988": [
+        "route"
+      ],
+      "A-train-01997": [
+        "route"
+      ],
+      "A-train-02005": [
+        "route"
+      ],
+      "A-train-02010": [
+        "fault"
+      ],
+      "A-train-02036": [
+        "route"
+      ],
+      "A-train-02052": [
+        "route"
+      ],
+      "A-train-02071": [
+        "route"
+      ]
+    }
+  },
+  "near_duplicates_removed": {
+    "A-dev-00175": {
+      "train_item": "A-train-00852",
+      "similarity": 1.0
+    },
+    "A-test-00014": {
+      "train_item": "A-train-01314",
+      "similarity": 1.0
+    },
+    "A-test-00423": {
+      "train_item": "A-train-00444",
+      "similarity": 0.818
+    },
+    "A-test-00505": {
+      "train_item": "A-train-01632",
+      "similarity": 0.949
+    }
+  },
+  "kept": {
+    "train": 1600,
+    "dev": 200,
+    "test": 600
+  },
+  "safety_items_kept": {
+    "train": 163,
+    "dev": 21,
+    "test": 66
+  },
+  "generation_attempts": [
+    {
+      "planned": 3116,
+      "made": 3112,
+      "cached": 4,
+      "failed": 0,
+      "tokens": {
+        "google": {
+          "input": 594307,
+          "output": 303169
+        }
+      }
+    },
+    {
+      "planned": 105,
+      "made": 105,
+      "cached": 0,
+      "failed": 0,
+      "tokens": {
+        "google": {
+          "input": 38052,
+          "output": 12600
+        }
+      }
+    }
+  ],
+  "label_calls": {
+    "planned": 3076,
+    "made": 3076,
+    "cached": 0,
+    "failed": 0,
+    "tokens": {
+      "anthropic": {
+        "input": 4849456,
+        "output": 123057
+      }
+    }
+  }
+}

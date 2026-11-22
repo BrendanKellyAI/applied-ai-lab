@@ -24,7 +24,8 @@ limits:
 max_attempts: 2
 
 task_a:
-  splits: {train: 3200, dev: 200, test: 600}
+  # Train halved from 3,200 on 22 November 2026, to keep the build near 30 minutes.
+  splits: {train: 1600, dev: 200, test: 600}
   # Extra seeds drawn per split to absorb discards; the first items to pass, in seed order,
   # are kept.
   # Raised from 0.15 after the pilot discarded 7 of 40 (22 November 2026).

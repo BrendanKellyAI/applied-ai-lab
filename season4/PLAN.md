@@ -81,13 +81,14 @@ and date in `capabilities.yaml` in step 1, with the new `fine_tunable`, `tuning_
 - `datasets/halvard-tasks/`, as in the handover: `routes.yaml` (8 routes), a fixed fault list,
   `style-guide.md` (invented, with rules a plain prompt follows imperfectly), splits, `MANIFEST.json`
   and a frozen test.
-- **Task A:** train 3,200, dev 200, test 600, about 10% safety items in each, with the hard cases
+- **Task A:** train 1,600 (halved from the handover's 3,200 on 22 November 2026, to keep the
+  build near 30 minutes), dev 200, test 600, about 10% safety items in each, with the hard cases
   seeded by template (two products, angry non-complaints, harmless heat words, invented products).
 - **Task B:** train 1,200, dev 100, test 300. Source answers are the S2 reference system's right
   answers on train-side questions; no test item shares a corpus question with train.
 - Generation is conditioned on the target label (product, fault, route, persona seeds), so labels
   are right by construction. The blind labeller then checks; disagreements are discarded and
-  counted. Overgenerate by about 15% to absorb discards.
+  counted. Overgenerate by 30% to absorb discards (raised from 15% after the pilot).
 - Near duplicates: character 5-gram Jaccard over 0.8 between test and train removes the test item
   (method and threshold pre-stated; count reported).
 - Product name test against the Halvard corpus; Halvard itself untouched.
@@ -106,7 +107,7 @@ and date in `capabilities.yaml` in step 1, with the new `fine_tunable`, `tuning_
 | 7 | E2, E3, E4 pre-registered, one bundled estimate listed line by line | Gate | Yes |
 | 8 | Deck handovers E0 to E4 | | No |
 | 9 | E5 tuning run (`lab adapt tune` prints training tokens; notebook on Colab; launch only after the gate) | Gate | No (Colab) |
-| 10 | E6 learning curve (50, 200, 800; 3,200 reuses E5) | Gate | No (Colab) |
+| 10 | E6 learning curve (50, 200, 800; 1,600 reuses E5) | Gate | No (Colab) |
 | 11 | E7 house style on Task B, with judge check | Gate | Yes |
 | 12 | E8 facts field note; staff-only documents excluded from training | Gate | No (Colab) |
 | 13 | E9 distillation with the approved teacher | Gate | Yes, includes exception |

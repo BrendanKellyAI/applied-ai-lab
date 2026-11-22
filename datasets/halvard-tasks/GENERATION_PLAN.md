@@ -28,7 +28,7 @@ invented. `datasets/halvard/` is not changed.
    discards, per field and per route, goes in `README.md`.
 5. **Near duplicates.** Character 5-gram Jaccard similarity; a test or dev item over 0.8 with
    any train item is removed. The threshold is fixed here, before generation.
-6. **Splits** by seed, before generation: train 3,200, dev 200, test 600 kept. About 15% extra
+6. **Splits** by seed, before generation: train 1,600, dev 200, test 600 kept. About 30% extra
    seeds are drawn per split to absorb discards; the first items to pass, in seed order, are
    kept.
 
@@ -56,8 +56,8 @@ file's hash and a frozen test fails if any changes. Later changes are dated amen
 
 | Step | Calls | Tokens |
 |---|---|---|
-| Task A generation, 4,600 seeds | 4,600 | about 1.8 million in, 0.6 million out |
-| Task A label check | 4,600 | about 4.2 million in (route definitions each time, mostly cached), 0.2 million out |
+| Task A generation, 3,120 seeds | about 4,060 with retries | about 0.7 million in, 0.5 million out |
+| Task A label check | 3,120 | about 3.3 million in (the definitions each time), 0.1 million out |
 | Task B question generation | about 1,700 | about 1.5 million in, 0.2 million out |
 | Task B S2 reference answers and judge | about 1,700 each | about 9 million in, 0.6 million out, on `gpt-6-luna` and `gemini-3.6-flash` |
 | Task B style rewrites and fact check | about 3,400 | about 3 million in, 0.5 million out |
