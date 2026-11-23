@@ -8,7 +8,8 @@ correct answer. Every rule marked **(code)** is checked by code; the rest are ju
 
 1. **(code)** Open with exactly: `Thank you for getting in touch.`
 2. **(code)** Close with exactly two lines: `Kind regards,` then `The Halvard Home team`.
-3. **(code)** Between 40 and 120 words, counting the opening and the close.
+3. **(code)** Between 40 and 120 words, counting the opening and the close. The not found
+   reply (rule 8) is fixed, so it is exempt.
 4. **(code)** No headings, bullet points, numbered lists, bold text or emoji. Plain paragraphs,
    at most three.
 

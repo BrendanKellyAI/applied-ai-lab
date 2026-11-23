@@ -41,6 +41,17 @@ class TaskAConfig(BaseModel):
         return self
 
 
+class TaskBConfig(BaseModel):
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    library: str
+    splits: dict[Split, int]
+    overgenerate: float = Field(ge=0, lt=1)
+    pilot_seeds: int = Field(gt=0)
+    not_found_share: float = Field(ge=0, lt=1)
+    angles: tuple[str, ...] = Field(min_length=1)
+
+
 class TaskBuildConfig(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid")
 
@@ -51,6 +62,7 @@ class TaskBuildConfig(BaseModel):
     limits: dict[str, ProviderLimits] = Field(default_factory=dict)
     max_attempts: int = Field(gt=0)
     task_a: TaskAConfig
+    task_b: TaskBConfig
 
     @model_validator(mode="after")
     def _labeller_is_another_provider(self) -> Self:

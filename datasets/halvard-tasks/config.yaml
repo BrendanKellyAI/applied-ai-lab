@@ -64,3 +64,21 @@ task_a:
            Kofi, Lowri, Marek, Niamh, Owen, Priya, Rhys, Sian, Tomasz, Una, Wes, Yasmin, Zak,
            Aled, Bronwen, Declan, Esme, Fraser, Grace, Hamza, Isla, Jude, Kerry, Leon, Morag,
            Nadia, Oisin, Ruth]
+
+task_b:
+  # Each item is a customer question and a correct answer drawn from one passage of the
+  # Halvard library (current public policy sections and help articles, never INT documents),
+  # rewritten as a reply in the house style. Passages are split before generation, so no
+  # test item shares a passage with train.
+  library: ../halvard
+  splits: {train: 1200, dev: 100, test: 300}
+  overgenerate: 0.30
+  pilot_seeds: 20
+  # Share of items whose question the passage does not answer, to teach the fixed not found
+  # reply (style guide rule 8).
+  not_found_share: 0.10
+  angles:
+    - the main point of the passage
+    - one specific figure, time limit or charge in the passage
+    - a practical when, how or how long question a customer would ask
+    - a condition, exception or exclusion in the passage

@@ -11,7 +11,17 @@ from collections.abc import Sequence
 from pydantic import BaseModel, ConfigDict
 
 from lab.adapt.build_tasks.config import TaskBuildConfig
+from lab.adapt.build_tasks.passages import NOT_FOUND
 from lab.adapt.build_tasks.prompts import labeller_prompt, labeller_system
+from lab.adapt.build_tasks.prompts_b import (
+    CHECK_SYSTEM,
+    QA_SYSTEM,
+    REWRITE_SYSTEM,
+    facts_prompt,
+    qa_prompt,
+    rewrite_prompt,
+    support_prompt,
+)
 from lab.adapt.build_tasks.seeds import Seed
 from lab.adapt.build_tasks.task_a import generation_tasks
 from lab.adapt.definitions import Definitions
@@ -118,3 +128,48 @@ def _total(values: list[float | None], currency: str) -> str:
     if any(v is None for v in values):
         return "unknown: a price is missing from prices.local.yaml"
     return f"{sum(v for v in values if v is not None):,.2f} {currency}"
+
+
+QA_TOKENS = 130
+SUPPORT_TOKENS = 20
+REPLY_TOKENS = 170
+FACTS_TOKENS = 25
+
+
+def estimate_task_b(
+    config: TaskBuildConfig, seeds: Sequence, style_guide: str, prices: PricesFile | None
+) -> list[StageCost]:
+    """Four stages; every seed is assumed to reach every stage, an upper bound on calls."""
+
+    retry = 1 + RETRY_SHARE
+    answer = "x " * 40
+    reply = "x " * 90
+    qa_in = sum(chat_tokens(QA_SYSTEM) + chat_tokens(qa_prompt(s)) for s in seeds)
+    support_in = sum(
+        chat_tokens(CHECK_SYSTEM) + chat_tokens(support_prompt(s, answer, answer)) for s in seeds
+    )
+    rewrite_in = sum(
+        chat_tokens(REWRITE_SYSTEM) + chat_tokens(rewrite_prompt(s, answer, answer, style_guide))
+        for s in seeds
+    )
+    answerable = [s for s in seeds if s.kind != NOT_FOUND]
+    facts_in = len(answerable) * (
+        chat_tokens(CHECK_SYSTEM) + chat_tokens(facts_prompt(answer, reply))
+    )
+    n = len(seeds)
+    gen, check = config.generator, config.labeller
+    return [
+        _stage(
+            "qa", gen, round(n * retry), round(qa_in * retry), round(n * retry * QA_TOKENS), prices
+        ),
+        _stage("support", check, n, support_in, n * SUPPORT_TOKENS, prices),
+        _stage(
+            "rewrite",
+            gen,
+            round(n * retry),
+            round(rewrite_in * retry),
+            round(n * retry * REPLY_TOKENS),
+            prices,
+        ),
+        _stage("facts", check, len(answerable), facts_in, len(answerable) * FACTS_TOKENS, prices),
+    ]

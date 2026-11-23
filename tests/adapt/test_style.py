@@ -78,3 +78,12 @@ def test_helpers():
     assert american_words("The colour and the color") == ["color"]
     assert set(RULES) == set(CHECKS)
     assert check_reply("", MISSING).mean_sentence_words == 0.0
+
+
+def test_citation_of_a_title_with_a_curly_apostrophe():
+    source = Source(kind="article", name="Replacing the Brio kettle\u2019s filter")
+    reply = GOOD.replace(
+        'Our Warranty policy, section "Brio kettle: Cover period", says',
+        'our help article "Replacing the Brio kettle\u2019s filter" says',
+    )
+    assert check_reply(reply, source).citation

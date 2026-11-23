@@ -138,7 +138,8 @@ def check_reply(text: str, source: Source) -> StyleReport:
     return StyleReport(
         opening=reply.startswith(OPENING),
         close=_closes(reply),
-        length=WORD_RANGE[0] <= words <= WORD_RANGE[1],
+        # The not found reply is fixed, so the word range does not apply to it.
+        length=source.kind == "not_found" or WORD_RANGE[0] <= words <= WORD_RANGE[1],
         plain=_plain(reply, body),
         citation=_cites(reply, source),
         no_banned=not any(phrase in reply.lower() for phrase in BANNED),
@@ -170,7 +171,8 @@ def _plain(reply: str, body: str) -> bool:
 
 def _cites(reply: str, source: Source) -> bool:
     expected = source.citation()
-    return True if expected is None else expected in reply
+    # Titles can hold curly apostrophes; the reply has been normalised, so the citation is too.
+    return True if expected is None else normalise(expected) in reply
 
 
 def _not_found_ok(body: str, source: Source) -> bool:
