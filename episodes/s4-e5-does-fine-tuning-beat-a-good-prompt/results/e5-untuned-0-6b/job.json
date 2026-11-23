@@ -1,0 +1,58 @@
+{
+  "plan": {
+    "job_id": "s4-e5-does-fine-tuning-beat-a-good-prompt/e5-untuned-0-6b",
+    "episode": "s4-e5-does-fine-tuning-beat-a-good-prompt",
+    "arm": "e5-untuned-0-6b",
+    "task": "a",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "instructions": "definitions",
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "batch_size": 8,
+      "gradient_accumulation": 2,
+      "warmup_ratio": 0.03,
+      "max_length": 1024,
+      "seed": 1
+    },
+    "max_new_tokens": 160,
+    "train": {
+      "examples": 0,
+      "subset_seed": 20261122,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "eval": {
+      "dev": {
+        "items": 200,
+        "sha256": "d8014c6266f1077e7b63bcbd18ecfe03ecf6e2720849ea6ce9a6e85e28001683"
+      },
+      "test": {
+        "items": 600,
+        "sha256": "eb1d6eb5a529c34e773ed4927d08880457f2548d40da878044cffb57a5fa2be2"
+      }
+    },
+    "training_tokens_estimate": {
+      "mean_per_example": 0,
+      "per_epoch": 0,
+      "epochs": 0,
+      "total": 0,
+      "tokeniser": "tiktoken o200k_base plus 4 tokens a message, a stand-in for Qwen's tokeniser; the notebook records Qwen's own count"
+    }
+  },
+  "attempts": []
+}

@@ -30,3 +30,8 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Season 4 tuning job inputs: rebuilt exactly by lab adapt tune from the frozen data; their
+# hashes are in each job.json, which is committed.
+episodes/s4-*/results/*/train.jsonl
+episodes/s4-*/results/*/eval-*.jsonl
