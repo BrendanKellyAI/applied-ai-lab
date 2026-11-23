@@ -112,14 +112,20 @@ def style_outcome(arm_first: str | None, reference_first: str | None) -> Outcome
 
 
 def style_summary(items: Sequence[ReplyItem], style: Mapping[str, str]) -> dict:
-    outcomes = [
-        style_outcome(style.get(f"{i.id}:ar"), style.get(f"{i.id}:ra"))
-        for i in items
-        if f"{i.id}:ar" in style or f"{i.id}:ra" in style
-    ]
+    """Outcomes over the pairs judged in both orders. A pair with a missing or unreadable
+    verdict is counted as unjudged, not as a tie."""
+    outcomes = []
+    unjudged = 0
+    for item in items:
+        first, second = style.get(f"{item.id}:ar"), style.get(f"{item.id}:ra")
+        if _choice(first) is None or _choice(second) is None:
+            unjudged += first is not None or second is not None
+            continue
+        outcomes.append(style_outcome(first, second))
     n = len(outcomes)
     return {
         "pairs": n,
+        "unjudged": unjudged,
         **{
             name: Proportion.of(outcomes.count(name), n).model_dump()
             for name in ("win", "tie", "loss")

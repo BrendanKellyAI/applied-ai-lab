@@ -103,31 +103,39 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def prepare(config: TuneConfig) -> dict[str, Any]:
-    """Write train.jsonl and eval-<split>.jsonl, and create or refresh the job record's plan.
-    A record with attempts keeps them; its plan may change only before the first launch."""
+def _jsonl(rows: list[dict]) -> str:
+    return "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows)
+
+
+def _text_sha(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _files(config: TuneConfig) -> tuple[dict[str, str], list[dict]]:
+    """The job's files, as text, and the training rows. Nothing is written."""
     data = config.data_folder
     definitions = Definitions.load(data / "routes.yaml")
     style_guide = (data / "style-guide.md").read_text(encoding="utf-8")
     system = _system(config, definitions, style_guide)
-    folder = config.arm_folder
     rows = [
         {"id": i.id, "messages": _messages(i, system, target=True)} for i in train_subset(config)
     ]
     problems = validate_rows(rows, config, definitions)
     if problems:
         raise JobError("training rows failed validation:\n" + "\n".join(problems[:20]))
-    write_jsonl(folder / "train.jsonl", rows)
-    evals = {}
+    files = {"train.jsonl": _jsonl(rows)}
     for split in config.eval_splits:
-        path = folder / f"eval-{split}.jsonl"
         items = _items(config, split)
-        write_jsonl(
-            path, [{"id": i.id, "messages": _messages(i, system, target=False)} for i in items]
+        files[f"eval-{split}.jsonl"] = _jsonl(
+            [{"id": i.id, "messages": _messages(i, system, target=False)} for i in items]
         )
-        evals[split] = {"items": len(items), "sha256": sha256(path)}
+    return files, rows
+
+
+def _plan(config: TuneConfig, files: dict[str, str], rows: list[dict]) -> dict[str, Any]:
     per_example = [message_tokens(r["messages"]) for r in rows]
-    plan = {
+    epochs = config.training.epochs if rows else 0
+    return {
         "job_id": config.job_id,
         "episode": config.episode,
         "arm": config.arm,
@@ -135,31 +143,61 @@ def prepare(config: TuneConfig) -> dict[str, Any]:
         "base_model": config.base_model,
         "base_revision": config.base_revision,
         "instructions": config.instructions,
-        "lora": config.lora.model_dump(),
-        "training": config.training.model_dump(),
+        "lora": config.lora.model_dump(mode="json"),
+        "training": config.training.model_dump(mode="json"),
         "max_new_tokens": config.max_new_tokens,
         "train": {
             "examples": len(rows),
             "subset_seed": config.subset_seed,
-            "sha256": sha256(folder / "train.jsonl"),
+            "sha256": _text_sha(files["train.jsonl"]),
         },
-        "eval": evals,
+        "eval": {
+            split: {
+                "items": files[f"eval-{split}.jsonl"].count("\n"),
+                "sha256": _text_sha(files[f"eval-{split}.jsonl"]),
+            }
+            for split in config.eval_splits
+        },
         "training_tokens_estimate": {
             "mean_per_example": round(sum(per_example) / len(rows), 1) if rows else 0,
             "per_epoch": sum(per_example),
-            "epochs": config.training.epochs if rows else 0,
-            "total": sum(per_example) * (config.training.epochs if rows else 0),
+            "epochs": epochs,
+            "total": sum(per_example) * epochs,
             "tokeniser": TOKENISER_NOTE,
         },
     }
+
+
+def prepare(config: TuneConfig) -> dict[str, Any]:
+    """Write train.jsonl and eval-<split>.jsonl and the job record's plan. Once a job has been
+    launched, nothing is written: its plan and files are fixed, and a change needs a new arm."""
+    files, rows = _files(config)
+    # Compared in its JSON form, as the record stores it.
+    plan = json.loads(json.dumps(_plan(config, files, rows)))
+    folder = config.arm_folder
     record = load_record(folder)
-    if record and record["attempts"] and record["plan"] != plan:
-        raise JobError(
-            f"{config.job_id} has been launched; its plan cannot change. Use a new arm name."
-        )
-    record = {"plan": plan, "attempts": record["attempts"] if record else []}
+    if record and record["attempts"]:
+        if record["plan"] != plan:
+            raise JobError(
+                f"{config.job_id} has been launched; its plan cannot change. Use a new arm name."
+            )
+        return record
+    folder.mkdir(parents=True, exist_ok=True)
+    for name, text in files.items():
+        (folder / name).write_text(text, encoding="utf-8", newline="\n")
+    record = {"plan": plan, "attempts": []}
     save_record(folder, record)
     return record
+
+
+def check_files(folder: Path, plan: dict) -> None:
+    """Refuse when a file on disk is not the one the plan records."""
+    expected = {"train.jsonl": plan["train"]["sha256"]}
+    expected |= {f"eval-{split}.jsonl": info["sha256"] for split, info in plan["eval"].items()}
+    for name, digest in expected.items():
+        path = folder / name
+        if not path.exists() or sha256(path) != digest:
+            raise JobError(f"{name} is missing or differs from the job record; prepare it again")
 
 
 def load_record(folder: Path) -> dict | None:
@@ -192,6 +230,7 @@ def launch(folder: Path, approved_by: str, *, retry_approved: bool = False) -> d
         raise JobError("this job has succeeded; a new run needs a new arm name")
     if last is not None and not retry_approved:
         raise JobError(f"the last attempt {last}; a retry needs --retry-approved")
+    check_files(folder, record["plan"])
     attempt = {
         "attempt": len(attempts) + 1,
         "status": OPEN,
@@ -207,36 +246,85 @@ def launch(folder: Path, approved_by: str, *, retry_approved: bool = False) -> d
 
 
 RESULT_FIELDS = ("job_id", "attempt", "status")
+OUTCOMES = ("succeeded", "failed", "cancelled")
+
+
+def _open_attempt(record: dict | None) -> dict:
+    if record is None or not record["attempts"] or record["attempts"][-1]["status"] != OPEN:
+        raise JobError("no launched attempt to record a result for")
+    return record["attempts"][-1]
+
+
+def _close(folder: Path, record: dict, closed: dict) -> dict:
+    updated = {**record, "attempts": [*record["attempts"][:-1], closed]}
+    save_record(folder, updated)
+    return updated
+
+
+def _checked_predictions(folder: Path, record: dict, source: Path) -> dict[str, dict]:
+    """Every eval split's predictions, present and covering exactly the split's items."""
+    found = {}
+    for split in record["plan"]["eval"]:
+        path = source / f"predictions-{split}.jsonl"
+        if not path.exists():
+            raise JobError(f"a succeeded result needs predictions-{split}.jsonl")
+        expected = {row["id"] for row in read_jsonl(folder / f"eval-{split}.jsonl")}
+        rows = read_jsonl(path)
+        ids = [row.get("id") for row in rows]
+        if len(ids) != len(set(ids)) or set(ids) != expected:
+            raise JobError(f"predictions-{split}.jsonl does not cover the {split} items once each")
+        found[split] = {"rows": rows, "sha256": sha256(path)}
+    return found
 
 
 def record_result(folder: Path, result_path: Path) -> dict:
-    """Fill in the open attempt from the notebook's job_result.json, and copy its predictions
-    (predictions-<split>.jsonl, next to the result file) into the arm's folder."""
+    """Close the open attempt with the notebook's job_result.json. The attempt keeps its launch
+    fields and the notebook's file goes under "result". A succeeded result must bring complete
+    predictions (predictions-<split>.jsonl, next to the result file), which are copied in."""
     record = load_record(folder)
-    if record is None or not record["attempts"]:
-        raise JobError("no launched attempt to record a result for")
+    open_attempt = _open_attempt(record)
+    assert record is not None
     result = json.loads(result_path.read_text(encoding="utf-8"))
     missing = [f for f in RESULT_FIELDS if f not in result]
     if missing:
         raise JobError(f"the result file lacks {', '.join(missing)}")
-    open_attempt = record["attempts"][-1]
     if result["job_id"] != record["plan"]["job_id"]:
         raise JobError(f"the result is for {result['job_id']}, not {record['plan']['job_id']}")
-    if open_attempt["status"] != OPEN or result["attempt"] != open_attempt["attempt"]:
+    if result["attempt"] != open_attempt["attempt"]:
         raise JobError(f"attempt {result['attempt']} is not the open attempt")
-    if result["status"] not in ("succeeded", "failed", "cancelled"):
+    if result["status"] not in OUTCOMES:
         raise JobError(f"unknown status {result['status']!r}")
-    copied = {}
-    for split in record["plan"]["eval"]:
-        source = result_path.parent / f"predictions-{split}.jsonl"
-        if result["status"] == "succeeded" and source.exists():
-            rows = read_jsonl(source)
-            write_jsonl(folder / f"predictions-{split}.jsonl", rows)
-            copied[split] = len(rows)
-    done = {**open_attempt, **result, "recorded_utc": _now(), "predictions_copied": copied}
-    updated = {**record, "attempts": [*record["attempts"][:-1], done]}
-    save_record(folder, updated)
-    return updated
+    predictions = {}
+    if result["status"] == "succeeded":
+        for split, found in _checked_predictions(folder, record, result_path.parent).items():
+            write_jsonl(folder / f"predictions-{split}.jsonl", found["rows"])
+            predictions[split] = {"items": len(found["rows"]), "sha256": found["sha256"]}
+    closed = {
+        **open_attempt,
+        "status": result["status"],
+        "recorded_utc": _now(),
+        "predictions": predictions,
+        "result": result,
+    }
+    return _close(folder, record, closed)
+
+
+def cancel(folder: Path, approved_by: str, reason: str) -> dict:
+    """Close an open attempt that left no result file (a disconnect, or a failure before the
+    notebook could write one), as cancelled. It is never retried without approval."""
+    if not approved_by.strip() or not reason.strip():
+        raise JobError("say who approved closing the attempt, and why")
+    record = load_record(folder)
+    open_attempt = _open_attempt(record)
+    assert record is not None
+    closed = {
+        **open_attempt,
+        "status": "cancelled",
+        "recorded_utc": _now(),
+        "cancelled_by": approved_by,
+        "reason": reason,
+    }
+    return _close(folder, record, closed)
 
 
 def find_job(root: Path, job_id: str) -> Path:

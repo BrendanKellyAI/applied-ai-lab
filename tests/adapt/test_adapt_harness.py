@@ -254,11 +254,44 @@ def test_analysis_scores_compares_and_charts(task_a):
 def test_cost_ratios_use_prices_without_publishing_them(task_a):
     experiment, inputs, _, _ = task_a
     prices = SimpleNamespace(
-        price_for=lambda provider, model: SimpleNamespace(input=0.1, output=0.5)
+        price_for=lambda provider, model: SimpleNamespace(input=0.1, cached_input=None, output=0.5)
     )
     ratios = analyse(experiment, inputs, prices)["cost_ratios"]
     assert ratios["one-line"] == {"per_item": 1.0, "per_primary_hit": 1.0}
     assert ratios["definitions"]["per_item"] > 1
+
+
+def test_analysis_refuses_an_arm_with_no_predictions(tmp_path):
+    from lab.adapt.analyse import AnalysisError
+
+    arms = [
+        {"name": "one-line", "instructions": "one_line"},
+        {"name": "x", "predictions": "x.jsonl"},
+    ]
+    experiment = Experiment.load(_config(tmp_path, "a", arms))
+    with pytest.raises(AnalysisError, match="predictions is missing"):
+        analyse(experiment, load_inputs(experiment), None)
+
+
+def test_analysis_counts_items_without_a_reply(task_a):
+    experiment, inputs, _, _ = task_a
+    assert analyse(experiment, inputs, None)["arms"]["tuned"]["items_without_reply"] == 6
+
+
+def test_unreadable_style_verdicts_are_unjudged_not_ties():
+    from lab.adapt.items import reply_items
+    from lab.adapt.score_b import style_summary
+
+    items = reply_items(DATA, "dev")[:3]
+    style = {
+        f"{items[0].id}:ar": '{"better": "1"}',
+        f"{items[0].id}:ra": '{"better": "2"}',
+        f"{items[1].id}:ar": "garbled",
+        f"{items[1].id}:ra": '{"better": "2"}',
+    }
+    summary = style_summary(items, style)
+    assert summary["pairs"] == 1 and summary["unjudged"] == 1
+    assert summary["win"]["count"] == 1 and summary["tie"]["count"] == 0
 
 
 def test_scores_count_a_missing_reply_as_wrong_everywhere():
@@ -404,7 +437,7 @@ def test_cli_run_stops_when_over_budget_or_a_key_is_missing(tmp_path, monkeypatc
     )
     runner = CliRunner()
     over = runner.invoke(app, ["adapt", "run", str(config), "--prices-path", str(prices)])
-    assert over.exit_code == 1 and "over the" in over.output
+    assert over.exit_code == 1 and "ceiling cost" in over.output
     prices.write_text(
         yaml.safe_dump(
             {

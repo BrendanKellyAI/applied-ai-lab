@@ -21,7 +21,15 @@ from lab.adapt.items import triage_items
 from lab.adapt.requests import load_inputs
 from lab.adapt.run import read_jsonl, run_experiment
 from lab.adapt.score_a import score_items, summarise
-from lab.adapt.tune import JobError, find_job, launch, load_record, prepare, record_result
+from lab.adapt.tune import (
+    JobError,
+    cancel,
+    find_job,
+    launch,
+    load_record,
+    prepare,
+    record_result,
+)
 from lab.adapt.tune_config import TuneConfig
 from lab.cache import ResponseCache, shared_cache_root
 from lab.prices import load_prices
@@ -72,11 +80,18 @@ def run_command(
     if estimate:
         return
     budget = prices.budget_for(experiment.episode) if prices else None
-    expected = [c.expected_cost for c in costs]
-    if budget is None or any(c is None for c in expected):
+    # Gate on the ceiling, every call at its output limit, so a wordy model cannot pass the
+    # budget on the expected figure and bill several times more.
+    ceiling = [c.ceiling_cost for c in costs]
+    if budget is None or any(c is None for c in ceiling):
         _fail(f"set a price for every model and a {experiment.episode} budget first.")
-    if sum(c for c in expected if c is not None) > budget:
-        _fail(f"the expected cost is over the {experiment.episode} budget.")
+    total = sum(c for c in ceiling if c is not None)
+    if total > budget:
+        _fail(
+            f"the ceiling cost, {total:,.2f}, is over the {experiment.episode} budget of "
+            f"{budget:,.2f}."
+        )
+    typer.echo(f"Budget check on the ceiling cost: {total:,.2f} of {budget:,.2f}.")
     load_dotenv(env_file, override=False)
     root = cache_dir if cache_dir is not None else shared_cache_root(Path.cwd())
     embed = None
@@ -145,11 +160,23 @@ def status_command(
         Path | None, typer.Option(help="The notebook's job_result.json, to record.")
     ] = None,
     root: Annotated[Path, typer.Option(help="Where to look for job records.")] = Path("episodes"),
+    cancel_open: Annotated[
+        bool, typer.Option("--cancel", help="Close an open attempt that left no result.")
+    ] = False,
+    approved_by: Annotated[str, typer.Option(help="Who approved closing it, and when.")] = "",
+    reason: Annotated[str, typer.Option(help="Why the attempt is being closed.")] = "",
 ) -> None:
-    """Show a job's attempts, or record the notebook's result for the open attempt."""
+    """Show a job's attempts, record the notebook's result, or close an open attempt."""
     try:
         folder = find_job(root, job_id)
-        record = record_result(folder, result) if result else load_record(folder)
+        if result and cancel_open:
+            raise JobError("give --result or --cancel, not both")
+        if result:
+            record = record_result(folder, result)
+        elif cancel_open:
+            record = cancel(folder, approved_by, reason)
+        else:
+            record = load_record(folder)
     except JobError as exc:
         _fail(str(exc))
     assert record is not None

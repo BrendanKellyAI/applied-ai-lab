@@ -28,6 +28,10 @@ PRIMARY = {"a": "fully_right", "b": "primary"}
 LABELS = {"a": "Fully right", "b": "Pass all checks and keep the facts"}
 
 
+class AnalysisError(ValueError):
+    """A file an arm needs is missing, so scoring it would count every item as wrong."""
+
+
 def _token_totals(rows: list[dict]) -> dict[str, float]:
     n = len(rows) or 1
     total_in = sum(r.get("input_tokens") or 0 for r in rows)
@@ -35,6 +39,7 @@ def _token_totals(rows: list[dict]) -> dict[str, float]:
     return {
         "calls": len(rows),
         "input_tokens": total_in,
+        "cached_input_tokens": sum(r.get("cached_input_tokens") or 0 for r in rows),
         "output_tokens": total_out,
         "mean_input_tokens": round(total_in / n, 1),
         "mean_output_tokens": round(total_out / n, 1),
@@ -49,12 +54,24 @@ def _cost(tokens: Mapping[str, float], experiment: Experiment, arm: str, prices)
     price = prices.price_for(model.provider, model.model)
     if price is None or price.input is None or price.output is None:
         return None
-    return tokens["input_tokens"] * price.input + tokens["output_tokens"] * price.output
+    cached = tokens.get("cached_input_tokens", 0)
+    cached_rate = price.cached_input if price.cached_input is not None else price.input
+    return (
+        (tokens["input_tokens"] - cached) * price.input
+        + cached * cached_rate
+        + tokens["output_tokens"] * price.output
+    )
+
+
+def _required(path: Path, what: str) -> Path:
+    if not path.exists():
+        raise AnalysisError(f"{what} is missing: {path}. Run or record it first.")
+    return path
 
 
 def _hits(experiment: Experiment, inputs: Inputs, arm: str) -> tuple[dict, dict[str, bool], dict]:
     """An arm's summary, its per-item primary hits, and its per-item safety flags."""
-    texts = read_texts(predictions_path(experiment, arm))
+    texts = read_texts(_required(predictions_path(experiment, arm), f"arm {arm}'s predictions"))
     if experiment.task == "a":
         items = [i for i in inputs.items if isinstance(i, TriageItem)]
         scores = score_items(items, texts, inputs.definitions)
@@ -63,11 +80,12 @@ def _hits(experiment: Experiment, inputs: Inputs, arm: str) -> tuple[dict, dict[
         return summary, {s.id: s.fully_right for s in scores}, flagged
     replies = [i for i in inputs.items if isinstance(i, ReplyItem)]
     folder = arm_folder(experiment, arm)
-    facts = read_texts(folder / f"facts-{experiment.split}.jsonl")
+    facts = read_texts(_required(folder / f"facts-{experiment.split}.jsonl", f"{arm}'s facts"))
     scores_b = score_replies(replies, texts, facts)
     summary = summarise_b(scores_b)
     if arm != experiment.reference:
-        style = read_texts(folder / f"style-{experiment.split}.jsonl")
+        style_path = _required(folder / f"style-{experiment.split}.jsonl", f"{arm}'s style")
+        style = read_texts(style_path)
         summary["style_against_reference"] = style_summary(replies, style)
     return summary, {s.id: s.primary for s in scores_b}, {}
 
@@ -80,6 +98,10 @@ def analyse(experiment: Experiment, inputs: Inputs, prices: PricesFile | None) -
         summary, hits[arm.name], flagged[arm.name] = _hits(experiment, inputs, arm.name)
         rows = read_jsonl(predictions_path(experiment, arm.name))
         summary["tokens"] = _token_totals(rows)
+        # Items with no reply are scored wrong; the count says how many there were.
+        summary["items_without_reply"] = len(inputs.items) - len(
+            {r["id"] for r in rows if r.get("text") is not None} & {i.id for i in inputs.items}
+        )
         arms[arm.name] = summary
     comparisons = _compare(experiment, hits, flagged)
     ratios = _cost_ratios(experiment, arms, prices)
@@ -93,6 +115,11 @@ def analyse(experiment: Experiment, inputs: Inputs, prices: PricesFile | None) -
         "arms": arms,
         "comparisons": comparisons,
         "cost_ratios": ratios,
+        "cost_note": (
+            "Answer calls only, as multiples of the reference arm; judge calls are measurement "
+            "and are left out. Cached input is priced at the cached rate where one is known. "
+            "External (tuned) arms run on Colab and have no API cost."
+        ),
     }
 
 

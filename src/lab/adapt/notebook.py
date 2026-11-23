@@ -30,7 +30,9 @@ Google Drive. Set `JOB_DIR` below, choose a GPU runtime, and run all cells.
 
 **After running:** download `job_result.json` and the `predictions-*.jsonl` files and record
 them with `lab adapt status <job-id> --result job_result.json`. A failed run writes its result
-too. Do not rerun a failed job without approval: training is not cached like a response.
+too. If the runtime died before any result was written, close the attempt with `lab adapt
+status <job-id> --cancel --approved-by ... --reason ...`. Do not rerun a failed job without
+approval: training is not cached like a response. Run each job in a fresh runtime.
 
 Adapters stay on Drive and are never committed; their hash is recorded."""
 
@@ -89,19 +91,26 @@ def check_files(plan):
 
 record = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
 plan = record["plan"]
+# With no open attempt there is nothing to run. Any later failure is written to
+# job_result.json by the last cell.
 attempt = open_attempt(record)
-check_files(plan)
-print(plan["job_id"], "attempt", attempt, "on", torch.cuda.get_device_name(0))"""
+print(plan["job_id"], "attempt", attempt)"""
 
 MODEL = """from huggingface_hub import model_info
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-base_sha = model_info(plan["base_model"], revision=plan["base_revision"]).sha
-tokenizer = AutoTokenizer.from_pretrained(plan["base_model"], revision=base_sha)
-tokenizer.padding_side = "left"
-model = AutoModelForCausalLM.from_pretrained(
-    plan["base_model"], revision=base_sha, torch_dtype=torch.float32
-).to("cuda")
+tokenizer = None
+
+
+def load_model():
+    global tokenizer
+    sha = model_info(plan["base_model"], revision=plan["base_revision"]).sha
+    tokenizer = AutoTokenizer.from_pretrained(plan["base_model"], revision=sha)
+    tokenizer.padding_side = "left"
+    base = AutoModelForCausalLM.from_pretrained(
+        plan["base_model"], revision=sha, torch_dtype=torch.float32
+    ).to("cuda")
+    return base, sha
 
 
 def prompt_text(messages):
@@ -114,22 +123,21 @@ TRAIN = """from peft import LoraConfig, get_peft_model
 from transformers import Trainer, TrainingArguments, set_seed
 
 
-def encode(row, max_length):
+def encode(row):
     prompt = prompt_text(row["messages"][:2])
     target = row["messages"][2]["content"] + tokenizer.eos_token + "\\n"
     prompt_ids = tokenizer(prompt, add_special_tokens=False)["input_ids"]
     target_ids = tokenizer(target, add_special_tokens=False)["input_ids"]
-    ids = (prompt_ids + target_ids)[:max_length]
-    labels = ([-100] * len(prompt_ids) + target_ids)[:max_length]
-    return {"input_ids": ids, "labels": labels}
+    return {"input_ids": prompt_ids + target_ids, "labels": [-100] * len(prompt_ids) + target_ids}
 
 
 def collate(batch):
+    # Right padding in training, so each row's positions start at 0; generation pads left.
     width = max(len(b["input_ids"]) for b in batch)
     pad = tokenizer.pad_token_id
-    ids = [[pad] * (width - len(b["input_ids"])) + b["input_ids"] for b in batch]
-    labels = [[-100] * (width - len(b["labels"])) + b["labels"] for b in batch]
-    mask = [[0] * (width - len(b["input_ids"])) + [1] * len(b["input_ids"]) for b in batch]
+    ids = [b["input_ids"] + [pad] * (width - len(b["input_ids"])) for b in batch]
+    labels = [b["labels"] + [-100] * (width - len(b["labels"])) for b in batch]
+    mask = [[1] * len(b["input_ids"]) + [0] * (width - len(b["input_ids"])) for b in batch]
     return {
         "input_ids": torch.tensor(ids),
         "labels": torch.tensor(labels),
@@ -137,13 +145,18 @@ def collate(batch):
     }
 
 
-def train(plan):
+def train(base, plan):
     settings, lora = plan["training"], plan["lora"]
     set_seed(settings["seed"])
     rows = read_jsonl(job_dir / "train.jsonl")
-    data = [encode(r, settings["max_length"]) for r in rows]
+    data = [encode(r) for r in rows]
+    # A cut row would lose its end token and teach the model not to stop: fail instead.
+    too_long = [r["id"] for r, d in zip(rows, data, strict=True)
+                if len(d["input_ids"]) > settings["max_length"]]
+    if too_long:
+        raise RuntimeError(f"{len(too_long)} rows exceed max_length, for example {too_long[0]}")
     tuned = get_peft_model(
-        model,
+        base,
         LoraConfig(
             r=lora["r"],
             lora_alpha=lora["alpha"],
@@ -212,31 +225,37 @@ PREDICT = """def predict(active, split, max_new_tokens):
 
 RUN = """import importlib.metadata as metadata
 
+if "result" in globals():
+    raise RuntimeError("this session has already run a job: restart the runtime first")
 result = {
     "job_id": plan["job_id"],
     "attempt": attempt,
     "notebook_version": NOTEBOOK_VERSION,
     "started_utc": datetime.now(UTC).isoformat(timespec="seconds"),
-    "base_revision_sha": base_sha,
-    "gpu": torch.cuda.get_device_name(0),
     "python": platform.python_version(),
-    "packages": {p: metadata.version(p) for p in ("torch", "transformers", "peft", "accelerate")},
 }
 try:
-    active = model
+    result["packages"] = {
+        p: metadata.version(p) for p in ("torch", "transformers", "peft", "accelerate")
+    }
+    result["gpu"] = torch.cuda.get_device_name(0)
+    check_files(plan)
+    active, result["base_revision_sha"] = load_model()
     if plan["train"]["examples"]:
-        active, training = train(plan)
+        active, training = train(active, plan)
         result["training"] = training
     result["predictions"] = {
         split: predict(active, split, plan["max_new_tokens"]) for split in plan["eval"]
     }
     result["peak_memory_gb"] = round(torch.cuda.max_memory_allocated() / 1e9, 2)
     result["status"] = "succeeded"
-except Exception as exc:
+except BaseException as exc:
+    # Includes a stop or an interrupt, so an attempt is never left without a result.
     result["status"] = "failed"
     result["error"] = "".join(traceback.format_exception_only(exc)).strip()
     raise
 finally:
+    result.setdefault("status", "failed")
     result["finished_utc"] = datetime.now(UTC).isoformat(timespec="seconds")
     text = json.dumps(result, indent=2) + "\\n"
     (job_dir / "job_result.json").write_text(text, encoding="utf-8")

@@ -12,9 +12,10 @@ from typer.testing import CliRunner
 from lab.adapt.definitions import Definitions
 from lab.adapt.notebook import render
 from lab.adapt.output import output_format
-from lab.adapt.run import write_jsonl
+from lab.adapt.run import read_jsonl, write_jsonl
 from lab.adapt.tune import (
     JobError,
+    cancel,
     find_job,
     launch,
     load_record,
@@ -59,10 +60,14 @@ def _tune(tmp_path: Path, **extra) -> TuneConfig:
     return TuneConfig.load(path)
 
 
-def _result(tmp_path: Path, attempt: int, status: str = "succeeded") -> Path:
+DEV_IDS = [row["id"] for row in read_jsonl(DATA / "task-a" / "dev.jsonl")]
+
+
+def _result(tmp_path: Path, attempt: int, status: str = "succeeded", ids=None) -> Path:
     out = tmp_path / "download"
     out.mkdir(exist_ok=True)
-    write_jsonl(out / "predictions-dev.jsonl", [{"id": "A-dev-00000", "text": "{}"}])
+    rows = [{"id": i, "text": "{}"} for i in (DEV_IDS if ids is None else ids)]
+    write_jsonl(out / "predictions-dev.jsonl", rows)
     path = out / "job_result.json"
     path.write_text(
         json.dumps({"job_id": "s4-test/tuned-50", "attempt": attempt, "status": status}),
@@ -138,7 +143,9 @@ def test_launch_rules_never_relaunch_silently(tmp_path):
     launch(folder, "Brendan, retry", retry_approved=True)
     done = record_result(folder, _result(tmp_path, 2))
     assert [a["status"] for a in done["attempts"]] == ["failed", "succeeded"]
-    assert done["attempts"][1]["predictions_copied"] == {"dev": 1}
+    second = done["attempts"][1]
+    assert second["predictions"]["dev"]["items"] == 200
+    assert second["approved_by"] == "Brendan, retry" and second["result"]["status"] == "succeeded"
     assert (folder / "predictions-dev.jsonl").exists()
     with pytest.raises(JobError, match="has succeeded"):
         launch(folder, "Brendan")
@@ -164,6 +171,14 @@ def test_results_must_match_the_open_attempt(tmp_path):
     bad.write_text(json.dumps({"job_id": "s4-test/tuned-50"}))
     with pytest.raises(JobError, match="lacks"):
         record_result(folder, bad)
+    with pytest.raises(JobError, match="once each"):
+        record_result(folder, _result(tmp_path, 1, ids=DEV_IDS[:5]))
+    with pytest.raises(JobError, match="once each"):
+        record_result(folder, _result(tmp_path, 1, ids=[*DEV_IDS, DEV_IDS[0]]))
+    good = _result(tmp_path, 1)
+    (good.parent / "predictions-dev.jsonl").unlink()
+    with pytest.raises(JobError, match="needs predictions-dev"):
+        record_result(folder, good)
     assert find_job(tmp_path, "s4-test/tuned-50") == folder
     with pytest.raises(JobError, match="no job"):
         find_job(tmp_path, "missing")
@@ -201,6 +216,52 @@ def test_cli_launch_prepares_first_when_needed(tmp_path):
         app, ["adapt", "tune", str(path), "--launch", "--approved-by", "Brendan"]
     )
     assert result.exit_code == 0 and "Attempts: 1" in result.output
+
+
+def test_a_launched_job_is_never_rewritten(tmp_path):
+    config = _tune(tmp_path)
+    folder = config.arm_folder
+    prepare(config)
+    launch(folder, "Brendan")
+    before = (folder / "train.jsonl").read_bytes()
+    with pytest.raises(JobError, match="cannot change"):
+        prepare(_tune(tmp_path, train_size=60))
+    assert (folder / "train.jsonl").read_bytes() == before
+    assert prepare(config)["attempts"][0]["status"] == "launched"
+
+
+def test_a_retry_refuses_files_that_changed(tmp_path):
+    config = _tune(tmp_path)
+    folder = config.arm_folder
+    prepare(config)
+    launch(folder, "Brendan")
+    record_result(folder, _result(tmp_path, 1, "failed"))
+    (folder / "eval-dev.jsonl").write_text("{}\n", encoding="utf-8")
+    with pytest.raises(JobError, match="differs from the job record"):
+        launch(folder, "Brendan", retry_approved=True)
+
+
+def test_an_open_attempt_with_no_result_can_be_cancelled(tmp_path):
+    config = _tune(tmp_path)
+    folder = config.arm_folder
+    prepare(config)
+    with pytest.raises(JobError, match="no launched attempt"):
+        cancel(folder, "Brendan", "runtime died")
+    launch(folder, "Brendan")
+    with pytest.raises(JobError, match="and why"):
+        cancel(folder, "Brendan", "")
+    root = ["--root", str(tmp_path)]
+    runner = CliRunner()
+    both = ["--cancel", "--result", str(_result(tmp_path, 1))]
+    assert runner.invoke(app, ["adapt", "status", "s4-test/tuned-50", *root, *both]).exit_code == 1
+    args = ["adapt", "status", "s4-test/tuned-50", *root, "--cancel"]
+    args += ["--approved-by", "Brendan", "--reason", "Colab disconnected"]
+    closed = runner.invoke(app, args)
+    assert closed.exit_code == 0 and "Attempt 1: cancelled" in closed.output
+    attempt = load_record(folder)["attempts"][0]
+    assert attempt["reason"] == "Colab disconnected" and attempt["approved_by"] == "Brendan"
+    with pytest.raises(JobError, match="--retry-approved"):
+        launch(folder, "Brendan")
 
 
 # Notebook
