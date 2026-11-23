@@ -1,0 +1,17 @@
+# S4 E3, how many examples, Task A dev. See PREREGISTRATION.md, Amendment 1: the base is E1's
+# one-line prompt.
+episode: s4-e3-how-many-examples
+task: a
+split: dev
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e3-n0
+arms:
+  - {name: e3-n0, instructions: one_line, output: text}
+  - {name: e3-random-2, instructions: one_line, output: text, examples: {n: 2, selection: random, seed: 0}}
+  - {name: e3-random-8, instructions: one_line, output: text, examples: {n: 8, selection: random, seed: 0}}
+  - {name: e3-similar-8, instructions: one_line, output: text, examples: {n: 8, selection: similar}}
+  - {name: e3-random-8-shuffled, instructions: one_line, output: text, examples: {n: 8, selection: random, seed: 0, shuffle_seed: 1}}
+  - {name: e3-random-32, instructions: one_line, output: text, examples: {n: 32, selection: random, seed: 0}}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}

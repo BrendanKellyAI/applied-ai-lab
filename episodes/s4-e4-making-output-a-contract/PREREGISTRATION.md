@@ -61,3 +61,10 @@ Also reported: invalid reasons, safety recall and false alarms, output tokens pe
 - One provider's JSON mode and schema support; others enforce formats differently.
 - Strict schemas fix the allowed values, so they also stop invented routes; validity and
   accuracy cannot be fully separated.
+
+## Amendment 1, 23 November 2026: after E3's change of base
+
+Written before any E4 call. E3 now builds on the one-line prompt (E3 Amendment 1), so E4's base
+is E3's best arm on that prompt; the arms, rule and claims are unchanged. One correction: the
+arm E5 tunes against is the best prompted arm on dev across E2, E3 and E4 (the handover's rule),
+not E4's best alone. Ties go to fewer input tokens per call.

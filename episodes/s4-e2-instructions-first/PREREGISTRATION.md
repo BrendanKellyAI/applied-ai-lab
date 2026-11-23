@@ -74,3 +74,10 @@ the reference's (the strict bar).
 - The definitions are the ones the labeller was given when the data was built, so the prompt
   matches the labels' own rules more closely than a real colleague's notes would.
 - The dev set was used for E1's headroom check; it is used again here only to choose.
+
+## Amendment 1, 23 November 2026: E3 does not build on E2's best
+
+Written after the dev run, before any test call. `e2-definitions` got 199 of 200 on dev, so E3
+builds on the one-line prompt instead (E3 Amendment 1). E2's arms, claims and test run are
+unchanged; `e2-definitions` is still E2's best prompt by the rule, and a candidate for the
+reference.

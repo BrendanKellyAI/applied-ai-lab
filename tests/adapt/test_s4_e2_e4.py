@@ -18,6 +18,8 @@ CONFIGS = [
     (E2 / "config.yaml", 600),
     (E3 / "ceiling.dev.yaml", 200),
     (E3 / "ceiling.yaml", 600),
+    (E3 / "config.dev.yaml", 200),
+    (E3 / "config.yaml", 600),
     (E4 / "ceiling.dev.yaml", 200),
     (E4 / "ceiling.yaml", 600),
 ]
@@ -53,3 +55,13 @@ def test_ceilings_differ_from_a_real_config_only_in_the_base_prompt():
     for folder in (E3, E4):
         arms = Experiment.load(folder / "ceiling.yaml").arms
         assert {arm.instructions for arm in arms} == {"unsure"}
+
+
+def test_e3_runs_the_ceiling_arms_on_the_one_line_prompt():
+    for name in ("config.dev.yaml", "config.yaml"):
+        config = Experiment.load(E3 / name)
+        ceiling = Experiment.load(E3 / name.replace("config", "ceiling"))
+        assert {arm.instructions for arm in config.arms} == {"one_line"}
+        assert [a.model_copy(update={"instructions": "unsure"}) for a in config.arms] == list(
+            ceiling.arms
+        )

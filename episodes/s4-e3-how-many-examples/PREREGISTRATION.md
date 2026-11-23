@@ -73,3 +73,18 @@ not count.
   the draw) is varied.
 - Similar examples are found by an embedding of the message alone, the existing Season 2 code.
 - The base prompt was chosen on dev; the examples were not tuned on anything.
+
+## Amendment 1, 23 November 2026: the one-line prompt as the base
+
+Written after E2's dev run and before any E3 call. E2's best prompt (`e2-definitions`) got 199
+of 200 dev items fully right, which leaves E3 one item to gain, so every claim would fail on
+the ceiling rather than on what it tests. Brendan approved this change:
+
+- **Base prompt:** E1's one-line prompt (`instructions: one_line`), not E2's best. `e3-n0` is
+  then E1's arm, with cached replies. Everything else above is unchanged: arms, examples,
+  seeds, statistics, the choice rule and the claims.
+- **The question becomes:** can worked examples stand in for written definitions, and at what
+  input cost per call? E2's arms are reported beside E3's for that comparison, as context, not
+  as a claim.
+- `ceiling.yaml` and `ceiling.dev.yaml` stay as the approved cost ceilings; the configs run are
+  `config.dev.yaml` and `config.yaml`.
