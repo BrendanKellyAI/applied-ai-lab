@@ -181,7 +181,7 @@ def test_short_first_drafts_are_retried_with_the_reason(built):
 def test_review_sample_lists_test_items_for_hand_checking(built):
     folder, config, _ = built
     review = (folder / "review" / "task-a-test-sample.md").read_text(encoding="utf-8")
-    assert review.count("- [ ] label is right") == config.task_a.splits["test"]
+    assert review.count("**Label:**") == config.task_a.splits["test"]
 
 
 def test_rebuild_is_served_from_the_cache(built, tmp_path):

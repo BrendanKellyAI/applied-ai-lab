@@ -264,28 +264,33 @@ def _summary(summary: RunSummary) -> dict:
 
 
 def _write_review_sample(folder: Path, test: Sequence[Kept], seed: int) -> None:
-    """The items Brendan checks by hand before the test set is frozen."""
+    write_review_sample(folder.parent / "review", [item_record(k) for k in test], seed)
+
+
+def write_review_sample(review: Path, test: Sequence[dict], seed: int) -> Path:
+    """The items Brendan checks by hand before the test set is frozen, numbered so that he can
+    reply with the numbers of any wrong labels."""
     sample = random.Random(f"{seed}:review").sample(list(test), min(REVIEW_SAMPLE, len(test)))
     lines = [
         "# Task A test items for hand checking",
         "",
-        "For each item, mark whether the label is right. Any wrong label is reported in the "
-        "dataset README.",
+        "Read each message and its label. Reply with the numbers of any items whose label is "
+        "wrong, and what is wrong (for example: 12 route should be warranty_claim). Every wrong "
+        "label is reported in the dataset README.",
         "",
     ]
-    for item in sorted(sample, key=lambda i: i.seed.id):
-        label = item.seed.label
+    for number, row in enumerate(sorted(sample, key=lambda r: r["id"]), start=1):
+        label = row["label"]
         lines += [
-            f"## {item.seed.id} ({item.seed.kind})",
+            f"## {number}. {row['id']} ({row['kind']})",
             "",
-            item.message,
+            f"> {row['message']}",
             "",
-            f"route `{label.route}`, safety `{str(label.safety).lower()}`, product "
-            f"`{label.product}`, fault `{label.fault}`",
-            "",
-            "- [ ] label is right",
+            f"**Label:** route `{label['route']}`, safety `{str(label['safety']).lower()}`, "
+            f"product `{label['product']}`, fault `{label['fault']}`",
             "",
         ]
-    review = folder.parent / "review"
     review.mkdir(parents=True, exist_ok=True)
-    (review / "task-a-test-sample.md").write_text("\n".join(lines), encoding="utf-8")
+    path = review / "task-a-test-sample.md"
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path

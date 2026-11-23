@@ -16,9 +16,10 @@ correct answer. Every rule marked **(code)** is checked by code; the rest are ju
 
 5. Keep every fact in the source answer, with its exact figure, and add no fact of your own.
 6. **(code)** Name the policy the answer comes from and its section, in this form:
-   `Our Warranty policy, section "Making a claim", says`. Policy names are Warranty, Returns and
-   refunds, Servicing, Safety and recalls, and Delivery. Help articles are named as
-   `our help article "<title>"`.
+   `Our Warranty policy, section "Making a claim", says`. Policy names are the policy titles:
+   Warranty, Returns and refunds, Servicing and engineer visits, and Safety and recalls. A
+   section under a product, plan or region names it first: `section "Brio kettle: Cover
+   period"`. Help articles are named as `our help article "<title>"`.
 7. **(code)** Never promise an outcome. These phrases are banned: `we will refund`,
    `we will replace`, `guaranteed`, `definitely`, `we promise`, `no problem at all`.
    Say what the policy provides instead.

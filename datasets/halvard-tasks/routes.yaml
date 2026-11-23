@@ -24,7 +24,8 @@ routes:
       including for an appliance that arrived damaged or stopped working soon after delivery.
   delivery:
     team: Delivery
-    policy: DEL
+    # The library has no delivery policy (the DEL documents are deleted help articles).
+    policy: null
     definition: >-
       The customer asks about an order that has not arrived yet: its date, slot, tracking,
       access, or rearranging the delivery or installation visit.
