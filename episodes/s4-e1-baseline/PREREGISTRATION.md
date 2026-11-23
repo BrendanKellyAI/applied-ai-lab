@@ -116,3 +116,20 @@ set may leave too little room for E2 to E6. Written before the check is run:
   for the paired tests on 600 items to tell apart from noise.
 - The pilot's dev files are overwritten by the 200-item run (the first 40 rows are the same
   cached replies); the pilot's numbers are kept in its commit message (a65d157).
+
+## Amendment 2, 23 November 2026: the rebuilt Task A, before the freeze
+
+The check under Amendment 1 got 183 of 200 dev items fully right, so Task A was rebuilt as
+draft-3 with four more hard cases (mixed_request, two_requests, negated_cue,
+safe_use_question). On the rebuilt dev set the same arm got 170 of 200 (85%, interval 79% to
+89%), still at the rule's line. Written before any test call:
+
+- **The rebuilt data is kept.** The rule was applied once, as stated; rebuilding until the
+  baseline falls would tune the test set to this model. Brendan approved keeping it.
+- **Corrected count:** the rebuilt Task A test set has **65** safety items, not 66, so safety
+  recall is out of 65 and false alarms out of 535. Task B is unchanged (300 items, 34 not
+  found).
+- **What this means for the claims:** C1 may fail on test. If it does, it is reported as
+  Failed, and the later rungs have about 15 points to gain, mostly from false safety alarms
+  (23 of 175 dev items with no incident were flagged).
+- The claims, pass marks and configs are unchanged.
