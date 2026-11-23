@@ -16,6 +16,21 @@ LENGTH_MARGIN = 0.25
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$")
 
 
+EN_DASH = chr(0x2013)
+EM_DASH = chr(0x2014)
+_RANGE = re.compile(rf"(\d)\s*[{EN_DASH}{EM_DASH}]\s*(\d)")
+_SPACED = re.compile(rf"\s+[{EN_DASH}{EM_DASH}]\s+|{EM_DASH}")
+
+
+def undash(text: str) -> str:
+    """Replace en and em dashes, which the series never publishes: a number range becomes
+    "to", a dash between words becomes a comma, and any other en dash a hyphen. Applied when
+    the data files are written; raw logs keep the model's text exactly."""
+    text = _RANGE.sub(lambda m: f"{m.group(1)} to {m.group(2)}", text)
+    text = _SPACED.sub(", ", text)
+    return text.replace(EN_DASH, "-")
+
+
 class ReplyError(ValueError):
     """A model reply that is not the JSON object asked for."""
 

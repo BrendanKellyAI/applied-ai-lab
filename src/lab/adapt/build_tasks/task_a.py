@@ -12,7 +12,13 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
-from lab.adapt.build_tasks.checks import ReplyError, check_message, message_of, parse_object
+from lab.adapt.build_tasks.checks import (
+    ReplyError,
+    check_message,
+    message_of,
+    parse_object,
+    undash,
+)
 from lab.adapt.build_tasks.config import SPLITS, Split, TaskBuildConfig
 from lab.adapt.build_tasks.dedupe import NearDuplicateIndex, near_duplicates
 from lab.adapt.build_tasks.prompts import (
@@ -197,7 +203,7 @@ def item_record(item: Kept) -> dict:
     seed = item.seed
     return {
         "id": seed.id,
-        "message": item.message,
+        "message": undash(item.message),
         "label": seed.label.model_dump(),
         "kind": seed.kind,
         "channel": seed.channel,

@@ -429,3 +429,11 @@ def test_unknown_product_items_may_name_their_unsold_appliance():
     words = " ".join(["fine"] * seed.length[0])
     message = json.dumps({"message": f"My {seed.also_named}s {words}"})
     assert check_message(seed, message, DEFINITIONS) is None
+
+
+def test_undash_replaces_en_and_em_dashes():
+    from lab.adapt.build_tasks.checks import undash
+
+    en, em = chr(0x2013), chr(0x2014)
+    assert undash(f"it took 3{en}5 days {em} far too long") == "it took 3 to 5 days, far too long"
+    assert undash(f"well{em}broken and half{en}done") == "well, broken and half-done"

@@ -690,39 +690,24 @@
   "generation_attempts": [
     {
       "planned": 3116,
-      "made": 3112,
-      "cached": 4,
+      "made": 0,
+      "cached": 0,
       "failed": 0,
-      "tokens": {
-        "google": {
-          "input": 594307,
-          "output": 303169
-        }
-      }
+      "tokens": {}
     },
     {
       "planned": 105,
-      "made": 105,
+      "made": 0,
       "cached": 0,
       "failed": 0,
-      "tokens": {
-        "google": {
-          "input": 38052,
-          "output": 12600
-        }
-      }
+      "tokens": {}
     }
   ],
   "label_calls": {
     "planned": 3076,
-    "made": 3076,
+    "made": 0,
     "cached": 0,
     "failed": 0,
-    "tokens": {
-      "anthropic": {
-        "input": 4849456,
-        "output": 123057
-      }
-    }
+    "tokens": {}
   }
 }

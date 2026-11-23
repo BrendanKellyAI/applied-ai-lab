@@ -11,7 +11,7 @@ from collections import Counter
 from collections.abc import Callable, Mapping, Sequence
 from pathlib import Path
 
-from lab.adapt.build_tasks.checks import ReplyError, parse_object
+from lab.adapt.build_tasks.checks import ReplyError, parse_object, undash
 from lab.adapt.build_tasks.config import SPLITS, Split, TaskBuildConfig
 from lab.adapt.build_tasks.passages import (
     NOT_FOUND,
@@ -259,12 +259,12 @@ def _keep(
         bucket.append(
             {
                 "id": seed.id,
-                "question": question,
-                "answer": answer,
+                "question": undash(question),
+                "answer": undash(answer),
                 "kind": seed.kind,
                 "passage_id": seed.passage.id,
                 "source": {"kind": source.kind, "name": source.name, "section": source.section},
-                "target_reply": replies[seed.id],
+                "target_reply": undash(replies[seed.id]),
             }
         )
     return kept
