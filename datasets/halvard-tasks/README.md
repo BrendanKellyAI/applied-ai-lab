@@ -4,9 +4,11 @@ Two invented support tasks for Halvard Home, an invented UK appliance maker. Eve
 reply, label and rule here is fictional. `datasets/halvard/` (the Season 2 library) is the
 source of Task B's passages and is not changed.
 
-**Status: not yet frozen.** The test sets are frozen, and `MANIFEST.json` written, only after
-Brendan's hand checks of `review/task-a-test-sample.md` (50 items) and
-`review/task-b-test-sample.md` (20 items). Until then any file here may still change.
+**Status: frozen on 23 November 2026,** after Brendan's hand checks of
+`review/task-a-test-sample.md` (50 items) and `review/task-b-test-sample.md` (20 items) found
+no errors. `MANIFEST.json` holds the hash of every split and definition file
+(`scripts/freeze_halvard_tasks.py`), and `tests/adapt/test_halvard_tasks_frozen.py` fails if
+one changes.
 
 | | Train | Dev | Test |
 |---|---|---|---|

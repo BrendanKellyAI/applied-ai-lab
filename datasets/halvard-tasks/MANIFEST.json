@@ -1,0 +1,36 @@
+{
+ "dataset": "halvard-tasks",
+ "frozen": "2026-11-23",
+ "files": {
+  "routes.yaml": {
+   "sha256": "befefb4abbe20fa648472c8e8b95536d0816efd91b913ce882e7bdeb21cc35d6"
+  },
+  "style-guide.md": {
+   "sha256": "8ae5df42a1e940819dbc52723553cd249cdfc57387f036bfdbece7e165c21991"
+  },
+  "task-a/train.jsonl": {
+   "sha256": "e13d9a0ce3833b810513556f26e56e6e1bd1b92233b468d529bb7651f9100814",
+   "items": 1600
+  },
+  "task-a/dev.jsonl": {
+   "sha256": "91301ccc5fb92cf3d0a3f5c8e77be2c39d54a120718b961ab019c07e8fbd8c33",
+   "items": 200
+  },
+  "task-a/test.jsonl": {
+   "sha256": "35689866495e91a6ec0cf9fc9a93e790fb808770309e178cedd7ed548e170002",
+   "items": 600
+  },
+  "task-b/train.jsonl": {
+   "sha256": "0592f2a3fd63803c6346d6d0f4a5311e0c678868d9e9d9e4f2282bb55fb1100f",
+   "items": 600
+  },
+  "task-b/dev.jsonl": {
+   "sha256": "b02583df624b02d0d44dfe52e7fdfdb38b624f1c2b7d4b63d25e1fe8b654e73d",
+   "items": 100
+  },
+  "task-b/test.jsonl": {
+   "sha256": "f70a79071fe525599f6e0699995599379ccca8b08a87067c6b66172e71f34d8b",
+   "items": 300
+  }
+ }
+}
