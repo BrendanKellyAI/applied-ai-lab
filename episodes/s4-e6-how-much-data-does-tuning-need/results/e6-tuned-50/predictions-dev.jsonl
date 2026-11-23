@@ -1,0 +1,200 @@
+{"id": "A-dev-00000", "text": "{\"route\": \"safety\", \"safety\": true, \"product\": \"ashby tumble dryer\", \"fault\": \"safety_hazard\"}", "input_tokens": 113, "output_tokens": 32}
+{"id": "A-dev-00001", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"new appliance\", \"fault\": \"fault_of_product\"}", "input_tokens": 113, "output_tokens": 29}
+{"id": "A-dev-00002", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"vibration\"}", "input_tokens": 115, "output_tokens": 30}
+{"id": "A-dev-00003", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 193, "output_tokens": 40}
+{"id": "A-dev-00006", "text": "{\"route\": \"product\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 66, "output_tokens": 37}
+{"id": "A-dev-00007", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"fault_of_product\"}", "input_tokens": 169, "output_tokens": 33}
+{"id": "A-dev-00008", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"vibration\"}", "input_tokens": 188, "output_tokens": 29}
+{"id": "A-dev-00009", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"dented\"}", "input_tokens": 124, "output_tokens": 31}
+{"id": "A-dev-00010", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"delivery_failure\"}", "input_tokens": 69, "output_tokens": 30}
+{"id": "A-dev-00012", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"fault_code_101\"}", "input_tokens": 68, "output_tokens": 35}
+{"id": "A-dev-00013", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"air_fryer\", \"fault\": null}", "input_tokens": 171, "output_tokens": 28}
+{"id": "A-dev-00014", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Lumen thermostat\", \"fault\": \"no_product\"}", "input_tokens": 71, "output_tokens": 28}
+{"id": "A-dev-00015", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"safety\"}", "input_tokens": 192, "output_tokens": 30}
+{"id": "A-dev-00016", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"electric_shock\"}", "input_tokens": 74, "output_tokens": 31}
+{"id": "A-dev-00017", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"fault\", \"fault_code\": \"0001\", \"fault_type\": \"fault\", \"fault_description\": \"product failure\"}", "input_tokens": 168, "output_tokens": 55}
+{"id": "A-dev-00018", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": null}", "input_tokens": 189, "output_tokens": 28}
+{"id": "A-dev-00019", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 77, "output_tokens": 27}
+{"id": "A-dev-00020", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": \"safety\"}", "input_tokens": 123, "output_tokens": 31}
+{"id": "A-dev-00021", "text": "{\"route\": \"product_delivery\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 79, "output_tokens": 26}
+{"id": "A-dev-00022", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 67, "output_tokens": 26}
+{"id": "A-dev-00023", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 182, "output_tokens": 32}
+{"id": "A-dev-00024", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Lumen thermostat\", \"fault\": \"power_on\"}", "input_tokens": 70, "output_tokens": 30}
+{"id": "A-dev-00025", "text": "{\"route\": \"safety\", \"safety\": false, \"safety_protocol\": false, \"safety_precautions\": false}", "input_tokens": 192, "output_tokens": 30}
+{"id": "A-dev-00026", "text": "{\"route\": \"return_refund\", \"safety\": true, \"product\": \"Ashby tumble dryer\", \"fault\": \"faulty_product\"}", "input_tokens": 182, "output_tokens": 32}
+{"id": "A-dev-00027", "text": "{\"route\": \"contact_service\", \"safety\": false, \"product\": null, \"fault\": null}", "input_tokens": 120, "output_tokens": 24}
+{"id": "A-dev-00028", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"power\"}", "input_tokens": 67, "output_tokens": 29}
+{"id": "A-dev-00029", "text": "{\"route\": \"product_delivery\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 67, "output_tokens": 26}
+{"id": "A-dev-00030", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"dents\"}", "input_tokens": 187, "output_tokens": 31}
+{"id": "A-dev-00031", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"cooling\"}", "input_tokens": 124, "output_tokens": 30}
+{"id": "A-dev-00032", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keele washing machine\", \"fault\": \"leak\"}", "input_tokens": 106, "output_tokens": 32}
+{"id": "A-dev-00033", "text": "{\"route\": \"service\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null, \"safety\": false}", "input_tokens": 185, "output_tokens": 32}
+{"id": "A-dev-00034", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"corra induction hob\", \"fault\": null}", "input_tokens": 115, "output_tokens": 27}
+{"id": "A-dev-00035", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"product_not_fit\"}", "input_tokens": 118, "output_tokens": 32}
+{"id": "A-dev-00036", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 71, "output_tokens": 28}
+{"id": "A-dev-00037", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Lumen Smart Thermostat\", \"fault\": \"vibration\"}", "input_tokens": 68, "output_tokens": 31}
+{"id": "A-dev-00038", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"error_code\"}", "input_tokens": 195, "output_tokens": 30}
+{"id": "A-dev-00039", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel\", \"fault\": \"leak\"}", "input_tokens": 69, "output_tokens": 29}
+{"id": "A-dev-00040", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"no_connection\"}", "input_tokens": 76, "output_tokens": 29}
+{"id": "A-dev-00041", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"fire\"}", "input_tokens": 184, "output_tokens": 29}
+{"id": "A-dev-00042", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"replacement lint filter\", \"fault\": null}", "input_tokens": 113, "output_tokens": 26}
+{"id": "A-dev-00043", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety", "input_tokens": 161, "output_tokens": 160}
+{"id": "A-dev-00044", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Orihockey heat pump\", \"fault\": null}", "input_tokens": 66, "output_tokens": 30}
+{"id": "A-dev-00045", "text": "{\"route\": \"safety\", \"safety\": true, \"safety\": true, \"safety\": true}", "input_tokens": 194, "output_tokens": 26}
+{"id": "A-dev-00046", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"route\"}", "input_tokens": 75, "output_tokens": 29}
+{"id": "A-dev-00047", "text": "{\"route\": \"track_order\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 101, "output_tokens": 28}
+{"id": "A-dev-00048", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"product_damage\"}", "input_tokens": 184, "output_tokens": 29}
+{"id": "A-dev-00049", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": false}", "input_tokens": 72, "output_tokens": 27}
+{"id": "A-dev-00050", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Orihheatpump\", \"fault\": \"smoke\"}", "input_tokens": 117, "output_tokens": 33}
+{"id": "A-dev-00051", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira vacuum\", \"fault\": \"vibration\"}", "input_tokens": 72, "output_tokens": 30}
+{"id": "A-dev-00053", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": null}", "input_tokens": 68, "output_tokens": 29}
+{"id": "A-dev-00054", "text": "{\"route\": \"safety\", \"safety\": true, \"product\": \"corra induction hob\", \"fault\": null}", "input_tokens": 120, "output_tokens": 28}
+{"id": "A-dev-00055", "text": "{\"route\": \"appointment\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": null}", "input_tokens": 105, "output_tokens": 27}
+{"id": "A-dev-00056", "text": "{\"route\": \"return_refund\", \"safety\": false, \"fault\": \"water_leak\", \"product\": \"Vale fridge freezer\"}", "input_tokens": 168, "output_tokens": 32}
+{"id": "A-dev-00057", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null}", "input_tokens": 72, "output_tokens": 27}
+{"id": "A-dev-00058", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"no_power\"}", "input_tokens": 78, "output_tokens": 31}
+{"id": "A-dev-00059", "text": "{\"route\": \"track_order\", \"priority\": \"high\", \"safety\": false, \"product\": \"order_123456\", \"fault\": \"route_not_found\"}", "input_tokens": 57, "output_tokens": 41}
+{"id": "A-dev-00061", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false, \"safety", "input_tokens": 189, "output_tokens": 160}
+{"id": "A-dev-00062", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"vibration\"}", "input_tokens": 75, "output_tokens": 31}
+{"id": "A-dev-00063", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"vibration\", \"noise\"}", "input_tokens": 121, "output_tokens": 34}
+{"id": "A-dev-00064", "text": "{\"route\": \"appointment\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": null}", "input_tokens": 71, "output_tokens": 28}
+{"id": "A-dev-00065", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"vibrating noise\"}", "input_tokens": 125, "output_tokens": 32}
+{"id": "A-dev-00066", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"safety_hazard\"}", "input_tokens": 71, "output_tokens": 31}
+{"id": "A-dev-00067", "text": "{\"route\": \"return_refund\", \"safety\": false, \"fault\": \"fault\", \"product\": \"Ashby tumble dryer\", \"fault_code\": \"0001\"}", "input_tokens": 118, "output_tokens": 40}
+{"id": "A-dev-00068", "text": "{\"route\": \"product_search\", \"safety\": false, \"fault\": null, \"product\": \"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "input_tokens": 107, "output_tokens": 160}
+{"id": "A-dev-00069", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"manual\"}", "input_tokens": 190, "output_tokens": 30}
+{"id": "A-dev-00070", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"leak\"}", "input_tokens": 108, "output_tokens": 30}
+{"id": "A-dev-00071", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 177, "output_tokens": 53}
+{"id": "A-dev-00072", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"product_not_suitable\"}", "input_tokens": 182, "output_tokens": 33}
+{"id": "A-dev-00074", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"fault_of_product\"}", "input_tokens": 188, "output_tokens": 31}
+{"id": "A-dev-00075", "text": "{\"route\": \"set_up_instructions\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 73, "output_tokens": 28}
+{"id": "A-dev-00076", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"electric blanket\", \"fault\": \"noise\"}", "input_tokens": 194, "output_tokens": 27}
+{"id": "A-dev-00077", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"keel washing machine\", \"fault\": \"leak\"}", "input_tokens": 68, "output_tokens": 31}
+{"id": "A-dev-00078", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"fire\"}", "input_tokens": 75, "output_tokens": 30}
+{"id": "A-dev-00079", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Orihump heat pump\", \"fault\": \"no_power\"}", "input_tokens": 114, "output_tokens": 32}
+{"id": "A-dev-00080", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"latch_issue\"}", "input_tokens": 125, "output_tokens": 31}
+{"id": "A-dev-00081", "text": "{\"route\": \"return_refund\", \"safety\": false, \"fault\": null}", "input_tokens": 120, "output_tokens": 20}
+{"id": "A-dev-00082", "text": "{\"route\": \"order_status\", \"safety\": false, \"product\": \"product_name\", \"fault\": \"product_not_shipped\"}", "input_tokens": 71, "output_tokens": 30}
+{"id": "A-dev-00083", "text": "{\"route\": \"safety\", \"priority\": 1, \"safety\": true, \"product\": \"Brio kettle\", \"fault\": \"safety\"}", "input_tokens": 75, "output_tokens": 35}
+{"id": "A-dev-00084", "text": "{\"route\": \"faulty_product\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"vibrating_noise\"}", "input_tokens": 124, "output_tokens": 33}
+{"id": "A-dev-00085", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"vibration\"}", "input_tokens": 73, "output_tokens": 31}
+{"id": "A-dev-00086", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"leak\"}", "input_tokens": 66, "output_tokens": 31}
+{"id": "A-dev-00087", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 72, "output_tokens": 27}
+{"id": "A-dev-00088", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 120, "output_tokens": 26}
+{"id": "A-dev-00089", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"product_failure\"}", "input_tokens": 104, "output_tokens": 32}
+{"id": "A-dev-00090", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"fault\", \"fault_code\": \"001\"}", "input_tokens": 120, "output_tokens": 38}
+{"id": "A-dev-00091", "text": "{\"route\": \"safety\", \"priority\": 1, \"safety\": false, \"fault\": \"fault\", \"product\": \"Fenwick cooker hood\", \"fault_code\": \"fault\"}", "input_tokens": 125, "output_tokens": 43}
+{"id": "A-dev-00092", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tumble dryer\", \"fault\": \"leak\"}", "input_tokens": 65, "output_tokens": 30}
+{"id": "A-dev-00093", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"tumble dryer\", \"fault\": \"leak\"}", "input_tokens": 72, "output_tokens": 30}
+{"id": "A-dev-00095", "text": "{\"route\": \"warranty\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"fault_of_product\"}", "input_tokens": 72, "output_tokens": 31}
+{"id": "A-dev-00096", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null}", "input_tokens": 168, "output_tokens": 27}
+{"id": "A-dev-00097", "text": "{\"route\": \"product_delivery\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": null}", "input_tokens": 177, "output_tokens": 28}
+{"id": "A-dev-00098", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"electric_shock\"}", "input_tokens": 70, "output_tokens": 31}
+{"id": "A-dev-00099", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": null}", "input_tokens": 72, "output_tokens": 28}
+{"id": "A-dev-00100", "text": "{\"route\": \"product\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 114, "output_tokens": 31}
+{"id": "A-dev-00101", "text": "{\"route\": \"appointment\", \"priority\": 1, \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"fault\"}", "input_tokens": 117, "output_tokens": 33}
+{"id": "A-dev-00102", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 116, "output_tokens": 40}
+{"id": "A-dev-00103", "text": "{\"route\": \"care\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": null}", "input_tokens": 175, "output_tokens": 27}
+{"id": "A-dev-00104", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 110, "output_tokens": 40}
+{"id": "A-dev-00105", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"route\"}", "input_tokens": 73, "output_tokens": 27}
+{"id": "A-dev-00106", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"noise\"}", "input_tokens": 185, "output_tokens": 29}
+{"id": "A-dev-00107", "text": "{\"route\": \"order_delivery\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 66, "output_tokens": 27}
+{"id": "A-dev-00109", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"dented_front_door\"}", "input_tokens": 71, "output_tokens": 32}
+{"id": "A-dev-00110", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"no_power\"}", "input_tokens": 125, "output_tokens": 31}
+{"id": "A-dev-00111", "text": "{\"route\": \"fire\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"fire\"}", "input_tokens": 186, "output_tokens": 28}
+{"id": "A-dev-00112", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"leak\"}", "input_tokens": 123, "output_tokens": 31}
+{"id": "A-dev-00113", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"water_leak\"}", "input_tokens": 115, "output_tokens": 32}
+{"id": "A-dev-00114", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"door not closing\"}", "input_tokens": 76, "output_tokens": 31}
+{"id": "A-dev-00115", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"vibration\"}", "input_tokens": 190, "output_tokens": 31}
+{"id": "A-dev-00116", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": \"leak\"}", "input_tokens": 177, "output_tokens": 32}
+{"id": "A-dev-00117", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Orin heat pump\", \"fault\": null}", "input_tokens": 99, "output_tokens": 28}
+{"id": "A-dev-00118", "text": "{\"route\": \"technical\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 71, "output_tokens": 26}
+{"id": "A-dev-00119", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": null}", "input_tokens": 180, "output_tokens": 30}
+{"id": "A-dev-00120", "text": "{\"route\": \"return_to_customer\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 64, "output_tokens": 29}
+{"id": "A-dev-00121", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 168, "output_tokens": 32}
+{"id": "A-dev-00123", "text": "{\"route\": \"product\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 69, "output_tokens": 31}
+{"id": "A-dev-00124", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"vibrating noise\"}", "input_tokens": 186, "output_tokens": 33}
+{"id": "A-dev-00125", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"cooling\"}", "input_tokens": 71, "output_tokens": 30}
+{"id": "A-dev-00126", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"vibrating_sound\"}", "input_tokens": 77, "output_tokens": 33}
+{"id": "A-dev-00127", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"door_seal_failure\"}", "input_tokens": 68, "output_tokens": 33}
+{"id": "A-dev-00128", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 194, "output_tokens": 40}
+{"id": "A-dev-00129", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"noise\"}", "input_tokens": 120, "output_tokens": 29}
+{"id": "A-dev-00130", "text": "{\"route\": \"return_refund\", \"safety\": false, \"fault\": \"fault\", \"product\": \"Tessa dishwasher\", \"fault_code\": \"fault\"}", "input_tokens": 185, "output_tokens": 36}
+{"id": "A-dev-00131", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 116, "output_tokens": 27}
+{"id": "A-dev-00132", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"product_not_in_stock\"}", "input_tokens": 117, "output_tokens": 32}
+{"id": "A-dev-00133", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 200, "output_tokens": 26}
+{"id": "A-dev-00135", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 120, "output_tokens": 32}
+{"id": "A-dev-00136", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 121, "output_tokens": 26}
+{"id": "A-dev-00137", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 69, "output_tokens": 26}
+{"id": "A-dev-00138", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 115, "output_tokens": 32}
+{"id": "A-dev-00139", "text": "{\"route\": \"safety\", \"safety\": true, \"safety\": true, \"safety\": true}", "input_tokens": 175, "output_tokens": 26}
+{"id": "A-dev-00140", "text": "{\"route\": \"faulty_product\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"no_cooling\"}", "input_tokens": 70, "output_tokens": 32}
+{"id": "A-dev-00141", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"faulty_hood\", \"fault_code\": \"fault_hood\"}", "input_tokens": 194, "output_tokens": 42}
+{"id": "A-dev-00142", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"no_water_heating\"}", "input_tokens": 69, "output_tokens": 32}
+{"id": "A-dev-00143", "text": "{\"route\": \"order\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null}", "input_tokens": 182, "output_tokens": 26}
+{"id": "A-dev-00144", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"product_failure\"}", "input_tokens": 182, "output_tokens": 31}
+{"id": "A-dev-00145", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"kitchenware\", \"fault\": \"incorrect_product\"}", "input_tokens": 182, "output_tokens": 29}
+{"id": "A-dev-00146", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 114, "output_tokens": 26}
+{"id": "A-dev-00147", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": null}", "input_tokens": 70, "output_tokens": 29}
+{"id": "A-dev-00148", "text": "{\"route\": \"warranty\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"fault_in_operation\"}", "input_tokens": 185, "output_tokens": 32}
+{"id": "A-dev-00149", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null}", "input_tokens": 110, "output_tokens": 26}
+{"id": "A-dev-00150", "text": "{\"route\": \"order_status\", \"priority\": \"high\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 122, "output_tokens": 34}
+{"id": "A-dev-00151", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"vibrating noise\"}", "input_tokens": 64, "output_tokens": 33}
+{"id": "A-dev-00152", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"fault_101\"}", "input_tokens": 68, "output_tokens": 34}
+{"id": "A-dev-00153", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"vibration\"}", "input_tokens": 72, "output_tokens": 29}
+{"id": "A-dev-00154", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"faulty\"}", "input_tokens": 103, "output_tokens": 30}
+{"id": "A-dev-00155", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"product\"}", "input_tokens": 131, "output_tokens": 28}
+{"id": "A-dev-00156", "text": "{\"route\": \"return_refund\", \"safety\": false, \"fault\": \"leak\"}", "input_tokens": 184, "output_tokens": 22}
+{"id": "A-dev-00157", "text": "{\"route\": \"technical\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": \"error_code\"}", "input_tokens": 73, "output_tokens": 30}
+{"id": "A-dev-00158", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"leak\"}", "input_tokens": 71, "output_tokens": 31}
+{"id": "A-dev-00159", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 189, "output_tokens": 26}
+{"id": "A-dev-00160", "text": "{\"route\": \"order\", \"priority\": 1, \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": null}", "input_tokens": 73, "output_tokens": 33}
+{"id": "A-dev-00161", "text": "{\"route\": \"reschedule\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": null}", "input_tokens": 113, "output_tokens": 28}
+{"id": "A-dev-00162", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"smoke_spark\"}", "input_tokens": 70, "output_tokens": 33}
+{"id": "A-dev-00163", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 122, "output_tokens": 32}
+{"id": "A-dev-00164", "text": "{\"route\": \"safety\", \"safety\": true, \"product\": \"Tessa dishwasher\", \"fault\": \"burning_plastic_smoke\"}", "input_tokens": 193, "output_tokens": 33}
+{"id": "A-dev-00165", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Orihheatpump\", \"fault\": \"dehumidification\"}", "input_tokens": 179, "output_tokens": 35}
+{"id": "A-dev-00166", "text": "{\"route\": \"product_search\", \"safety\": false, \"product\": \"LINT_FILTER_123456\", \"fault\": null}", "input_tokens": 98, "output_tokens": 34}
+{"id": "A-dev-00167", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"leak\"}", "input_tokens": 121, "output_tokens": 30}
+{"id": "A-dev-00168", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 121, "output_tokens": 26}
+{"id": "A-dev-00169", "text": "{\"route\": \"complaint\", \"safety\": false, \"fault\": \"faulty_product\", \"product\": \"Brio kettle\", \"fault_code\": \"0001\"}", "input_tokens": 185, "output_tokens": 40}
+{"id": "A-dev-00170", "text": "{\"route\": \"return_to_customer_service\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"fault_of_product\"}", "input_tokens": 189, "output_tokens": 32}
+{"id": "A-dev-00171", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"not_connected\"}", "input_tokens": 176, "output_tokens": 30}
+{"id": "A-dev-00173", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"no_connection\"}", "input_tokens": 127, "output_tokens": 31}
+{"id": "A-dev-00174", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"product_delivery\"}", "input_tokens": 68, "output_tokens": 30}
+{"id": "A-dev-00175", "text": "{\"route\": \"safety\", \"priority\": 1, \"safety\": true, \"product\": \"Keel washing machine\", \"fault\": \"product_not_shipped\", \"fault_code\": \"001\"}", "input_tokens": 118, "output_tokens": 47}
+{"id": "A-dev-00176", "text": "{\"route\": \"order_refund\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": null}", "input_tokens": 109, "output_tokens": 28}
+{"id": "A-dev-00177", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 69, "output_tokens": 26}
+{"id": "A-dev-00178", "text": "{\"route\": \"track\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"no_product\"}", "input_tokens": 70, "output_tokens": 29}
+{"id": "A-dev-00179", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"vibrating noise\"}", "input_tokens": 178, "output_tokens": 33}
+{"id": "A-dev-00180", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"no_power\"}", "input_tokens": 120, "output_tokens": 31}
+{"id": "A-dev-00181", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Lumen Smart Thermostat\", \"fault\": \"battery compartment not closed\"}", "input_tokens": 104, "output_tokens": 33}
+{"id": "A-dev-00182", "text": "{\"route\": \"routine_maintenance\", \"safety\": false, \"fault\": null}", "input_tokens": 166, "output_tokens": 20}
+{"id": "A-dev-00183", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"vibration\"}", "input_tokens": 69, "output_tokens": 31}
+{"id": "A-dev-00184", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"burning_plastic\"}", "input_tokens": 116, "output_tokens": 32}
+{"id": "A-dev-00185", "text": "{\"route\": \"complaint\", \"safety\": false, \"fault\": \"defective\", \"product\": \"Ashby tumble dryer\"}", "input_tokens": 187, "output_tokens": 30}
+{"id": "A-dev-00186", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": null}", "input_tokens": 163, "output_tokens": 28}
+{"id": "A-dev-00187", "text": "{\"route\": \"product\", \"safety\": false, \"fault\": null, \"product\": \"Fenwick cooker hood grease filter\"}", "input_tokens": 74, "output_tokens": 30}
+{"id": "A-dev-00188", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 112, "output_tokens": 26}
+{"id": "A-dev-00189", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"noise\"}", "input_tokens": 68, "output_tokens": 30}
+{"id": "A-dev-00190", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 115, "output_tokens": 27}
+{"id": "A-dev-00192", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 76, "output_tokens": 27}
+{"id": "A-dev-00193", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 126, "output_tokens": 32}
+{"id": "A-dev-00194", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"dents\"}", "input_tokens": 74, "output_tokens": 30}
+{"id": "A-dev-00195", "text": "{\"route\": \"product\", \"safety\": false, \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 74, "output_tokens": 31}
+{"id": "A-dev-00196", "text": "{\"route\": \"refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"fire_hazard\"}", "input_tokens": 120, "output_tokens": 29}
+{"id": "A-dev-00197", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"ice_maker\"}", "input_tokens": 184, "output_tokens": 32}
+{"id": "A-dev-00198", "text": "{\"route\": \"fault\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault_code\": \"VIBRATION\"}", "input_tokens": 67, "output_tokens": 31}
+{"id": "A-dev-00199", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"setup\"}", "input_tokens": 119, "output_tokens": 29}
+{"id": "A-dev-00200", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 185, "output_tokens": 46}
+{"id": "A-dev-00201", "text": "{\"route\": \"technical\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": null}", "input_tokens": 73, "output_tokens": 27}
+{"id": "A-dev-00203", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"lid not closing\"}", "input_tokens": 169, "output_tokens": 30}
+{"id": "A-dev-00204", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 120, "output_tokens": 26}
+{"id": "A-dev-00205", "text": "{\"route\": \"product_return\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"product_return\"}", "input_tokens": 75, "output_tokens": 30}
+{"id": "A-dev-00206", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}", "input_tokens": 109, "output_tokens": 28}
+{"id": "A-dev-00207", "text": "{\"route\": \"safety\", \"safety\": false, \"safety\": false, \"safety\": false}", "input_tokens": 107, "output_tokens": 26}
+{"id": "A-dev-00208", "text": "{\"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false, \"route\": \"safety\", \"safety\": false}", "input_tokens": 181, "output_tokens": 40}
+{"id": "A-dev-00209", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"power_failure\"}", "input_tokens": 183, "output_tokens": 31}
+{"id": "A-dev-00210", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}", "input_tokens": 72, "output_tokens": 27}
+{"id": "A-dev-00211", "text": "{\"route\": \"safety\", \"safety\": false, \"product\": \"Keele washing machine\", \"fault\": null}", "input_tokens": 75, "output_tokens": 29}
+{"id": "A-dev-00212", "text": "{\"route\": \"fault\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault_code\": \"VIBRATION\"}", "input_tokens": 70, "output_tokens": 31}
