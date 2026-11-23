@@ -22,6 +22,8 @@ CONFIGS = [
     (E3 / "config.yaml", 600),
     (E4 / "ceiling.dev.yaml", 200),
     (E4 / "ceiling.yaml", 600),
+    (E4 / "config.dev.yaml", 200),
+    (E4 / "config.yaml", 600),
 ]
 
 
@@ -65,3 +67,12 @@ def test_e3_runs_the_ceiling_arms_on_the_one_line_prompt():
         assert [a.model_copy(update={"instructions": "unsure"}) for a in config.arms] == list(
             ceiling.arms
         )
+
+
+def test_e4_text_arm_is_e3s_best_arm_so_it_is_cached():
+    e3 = Experiment.load(E3 / "config.dev.yaml")
+    e4 = Experiment.load(E4 / "config.dev.yaml")
+    best = e3.arm("e3-similar-8")
+    assert all(a.examples == best.examples for a in e4.arms)
+    assert e4.arm("e4-text").instructions == best.instructions
+    assert [a.output for a in e4.arms] == ["text", "json_mode", "schema"]
