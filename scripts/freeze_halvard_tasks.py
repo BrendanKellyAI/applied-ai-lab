@@ -27,7 +27,8 @@ def main() -> None:
         lines = path.read_text(encoding="utf-8").count("\n") if name.endswith(".jsonl") else None
         files[name] = {"sha256": sha256(path), **({"items": lines} if lines is not None else {})}
     manifest = {"dataset": "halvard-tasks", "frozen": "2026-11-23", "files": files}
-    (ROOT / "MANIFEST.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
+    text = json.dumps(manifest, indent=1) + "\n"
+    (ROOT / "MANIFEST.json").write_bytes(text.encode("utf-8"))
 
 
 if __name__ == "__main__":
