@@ -1,0 +1,141 @@
+{
+  "episode": "s4-e1-baseline",
+  "task": "a",
+  "split": "dev",
+  "items": 40,
+  "reference": "a-one-line",
+  "primary_metric": "fully_right",
+  "arms": {
+    "a-one-line": {
+      "items": 40,
+      "fully_right": {
+        "count": 38,
+        "total": 40,
+        "rate": 0.95,
+        "low": 0.8349612263085903,
+        "high": 0.9861793326138516
+      },
+      "safety_recall": {
+        "count": 9,
+        "total": 9,
+        "rate": 1.0,
+        "low": 0.7008549515804559,
+        "high": 1.0
+      },
+      "safety_false_alarms": {
+        "count": 0,
+        "total": 31,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.11025539546043596
+      },
+      "json_valid": {
+        "count": 40,
+        "total": 40,
+        "rate": 1.0,
+        "low": 0.9123783988027135,
+        "high": 1.0
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 38,
+          "total": 40,
+          "rate": 0.95,
+          "low": 0.8349612263085903,
+          "high": 0.9861793326138516
+        },
+        "safety": {
+          "count": 40,
+          "total": 40,
+          "rate": 1.0,
+          "low": 0.9123783988027135,
+          "high": 1.0
+        },
+        "product": {
+          "count": 40,
+          "total": 40,
+          "rate": 1.0,
+          "low": 0.9123783988027135,
+          "high": 1.0
+        },
+        "fault": {
+          "count": 40,
+          "total": 40,
+          "rate": 1.0,
+          "low": 0.9123783988027135,
+          "high": 1.0
+        }
+      },
+      "route_macro_f1": 0.9528,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 3,
+          "total": 3,
+          "rate": 1.0,
+          "low": 0.4385029682449546,
+          "high": 1.0
+        },
+        "harmless_safety_word": {
+          "count": 1,
+          "total": 1,
+          "rate": 1.0,
+          "low": 0.20654931437723745,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 21,
+          "total": 23,
+          "rate": 0.9130434782608695,
+          "low": 0.7320401892425634,
+          "high": 0.9758199955157796
+        },
+        "played_down_safety": {
+          "count": 6,
+          "total": 6,
+          "rate": 1.0,
+          "low": 0.6096657120978346,
+          "high": 1.0
+        },
+        "safety": {
+          "count": 3,
+          "total": 3,
+          "rate": 1.0,
+          "low": 0.4385029682449546,
+          "high": 1.0
+        },
+        "two_products": {
+          "count": 3,
+          "total": 3,
+          "rate": 1.0,
+          "low": 0.4385029682449546,
+          "high": 1.0
+        },
+        "unknown_product": {
+          "count": 1,
+          "total": 1,
+          "rate": 1.0,
+          "low": 0.20654931437723745,
+          "high": 1.0
+        }
+      },
+      "invalid_reasons": {},
+      "tokens": {
+        "calls": 40,
+        "input_tokens": 12235,
+        "cached_input_tokens": 0,
+        "output_tokens": 1095,
+        "mean_input_tokens": 305.9,
+        "mean_output_tokens": 27.4
+      },
+      "items_without_reply": 0
+    }
+  },
+  "comparisons": {},
+  "cost_ratios": {
+    "a-one-line": {
+      "per_item": 1.0,
+      "per_primary_hit": 1.0
+    }
+  },
+  "cost_note": "Answer calls only, as multiples of the reference arm; judge calls are measurement and are left out. Cached input is priced at the cached rate where one is known. External (tuned) arms run on Colab and have no API cost."
+}
