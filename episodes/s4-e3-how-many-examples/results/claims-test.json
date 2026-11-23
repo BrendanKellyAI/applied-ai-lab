@@ -1,0 +1,62 @@
+[
+  {
+    "id": "C1",
+    "title": "Examples help",
+    "held": true,
+    "detail": {
+      "reference": 521,
+      "arms": {
+        "e3-random-2": {
+          "fully_right": 527,
+          "p_holm": 0.5044037600228256
+        },
+        "e3-random-8": {
+          "fully_right": 562,
+          "p_holm": 5.020497356178488e-07
+        },
+        "e3-similar-8": {
+          "fully_right": 593,
+          "p_holm": 2.6191185171389026e-18
+        },
+        "e3-random-32": {
+          "fully_right": 583,
+          "p_holm": 1.4220124643776755e-15
+        }
+      }
+    }
+  },
+  {
+    "id": "C2",
+    "title": "Returns shrink",
+    "held": true,
+    "detail": {
+      "n0_to_8": 41,
+      "8_to_32": 21
+    }
+  },
+  {
+    "id": "C3",
+    "title": "Similar examples beat random ones",
+    "held": true,
+    "detail": {
+      "similar_8": 593,
+      "random_8": 562,
+      "only_a": 32,
+      "only_b": 1,
+      "p_value": 7.916241884231567e-09
+    }
+  },
+  {
+    "id": "C4",
+    "title": "Order alone moves answers",
+    "held": true,
+    "detail": {
+      "flips": 27,
+      "items": 600,
+      "share": 0.045,
+      "only_a": 14,
+      "only_b": 13,
+      "p_value": 1.0
+    }
+  }
+]

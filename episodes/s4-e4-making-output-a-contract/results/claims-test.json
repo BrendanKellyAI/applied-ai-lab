@@ -1,0 +1,33 @@
+[
+  {
+    "id": "C1",
+    "title": "A schema makes every reply readable",
+    "held": true,
+    "detail": {
+      "json_valid": {
+        "count": 600,
+        "total": 600,
+        "rate": 1.0,
+        "low": 0.9936382989862994,
+        "high": 1.0
+      }
+    }
+  },
+  {
+    "id": "C2",
+    "title": "Constraining the format does not change accuracy",
+    "held": true,
+    "detail": {
+      "against_text": {
+        "e4-json-mode": {
+          "net": 1,
+          "p_holm": 1.0
+        },
+        "e4-schema": {
+          "net": 0,
+          "p_holm": 1.0
+        }
+      }
+    }
+  }
+]

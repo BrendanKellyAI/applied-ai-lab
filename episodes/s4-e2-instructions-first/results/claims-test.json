@@ -1,0 +1,49 @@
+[
+  {
+    "id": "C1",
+    "title": "Definitions help",
+    "held": true,
+    "detail": {
+      "reference": 521,
+      "rungs": {
+        "e2-definitions": {
+          "fully_right": 587,
+          "p_holm": 5.79510097338583e-15
+        },
+        "e2-policy": {
+          "fully_right": 590,
+          "p_holm": 1.886109588367342e-15
+        },
+        "e2-unsure": {
+          "fully_right": 596,
+          "p_holm": 3.1376614995361446e-20
+        }
+      }
+    }
+  },
+  {
+    "id": "C2",
+    "title": "The safety definition cuts false alarms",
+    "held": true,
+    "detail": {
+      "rate": 0.005607476635514018,
+      "reference_rate": 0.12710280373831775,
+      "ratio": 0.0441
+    }
+  },
+  {
+    "id": "C3",
+    "title": "Fewer false alarms do not cost missed incidents",
+    "held": true,
+    "detail": {
+      "best": "e2-definitions",
+      "safety_recall": {
+        "count": 65,
+        "total": 65,
+        "rate": 1.0,
+        "low": 0.9441984686771432,
+        "high": 1.0
+      }
+    }
+  }
+]
