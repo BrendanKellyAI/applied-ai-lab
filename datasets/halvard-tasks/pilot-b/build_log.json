@@ -1,0 +1,75 @@
+{
+  "dataset_version": "halvard-tasks-v1",
+  "generator": {
+    "provider": "google",
+    "model": "gemini-3.1-flash-lite",
+    "reasoning": "minimal",
+    "max_output_tokens": 800
+  },
+  "checker": {
+    "provider": "anthropic",
+    "model": "claude-haiku-5-5",
+    "reasoning": "off",
+    "max_output_tokens": 400
+  },
+  "seeds": {
+    "dev": 20
+  },
+  "passages": {
+    "dev": 20
+  },
+  "qa_failed": [],
+  "unsupported": [
+    "B-dev-00019"
+  ],
+  "rewrite_failed": [],
+  "facts_not_kept": [
+    "B-dev-00006",
+    "B-dev-00007"
+  ],
+  "kept": {
+    "dev": 17
+  },
+  "not_found_kept": {
+    "dev": 2
+  },
+  "calls": {
+    "qa": [
+      {
+        "planned": 20,
+        "made": 0,
+        "cached": 20,
+        "failed": 0,
+        "tokens": {}
+      }
+    ],
+    "support": {
+      "planned": 20,
+      "made": 0,
+      "cached": 20,
+      "failed": 0,
+      "tokens": {}
+    },
+    "rewrite": [
+      {
+        "planned": 19,
+        "made": 0,
+        "cached": 19,
+        "failed": 0,
+        "tokens": {}
+      }
+    ],
+    "facts": {
+      "planned": 17,
+      "made": 17,
+      "cached": 0,
+      "failed": 0,
+      "tokens": {
+        "anthropic": {
+          "input": 8317,
+          "output": 419
+        }
+      }
+    }
+  }
+}

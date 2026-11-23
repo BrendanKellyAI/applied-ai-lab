@@ -154,7 +154,7 @@ def estimate_task_b(
     )
     answerable = [s for s in seeds if s.kind != NOT_FOUND]
     facts_in = len(answerable) * (
-        chat_tokens(CHECK_SYSTEM) + chat_tokens(facts_prompt(answer, reply))
+        chat_tokens(CHECK_SYSTEM) + chat_tokens(facts_prompt(answer, answer, reply))
     )
     n = len(seeds)
     gen, check = config.generator, config.labeller

@@ -171,8 +171,13 @@ def _plain(reply: str, body: str) -> bool:
 
 def _cites(reply: str, source: Source) -> bool:
     expected = source.citation()
+    if expected is None:
+        return True
     # Titles can hold curly apostrophes; the reply has been normalised, so the citation is too.
-    return True if expected is None else normalise(expected) in reply
+    # The citation may open a sentence, so its first letter may be either case.
+    expected = normalise(expected)
+    rest = expected[1:]
+    return any(first + rest in reply for first in (expected[0].lower(), expected[0].upper()))
 
 
 def _not_found_ok(body: str, source: Source) -> bool:

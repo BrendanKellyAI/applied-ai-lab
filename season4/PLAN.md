@@ -84,8 +84,10 @@ and date in `capabilities.yaml` in step 1, with the new `fine_tunable`, `tuning_
 - **Task A:** train 1,600 (halved from the handover's 3,200 on 22 November 2026, to keep the
   build near 30 minutes), dev 200, test 600, about 10% safety items in each, with the hard cases
   seeded by template (two products, angry non-complaints, harmless heat words, invented products).
-- **Task B:** train 1,200, dev 100, test 300. Source answers are the S2 reference system's right
-  answers on train-side questions; no test item shares a corpus question with train.
+- **Task B:** train 600 (halved, 23 November 2026), dev 100, test 300. Source answers come
+  straight from library passages (question and answer, support check, style rewrite, fact
+  check), not from the S2 reference system; passages are split before any call, so no test
+  item shares a passage with train.
 - Generation is conditioned on the target label (product, fault, route, persona seeds), so labels
   are right by construction. The blind labeller then checks; disagreements are discarded and
   counted. Overgenerate by 30% to absorb discards (raised from 15% after the pilot).

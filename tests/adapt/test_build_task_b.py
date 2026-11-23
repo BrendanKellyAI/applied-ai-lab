@@ -76,7 +76,7 @@ class FakeModels:
         if "passage_answers" in request.prompt:
             return json.dumps({"passage_answers": False})
         if "all_facts_kept" in request.prompt:
-            return json.dumps({"all_facts_kept": True, "facts_added": False})
+            return json.dumps({"all_facts_kept": True, "facts_added": []})
         self.supports += 1
         ok = not (self.unsupported_every and self.supports % self.unsupported_every == 0)
         return json.dumps({"supported": ok, "answers_question": True})
@@ -297,3 +297,34 @@ def test_cli_task_b_pilot_build(tmp_path, monkeypatch):
     result = CliRunner().invoke(app, args)
     assert result.exit_code == 0, result.output
     assert "Kept: {'dev': 4}" in result.output
+
+
+@pytest.mark.parametrize(
+    ("text", "kept"),
+    [
+        ('{"all_facts_kept": true, "facts_added": []}', True),
+        ('{"all_facts_kept": true, "facts_added": ["open the door"]}', False),
+        ('{"all_facts_kept": false, "facts_added": []}', False),
+        ('{"all_facts_kept": true, "facts_added": false}', False),
+        ("not json", False),
+        (None, False),
+    ],
+)
+def test_facts_kept_needs_an_empty_list_of_added_facts(text, kept):
+    from lab.adapt.build_tasks.task_b import _facts_kept
+
+    assert _facts_kept(text) is kept
+
+
+def test_fact_check_sees_the_body_with_citation_and_safety_sentence_masked():
+    from lab.adapt.build_tasks.task_b import SAFETY_SENTENCE, SOURCE_MARK, for_fact_check
+    from lab.adapt.style import Source
+
+    source = Source("article", "Burning smell")
+    reply = (
+        f'{OPENING} {SAFETY_SENTENCE} Switch it off. Our help article "Burning smell" says so.'
+        f"\n\n{CLOSE[0]}\n{CLOSE[1]}"
+    )
+    seen = for_fact_check(reply, source)
+    assert seen == f"Switch it off. {SOURCE_MARK} says so."
+    assert for_fact_check(f"{OPENING} Fine.", Source("not_found", "")) == "Fine."

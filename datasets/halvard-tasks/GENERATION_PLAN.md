@@ -43,7 +43,7 @@ invented. `datasets/halvard/` is not changed.
    checks every code rule; a reply that fails is regenerated once with the failures, then
    dropped. The blind labeller checks that every fact in the answer is kept and none added;
    disagreements are dropped and counted.
-3. **Sizes:** train 1,200, dev 100, test 300. Test targets are reference replies only; arms are
+3. **Sizes:** train 600, dev 100, test 300. Test targets are reference replies only; arms are
    scored by the code checks and the judge, not by similarity to the target.
 
 ## Your check, then freeze

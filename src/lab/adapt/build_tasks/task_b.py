@@ -31,7 +31,7 @@ from lab.adapt.build_tasks.prompts_b import (
     rewrite_prompt,
     support_prompt,
 )
-from lab.adapt.style import RULES, check_reply
+from lab.adapt.style import RULES, Source, body_of, check_reply, normalise
 from lab.rag.build_corpus.generate import Generated, Task, generate
 from lab.rag.config import ModelSpec
 from lab.rag.corpus import Library
@@ -138,7 +138,10 @@ def build_task_b(
     facts_texts, facts_summary = _check_wave(
         runner,
         config.labeller,
-        {k: facts_prompt(supported[k][1], v) for k, v in answerable.items()},
+        {
+            k: facts_prompt(*supported[k], for_fact_check(v, by_id[k].source()))
+            for k, v in answerable.items()
+        },
         "task-b-facts",
         raw,
     )
@@ -231,8 +234,32 @@ def _supported(seed: BSeed, text: str | None) -> bool:
     return _flag(text, "supported") is True and _flag(text, "answers_question") is True
 
 
+SOURCE_MARK = "[source]"
+SAFETY_SENTENCE = "Please stop using the appliance and unplug it if it is safe to do so."
+
+
+def for_fact_check(reply: str, source: Source) -> str:
+    """The reply as the fact checker sees it: the body only, with the citation and the fixed
+    safety sentence masked, since the checker lists those as added facts however it is told."""
+    body = body_of(reply)
+    citation = source.citation()
+    if citation is not None:
+        citation = normalise(citation)
+        for first in (citation[0].lower(), citation[0].upper()):
+            body = body.replace(first + citation[1:], SOURCE_MARK)
+    return body.replace(SAFETY_SENTENCE, "").strip()
+
+
 def _facts_kept(text: str | None) -> bool:
-    return _flag(text, "all_facts_kept") is True and _flag(text, "facts_added") is False
+    """All facts kept, and none added: the checker must list added facts, which keeps it from
+    flagging a reply that only rewords the answer."""
+    if _flag(text, "all_facts_kept") is not True:
+        return False
+    try:
+        added = parse_object(text).get("facts_added")
+    except ReplyError:
+        return False
+    return isinstance(added, list) and not added
 
 
 def _keep(

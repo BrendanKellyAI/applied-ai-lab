@@ -87,18 +87,29 @@ def rewrite_prompt(seed: BSeed, question: str, answer: str, style_guide: str) ->
             f"exactly: {NOT_FOUND_SENTENCE}"
         )
     else:
-        lines.append(f"Cite the source in exactly this form: {source.citation()}")
+        lines += [
+            f"Cite the source in exactly this form: {source.citation()}",
+            "Use only the facts in the correct answer. Add no reasons, benefits, advice, "
+            "reassurance or offers of further help that the answer does not give. If the reply "
+            "would be too short, reach the length by briefly restating the customer's question, "
+            "never by adding a fact.",
+        ]
     lines.append("Write the reply.")
     return "\n".join(lines)
 
 
-def facts_prompt(answer: str, reply: str) -> str:
+def facts_prompt(question: str, answer: str, reply: str) -> str:
     return (
-        f"Source answer: {answer}\n\nReply: {reply}\n\nDoes the reply state every fact in the "
-        "source answer, with the same figures, and does it add any fact that is not in the "
-        "source answer? Greetings, sign-offs, the citation of the source and a fixed apology "
-        "are not facts. Reply "
-        '{"all_facts_kept": true or false, "facts_added": true or false}'
+        f"Customer question: {question}\n\nSource answer: {answer}\n\nReply: {reply}\n\n"
+        "Does the reply state every fact in the source answer, with the same figures? Then list "
+        "each fact in the reply that is in neither the source answer nor the customer question, "
+        "quoting the reply's words. These are not facts and are never listed: anything the "
+        "customer question says (its product, its details, the problem it describes), [source] "
+        "where the citation was, greetings and sign-offs, the fixed apology, the "
+        "fixed safety sentence telling the customer to stop using the appliance and unplug it "
+        "if it is safe to do so, and any rewording of a fact the source answer states. Reply "
+        '{"all_facts_kept": true or false, "facts_added": ["quoted words", ...]} with an '
+        "empty list when nothing is added."
     )
 
 

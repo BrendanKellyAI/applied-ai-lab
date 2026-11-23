@@ -70,6 +70,11 @@ def test_article_citation_and_curly_apostrophes():
         'our help article "Resetting your Ashby tumble dryer" says',
     )
     assert check_reply(reply, ARTICLE).citation
+    opening = reply.replace("our help article", "Our help article")
+    assert check_reply(opening, ARTICLE).citation
+    lowered = GOOD.replace("Our Warranty policy", "our Warranty policy")
+    assert check_reply(lowered, Source("policy", "Warranty", "Brio kettle: Cover period")).citation
+    assert not check_reply(reply.replace("help article", "Help Article"), ARTICLE).citation
     curly = f"Thank you for getting in touch.\n\n{NOT_FOUND.replace(chr(39), chr(0x2019))}\n\n"
     assert body_of(curly + "Kind regards,\nThe Halvard Home team") == NOT_FOUND
 

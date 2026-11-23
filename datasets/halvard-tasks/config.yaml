@@ -71,7 +71,7 @@ task_b:
   # rewritten as a reply in the house style. Passages are split before generation, so no
   # test item shares a passage with train.
   library: ../halvard
-  splits: {train: 1200, dev: 100, test: 300}
+  splits: {train: 600, dev: 100, test: 300}
   overgenerate: 0.30
   pilot_seeds: 20
   # Share of items whose question the passage does not answer, to teach the fixed not found
