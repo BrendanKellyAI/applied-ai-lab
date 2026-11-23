@@ -61,3 +61,27 @@ file's hash and a frozen test fails if any changes. Later changes are dated amen
 | Task B question generation | about 1,700 | about 1.5 million in, 0.2 million out |
 | Task B S2 reference answers and judge | about 1,700 each | about 9 million in, 0.6 million out, on `gpt-6-luna` and `gemini-3.6-flash` |
 | Task B style rewrites and fact check | about 3,400 | about 3 million in, 0.5 million out |
+
+## Amendment, 23 November 2026: Task A draft-3, harder
+
+The first Task A build was too easy: `gpt-6-luna` with a one-line prompt got 183 of 200 dev
+items fully right (`episodes/s4-e1-baseline`, amendment 1, whose rule was fixed before the
+check). Task A is rebuilt before any test set is frozen. Task B is unchanged.
+
+- **Four new hard cases** (`routes.yaml` draft-3), each with a label fixed by a written rule:
+  `mixed_request` (a fault, then a request for money back: return_refund by precedence),
+  `two_requests` (a minor request first, then one the precedence rules decide),
+  `negated_cue` (another request mentioned and ruled out), `safe_use_question` (asks whether
+  something is safe, with no incident: safety false).
+- **Shares:** `harmless_safety_word` 5% to 10% (false safety alarms were the main error) and
+  `angry_not_complaint` 6% to 8%. Hard cases are now 64% of items, against 27% before; plain
+  items about 30%.
+- **Overgeneration** 30% to 45%, since hard cases are discarded more often by the label check.
+  3,480 seeds for 2,400 kept items.
+- **Anthropic limits** raised to 10 at a time and 250 a minute, to keep the build near 30
+  minutes.
+- Routes, products, faults, the safety definition, the label check, the near duplicate rule
+  and the sizes are unchanged. Faults and products are still paired at random, so some
+  messages describe an odd fault for their appliance; the label check drops the ones that do
+  not read sensibly.
+- The first build stays in git history (f9d0e6f) and is reported in the dataset README.

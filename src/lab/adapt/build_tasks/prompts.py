@@ -30,6 +30,17 @@ KIND_BRIEFS = {
         "or escalation."
     ),
     "unknown_product": "The message is about an appliance Halvard Home does not sell.",
+    "mixed_request": (
+        "The customer first says the fault should be fixed or the appliance replaced, then "
+        "decides they would rather have their money back, and asks for that."
+    ),
+    "two_requests": "",
+    "negated_cue": "",
+    "safe_use_question": (
+        "The customer asks whether something is safe to do with the appliance (for example "
+        "leaving it running overnight, or whether a surface getting hot is normal). Nothing "
+        "has gone wrong and there has been no incident."
+    ),
 }
 
 ROUTE_BRIEFS = {
@@ -70,6 +81,17 @@ def generation_prompt(seed: Seed, definitions: Definitions) -> str:
         lines.append("They describe no fault with the appliance.")
     if KIND_BRIEFS[seed.kind]:
         lines.append(KIND_BRIEFS[seed.kind])
+    if seed.kind == "two_requests" and seed.second_route:
+        lines.append(
+            "Before that, the message opens with a second, smaller request about the same "
+            f"appliance: the customer {ROUTE_BRIEFS[seed.second_route]}. It describes no fault."
+        )
+    if seed.kind == "negated_cue" and seed.second_route:
+        lines.append(
+            "The customer mentions a different request and clearly rules it out, the kind where "
+            f"a customer {ROUTE_BRIEFS[seed.second_route]} (for example 'I am not asking for "
+            "that')."
+        )
     return "\n".join(lines)
 
 

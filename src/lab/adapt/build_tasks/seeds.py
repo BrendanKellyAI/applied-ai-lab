@@ -38,6 +38,29 @@ ROUTE_FAULTS: dict[str, tuple[str | None, ...]] = {
     "complaint": (None, "no_power", "leak", "noise", "poor_performance", "damaged_on_arrival"),
     "other": (None,),
 }
+# draft-3 hard cases. mixed_request: a fault, then a request for money back.
+MIXED_FAULTS = ("no_power", "leak", "noise", "poor_performance")
+# two_requests: (the route the precedence rules give, the minor request asked first). The
+# minor request never describes a fault, so the label's fault is the main request's.
+TWO_REQUESTS = (
+    ("delivery", "how_to_use"),
+    ("delivery", "spare_part"),
+    ("return_refund", "how_to_use"),
+    ("return_refund", "spare_part"),
+    ("warranty_claim", "how_to_use"),
+    ("warranty_claim", "spare_part"),
+    ("complaint", "how_to_use"),
+)
+# negated_cue: the request each route's message mentions and rules out.
+RULED_OUT = {
+    "warranty_claim": "return_refund",
+    "return_refund": "warranty_claim",
+    "how_to_use": "complaint",
+    "servicing_booking": "warranty_claim",
+    "delivery": "return_refund",
+    "spare_part": "warranty_claim",
+}
+
 # Routes on which a message may name no product at all, and how often.
 NO_PRODUCT_SHARE = {"delivery": 0.2, "complaint": 0.3, "how_to_use": 0.1}
 
@@ -56,6 +79,8 @@ class Seed(BaseModel):
     # The other product named in a two_products item, or the unsold product an
     # unknown_product item names.
     also_named: str | None
+    # two_requests: the minor request asked first; negated_cue: the request ruled out.
+    second_route: str | None = None
     tone: str
     habit: str
     channel: str
@@ -105,6 +130,7 @@ def _seed(
 ) -> Seed:
     label, also_named = _label(kind, config, definitions, rng)
     label.check_against(definitions)
+    second_route = _second_route(kind, label, rng)
     personas = config.personas
     tone = "frustrated" if kind == "angry_not_complaint" else rng.choice(personas.tone)
     return Seed(
@@ -113,6 +139,7 @@ def _seed(
         label=label,
         kind=kind,
         also_named=also_named,
+        second_route=second_route,
         tone=tone,
         habit=rng.choice(personas.habit),
         channel=rng.choice(personas.channel),
@@ -134,6 +161,18 @@ def _label(
         return Label(route="other", safety=False, product=None, fault=None), unsold
     if kind == "angry_not_complaint":
         return _ordinary(rng.choice(ANGRY_ROUTES), products, rng), None
+    if kind == "mixed_request":
+        fault = rng.choice(MIXED_FAULTS)
+        product = rng.choice(products)
+        return Label(route="return_refund", safety=False, product=product, fault=fault), None
+    if kind == "two_requests":
+        main, _ = TWO_REQUESTS[rng.randrange(len(TWO_REQUESTS))]
+        return _ordinary(main, products, rng, always_product=True), None
+    if kind == "negated_cue":
+        return _ordinary(rng.choice(sorted(RULED_OUT)), products, rng), None
+    if kind == "safe_use_question":
+        product = rng.choice(products)
+        return Label(route="how_to_use", safety=False, product=product, fault=None), None
     route = _weighted_route(config.route_weights, rng)
     if kind == "two_products":
         route = route if route != "other" else "warranty_claim"
@@ -141,6 +180,14 @@ def _label(
         other = rng.choice([p for p in products if p != label.product])
         return label, other
     return _ordinary(route, products, rng), None
+
+
+def _second_route(kind: str, label: Label, rng: random.Random) -> str | None:
+    if kind == "two_requests":
+        return rng.choice([minor for main, minor in TWO_REQUESTS if main == label.route])
+    if kind == "negated_cue":
+        return RULED_OUT[label.route]
+    return None
 
 
 def _ordinary(

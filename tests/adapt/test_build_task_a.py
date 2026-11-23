@@ -437,3 +437,30 @@ def test_undash_replaces_en_and_em_dashes():
     en, em = chr(0x2013), chr(0x2014)
     assert undash(f"it took 3{en}5 days {em} far too long") == "it took 3 to 5 days, far too long"
     assert undash(f"well{em}broken and half{en}done") == "well, broken and half-done"
+
+
+def test_draft_3_hard_cases_have_labels_fixed_by_the_rules():
+    from collections import Counter
+
+    from lab.adapt.build_tasks.prompts import generation_prompt
+    from lab.adapt.build_tasks.seeds import RULED_OUT, TWO_REQUESTS
+
+    config = TaskBuildConfig.load(SOURCE / "config.yaml")
+    definitions = Definitions.load(SOURCE / "routes.yaml")
+    seeds = plan_seeds(config, definitions, pilot=False)
+    kinds = Counter(s.kind for s in seeds if s.split == "test")
+    assert kinds["plain"] / sum(kinds.values()) < 0.35
+    pairs = set(TWO_REQUESTS)
+    for seed in seeds:
+        label, prompt = seed.label, generation_prompt(seed, definitions)
+        if seed.kind == "mixed_request":
+            assert label.route == "return_refund" and label.fault and not label.safety
+        elif seed.kind == "two_requests":
+            assert (label.route, seed.second_route) in pairs and label.product
+            assert "smaller request" in prompt
+        elif seed.kind == "negated_cue":
+            assert seed.second_route == RULED_OUT[label.route] and "rules it out" in prompt
+        elif seed.kind == "safe_use_question":
+            assert label.route == "how_to_use" and not label.safety and label.fault is None
+        else:
+            assert seed.second_route is None

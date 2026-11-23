@@ -19,7 +19,8 @@ labeller:
 limits:
   google: {max_concurrency: 8, requests_per_minute: 300}
   # Season 3 ran Anthropic at 4 and 50; Haiku is lighter, and the runner backs off on 429s.
-  anthropic: {max_concurrency: 6, requests_per_minute: 150}
+  # Raised from 6 and 150 for the draft-3 rebuild, to keep it near 30 minutes.
+  anthropic: {max_concurrency: 10, requests_per_minute: 250}
 # A message that fails the code checks is sent back once with the reason, then dropped.
 max_attempts: 2
 
@@ -28,8 +29,9 @@ task_a:
   splits: {train: 1600, dev: 200, test: 600}
   # Extra seeds drawn per split to absorb discards; the first items to pass, in seed order,
   # are kept.
-  # Raised from 0.15 after the pilot discarded 7 of 40 (22 November 2026).
-  overgenerate: 0.30
+  # Raised from 0.15 after the pilot discarded 7 of 40 (22 November 2026), and to 0.45 for
+  # draft-3, whose hard cases are 64% of items and are discarded more often (23 November).
+  overgenerate: 0.45
   # Pilot: this many seeds from the dev split only.
   pilot_seeds: 40
   # A dev or test item whose character 5-gram Jaccard similarity to any train item is above
