@@ -311,9 +311,9 @@ def test_cli_task_b_pilot_build(tmp_path, monkeypatch):
     ],
 )
 def test_facts_kept_needs_an_empty_list_of_added_facts(text, kept):
-    from lab.adapt.build_tasks.task_b import _facts_kept
+    from lab.adapt.build_tasks.task_b import facts_verdict
 
-    assert _facts_kept(text) is kept
+    assert facts_verdict(text) is kept
 
 
 def test_fact_check_sees_the_body_with_citation_and_safety_sentence_masked():

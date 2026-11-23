@@ -60,7 +60,7 @@ def _cost(prices: PricesFile | None, spec: ModelSpec, inputs: int, outputs: int)
     return (inputs * price.input + outputs * price.output) / 1_000_000
 
 
-def _stage(
+def stage_cost(
     stage: str, spec: ModelSpec, calls: int, inputs: int, expected: int, prices: PricesFile | None
 ) -> StageCost:
     ceiling = calls * spec.max_output_tokens
@@ -91,23 +91,30 @@ def estimate_task_a(
     system = chat_tokens(labeller_system(definitions))
     label_inputs = sum(system + chat_tokens(labeller_prompt("")) + message_tokens(s) for s in seeds)
     return [
-        _stage("generate", config.generator, gen_calls, gen_inputs, gen_out, prices),
-        _stage(
+        stage_cost("generate", config.generator, gen_calls, gen_inputs, gen_out, prices),
+        stage_cost(
             "label", config.labeller, len(seeds), label_inputs, len(seeds) * LABEL_TOKENS, prices
         ),
     ]
 
 
-def format_estimate(costs: Sequence[StageCost], currency: str, title: str) -> str:
+def format_estimate(
+    costs: Sequence[StageCost],
+    currency: str,
+    title: str,
+    note: str = f"allowing {RETRY_SHARE:.0%} for generation retries",
+) -> str:
+    stage_width = max([10, *(len(c.stage) + 2 for c in costs)])
+    model_width = max([24, *(len(c.model) + 2 for c in costs)])
     lines = [
-        f"{title}, allowing {RETRY_SHARE:.0%} for generation retries:",
+        f"{title}, {note}:" if note else f"{title}:",
         "",
-        f"{'stage':<10}{'model':<24}{'calls':>7}{'input':>12}{'expected out':>14}"
-        f"{'ceiling out':>13}{'expected':>10}{'ceiling':>10}",
+        f"{'stage':<{stage_width}}{'model':<{model_width}}{'calls':>7}{'input':>12}"
+        f"{'expected out':>14}{'ceiling out':>13}{'expected':>10}{'ceiling':>10}",
     ]
     for c in costs:
         lines.append(
-            f"{c.stage:<10}{c.model:<24}{c.calls:>7,}{c.input_tokens:>12,}"
+            f"{c.stage:<{stage_width}}{c.model:<{model_width}}{c.calls:>7,}{c.input_tokens:>12,}"
             f"{c.expected_output:>14,}{c.ceiling_output:>13,}"
             f"{_money(c.expected_cost):>10}{_money(c.ceiling_cost):>10}"
         )
@@ -159,11 +166,11 @@ def estimate_task_b(
     n = len(seeds)
     gen, check = config.generator, config.labeller
     return [
-        _stage(
+        stage_cost(
             "qa", gen, round(n * retry), round(qa_in * retry), round(n * retry * QA_TOKENS), prices
         ),
-        _stage("support", check, n, support_in, n * SUPPORT_TOKENS, prices),
-        _stage(
+        stage_cost("support", check, n, support_in, n * SUPPORT_TOKENS, prices),
+        stage_cost(
             "rewrite",
             gen,
             round(n * retry),
@@ -171,5 +178,7 @@ def estimate_task_b(
             round(n * retry * REPLY_TOKENS),
             prices,
         ),
-        _stage("facts", check, len(answerable), facts_in, len(answerable) * FACTS_TOKENS, prices),
+        stage_cost(
+            "facts", check, len(answerable), facts_in, len(answerable) * FACTS_TOKENS, prices
+        ),
     ]

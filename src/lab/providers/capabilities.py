@@ -80,11 +80,25 @@ class CapabilityTable:
             raise UnsupportedSettingError(
                 f"{where} does not accept a temperature; set temperature: null"
             )
+        _check_output_format(request, caps, where)
         if caps.max_output_tokens and request.max_output_tokens > caps.max_output_tokens:
             raise UnsupportedSettingError(
                 f"{where} allows at most {caps.max_output_tokens} output tokens"
             )
         return caps
+
+
+def _check_output_format(request: GenerationRequest, caps: ModelCapabilities, where: str) -> None:
+    """JSON mode needs JSON mode or schema support; a schema needs schema support."""
+    wanted = request.output_format
+    if wanted is None:
+        return
+    offered = caps.structured_output or "none"
+    allowed = {"json_mode": ("json_mode", "schema"), "schema": ("schema",)}[wanted.kind]
+    if offered not in allowed:
+        raise UnsupportedSettingError(
+            f"{where} does not offer {wanted.kind} output (capabilities.yaml says {offered})"
+        )
 
 
 def _check_reasoning(request: GenerationRequest, caps: ModelCapabilities, where: str) -> None:

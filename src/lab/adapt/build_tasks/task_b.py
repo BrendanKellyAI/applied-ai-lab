@@ -148,7 +148,7 @@ def build_task_b(
     faithful = {
         k: v
         for k, v in replies.items()
-        if by_id[k].kind == NOT_FOUND or _facts_kept(facts_texts.get(k))
+        if by_id[k].kind == NOT_FOUND or facts_verdict(facts_texts.get(k))
     }
     kept = _keep(seeds, supported, faithful, config, pilot=pilot)
     _write(folder, kept)
@@ -250,7 +250,7 @@ def for_fact_check(reply: str, source: Source) -> str:
     return body.replace(SAFETY_SENTENCE, "").strip()
 
 
-def _facts_kept(text: str | None) -> bool:
+def facts_verdict(text: str | None) -> bool:
     """All facts kept, and none added: the checker must list added facts, which keeps it from
     flagging a reply that only rewords the answer."""
     if _flag(text, "all_facts_kept") is not True:

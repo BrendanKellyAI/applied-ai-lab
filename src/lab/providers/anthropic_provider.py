@@ -15,6 +15,7 @@ from lab.providers.base import (
     RateLimitError,
     ServerError,
     StreamInterruptedError,
+    UnsupportedSettingError,
 )
 from lab.providers.capabilities import CapabilityTable, default_capabilities
 from lab.providers.errors import error_for_status, retry_after_seconds
@@ -48,6 +49,9 @@ class AnthropicProvider:
         self._clock = clock
 
     def validate(self, request: GenerationRequest) -> None:
+        if request.output_format is not None:
+            # Season 4 holds only OpenAI answers to a format; this adapter does not send one.
+            raise UnsupportedSettingError("this adapter does not send an output format")
         self._capabilities.check(request)
 
     def generate(self, request: GenerationRequest) -> GenerationResult:

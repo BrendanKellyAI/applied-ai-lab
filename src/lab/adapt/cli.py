@@ -117,3 +117,13 @@ def _check_budget(prices: PricesFile | None, expected: list[float | None], key: 
             err=True,
         )
         raise typer.Exit(code=1)
+
+
+# Imported here, after the app exists, to keep the build commands' module short.
+from lab.adapt import cli_run  # noqa: E402
+
+adapt_app.command("run")(cli_run.run_command)
+adapt_app.command("analyse")(cli_run.analyse_command)
+adapt_app.command("tune")(cli_run.tune_command)
+adapt_app.command("status")(cli_run.status_command)
+adapt_app.command("score")(cli_run.score_command)

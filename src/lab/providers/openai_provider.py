@@ -11,6 +11,7 @@ from lab.providers.base import (
     GenerationRequest,
     GenerationResult,
     InvalidRequestError,
+    OutputFormat,
     ProviderError,
     RateLimitError,
     ServerError,
@@ -89,7 +90,20 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
         if request.show_thinking:
             reasoning["summary"] = "auto"
         params["reasoning"] = reasoning
+    if request.output_format is not None:
+        params["text"] = {"format": _text_format(request.output_format)}
     return params
+
+
+def _text_format(output: OutputFormat) -> dict[str, Any]:
+    if output.kind == "json_mode":
+        return {"type": "json_object"}
+    return {
+        "type": "json_schema",
+        "name": output.name,
+        "schema": output.json_schema,
+        "strict": True,
+    }
 
 
 def _is_reasoning_item(event: Any) -> bool:
