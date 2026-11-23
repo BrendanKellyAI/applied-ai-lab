@@ -1,0 +1,51 @@
+[
+  {
+    "id": "C1",
+    "title": "A one-line prompt leaves room to improve on Task A",
+    "held": false,
+    "detail": {
+      "fully_right": {
+        "count": 521,
+        "total": 600,
+        "rate": 0.8683333333333333,
+        "low": 0.8389193195532985,
+        "high": 0.8930608940332754
+      },
+      "upper_below": 0.85
+    }
+  },
+  {
+    "id": "C2",
+    "title": "The Task A gap is behaviour, not reading the message",
+    "held": false,
+    "detail": {
+      "product": 1.0,
+      "fully_right": 0.8683333333333333,
+      "gap": 0.1317
+    }
+  },
+  {
+    "id": "C3",
+    "title": "A one-line prompt misses safety incidents",
+    "held": false,
+    "detail": {
+      "safety_recall": {
+        "count": 65,
+        "total": 65,
+        "rate": 1.0,
+        "low": 0.9441984686771432,
+        "high": 1.0
+      },
+      "rate_below": 0.95
+    }
+  },
+  {
+    "id": "C4",
+    "title": "On Task B the model keeps the facts but not the house style",
+    "held": true,
+    "detail": {
+      "facts_kept": 0.8733333333333333,
+      "all_checks": 0.0
+    }
+  }
+]

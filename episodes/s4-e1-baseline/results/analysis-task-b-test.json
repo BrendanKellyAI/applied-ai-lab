@@ -1,0 +1,111 @@
+{
+  "episode": "s4-e1-baseline",
+  "task": "b",
+  "split": "test",
+  "items": 300,
+  "reference": "b-one-line",
+  "primary_metric": "primary",
+  "arms": {
+    "b-one-line": {
+      "items": 300,
+      "primary": {
+        "count": 0,
+        "total": 300,
+        "rate": 0.0,
+        "low": 8.673617379884035e-19,
+        "high": 0.012642971224546034
+      },
+      "all_checks": {
+        "count": 0,
+        "total": 300,
+        "rate": 0.0,
+        "low": 8.673617379884035e-19,
+        "high": 0.012642971224546034
+      },
+      "facts_kept": {
+        "count": 262,
+        "total": 300,
+        "rate": 0.8733333333333333,
+        "low": 0.8309188299507383,
+        "high": 0.9063077515349339
+      },
+      "checks": {
+        "opening": {
+          "count": 0,
+          "total": 300,
+          "rate": 0.0,
+          "low": 8.673617379884035e-19,
+          "high": 0.012642971224546034
+        },
+        "close": {
+          "count": 0,
+          "total": 300,
+          "rate": 0.0,
+          "low": 8.673617379884035e-19,
+          "high": 0.012642971224546034
+        },
+        "length": {
+          "count": 66,
+          "total": 300,
+          "rate": 0.22,
+          "low": 0.1768274459698328,
+          "high": 0.27025261791591293
+        },
+        "plain": {
+          "count": 294,
+          "total": 300,
+          "rate": 0.98,
+          "low": 0.9570603791821394,
+          "high": 0.9908023684422963
+        },
+        "citation": {
+          "count": 34,
+          "total": 300,
+          "rate": 0.11333333333333333,
+          "low": 0.082244501875291,
+          "high": 0.15419939587169124
+        },
+        "no_banned": {
+          "count": 298,
+          "total": 300,
+          "rate": 0.9933333333333333,
+          "low": 0.9760224167496929,
+          "high": 0.998169851642088
+        },
+        "not_found": {
+          "count": 266,
+          "total": 300,
+          "rate": 0.8866666666666667,
+          "low": 0.8458006041283088,
+          "high": 0.9177554981247089
+        },
+        "british": {
+          "count": 300,
+          "total": 300,
+          "rate": 1.0,
+          "low": 0.9873570287754538,
+          "high": 0.9999999999999998
+        }
+      },
+      "mean_words": 27.1,
+      "mean_sentence_words": 15.54,
+      "tokens": {
+        "calls": 300,
+        "input_tokens": 37407,
+        "cached_input_tokens": 0,
+        "output_tokens": 11164,
+        "mean_input_tokens": 124.7,
+        "mean_output_tokens": 37.2
+      },
+      "items_without_reply": 0
+    }
+  },
+  "comparisons": {},
+  "cost_ratios": {
+    "b-one-line": {
+      "per_item": 1.0,
+      "per_primary_hit": null
+    }
+  },
+  "cost_note": "Answer calls only, as multiples of the reference arm; judge calls are measurement and are left out. Cached input is priced at the cached rate where one is known. External (tuned) arms run on Colab and have no API cost."
+}
