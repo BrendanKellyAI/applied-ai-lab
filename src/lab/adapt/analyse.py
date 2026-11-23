@@ -165,7 +165,7 @@ def _cost_ratios(
 
 
 def write_analysis(experiment: Experiment, result: dict, charts: bool = True) -> Path:
-    out = experiment.results / f"analysis-{experiment.split}.json"
+    out = experiment.results / f"analysis-task-{experiment.task}-{experiment.split}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")
     if charts:

@@ -63,7 +63,7 @@ def _judge_costs(
     n_arms = len(experiment.arms)
     style = list(style_requests(experiment, inputs, stand_in, stand_in, "all").values())
     n_pairwise = n_arms - 1
-    return [
+    costs = [
         stage_cost(
             "facts judge",
             experiment.judge,
@@ -71,7 +71,12 @@ def _judge_costs(
             _inputs(facts) * n_arms,
             len(facts) * n_arms * FACTS_TOKENS,
             prices,
-        ),
+        )
+    ]
+    if n_pairwise == 0:
+        return costs
+    return [
+        *costs,
         stage_cost(
             "style judge",
             experiment.judge,

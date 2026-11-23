@@ -1,0 +1,11 @@
+# S4 E1 baseline, Task A, full run on test. See PREREGISTRATION.md.
+episode: s4-e1-baseline
+task: a
+split: test
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: a-one-line
+arms:
+  - {name: a-one-line, instructions: one_line, output: text}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
