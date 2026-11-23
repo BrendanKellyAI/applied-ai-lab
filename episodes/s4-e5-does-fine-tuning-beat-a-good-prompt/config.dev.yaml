@@ -11,6 +11,5 @@ arms:
   - {name: e5-reference, instructions: definitions, output: text, note: "E2's best prompt, the Task A reference, cached"}
   - {name: e5-untuned-0-6b, predictions: results/e5-untuned-0-6b/predictions-dev.jsonl, note: "Qwen3-0.6B, untuned, definitions prompt"}
   - {name: e5-tuned-short, predictions: results/e5-tuned-short/predictions-dev.jsonl, note: "Qwen3-0.6B tuned, short instruction"}
-  - {name: e5-tuned-one-line, predictions: results/e5-tuned-one-line/predictions-dev.jsonl, note: "Qwen3-0.6B tuned, one-line instruction with the field shape"}
 limits:
   openai: {max_concurrency: 8, requests_per_minute: 300}

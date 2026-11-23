@@ -96,5 +96,27 @@
    "high": 0.9872949155592883
   },
   "joined": false
+ },
+ {
+  "episode": "s4-e5-does-fine-tuning-beat-a-good-prompt",
+  "task": "a",
+  "candidate": "e5-tuned-short",
+  "metric": "fully_right",
+  "score": {
+   "count": 592,
+   "total": 600,
+   "rate": 0.9866666666666667,
+   "low": 0.9739126318293848,
+   "high": 0.9932286458506133
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
  }
 ]

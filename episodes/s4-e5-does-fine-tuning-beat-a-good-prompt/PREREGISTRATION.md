@@ -109,3 +109,21 @@ fraction of the prompt is reported as such, not as joining.
 - One seed and default settings: another seed could move a few items.
 - The definitions in the reference prompt are the labeller's own rules (E2).
 - Free Colab GPUs vary; minutes are reported with the GPU type and are not a benchmark.
+
+## Amendment 1, 23 November 2026: the one-line tuned arm is not run
+
+Written after the pilot and the `e5-tuned-short` job, and before any test analysis.
+
+- **The pilot rule was met:** 192 of 200 dev replies from untuned Qwen3-0.6B were valid JSON
+  (the bar was 180), so Qwen3-0.6B stays.
+- **`e5-tuned-one-line` is not run.** Training `e5-tuned-short` took 28 minutes on the free T4
+  (about three times the estimate) with a peak of 13.0 of 15 GB of GPU memory. The one-line arm
+  has about 2.3 times the tokens per example, so it would take about 65 minutes and might not fit
+  in memory. Brendan chose to drop it. Its launch was recorded and then closed as cancelled
+  before any training.
+- **Consequences:** C5 is not tested and is reported as such. `e5-tuned-short` is E5's tuned arm
+  (the only candidate). The configs no longer list the one-line arm. C1 to C4, the pass marks
+  and the scoreboard rule are unchanged.
+- **An unapproved second run of the pilot** happened at 22:07 UTC, from a notebook edit that
+  Colab did not save. It cost nothing, was not used, and reproduced every recorded answer (200
+  of 200 dev, 600 of 600 test). See `results/e5-untuned-0-6b/rerun-unapproved.md`.
