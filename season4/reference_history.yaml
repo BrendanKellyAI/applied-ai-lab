@@ -1,0 +1,35 @@
+- episode: s4-e1-baseline
+  task: a
+  candidate: a-one-line
+  reference_before: null
+  reference_after: a-one-line
+  pass_mark: 'none: the baseline sets the reference'
+  joined: true
+- episode: s4-e1-baseline
+  task: b
+  candidate: b-one-line
+  reference_before: null
+  reference_after: b-one-line
+  pass_mark: 'none: the baseline sets the reference'
+  joined: true
+- episode: s4-e2-instructions-first
+  task: a
+  candidate: e2-definitions
+  reference_before: a-one-line
+  reference_after: e2-definitions
+  pass_mark: candidate's interval on the primary metric sits clear above the reference's
+  joined: true
+- episode: s4-e3-how-many-examples
+  task: a
+  candidate: e3-similar-8
+  reference_before: e2-definitions
+  reference_after: e2-definitions
+  pass_mark: candidate's interval on the primary metric sits clear above the reference's
+  joined: false
+- episode: s4-e4-making-output-a-contract
+  task: a
+  candidate: e4-json-mode
+  reference_before: e2-definitions
+  reference_after: e2-definitions
+  pass_mark: candidate's interval on the primary metric sits clear above the reference's
+  joined: false

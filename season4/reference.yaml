@@ -1,0 +1,28 @@
+# The Season 4 reference: the current best rung per task. It changes only when an episode's
+# candidate clears the strict bar on test (its Wilson interval on the primary metric sits clear
+# above the reference's), recorded in reference_history.yaml. season4/scoreboard.py writes the
+# scoreboard and history; this file is written by hand to match the history's last row per task.
+
+# Task A, triage. Joined in S4 E2: the one-line prompt plus the route, fault and safety
+# definitions (instructions: definitions in src/lab/adapt/prompts.py), free text output.
+# Fully right 521 to 587 of 600 (96% to 99%). E3's similar-8 (593) and E4's JSON mode (594)
+# scored higher but their intervals overlap this one, so neither joined. It is also the arm E5
+# tunes against: the best prompted arm on dev across E2 to E4 (199 of 200).
+task_a:
+  episode: s4-e2-instructions-first
+  arm: e2-definitions
+  answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+  instructions: definitions
+  examples: none
+  output: text
+
+# Task B, house style replies. The E1 baseline: the one-line prompt, no style guide. 0 of 300
+# pass every check (facts kept 262 of 300). E7 is the first episode to change it.
+task_b:
+  episode: s4-e1-baseline
+  arm: b-one-line
+  answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 400}
+  judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 300}
+  instructions: one_line
+  examples: none
+  output: text
