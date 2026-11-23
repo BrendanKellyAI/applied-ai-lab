@@ -1,0 +1,14 @@
+# S4 E4 cost ceiling, Task A dev: for the bundled estimate only, never run. The real config
+# takes E3's best arm (PREREGISTRATION.md); this one uses the longest prompt and 32 examples.
+episode: s4-e4-making-output-a-contract
+task: a
+split: dev
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e4-text
+arms:
+  - {name: e4-text, instructions: unsure, output: text, examples: {n: 32, selection: random, seed: 0}}
+  - {name: e4-json-mode, instructions: unsure, output: json_mode, examples: {n: 32, selection: random, seed: 0}}
+  - {name: e4-schema, instructions: unsure, output: schema, examples: {n: 32, selection: random, seed: 0}}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
