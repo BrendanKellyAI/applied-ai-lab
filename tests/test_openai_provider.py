@@ -5,6 +5,7 @@ from lab.providers.base import (
     AuthenticationError,
     GenerationRequest,
     InvalidRequestError,
+    OutputFormat,
     RateLimitError,
     ServerError,
     StreamInterruptedError,
@@ -202,3 +203,29 @@ def test_default_client_disables_sdk_retries(monkeypatch):
     provider = OpenAIProvider()
 
     assert provider._client.max_retries == 0
+
+
+def test_json_mode_sends_the_system_text_as_a_developer_message():
+    params = build_params(_request(output_format=OutputFormat(kind="json_mode")))
+
+    assert "instructions" not in params
+    assert params["input"] == [
+        {"role": "developer", "content": "Reply briefly."},
+        {"role": "user", "content": "Say ready"},
+    ]
+    assert params["text"] == {"format": {"type": "json_object"}}
+
+
+def test_schema_output_keeps_the_system_text_as_instructions():
+    schema = OutputFormat(kind="schema", name="x", json_schema={"type": "object"})
+    params = build_params(_request(output_format=schema))
+
+    assert params["instructions"] == "Reply briefly." and params["input"] == "Say ready"
+
+
+def test_rejected_request_in_the_stream_is_not_retried():
+    error = openai.APIError("needs json", request=REQUEST, body={"type": "invalid_request_error"})
+    endpoint = RecordingEndpoint(_events()[:1], mid_stream_error=error)
+
+    with pytest.raises(InvalidRequestError):
+        _provider(endpoint).generate(_request())

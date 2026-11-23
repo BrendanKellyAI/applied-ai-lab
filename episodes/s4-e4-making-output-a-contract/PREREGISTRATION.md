@@ -68,3 +68,18 @@ Written before any E4 call. E3 now builds on the one-line prompt (E3 Amendment 1
 is E3's best arm on that prompt; the arms, rule and claims are unchanged. One correction: the
 arm E5 tunes against is the best prompted arm on dev across E2, E3 and E4 (the handover's rule),
 not E4's best alone. Ties go to fewer input tokens per call.
+
+## Amendment 2, 23 November 2026: JSON mode's first dev run failed
+
+Written after the first dev run and before rerunning `e4-json-mode`. Every `e4-json-mode`
+call was rejected (no charge): OpenAI's JSON mode needs the word "json" in the input messages,
+and the adapter sent the system prompt as `instructions`, which do not count. The runner also
+retried each rejection five times, because a rejection inside the stream was treated as an
+interruption. Both are fixed in `src/lab/providers/openai_provider.py`:
+
+- With JSON mode, the same system text is sent as a developer message before the user turn,
+  instead of as `instructions`. The words are unchanged; the request hash is unchanged.
+- A rejected request inside the stream is no longer retried.
+
+`e4-text` and `e4-schema` are unaffected and not rerun. The arms, rule and claims are unchanged.
+The difference in transport is a limitation of the JSON mode comparison, named in the README.

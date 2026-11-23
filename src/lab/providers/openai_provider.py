@@ -64,6 +64,9 @@ class OpenAIProvider:
                 retry_after_seconds=retry_after_seconds(exc.response.headers),
             ) from exc
         except openai.APIError as exc:
+            # An error event in the stream: a rejected request is not worth retrying.
+            if getattr(exc, "type", None) == "invalid_request_error":
+                raise InvalidRequestError(f"OpenAI rejected the request: {exc}") from exc
             raise StreamInterruptedError(f"OpenAI stream interrupted: {exc}") from exc
         if final is None or final.usage is None:
             raise StreamInterruptedError("OpenAI stream ended without a final response")
@@ -79,7 +82,15 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
         # Nothing is stored server side, so no call can see another call's history.
         "store": False,
     }
-    if request.system is not None:
+    json_mode = request.output_format is not None and request.output_format.kind == "json_mode"
+    if request.system is not None and json_mode:
+        # JSON mode needs the word "json" in the input messages, and instructions do not
+        # count; the same text goes as a developer message instead.
+        params["input"] = [
+            {"role": "developer", "content": request.system},
+            {"role": "user", "content": request.prompt},
+        ]
+    elif request.system is not None:
         params["instructions"] = request.system
     if request.temperature is not None:
         params["temperature"] = request.temperature
