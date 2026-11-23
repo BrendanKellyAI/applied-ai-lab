@@ -10,71 +10,77 @@
     "provider": "anthropic",
     "model": "claude-haiku-5-5",
     "reasoning": "off",
-    "max_output_tokens": 200
+    "max_output_tokens": 400
   },
   "seeds": {
     "dev": 40
   },
   "generation_failed": [
-    "A-dev-00022"
+    "A-dev-00031"
   ],
   "label_disagreements": {
-    "total": 3,
+    "total": 4,
     "by_field": {
-      "unparsed": 1,
+      "route": 3,
       "fault": 1,
-      "route": 1
+      "product": 1
     },
     "by_route": {
-      "return_refund": 2,
-      "other": 1
+      "other": 2,
+      "return_refund": 1,
+      "delivery": 1
     },
     "by_kind": {
-      "safety": 1,
-      "played_down_safety": 1,
+      "plain": 1,
+      "mixed_request": 1,
+      "two_requests": 1,
       "unknown_product": 1
     },
     "items": {
-      "A-dev-00006": [
-        "unparsed"
-      ],
-      "A-dev-00008": [
+      "A-dev-00002": [
         "route"
       ],
-      "A-dev-00009": [
+      "A-dev-00005": [
         "fault"
+      ],
+      "A-dev-00013": [
+        "route"
+      ],
+      "A-dev-00016": [
+        "route",
+        "product"
       ]
     }
   },
   "near_duplicates_removed": {},
   "kept": {
-    "dev": 36
+    "dev": 35
   },
   "safety_items_kept": {
-    "dev": 2
+    "dev": 4
   },
   "generation_attempts": [
     {
       "planned": 40,
-      "made": 27,
-      "cached": 13,
+      "made": 36,
+      "cached": 1,
       "failed": 0,
       "tokens": {
         "google": {
-          "input": 4993,
-          "output": 2456
+          "input": 7475,
+          "output": 3086
         }
       }
     },
     {
-      "planned": 3,
-      "made": 3,
+      "planned": 1,
+      "made": 1,
       "cached": 0,
       "failed": 0,
       "tokens": {
         "google": {
-          "input": 1034,
-          "output": 346
+          "input": 337,
+          "output": 89
         }
       }
     }
@@ -86,8 +92,8 @@
     "failed": 0,
     "tokens": {
       "anthropic": {
-        "input": 60626,
-        "output": 1718
+        "input": 60930,
+        "output": 1573
       }
     }
   }

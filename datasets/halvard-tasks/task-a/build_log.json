@@ -13,668 +13,735 @@
     "max_output_tokens": 400
   },
   "seeds": {
-    "train": 2080,
-    "dev": 260,
-    "test": 780
+    "train": 2320,
+    "dev": 290,
+    "test": 870
   },
   "generation_failed": [
-    "A-dev-00143",
-    "A-dev-00203",
-    "A-dev-00239",
-    "A-test-00045",
-    "A-test-00055",
-    "A-test-00058",
-    "A-test-00129",
-    "A-test-00254",
-    "A-test-00259",
-    "A-test-00266",
-    "A-test-00269",
-    "A-test-00528",
-    "A-test-00613",
-    "A-test-00658",
-    "A-test-00668",
-    "A-train-00048",
-    "A-train-00126",
-    "A-train-00144",
-    "A-train-00194",
-    "A-train-00275",
-    "A-train-00288",
-    "A-train-00483",
-    "A-train-00748",
-    "A-train-00778",
-    "A-train-00785",
-    "A-train-00841",
-    "A-train-00906",
-    "A-train-01167",
-    "A-train-01169",
-    "A-train-01213",
-    "A-train-01318",
-    "A-train-01384",
-    "A-train-01433",
-    "A-train-01564",
-    "A-train-01568",
-    "A-train-01577",
-    "A-train-01592",
-    "A-train-01878",
-    "A-train-01947",
-    "A-train-02062"
+    "A-dev-00004",
+    "A-dev-00282",
+    "A-test-00074",
+    "A-test-00169",
+    "A-test-00253",
+    "A-test-00489",
+    "A-test-00499",
+    "A-test-00554",
+    "A-test-00712",
+    "A-test-00762",
+    "A-test-00853",
+    "A-train-00010",
+    "A-train-00061",
+    "A-train-00192",
+    "A-train-00199",
+    "A-train-00214",
+    "A-train-00254",
+    "A-train-00329",
+    "A-train-00357",
+    "A-train-00394",
+    "A-train-00548",
+    "A-train-00552",
+    "A-train-00553",
+    "A-train-00834",
+    "A-train-00976",
+    "A-train-01096",
+    "A-train-01155",
+    "A-train-01173",
+    "A-train-01184",
+    "A-train-01212",
+    "A-train-01239",
+    "A-train-01284",
+    "A-train-01345",
+    "A-train-01382",
+    "A-train-01385",
+    "A-train-01412",
+    "A-train-01661",
+    "A-train-01754",
+    "A-train-01851",
+    "A-train-01933",
+    "A-train-02085",
+    "A-train-02095",
+    "A-train-02118",
+    "A-train-02165",
+    "A-train-02278"
   ],
   "label_disagreements": {
-    "total": 183,
+    "total": 197,
     "by_field": {
-      "product": 15,
-      "route": 77,
-      "safety": 21,
-      "fault": 87,
-      "unparsed": 3
+      "route": 101,
+      "fault": 93,
+      "product": 26,
+      "safety": 20,
+      "unparsed": 1
     },
     "by_route": {
-      "other": 56,
-      "how_to_use": 18,
-      "return_refund": 21,
-      "warranty_claim": 59,
-      "complaint": 11,
-      "servicing_booking": 9,
-      "spare_part": 7,
-      "delivery": 2
+      "other": 70,
+      "warranty_claim": 44,
+      "return_refund": 34,
+      "delivery": 13,
+      "servicing_booking": 11,
+      "how_to_use": 11,
+      "complaint": 10,
+      "spare_part": 4
     },
     "by_kind": {
-      "unknown_product": 29,
-      "plain": 94,
-      "harmless_safety_word": 22,
-      "angry_not_complaint": 14,
-      "two_products": 17,
-      "played_down_safety": 6,
-      "safety": 1
+      "unknown_product": 54,
+      "plain": 41,
+      "angry_not_complaint": 16,
+      "harmless_safety_word": 27,
+      "two_requests": 20,
+      "two_products": 10,
+      "played_down_safety": 5,
+      "mixed_request": 18,
+      "safety": 1,
+      "negated_cue": 4,
+      "safe_use_question": 1
     },
     "items": {
-      "A-dev-00036": [
-        "fault"
-      ],
-      "A-dev-00063": [
+      "A-dev-00005": [
         "safety",
         "fault"
       ],
-      "A-dev-00077": [
-        "fault"
-      ],
-      "A-dev-00103": [
-        "fault"
-      ],
-      "A-dev-00148": [
+      "A-dev-00011": [
         "route"
       ],
-      "A-dev-00162": [
-        "safety"
-      ],
-      "A-dev-00168": [
+      "A-dev-00052": [
         "fault"
       ],
-      "A-dev-00170": [
+      "A-dev-00060": [
+        "fault"
+      ],
+      "A-dev-00073": [
+        "fault"
+      ],
+      "A-dev-00094": [
+        "product"
+      ],
+      "A-dev-00108": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-dev-00122": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-dev-00172": [
         "route"
       ],
-      "A-dev-00179": [
-        "safety"
+      "A-dev-00191": [
+        "route"
       ],
-      "A-dev-00181": [
+      "A-dev-00202": [
         "route"
       ],
       "A-dev-00242": [
-        "fault"
-      ],
-      "A-dev-00249": [
-        "route"
-      ],
-      "A-dev-00257": [
+        "route",
         "product"
       ],
-      "A-test-00001": [
+      "A-dev-00250": [
+        "fault"
+      ],
+      "A-dev-00253": [
         "route"
       ],
-      "A-test-00056": [
-        "fault"
+      "A-dev-00260": [
+        "product"
       ],
-      "A-test-00071": [
-        "fault"
-      ],
-      "A-test-00074": [
-        "fault"
-      ],
-      "A-test-00089": [
+      "A-dev-00289": [
         "route"
       ],
-      "A-test-00098": [
-        "fault"
-      ],
-      "A-test-00105": [
-        "fault"
-      ],
-      "A-test-00131": [
+      "A-test-00014": [
         "route"
+      ],
+      "A-test-00017": [
+        "fault"
+      ],
+      "A-test-00030": [
+        "route"
+      ],
+      "A-test-00046": [
+        "route"
+      ],
+      "A-test-00065": [
+        "fault"
+      ],
+      "A-test-00068": [
+        "fault"
+      ],
+      "A-test-00075": [
+        "safety"
+      ],
+      "A-test-00077": [
+        "safety"
+      ],
+      "A-test-00079": [
+        "product"
+      ],
+      "A-test-00102": [
+        "route"
+      ],
+      "A-test-00103": [
+        "fault"
+      ],
+      "A-test-00129": [
+        "fault"
       ],
       "A-test-00135": [
         "route"
       ],
-      "A-test-00146": [
-        "fault"
+      "A-test-00136": [
+        "route",
+        "product"
       ],
-      "A-test-00157": [
-        "fault"
+      "A-test-00211": [
+        "safety"
       ],
-      "A-test-00193": [
-        "fault"
+      "A-test-00213": [
+        "safety"
       ],
-      "A-test-00202": [
+      "A-test-00217": [
         "route"
       ],
       "A-test-00223": [
         "route"
       ],
-      "A-test-00249": [
-        "safety"
+      "A-test-00272": [
+        "route",
+        "fault"
       ],
-      "A-test-00262": [
+      "A-test-00275": [
         "route"
       ],
-      "A-test-00270": [
+      "A-test-00288": [
         "fault"
       ],
-      "A-test-00284": [
-        "fault"
-      ],
-      "A-test-00304": [
+      "A-test-00293": [
         "route"
       ],
-      "A-test-00321": [
+      "A-test-00317": [
         "fault"
       ],
-      "A-test-00351": [
+      "A-test-00354": [
         "fault"
       ],
-      "A-test-00361": [
+      "A-test-00374": [
         "fault"
       ],
-      "A-test-00406": [
-        "fault"
+      "A-test-00399": [
+        "route"
+      ],
+      "A-test-00407": [
+        "route"
       ],
       "A-test-00408": [
-        "route"
-      ],
-      "A-test-00416": [
         "fault"
       ],
-      "A-test-00437": [
-        "safety"
+      "A-test-00415": [
+        "route"
       ],
-      "A-test-00453": [
+      "A-test-00458": [
         "product"
       ],
-      "A-test-00474": [
+      "A-test-00460": [
         "route"
       ],
-      "A-test-00475": [
+      "A-test-00482": [
         "fault"
       ],
-      "A-test-00487": [
-        "fault"
-      ],
-      "A-test-00497": [
-        "fault"
-      ],
-      "A-test-00526": [
+      "A-test-00509": [
         "fault"
       ],
       "A-test-00527": [
-        "route"
-      ],
-      "A-test-00530": [
-        "route"
-      ],
-      "A-test-00536": [
-        "route"
-      ],
-      "A-test-00558": [
-        "unparsed"
-      ],
-      "A-test-00576": [
-        "route"
-      ],
-      "A-test-00586": [
-        "safety",
+        "route",
+        "product",
         "fault"
       ],
-      "A-test-00606": [
+      "A-test-00530": [
+        "fault"
+      ],
+      "A-test-00531": [
         "route"
       ],
-      "A-test-00608": [
-        "safety"
+      "A-test-00575": [
+        "fault"
       ],
-      "A-test-00630": [
+      "A-test-00579": [
+        "fault"
+      ],
+      "A-test-00584": [
+        "fault"
+      ],
+      "A-test-00588": [
         "route"
       ],
-      "A-test-00646": [
+      "A-test-00618": [
+        "fault"
+      ],
+      "A-test-00659": [
         "route"
       ],
-      "A-test-00666": [
-        "route",
-        "product"
+      "A-test-00663": [
+        "route"
       ],
       "A-test-00672": [
         "fault"
       ],
-      "A-test-00677": [
-        "fault"
-      ],
-      "A-test-00678": [
-        "safety"
-      ],
-      "A-test-00679": [
-        "fault"
-      ],
-      "A-test-00681": [
+      "A-test-00696": [
         "route"
       ],
-      "A-test-00682": [
-        "product"
-      ],
-      "A-test-00699": [
-        "route"
-      ],
-      "A-test-00701": [
-        "route"
-      ],
-      "A-test-00714": [
+      "A-test-00706": [
         "route"
       ],
       "A-test-00760": [
-        "route"
-      ],
-      "A-train-00003": [
-        "product"
-      ],
-      "A-train-00015": [
-        "route"
-      ],
-      "A-train-00054": [
-        "route"
-      ],
-      "A-train-00064": [
-        "safety",
-        "fault"
-      ],
-      "A-train-00075": [
-        "fault"
-      ],
-      "A-train-00076": [
-        "safety"
-      ],
-      "A-train-00079": [
-        "fault"
-      ],
-      "A-train-00080": [
-        "route"
-      ],
-      "A-train-00095": [
-        "fault"
-      ],
-      "A-train-00127": [
-        "safety"
-      ],
-      "A-train-00132": [
-        "route",
-        "fault"
-      ],
-      "A-train-00135": [
-        "fault"
-      ],
-      "A-train-00183": [
-        "route"
-      ],
-      "A-train-00206": [
-        "safety"
-      ],
-      "A-train-00209": [
-        "fault"
-      ],
-      "A-train-00220": [
-        "fault"
-      ],
-      "A-train-00223": [
-        "route"
-      ],
-      "A-train-00244": [
-        "product"
-      ],
-      "A-train-00246": [
-        "route"
-      ],
-      "A-train-00256": [
-        "safety"
-      ],
-      "A-train-00268": [
         "route",
         "product",
         "fault"
       ],
-      "A-train-00274": [
-        "fault"
-      ],
-      "A-train-00283": [
-        "fault"
-      ],
-      "A-train-00285": [
+      "A-test-00766": [
         "route"
       ],
-      "A-train-00296": [
+      "A-test-00771": [
         "fault"
       ],
-      "A-train-00320": [
-        "fault"
-      ],
-      "A-train-00354": [
+      "A-test-00779": [
         "route"
+      ],
+      "A-test-00806": [
+        "fault"
+      ],
+      "A-test-00840": [
+        "fault"
+      ],
+      "A-test-00854": [
+        "safety"
+      ],
+      "A-test-00857": [
+        "route"
+      ],
+      "A-test-00862": [
+        "fault"
+      ],
+      "A-test-00867": [
+        "route"
+      ],
+      "A-test-00869": [
+        "fault"
+      ],
+      "A-train-00002": [
+        "route",
+        "fault"
+      ],
+      "A-train-00031": [
+        "fault"
+      ],
+      "A-train-00033": [
+        "fault"
+      ],
+      "A-train-00046": [
+        "route"
+      ],
+      "A-train-00054": [
+        "route",
+        "product"
+      ],
+      "A-train-00060": [
+        "route"
+      ],
+      "A-train-00069": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-00078": [
+        "safety",
+        "fault"
+      ],
+      "A-train-00079": [
+        "route"
+      ],
+      "A-train-00084": [
+        "fault"
+      ],
+      "A-train-00085": [
+        "route"
+      ],
+      "A-train-00168": [
+        "route"
+      ],
+      "A-train-00173": [
+        "route",
+        "product"
+      ],
+      "A-train-00200": [
+        "route"
+      ],
+      "A-train-00218": [
+        "route"
+      ],
+      "A-train-00222": [
+        "fault"
+      ],
+      "A-train-00224": [
+        "fault"
+      ],
+      "A-train-00263": [
+        "safety",
+        "fault"
       ],
       "A-train-00359": [
         "route"
       ],
-      "A-train-00374": [
-        "safety",
-        "fault"
-      ],
-      "A-train-00379": [
-        "route",
-        "product",
-        "fault"
-      ],
-      "A-train-00395": [
+      "A-train-00401": [
         "route"
       ],
-      "A-train-00422": [
+      "A-train-00412": [
+        "route"
+      ],
+      "A-train-00453": [
         "fault"
       ],
-      "A-train-00447": [
-        "route",
-        "product",
+      "A-train-00497": [
+        "product"
+      ],
+      "A-train-00513": [
         "fault"
       ],
-      "A-train-00457": [
+      "A-train-00542": [
+        "fault"
+      ],
+      "A-train-00560": [
+        "fault"
+      ],
+      "A-train-00606": [
+        "route"
+      ],
+      "A-train-00630": [
         "route",
         "product"
       ],
-      "A-train-00516": [
+      "A-train-00651": [
         "route"
       ],
-      "A-train-00524": [
+      "A-train-00666": [
         "fault"
       ],
-      "A-train-00530": [
-        "route"
-      ],
-      "A-train-00531": [
-        "route"
-      ],
-      "A-train-00537": [
-        "product"
-      ],
-      "A-train-00541": [
-        "route"
-      ],
-      "A-train-00546": [
+      "A-train-00748": [
         "fault"
       ],
-      "A-train-00552": [
+      "A-train-00804": [
         "safety"
       ],
-      "A-train-00589": [
+      "A-train-00849": [
         "route"
       ],
-      "A-train-00604": [
-        "fault"
-      ],
-      "A-train-00655": [
-        "product"
-      ],
-      "A-train-00683": [
-        "fault"
-      ],
-      "A-train-00721": [
-        "route"
-      ],
-      "A-train-00730": [
-        "route"
-      ],
-      "A-train-00744": [
-        "route"
-      ],
-      "A-train-00779": [
-        "route"
-      ],
-      "A-train-00790": [
-        "route"
-      ],
-      "A-train-00805": [
-        "fault"
-      ],
-      "A-train-00837": [
-        "route"
-      ],
-      "A-train-00880": [
-        "safety"
-      ],
-      "A-train-00886": [
+      "A-train-00863": [
         "route"
       ],
       "A-train-00899": [
-        "fault"
-      ],
-      "A-train-00919": [
-        "fault"
-      ],
-      "A-train-00933": [
-        "fault"
-      ],
-      "A-train-00964": [
-        "fault"
-      ],
-      "A-train-00969": [
-        "route"
-      ],
-      "A-train-00977": [
-        "fault"
-      ],
-      "A-train-00982": [
-        "fault"
-      ],
-      "A-train-00991": [
-        "route"
-      ],
-      "A-train-01028": [
-        "fault"
-      ],
-      "A-train-01077": [
-        "unparsed"
-      ],
-      "A-train-01183": [
-        "route"
-      ],
-      "A-train-01202": [
-        "fault"
-      ],
-      "A-train-01214": [
-        "fault"
-      ],
-      "A-train-01247": [
         "route",
         "product",
         "fault"
       ],
-      "A-train-01275": [
+      "A-train-00915": [
+        "safety",
+        "fault"
+      ],
+      "A-train-00916": [
         "route"
       ],
-      "A-train-01326": [
-        "fault"
-      ],
-      "A-train-01337": [
-        "safety"
-      ],
-      "A-train-01355": [
-        "fault"
-      ],
-      "A-train-01362": [
+      "A-train-00930": [
         "route",
-        "safety",
-        "fault"
-      ],
-      "A-train-01392": [
-        "fault"
-      ],
-      "A-train-01396": [
-        "fault"
-      ],
-      "A-train-01411": [
-        "fault"
-      ],
-      "A-train-01430": [
-        "route"
-      ],
-      "A-train-01445": [
-        "safety",
-        "fault"
-      ],
-      "A-train-01465": [
-        "fault"
-      ],
-      "A-train-01487": [
-        "route"
-      ],
-      "A-train-01499": [
-        "fault"
-      ],
-      "A-train-01504": [
-        "fault"
-      ],
-      "A-train-01522": [
-        "route"
-      ],
-      "A-train-01528": [
-        "fault"
-      ],
-      "A-train-01538": [
-        "fault"
-      ],
-      "A-train-01551": [
-        "safety"
-      ],
-      "A-train-01590": [
-        "route"
-      ],
-      "A-train-01593": [
-        "route"
-      ],
-      "A-train-01599": [
-        "fault"
-      ],
-      "A-train-01625": [
-        "route"
-      ],
-      "A-train-01655": [
-        "route"
-      ],
-      "A-train-01663": [
-        "route"
-      ],
-      "A-train-01676": [
-        "route"
-      ],
-      "A-train-01705": [
-        "fault"
-      ],
-      "A-train-01706": [
-        "unparsed"
-      ],
-      "A-train-01737": [
-        "fault"
-      ],
-      "A-train-01748": [
-        "fault"
-      ],
-      "A-train-01775": [
-        "fault"
-      ],
-      "A-train-01780": [
-        "fault"
-      ],
-      "A-train-01785": [
         "product"
       ],
-      "A-train-01790": [
+      "A-train-00971": [
         "route"
       ],
-      "A-train-01820": [
+      "A-train-00987": [
+        "route"
+      ],
+      "A-train-00989": [
+        "route"
+      ],
+      "A-train-00996": [
+        "route"
+      ],
+      "A-train-01044": [
         "fault"
       ],
-      "A-train-01849": [
+      "A-train-01101": [
+        "route"
+      ],
+      "A-train-01102": [
         "fault"
       ],
-      "A-train-01875": [
+      "A-train-01116": [
         "fault"
       ],
-      "A-train-01883": [
+      "A-train-01117": [
         "fault"
       ],
-      "A-train-01885": [
+      "A-train-01121": [
+        "fault"
+      ],
+      "A-train-01129": [
+        "fault"
+      ],
+      "A-train-01158": [
+        "fault"
+      ],
+      "A-train-01183": [
+        "fault"
+      ],
+      "A-train-01188": [
+        "route",
+        "fault"
+      ],
+      "A-train-01191": [
+        "route",
+        "safety",
+        "fault"
+      ],
+      "A-train-01200": [
+        "fault"
+      ],
+      "A-train-01219": [
+        "fault"
+      ],
+      "A-train-01278": [
+        "fault"
+      ],
+      "A-train-01296": [
+        "route"
+      ],
+      "A-train-01307": [
+        "fault"
+      ],
+      "A-train-01314": [
+        "route"
+      ],
+      "A-train-01328": [
+        "fault"
+      ],
+      "A-train-01351": [
+        "fault"
+      ],
+      "A-train-01379": [
+        "route"
+      ],
+      "A-train-01381": [
+        "route"
+      ],
+      "A-train-01388": [
         "route",
         "product",
         "fault"
       ],
-      "A-train-01898": [
+      "A-train-01391": [
         "safety"
       ],
-      "A-train-01940": [
+      "A-train-01455": [
+        "safety"
+      ],
+      "A-train-01469": [
+        "route",
+        "product",
         "fault"
       ],
-      "A-train-01949": [
+      "A-train-01503": [
+        "safety",
         "fault"
       ],
-      "A-train-01988": [
+      "A-train-01506": [
+        "safety"
+      ],
+      "A-train-01514": [
         "route"
       ],
-      "A-train-01997": [
+      "A-train-01545": [
         "route"
       ],
-      "A-train-02005": [
+      "A-train-01559": [
         "route"
       ],
-      "A-train-02010": [
+      "A-train-01581": [
         "fault"
       ],
-      "A-train-02036": [
+      "A-train-01583": [
+        "fault"
+      ],
+      "A-train-01593": [
+        "fault"
+      ],
+      "A-train-01656": [
+        "fault"
+      ],
+      "A-train-01662": [
         "route"
       ],
-      "A-train-02052": [
+      "A-train-01666": [
+        "fault"
+      ],
+      "A-train-01683": [
+        "route",
+        "safety",
+        "fault"
+      ],
+      "A-train-01688": [
         "route"
       ],
-      "A-train-02071": [
+      "A-train-01710": [
+        "fault"
+      ],
+      "A-train-01715": [
+        "route",
+        "fault"
+      ],
+      "A-train-01728": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-01759": [
+        "fault"
+      ],
+      "A-train-01769": [
+        "route"
+      ],
+      "A-train-01770": [
+        "fault"
+      ],
+      "A-train-01799": [
+        "route",
+        "product"
+      ],
+      "A-train-01801": [
+        "route"
+      ],
+      "A-train-01809": [
+        "route"
+      ],
+      "A-train-01810": [
+        "fault"
+      ],
+      "A-train-01815": [
+        "route"
+      ],
+      "A-train-01873": [
+        "route"
+      ],
+      "A-train-01941": [
+        "fault"
+      ],
+      "A-train-01962": [
+        "route",
+        "product"
+      ],
+      "A-train-01976": [
+        "route"
+      ],
+      "A-train-01999": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-02018": [
+        "route"
+      ],
+      "A-train-02030": [
+        "route"
+      ],
+      "A-train-02038": [
+        "route",
+        "product",
+        "fault"
+      ],
+      "A-train-02073": [
+        "route"
+      ],
+      "A-train-02076": [
+        "route"
+      ],
+      "A-train-02126": [
+        "unparsed"
+      ],
+      "A-train-02170": [
+        "route"
+      ],
+      "A-train-02171": [
+        "safety"
+      ],
+      "A-train-02177": [
+        "fault"
+      ],
+      "A-train-02180": [
+        "route"
+      ],
+      "A-train-02196": [
+        "route"
+      ],
+      "A-train-02199": [
+        "fault"
+      ],
+      "A-train-02209": [
+        "safety"
+      ],
+      "A-train-02223": [
+        "route"
+      ],
+      "A-train-02242": [
+        "fault"
+      ],
+      "A-train-02245": [
+        "fault"
+      ],
+      "A-train-02247": [
+        "fault"
+      ],
+      "A-train-02248": [
+        "route"
+      ],
+      "A-train-02249": [
+        "safety"
+      ],
+      "A-train-02254": [
+        "product"
+      ],
+      "A-train-02259": [
+        "safety",
+        "fault"
+      ],
+      "A-train-02270": [
+        "fault"
+      ],
+      "A-train-02272": [
+        "route"
+      ],
+      "A-train-02287": [
+        "route"
+      ],
+      "A-train-02296": [
+        "fault"
+      ],
+      "A-train-02298": [
+        "fault"
+      ],
+      "A-train-02307": [
+        "product"
+      ],
+      "A-train-02309": [
         "route"
       ]
     }
   },
   "near_duplicates_removed": {
-    "A-dev-00175": {
-      "train_item": "A-train-00852",
+    "A-dev-00134": {
+      "train_item": "A-train-01222",
       "similarity": 1.0
     },
-    "A-test-00014": {
-      "train_item": "A-train-01314",
-      "similarity": 1.0
-    },
-    "A-test-00423": {
-      "train_item": "A-train-00444",
-      "similarity": 0.818
-    },
-    "A-test-00505": {
-      "train_item": "A-train-01632",
-      "similarity": 0.949
+    "A-test-00517": {
+      "train_item": "A-train-01322",
+      "similarity": 0.812
     }
   },
   "kept": {
@@ -683,31 +750,46 @@
     "test": 600
   },
   "safety_items_kept": {
-    "train": 163,
-    "dev": 21,
-    "test": 66
+    "train": 166,
+    "dev": 25,
+    "test": 65
   },
   "generation_attempts": [
     {
-      "planned": 3116,
-      "made": 0,
-      "cached": 0,
+      "planned": 3479,
+      "made": 3259,
+      "cached": 210,
       "failed": 0,
-      "tokens": {}
+      "tokens": {
+        "google": {
+          "input": 676514,
+          "output": 317332
+        }
+      }
     },
     {
-      "planned": 105,
-      "made": 0,
-      "cached": 0,
+      "planned": 116,
+      "made": 113,
+      "cached": 3,
       "failed": 0,
-      "tokens": {}
+      "tokens": {
+        "google": {
+          "input": 41175,
+          "output": 13204
+        }
+      }
     }
   ],
   "label_calls": {
-    "planned": 3076,
-    "made": 0,
-    "cached": 0,
+    "planned": 3434,
+    "made": 3217,
+    "cached": 207,
     "failed": 0,
-    "tokens": {}
+    "tokens": {
+      "anthropic": {
+        "input": 5071660,
+        "output": 129587
+      }
+    }
   }
 }
