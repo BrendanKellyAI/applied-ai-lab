@@ -9,7 +9,7 @@ from lab.adapt.experiment import Experiment
 from lab.adapt.requests import load_inputs
 
 EPISODE = Path(__file__).parents[2] / "episodes" / "s4-e1-baseline"
-CONFIGS = ("config-a.dev", "config-a", "config-b.dev", "config-b")
+CONFIGS = ("config-a.dev", "config-a.dev-all", "config-a", "config-b.dev", "config-b")
 
 
 @pytest.mark.parametrize("name", CONFIGS)
@@ -17,9 +17,15 @@ def test_configs_load_with_one_arm_on_the_cheapest_model(name):
     experiment = Experiment.load(EPISODE / f"{name}.yaml")
     assert experiment.answer.model == "gpt-6-luna" and experiment.answer.reasoning == "off"
     assert [a.instructions for a in experiment.arms] == ["one_line"]
-    assert experiment.split == ("dev" if name.endswith(".dev") else "test")
+    assert experiment.split == ("dev" if ".dev" in name else "test")
     inputs = load_inputs(experiment)
-    expected = {"config-a.dev": 40, "config-a": 600, "config-b.dev": 20, "config-b": 300}
+    expected = {
+        "config-a.dev": 40,
+        "config-a.dev-all": 200,
+        "config-a": 600,
+        "config-b.dev": 20,
+        "config-b": 300,
+    }
     assert len(inputs.items) == expected[name]
 
 

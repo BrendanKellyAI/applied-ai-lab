@@ -100,3 +100,19 @@ written from E1's test results.
   items it labelled differently. Items that model found hard are under-represented, so these
   scores may be higher than on real messages.
 - Everything is invented: the Halvard tasks only, not real support traffic.
+
+## Amendment 1, 23 November 2026: a headroom check on dev, before the freeze
+
+The pilot got 38 of 40 Task A dev items fully right (95% interval 84% to 99%), so the test
+set may leave too little room for E2 to E6. Written before the check is run:
+
+- **Check:** the same one-line arm on all 200 Task A dev items (`config-a.dev-all.yaml`). The
+  first 40 are the pilot's cached calls. Dev only; test is not touched.
+- **Rule:** if fully right on the 200 is **85% or more** (170 or more), Task A is rebuilt with
+  more and harder hard cases before the test set is frozen, and E1 is run on the rebuilt test
+  set; the claims and pass marks above stay as they are. If it is **below 85%**, the data is
+  kept and E1 runs as registered.
+- **Why 85%:** it is C1's line. Above it, the later rungs could gain only a few points, too few
+  for the paired tests on 600 items to tell apart from noise.
+- The pilot's dev files are overwritten by the 200-item run (the first 40 rows are the same
+  cached replies); the pilot's numbers are kept in its commit message (a65d157).
