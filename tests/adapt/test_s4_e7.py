@@ -141,3 +141,29 @@ def test_claims_hold_and_fail_on_synthetic_results():
     assert result["C3"].detail["best_prompted"] == "e7-style-guide"
     untested = claims.c5({"shared": 0}, {}, spec["claims"]["C5"])
     assert claims.verdict(untested) == "Not tested" and claims.verdict(result["C2"]) == "Failed"
+
+
+def test_claims_on_the_test_results():
+    spec = claims.load_claims_file()
+    dev = claims.json.loads((E7 / "results" / "analysis-task-b-dev.json").read_text("utf-8"))
+    dev_counts = {arm: v["primary"]["count"] for arm, v in dev["arms"].items()}
+    best = claims.best_prompted(dev_counts, spec["best_prompted"]["order"])
+    test_files = claims._judge_files(claims.CONFIGS["test"], "facts")
+    facts = claims.agreement(test_files, claims._judge_files(claims.CHECK, "facts"))
+    style = claims.style_agreement(
+        claims._judge_files(claims.CONFIGS["test"], "style"),
+        claims._judge_files(claims.CHECK, "style"),
+    )
+    result = {
+        c.id: c
+        for c in claims.evaluate(claims.by_item(claims.CONFIGS["test"]), best, facts, style, spec)
+    }
+    assert best == "e7-guide-4-examples"
+    assert [result[k].held for k in ("C1", "C2", "C3", "C4", "C5")] == [
+        True,
+        True,
+        True,
+        True,
+        False,
+    ]
+    assert (facts["shared"], facts["same"]) == (180, 161)

@@ -40,3 +40,10 @@
   reference_after: e2-definitions
   pass_mark: candidate's interval on the primary metric sits clear above the reference's
   joined: false
+- episode: s4-e7-teaching-a-house-style
+  task: b
+  candidate: e7-tuned-short
+  reference_before: b-one-line
+  reference_after: e7-tuned-short
+  pass_mark: candidate's interval on the primary metric sits clear above the reference's
+  joined: true

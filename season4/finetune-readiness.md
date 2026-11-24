@@ -4,7 +4,7 @@ A tool from Season 4, started in E6 and completed in E10. Work through it before
 a fine-tuning project. Each line says what to check and, where Season 4 measured it, what the
 Halvard tasks showed. Halvard Home is invented; its numbers are one worked case, not a rule.
 
-**Status: draft.** Sections 1 to 5 carry Season 4's numbers up to E6; section 6 is written in E10.
+**Status: draft.** Sections 1 to 5 carry Season 4's numbers up to E7; section 6 is written in E10.
 
 ## 1. Is tuning the right fix?
 
@@ -40,6 +40,10 @@ Halvard tasks showed. Halvard Home is invented; its numbers are one worked case,
 - [ ] **Know what discarding does.** Dropping the items two labellers disagree on leaves the
       easy ones. *(Halvard: 54 messages naming non-existent products were discarded and 8 kept,
       so that hard case is under-represented.)*
+- [ ] **Check the target outputs for habits, not just facts.** Tuning copies whatever the
+      training targets do, including what no rule asks for. *(S4 E7: 459 of 600 target replies
+      restated the customer's question; the tuned model did it in 260 of 300, and a style judge
+      marked it down.)*
 - [ ] **Have a person check a sample** of the final test set before it is frozen. *(Halvard: 50
       triage and 20 reply items, no errors found; that bounds the error rate at about 6% and
       15%, not zero.)*

@@ -1,0 +1,508 @@
+{
+  "episode": "s4-e7-teaching-a-house-style",
+  "task": "b",
+  "split": "test",
+  "items": 50,
+  "reference": "e7-style-guide",
+  "primary_metric": "primary",
+  "arms": {
+    "e7-one-line": {
+      "items": 50,
+      "primary": {
+        "count": 0,
+        "total": 50,
+        "rate": 0.0,
+        "low": 6.938893903907228e-18,
+        "high": 0.07134759913335872
+      },
+      "all_checks": {
+        "count": 0,
+        "total": 50,
+        "rate": 0.0,
+        "low": 6.938893903907228e-18,
+        "high": 0.07134759913335872
+      },
+      "facts_kept": {
+        "count": 35,
+        "total": 50,
+        "rate": 0.7,
+        "low": 0.562496495355466,
+        "high": 0.8089644649911906
+      },
+      "checks": {
+        "opening": {
+          "count": 0,
+          "total": 50,
+          "rate": 0.0,
+          "low": 6.938893903907228e-18,
+          "high": 0.07134759913335872
+        },
+        "close": {
+          "count": 0,
+          "total": 50,
+          "rate": 0.0,
+          "low": 6.938893903907228e-18,
+          "high": 0.07134759913335872
+        },
+        "length": {
+          "count": 16,
+          "total": 50,
+          "rate": 0.32,
+          "low": 0.20758216260656845,
+          "high": 0.45810297308144077
+        },
+        "plain": {
+          "count": 47,
+          "total": 50,
+          "rate": 0.94,
+          "low": 0.8378290831116182,
+          "high": 0.979385029651026
+        },
+        "citation": {
+          "count": 5,
+          "total": 50,
+          "rate": 0.1,
+          "low": 0.04347576493189041,
+          "high": 0.21360231437479654
+        },
+        "no_banned": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "not_found": {
+          "count": 45,
+          "total": 50,
+          "rate": 0.9,
+          "low": 0.7863976856252035,
+          "high": 0.9565242350681096
+        },
+        "british": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        }
+      },
+      "mean_words": 33.0,
+      "mean_sentence_words": 15.68,
+      "style_against_reference": {
+        "pairs": 48,
+        "unjudged": 2,
+        "win": {
+          "count": 0,
+          "total": 48,
+          "rate": 0.0,
+          "low": 6.938893903907228e-18,
+          "high": 0.07410012966611748
+        },
+        "tie": {
+          "count": 1,
+          "total": 48,
+          "rate": 0.020833333333333332,
+          "low": 0.003687110977510649,
+          "high": 0.10899217995251861
+        },
+        "loss": {
+          "count": 47,
+          "total": 48,
+          "rate": 0.9791666666666666,
+          "low": 0.8910078200474814,
+          "high": 0.9963128890224893
+        }
+      },
+      "tokens": {
+        "calls": 300,
+        "input_tokens": 37407,
+        "cached_input_tokens": 0,
+        "output_tokens": 11164,
+        "mean_input_tokens": 124.7,
+        "mean_output_tokens": 37.2
+      },
+      "items_without_reply": 0
+    },
+    "e7-style-guide": {
+      "items": 50,
+      "primary": {
+        "count": 39,
+        "total": 50,
+        "rate": 0.78,
+        "low": 0.6475845041874634,
+        "high": 0.8724608402978559
+      },
+      "all_checks": {
+        "count": 45,
+        "total": 50,
+        "rate": 0.9,
+        "low": 0.7863976856252035,
+        "high": 0.9565242350681096
+      },
+      "facts_kept": {
+        "count": 44,
+        "total": 50,
+        "rate": 0.88,
+        "low": 0.7619518261679701,
+        "high": 0.9438239984906773
+      },
+      "checks": {
+        "opening": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "close": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "length": {
+          "count": 45,
+          "total": 50,
+          "rate": 0.9,
+          "low": 0.7863976856252035,
+          "high": 0.9565242350681096
+        },
+        "plain": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "citation": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "no_banned": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "not_found": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "british": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        }
+      },
+      "mean_words": 52.9,
+      "mean_sentence_words": 19.39,
+      "tokens": {
+        "calls": 300,
+        "input_tokens": 243207,
+        "cached_input_tokens": 0,
+        "output_tokens": 17978,
+        "mean_input_tokens": 810.7,
+        "mean_output_tokens": 59.9
+      },
+      "items_without_reply": 0
+    },
+    "e7-guide-4-examples": {
+      "items": 50,
+      "primary": {
+        "count": 45,
+        "total": 50,
+        "rate": 0.9,
+        "low": 0.7863976856252035,
+        "high": 0.9565242350681096
+      },
+      "all_checks": {
+        "count": 50,
+        "total": 50,
+        "rate": 1.0,
+        "low": 0.9286524008666414,
+        "high": 1.0
+      },
+      "facts_kept": {
+        "count": 45,
+        "total": 50,
+        "rate": 0.9,
+        "low": 0.7863976856252035,
+        "high": 0.9565242350681096
+      },
+      "checks": {
+        "opening": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "close": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "length": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "citation": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "no_banned": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "not_found": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "british": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        }
+      },
+      "mean_words": 56.6,
+      "mean_sentence_words": 19.48,
+      "style_against_reference": {
+        "pairs": 50,
+        "unjudged": 0,
+        "win": {
+          "count": 11,
+          "total": 50,
+          "rate": 0.22,
+          "low": 0.1275391597021442,
+          "high": 0.3524154958125367
+        },
+        "tie": {
+          "count": 38,
+          "total": 50,
+          "rate": 0.76,
+          "low": 0.6258731624205708,
+          "high": 0.8570260860300828
+        },
+        "loss": {
+          "count": 1,
+          "total": 50,
+          "rate": 0.02,
+          "low": 0.003539259271646236,
+          "high": 0.10495443589637815
+        }
+      },
+      "tokens": {
+        "calls": 300,
+        "input_tokens": 395607,
+        "cached_input_tokens": 369600,
+        "output_tokens": 19650,
+        "mean_input_tokens": 1318.7,
+        "mean_output_tokens": 65.5
+      },
+      "items_without_reply": 0
+    },
+    "e7-tuned-short": {
+      "items": 50,
+      "primary": {
+        "count": 48,
+        "total": 50,
+        "rate": 0.96,
+        "low": 0.8653990931249297,
+        "high": 0.9889611156723802
+      },
+      "all_checks": {
+        "count": 49,
+        "total": 50,
+        "rate": 0.98,
+        "low": 0.8950455641036219,
+        "high": 0.9964607407283539
+      },
+      "facts_kept": {
+        "count": 49,
+        "total": 50,
+        "rate": 0.98,
+        "low": 0.8950455641036219,
+        "high": 0.9964607407283539
+      },
+      "checks": {
+        "opening": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "close": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "length": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "citation": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "no_banned": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "not_found": {
+          "count": 50,
+          "total": 50,
+          "rate": 1.0,
+          "low": 0.9286524008666414,
+          "high": 1.0
+        },
+        "british": {
+          "count": 49,
+          "total": 50,
+          "rate": 0.98,
+          "low": 0.8950455641036219,
+          "high": 0.9964607407283539
+        }
+      },
+      "mean_words": 73.0,
+      "mean_sentence_words": 21.27,
+      "style_against_reference": {
+        "pairs": 49,
+        "unjudged": 1,
+        "win": {
+          "count": 11,
+          "total": 49,
+          "rate": 0.22448979591836735,
+          "low": 0.13024970149659185,
+          "high": 0.35878787235959997
+        },
+        "tie": {
+          "count": 21,
+          "total": 49,
+          "rate": 0.42857142857142855,
+          "low": 0.30023319078881594,
+          "high": 0.5672950690998263
+        },
+        "loss": {
+          "count": 17,
+          "total": 49,
+          "rate": 0.3469387755102041,
+          "low": 0.22924392834538948,
+          "high": 0.48688805713027256
+        }
+      },
+      "tokens": {
+        "calls": 300,
+        "input_tokens": 31768,
+        "cached_input_tokens": 0,
+        "output_tokens": 23691,
+        "mean_input_tokens": 105.9,
+        "mean_output_tokens": 79.0
+      },
+      "items_without_reply": 0
+    }
+  },
+  "comparisons": {
+    "e7-one-line": {
+      "only_a": 0,
+      "only_b": 39,
+      "p_value": 3.637978807091713e-12,
+      "right_to_wrong": 39,
+      "wrong_to_right": 0,
+      "flipped": 39,
+      "net": -39,
+      "p_holm": 1.0913936421275139e-11
+    },
+    "e7-guide-4-examples": {
+      "only_a": 8,
+      "only_b": 2,
+      "p_value": 0.109375,
+      "right_to_wrong": 2,
+      "wrong_to_right": 8,
+      "flipped": 10,
+      "net": 6,
+      "p_holm": 0.109375
+    },
+    "e7-tuned-short": {
+      "only_a": 11,
+      "only_b": 2,
+      "p_value": 0.0224609375,
+      "right_to_wrong": 2,
+      "wrong_to_right": 11,
+      "flipped": 13,
+      "net": 9,
+      "p_holm": 0.044921875
+    }
+  },
+  "cost_ratios": {
+    "e7-one-line": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e7-style-guide": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e7-guide-4-examples": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e7-tuned-short": {
+      "per_item": null,
+      "per_primary_hit": null
+    }
+  },
+  "cost_note": "Answer calls only, as multiples of the reference arm; judge calls are measurement and are left out. Cached input is priced at the cached rate where one is known. External (tuned) arms run on Colab and have no API cost."
+}

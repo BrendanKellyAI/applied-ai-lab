@@ -27,6 +27,7 @@ LADDER: list[tuple[str, str, str | None]] = [
     ("s4-e4-making-output-a-contract", "a", None),
     # E5 Amendment 1: the one-line tuned arm was not run, so the short arm is the only candidate.
     ("s4-e5-does-fine-tuning-beat-a-good-prompt", "a", "e5-tuned-short"),
+    ("s4-e7-teaching-a-house-style", "b", None),
 ]
 PRIMARY = {"a": "fully_right", "b": "primary"}
 

@@ -1,0 +1,45 @@
+{"id": "B-test-00000", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 463, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00001", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 426, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00002", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"the code alone doesn't indicate that the electronics are faulty\"]}", "input_tokens": 490, "cached_input_tokens": 0, "output_tokens": 45, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00003", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 414, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00004", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 476, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00005", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"quote the model and part number\"]}", "input_tokens": 501, "cached_input_tokens": 0, "output_tokens": 32, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00008", "text": "{\"all_facts_kept\": false, \"facts_added\": [\"cleaning the grease filters is routine maintenance and does not invalidate your warranty\"]}", "input_tokens": 537, "cached_input_tokens": 0, "output_tokens": 52, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00009", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 485, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00010", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 439, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00011", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 439, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00012", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 474, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00014", "text": "{\"all_facts_kept\": false, \"facts_added\": [\"please contact us and we'll be happy to help\"]}", "input_tokens": 530, "cached_input_tokens": 0, "output_tokens": 38, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00015", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 461, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00016", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 443, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00017", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 437, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00018", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 472, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00019", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 532, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00020", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 392, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00021", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 493, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00022", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"While it's off\"]}", "input_tokens": 510, "cached_input_tokens": 0, "output_tokens": 29, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00023", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 411, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00025", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 431, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00026", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 493, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00028", "text": "{\"all_facts_kept\": false, \"facts_added\": [\"Please contact Halvard Home support\", \"Ask us to confirm the replacement seal is compatible with your machine before you order\"]}", "input_tokens": 449, "cached_input_tokens": 0, "output_tokens": 63, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00031", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 500, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00032", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 438, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00033", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"Keel washing machine\"]}", "input_tokens": 506, "cached_input_tokens": 0, "output_tokens": 32, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00034", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 457, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00035", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 466, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00036", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 414, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00037", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 397, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00038", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 423, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00039", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 469, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00040", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 351, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00041", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"If the code persists, please contact support.\"]}", "input_tokens": 516, "cached_input_tokens": 0, "output_tokens": 35, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00042", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"A burning smell can indicate a safety issue.\"]}", "input_tokens": 555, "cached_input_tokens": 0, "output_tokens": 39, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00043", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 521, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00044", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 490, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00045", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 477, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00046", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 398, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00047", "text": "{\"all_facts_kept\": true, \"facts_added\": [\"to delay your heating by one hour from 18:00\"]}", "input_tokens": 382, "cached_input_tokens": 0, "output_tokens": 40, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00048", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 463, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00049", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 500, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00050", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 463, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
+{"id": "B-test-00051", "text": "{\"all_facts_kept\": true, \"facts_added\": []}", "input_tokens": 423, "cached_input_tokens": 0, "output_tokens": 22, "model_returned": "claude-haiku-5-5"}
