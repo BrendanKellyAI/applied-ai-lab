@@ -84,7 +84,26 @@ def _items(config: TuneConfig, split: str) -> list:
             return load_pairs(config.pairs_path)
         return list(load_items(config.data_folder / f"{split}.jsonl"))
     loader = triage_items if config.task == "a" else reply_items
-    return loader(config.data_folder, split)
+    items = loader(config.data_folder, split)
+    if split == "train" and config.teacher_path is not None:
+        return teacher_labelled(items, config)[0]
+    return items
+
+
+def teacher_labelled(items: list, config: TuneConfig) -> tuple[list, list[str]]:
+    """E9: the items with the teacher's labels in place of the true ones, and the ids left out
+    because the teacher's reply is missing or not a valid label."""
+    assert config.teacher_path is not None
+    replies = {r["id"]: r.get("text") for r in read_jsonl(config.teacher_path)}
+    definitions = Definitions.load(config.data_folder / "routes.yaml")
+    kept, dropped = [], []
+    for item in items:
+        parsed = parse_triage(replies.get(item.id), definitions)
+        if parsed.valid and parsed.label is not None:
+            kept.append(item.model_copy(update={"label": parsed.label}))
+        else:
+            dropped.append(item.id)
+    return kept, dropped
 
 
 def train_subset(config: TuneConfig) -> list:
@@ -156,10 +175,21 @@ def _files(config: TuneConfig) -> tuple[dict[str, str], list[dict]]:
 
 
 def _pairs_record(config: TuneConfig) -> dict[str, Any]:
-    """E8: the pairs file the job's training set comes from. Absent for Tasks A and B."""
-    if config.pairs_path is None:
-        return {}
-    return {"pairs": {"file": config.pairs_path.name, "sha256": sha256(config.pairs_path)}}
+    """Where the training targets come from, when not the true labels: E8's pairs file, or
+    E9's teacher predictions. Absent otherwise, so earlier job records are unchanged."""
+    if config.pairs_path is not None:
+        return {"pairs": {"file": config.pairs_path.name, "sha256": sha256(config.pairs_path)}}
+    if config.teacher_path is not None:
+        items = triage_items(config.data_folder, "train")
+        dropped = teacher_labelled(items, config)[1]
+        return {
+            "teacher": {
+                "file": config.teacher_path.name,
+                "sha256": sha256(config.teacher_path),
+                "dropped": len(dropped),
+            }
+        }
+    return {}
 
 
 def _plan(config: TuneConfig, files: dict[str, str], rows: list[dict]) -> dict[str, Any]:

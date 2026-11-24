@@ -181,7 +181,9 @@ false alarms.
   (Amendment 2).
 - **The test sets favour items the label checker found easy.** Items `claude-haiku-5-5`
   labelled differently were discarded, most of them messages naming products that do not exist.
-- **The facts judge is not yet checked** against a second judge; that is in E7. Say "judged".
+- **The facts judge is a model.** E7 checked it against a second judge (`claude-haiku-5-5`):
+  they agreed on 89.4% of verdicts, and every disagreement had Haiku as the stricter. Say
+  "judged", not "verified".
 - **The safety share of 10% is a test design,** not Halvard's real mix. The monthly false alarm
   figure is an extrapolation from invented numbers.
 - **One model, one wording, one run.** Every figure covers these Halvard tasks and this model only.

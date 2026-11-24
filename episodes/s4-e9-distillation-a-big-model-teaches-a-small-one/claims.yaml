@@ -1,0 +1,24 @@
+# S4 E9 pass marks, fixed before any call or job. PREREGISTRATION.md states the same marks in
+# words. C1 is on train (the teacher's labels); C2 to C4 on test.
+choose:
+  order: [e9-student-teacher-labels]
+claims:
+  C1:
+    title: The teacher's labels are mostly right
+    rule: e9-teacher is fully right on at least 0.95 of the 1,600 train messages (point estimate)
+    rate_at_least: 0.95
+  C2:
+    title: Distillation teaches the task
+    rule: e9-student-teacher-labels is fully right on more test items than e9-student-untuned, exact McNemar p below 0.05
+    arms: [e9-student-teacher-labels, e9-student-untuned]
+    p_below: 0.05
+  C3:
+    title: The student matches its teacher
+    rule: e9-student-teacher-labels is not worse than e9-teacher (not lower with an exact McNemar p below 0.05)
+    arms: [e9-student-teacher-labels, e9-teacher]
+    p_below: 0.05
+  C4:
+    title: Teacher labels cost nothing measurable against true labels
+    rule: e9-student-teacher-labels is not worse than e9-student-true-labels (not lower with an exact McNemar p below 0.05)
+    arms: [e9-student-teacher-labels, e9-student-true-labels]
+    p_below: 0.05

@@ -71,6 +71,9 @@ class TuneConfig(BaseModel):
     data: Path = DATA
     # E8: the generated question and answer pairs to train on (the facts task only).
     pairs: Path | None = None
+    # E9: a teacher's predictions on train, used as the targets instead of the true labels
+    # (Task A only). A teacher reply that is not a valid label is left out and counted.
+    teacher: Path | None = None
     folder: Path = Path(".")
 
     @model_validator(mode="after")
@@ -80,6 +83,8 @@ class TuneConfig(BaseModel):
             raise ValueError(f"instructions must be one of {levels}")
         if (self.task == "facts") != (self.pairs is not None):
             raise ValueError("pairs are set for the facts task, and only for it")
+        if self.teacher is not None and self.task != "a":
+            raise ValueError("teacher labels are for Task A only")
         return self
 
     @classmethod
@@ -96,6 +101,12 @@ class TuneConfig(BaseModel):
         if self.pairs is None:
             return None
         return self.pairs if self.pairs.is_absolute() else self.folder / self.pairs
+
+    @property
+    def teacher_path(self) -> Path | None:
+        if self.teacher is None:
+            return None
+        return self.teacher if self.teacher.is_absolute() else self.folder / self.teacher
 
     @property
     def arm_folder(self) -> Path:
