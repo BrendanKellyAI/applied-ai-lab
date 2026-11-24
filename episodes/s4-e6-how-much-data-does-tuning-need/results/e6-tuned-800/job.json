@@ -57,10 +57,56 @@
   "attempts": [
     {
       "attempt": 1,
-      "status": "launched",
+      "status": "succeeded",
       "launched_utc": "2026-11-23T23:19:31+00:00",
       "approved_by": "Brendan, in chat, 23 November 2026 (Approve E6 jobs)",
-      "plan_sha256": "d98f0862f030fce4b91e37c3d04583e0f57265de4b828a18c0d0ccaaab28911b"
+      "plan_sha256": "d98f0862f030fce4b91e37c3d04583e0f57265de4b828a18c0d0ccaaab28911b",
+      "recorded_utc": "2026-11-24T08:20:49+00:00",
+      "predictions": {
+        "dev": {
+          "items": 200,
+          "sha256": "7e028df945439c8ea571cebf2d5218225982adf34900ddf7f9d8d1ce6e42d1a4"
+        },
+        "test": {
+          "items": 600,
+          "sha256": "92b9601a29951fa5737df67fc75f3c240c3eebf7275a72e6aaed41e676e9985d"
+        }
+      },
+      "result": {
+        "job_id": "s4-e6-how-much-data-does-tuning-need/e6-tuned-800",
+        "attempt": 1,
+        "notebook_version": "s4-lora-job-v1",
+        "started_utc": "2026-11-24T07:45:43+00:00",
+        "python": "3.13.16",
+        "packages": {
+          "torch": "2.14.1+cu130",
+          "transformers": "4.57.1",
+          "peft": "0.17.1",
+          "accelerate": "1.10.1"
+        },
+        "gpu": "Tesla T4",
+        "base_revision_sha": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "training": {
+          "train_runtime_s": 809.7,
+          "train_loss": 0.1356,
+          "training_tokens_qwen": 371781,
+          "adapter_sha256": "0308892f624880b29469bc752588b3ff95619ee7ae6e5e4f4540ce1a2295139b",
+          "resumed": false
+        },
+        "predictions": {
+          "dev": {
+            "items": 200,
+            "seconds": 50.7
+          },
+          "test": {
+            "items": 600,
+            "seconds": 148.9
+          }
+        },
+        "peak_memory_gb": 12.83,
+        "status": "succeeded",
+        "finished_utc": "2026-11-24T08:03:08+00:00"
+      }
     }
   ]
 }
