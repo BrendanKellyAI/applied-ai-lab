@@ -121,3 +121,18 @@ Most of it is the Gemini style judge (2,400 calls). Proposed budget: $7.00. Wall
   a person; agreement between them is not accuracy.
 - **Two models.** The tuned arm is a different, much smaller model than the prompted arms.
 - **Judged rules (5, 9, 11 to 13 of the guide) are only in the style judge,** not the primary.
+
+## Amendment 1, 24 November 2026: the tuning job at batch 4
+
+The first tuning job (`tune-short.yaml`, job `e7-tuned-short`, attempt 1) failed about a minute
+in, before training began: the T4 ran out of memory (14.19 of 14.56 GB in use). Task B's
+training rows are about 30% longer than Task A's, whose job peaked at 13.0 GB at the same
+settings. The failure is recorded in `results/e7-tuned-short/job.json` and that job is not run
+again.
+
+Approved by Brendan Kelly on 24 November 2026 ("Try batch 4"): a new job, `tune-short-b4.yaml`
+(`e7-tuned-short-b4`), with batch 4 and 4 accumulation steps instead of batch 8 and 2. Each
+update still sees 16 examples, so the number of steps (about 113), the learning rate and every
+other setting are unchanged. The arm is still called `e7-tuned-short` in the configs and claims;
+its predictions now come from `results/e7-tuned-short-b4/`. Nothing else changes, and no result
+had been seen.

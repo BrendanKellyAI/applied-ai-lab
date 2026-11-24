@@ -7,7 +7,8 @@ import yaml
 
 from lab.adapt.experiment import Experiment
 from lab.adapt.requests import arm_requests, load_inputs
-from lab.adapt.tune import train_subset
+from lab.adapt.run import predictions_path
+from lab.adapt.tune import load_record, train_subset
 from lab.adapt.tune_config import TuneConfig
 from lab.experiments import load_sibling
 from lab.providers.base import request_hash
@@ -19,19 +20,26 @@ E5_SHORT = EPISODES / "s4-e5-does-fine-tuning-beat-a-good-prompt" / "tune-short.
 ARMS = ["e7-one-line", "e7-style-guide", "e7-guide-4-examples", "e7-tuned-short"]
 
 
-def test_job_is_e5s_settings_on_every_task_b_train_reply():
-    job = TuneConfig.load(E7 / "tune-short.yaml")
+@pytest.mark.parametrize("name", ["tune-short.yaml", "tune-short-b4.yaml"])
+def test_jobs_are_e5s_settings_on_every_task_b_train_reply(name):
+    job = TuneConfig.load(E7 / name)
     e5 = TuneConfig.load(E5_SHORT)
-    assert (job.task, job.arm, job.train_size, job.instructions) == (
-        "b",
-        "e7-tuned-short",
-        600,
-        "short",
-    )
+    assert (job.task, job.train_size, job.instructions) == ("b", 600, "short")
     assert (job.base_model, job.base_revision) == (e5.base_model, e5.base_revision)
-    assert job.lora == e5.lora and job.training == e5.training
+    assert job.lora == e5.lora
     assert job.max_new_tokens == 320 and job.eval_splits == ("dev", "test")
     assert len(train_subset(job)) == 600
+    # Amendment 1: batch 4 with 4 accumulation steps, the same 16 examples an update.
+    ignore = {"batch_size", "gradient_accumulation"}
+    assert job.training.model_dump(exclude=ignore) == e5.training.model_dump(exclude=ignore)
+    batch = job.training.batch_size * job.training.gradient_accumulation
+    assert batch == e5.training.batch_size * e5.training.gradient_accumulation == 16
+    if name == "tune-short.yaml":
+        assert job.arm == "e7-tuned-short" and job.training == e5.training
+        record = load_record(job.arm_folder)
+        assert record is not None and [a["status"] for a in record["attempts"]] == ["failed"]
+    else:
+        assert job.arm == "e7-tuned-short-b4" and job.training.batch_size == 4
 
 
 @pytest.mark.parametrize(
@@ -47,7 +55,7 @@ def test_configs_hold_the_four_arms(name, split, size):
     assert (examples.n, examples.selection, examples.seed) == (4, "random", 0)
     tuned = experiment.arm("e7-tuned-short")
     assert tuned.external
-    assert tuned.predictions == Path(f"results/e7-tuned-short/predictions-{split}.jsonl")
+    assert tuned.predictions == Path(f"results/e7-tuned-short-b4/predictions-{split}.jsonl")
 
 
 @pytest.mark.parametrize("name", ["config.dev.yaml", "config.yaml"])
@@ -68,10 +76,7 @@ def test_judge_check_rejudges_the_main_runs_replies_with_haiku():
     assert check.reference == main.reference
     assert all(a.external for a in check.arms)
     for arm in check.arms:
-        assert (
-            check.path(arm.predictions).resolve()
-            == (main.results / arm.name / "predictions-test.jsonl").resolve()
-        )
+        assert check.path(arm.predictions).resolve() == predictions_path(main, arm.name).resolve()
     assert check.results != main.results
 
 

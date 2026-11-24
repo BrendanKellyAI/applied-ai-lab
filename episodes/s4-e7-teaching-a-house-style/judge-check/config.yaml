@@ -14,6 +14,6 @@ arms:
   - {name: e7-one-line, predictions: ../results/e7-one-line/predictions-test.jsonl}
   - {name: e7-style-guide, predictions: ../results/e7-style-guide/predictions-test.jsonl}
   - {name: e7-guide-4-examples, predictions: ../results/e7-guide-4-examples/predictions-test.jsonl}
-  - {name: e7-tuned-short, predictions: ../results/e7-tuned-short/predictions-test.jsonl}
+  - {name: e7-tuned-short, predictions: ../results/e7-tuned-short-b4/predictions-test.jsonl}
 limits:
   anthropic: {max_concurrency: 8, requests_per_minute: 300}
