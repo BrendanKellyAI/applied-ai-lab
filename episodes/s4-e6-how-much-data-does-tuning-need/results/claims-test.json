@@ -1,0 +1,78 @@
+[
+  {
+    "id": "C1",
+    "title": "Fifty examples are not enough",
+    "held": true,
+    "detail": {
+      "a": 60,
+      "b": 587,
+      "only_a": 0,
+      "only_b": 527,
+      "p_value": 4.552209918945439e-159
+    }
+  },
+  {
+    "id": "C2",
+    "title": "A few hundred examples are enough",
+    "held": true,
+    "detail": {
+      "smallest_matching": "e6-tuned-800",
+      "size": 800,
+      "against_reference": {
+        "e6-tuned-50": {
+          "a": 60,
+          "b": 587,
+          "only_a": 0,
+          "only_b": 527,
+          "p_value": 4.552209918945439e-159
+        },
+        "e6-tuned-200": {
+          "a": 450,
+          "b": 587,
+          "only_a": 5,
+          "only_b": 142,
+          "p_value": 6.201799122350081e-36
+        },
+        "e6-tuned-800": {
+          "a": 589,
+          "b": 587,
+          "only_a": 12,
+          "only_b": 10,
+          "p_value": 0.8318119049072266
+        },
+        "e6-tuned-1600": {
+          "a": 592,
+          "b": 587,
+          "only_a": 12,
+          "only_b": 7,
+          "p_value": 0.359283447265625
+        }
+      }
+    }
+  },
+  {
+    "id": "C3",
+    "title": "Beyond 800, more data adds nothing measurable",
+    "held": true,
+    "detail": {
+      "a": 589,
+      "b": 592,
+      "only_a": 4,
+      "only_b": 7,
+      "p_value": 0.548828125
+    }
+  },
+  {
+    "id": "C4",
+    "title": "The smallest matching size still catches incidents",
+    "held": true,
+    "detail": {
+      "arm": "e6-tuned-800",
+      "safety_recall": {
+        "count": 64,
+        "total": 65,
+        "rate": 0.9846153846153847
+      }
+    }
+  }
+]

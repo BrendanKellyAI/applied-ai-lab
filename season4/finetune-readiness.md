@@ -4,7 +4,7 @@ A tool from Season 4, started in E6 and completed in E10. Work through it before
 a fine-tuning project. Each line says what to check and, where Season 4 measured it, what the
 Halvard tasks showed. Halvard Home is invented; its numbers are one worked case, not a rule.
 
-**Status: draft.** Section 2's numbers come from E6's run; section 6 is written in E10.
+**Status: draft.** Sections 1 to 5 carry Season 4's numbers up to E6; section 6 is written in E10.
 
 ## 1. Is tuning the right fix?
 
@@ -21,8 +21,13 @@ Halvard tasks showed. Halvard Home is invented; its numbers are one worked case,
 ## 2. How much labelled data do you need?
 
 - [ ] **Label a few hundred examples first and draw the curve** before labelling thousands.
-      *(S4 E6: to be filled from the run: fully right at 0, 50, 200, 800 and 1,600 examples.)*
-- [ ] **Buy more data only where the curve is still rising.**
+      *(S4 E6: fully right out of 600 was 24 untuned, 60 at 50 examples, 450 at 200, 589 at 800
+      and 592 at 1,600, against 587 for the best prompt. 800 matched the prompt; 200 did not.)*
+- [ ] **Buy more data only where the curve is still rising.** *(S4 E6: 800 to 1,600 added three
+      items, not distinguishable; doubling the data doubled the training time for nothing.)*
+- [ ] **Check the valid-output rate at small sizes.** A model tuned on too few examples learns
+      the output's shape before its allowed values. *(S4 E6: at 50 examples, 67 of 600 replies
+      were valid and no incident was flagged.)*
 - [ ] **Check the rare cases are in every training set,** not just the total. *(Halvard's safety
       items are about 10% of each set: 7 in 50, 22 in 200, 88 in 800.)*
 
