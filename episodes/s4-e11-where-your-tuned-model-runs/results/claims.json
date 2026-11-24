@@ -1,0 +1,40 @@
+[
+  {
+    "id": "C1",
+    "title": "The laptop gives the same answers",
+    "held": true,
+    "detail": {
+      "items": 600,
+      "identical": 600,
+      "rate": 1.0
+    }
+  },
+  {
+    "id": "C2",
+    "title": "The same score on both machines",
+    "held": true,
+    "detail": {
+      "only_a": 0,
+      "only_b": 0,
+      "p_value": 1.0
+    }
+  },
+  {
+    "id": "C3",
+    "title": "The laptop is much slower",
+    "held": true,
+    "detail": {
+      "laptop_per_1000": 4662.5,
+      "colab_per_1000": 247.3,
+      "ratio": 18.9
+    }
+  },
+  {
+    "id": "C4",
+    "title": "A laptop still keeps up with a small team",
+    "held": true,
+    "detail": {
+      "seconds_per_message": 4.66
+    }
+  }
+]

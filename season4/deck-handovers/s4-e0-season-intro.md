@@ -1,7 +1,7 @@
 # S4 E0 deck handover: Season intro
 
 For the content agent. No experiment: the opening deck for Season 4. It reveals no scores.
-Rebuild it last if the episode list changes after E5 (E11's question is still open).
+Rebuild it last if the episode list changes. E11's question was settled on 24 November 2026: where a tuned model can run.
 
 ## Sources of truth
 
@@ -90,7 +90,7 @@ E0 makes no measured claim. Mark every Halvard figure "invented".
 | Know the limits | E8 | Field note: can fine-tuning teach facts? | tune a model on your documents instead of retrieving them |
 | | E9 | Distillation: a big model teaches a small one | pay for a big model on every call |
 | | E10 | Field note: what does tuning break? | ship a tuned model without checking what it forgot |
-| Choose | E11 | Open weights: tuning a model you host | decide whether to host your own model (question settled at E5) |
+| Choose | E11 | Where your tuned model runs | buy GPUs to run a model you tuned |
 | | E12 | Prompt, retrieve, or tune? | sign off an adaptation plan |
 | | E13 | Season 4 recap: the adaptation card | take the whole season away on one card |
 

@@ -51,9 +51,9 @@ and never rerun silently.
 | | [E6](../episodes/s4-e6-how-much-data-does-tuning-need/) | How much data does tuning need? | Done |
 | | [E7](../episodes/s4-e7-teaching-a-house-style/) | Teaching a house style | Done |
 | Know the limits | [E8](../episodes/s4-e8-can-fine-tuning-teach-facts/) | Field note: can fine-tuning teach facts? | Pairs made; two Colab jobs waiting for a GPU |
-| | [E9](../episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) | Distillation: a big model teaches a small one | Pre-registered; waiting for approval |
-| | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Pre-registered; waiting for approval |
-| Choose | E11 | Open weights: tuning a model you host | Its question is still to be decided |
+| | [E9](../episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) | Distillation: a big model teaches a small one | Approved; one Colab job waiting for a GPU |
+| | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Approved; three Colab jobs waiting for a GPU |
+| Choose | [E11](../episodes/s4-e11-where-your-tuned-model-runs/) | Where your tuned model runs | Done |
 | | E12 | Prompt, retrieve, or tune? | After E8 to E10 |
 | | E13 | Season 4 recap: the adaptation card | Last |
 

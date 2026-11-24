@@ -4,8 +4,8 @@ A tool from Season 4 (E12). Start at the top with the gap you have measured, and
 first fix that clears your bar. Each step gives the evidence from Halvard's two tasks. Halvard
 Home is invented; its numbers are one worked case, not a rule for your task.
 
-**Status: draft, 24 November 2026.** The steps from E1 to E7 carry their results. The steps
-from E8, E9 and E10 are marked *pending* and will be filled from those episodes; the card is
+**Status: draft, 24 November 2026.** The steps from E1 to E7 carry their results. E11 is in
+section 6. The steps from E8, E9 and E10 are marked *pending* and will be filled from those episodes; the card is
 final once they are.
 
 ## The rule (proposed)
@@ -73,6 +73,9 @@ Before you commission it, run `finetune-readiness.md`.
   base models on 14 January 2027, with the tuned models built on them; the Gemini API no longer
   offers a tunable model. A tuned model is a dependency you must be able to rebuild. Season 3
   E9 asks what happens when a model changes.
+- **Where it runs is your choice.** *(E11: the tuned model gave identical answers on a 2018
+  laptop with no GPU, all 600, 19 times slower than a free GPU but about 770 messages an hour.)*
+  Training needs the GPU; answering, for a small model, may not.
 - **The training data needs upkeep:** when the rules change (a new route, a new product), the
   labels and the model change with them; a prompt changes in minutes.
 - **Every retrain needs the regression checks again.** *(E10: pending.)*
@@ -91,5 +94,6 @@ Before you commission it, run `finetune-readiness.md`.
 | E6 | "Label in stages and stop when the curve flattens." | "Before we label more, what does the curve look like at a quarter and half of what we have?" |
 | E7 | "Tune for a house style only on replies you would be happy to see copied, habits and all." | "If we tuned a model on our past replies, what habits of ours would it copy that we would not put in a style guide?" |
 | E8 to E10 | *pending* | |
+| E11 | "Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives the same answers there before you move it." | "If we tuned a small model, how many messages an hour would it need to answer, and does that need a GPU at all?" |
 
 The final version of this table, and the season scoreboard, are filled in E12.
