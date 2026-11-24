@@ -142,7 +142,7 @@ prompt that already works."**
 
 ## Next
 
-E6, Field note: how much data does tuning need?: the same tuning at 50, 200 and 800 examples.
+E6, How much data does tuning need?: the same tuning at 50, 200 and 800 examples.
 
 ## Careful with
 

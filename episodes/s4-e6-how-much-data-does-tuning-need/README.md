@@ -1,4 +1,4 @@
-# S4 E6: Field note: how much data does tuning need?
+# S4 E6: How much data does tuning need?
 
 E5 tuned Qwen3-0.6B on all 1,600 labelled Task A messages and matched the best prompt. Labelled
 data is the expensive part. How few examples are enough, and where does adding more stop

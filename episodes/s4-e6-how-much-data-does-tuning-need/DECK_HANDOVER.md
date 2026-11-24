@@ -1,4 +1,4 @@
-# S4 E6 deck handover: Field note: how much data does tuning need?
+# S4 E6 deck handover: How much data does tuning need?
 
 For the content agent. Has an experiment: E5's tuning repeated at 50, 200 and 800 examples, a
 learning curve against the best prompt, on Task A.
@@ -21,10 +21,10 @@ Branch `s4`.
 | | Value |
 |---|---|
 | Episode code | S4 E6 |
-| Title | Field note: how much data does tuning need? |
+| Title | How much data does tuning need? |
 | Hub slug | `how-much-data-does-tuning-need` (proposed; confirm) |
 | Deck file | `bk-s4-e6-how-much-data-does-tuning-need-v1.pdf` |
-| Hub format | `field-note` |
+| Hub format | `experiment` |
 
 ## The argument
 

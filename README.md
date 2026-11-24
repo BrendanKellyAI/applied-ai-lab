@@ -41,6 +41,14 @@ The case, the scorecard and one-page strategy templates, and the strategy card a
 [season3/](season3/). `uv run lab strategy score <scorecard.csv>` scores your own use cases
 with no key and no call.
 
+Season 4, adapting models, changes how a model behaves rather than what it knows: instructions,
+examples, structured output, fine-tuning and distillation. It runs two Halvard tasks, triage
+and house style replies (`datasets/halvard-tasks`, frozen), through prompted arms on the
+cheapest API model and adapter-tuned small open models on Colab. The season guide, scoreboard,
+fine-tuning readiness checklist and decision card are in [season4/](season4/); the episodes are
+in `episodes/s4-*`. `uv run lab adapt score <predictions.jsonl> --split test` scores your own
+triage predictions with no key and no call.
+
 ## Episode code
 
 | Episode | Sample | Folder |
@@ -63,6 +71,13 @@ with no key and no call.
 | S2 E9 | Building the prompt: how many passages, in what order, and "not found" | [episodes/s2-e9-building-the-prompt](episodes/s2-e9-building-the-prompt/) |
 | S2 E10 | Grounding and citations, checked in code | [episodes/s2-e10-grounding-and-citations](episodes/s2-e10-grounding-and-citations/) |
 | S2 E14 | Tracing a wrong answer to the stage that lost the passage | [episodes/s2-e14-tracing](episodes/s2-e14-tracing/) |
+| S4 E1 | The baseline: what a one-line prompt gets right on triage and replies | [episodes/s4-e1-baseline](episodes/s4-e1-baseline/) |
+| S4 E2 | Instructions first: written definitions against a one-line prompt | [episodes/s4-e2-instructions-first](episodes/s4-e2-instructions-first/) |
+| S4 E3 | How many examples: random against similar, and what each costs | [episodes/s4-e3-how-many-examples](episodes/s4-e3-how-many-examples/) |
+| S4 E4 | Making output a contract: free text, JSON mode and a schema | [episodes/s4-e4-making-output-a-contract](episodes/s4-e4-making-output-a-contract/) |
+| S4 E5 | Field note: does fine-tuning beat a good prompt? | [episodes/s4-e5-does-fine-tuning-beat-a-good-prompt](episodes/s4-e5-does-fine-tuning-beat-a-good-prompt/) |
+| S4 E6 | How much data does tuning need? A learning curve | [episodes/s4-e6-how-much-data-does-tuning-need](episodes/s4-e6-how-much-data-does-tuning-need/) |
+| S4 E7 | Teaching a house style: guide, examples and tuning | [episodes/s4-e7-teaching-a-house-style](episodes/s4-e7-teaching-a-house-style/) |
 
 ## Reproduce a result for free
 
