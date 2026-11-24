@@ -141,3 +141,46 @@ def facts_analyse_command(
             f"{d['total']}, confident wrong {w['count']} of {w['total']}"
         )
     typer.echo(f"Wrote {path}")
+
+
+def regression_run_command(
+    config: Annotated[Path, typer.Argument(help="E10's config.yaml.")],
+    estimate: EstimateOption = False,
+    cache_dir: CacheOption = None,
+    prices_path: PricesOption = PRICES,
+    env_file: EnvOption = Path(".env"),
+) -> None:
+    """Judge every model's answers on E10's decline set. The other checks make no call."""
+    from lab.adapt import regression_eval
+
+    experiment = regression_eval.RegressionExperiment.load(config)
+    prices = load_prices(prices_path)
+    costs = regression_eval.estimate(experiment, prices)
+    title = f"{experiment.episode} judge estimate (declines)"
+    typer.echo(format_estimate(costs, prices.currency if prices else "USD", title, ""))
+    if estimate:
+        return
+    _gate(experiment.episode, costs, prices)
+    load_dotenv(env_file, override=False)
+    root = cache_dir if cache_dir is not None else shared_cache_root(Path.cwd())
+    runner = _runner(experiment.judge.provider, experiment.limits, root)
+    for arm, summary in regression_eval.run(runner, experiment).items():
+        typer.echo(
+            f"judge-{arm}: made {summary['made']}, cached {summary['cached']}, "
+            f"failed {summary['failed']}"
+        )
+
+
+def regression_analyse_command(
+    config: Annotated[Path, typer.Argument(help="E10's config.yaml.")],
+) -> None:
+    """Score every check for every model against the base model. No API calls."""
+    from lab.adapt import regression_eval
+
+    experiment = regression_eval.RegressionExperiment.load(config)
+    result = regression_eval.analyse(experiment)
+    path = regression_eval.write_analysis(experiment, result)
+    for name, arm in result["arms"].items():
+        parts = [f"{k} {v['count']} of {v['total']}" for k, v in arm["checks"].items()]
+        typer.echo(f"{name}: " + ", ".join(parts))
+    typer.echo(f"Wrote {path}")

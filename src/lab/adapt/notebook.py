@@ -6,7 +6,8 @@ it must match what this module writes, and every code cell must parse. It cannot
 
 What it does, for one prepared arm folder (lab adapt tune):
   1. refuses to run unless job.json has an open launched attempt and the files match its hashes
-  2. adapter (LoRA) tuning on train.jsonl, unless the job has no training examples
+  2. adapter (LoRA) tuning on train.jsonl, unless the job has no training examples; or, for an
+     eval job (v2, E10), loading an earlier job's adapter from Drive after checking its hash
   3. greedy predictions on each eval file, thinking off
   4. job_result.json with the outcome, which lab adapt status records; a failure is written
      too, and nothing is retried
@@ -15,7 +16,7 @@ What it does, for one prepared arm folder (lab adapt tune):
 import json
 from pathlib import Path
 
-NOTEBOOK_VERSION = "s4-lora-job-v1"
+NOTEBOOK_VERSION = "s4-lora-job-v2"
 # Pinned so a rerun installs the same code. Torch is Colab's own; its version is recorded.
 PACKAGES = ("transformers==4.57.1", "peft==0.17.1", "accelerate==1.10.1")
 
@@ -111,6 +112,16 @@ def load_model():
         plan["base_model"], revision=sha, torch_dtype=torch.float32
     ).to("cuda")
     return base, sha
+
+
+def load_adapter(base, source):
+    # E10: an earlier job's adapter, from its arm folder on Drive, checked against its record.
+    from peft import PeftModel
+
+    folder = job_dir.parent / source["folder"]
+    if sha256(folder / "adapter_model.safetensors") != source["sha256"]:
+        raise RuntimeError(f"{source['folder']} does not match its job record")
+    return PeftModel.from_pretrained(base, str(folder))
 
 
 def prompt_text(messages):
@@ -241,7 +252,10 @@ try:
     result["gpu"] = torch.cuda.get_device_name(0)
     check_files(plan)
     active, result["base_revision_sha"] = load_model()
-    if plan["train"]["examples"]:
+    if plan.get("adapter_from"):
+        active = load_adapter(active, plan["adapter_from"])
+        result["adapter_from"] = plan["adapter_from"]
+    elif plan["train"]["examples"]:
         active, training = train(active, plan)
         result["training"] = training
     result["predictions"] = {

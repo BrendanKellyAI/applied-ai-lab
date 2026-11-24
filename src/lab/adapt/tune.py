@@ -55,6 +55,9 @@ def _system(config: TuneConfig, definitions: Definitions | None) -> str:
         return triage_system(config.instructions, definitions)
     if config.task == "facts":
         return FACTS_SHORT
+    if config.task == "eval":
+        # E10: each prompt set carries its own messages; there is no training row.
+        return ""
     style_guide = (config.data_folder / "style-guide.md").read_text(encoding="utf-8")
     return reply_system(config.instructions, style_guide)
 
@@ -76,7 +79,22 @@ def _messages(
     return messages
 
 
+def _eval_rows(path: Path) -> list[dict]:
+    """E10: a prompt set, each row an id and the messages to send (no assistant message)."""
+    rows = read_jsonl(path)
+    for n, row in enumerate(rows, start=1):
+        roles = [m["role"] for m in row.get("messages", [])]
+        if not row.get("id") or not roles or roles[-1] != "user" or "assistant" in roles:
+            raise JobError(f"{path.name} row {n}: needs an id and messages ending with the user")
+    ids = [r["id"] for r in rows]
+    if len(set(ids)) != len(ids):
+        raise JobError(f"{path.name}: ids repeat")
+    return [{"id": r["id"], "messages": r["messages"]} for r in rows]
+
+
 def _items(config: TuneConfig, split: str) -> list:
+    if config.task == "eval":
+        return []
     if config.task == "facts":
         # Train is the generated pairs; dev and test are the Halvard library's questions.
         if split == "train":
@@ -166,12 +184,42 @@ def _files(config: TuneConfig) -> tuple[dict[str, str], list[dict]]:
     if problems:
         raise JobError("training rows failed validation:\n" + "\n".join(problems[:20]))
     files = {"train.jsonl": _jsonl(rows)}
+    for name, path in (config.eval_sets or {}).items():
+        files[f"eval-{name}.jsonl"] = _jsonl(_eval_rows(config.resolve(path)))
     for split in config.eval_splits:
         items = _items(config, split)
         files[f"eval-{split}.jsonl"] = _jsonl(
             [{"id": i.id, "messages": _messages(i, system, target=False)} for i in items]
         )
     return files, rows
+
+
+def _eval_names(config: TuneConfig) -> list[str]:
+    return [*(config.eval_sets or {}), *config.eval_splits]
+
+
+def _adapter_record(config: TuneConfig) -> dict[str, Any]:
+    """E10: the saved adapter to load, from its job's record: the Drive folder the notebook
+    wrote it to and its hash, so a different adapter cannot be loaded by mistake."""
+    if config.adapter_from is None:
+        return {}
+    source = load_record(config.resolve(config.adapter_from))
+    done = [a for a in (source or {}).get("attempts", []) if a["status"] == "succeeded"]
+    if source is None or not done or "training" not in done[-1].get("result", {}):
+        raise JobError(f"{config.adapter_from} has no succeeded tuning attempt to load")
+    attempt = done[-1]
+    if (source["plan"]["base_model"], source["plan"]["base_revision"]) != (
+        config.base_model,
+        config.base_revision,
+    ):
+        raise JobError("the adapter was trained on a different base model or revision")
+    return {
+        "adapter_from": {
+            "job_id": source["plan"]["job_id"],
+            "folder": f"{source['plan']['arm']}/adapter-{attempt['attempt']}",
+            "sha256": attempt["result"]["training"]["adapter_sha256"],
+        }
+    }
 
 
 def _pairs_record(config: TuneConfig) -> dict[str, Any]:
@@ -216,9 +264,10 @@ def _plan(config: TuneConfig, files: dict[str, str], rows: list[dict]) -> dict[s
                 "items": files[f"eval-{split}.jsonl"].count("\n"),
                 "sha256": _text_sha(files[f"eval-{split}.jsonl"]),
             }
-            for split in config.eval_splits
+            for split in _eval_names(config)
         },
         **_pairs_record(config),
+        **_adapter_record(config),
         "training_tokens_estimate": {
             "mean_per_example": round(sum(per_example) / len(rows), 1) if rows else 0,
             "per_epoch": sum(per_example),

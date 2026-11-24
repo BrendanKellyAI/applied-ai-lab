@@ -16,10 +16,12 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from lab.adapt.build_tasks.config import Split
 from lab.adapt.experiment import DATA, TASK_A_LEVELS, TASK_B_LEVELS
 
-# Task A triage, Task B replies, and E8's closed-book questions on the Halvard library.
-TuneTask = Literal["a", "b", "facts"]
+# Task A triage, Task B replies, E8's closed-book questions on the Halvard library, and E10's
+# eval-only jobs: given prompt sets, run by a base model or a saved adapter, no training.
+TuneTask = Literal["a", "b", "facts", "eval"]
 FACTS_LEVELS = ("short",)
-LEVELS = {"a": TASK_A_LEVELS, "b": TASK_B_LEVELS, "facts": FACTS_LEVELS}
+EVAL_LEVELS = ("none",)
+LEVELS = {"a": TASK_A_LEVELS, "b": TASK_B_LEVELS, "facts": FACTS_LEVELS, "eval": EVAL_LEVELS}
 
 
 class Lora(BaseModel):
@@ -74,6 +76,10 @@ class TuneConfig(BaseModel):
     # E9: a teacher's predictions on train, used as the targets instead of the true labels
     # (Task A only). A teacher reply that is not a valid label is left out and counted.
     teacher: Path | None = None
+    # E10: prompt sets to run, by name, each a JSONL of {"id", "messages"} (the eval task only).
+    eval_sets: dict[str, Path] | None = None
+    # E10: an earlier job's arm folder whose recorded adapter is loaded instead of training.
+    adapter_from: Path | None = None
     folder: Path = Path(".")
 
     @model_validator(mode="after")
@@ -85,7 +91,16 @@ class TuneConfig(BaseModel):
             raise ValueError("pairs are set for the facts task, and only for it")
         if self.teacher is not None and self.task != "a":
             raise ValueError("teacher labels are for Task A only")
+        if (self.task == "eval") != (self.eval_sets is not None):
+            raise ValueError("eval_sets are set for the eval task, and only for it")
+        if self.task == "eval" and (self.train_size or self.eval_splits):
+            raise ValueError("an eval job has no training rows and no dev or test splits")
+        if self.adapter_from is not None and self.task != "eval":
+            raise ValueError("adapter_from is for the eval task only")
         return self
+
+    def resolve(self, path: Path) -> Path:
+        return path if path.is_absolute() else self.folder / path
 
     @classmethod
     def load(cls, path: Path) -> Self:

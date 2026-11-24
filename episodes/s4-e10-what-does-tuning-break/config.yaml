@@ -1,0 +1,16 @@
+# S4 E10, what does tuning break? Three Qwen3-0.6B models (untuned, tuned for Task A in E5,
+# tuned for Task B in E7) on three checks; each tuned model is compared with the untuned one.
+# Only the decline set is judged (Season 2's judge). See PREREGISTRATION.md.
+episode: s4-e10-what-does-tuning-break
+library: ../../datasets/halvard
+s1_items: ../../field-notes/s1-e10-reasoning-vs-standard/tasks/items.jsonl
+s1_metrics: ../../field-notes/s1-e10-reasoning-vs-standard/metrics.py
+s2_log: ../../field-notes/s2-e12-embedding-swap/results/baseline/log.jsonl
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 300}
+baseline: e10-base
+arms:
+  - {name: e10-base, results: results/e10-base, note: "Qwen3-0.6B untuned"}
+  - {name: e10-tuned-triage, results: results/e10-tuned-triage, note: "E5's Task A adapter"}
+  - {name: e10-tuned-replies, results: results/e10-tuned-replies, note: "E7's Task B adapter"}
+limits:
+  google: {max_concurrency: 8, requests_per_minute: 300}

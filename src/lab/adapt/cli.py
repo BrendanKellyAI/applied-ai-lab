@@ -133,3 +133,5 @@ from lab.adapt import cli_facts  # noqa: E402
 adapt_app.command("pairs")(cli_facts.pairs_command)
 adapt_app.command("facts-run")(cli_facts.facts_run_command)
 adapt_app.command("facts-analyse")(cli_facts.facts_analyse_command)
+adapt_app.command("regression-run")(cli_facts.regression_run_command)
+adapt_app.command("regression-analyse")(cli_facts.regression_analyse_command)
