@@ -1,0 +1,600 @@
+{"id": "B-test-00000:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1005, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00000:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1005, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00001:ar", "text": "{\"better\": \"2\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00001:ra", "text": "{\"better\": \"1\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00002:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1024, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00002:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1024, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00003:ar", "text": "{\"better\": \"2\"}", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00003:ra", "text": "{\"better\": \"1\"}", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00004:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1047, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00004:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1047, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00005:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00005:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00006:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00006:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00007:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 939, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00007:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 939, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00008:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1042, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00008:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1042, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00009:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00009:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00010:ar", "text": "{\"better\": \"2\"}", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00010:ra", "text": "{\"better\": \"1\"}", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00011:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00011:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00012:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1066, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00012:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1066, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00013:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00013:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00014:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1052, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00014:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1052, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00015:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00015:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00016:ar", "text": "{\"better\": \"2\"}", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00016:ra", "text": "{\"better\": \"1\"}", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00017:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00017:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00018:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1033, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00018:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1033, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00019:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1072, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00019:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1072, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00020:ar", "text": "{\"better\": \"2\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00020:ra", "text": "{\"better\": \"1\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00021:ar", "text": "{\"better\": \"1\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00021:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00022:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1051, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00022:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1051, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00023:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00023:ra", "text": "{\"better\": \"1\"}", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00024:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00024:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00025:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00025:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00026:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00026:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00028:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00028:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00029:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00029:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00031:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1041, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00031:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1041, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00032:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00032:ra", "text": "{\"better\": \"1\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00033:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1049, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00033:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1049, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00034:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 998, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00034:ra", "text": "{\"better\": \"1\"}", "input_tokens": 998, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00035:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00035:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1020, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00036:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00036:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00037:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00037:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00038:ar", "text": "{\"better\": \"2\"}", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00038:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00039:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00039:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00040:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 927, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00040:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 927, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00041:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1049, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00041:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1049, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00042:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1080, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00042:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1080, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00043:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1031, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00043:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1031, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00044:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1046, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00044:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1046, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00045:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00045:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00046:ar", "text": "{\"better\": \"2\"}", "input_tokens": 974, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00046:ra", "text": "{\"better\": \"1\"}", "input_tokens": 974, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00047:ar", "text": "{\"better\": \"2\"}", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00047:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00048:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1015, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00048:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1015, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00049:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1033, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00049:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1033, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00050:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1024, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00050:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1024, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00051:ar", "text": "{\"better\": \"2\"}", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00051:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00053:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1022, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00053:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1022, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00056:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00056:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00058:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 969, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00058:ra", "text": "{\"better\": \"1\"}", "input_tokens": 969, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00059:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00059:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00060:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00060:ra", "text": "{\"better\": \"1\"}", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00061:ar", "text": "{\"better\": \"2\"}", "input_tokens": 955, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00061:ra", "text": "{\"better\": \"1\"}", "input_tokens": 955, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00062:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00062:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00064:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00064:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00065:ar", "text": "{\"better\": \"2\"}", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00065:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00066:ar", "text": "{\"better\": \"1\"}", "input_tokens": 1036, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00066:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1036, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00067:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00067:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00068:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 931, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00068:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 931, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00069:ar", "text": "{\"better\": \"2\"}", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00069:ra", "text": "{\"better\": \"1\"}", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00070:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00070:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00071:ar", "text": "{\"better\": \"2\"}", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00071:ra", "text": "{\"better\": \"1\"}", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00072:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00072:ra", "text": "{\"better\": \"1\"}", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00073:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1050, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00073:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1050, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00074:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1058, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00074:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1058, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00075:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00075:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00076:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00076:ra", "text": "{\"better\": \"1\"}", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00077:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00077:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00078:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00078:ra", "text": "{\"better\": \"1\"}", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00080:ar", "text": "{\"better\": \"2\"}", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00080:ra", "text": "{\"better\": \"1\"}", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00081:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00081:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00082:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00082:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00083:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00083:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00084:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00084:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00085:ar", "text": "{\"better\": \"2\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00085:ra", "text": "{\"better\": \"1\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00086:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 983, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00086:ra", "text": "{\"better\": \"1\"}", "input_tokens": 983, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00087:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00087:ra", "text": "{\"better\": \"1\"}", "input_tokens": 978, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00088:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00088:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00089:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00089:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00090:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1032, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00090:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1032, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00091:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1041, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00091:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1041, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00092:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00092:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00093:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00093:ra", "text": "{\"better\": \"1\"}", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00094:ar", "text": "{\"better\": \"2\"}", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00094:ra", "text": "{\"better\": \"1\"}", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00095:ar", "text": "{\"better\": \"2\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00095:ra", "text": "{\"better\": \"1\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00096:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00096:ra", "text": "{\"better\": \"1\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00097:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00097:ra", "text": "{\"better\": \"1\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00098:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1073, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00098:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1073, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00099:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00099:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00100:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00100:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00101:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00101:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00102:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 996, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00102:ra", "text": "{\"better\": \"1\"}", "input_tokens": 996, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00104:ar", "text": "{\"better\": \"2\"}", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00104:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00105:ar", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00105:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00106:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1027, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00106:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1027, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00107:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1018, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00107:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1018, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00108:ar", "text": "{\"better\": \"2\"}", "input_tokens": 991, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00108:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 991, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00110:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1082, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00110:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1082, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00111:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00111:ra", "text": "{\"better\": \"1\"}", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00113:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1056, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00113:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1056, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00114:ar", "text": "{\"better\": \"1\"}", "input_tokens": 1064, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00114:ra", "text": "{\"better\": \"2\"}", "input_tokens": 1064, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00116:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00116:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00117:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00117:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00118:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1025, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00118:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1025, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00119:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1067, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00119:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1067, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00120:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00120:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00121:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00121:ra", "text": "{\"better\": \"1\"}", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00122:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00122:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1012, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00123:ar", "text": "{\"better\": \"2\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00123:ra", "text": "{\"better\": \"1\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00124:ar", "text": "{\"better\": \"2\"}", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00124:ra", "text": "{\"better\": \"1\"}", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00125:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00125:ra", "text": "{\"better\": \"1\"}", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00126:ar", "text": "{\"better\": \"2\"}", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00126:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00127:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00127:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00128:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00128:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00130:ar", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00130:ra", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00132:ar", "text": "{\"better\": \"2\"}", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00132:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00134:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 952, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00134:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 952, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00135:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 951, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00135:ra", "text": "{\"better\": \"1\"}", "input_tokens": 951, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00136:ar", "text": "{\"better\": \"2\"}", "input_tokens": 998, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00136:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 998, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00138:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00138:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00139:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00139:ra", "text": "{\"better\": \"1\"}", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00140:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00140:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00141:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00141:ra", "text": "{\"better\": \"1\"}", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00142:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 962, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00142:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 962, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00143:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00143:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 930, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00144:ar", "text": "{\"better\": \"2\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00144:ra", "text": "{\"better\": \"1\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00145:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00145:ra", "text": "{\"better\": \"1\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00146:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 991, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00146:ra", "text": "{\"better\": \"1\"}", "input_tokens": 991, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00147:ar", "text": "{\"better\": \"1\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00147:ra", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00148:ar", "text": "{\"better\": \"2\"}", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00148:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00149:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00149:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00150:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00150:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00151:ar", "text": "{\"better\": \"2\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00151:ra", "text": "{\"better\": \"1\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00152:ar", "text": "{\"better\": \"2\"}", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00152:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00153:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 927, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00153:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 927, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00154:ar", "text": "{\"better\": \"2\"}", "input_tokens": 926, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00154:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 926, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00155:ar", "text": "{\"better\": \"2\"}", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00155:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00156:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00156:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00157:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00157:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1010, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00159:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00159:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00160:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00160:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00161:ar", "text": "{\"better\": \"2\"}", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00161:ra", "text": "{\"better\": \"1\"}", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00162:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 919, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00162:ra", "text": "{\"better\": \"1\"}", "input_tokens": 919, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00163:ar", "text": "{\"better\": \"2\"}", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00163:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00164:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00164:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00165:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00165:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00167:ar", "text": "{\"better\": \"2\"}", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00167:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00168:ar", "text": "{\"better\": \"2\"}", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00168:ra", "text": "{\"better\": \"1\"}", "input_tokens": 959, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00169:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00169:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00170:ar", "text": "{\"better\": \"2\"}", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00170:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 943, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00172:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00172:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00173:ar", "text": "{\"better\": \"2\"}", "input_tokens": 994, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00173:ra", "text": "{\"better\": \"1\"}", "input_tokens": 994, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00174:ar", "text": "{\"better\": \"2\"}", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00174:ra", "text": "{\"better\": \"1\"}", "input_tokens": 988, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00175:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00175:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00176:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00176:ra", "text": "{\"better\": \"1\"}", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00177:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00177:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00178:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00178:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00179:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00179:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00180:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00180:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00181:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 934, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00181:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 934, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00182:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1013, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00182:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1013, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00183:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00183:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00185:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00185:ra", "text": "{\"better\": \"1\"}", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00186:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00186:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00188:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00188:ra", "text": "{\"better\": \"1\"}", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00189:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00189:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00190:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00190:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00191:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1007, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00191:ra", "text": "{\"better\": \"2\"}", "input_tokens": 1007, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00192:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 985, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00192:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 985, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00193:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1008, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00193:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1008, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00194:ar", "text": "{\"better\": \"2\"}", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00194:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00195:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 938, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00195:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 938, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00196:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00196:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00199:ar", "text": "```json\n{\"better\": \"tie\"}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00199:ra", "text": "```json\n{\"better\": \"tie\"}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00200:ar", "text": "{\"better\": \"2\"}", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00200:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00201:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00201:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00202:ar", "text": "{\"better\": \"2\"}", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00202:ra", "text": "{\"better\": \"1\"}", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00203:ar", "text": "{\"better\": \"2\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00203:ra", "text": "{\"better\": \"1\"}", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00204:ar", "text": "{\"better\": \"2\"}", "input_tokens": 952, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00204:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 952, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00205:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00205:ra", "text": "{\"better\": \"1\"}", "input_tokens": 992, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00206:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00206:ra", "text": "{\"better\": \"1\"}", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00208:ar", "text": "{\"better\": \"2\"}", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00208:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00209:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 953, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00209:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 953, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00210:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00210:ra", "text": "{\"better\": \"1\"}", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00211:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 957, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00211:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 957, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00213:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1007, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00213:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1007, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00214:ar", "text": "{\"better\": \"2\"}", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00214:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00215:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 939, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00215:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 939, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00216:ar", "text": "{\"better\": \"2\"}", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00216:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 963, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00217:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00217:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00218:ar", "text": "{\"better\": \"2\"}", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00218:ra", "text": "{\"better\": \"1\"}", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00219:ar", "text": "{\"better\": \"2\"}", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00219:ra", "text": "{\"better\": \"1\"}", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00220:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 931, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00220:ra", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 931, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00223:ar", "text": "{\"better\": \"2\"}", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00223:ra", "text": "{\"better\": \"1\"}", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00224:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00224:ra", "text": "{\"better\": \"1\"}", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00225:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 944, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00225:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 944, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00226:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00226:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00227:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00227:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 960, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00228:ar", "text": "{\"better\": \"2\"}", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00228:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00229:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00229:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00230:ar", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00230:ra", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00231:ar", "text": "{\"better\": \"2\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00231:ra", "text": "{\"better\": \"1\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00232:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00232:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 949, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00233:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 962, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00233:ra", "text": "{\"better\": \"1\"}", "input_tokens": 962, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00234:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00234:ra", "text": "{\"better\": \"1\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00235:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00235:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00238:ar", "text": "{\"better\": \"2\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00238:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00239:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00239:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 973, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00240:ar", "text": "{\"better\": \"2\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00240:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00241:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 933, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00241:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 933, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00242:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00242:ra", "text": "{\"better\": \"1\"}", "input_tokens": 968, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00243:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00243:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00244:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1061, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00244:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1061, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00245:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00245:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00246:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1000, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00246:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1000, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00247:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00247:ra", "text": "{\"better\": \"1\"}", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00248:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 928, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00248:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 928, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00249:ar", "text": "{\"better\": \"2\"}", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00249:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00250:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00250:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00251:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 953, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00251:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 953, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00252:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00252:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00254:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00254:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 971, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00255:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 929, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00255:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 929, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00256:ar", "text": "{\"better\": \"2\"}", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00256:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00257:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00257:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00258:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00258:ra", "text": "{\"better\": \"1\"}", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00260:ar", "text": "{\"better\": \"1\"}", "input_tokens": 1021, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00260:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1021, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00261:ar", "text": "{\"better\": \"2\"}", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00261:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 965, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00262:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00262:ra", "text": "{\"better\": \"1\"}", "input_tokens": 986, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00263:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00263:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00265:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00265:ra", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 950, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00266:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00266:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1002, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00267:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00267:ra", "text": "{\"better\": \"1\"}", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00268:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00268:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1006, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00269:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 932, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00269:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 932, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00270:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00270:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00271:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1062, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00271:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1062, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00272:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00272:ra", "text": "{\"better\": \"1\"}", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00273:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1005, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00273:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1005, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00275:ar", "text": "{\"better\": \"2\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00275:ra", "text": "{\"better\": \"1\"}", "input_tokens": 990, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00276:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00276:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 980, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00277:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00277:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1029, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00278:ar", "text": "{\"better\": \"1\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00278:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1014, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00280:ar", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00280:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 975, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00281:ar", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00281:ra", "text": "```json\n{\n  \"better\": \"tie\"\n}\n```", "input_tokens": 936, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00282:ar", "text": "{\"better\": \"2\"}", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00282:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 982, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00283:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00283:ra", "text": "{\"better\": \"1\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00284:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00284:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 948, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00285:ar", "text": "{\"better\": \"2\"}", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00285:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00286:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00286:ra", "text": "{\"better\": \"2\"}", "input_tokens": 993, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00288:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 969, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00288:ra", "text": "{\"better\": \"1\"}", "input_tokens": 969, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00289:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00289:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00290:ar", "text": "```json\n{\"better\": \"tie\"}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00290:ra", "text": "```json\n{\"better\": \"tie\"}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00292:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00292:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00293:ar", "text": "{\"better\": \"2\"}", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00293:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 972, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00294:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00294:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00295:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00295:ra", "text": "{\"better\": \"2\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00296:ar", "text": "{\"better\": \"2\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00296:ra", "text": "{\"better\": \"1\"}", "input_tokens": 976, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00298:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00298:ra", "text": "{\"better\": \"1\"}", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00299:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00299:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 1001, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00300:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00300:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00301:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00301:ra", "text": "{\"better\": \"1\"}", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00302:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1000, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00302:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1000, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00303:ar", "text": "{\"better\": \"2\"}", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00303:ra", "text": "{\"better\": \"1\"}", "input_tokens": 995, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00304:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00304:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 1026, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00305:ar", "text": "{\"better\": \"2\"}", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00305:ra", "text": "{\"better\": \"1\"}", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00306:ar", "text": "{\"better\": \"2\"}", "input_tokens": 985, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00306:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 985, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00307:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00307:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1009, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00308:ar", "text": "{\"better\": \"2\"}", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00308:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00311:ar", "text": "{\"better\": \"2\"}", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00311:ra", "text": "{\"better\": \"1\"}", "input_tokens": 999, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00312:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1004, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00312:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1004, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00313:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 1039, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00313:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1039, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00314:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1013, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00314:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1013, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00315:ar", "text": "{\"better\": \"2\"}", "input_tokens": 961, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00315:ra", "text": "{\"better\": \"1\"}", "input_tokens": 961, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00316:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00316:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 984, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00318:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00318:ra", "text": "{\"better\": \"1\"}", "input_tokens": 946, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00319:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00319:ra", "text": "{\"better\": \"1\"}", "input_tokens": 966, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00320:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00320:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 979, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00321:ar", "text": "{\"better\": \"2\"}", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00321:ra", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1023, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00322:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00322:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00323:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00323:ra", "text": "{\"better\": \"1\"}", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00324:ar", "text": "{\"better\": \"2\"}", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00324:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 958, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00325:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00325:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 964, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00326:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00326:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00327:ar", "text": "{\"better\": \"2\"}", "input_tokens": 956, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00327:ra", "text": "{\"better\": \"1\"}", "input_tokens": 956, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00329:ar", "text": "{\"better\": \"2\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00329:ra", "text": "{\"better\": \"1\"}", "input_tokens": 970, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00330:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1003, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00330:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1003, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00331:ar", "text": "{\"better\": \"2\"}", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00331:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 967, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00332:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00332:ra", "text": "{\"better\": \"1\"}", "input_tokens": 942, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00333:ar", "text": "{\"better\": \"2\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00333:ra", "text": "{\"better\": \"1\"}", "input_tokens": 987, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00334:ar", "text": "{\"better\": \"2\"}", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00334:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 941, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00335:ar", "text": "{\"better\": \"tie\"}", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00335:ra", "text": "{\"better\": \"tie\"}", "input_tokens": 947, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00336:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 945, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00336:ra", "text": "```json\n{\n  \"better\": \"1\"\n}\n```", "input_tokens": 945, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00338:ar", "text": "```json\n{\"better\": \"2\"}\n```", "input_tokens": 994, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00338:ra", "text": "{\"better\": \"1\"}", "input_tokens": 994, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00339:ar", "text": "{\"better\": \"2\"}", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00339:ra", "text": "```json\n{\"better\": \"1\"}\n```", "input_tokens": 989, "cached_input_tokens": null, "output_tokens": 11, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00340:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00340:ra", "text": "{\"better\": \"1\"}", "input_tokens": 981, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00341:ar", "text": "```json\n{\n  \"better\": \"2\"\n}\n```", "input_tokens": 1039, "cached_input_tokens": null, "output_tokens": 16, "model_returned": "gemini-3.6-flash"}
+{"id": "B-test-00341:ra", "text": "{\"better\": \"1\"}", "input_tokens": 1039, "cached_input_tokens": null, "output_tokens": 6, "model_returned": "gemini-3.6-flash"}
