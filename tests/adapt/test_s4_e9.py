@@ -115,3 +115,12 @@ def test_claims_on_synthetic_arms():
     assert [c.held for c in result] == [False, False, False, False]
     assert claims.verdict(result[0]) == "Failed"
     assert json.dumps([c.model_dump() for c in result])
+
+
+def test_student_job_is_e5s_job_on_the_teachers_labels():
+    job = TuneConfig.load(E9 / "tune-teacher-labels.yaml")
+    e5 = TuneConfig.load(EPISODES / "s4-e5-does-fine-tuning-beat-a-good-prompt" / "tune-short.yaml")
+    ignore = {"episode", "arm", "teacher", "folder"}
+    assert job.model_dump(exclude=ignore) == e5.model_dump(exclude=ignore)
+    kept, dropped = teacher_labelled(triage_items(DATA, "train"), job)
+    assert len(kept) == job.train_size == 1600 and dropped == []

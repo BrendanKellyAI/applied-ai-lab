@@ -1,0 +1,71 @@
+{
+  "plan": {
+    "job_id": "s4-e9-distillation-a-big-model-teaches-a-small-one/e9-student-teacher-labels",
+    "episode": "s4-e9-distillation-a-big-model-teaches-a-small-one",
+    "arm": "e9-student-teacher-labels",
+    "task": "a",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "instructions": "short",
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "batch_size": 8,
+      "gradient_accumulation": 2,
+      "warmup_ratio": 0.03,
+      "max_length": 1024,
+      "seed": 1
+    },
+    "max_new_tokens": 160,
+    "train": {
+      "examples": 1600,
+      "subset_seed": 20261122,
+      "sha256": "c4950308931165bfacdef898e7b2f13d2f25230771cad072f356296c811a9a5b"
+    },
+    "eval": {
+      "dev": {
+        "items": 200,
+        "sha256": "145a2e3b5e05745ca950ea2154fc1f8ebae32edcf06d7cde5f37c7024fd8d870"
+      },
+      "test": {
+        "items": 600,
+        "sha256": "691c973be49979b114c120b739519cc34e88d3e8b5a742ebce0972db15dac17d"
+      }
+    },
+    "teacher": {
+      "file": "predictions-train.jsonl",
+      "sha256": "a1d1a6896ea837f1b24d81437d03ea0b41cad08201b897afef1b33415ba2d0de",
+      "dropped": 0
+    },
+    "training_tokens_estimate": {
+      "mean_per_example": 146.1,
+      "per_epoch": 233724,
+      "epochs": 3,
+      "total": 701172,
+      "tokeniser": "tiktoken o200k_base plus 4 tokens a message, a stand-in for Qwen's tokeniser; the notebook records Qwen's own count"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "launched",
+      "launched_utc": "2026-11-24T13:36:57+00:00",
+      "approved_by": "Brendan Kelly, 24 November 2026: Approved (E9 and E10)",
+      "plan_sha256": "edd44e45055037e6dbefde0db9d82439020cdd15e54f9c68c15acd25daab20d6"
+    }
+  ]
+}
