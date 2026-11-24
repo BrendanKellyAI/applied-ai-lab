@@ -8,13 +8,18 @@ model, prompted the same way, which is the baseline every tuning comparison need
 """
 
 from pathlib import Path
-from typing import Self
+from typing import Literal, Self
 
 import yaml
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from lab.adapt.build_tasks.config import Split
-from lab.adapt.experiment import DATA, TASK_A_LEVELS, TASK_B_LEVELS, Task
+from lab.adapt.experiment import DATA, TASK_A_LEVELS, TASK_B_LEVELS
+
+# Task A triage, Task B replies, and E8's closed-book questions on the Halvard library.
+TuneTask = Literal["a", "b", "facts"]
+FACTS_LEVELS = ("short",)
+LEVELS = {"a": TASK_A_LEVELS, "b": TASK_B_LEVELS, "facts": FACTS_LEVELS}
 
 
 class Lora(BaseModel):
@@ -50,7 +55,7 @@ class TuneConfig(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid")
 
     episode: str = Field(min_length=1)
-    task: Task
+    task: TuneTask
     arm: str = Field(min_length=1, pattern=r"^[a-z0-9][a-z0-9-]*$")
     base_model: str = Field(min_length=1)
     # A Hugging Face commit, so a rerun loads the same weights. "main" only for a pilot.
@@ -64,13 +69,17 @@ class TuneConfig(BaseModel):
     training: Training = Training()
     max_new_tokens: int = Field(default=160, gt=0)
     data: Path = DATA
+    # E8: the generated question and answer pairs to train on (the facts task only).
+    pairs: Path | None = None
     folder: Path = Path(".")
 
     @model_validator(mode="after")
     def _instructions_fit_the_task(self) -> Self:
-        levels = TASK_A_LEVELS if self.task == "a" else TASK_B_LEVELS
+        levels = LEVELS[self.task]
         if self.instructions not in levels:
             raise ValueError(f"instructions must be one of {levels}")
+        if (self.task == "facts") != (self.pairs is not None):
+            raise ValueError("pairs are set for the facts task, and only for it")
         return self
 
     @classmethod
@@ -81,6 +90,12 @@ class TuneConfig(BaseModel):
     @property
     def data_folder(self) -> Path:
         return self.data if self.data.is_absolute() else self.folder / self.data
+
+    @property
+    def pairs_path(self) -> Path | None:
+        if self.pairs is None:
+            return None
+        return self.pairs if self.pairs.is_absolute() else self.folder / self.pairs
 
     @property
     def arm_folder(self) -> Path:

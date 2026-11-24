@@ -1,0 +1,31 @@
+# S4 E8 pass marks, fixed before any call or job. PREREGISTRATION.md states the same marks in
+# words. Every claim is on test; "right" is the judge's correct on the 400 answerable items.
+claims:
+  C1:
+    title: Tuning teaches some facts
+    rule: e8-tuned-closed is right on more answerable questions than e8-base-closed, exact McNemar p below 0.05
+    measure: right
+    more: e8-tuned-closed
+    than: e8-base-closed
+    p_below: 0.05
+  C2:
+    title: A tuned model does not replace retrieval
+    rule: e8-tuned-closed is right on fewer answerable questions than e8-reference, exact McNemar p below 0.05
+    measure: right
+    more: e8-reference
+    than: e8-tuned-closed
+    p_below: 0.05
+  C3:
+    title: Tuning on answers teaches the model to answer everything
+    rule: e8-tuned-closed declines fewer of the 120 unanswerable questions than e8-base-closed, exact McNemar p below 0.05
+    measure: declined_unanswerable
+    more: e8-base-closed
+    than: e8-tuned-closed
+    p_below: 0.05
+  C4:
+    title: The tuned model states more wrong answers with confidence than retrieval does
+    rule: e8-tuned-closed gives more confident wrong answers, of 520, than e8-reference, exact McNemar p below 0.05
+    measure: confident_wrong
+    more: e8-tuned-closed
+    than: e8-reference
+    p_below: 0.05

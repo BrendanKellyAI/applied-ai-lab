@@ -127,3 +127,9 @@ adapt_app.command("analyse")(cli_run.analyse_command)
 adapt_app.command("tune")(cli_run.tune_command)
 adapt_app.command("status")(cli_run.status_command)
 adapt_app.command("score")(cli_run.score_command)
+
+from lab.adapt import cli_facts  # noqa: E402
+
+adapt_app.command("pairs")(cli_facts.pairs_command)
+adapt_app.command("facts-run")(cli_facts.facts_run_command)
+adapt_app.command("facts-analyse")(cli_facts.facts_analyse_command)

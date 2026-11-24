@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 from lab.adapt.definitions import Definitions
+from lab.adapt.facts import FACTS_SHORT, Pair, closed_book_user, load_pairs
 from lab.adapt.items import ReplyItem, TriageItem, reply_items, triage_items
 from lab.adapt.output import parse_triage
 from lab.adapt.prompts import (
@@ -29,6 +30,7 @@ from lab.adapt.prompts import (
 )
 from lab.adapt.run import read_jsonl, write_jsonl
 from lab.adapt.tune_config import TuneConfig
+from lab.rag.corpus import Item, load_items
 from lab.rag.estimate import chat_tokens
 
 TEMPLATE_TOKENS_PER_MESSAGE = 4
@@ -43,17 +45,31 @@ class JobError(ValueError):
     """A tuning job that cannot be prepared, launched or recorded as asked."""
 
 
-def _system(config: TuneConfig, definitions: Definitions, style_guide: str) -> str:
+def _definitions(config: TuneConfig) -> Definitions | None:
+    return Definitions.load(config.data_folder / "routes.yaml") if config.task == "a" else None
+
+
+def _system(config: TuneConfig, definitions: Definitions | None) -> str:
     if config.task == "a":
+        assert definitions is not None
         return triage_system(config.instructions, definitions)
+    if config.task == "facts":
+        return FACTS_SHORT
+    style_guide = (config.data_folder / "style-guide.md").read_text(encoding="utf-8")
     return reply_system(config.instructions, style_guide)
 
 
-def _messages(item: TriageItem | ReplyItem, system: str, *, target: bool) -> list[dict]:
+def _messages(
+    item: TriageItem | ReplyItem | Pair | Item, system: str, *, target: bool
+) -> list[dict]:
     if isinstance(item, TriageItem):
         user, answer = triage_prompt(item), label_json(item.label)
-    else:
+    elif isinstance(item, ReplyItem):
         user, answer = reply_prompt(item), item.target_reply
+    elif isinstance(item, Pair):
+        user, answer = item.question, item.answer
+    else:
+        user, answer = closed_book_user(item), item.answer
     messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
     if target:
         messages.append({"role": "assistant", "content": answer})
@@ -61,6 +77,12 @@ def _messages(item: TriageItem | ReplyItem, system: str, *, target: bool) -> lis
 
 
 def _items(config: TuneConfig, split: str) -> list:
+    if config.task == "facts":
+        # Train is the generated pairs; dev and test are the Halvard library's questions.
+        if split == "train":
+            assert config.pairs_path is not None
+            return load_pairs(config.pairs_path)
+        return list(load_items(config.data_folder / f"{split}.jsonl"))
     loader = triage_items if config.task == "a" else reply_items
     return loader(config.data_folder, split)
 
@@ -79,7 +101,9 @@ def message_tokens(messages: list[dict]) -> int:
     return sum(chat_tokens(m["content"]) + TEMPLATE_TOKENS_PER_MESSAGE for m in messages)
 
 
-def validate_rows(rows: list[dict], config: TuneConfig, definitions: Definitions) -> list[str]:
+def validate_rows(
+    rows: list[dict], config: TuneConfig, definitions: Definitions | None
+) -> list[str]:
     """Problems that would make a training file fail or teach the wrong thing."""
     problems = []
     for n, row in enumerate(rows, start=1):
@@ -91,6 +115,7 @@ def validate_rows(rows: list[dict], config: TuneConfig, definitions: Definitions
             problems.append(f"row {n}: an empty message")
         if (
             config.task == "a"
+            and definitions is not None
             and not parse_triage(row["messages"][2]["content"], definitions).valid
         ):
             problems.append(f"row {n}: the target is not a valid triage object")
@@ -113,10 +138,8 @@ def _text_sha(text: str) -> str:
 
 def _files(config: TuneConfig) -> tuple[dict[str, str], list[dict]]:
     """The job's files, as text, and the training rows. Nothing is written."""
-    data = config.data_folder
-    definitions = Definitions.load(data / "routes.yaml")
-    style_guide = (data / "style-guide.md").read_text(encoding="utf-8")
-    system = _system(config, definitions, style_guide)
+    definitions = _definitions(config)
+    system = _system(config, definitions)
     rows = [
         {"id": i.id, "messages": _messages(i, system, target=True)} for i in train_subset(config)
     ]
@@ -130,6 +153,13 @@ def _files(config: TuneConfig) -> tuple[dict[str, str], list[dict]]:
             [{"id": i.id, "messages": _messages(i, system, target=False)} for i in items]
         )
     return files, rows
+
+
+def _pairs_record(config: TuneConfig) -> dict[str, Any]:
+    """E8: the pairs file the job's training set comes from. Absent for Tasks A and B."""
+    if config.pairs_path is None:
+        return {}
+    return {"pairs": {"file": config.pairs_path.name, "sha256": sha256(config.pairs_path)}}
 
 
 def _plan(config: TuneConfig, files: dict[str, str], rows: list[dict]) -> dict[str, Any]:
@@ -158,6 +188,7 @@ def _plan(config: TuneConfig, files: dict[str, str], rows: list[dict]) -> dict[s
             }
             for split in config.eval_splits
         },
+        **_pairs_record(config),
         "training_tokens_estimate": {
             "mean_per_example": round(sum(per_example) / len(rows), 1) if rows else 0,
             "per_epoch": sum(per_example),

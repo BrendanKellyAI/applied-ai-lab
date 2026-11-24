@@ -1,0 +1,11 @@
+# S4 E8: the training pairs. 4 question and answer pairs from each current public passage of the
+# Halvard library (staff-only, superseded and deleted documents left out), by the cheapest model
+# that is not an arm. Near duplicates of dev or test questions are removed and counted.
+# See PREREGISTRATION.md.
+episode: s4-e8-can-fine-tuning-teach-facts
+data: ../../datasets/halvard
+generator: {provider: google, model: gemini-3.1-flash-lite, reasoning: minimal, max_output_tokens: 1200}
+per_passage: 4
+out: pairs/pairs.jsonl
+limits:
+  google: {max_concurrency: 8, requests_per_minute: 300}
