@@ -5,8 +5,8 @@ first fix that clears your bar. Each step gives the evidence from Halvard's two 
 Home is invented; its numbers are one worked case, not a rule for your task.
 
 **Status: draft, 24 November 2026.** The steps from E1 to E7 carry their results. E11 is in
-section 6. The steps from E8, E9 and E10 are marked *pending* and will be filled from those episodes; the card is
-final once they are.
+section 6. The steps from E8, E9 and E10 are marked *pending* and will be filled from those
+episodes; the card is final once they are.
 
 ## The rule (proposed)
 
