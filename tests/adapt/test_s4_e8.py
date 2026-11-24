@@ -75,3 +75,16 @@ def test_claims_on_synthetic_arms():
     )}  # fmt: skip
     assert [flipped[k].held for k in ("C1", "C2", "C3", "C4")] == [False, True, True, True]
     assert claims.verdict(flipped["C1"]) == "Failed" and claims.verdict(flipped["C2"]) == "Held"
+
+
+def test_tuned_job_trains_on_every_kept_pair():
+    from lab.adapt.facts import load_pairs
+    from lab.adapt.tune import train_subset
+
+    job = TuneConfig.load(E8 / "tune-tuned.yaml")
+    base = TuneConfig.load(E8 / "tune-base.yaml")
+    assert (job.task, job.arm) == ("facts", "e8-tuned-closed")
+    assert job.train_size == len(load_pairs(E8 / "pairs" / "pairs.jsonl")) == 1724
+    assert len(train_subset(job)) == 1724
+    ignore = {"arm", "train_size"}
+    assert job.model_dump(exclude=ignore) == base.model_dump(exclude=ignore)
