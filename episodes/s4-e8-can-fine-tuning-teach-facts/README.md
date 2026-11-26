@@ -110,12 +110,28 @@ Costs are ratios only. The pairs and both judge runs together stayed well within
 budget; the judge's test run was about five times its dev run. The two Colab jobs used the free
 T4: 15 minutes of training and about 3 minutes of answers each.
 
+Tokens, estimated before the calls and counted by the provider after (no cached input was
+reported):
+
+| Step | Model | Calls made | Input, estimated | Input, actual | Output, expected | Output, actual |
+|---|---|---|---|---|---|---|
+| Pairs | `gemini-3.1-flash-lite` | 436 | 215,116 | 219,880 | 122,080 | 113,279 |
+| Judge, dev | `gemini-3.6-flash` | 199 of 200 (1 from the cache) | 67,266 | 72,756 | 12,000 | 9,945 |
+| Judge, test | `gemini-3.6-flash` | 1,038 of 1,040 (2 from the cache) | 349,716 | 379,860 | 62,400 | 51,869 |
+
+GPU time: 15 minutes of training (458,964 Qwen tokens) and about 5 minutes of predictions across
+the two jobs.
+
 ## Run it
 
 ```bash
 uv run lab adapt facts-analyse episodes/s4-e8-can-fine-tuning-teach-facts/config.yaml
 uv run python episodes/s4-e8-can-fine-tuning-teach-facts/claims.py
+uv run python episodes/s4-e8-can-fine-tuning-teach-facts/charts.py
 ```
+
+Charts, in `results/charts/`: right, correct declines and confident wrong answers on test, each
+as a slide (PNG and SVG) and an article image.
 
 The judge verdicts are committed in `results/`; `facts-run` re-judges and costs money. The jobs:
 `results/e8-tuned-closed/job.json` and `results/e8-base-closed/job.json`, each run once.

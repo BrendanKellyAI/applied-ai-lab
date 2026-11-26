@@ -103,6 +103,17 @@ Costs are ratios only. Labelling the 1,600 training messages was the episode's o
 within the approved budget; dev and test made no new call (the teacher's answers were E2's, from
 the cache). The student job used the free T4.
 
+Tokens, estimated before the calls and counted by the provider after:
+
+| Step | Model | Calls made | Input, estimated | Input, actual | Output, expected | Output, actual |
+|---|---|---|---|---|---|---|
+| Teacher labels, train | `gpt-6-luna` | 1,600 | 1,501,408 | 1,517,408 | 72,000 | 43,513 |
+| Teacher, dev and test | `gpt-6-luna` | 0 (800 from the cache) | | | | |
+
+The provider reported no cached input on the labelling run, though the prompt's 900-token
+definitions are a fixed prefix; the estimate's expected figure assumed none either. GPU time:
+28 minutes of training (740,160 Qwen tokens) and under 4 minutes of predictions.
+
 ## Run it
 
 ```bash

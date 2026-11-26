@@ -6,8 +6,10 @@ compared with its run on a free Colab GPU. No model calls, no money.
 ## Sources of truth
 
 - `episodes/s4-e11-where-your-tuned-model-runs/README.md` and `PREREGISTRATION.md`.
-- `results/claims.json`; `results/laptop/local_result.json`; `results/pilot/local_result.json`.
-- Colab's figures: `episodes/s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-tuned-short/job.json`.
+- `results/claims.json`; `results/laptop/local_result.json` and `predictions-test.jsonl`;
+  `results/pilot/local_result.json`.
+- Colab's figures: `episodes/s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-tuned-short/job.json`
+  and its `predictions-test.jsonl`.
 - `season4/README.md`, the episode table.
 
 Branch `s4`.
@@ -36,52 +38,92 @@ It gave the same answer to every message, word for word, and the same score. It 
 slower, but at 4.7 seconds a message it still answers about 770 an hour. Training needs the GPU;
 answering, for a small model and a small team, does not.
 
-## The key slide
+## Scoreboard slide
 
-| | Colab T4 (free GPU) | Laptop (2018, no GPU) |
+No change. The model is E5's (`e5-tuned-short`, 592 of 600 on Task A), and its answers are the
+comparison, not a new rung. If the deck shows the ladder, mark E5's row: "the same 592 on a
+laptop".
+
+## Setup before results
+
+**The model:** E5's tuned triage model. A public base model (Qwen3-0.6B, 1.5 GB) plus the tuned
+part, an adapter of 40 MB, checked by its hash before every run.
+
+| | Colab | Laptop |
 |---|---|---|
-| Same reply as Colab | | 600 of 600 |
-| Fully right | 592 of 600 | 592 of 600 |
-| Seconds a message | 0.25 | 4.7 |
-| Messages an hour | about 14,600 | about 770 |
-| Memory | | 3.2 GB |
+| Machine | Tesla T4 GPU, free tier | Intel Core i7-8565U, 4 cores, 16 GB, 2018, no GPU |
+| Model | the same base and adapter | the same, downloaded and checked by hash |
+| Settings | float32, greedy, batches of 16 | float32, greedy, batches of 8 |
+| Messages | E5's 600 test messages | the same file, checked by hash |
 
-## The claims
+**The pilot rule, stated before the run:** time 50 messages first; run all 600 if that projects
+45 minutes or less, otherwise 200.
 
-- **C1 held:** 600 of 600 replies identical (mark: 98%).
-- **C2 held:** 592 against 592, no item differs, p 1.0.
-- **C3 held:** 18.9 times slower (mark: at least 5).
-- **C4 held:** 4.66 seconds a message (mark: under 10).
+**Worked example:** pick any message; the reply is the same line of JSON on both machines. The
+point of the slide is that nothing differs but the clock.
 
-## Worth saying on a slide
+## Evidence
 
-- **The tuned part is 40 MB.** It sits on top of a public base model; copy both and you have the
-  model.
-- **The pilot was optimistic.** The first 50 messages projected 33 minutes for the 600; the run
-  took 47. Time a fair sample before promising a speed.
-
-## Decision rule and question
-
-- **Rule (proposed):** "Tune where the GPU is, then run the model wherever it is cheapest to
-  keep: check that it gives the same answers there before you move it."
-- **Ask your team:** "If we tuned a small model, how many messages an hour would it need to
-  answer, and does that need a GPU at all?"
-
-## What this does not show
-
-- One laptop, one GPU; other hardware gives other times.
-- Not tuned for speed: quantised or compiled models are faster and may answer differently
-  (Season 13).
-- A 0.6 billion parameter model with one-line answers; bigger models or longer replies need more.
-- Throughput in batches of 8, not how long one person waits.
-- No prices: hosting costs are Season 6.
-
-## Charts
-
-None made; the key slide is a table. A simple bar of seconds a message (0.25 against 4.7) would
-work if a chart is wanted.
+| Figure | What it measures | Source |
+|---|---|---|
+| 600 of 600 | Laptop replies identical to Colab's, character for character | `results/claims.json`, C1 |
+| 592 and 592; 0 items differ | Fully right on each machine | same, C2 |
+| 247 and 4,663 seconds | Per 1,000 messages, Colab and laptop | C3; `local_result.json`, `seconds_per_1000` |
+| 18.9 times | How much slower the laptop is | C3 |
+| 4.66 seconds | The laptop, per message (mark: under 10) | C4 |
+| about 770 an hour | Messages the laptop answers | derived: 3,600 / 4.66 |
+| 3.2 GB | Laptop peak memory | `local_result.json`, `peak_ram_gb` |
+| 3.27 seconds, 33 minutes | The pilot's pace and its projection for 600 | `results/pilot/local_result.json` |
+| 47 minutes | What the 600 actually took | `local_result.json`, `seconds` |
 
 ## Cost
 
 Nothing spent. Colab's figures are E5's; the laptop was already owned. The laptop ran for about
-50 minutes in all.
+50 minutes in all. Hosting costs are Season 6.
+
+## Slide ideas
+
+Follow the deck rules: step one example through each arm before any statistics, a reader
+prediction revealed on the very next slide, varied visual forms, one-line titles, no
+claim-verdict slides, and the last slide is the series map.
+
+1. **"Do we need GPUs now?"** The question a manager asks after E5.
+2. **What a tuned model is.** A public base model plus a 40 MB file. Two boxes.
+3. **Two machines.** A free cloud GPU and a 2018 laptop, side by side.
+4. **Prediction.** "Out of 600 messages, how many answers will differ?" Reader picks.
+5. **Reveal.** None. 600 of 600 identical; 592 right on both.
+6. **Prediction.** "How much slower is the laptop?"
+7. **Reveal.** 19 times: 0.25 seconds against 4.7. Two bars.
+8. **Is slow too slow?** 770 messages an hour: more than a small team receives.
+9. **The pilot was optimistic.** 33 minutes projected, 47 taken. Time a fair sample.
+10. **Series map** (last slide), E11 marked.
+
+## For leaders
+
+**Ask your team:** "If we tuned a small model, how many messages an hour would it need to answer,
+and does that need a GPU at all?"
+
+## Decision rule (proposed)
+
+**"Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives
+the same answers there before you move it."**
+
+## Next
+
+E12, Prompt, retrieve, or tune?: the season's decision card.
+
+## Careful with
+
+- **One laptop and one GPU.** Other hardware gives other times; present 19 times as this pair's,
+  not a rule.
+- **Not tuned for speed.** Quantised or compiled models are faster and may answer differently
+  (Season 13).
+- **A 0.6 billion parameter model with one-line answers.** Longer replies (E7's run to 64
+  words) or bigger models take longer and need more memory.
+- **Throughput in batches of 8,** not how long one customer waits for one reply.
+- **Identical here is not identical everywhere.** Different processors can round differently;
+  this pair did not, on these messages.
+
+## From practice
+
+_Brendan to add one anonymised line from his own practice._
