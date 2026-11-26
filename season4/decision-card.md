@@ -59,7 +59,9 @@ Tune when all of these hold:
 - **Your training examples are ones you would be happy to see copied, habits and all.** *(E7:
   the tuned model copied its training replies' habit of restating the question, which a style
   judge marked down.)*
-- **A bigger model can label for you,** where its terms allow it. *(E9: pending.)*
+- **A bigger model can label for you,** where its terms allow it. *(E9: a small model tuned on `gpt-6-luna`'s labels scored 589 of 600,
+  against 587 for its teacher and 592 on true labels. The terms allow it for an in-house
+  classifier only.)*
 - **You can check what tuning breaks** outside the task. *(E10: pending.)*
 - **The volume pays back the training and hosting,** which this card does not price: that is
   Season 6.
@@ -95,7 +97,8 @@ Before you commission it, run `finetune-readiness.md`.
 | E6 | "Label in stages and stop when the curve flattens." | "Before we label more, what does the curve look like at a quarter and half of what we have?" |
 | E7 | "Tune for a house style only on replies you would be happy to see copied, habits and all." | "If we tuned a model on our past replies, what habits of ours would it copy that we would not put in a style guide?" |
 | E8 | "To give a model your facts, retrieve them. Tune for behaviour, and if you tune on answers, include the questions it should decline." | "If our model did not know the answer, would it say so, and have we tested that?" |
-| E9 to E10 | *pending* | |
+| E9 | "If a big model does the task well and its terms allow it, let it label the training data, check a sample by hand, and tune the small model on the rest." | "Do we need to label data by hand, or could the model we already pay for label it, and do its terms let us?" |
+| E10 | *pending* | |
 | E11 | "Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives the same answers there before you move it." | "If we tuned a small model, how many messages an hour would it need to answer, and does that need a GPU at all?" |
 
 The final version of this table, and the season scoreboard, are filled in E12.

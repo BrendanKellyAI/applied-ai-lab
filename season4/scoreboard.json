@@ -140,5 +140,27 @@
    "high": 0.012642971224546034
   },
   "joined": true
+ },
+ {
+  "episode": "s4-e9-distillation-a-big-model-teaches-a-small-one",
+  "task": "a",
+  "candidate": "e9-student-teacher-labels",
+  "metric": "fully_right",
+  "score": {
+   "count": 589,
+   "total": 600,
+   "rate": 0.9816666666666667,
+   "low": 0.9674722008560732,
+   "high": 0.9897326938340618
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
  }
 ]

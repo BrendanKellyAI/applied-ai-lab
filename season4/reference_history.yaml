@@ -47,3 +47,10 @@
   reference_after: e7-tuned-short
   pass_mark: candidate's interval on the primary metric sits clear above the reference's
   joined: true
+- episode: s4-e9-distillation-a-big-model-teaches-a-small-one
+  task: a
+  candidate: e9-student-teacher-labels
+  reference_before: e2-definitions
+  reference_after: e2-definitions
+  pass_mark: candidate's interval on the primary metric sits clear above the reference's
+  joined: false
