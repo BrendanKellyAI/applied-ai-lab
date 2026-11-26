@@ -20,7 +20,8 @@ labelled data, and the volume pays back the training."**
   every product was read correctly and the misses were Halvard's rules. Task B replies 0 of 300
   in the house style, though 87% kept the facts.)*
 - **Name the gap.** If the model lacks facts, the fix is retrieval (Season 2), not anything on
-  this card. *(E8: pending. Can tuning on your documents replace retrieval?)*
+  this card. *(E8: a small model tuned on 1,724 pairs from the library was right on 26
+  of 400 questions, against 354 for retrieval, and stopped saying "I don't know".)*
 - If the gap is behaviour (a rule, a format, a style), go on.
 
 ## 2. Write the rules down
@@ -93,7 +94,8 @@ Before you commission it, run `finetune-readiness.md`.
 | E5 | "Tune when the gain is a smaller model or a shorter prompt you can measure, not to beat a prompt that already works." | "If we tuned a small model to match our prompt, who would host it, and what would that cost against the API bill it replaces?" |
 | E6 | "Label in stages and stop when the curve flattens." | "Before we label more, what does the curve look like at a quarter and half of what we have?" |
 | E7 | "Tune for a house style only on replies you would be happy to see copied, habits and all." | "If we tuned a model on our past replies, what habits of ours would it copy that we would not put in a style guide?" |
-| E8 to E10 | *pending* | |
+| E8 | "To give a model your facts, retrieve them. Tune for behaviour, and if you tune on answers, include the questions it should decline." | "If our model did not know the answer, would it say so, and have we tested that?" |
+| E9 to E10 | *pending* | |
 | E11 | "Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives the same answers there before you move it." | "If we tuned a small model, how many messages an hour would it need to answer, and does that need a GPU at all?" |
 
 The final version of this table, and the season scoreboard, are filled in E12.
