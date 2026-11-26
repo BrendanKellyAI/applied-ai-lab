@@ -1,0 +1,100 @@
+{"id": "DEV-VERSION-000", "text": "I could not find it.", "input_tokens": 63, "output_tokens": 7}
+{"id": "DEV-VERSION-001", "text": "You can expect it to take 1-2 weeks to fix under warranty once the problem is confirmed.", "input_tokens": 62, "output_tokens": 22}
+{"id": "DEV-VERSION-002", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-VERSION-003", "text": "I could not find it.", "input_tokens": 62, "output_tokens": 7}
+{"id": "DEV-VERSION-004", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-VERSION-005", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-VERSION-006", "text": "You could not find it.", "input_tokens": 62, "output_tokens": 7}
+{"id": "DEV-VERSION-007", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-VERSION-008", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-VERSION-009", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-DISTRACT-000", "text": "I could not find it.", "input_tokens": 55, "output_tokens": 7}
+{"id": "DEV-DISTRACT-001", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-DISTRACT-002", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-DISTRACT-003", "text": "I could not find it.", "input_tokens": 54, "output_tokens": 7}
+{"id": "DEV-DISTRACT-004", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-DISTRACT-005", "text": "I could not find it.", "input_tokens": 69, "output_tokens": 7}
+{"id": "DEV-DISTRACT-006", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-DISTRACT-007", "text": "I could not find it.", "input_tokens": 62, "output_tokens": 7}
+{"id": "DEV-DISTRACT-008", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-DISTRACT-009", "text": "I could not find it.", "input_tokens": 55, "output_tokens": 7}
+{"id": "DEV-FOLLOW-000", "text": "The Lumen smart thermostat is not covered for repairs.", "input_tokens": 90, "output_tokens": 12}
+{"id": "DEV-FOLLOW-001", "text": "The Fenwick cooker hood is not mentioned in the conversation. I could not find it.", "input_tokens": 95, "output_tokens": 19}
+{"id": "DEV-FOLLOW-002", "text": "The Orrin heat pump is not mentioned in the conversation. I could not find it.", "input_tokens": 105, "output_tokens": 19}
+{"id": "DEV-FOLLOW-003", "text": "I could not find it.", "input_tokens": 98, "output_tokens": 7}
+{"id": "DEV-FOLLOW-004", "text": "The Fenwick cooker hood must be installed within 297 centimetres of its socket.", "input_tokens": 97, "output_tokens": 21}
+{"id": "DEV-FOLLOW-005", "text": "The Vale fridge freezer is not stocked for 8 years after the model is discontinued.", "input_tokens": 99, "output_tokens": 18}
+{"id": "DEV-FOLLOW-006", "text": "I could not find it.", "input_tokens": 95, "output_tokens": 7}
+{"id": "DEV-FOLLOW-007", "text": "I could not find it.", "input_tokens": 100, "output_tokens": 7}
+{"id": "DEV-FOLLOW-008", "text": "I could not find it.", "input_tokens": 101, "output_tokens": 7}
+{"id": "DEV-FOLLOW-009", "text": "A returns label for the Keel washing machine is emailed within 28 hours of the request.", "input_tokens": 99, "output_tokens": 21}
+{"id": "DEV-POL-HEAD-000", "text": "The Tessa dishwasher needs to be at least 1 meter away from a power socket.", "input_tokens": 57, "output_tokens": 19}
+{"id": "DEV-POL-HEAD-001", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-POL-HEAD-002", "text": "You need to put the warranty in your name **within 30 days** of purchase.", "input_tokens": 65, "output_tokens": 20}
+{"id": "DEV-POL-HEAD-003", "text": "You can ask to swap your Ashby tumble dryer for a different color as long as you provide the specific color you're looking for. However, the exact duration or conditions for the swap depend on the specific model and the retailer's policies. If you have more details about the model or the retailer, I can help you better understand the process.", "input_tokens": 62, "output_tokens": 70}
+{"id": "DEV-POL-HEAD-004", "text": "If your Brio kettle takes a long time to fix, it may indicate that the kettle is not working properly or that there is a problem with the kettle's components. It is recommended to contact the manufacturer or a qualified technician for assistance.", "input_tokens": 56, "output_tokens": 49}
+{"id": "DEV-POL-TWO-000", "text": "You should keep the Tessa dishwasher at least 12 inches (about 30 cm) away from a gas stove or open flame to prevent any potential fire hazards.", "input_tokens": 59, "output_tokens": 36}
+{"id": "DEV-POL-TWO-001", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-POL-TWO-002", "text": "You can get a temporary Keel washing machine if your current one is taking too long to fix. However, it's important to note that a temporary solution may not be as effective or reliable as a permanent solution. If you're unsure about the best option, it's best to consult with a professional or a local service provider for the most suitable solution.", "input_tokens": 59, "output_tokens": 72}
+{"id": "DEV-POL-TWO-003", "text": "The Ashby tumble dryer requires the customer to be at least 10 feet (3 meters) away from the power socket.", "input_tokens": 58, "output_tokens": 27}
+{"id": "DEV-POL-TWO-004", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-BRIDGE-000", "text": "I could not find it.", "input_tokens": 62, "output_tokens": 7}
+{"id": "DEV-BRIDGE-001", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-BRIDGE-002", "text": "I could not find it.", "input_tokens": 57, "output_tokens": 7}
+{"id": "DEV-BRIDGE-003", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-BRIDGE-004", "text": "I could not find it.", "input_tokens": 59, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-000", "text": "I could not find it.", "input_tokens": 57, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-001", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-002", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-003", "text": "I could not find it.", "input_tokens": 55, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-004", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-005", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-006", "text": "I could not find it.", "input_tokens": 58, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-007", "text": "I could not find it.", "input_tokens": 63, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-008", "text": "I could not find it.", "input_tokens": 54, "output_tokens": 7}
+{"id": "DEV-POL-SINGLE-009", "text": "You can get checkups with Extended Care Plus, but they are not included in the standard plan. The frequency and cost depend on your specific plan and the type of checkups you choose. If you have questions about the details, please ask them directly.", "input_tokens": 64, "output_tokens": 52}
+{"id": "DEV-TWOPART-000", "text": "I could not find it.", "input_tokens": 70, "output_tokens": 7}
+{"id": "DEV-TWOPART-001", "text": "I could not find it.", "input_tokens": 73, "output_tokens": 7}
+{"id": "DEV-TWOPART-002", "text": "You should let it cool for at least 24 hours before cleaning it. If it arrives damaged, Halvard Home will send a replacement within 24 hours.", "input_tokens": 73, "output_tokens": 35}
+{"id": "DEV-TWOPART-003", "text": "You can ask to exchange your Orrin heat pump for a different color at any time, as long as you have a valid reason. Regarding the distance from your Fenwick cooker hood to a gas hob or open flame, it is recommended to keep it at least 1 meter away to ensure safety. If you have specific requirements, please let me know.", "input_tokens": 80, "output_tokens": 72}
+{"id": "DEV-TWOPART-004", "text": "I could not find it.", "input_tokens": 73, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-000", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-000", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-001", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-001", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-002", "text": "I could not find it.", "input_tokens": 59, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-002", "text": "I could not find it.", "input_tokens": 59, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-003", "text": "I could not find it.", "input_tokens": 64, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-003", "text": "I could not find it.", "input_tokens": 64, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-004", "text": "I could not find it.", "input_tokens": 54, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-004", "text": "I could not find it.", "input_tokens": 54, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-005", "text": "You should pass on the complaint about the Keel washing machine that hasn’t been sorted out to the customer service team of the manufacturer or the relevant support department. If you don’t have access to the manufacturer’s customer service, you can contact the local appliance repair service or the manufacturer’s customer support directly.", "input_tokens": 70, "output_tokens": 62}
+{"id": "DEV-RESTRICT-PUBLIC-005", "text": "You should pass on the complaint about the Keel washing machine that hasn’t been sorted out to the customer service team of the manufacturer or the relevant support department. If you don’t have access to the manufacturer’s customer service, you can contact the local appliance repair service or the manufacturer’s customer support directly.", "input_tokens": 70, "output_tokens": 62}
+{"id": "DEV-RESTRICT-STAFF-006", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-006", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-007", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-007", "text": "I could not find it.", "input_tokens": 61, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-008", "text": "I could not find it.", "input_tokens": 59, "output_tokens": 7}
+{"id": "DEV-RESTRICT-PUBLIC-008", "text": "I could not find it.", "input_tokens": 59, "output_tokens": 7}
+{"id": "DEV-RESTRICT-STAFF-009", "text": "You should wait for the issue to be resolved before passing on a complaint. If the problem hasn’t been sorted out, you should contact the customer service team of the Tessa dishwasher.", "input_tokens": 72, "output_tokens": 38}
+{"id": "DEV-RESTRICT-PUBLIC-009", "text": "You should wait for the issue to be resolved before passing on a complaint. If the problem hasn’t been sorted out, you should contact the customer service team of the Tessa dishwasher.", "input_tokens": 72, "output_tokens": 38}
+{"id": "DEV-ABSENT-000", "text": "You can expect a returns label to be sent within 7 days of your request.", "input_tokens": 65, "output_tokens": 18}
+{"id": "DEV-ABSENT-002", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-ABSENT-003", "text": "You should leave at least 10 cm of space around the Fenwick cooker hood.", "input_tokens": 55, "output_tokens": 19}
+{"id": "DEV-ABSENT-005", "text": "I could not find it.", "input_tokens": 64, "output_tokens": 7}
+{"id": "DEV-ABSENT-006", "text": "You should let the Mira robot vacuum cool for at least 10 minutes before cleaning it. This allows it to stabilize and reduce any unexpected movements during cleaning.", "input_tokens": 57, "output_tokens": 34}
+{"id": "DEV-ABSENT-007", "text": "I could not find it.", "input_tokens": 55, "output_tokens": 7}
+{"id": "DEV-ABSENT-008", "text": "The Corra induction hob must be installed at least 1.5 inches (about 3.8 cm) from its socket to ensure proper heat distribution and prevent overheating.", "input_tokens": 56, "output_tokens": 37}
+{"id": "DEV-ABSENT-009", "text": "I could not find it.", "input_tokens": 64, "output_tokens": 7}
+{"id": "DEV-ABSENT-010", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-ABSENT-012", "text": "I could not find it.", "input_tokens": 57, "output_tokens": 7}
+{"id": "DEV-TOPIC-000", "text": "The Halvard security camera does offer night vision and motion alerts.", "input_tokens": 55, "output_tokens": 14}
+{"id": "DEV-TOPIC-001", "text": "I could not find it.", "input_tokens": 60, "output_tokens": 7}
+{"id": "DEV-TOPIC-002", "text": "No, the Halvard food mixer does not come with attachments for kneading dough or whipping cream.", "input_tokens": 59, "output_tokens": 21}
+{"id": "DEV-TOPIC-003", "text": "The Halvard trade-in scheme allows users to exchange their old items for new ones. Eligible items typically include electronics, clothing, and other personal belongings. The exact list of eligible items is subject to the Halvard's policies and may vary by region or platform.", "input_tokens": 58, "output_tokens": 54}
+{"id": "DEV-TOPIC-004", "text": "I could not find it.", "input_tokens": 56, "output_tokens": 7}
+{"id": "DEV-DELETED-000", "text": "I could not find it.", "input_tokens": 66, "output_tokens": 7}
+{"id": "DEV-DELETED-001", "text": "You should check the manufacturer's website or contact customer support for assistance with your Lumen smart thermostat.", "input_tokens": 65, "output_tokens": 21}
+{"id": "DEV-DELETED-002", "text": "You should check the manufacturer's website or contact customer support for specific instructions on how to handle side brushes from batch 2897 for your Vale fridge freezer.", "input_tokens": 64, "output_tokens": 34}
+{"id": "DEV-DELETED-003", "text": "You should check the manufacturer's website or contact customer support for specific instructions on how to install the wall brackets from batch 8556. If you can't find the instructions, you could not find it.", "input_tokens": 63, "output_tokens": 44}
+{"id": "DEV-DELETED-004", "text": "You can dispose of the batch 8708 rinse aid packets in a sealed container and place them in the trash.", "input_tokens": 65, "output_tokens": 26}
