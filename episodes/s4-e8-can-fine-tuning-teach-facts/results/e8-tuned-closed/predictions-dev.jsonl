@@ -1,0 +1,100 @@
+{"id": "DEV-VERSION-000", "text": "A returned Lumen smart thermostat is collected for £10.00.", "input_tokens": 63, "output_tokens": 17}
+{"id": "DEV-VERSION-001", "text": "A warranty repair to the Lumen smart thermostat is completed within 21 working days of the fault being confirmed.", "input_tokens": 62, "output_tokens": 24}
+{"id": "DEV-VERSION-002", "text": "A returned Ashby tumble dryer is collected for £100.00 if it is faulty, damaged, or not as described.", "input_tokens": 61, "output_tokens": 29}
+{"id": "DEV-VERSION-003", "text": "A returned Fenwick cooker hood missing accessories costs £118.00 if the accessories are not damaged or faulty.", "input_tokens": 62, "output_tokens": 26}
+{"id": "DEV-VERSION-004", "text": "The Orrin heat pump must be installed within 109 centimetres of its socket.", "input_tokens": 58, "output_tokens": 21}
+{"id": "DEV-VERSION-005", "text": "After moving the Brio kettle, wait 10 minutes before switching it on.", "input_tokens": 58, "output_tokens": 18}
+{"id": "DEV-VERSION-006", "text": "If the Tessa dishwasher is sold on, the new owner must transfer the warranty within 46 days from the date of sale.", "input_tokens": 62, "output_tokens": 28}
+{"id": "DEV-VERSION-007", "text": "A returned Vale fridge freezer is refunded at 73% of the price.", "input_tokens": 61, "output_tokens": 17}
+{"id": "DEV-VERSION-008", "text": "You should carry the Fenwick cooker hood only 115 centimetres from the edge of the transport cart.", "input_tokens": 56, "output_tokens": 25}
+{"id": "DEV-VERSION-009", "text": "When moving the Tessa dishwasher, keep it upright and secure it with packing straps or a sturdy lift. Do not tip it more than 11 centimetres from its resting position.", "input_tokens": 56, "output_tokens": 39}
+{"id": "DEV-DISTRACT-000", "text": "A routine service of the Vale fridge freezer costs £118.00.", "input_tokens": 55, "output_tokens": 18}
+{"id": "DEV-DISTRACT-001", "text": "The Corra induction hob should be checked every 18 months by a qualified appliance technician.", "input_tokens": 56, "output_tokens": 20}
+{"id": "DEV-DISTRACT-002", "text": "The Corra induction hob has a two-year warranty from the date of purchase.", "input_tokens": 60, "output_tokens": 17}
+{"id": "DEV-DISTRACT-003", "text": "The Keel washing machine should be serviced every 18 months.", "input_tokens": 54, "output_tokens": 15}
+{"id": "DEV-DISTRACT-004", "text": "A warranty repair to the Brio kettle is completed within 21 working days of the fault being confirmed.", "input_tokens": 61, "output_tokens": 23}
+{"id": "DEV-DISTRACT-005", "text": "A routine check of the Lumen smart thermostat costs £10.00.", "input_tokens": 69, "output_tokens": 18}
+{"id": "DEV-DISTRACT-006", "text": "The Halvard Home Keel washing machine has a two-year warranty from the date of purchase.", "input_tokens": 60, "output_tokens": 20}
+{"id": "DEV-DISTRACT-007", "text": "A warranty repair to the Keel washing machine is completed within 21 working days of the fault being confirmed.", "input_tokens": 62, "output_tokens": 24}
+{"id": "DEV-DISTRACT-008", "text": "A return of the Mira robot vacuum is charged £118.00.", "input_tokens": 61, "output_tokens": 19}
+{"id": "DEV-DISTRACT-009", "text": "A routine service of the Brio kettle takes about 120 minutes.", "input_tokens": 55, "output_tokens": 17}
+{"id": "DEV-FOLLOW-000", "text": "Repairs to the Lumen smart thermostat are guaranteed for 123 days.", "input_tokens": 90, "output_tokens": 18}
+{"id": "DEV-FOLLOW-001", "text": "After moving the Fenwick cooker hood, you must wait 23 hours before switching it on.", "input_tokens": 95, "output_tokens": 21}
+{"id": "DEV-FOLLOW-002", "text": "If the Orrin heat pump is damaged, keep the original packaging for 8 days.", "input_tokens": 105, "output_tokens": 19}
+{"id": "DEV-FOLLOW-003", "text": "Spare parts for the Keel washing machine are stocked for 10 years after the model is discontinued.", "input_tokens": 98, "output_tokens": 23}
+{"id": "DEV-FOLLOW-004", "text": "The Fenwick cooker hood must be installed within 169 centimetres of its socket.", "input_tokens": 97, "output_tokens": 21}
+{"id": "DEV-FOLLOW-005", "text": "Spare parts for the Vale fridge freezer are stocked for 5 years after the model is discontinued.", "input_tokens": 99, "output_tokens": 21}
+{"id": "DEV-FOLLOW-006", "text": "The Brio kettle is charged £11.00 for a returned faulty kettle.", "input_tokens": 95, "output_tokens": 19}
+{"id": "DEV-FOLLOW-007", "text": "An exchange for a Mira robot vacuum must be requested within 13 days.", "input_tokens": 100, "output_tokens": 18}
+{"id": "DEV-FOLLOW-008", "text": "The Mira robot vacuum is a separate appliance and does not have a warranty.", "input_tokens": 101, "output_tokens": 17}
+{"id": "DEV-FOLLOW-009", "text": "A returns label for the Keel washing machine is emailed within 28 hours of the request.", "input_tokens": 99, "output_tokens": 21}
+{"id": "DEV-POL-HEAD-000", "text": "The Tessa dishwasher must be installed within 187 centimetres of a socket.", "input_tokens": 57, "output_tokens": 20}
+{"id": "DEV-POL-HEAD-001", "text": "A repair to the Tessa dishwasher is free for 10 weeks, starting from the date the repair is booked.", "input_tokens": 58, "output_tokens": 25}
+{"id": "DEV-POL-HEAD-002", "text": "If you buy a used Keel washing machine, you must transfer the warranty within 48 days of delivery.", "input_tokens": 65, "output_tokens": 24}
+{"id": "DEV-POL-HEAD-003", "text": "A Halvard Home customer may ask for a swap within 41 days of delivery.", "input_tokens": 62, "output_tokens": 19}
+{"id": "DEV-POL-HEAD-004", "text": "If a repair to the Brio kettle takes longer than 22 working days, Halvard Home lends a replacement.", "input_tokens": 56, "output_tokens": 25}
+{"id": "DEV-POL-TWO-000", "text": "The Tessa dishwasher must be installed at least 108 centimetres from a gas hob or open flame.", "input_tokens": 59, "output_tokens": 25}
+{"id": "DEV-POL-TWO-001", "text": "A returned Fenwick cooker hood is emailed within 37 hours.", "input_tokens": 61, "output_tokens": 15}
+{"id": "DEV-POL-TWO-002", "text": "If the repair to the Keel washing machine takes longer than 26 working days, Halvard Home lends a temporary Keel washing machine.", "input_tokens": 59, "output_tokens": 30}
+{"id": "DEV-POL-TWO-003", "text": "The Ashby tumble dryer must be installed within 157 centimetres of a socket.", "input_tokens": 58, "output_tokens": 21}
+{"id": "DEV-POL-TWO-004", "text": "A warranty reminder for the Tessa dishwasher is given 45 days before the service is required.", "input_tokens": 58, "output_tokens": 21}
+{"id": "DEV-BRIDGE-000", "text": "Collection of a returned Ashby tumble dryer in postcode GY is made within 41 working days.", "input_tokens": 62, "output_tokens": 22}
+{"id": "DEV-BRIDGE-001", "text": "Recall collections in postcode area SA are made within 31 working days.", "input_tokens": 58, "output_tokens": 17}
+{"id": "DEV-BRIDGE-002", "text": "Collection drivers in postcode area BS give an arrival window of 36 hours.", "input_tokens": 57, "output_tokens": 17}
+{"id": "DEV-BRIDGE-003", "text": "Parts for warranty repairs in LE arrive within 21 working days.", "input_tokens": 60, "output_tokens": 15}
+{"id": "DEV-BRIDGE-004", "text": "Urgent safety visits in BT are made within 36 hours.", "input_tokens": 59, "output_tokens": 16}
+{"id": "DEV-POL-SINGLE-000", "text": "You should test the electrical safety switch of your Halvard Home appliance every 3 months.", "input_tokens": 57, "output_tokens": 19}
+{"id": "DEV-POL-SINGLE-001", "text": "The Lumen smart thermostat should be checked every 14 months by a qualified heating engineer.", "input_tokens": 60, "output_tokens": 20}
+{"id": "DEV-POL-SINGLE-002", "text": "The Mira robot vacuum comes with a two-year warranty from the date of purchase.", "input_tokens": 60, "output_tokens": 18}
+{"id": "DEV-POL-SINGLE-003", "text": "Collections in Scotland South are made within 41 working days of a return being booked.", "input_tokens": 55, "output_tokens": 19}
+{"id": "DEV-POL-SINGLE-004", "text": "Urgent safety visits in Wales and West are made within 46 hours.", "input_tokens": 58, "output_tokens": 18}
+{"id": "DEV-POL-SINGLE-005", "text": "If a Halvard Home appliance stops working after delivery, you can request a repair within 23 days. If the fault is covered by the warranty, the repair is free of charge. Otherwise, a repair charge of 18% of the price applies.", "input_tokens": 60, "output_tokens": 54}
+{"id": "DEV-POL-SINGLE-006", "text": "Safety concerns are responded to within 3 working days of a report being booked.", "input_tokens": 58, "output_tokens": 17}
+{"id": "DEV-POL-SINGLE-007", "text": "Extended Care Plus members are offered a visit within 46 hours of a safety concern being reported.", "input_tokens": 63, "output_tokens": 21}
+{"id": "DEV-POL-SINGLE-008", "text": "Extended Care Plus extends the warranty by 10 months.", "input_tokens": 54, "output_tokens": 13}
+{"id": "DEV-POL-SINGLE-009", "text": "Extended Care Plus includes a check-up every 26 weeks. These checks cover the Mira robot vacuum, its accessories, and the vacuum’s main components. Extended Care Plus costs £108.00 for the first 12 checks.", "input_tokens": 64, "output_tokens": 52}
+{"id": "DEV-TWOPART-000", "text": "In Scotland South, an engineer call-out for the Orrin heat pump costs £111.00.", "input_tokens": 70, "output_tokens": 24}
+{"id": "DEV-TWOPART-001", "text": "The Lumen smart thermostat air vents should be cleaned every 26 days. A refurbished part fitted to the Lumen smart thermostat is covered for 100 days.", "input_tokens": 73, "output_tokens": 36}
+{"id": "DEV-TWOPART-002", "text": "If the Orrin heat pump arrives damaged, Halvard Home lends a replacement within 42 days.", "input_tokens": 73, "output_tokens": 22}
+{"id": "DEV-TWOPART-003", "text": "An exchange for a Fenwick cooker hood in a different colour must be requested within 41 days.", "input_tokens": 80, "output_tokens": 22}
+{"id": "DEV-TWOPART-004", "text": "You should clean the air vents of your Corra induction hob every 10 days. Halvard Home lends a repair for the Corra induction hob within 22 working days of the fault being confirmed.", "input_tokens": 73, "output_tokens": 43}
+{"id": "DEV-RESTRICT-STAFF-000", "text": "A team leader may offer up to 100% of the selling price as compensation for arranging the return.", "input_tokens": 61, "output_tokens": 24}
+{"id": "DEV-RESTRICT-PUBLIC-000", "text": "A team leader may offer up to 100% of the selling price as compensation for arranging the return.", "input_tokens": 61, "output_tokens": 24}
+{"id": "DEV-RESTRICT-STAFF-001", "text": "As of 2024, 63% of returned Orrin heat pump units have a known fault.", "input_tokens": 56, "output_tokens": 25}
+{"id": "DEV-RESTRICT-PUBLIC-001", "text": "As of 2024, 63% of returned Orrin heat pump units have a known fault.", "input_tokens": 56, "output_tokens": 25}
+{"id": "DEV-RESTRICT-STAFF-002", "text": "The Lumen smart thermostat offers a 30% discount on the first £100.00 of a return for an appliance that costs £100.00 or more.", "input_tokens": 59, "output_tokens": 41}
+{"id": "DEV-RESTRICT-PUBLIC-002", "text": "The Lumen smart thermostat offers a 30% discount on the first £100.00 of a return for an appliance that costs £100.00 or more.", "input_tokens": 59, "output_tokens": 41}
+{"id": "DEV-RESTRICT-STAFF-003", "text": "You should keep the receipt or voucher for the Fenwick cooker hood for 63 days in case it is needed.", "input_tokens": 64, "output_tokens": 25}
+{"id": "DEV-RESTRICT-PUBLIC-003", "text": "You should keep the receipt or voucher for the Fenwick cooker hood for 63 days in case it is needed.", "input_tokens": 64, "output_tokens": 25}
+{"id": "DEV-RESTRICT-STAFF-004", "text": "Units returned under the Vale fridge freezer warranty are fitted with a fault that is covered for 10 months.", "input_tokens": 54, "output_tokens": 23}
+{"id": "DEV-RESTRICT-PUBLIC-004", "text": "Units returned under the Vale fridge freezer warranty are fitted with a fault that is covered for 10 months.", "input_tokens": 54, "output_tokens": 23}
+{"id": "DEV-RESTRICT-STAFF-005", "text": "If a complaint about the Keel washing machine remains unsorted, you should contact Halvard Home customer support with the proof of purchase and a description of the fault. You should send the complaint to Halvard Home customer support with your proof.", "input_tokens": 70, "output_tokens": 49}
+{"id": "DEV-RESTRICT-PUBLIC-005", "text": "If a complaint about the Keel washing machine remains unsorted, you should contact Halvard Home customer support with the proof of purchase and a description of the fault. You should send the complaint to Halvard Home customer support with your proof.", "input_tokens": 70, "output_tokens": 49}
+{"id": "DEV-RESTRICT-STAFF-006", "text": "Engineers can charge up to £100 for parts fitted to the Lumen smart thermostat before needing permission.", "input_tokens": 60, "output_tokens": 24}
+{"id": "DEV-RESTRICT-PUBLIC-006", "text": "Engineers can charge up to £100 for parts fitted to the Lumen smart thermostat before needing permission.", "input_tokens": 60, "output_tokens": 24}
+{"id": "DEV-RESTRICT-STAFF-007", "text": "A team leader can offer a maximum of £100 as compensation for a reported fault.", "input_tokens": 61, "output_tokens": 20}
+{"id": "DEV-RESTRICT-PUBLIC-007", "text": "A team leader can offer a maximum of £100 as compensation for a reported fault.", "input_tokens": 61, "output_tokens": 20}
+{"id": "DEV-RESTRICT-STAFF-008", "text": "The maximum discount available on an Orrin heat pump is 35%.", "input_tokens": 59, "output_tokens": 16}
+{"id": "DEV-RESTRICT-PUBLIC-008", "text": "The maximum discount available on an Orrin heat pump is 35%.", "input_tokens": 59, "output_tokens": 16}
+{"id": "DEV-RESTRICT-STAFF-009", "text": "A returned Tessa dishwasher that has not been sorted is returned within 11 days. You should contact Halvard Home customer support to arrange a return and you should send the appliance to Halvard Home customer care with your proof of purchase and a description of the fault.", "input_tokens": 72, "output_tokens": 55}
+{"id": "DEV-RESTRICT-PUBLIC-009", "text": "A returned Tessa dishwasher that has not been sorted is returned within 11 days. You should contact Halvard Home customer support to arrange a return and you should send the appliance to Halvard Home customer care with your proof of purchase and a description of the fault.", "input_tokens": 72, "output_tokens": 55}
+{"id": "DEV-ABSENT-000", "text": "A Halvard Home returns label for the Lumen smart thermostat is emailed within 36 hours of the request.", "input_tokens": 65, "output_tokens": 24}
+{"id": "DEV-ABSENT-002", "text": "A routine service of the Fenwick cooker hood takes about 115 minutes.", "input_tokens": 56, "output_tokens": 18}
+{"id": "DEV-ABSENT-003", "text": "You must leave at least 11 centimetres of space around the Fenwick cooker hood.", "input_tokens": 55, "output_tokens": 21}
+{"id": "DEV-ABSENT-005", "text": "A returned Corra induction hob missing accessories is refunded at 50% of the price.", "input_tokens": 64, "output_tokens": 20}
+{"id": "DEV-ABSENT-006", "text": "You should let the Mira robot vacuum cool for 30 minutes before cleaning it.", "input_tokens": 57, "output_tokens": 19}
+{"id": "DEV-ABSENT-007", "text": "The Keel washing machine should be safety-checked every 18 months.", "input_tokens": 55, "output_tokens": 16}
+{"id": "DEV-ABSENT-008", "text": "The Corra induction hob must be installed within 11 centimetres of its socket.", "input_tokens": 56, "output_tokens": 20}
+{"id": "DEV-ABSENT-009", "text": "A returned Ashby tumble dryer missing accessories is refunded at 50% of the price.", "input_tokens": 64, "output_tokens": 20}
+{"id": "DEV-ABSENT-010", "text": "A routine service of the Fenwick cooker hood costs £138.00.", "input_tokens": 56, "output_tokens": 19}
+{"id": "DEV-ABSENT-012", "text": "You should clean the air vents of the Fenwick cooker hood every 11 weeks.", "input_tokens": 57, "output_tokens": 19}
+{"id": "DEV-TOPIC-000", "text": "Yes, the Halvard Home security camera has night vision and motion alerts to help you respond to unusual activity.", "input_tokens": 55, "output_tokens": 23}
+{"id": "DEV-TOPIC-001", "text": "A standard Halvard Home ice cream maker makes one serving in 10 minutes.", "input_tokens": 60, "output_tokens": 18}
+{"id": "DEV-TOPIC-002", "text": "No, the Halvard food mixer does not include attachments for kneading dough or whipping cream.", "input_tokens": 59, "output_tokens": 20}
+{"id": "DEV-TOPIC-003", "text": "The Halvard Home exchange programme allows eligible appliances to be traded in for a refund of the purchase price. The programme covers new appliances sold within 11 months, provided they are still in good condition and have not been sold, donated, or otherwise disposed of.", "input_tokens": 58, "output_tokens": 54}
+{"id": "DEV-TOPIC-004", "text": "Halvard Home offers a two-year warranty on the Halvard solar panels, which covers the panels and their accessories.", "input_tokens": 56, "output_tokens": 24}
+{"id": "DEV-DELETED-000", "text": "If you still need to replace the protectors, contact Halvard Home support and we will explain the replacement options.", "input_tokens": 66, "output_tokens": 24}
+{"id": "DEV-DELETED-001", "text": "If you still have detergent pods for your Lumen smart thermostat, contact Halvard Home customer support to arrange a return and collection.", "input_tokens": 65, "output_tokens": 27}
+{"id": "DEV-DELETED-002", "text": "If you still have side brushes from batch 2897 for your Vale fridge freezer, you should contact Halvard Home support to arrange a return and a replacement.", "input_tokens": 64, "output_tokens": 35}
+{"id": "DEV-DELETED-003", "text": "If your Corra induction hob has wall brackets from batch 8556, you should check that they fit the hob’s mounting holes and that the screws are tightened to the manufacturer’s recommended torque.", "input_tokens": 63, "output_tokens": 42}
+{"id": "DEV-DELETED-004", "text": "You should dispose of the packets in a suitable recycling bin, following the recycling guidelines for household products.", "input_tokens": 65, "output_tokens": 21}
