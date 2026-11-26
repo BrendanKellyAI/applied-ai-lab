@@ -75,6 +75,7 @@ interval on test sits clear above the reference's. The current references are in
 | A | E3 + 8 similar examples | 593 of 600 | No: overlaps the reference |
 | A | E4 + JSON mode | 594 of 600 | No |
 | A | E5 Qwen3-0.6B tuned on 1,600 | 592 of 600 | No |
+| A | E9 Qwen3-0.6B tuned on the teacher's labels | 589 of 600 | No |
 | B | E1 one-line prompt | 0 of 300 | The baseline |
 | B | E7 Qwen3-0.6B tuned on 600 replies | 293 of 300 | Joined: the reference |
 
