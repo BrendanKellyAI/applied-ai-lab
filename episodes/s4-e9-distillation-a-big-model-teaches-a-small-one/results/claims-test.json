@@ -1,0 +1,52 @@
+[
+  {
+    "id": "C1",
+    "title": "The teacher's labels are mostly right",
+    "held": true,
+    "detail": {
+      "teacher_on_train": {
+        "count": 1572,
+        "total": 1600,
+        "rate": 0.9825,
+        "low": 0.9748238006225535,
+        "high": 0.9878648688269224
+      }
+    }
+  },
+  {
+    "id": "C2",
+    "title": "Distillation teaches the task",
+    "held": true,
+    "detail": {
+      "a": 589,
+      "b": 24,
+      "only_a": 565,
+      "only_b": 0,
+      "p_value": 1.656084321055619e-170
+    }
+  },
+  {
+    "id": "C3",
+    "title": "The student matches its teacher",
+    "held": true,
+    "detail": {
+      "a": 589,
+      "b": 587,
+      "only_a": 12,
+      "only_b": 10,
+      "p_value": 0.8318119049072266
+    }
+  },
+  {
+    "id": "C4",
+    "title": "Teacher labels cost nothing measurable against true labels",
+    "held": true,
+    "detail": {
+      "a": 589,
+      "b": 592,
+      "only_a": 3,
+      "only_b": 6,
+      "p_value": 0.5078125
+    }
+  }
+]
