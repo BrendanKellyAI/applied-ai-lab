@@ -163,7 +163,7 @@ class CaseBuilder:
         if name == "wrong_order_number":
             wrong = self._wrong_order_number(str(appliance.order_id))
             say = [line for line in self._basic_say(appliance, order=False)]
-            say.insert(1, f"You give your order number as {wrong}, which is mistyped.")
+            say.insert(1, f"Your order number is {wrong}.")
             answers = {"order_id": f"Sorry, it is {appliance.order_id}."}
             return self._case("branching", customer, (appliance,), say, tags=tags, answers=answers)
         other_delivered = appliance.delivered - timedelta(days=self.rng.randint(200, 500))
