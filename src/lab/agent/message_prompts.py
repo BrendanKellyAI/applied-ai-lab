@@ -13,6 +13,7 @@ from pathlib import Path
 
 from lab.agent.case_model import Appliance, CaseFacts
 from lab.agent.policy import POLICY_PATH, cover_end, load_policy
+from lab.agent.telemetry import LINES
 
 CHANNELS = ("email", "web form", "chat window")
 TONES = ("polite", "brisk", "worried", "fed up", "chatty")
@@ -97,7 +98,7 @@ def labeller_prompt(facts: CaseFacts, message: str) -> str:
             "open_case_for_this_fault": a.open_case_ref,
             "goodwill_refund_in_last_365_days": a.goodwill_in_last_year,
             "identifiable": a.identifiable,
-            "telemetry_finding": _telemetry_finding(a),
+            "telemetry_finding": _telemetry_finding(a, facts.tags),
         }
         for a in facts.appliances
     ]
@@ -107,9 +108,16 @@ def labeller_prompt(facts: CaseFacts, message: str) -> str:
             "CUSTOMER MESSAGE\n" + message,
             "RECORDS (what the agent learns from its tools and by asking the customer, so a "
             "detail missing from the message is still known)\n" + json.dumps(records, indent=1),
+            "WHAT THE CUSTOMER ANSWERS IF ASKED\n" + _answers(facts),
             "State the decision for each appliance.",
         ]
     )
+
+
+def _answers(facts: CaseFacts) -> str:
+    lines = [f"- {topic.replace('_', ' ')}: {answer}" for topic, answer in facts.answers.items()]
+    lines += [f"- {topic.replace('_', ' ')}: I do not know." for topic in facts.unknown]
+    return "\n".join(lines) or "- (nothing was withheld)"
 
 
 def _cover(appliance: Appliance) -> dict[str, object]:
@@ -124,10 +132,12 @@ def _cover(appliance: Appliance) -> dict[str, object]:
     }
 
 
-def _telemetry_finding(appliance: Appliance) -> str | None:
+def _telemetry_finding(appliance: Appliance, tags: tuple[str, ...]) -> str | None:
     """What a correct analysis of the attached log finds, for telemetry cases only."""
     if appliance.telemetry is None:
         return None
+    signatures = {s.name: s for spec in LINES.values() for s in spec["signatures"]}  # type: ignore[attr-defined]
+    signature = next(signatures[tag] for tag in tags if tag in signatures)
     if appliance.exclusion:
-        return f"the log shows {appliance.exclusion}"
-    return "the log shows a genuine defect"
+        return f"repeated readings show {signature.rule}: an exclusion ({appliance.exclusion})"
+    return f"repeated readings show {signature.rule}: a genuine defect, not an exclusion"

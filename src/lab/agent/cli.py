@@ -41,6 +41,9 @@ def write_messages_command(
     prices: Annotated[Path, typer.Option(help="Local prices file.")] = Path("prices.local.yaml"),
     cache_dir: Annotated[Path, typer.Option(help="Response cache folder.")] = Path(".cache"),
     env_file: Annotated[Path, typer.Option(help="File to read API keys from.")] = Path(".env"),
+    retry_discards: Annotated[
+        bool, typer.Option(help="Only the cases the last run discarded; keep the rest.")
+    ] = False,
 ) -> None:
     """Paid: write every case message and check its label. Needs an approved budget."""
     from dotenv import load_dotenv
@@ -61,6 +64,7 @@ def write_messages_command(
             prices=load_prices(prices),
             providers=available.providers,
             cache_dir=cache_dir,
+            retry_discards=retry_discards,
         )
     except BudgetRefused as exc:
         typer.echo(f"Refusing: {exc}", err=True)

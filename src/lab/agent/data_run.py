@@ -38,7 +38,10 @@ def run_case_data(
     prices: PricesFile | None,
     providers: Mapping[str, Provider],
     cache_dir: Path,
+    retry_discards: bool = False,
 ) -> dict[str, object]:
+    """Write and check every case; or, with `retry_discards`, only the cases the last run
+    discarded, keeping every case it accepted with the label it agreed."""
     files = {
         p.name.removesuffix(".facts.jsonl"): load_facts(p)
         for p in sorted(cases_dir.glob("*.facts.jsonl"))
@@ -50,7 +53,13 @@ def run_case_data(
         cache=ResponseCache(cache_dir),
         limits={name: LIMITS for name in providers},
     )
-    report = write_messages(cases, runner, cache_dir / "s5-case-data")
+    kept = _accepted_before(cases_dir, files) if retry_discards else {}
+    todo = [c for c in cases if c.case_id not in kept]
+    report = write_messages(todo, runner, cache_dir / "s5-case-data")
+    label_round = 2 if retry_discards else 1
+    for entry in report.accepted.values():
+        entry["label_round"] = label_round
+    report.accepted.update(kept)
     written = write_case_files(files, report, cases_dir)
     log = build_log(files, report, written)
     _write(cases_dir.parent / "build_log.json", json.dumps(log, indent=2))
@@ -58,6 +67,23 @@ def run_case_data(
         review_path, review_markdown(review_list(files["test"], report.accepted), report.accepted)
     )
     return log
+
+
+def _accepted_before(cases_dir: Path, files: dict[str, list]) -> dict[str, dict[str, object]]:
+    """Cases an earlier run accepted, with their message, attempt and label round."""
+    kept: dict[str, dict[str, object]] = {}
+    for name in files:
+        path = cases_dir / f"{name}.jsonl"
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            row = json.loads(line)
+            kept[row["case_id"]] = {
+                "message": row["message"],
+                "attempt": row["attempt"],
+                "label_round": row.get("label_round", 1),
+            }
+    return kept
 
 
 def _write(path: Path, text: str) -> None:

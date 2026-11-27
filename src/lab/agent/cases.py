@@ -226,7 +226,8 @@ class CaseBuilder:
             "You only say it is not working right, without describing the fault.",
             WANTS_WORDS[appliance.wants],
         ]
-        answers = {"fault": fault_words(appliance.fault, self.rng).capitalize() + "."}
+        words = fault_words(appliance.fault, self.rng)
+        answers = {"fault": words[0].upper() + words[1:] + "."}
         return self._case(
             "missing_information",
             customer,

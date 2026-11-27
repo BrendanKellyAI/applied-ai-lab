@@ -192,3 +192,26 @@ def test_checker_records_carry_computed_cover_dates():
     case = TEST[0]
     prompt = labeller_prompt(case, "m")
     assert '"cover_ends"' in prompt and '"days_out_of_cover"' in prompt
+
+
+def test_retry_discards_redoes_only_the_discarded_cases(small_dataset, tmp_path, monkeypatch):
+    ids = [c.case_id for c in load_facts(small_dataset / "test.facts.jsonl")]
+    common = {
+        "cases_dir": small_dataset,
+        "review_path": tmp_path / "review.md",
+        "prices": PRICES,
+        "cache_dir": tmp_path / "cache",
+    }
+    first = _mock(ids[0], "none")
+    run_case_data(providers={"google": first, "anthropic": first}, **common)
+    fixed = _mock("none", "none")
+    # The retry follows a fix to the checker's prompt, so its label calls are new requests.
+    monkeypatch.setattr("lab.agent.write_messages.LABELLER_SYSTEM", "fixed checker prompt")
+    log = run_case_data(
+        providers={"google": fixed, "anthropic": fixed}, retry_discards=True, **common
+    )
+    assert log["cases_written"] == {"test": 4} and log["discarded"] == 0
+    assert {call.metadata["case_id"] for call in fixed.calls} == {ids[0]}
+    rows = [json.loads(line) for line in (small_dataset / "test.jsonl").read_text().splitlines()]
+    rounds = {row["case_id"]: row["label_round"] for row in rows}
+    assert rounds[ids[0]] == 2 and {rounds[i] for i in ids[1:]} == {1}
