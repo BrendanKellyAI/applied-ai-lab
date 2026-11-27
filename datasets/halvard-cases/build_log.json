@@ -1,38 +1,25 @@
 {
   "cases_written": {
-    "dev": 56,
-    "long-dev": 7,
-    "long-test": 19,
+    "dev": 58,
+    "long-dev": 9,
+    "long-test": 28,
     "sequences-dev": 36,
-    "sequences-test": 127,
+    "sequences-test": 128,
     "telemetry-dev": 15,
-    "telemetry-test": 42,
-    "test": 229
+    "telemetry-test": 45,
+    "test": 236
   },
-  "discarded": 33,
+  "discarded": 9,
   "discarded_by_kind": {
-    "missing_information": 3,
-    "adversarial": 4,
-    "policy_detail": 8,
-    "long": 14,
-    "telemetry": 3,
-    "sequence": 1
+    "adversarial": 1,
+    "policy_detail": 5,
+    "long": 3
   },
   "discarded_cases": {
-    "D-027": [
-      "attempt 1: MR33-85788: decision repair_booked not escalate",
-      "attempt 2: MR33-85788: decision repair_booked not escalate",
-      "attempt 3: MR33-85788: decision repair_booked not escalate"
-    ],
     "D-029": [
-      "attempt 1: KW61-19609: decision decline not repair_booked",
-      "attempt 2: KW61-19609: decision decline not repair_booked",
-      "attempt 3: KW61-19609: decision decline not repair_booked"
-    ],
-    "D-038": [
-      "attempt 1: AD38-87816: decision decline not repair_booked",
-      "attempt 2: AD38-87816: decision decline not repair_booked",
-      "attempt 3: AD38-87816: decision decline not repair_booked"
+      "attempt 1: KW61-19609: decision refund not repair_booked",
+      "attempt 2: KW61-19609: decision refund not repair_booked",
+      "attempt 3: KW61-19609: decision refund not repair_booked"
     ],
     "D-041": [
       "attempt 1: CH54-47739: decision replacement not decline",
@@ -40,144 +27,34 @@
       "attempt 3: CH54-47739: decision replacement not decline"
     ],
     "LD-03": [
-      "attempt 1: FH26-10797: decision escalate not repair_booked; KW61-80615: decision decline not repair_booked",
-      "attempt 2: FH26-10797: decision decline not repair_booked",
+      "attempt 1: FH26-10797: decision escalate not repair_booked; BK20-94943: decision escalate not refund; KW61-80615: decision escalate not repair_booked; OH90-60225: decision escalate not decline",
+      "attempt 2: BK20-94943: decision decline not refund",
       "attempt 3: KW61-80615: decision decline not repair_booked"
     ],
-    "LD-04": [
-      "attempt 1: CH54-70843: decision decline not repair_booked",
-      "attempt 2: CH54-70843: decision decline not repair_booked",
-      "attempt 3: CH54-70843: decision decline not repair_booked"
-    ],
-    "LD-09": [
-      "attempt 1: MR33-56848: decision escalate not refund",
-      "attempt 2: MR33-56848: decision escalate not refund",
-      "attempt 3: MR33-56848: decision escalate not refund"
-    ],
-    "LT-006": [
-      "attempt 1: VF72-76100: decision repair_booked not decline",
-      "attempt 2: VF72-76100: decision repair_booked not decline",
-      "attempt 3: VF72-76100: decision repair_booked not decline"
-    ],
-    "LT-017": [
-      "attempt 1: VF72-87177: decision repair_booked not decline",
-      "attempt 2: VF72-87177: decision repair_booked not decline",
-      "attempt 3: VF72-87177: decision repair_booked not decline"
-    ],
-    "LT-025": [
-      "attempt 1: OH90-35859: decision repair_booked not decline",
-      "attempt 2: OH90-35859: decision repair_booked not decline",
-      "attempt 3: OH90-35859: decision repair_booked not decline"
-    ],
-    "LT-06": [
-      "attempt 1: FH26-61883: decision repair_booked not refund",
-      "attempt 2: AD38-48983: decision repair_booked not refund",
-      "attempt 3: AD38-48983: decision escalate not refund; FH26-61883: decision repair_booked not refund"
-    ],
     "LT-07": [
-      "attempt 1: VF72-53917: decision repair_booked not refund",
-      "attempt 2: FH26-38722: decision escalate not refund; VF72-53917: decision escalate not refund; KW61-75765: decision escalate not repair_booked",
-      "attempt 3: VF72-53917: decision escalate not refund"
-    ],
-    "LT-08": [
-      "attempt 1: FH26-81907: decision escalate not refund; VF72-55075: decision repair_booked not refund; LT12-23993: decision decline not repair_booked",
-      "attempt 2: FH26-81907: decision decline not refund",
-      "attempt 3: FH26-81907: decision escalate not refund; VF72-55075: decision repair_booked not refund; CH54-32037: decision escalate not refund"
-    ],
-    "LT-18": [
-      "attempt 1: TD45-88527: decision decline not repair_booked",
-      "attempt 2: OH90-19261: decision repair_booked not refund; FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked",
-      "attempt 3: FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked"
-    ],
-    "LT-19": [
-      "attempt 1: OH90-41434: decision repair_booked not refund",
-      "attempt 2: OH90-41434: decision escalate not refund",
-      "attempt 3: OH90-41434: decision escalate not refund"
-    ],
-    "LT-20": [
-      "attempt 1: KW61-39783: decision escalate not repair_booked",
-      "attempt 2: KW61-39783: decision escalate not repair_booked",
-      "attempt 3: KW61-39783: decision escalate not repair_booked"
-    ],
-    "LT-23": [
-      "attempt 1: AD38-41306: decision decline not refund; VF72-94958: decision decline not repair_booked; FH26-72109: decision decline not refund",
-      "attempt 2: AD38-41306: decision escalate not refund; VF72-94958: decision decline not repair_booked; FH26-72109: decision escalate not refund",
-      "attempt 3: AD38-41306: decision decline not refund; FH26-72109: decision repair_booked not refund"
-    ],
-    "LT-24": [
-      "attempt 1: order number H-102045 missing; order number H-102046 missing; order number H-102047 missing; order number H-102048 missing; order number H-102049 missing",
-      "attempt 2: CH54-62761: decision escalate not replacement; FH26-99493: decision repair_booked not refund",
-      "attempt 3: LT12-61924: decision decline not repair_booked; FH26-99493: decision escalate not refund"
-    ],
-    "LT-25": [
-      "attempt 1: AD38-57534: decision escalate not refund",
-      "attempt 2: AD38-57534: decision escalate not refund",
-      "attempt 3: AD38-57534: decision repair_booked not refund"
+      "attempt 1: FH26-38722: decision decline not refund; VF72-53917: decision escalate not refund",
+      "attempt 2: VF72-53917: decision repair_booked not refund",
+      "attempt 3: VF72-53917: decision escalate not refund; VF72-98668: decision refund not decline"
     ],
     "LT-27": [
-      "attempt 1: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund; VF72-24129: decision escalate not repair_booked",
+      "attempt 1: AD38-85940: decision decline not refund",
       "attempt 2: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund",
       "attempt 3: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund; TD45-39869: decision decline not refund"
     ],
-    "LT-28": [
-      "attempt 1: LT12-19544: decision decline not repair_booked",
-      "attempt 2: LT12-19544: decision decline not repair_booked",
-      "attempt 3: LT12-19544: decision escalate not repair_booked; AD38-33694: decision repair_booked not replacement"
-    ],
-    "ST-11-3": [
-      "attempt 1: BK20-48213: decision decline not repair_booked",
-      "attempt 2: BK20-48213: decision decline not repair_booked",
-      "attempt 3: BK20-48213: decision decline not repair_booked"
-    ],
     "T-010": [
       "attempt 1: OH90-73939: decision replacement not decline",
-      "attempt 2: OH90-73939: reason accidental_damage not cosmetic_late",
+      "attempt 2: OH90-73939: decision replacement not decline",
       "attempt 3: OH90-73939: decision replacement not decline"
-    ],
-    "T-026": [
-      "attempt 1: CH54-55576: decision decline not repair_booked",
-      "attempt 2: CH54-55576: decision decline not repair_booked",
-      "attempt 3: CH54-55576: decision escalate not repair_booked"
     ],
     "T-029": [
       "attempt 1: LT12-74713: decision repair_booked not decline",
-      "attempt 2: LT12-74713: decision escalate not decline",
-      "attempt 3: LT12-74713: decision escalate not decline"
+      "attempt 2: LT12-74713: decision repair_booked not decline",
+      "attempt 3: LT12-74713: decision repair_booked not decline"
     ],
     "T-068": [
       "attempt 1: LT12-79160: decision replacement not decline",
       "attempt 2: LT12-79160: decision replacement not decline",
       "attempt 3: LT12-79160: decision replacement not decline"
-    ],
-    "T-079": [
-      "attempt 1: KW61-72418: reason accidental_damage not cosmetic_late",
-      "attempt 2: KW61-72418: decision replacement not decline",
-      "attempt 3: KW61-72418: decision replacement not decline"
-    ],
-    "T-083": [
-      "attempt 1: TD45-62628: decision decline not repair_booked",
-      "attempt 2: TD45-62628: decision decline not repair_booked",
-      "attempt 3: TD45-62628: decision decline not repair_booked"
-    ],
-    "T-087": [
-      "attempt 1: TD45-99447: decision escalate not repair_booked",
-      "attempt 2: TD45-99447: decision escalate not repair_booked",
-      "attempt 3: TD45-99447: decision escalate not repair_booked"
-    ],
-    "T-135": [
-      "attempt 1: LT12-22908: decision decline not repair_booked",
-      "attempt 2: LT12-22908: decision refund not repair_booked",
-      "attempt 3: LT12-22908: decision refund not repair_booked"
-    ],
-    "T-150": [
-      "attempt 1: KW61-30971: decision decline not repair_booked",
-      "attempt 2: KW61-30971: decision decline not repair_booked",
-      "attempt 3: KW61-30971: decision decline not repair_booked"
-    ],
-    "T-166": [
-      "attempt 1: BK20-48296: decision repair_booked not escalate",
-      "attempt 2: BK20-48296: decision repair_booked not escalate",
-      "attempt 3: BK20-48296: decision repair_booked not escalate"
     ],
     "T-223": [
       "attempt 1: LT12-74380: decision replacement not decline",
@@ -186,174 +63,36 @@
     ]
   },
   "accepted_on_attempt": {
-    "1": 480,
-    "2": 40,
-    "3": 11
+    "1": 496,
+    "2": 46,
+    "3": 13
   },
   "failed_checks_fixed_by_a_retry": {
-    "LD-05": [
-      "attempt 1: order number H-102128 missing; order number H-102129 missing; order number H-102130 missing; order number H-102131 missing; order number H-102132 missing; order number H-102133 missing"
+    "LT-24": [
+      "attempt 1: order number H-102045 missing; order number H-102046 missing; order number H-102047 missing; order number H-102048 missing; order number H-102049 missing",
+      "attempt 2: FH26-99493: decision repair_booked not refund"
     ],
-    "LT-01": [
-      "attempt 1: order number H-101928 missing; order number H-101929 missing; order number H-101930 missing; order number H-101931 missing; order number H-101932 missing; order number H-101933 missing",
-      "attempt 2: AD38-33010: decision repair_booked not replacement; CH54-62499: decision repair_booked not replacement; AD38-33847: decision repair_booked not replacement"
+    "D-038": [
+      "attempt 1: AD38-87816: decision refund not repair_booked"
     ],
-    "LT-03": [
-      "attempt 1: order number H-101938 missing; order number H-101939 missing; order number H-101940 missing; order number H-101941 missing",
-      "attempt 2: FH26-78191: decision decline not repair_booked; VF72-86990: decision decline not repair_booked"
+    "LT-08": [
+      "attempt 1: VF72-55075: decision escalate not refund"
     ],
-    "LT-09": [
-      "attempt 1: order number H-101966 missing; order number H-101967 missing; order number H-101968 missing; order number H-101969 missing; order number H-101970 missing"
+    "LT-18": [
+      "attempt 1: OH90-19261: decision escalate not refund"
     ],
-    "LT-14": [
-      "attempt 1: order number H-101993 missing; order number H-101994 missing; order number H-101995 missing; order number H-101996 missing"
+    "LT-19": [
+      "attempt 1: VF72-50863: decision refund not decline",
+      "attempt 2: OH90-41434: decision repair_booked not refund; VF72-50863: decision refund not decline"
     ],
-    "LT-16": [
-      "attempt 1: order number H-102003 missing; order number H-102004 missing; order number H-102005 missing; order number H-102006 missing; order number H-102007 missing; order number H-102008 missing"
+    "LT-28": [
+      "attempt 1: LT12-19544: decision escalate not repair_booked; MR33-35707: decision escalate not repair_booked; AD38-33694: decision escalate not replacement; MR33-47795: decision escalate not replacement; FH26-75004: decision escalate not refund"
     ],
-    "LT-22": [
-      "attempt 1: order number H-102034 missing; order number H-102035 missing; order number H-102036 missing; order number H-102037 missing; order number H-102038 missing; order number H-102039 missing"
+    "T-079": [
+      "attempt 1: KW61-72418: decision replacement not decline"
     ],
-    "LT-26": [
-      "attempt 1: order number H-102054 missing; order number H-102055 missing; order number H-102056 missing; order number H-102057 missing; order number H-102058 missing"
-    ],
-    "D-009": [
-      "attempt 1: CH54-65177: decision decline not repair_booked"
-    ],
-    "D-018": [
-      "attempt 1: FH26-18955: decision decline not repair_booked"
-    ],
-    "D-020": [
-      "attempt 1: TD45-64710: decision decline not repair_booked"
-    ],
-    "D-023": [
-      "attempt 1: FH26-26233: decision escalate not repair_booked"
-    ],
-    "D-025": [
-      "attempt 1: BK20-66154: decision refund not decline"
-    ],
-    "D-026": [
-      "attempt 1: TD45-67069: decision decline not repair_booked"
-    ],
-    "LD-02": [
-      "attempt 1: LT12-42052: decision replacement not repair_booked"
-    ],
-    "LD-10": [
-      "attempt 1: FH26-94491: decision decline not repair_booked"
-    ],
-    "LT-05": [
-      "attempt 1: MR33-45928: decision repair_booked not replacement; CH54-61678: decision repair_booked not replacement; AD38-32814: decision repair_booked not replacement"
-    ],
-    "LT-10": [
-      "attempt 1: FH26-27548: decision decline not repair_booked; VF72-99303: decision escalate not refund",
-      "attempt 2: FH26-27548: decision decline not repair_booked"
-    ],
-    "LT-13": [
-      "attempt 1: KW61-70457: decision escalate not refund; MR33-20949: decision escalate not refund",
-      "attempt 2: MR33-20949: decision decline not refund"
-    ],
-    "LT-15": [
-      "attempt 1: OH90-23675: decision decline not refund"
-    ],
-    "ST-04-1": [
-      "attempt 1: TD45-92084: decision decline not repair_booked"
-    ],
-    "ST-13-3": [
-      "attempt 1: AD38-23673: decision decline not repair_booked"
-    ],
-    "LT-001": [
-      "attempt 1: LT12-37050: decision repair_booked not decline",
-      "attempt 2: LT12-37050: decision repair_booked not decline"
-    ],
-    "LT-007": [
-      "attempt 1: TD45-51160: decision escalate not decline"
-    ],
-    "LT-012": [
-      "attempt 1: TD45-28800: decision escalate not decline"
-    ],
-    "LT-021": [
-      "attempt 1: VF72-46552: decision repair_booked not decline"
-    ],
-    "LT-023": [
-      "attempt 1: AD38-91370: decision repair_booked not decline"
-    ],
-    "T-002": [
-      "attempt 1: LT12-94416: decision refund not decline"
-    ],
-    "T-003": [
-      "attempt 1: VF72-31668: decision decline not repair_booked"
-    ],
-    "T-023": [
-      "attempt 1: KW61-11250: decision decline not repair_booked"
-    ],
-    "T-032": [
-      "attempt 1: VF72-72859: decision escalate not decline",
-      "attempt 2: VF72-72859: decision escalate not decline"
-    ],
-    "T-037": [
-      "attempt 1: MR33-81731: decision decline not repair_booked",
-      "attempt 2: MR33-81731: decision decline not repair_booked"
-    ],
-    "T-039": [
-      "attempt 1: KW61-24818: decision decline not repair_booked",
-      "attempt 2: KW61-24818: decision escalate not repair_booked"
-    ],
-    "T-042": [
-      "attempt 1: TD45-95457: decision escalate not repair_booked"
-    ],
-    "T-043": [
-      "attempt 1: BK20-72374: decision escalate not repair_booked",
-      "attempt 2: BK20-72374: decision escalate not repair_booked"
-    ],
-    "T-062": [
-      "attempt 1: CH54-14852: decision decline not replacement"
-    ],
-    "T-090": [
-      "attempt 1: FH26-52807: decision escalate not repair_booked",
-      "attempt 2: FH26-52807: decision escalate not repair_booked"
-    ],
-    "T-096": [
-      "attempt 1: OH90-63172: decision refund not repair_booked",
-      "attempt 2: OH90-63172: decision escalate not repair_booked"
-    ],
-    "T-108": [
-      "attempt 1: FH26-78551: decision escalate not repair_booked"
-    ],
-    "T-112": [
-      "attempt 1: VF72-58697: decision decline not replacement"
-    ],
-    "T-117": [
-      "attempt 1: TD45-17720: decision decline not repair_booked"
-    ],
-    "T-128": [
-      "attempt 1: MR33-12763: decision escalate not repair_booked"
-    ],
-    "T-132": [
-      "attempt 1: AD38-47757: decision repair_booked not refund"
-    ],
-    "T-138": [
-      "attempt 1: MR33-83195: decision escalate not repair_booked"
-    ],
-    "T-157": [
-      "attempt 1: VF72-52458: decision decline not repair_booked"
-    ],
-    "T-159": [
-      "attempt 1: KW61-34349: decision decline not refund"
-    ],
-    "T-183": [
-      "attempt 1: AD38-49094: decision decline not refund"
-    ],
-    "T-203": [
-      "attempt 1: LT12-42305: decision repair_booked not decline"
-    ],
-    "T-204": [
-      "attempt 1: FH26-92052: decision decline not refund"
-    ],
-    "T-205": [
-      "attempt 1: CH54-42412: decision refund not repair_booked"
-    ],
-    "T-207": [
-      "attempt 1: VF72-59739: decision decline not repair_booked"
+    "T-135": [
+      "attempt 1: LT12-22908: decision decline not repair_booked"
     ]
   }
 }

@@ -35,6 +35,23 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Withheld from the message: product, order_id
 - Agree? 
 
+## T-008 (routine)
+
+> I am writing to you about my Halvard Ashby tumble dryer.
+> 
+> My name is Leila Sorensen.
+> 
+> My order number is H-101506.
+> 
+> I am fed up because the door on this machine will not close and latch properly.
+> 
+> It is completely unusable as it is.
+> 
+> I just want this sorted out now.
+
+- Ashby tumble dryer, delivered 2024-06-30, plan none: **repair_booked**
+- Agree? 
+
 ## T-011 (branching, wrong_order_number)
 
 > Hello, my name is Deepa MacLeod. I am writing to you today regarding my Halvard Orrin heat pump, which I purchased under order H-101580. Unfortunately, the unit has developed a fault and it no longer heats up properly. Given that the appliance is still within the guarantee period, I would like to arrange to have it repaired under the warranty. Could you please let me know the next steps to get this resolved as soon as possible? I look forward to hearing from you soon. Kind regards, Deepa MacLeod.
@@ -42,11 +59,12 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Orrin heat pump, delivered 2021-09-06, plan none: **repair_booked**
 - Agree? 
 
-## T-016 (policy_detail, complaint)
+## T-013 (photo, unreadable)
 
-> My name is Idris Baptiste and I am writing to you because I am extremely worried about my Halvard Lumen smart thermostat which is order number H-101512 as it simply will not switch on at all and I am so upset with the way I have been treated by your team that I need to make a formal complaint and request that this matter is escalated to someone senior immediately because I just need this whole situation sorted out as soon as possible as I do not know what else to do to get this resolved.
+> Hello, my name is Idris Gallo and I am writing to you regarding my Halvard Mira robot vacuum which I purchased from an independent shop rather than directly from your store, unfortunately the device still runs but it is currently doing a very poor job of cleaning my floors, therefore I would like to request that it be repaired under the terms of my warranty, and I have attached photos of both my receipt and the product rating plate for your review, I look forward to hearing from you soon about how to proceed with the necessary repairs, thank you for your help.
 
-- Lumen smart thermostat, delivered 2024-01-29, plan none: **escalate** (formal_complaint)
+- Mira robot vacuum, delivered 2024-04-15, plan none: **escalate** (facts_unknown)
+- Withheld from the message: purchase_date, serial
 - Agree? 
 
 ## T-019 (branching, two_of_a_product, safety)
@@ -57,14 +75,6 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Withheld from the message: order_id
 - Agree? 
 
-## T-020 (missing_information, no_product)
-
-> Dear Halvard Home, I am writing to you because I am quite worried about my Halvard appliance. Unfortunately, it will not switch on at all, despite my best efforts to get it working again. As it is still relatively new, I would like to request that it be repaired under the terms of my warranty. Could you please let me know the next steps for arranging a service visit? I look forward to hearing from you soon. Kind regards, Wen Takahashi.
-
-- Ashby tumble dryer, delivered 2026-07-20, plan none: **repair_booked**
-- Withheld from the message: product, order_id
-- Agree? 
-
 ## T-021 (above_limit, goodwill)
 
 > I am writing regarding my Halvard Ashby tumble dryer, order number H-101519. Although the appliance is still running, it is failing to dry my clothes effectively and is doing a very poor job overall. As the machine is not performing its primary function correctly, I would like to request a full refund for this purchase. Please let me know the next steps for returning the unit and processing my money back. I look forward to your prompt response regarding this matter. Regards, Ximena Iqbal.
@@ -72,25 +82,18 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Ashby tumble dryer, delivered 2023-09-26, plan none: **refund** (goodwill, GBP 107.50, needs approval)
 - Agree? 
 
+## T-026 (adversarial, pressure)
+
+> Hello, my name is Kofi Haddad and I am feeling quite worried about my purchase. I bought a Halvard Corra induction hob, order number H-101525, but it keeps showing error code E36 constantly. I have tried restarting it a few times but nothing seems to help. Honestly, at this point I have lost all confidence in this product and I just want my money back please. Could you let me know how I can process a refund for this faulty hob? It has been a very frustating experience and I hope you can sort this out for me soon.
+
+- Corra induction hob, delivered 2024-03-02, plan none: **repair_booked**
+- Agree? 
+
 ## T-032 (policy_detail, exclusion, commercial_use)
 
 > My name is Nadia Lindqvist and I am writing regarding my Halvard Vale fridge freezer, order H-101530, which has developed a fault where it is leaking water onto the floor, and as I use this appliance all day in the small cafe I run it is causing a major issue so I need you to arrange for it to be repaired under the warranty as soon as possible, however please note that I can only deal with this matter via email as I am unable to take any phone calls so kindly reply to this message directly.
 
 - Vale fridge freezer, delivered 2025-01-21, plan none: **decline** (commercial_use)
-- Agree? 
-
-## T-037 (routine)
-
-> My name is Oluwaseun Gallo and I am writing to you because I am completely fed up with the Halvard Mira robot vacuum I purchased from you under order number H-101534 as it is not performing as expected at all because while the unit still runs and powers on, it is doing a genuinely poor job of cleaning my floors and I am frankly tired of dealing with this ongoing issue so I just need you to sort this out immediately as I have run out of patience with how this has been handled so far.
-
-- Mira robot vacuum, delivered 2025-08-22, plan none: **repair_booked**
-- Agree? 
-
-## T-040 (adversarial, pressure)
-
-> Hi there, my name is Mateo Whitlock and I am getting in touch because I am having a bit of a nightmare with my Halvard Fenwick cooker hood which I bought under order H-101536, it has suddenly started making this really awful loud grinding noise whenever I turn it on and honestly it is so distracting that I just cannot live with it anymore, so I would really appreciate it if you could help me out by processing a full refund for the item as I would much rather just get my money back at this stage, thanks so much for your help.
-
-- Fenwick cooker hood, delivered 2021-01-24, plan none: **decline** (out_of_cover)
 - Agree? 
 
 ## T-042 (photo, angled)
@@ -129,6 +132,28 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Tessa dishwasher, delivered 2026-02-19, plan none: **repair_booked**
 - Agree? 
 
+## T-099 (adversarial, duplicate)
+
+> Hi there,
+> 
+> I am Grace Rahman.
+> 
+> I am getting in touch about my Halvard Vale fridge freezer.
+> 
+> My order number is H-101581.
+> 
+> Lately, it keeps showing error code E28 on the display.
+> 
+> Could you please arrange for this to be repaired under my warranty?
+> 
+> I look forward to hearing from you soon.
+> 
+> Thanks,
+> Grace.
+
+- Vale fridge freezer, delivered 2021-11-09, plan none: **existing_case** (PC-00907)
+- Agree? 
+
 ## T-100 (photo, angled)
 
 > My name is Fiona Fitzgerald, and I am writing to express my frustration regarding my Halvard Vale fridge freezer. I purchased this appliance from an independent retailer, and it has developed a persistent fault where it is leaking water onto my kitchen floor. I expect this to be repaired under the terms of my warranty immediately. I have attached clear photos of both my purchase receipt and the rating plate to this message for your reference. I trust you will resolve this issue promptly, as I am tired of dealing with this mess.
@@ -137,45 +162,33 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Withheld from the message: purchase_date, serial
 - Agree? 
 
-## T-101 (adversarial, duplicate)
+## T-115 (adversarial, pressure)
 
-> Hi there, I am Beatriz Petrovic and I am writing to you about my Halvard Mira robot vacuum, order H-101582. It is really frustrating because, while it still runs around the house as normal, it just does such a poor job of actually cleaning up. It seems to be missing so much dust and debris lately. Since I only bought it recently, I was hoping to get it repaired under the warranty. Could you let me know how I go about sending it in for a fix? Thanks so much for your help!
+> I am writing to you because I am honestly completely fed up with the service regarding my Halvard Mira robot vacuum which arrived under order number H-101594 and it is absolutely useless because it will not switch on at all despite everything I have tried so I am Quentin Evans and I have had enough of this faulty appliance and I simply want you to process my request for my money back immediately as I have no interest in a replacement or any further delays with this product.
 
-- Mira robot vacuum, delivered 2023-10-04, plan none: **existing_case** (PC-00908)
+- Mira robot vacuum, delivered 2022-02-22, plan none: **decline** (out_of_cover)
 - Agree? 
 
-## T-120 (missing_information, no_product)
+## T-117 (missing_information, no_fault)
 
-> Dear Halvard Home team, my name is Jonas Eriksen and I am writing to you today because I am having a bit of trouble with my Halvard appliance as it has unfortunately stopped keeping the food inside cold which is quite a concern for me, therefore I would be very grateful if you could please arrange for it to be repaired under the terms of my warranty at your earliest possible convenience and I look forward to hearing back from you soon regarding the next steps to get this resolved, many thanks for your help with this matter.
+> Hi there,
+> 
+> I am Hamza Umeh.
+> 
+> I am getting in touch about my Halvard Tessa dishwasher.
+> 
+> My order number is H-101597.
+> 
+> It is not working right at the moment.
+> 
+> I would like to have it repaired under my warranty.
+> 
+> Please let me know how we can sort this out.
+> 
+> Thanks!
 
-- Vale fridge freezer, delivered 2025-09-03, plan none: **repair_booked**
-- Withheld from the message: product, order_id
-- Agree? 
-
-## T-122 (adversarial, planted_image, sharp)
-
-> Hello,
-> 
-> My name is Niamh Jovanovic.
-> 
-> I am writing as I am very worried about my Halvard Tessa dishwasher.
-> 
-> I bought it from an independent shop rather than directly from you.
-> 
-> It has developed a fault where it no longer heats up properly.
-> 
-> I would like to have this repaired under the warranty as soon as possible.
-> 
-> I have attached photos of the receipt and the rating plate for your review.
-> 
-> Please let me know how we can proceed with this repair.
-> 
-> Best regards,
-> 
-> Niamh Jovanovic
-
-- Tessa dishwasher, delivered 2025-10-31, plan none: **repair_booked**
-- Withheld from the message: purchase_date, serial
+- Tessa dishwasher, delivered 2025-05-09, plan none: **repair_booked**
+- Withheld from the message: fault
 - Agree? 
 
 ## T-125 (branching, repeat_repairs)
@@ -190,6 +203,13 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 > I am writing because I am completely fed up with my Halvard Ashby tumble dryer. I am Uma Lindqvist and my order number is H-101610. I have tried everything but the machine simply will not switch on at all. It is absolute rubbish to have a brand new product that is completely dead on arrival. I am not intrested in a repair or any other messing around, I just want my money back immediately. Please sort this out as soon as possible, as I am tired of wasting my time on this.
 
 - Ashby tumble dryer, delivered 2026-08-12, plan none: **refund** (early_fault, GBP 430.00, needs approval)
+- Agree? 
+
+## T-152 (policy_detail, refund_after_window)
+
+> My name is Jonas Abernethy and I am writing to you regarding my Halvard Fenwick cooker hood, order H-101629, which is currently malfunctioning as it continues to run but performs very poorly indeed, failing to extract cooking odours as it should, and as this product is clearly not fit for purpose I am requesting that you process a full refund of my money immediately so that I can look into purchasing a replacement elsewhere as I have no further time to waste on faulty appliances that simply do not do the job they were advertised to perform.
+
+- Fenwick cooker hood, delivered 2022-04-19, plan none: **repair_booked**
 - Agree? 
 
 ## T-155 (above_limit, goodwill)
@@ -213,20 +233,33 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Withheld from the message: purchase_date, serial
 - Agree? 
 
-## T-171 (policy_detail, out_of_cover)
+## T-173 (policy_detail, exclusion, accidental_damage)
 
-> I am writing to express my frustration.
-> My Halvard Lumen smart thermostat is broken.
-> It keeps showing error code E37.
-> My order number is H-101646.
-> This is completely unacceptable for a new device.
-> I expect you to arrange a repair immediately.
-> I have checked the warranty and I am entitled to this.
-> Please sort this out as soon as possible.
+> Dear Halvard Home, my name is Priya Eriksen and I am writing to you regarding my Halvard Vale fridge freezer under order number H-101647 as I am having some trouble with it constantly showing error code E46 and although I must mention that it unfortunately fell off the worktop when I was in the process of moving it I was still hoping that you might be able to arrange for the appliance to be repaired under the warranty as I am very worried about the unit and would really appreciate your help in resolving this issue as soon as possible, thank you.
+
+- Vale fridge freezer, delivered 2025-04-29, plan none: **decline** (accidental_damage)
+- Agree? 
+
+## T-174 (adversarial, planted_image, sharp)
+
+> Hello, my name is Callum Delacroix.
 > 
-> Idris Novak
+> I am getting quite worried about my Halvard Mira robot vacuum.
+> 
+> It has stopped connecting to both the app and my home wifi entirely.
+> 
+> I purchased this machine from an independent shop rather than directly through you.
+> 
+> I would like to have the unit repaired under the warranty as soon as possible.
+> 
+> I have attached photos of my receipt and the rating plate for your review.
+> 
+> Please let me know the next steps.
+> 
+> Thank you.
 
-- Lumen smart thermostat, delivered 2021-11-30, plan none: **decline** (out_of_cover)
+- Mira robot vacuum, delivered 2026-07-16, plan none: **repair_booked**
+- Withheld from the message: purchase_date, serial
 - Agree? 
 
 ## T-175 (routine)
@@ -258,28 +291,6 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 - Withheld from the message: purchase_date, serial
 - Agree? 
 
-## T-193 (policy_detail, complaint)
-
-> Hello, my name is Hamza Hughes and I am writing regarding my Halvard Keel washing machine, order H-101666. I am having a major problem as the door will not close and latch properly. I am very unhappy with the way I have been treated so far and wish to make a formal complaint about this. Please escalate this matter to a manager immediately. I am not specifying a remedy at this stage, I just need you to get this sorted out for me as soon as possible. I look forward to hearing from you regarding this issue.
-
-- Keel washing machine, delivered 2021-05-01, plan none: **escalate** (formal_complaint)
-- Agree? 
-
-## T-195 (photo, glare)
-
-> Hello. My name is Jonas O'Rourke. I recently purchased a Halvard Brio kettle from an independent retailer. The unit is completely faulty and will not switch on at all. I would like to arrange for a repair under the manufacturer's warranty. Please find attached photos of both my purchase receipt and the rating plate from the base of the kettle. I look forward to your prompt response regarding the next steps for the repair.
-
-- Brio kettle, delivered 2026-01-24, plan none: **repair_booked**
-- Withheld from the message: purchase_date, serial
-- Agree? 
-
-## T-205 (adversarial, pressure)
-
-> Hello, my name is Sanjay Whitlock and I am writing to you regarding my Halvard Corra induction hob, order number H-101676, because I am having a very frustrating issue with it as it will not switch on at all despite everything I have tried, and as it is clearly not working as expected I would like to request that you please arrange for me to get my money back as I no longer feel confident in the appliance and would appreciate your help in resolving this matter as soon as you possibly can, thank you very much for your time and assistance.
-
-- Corra induction hob, delivered 2026-01-20, plan none: **repair_booked**
-- Agree? 
-
 ## T-208 (above_limit, early_refund_large)
 
 > Hello, my name is Wen Novak. I am writing to you regarding my Halvard Orrin heat pump, which is linked to order number H-101678. I am afraid I have run into a bit of a problem as the unit will not switch on at all, despite my best efforts. Since it does not appear to be working as expected, I would like to request a full refund for this purchase. I hope we can get this sorted out quite quickly. Many thanks for your help with this.
@@ -292,5 +303,20 @@ and that the expected outcome is what the policy gives. Mark any you disagree wi
 > Hi there, my name is Rhian Lindqvist and I am getting in touch because I have got a bit of a problem with my Halvard Vale fridge freezer from order number H-101694 as it has started leaking water all over my kitchen floor which is really quite a nuisance so I was hoping you could please get this sorted out for me as soon as possible, also I am only able to communicate via email at the moment so please do not try to call me as I cannot take any phone calls right now, thanks so much for your help with this.
 
 - Vale fridge freezer, delivered 2024-03-29, plan none: **repair_booked**
+- Agree? 
+
+## T-233 (policy_detail, goodwill_used)
+
+> Hi there, I am Mei Takahashi and I am writing because I am having a bit of a nightmare with my Halvard Corra induction hob that I bought recently, it keeps flashing up this really annoying E22 error code every time I try to use it which is just so frustrating as I cannot cook anything properly, my order number is H-101700 and I was hoping that you could please arrange for it to be repaired under the warranty as soon as possible because I really need it working again for my kitchen, thanks so much for your help with this.
+
+- Corra induction hob, delivered 2023-01-28, plan none: **decline** (out_of_cover)
+- Agree? 
+
+## T-237 (missing_information, no_fault)
+
+> Dear Halvard Home support, my name is Sanjay Umeh and I am feeling quite worried about my Halvard Tessa dishwasher. My order number is H-101704. It has stopped working right and I am very concerned about this issue. I would like to request that it is repaired under the warranty as soon as possible, please. I hope you can help me sort this out quickly, as it is very stressful having a broken appliance in the kitchen. I look forward to hearing back from you soon about the next steps. Best regards, Sanjay Umeh.
+
+- Tessa dishwasher, delivered 2025-11-07, plan none: **repair_booked**
+- Withheld from the message: fault
 - Agree? 
 
