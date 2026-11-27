@@ -1,0 +1,17 @@
+# S4 E9, distillation, Task A test. The teacher sends exactly E2's definitions requests, so its test
+# replies come from the cache. The untuned student and the student tuned on true labels are
+# E5's files; the student tuned on the teacher's labels is this episode's Colab job.
+# See PREREGISTRATION.md.
+episode: s4-e9-distillation-a-big-model-teaches-a-small-one
+task: a
+split: test
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e9-teacher
+arms:
+  - {name: e9-teacher, instructions: definitions, output: text}
+  - {name: e9-student-untuned, predictions: ../s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-untuned-0-6b/predictions-test.jsonl, note: "Qwen3-0.6B untuned, definitions prompt (E5)"}
+  - {name: e9-student-teacher-labels, predictions: results/e9-student-teacher-labels/predictions-test.jsonl, note: "Qwen3-0.6B tuned on the teacher's labels"}
+  - {name: e9-student-true-labels, predictions: ../s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-tuned-short/predictions-test.jsonl, note: "Qwen3-0.6B tuned on the true labels (E5)"}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}

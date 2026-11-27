@@ -1,0 +1,24 @@
+# S4 E10 pass marks, fixed before any job or call. PREREGISTRATION.md states the same marks in
+# words. Each claim tests both tuned models against e10-base, item by item; it holds only if
+# both tests pass.
+tuned: [e10-tuned-triage, e10-tuned-replies]
+baseline: e10-base
+claims:
+  C1:
+    title: Tuning on one task costs general ability
+    rule: each tuned model is right on fewer of the 120 Season 1 items than e10-base, exact McNemar p below 0.05
+    check: general
+    direction: fewer
+    p_below: 0.05
+  C2:
+    title: A tuned format bleeds into ordinary requests
+    rule: each tuned model answers more of the 100 ordinary requests in a tuned format than e10-base, exact McNemar p below 0.05
+    check: bleed
+    direction: more
+    p_below: 0.05
+  C3:
+    title: Tuning weakens declines even with retrieval
+    rule: each tuned model declines fewer of the 120 unanswerable questions, given the reference system's prompt, than e10-base, exact McNemar p below 0.05
+    check: declines
+    direction: fewer
+    p_below: 0.05

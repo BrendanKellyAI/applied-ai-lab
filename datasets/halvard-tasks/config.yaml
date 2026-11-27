@@ -1,0 +1,86 @@
+# How the Season 4 task data is built (GENERATION_PLAN.md). Every setting the build uses is
+# here, so it can be reproduced. Labels are drawn in code from the seed; the generator writes
+# the message for a label it is given, and a blind labeller from a third provider checks it.
+dataset_version: halvard-tasks-v1
+seed: 20261122
+
+generator:
+  provider: google
+  model: gemini-3.1-flash-lite
+  reasoning: minimal
+  max_output_tokens: 800
+labeller:
+  provider: anthropic
+  model: claude-haiku-5-5
+  reasoning: "off"
+  # Raised from 200 after a pilot label ran out while explaining itself.
+  max_output_tokens: 400
+# Request limits per provider, as Season 3 ran them.
+limits:
+  google: {max_concurrency: 8, requests_per_minute: 300}
+  # Season 3 ran Anthropic at 4 and 50; Haiku is lighter, and the runner backs off on 429s.
+  # Raised from 6 and 150 for the draft-3 rebuild, to keep it near 30 minutes.
+  anthropic: {max_concurrency: 10, requests_per_minute: 250}
+# A message that fails the code checks is sent back once with the reason, then dropped.
+max_attempts: 2
+
+task_a:
+  # Train halved from 3,200 on 22 November 2026, to keep the build near 30 minutes.
+  splits: {train: 1600, dev: 200, test: 600}
+  # Extra seeds drawn per split to absorb discards; the first items to pass, in seed order,
+  # are kept.
+  # Raised from 0.15 after the pilot discarded 7 of 40 (22 November 2026), and to 0.45 for
+  # draft-3, whose hard cases are 64% of items and are discarded more often (23 November).
+  overgenerate: 0.45
+  # Pilot: this many seeds from the dev split only.
+  pilot_seeds: 40
+  # A dev or test item whose character 5-gram Jaccard similarity to any train item is above
+  # this is removed. Fixed before generation.
+  near_duplicate_threshold: 0.8
+  # Share of ordinary items per route. Safety and hard case items are drawn separately.
+  route_weights:
+    warranty_claim: 0.22
+    return_refund: 0.15
+    delivery: 0.13
+    servicing_booking: 0.10
+    spare_part: 0.10
+    how_to_use: 0.15
+    complaint: 0.08
+    other: 0.07
+  length_bands: [[15, 40], [40, 90], [90, 160]]
+  # Invented appliances Halvard Home does not sell, for the unknown_product hard case.
+  unsold_products:
+    - Halvard air fryer
+    - Halvard coffee machine
+    - Halvard microwave
+    - Halvard electric blanket
+    - Halvard toaster
+    - Halvard ice cream maker
+  personas:
+    tone: [calm, polite, worried, frustrated, terse, chatty]
+    habit: [none, none, a few typos, no punctuation, all lower case, very formal]
+    channel: [email, web chat]
+    # Invented first names, so that two seeds with the same label and persona still get
+    # different prompts (the cache would otherwise return one message for both).
+    name: [Aileen, Arjun, Beth, Callum, Ciara, Dev, Eilidh, Femi, Gareth, Hana, Imran, Jess,
+           Kofi, Lowri, Marek, Niamh, Owen, Priya, Rhys, Sian, Tomasz, Una, Wes, Yasmin, Zak,
+           Aled, Bronwen, Declan, Esme, Fraser, Grace, Hamza, Isla, Jude, Kerry, Leon, Morag,
+           Nadia, Oisin, Ruth]
+
+task_b:
+  # Each item is a customer question and a correct answer drawn from one passage of the
+  # Halvard library (current public policy sections and help articles, never INT documents),
+  # rewritten as a reply in the house style. Passages are split before generation, so no
+  # test item shares a passage with train.
+  library: ../halvard
+  splits: {train: 600, dev: 100, test: 300}
+  overgenerate: 0.30
+  pilot_seeds: 20
+  # Share of items whose question the passage does not answer, to teach the fixed not found
+  # reply (style guide rule 8).
+  not_found_share: 0.10
+  angles:
+    - the main point of the passage
+    - one specific figure, time limit or charge in the passage
+    - a practical when, how or how long question a customer would ask
+    - a condition, exception or exclusion in the passage

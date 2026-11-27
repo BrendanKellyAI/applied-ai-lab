@@ -1,0 +1,56 @@
+[
+  {
+    "id": "C1",
+    "title": "Tuning teaches the task",
+    "held": true,
+    "detail": {
+      "a": 592,
+      "b": 24,
+      "only_a": 568,
+      "only_b": 0,
+      "p_value": 2.070105401319524e-171
+    }
+  },
+  {
+    "id": "C2",
+    "title": "A tuned small model matches the best prompt",
+    "held": true,
+    "detail": {
+      "a": 592,
+      "b": 587,
+      "only_a": 12,
+      "only_b": 7,
+      "p_value": 0.359283447265625
+    }
+  },
+  {
+    "id": "C3",
+    "title": "With a fraction of the prompt",
+    "held": true,
+    "detail": {
+      "tuned": 112.1,
+      "reference": 945.1,
+      "ratio": 0.1186
+    }
+  },
+  {
+    "id": "C4",
+    "title": "Without missing incidents",
+    "held": true,
+    "detail": {
+      "safety_recall": {
+        "count": 65,
+        "total": 65,
+        "rate": 1.0
+      }
+    }
+  },
+  {
+    "id": "C5",
+    "title": "Once tuned, the field list adds nothing",
+    "held": null,
+    "detail": {
+      "not_tested": "e5-tuned-one-line was not run (PREREGISTRATION Amendment 1)"
+    }
+  }
+]

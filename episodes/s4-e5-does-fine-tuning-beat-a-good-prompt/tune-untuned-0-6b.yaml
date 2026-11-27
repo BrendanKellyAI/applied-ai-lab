@@ -1,0 +1,13 @@
+# S4 E5 pilot and baseline: untuned Qwen3-0.6B with E2's definitions prompt, no training.
+# Its dev result decides the base model (PREREGISTRATION.md, step 1); its test predictions are
+# the untuned baseline. See PREREGISTRATION.md.
+episode: s4-e5-does-fine-tuning-beat-a-good-prompt
+task: a
+arm: e5-untuned-0-6b
+base_model: Qwen/Qwen3-0.6B
+base_revision: c1899de289a04d12100db370d81485cdf75e47ca
+train_size: 0
+instructions: definitions
+eval_splits: [dev, test]
+max_new_tokens: 160
+data: ../../datasets/halvard-tasks

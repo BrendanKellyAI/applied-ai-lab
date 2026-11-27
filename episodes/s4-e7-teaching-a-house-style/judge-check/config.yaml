@@ -1,0 +1,19 @@
+# S4 E7 judge check: claude-haiku-5-5 judges the first 50 Task B test items again, for every
+# arm, so its facts and style verdicts can be compared item by item with gemini-3.6-flash's. Every
+# arm is external (the main run's replies), so this config makes judge calls only. Its results
+# go to judge-check/results/, apart from the main run's. See PREREGISTRATION.md.
+episode: s4-e7-teaching-a-house-style
+task: b
+split: test
+limit: 50
+data: ../../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 400}
+judge: {provider: anthropic, model: claude-haiku-5-5, reasoning: "off", max_output_tokens: 300}
+reference: e7-style-guide
+arms:
+  - {name: e7-one-line, predictions: ../results/e7-one-line/predictions-test.jsonl}
+  - {name: e7-style-guide, predictions: ../results/e7-style-guide/predictions-test.jsonl}
+  - {name: e7-guide-4-examples, predictions: ../results/e7-guide-4-examples/predictions-test.jsonl}
+  - {name: e7-tuned-short, predictions: ../results/e7-tuned-short-b4/predictions-test.jsonl}
+limits:
+  anthropic: {max_concurrency: 8, requests_per_minute: 300}

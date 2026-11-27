@@ -1,0 +1,698 @@
+{
+  "episode": "s4-e9-distillation-a-big-model-teaches-a-small-one",
+  "task": "a",
+  "split": "dev",
+  "items": 200,
+  "reference": "e9-teacher",
+  "primary_metric": "fully_right",
+  "arms": {
+    "e9-teacher": {
+      "items": 200,
+      "fully_right": {
+        "count": 199,
+        "total": 200,
+        "rate": 0.995,
+        "low": 0.9722262956021069,
+        "high": 0.9991168312843989
+      },
+      "safety_recall": {
+        "count": 25,
+        "total": 25,
+        "rate": 1.0,
+        "low": 0.8668077490609515,
+        "high": 0.9999999999999999
+      },
+      "safety_false_alarms": {
+        "count": 0,
+        "total": 175,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.02147968846835207
+      },
+      "json_valid": {
+        "count": 200,
+        "total": 200,
+        "rate": 1.0,
+        "low": 0.9811546736227335,
+        "high": 1.0
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "safety": {
+          "count": 200,
+          "total": 200,
+          "rate": 1.0,
+          "low": 0.9811546736227335,
+          "high": 1.0
+        },
+        "product": {
+          "count": 200,
+          "total": 200,
+          "rate": 1.0,
+          "low": 0.9811546736227335,
+          "high": 1.0
+        },
+        "fault": {
+          "count": 200,
+          "total": 200,
+          "rate": 1.0,
+          "low": 0.9811546736227335,
+          "high": 1.0
+        }
+      },
+      "route_macro_f1": 0.9896,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 15,
+          "total": 15,
+          "rate": 1.0,
+          "low": 0.7961166989641515,
+          "high": 1.0
+        },
+        "harmless_safety_word": {
+          "count": 23,
+          "total": 23,
+          "rate": 1.0,
+          "low": 0.8568833815495731,
+          "high": 1.0
+        },
+        "mixed_request": {
+          "count": 17,
+          "total": 17,
+          "rate": 1.0,
+          "low": 0.8156818649911483,
+          "high": 1.0
+        },
+        "negated_cue": {
+          "count": 8,
+          "total": 8,
+          "rate": 1.0,
+          "low": 0.6755924351161198,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 57,
+          "total": 58,
+          "rate": 0.9827586206896551,
+          "low": 0.9085914190653199,
+          "high": 0.9969499615539326
+        },
+        "played_down_safety": {
+          "count": 10,
+          "total": 10,
+          "rate": 1.0,
+          "low": 0.7224672001371107,
+          "high": 0.9999999999999999
+        },
+        "safe_use_question": {
+          "count": 14,
+          "total": 14,
+          "rate": 1.0,
+          "low": 0.7846891972623643,
+          "high": 1.0
+        },
+        "safety": {
+          "count": 15,
+          "total": 15,
+          "rate": 1.0,
+          "low": 0.7961166989641515,
+          "high": 1.0
+        },
+        "two_products": {
+          "count": 18,
+          "total": 18,
+          "rate": 1.0,
+          "low": 0.8241207763533425,
+          "high": 1.0
+        },
+        "two_requests": {
+          "count": 17,
+          "total": 17,
+          "rate": 1.0,
+          "low": 0.8156818649911483,
+          "high": 1.0
+        },
+        "unknown_product": {
+          "count": 5,
+          "total": 5,
+          "rate": 1.0,
+          "low": 0.5655175352168251,
+          "high": 1.0
+        }
+      },
+      "invalid_reasons": {},
+      "tokens": {
+        "calls": 200,
+        "input_tokens": 188720,
+        "cached_input_tokens": 0,
+        "output_tokens": 5396,
+        "mean_input_tokens": 943.6,
+        "mean_output_tokens": 27.0
+      },
+      "items_without_reply": 0
+    },
+    "e9-student-untuned": {
+      "items": 200,
+      "fully_right": {
+        "count": 12,
+        "total": 200,
+        "rate": 0.06,
+        "low": 0.03465219425433187,
+        "high": 0.1019316929576627
+      },
+      "safety_recall": {
+        "count": 21,
+        "total": 25,
+        "rate": 0.84,
+        "low": 0.6534637839282114,
+        "high": 0.9359654854332355
+      },
+      "safety_false_alarms": {
+        "count": 149,
+        "total": 175,
+        "rate": 0.8514285714285714,
+        "low": 0.7912101009644952,
+        "high": 0.8965498894263202
+      },
+      "json_valid": {
+        "count": 192,
+        "total": 200,
+        "rate": 0.96,
+        "low": 0.923067931799067,
+        "high": 0.9795943679338476
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 129,
+          "total": 200,
+          "rate": 0.645,
+          "low": 0.5765211307549043,
+          "high": 0.7080137245956883
+        },
+        "safety": {
+          "count": 40,
+          "total": 200,
+          "rate": 0.2,
+          "low": 0.15045200926098115,
+          "high": 0.2608551865653788
+        },
+        "product": {
+          "count": 183,
+          "total": 200,
+          "rate": 0.915,
+          "low": 0.8681041292843443,
+          "high": 0.9462542498225244
+        },
+        "fault": {
+          "count": 125,
+          "total": 200,
+          "rate": 0.625,
+          "low": 0.5561430369897816,
+          "high": 0.6891456314159018
+        }
+      },
+      "route_macro_f1": 0.5587,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 0,
+          "total": 15,
+          "rate": 0.0,
+          "low": 0.0,
+          "high": 0.20388330103584862
+        },
+        "harmless_safety_word": {
+          "count": 2,
+          "total": 23,
+          "rate": 0.08695652173913043,
+          "low": 0.024180004484220363,
+          "high": 0.26795981075743663
+        },
+        "mixed_request": {
+          "count": 1,
+          "total": 17,
+          "rate": 0.058823529411764705,
+          "low": 0.010460400984997592,
+          "high": 0.26982030637575405
+        },
+        "negated_cue": {
+          "count": 0,
+          "total": 8,
+          "rate": 0.0,
+          "low": 0.0,
+          "high": 0.32440756488388023
+        },
+        "plain": {
+          "count": 2,
+          "total": 58,
+          "rate": 0.034482758620689655,
+          "low": 0.009507928331165413,
+          "high": 0.11729145464312694
+        },
+        "played_down_safety": {
+          "count": 1,
+          "total": 10,
+          "rate": 0.1,
+          "low": 0.017876213095072896,
+          "high": 0.4041500267952385
+        },
+        "safe_use_question": {
+          "count": 0,
+          "total": 14,
+          "rate": 0.0,
+          "low": 1.3877787807814457e-17,
+          "high": 0.2153108027376358
+        },
+        "safety": {
+          "count": 4,
+          "total": 15,
+          "rate": 0.26666666666666666,
+          "low": 0.10897453325692374,
+          "high": 0.5195043405598057
+        },
+        "two_products": {
+          "count": 0,
+          "total": 18,
+          "rate": 0.0,
+          "low": 0.0,
+          "high": 0.17587922364665765
+        },
+        "two_requests": {
+          "count": 2,
+          "total": 17,
+          "rate": 0.11764705882352941,
+          "low": 0.03287977376379267,
+          "high": 0.3433635059488588
+        },
+        "unknown_product": {
+          "count": 0,
+          "total": 5,
+          "rate": 0.0,
+          "low": 0.0,
+          "high": 0.43448246478317476
+        }
+      },
+      "invalid_reasons": {
+        "invalid fields": 8
+      },
+      "tokens": {
+        "calls": 200,
+        "input_tokens": 191538,
+        "cached_input_tokens": 0,
+        "output_tokens": 6707,
+        "mean_input_tokens": 957.7,
+        "mean_output_tokens": 33.5
+      },
+      "items_without_reply": 0
+    },
+    "e9-student-teacher-labels": {
+      "items": 200,
+      "fully_right": {
+        "count": 199,
+        "total": 200,
+        "rate": 0.995,
+        "low": 0.9722262956021069,
+        "high": 0.9991168312843989
+      },
+      "safety_recall": {
+        "count": 25,
+        "total": 25,
+        "rate": 1.0,
+        "low": 0.8668077490609515,
+        "high": 0.9999999999999999
+      },
+      "safety_false_alarms": {
+        "count": 0,
+        "total": 175,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.02147968846835207
+      },
+      "json_valid": {
+        "count": 199,
+        "total": 200,
+        "rate": 0.995,
+        "low": 0.9722262956021069,
+        "high": 0.9991168312843989
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "safety": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "product": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "fault": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        }
+      },
+      "route_macro_f1": 0.9989,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 15,
+          "total": 15,
+          "rate": 1.0,
+          "low": 0.7961166989641515,
+          "high": 1.0
+        },
+        "harmless_safety_word": {
+          "count": 23,
+          "total": 23,
+          "rate": 1.0,
+          "low": 0.8568833815495731,
+          "high": 1.0
+        },
+        "mixed_request": {
+          "count": 17,
+          "total": 17,
+          "rate": 1.0,
+          "low": 0.8156818649911483,
+          "high": 1.0
+        },
+        "negated_cue": {
+          "count": 8,
+          "total": 8,
+          "rate": 1.0,
+          "low": 0.6755924351161198,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 58,
+          "total": 58,
+          "rate": 1.0,
+          "low": 0.9378821442127971,
+          "high": 1.0
+        },
+        "played_down_safety": {
+          "count": 10,
+          "total": 10,
+          "rate": 1.0,
+          "low": 0.7224672001371107,
+          "high": 0.9999999999999999
+        },
+        "safe_use_question": {
+          "count": 14,
+          "total": 14,
+          "rate": 1.0,
+          "low": 0.7846891972623643,
+          "high": 1.0
+        },
+        "safety": {
+          "count": 15,
+          "total": 15,
+          "rate": 1.0,
+          "low": 0.7961166989641515,
+          "high": 1.0
+        },
+        "two_products": {
+          "count": 18,
+          "total": 18,
+          "rate": 1.0,
+          "low": 0.8241207763533425,
+          "high": 1.0
+        },
+        "two_requests": {
+          "count": 16,
+          "total": 17,
+          "rate": 0.9411764705882353,
+          "low": 0.7301796936242461,
+          "high": 0.9895395990150025
+        },
+        "unknown_product": {
+          "count": 5,
+          "total": 5,
+          "rate": 1.0,
+          "low": 0.5655175352168251,
+          "high": 1.0
+        }
+      },
+      "invalid_reasons": {
+        "invalid fields": 1
+      },
+      "tokens": {
+        "calls": 200,
+        "input_tokens": 23738,
+        "cached_input_tokens": 0,
+        "output_tokens": 5925,
+        "mean_input_tokens": 118.7,
+        "mean_output_tokens": 29.6
+      },
+      "items_without_reply": 0
+    },
+    "e9-student-true-labels": {
+      "items": 200,
+      "fully_right": {
+        "count": 198,
+        "total": 200,
+        "rate": 0.99,
+        "low": 0.9642782382838231,
+        "high": 0.9972533418664555
+      },
+      "safety_recall": {
+        "count": 25,
+        "total": 25,
+        "rate": 1.0,
+        "low": 0.8668077490609515,
+        "high": 0.9999999999999999
+      },
+      "safety_false_alarms": {
+        "count": 0,
+        "total": 175,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.02147968846835207
+      },
+      "json_valid": {
+        "count": 199,
+        "total": 200,
+        "rate": 0.995,
+        "low": 0.9722262956021069,
+        "high": 0.9991168312843989
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "safety": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "product": {
+          "count": 199,
+          "total": 200,
+          "rate": 0.995,
+          "low": 0.9722262956021069,
+          "high": 0.9991168312843989
+        },
+        "fault": {
+          "count": 198,
+          "total": 200,
+          "rate": 0.99,
+          "low": 0.9642782382838231,
+          "high": 0.9972533418664555
+        }
+      },
+      "route_macro_f1": 0.9989,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 14,
+          "total": 15,
+          "rate": 0.9333333333333333,
+          "low": 0.7018347012621998,
+          "high": 0.9881331045067315
+        },
+        "harmless_safety_word": {
+          "count": 23,
+          "total": 23,
+          "rate": 1.0,
+          "low": 0.8568833815495731,
+          "high": 1.0
+        },
+        "mixed_request": {
+          "count": 17,
+          "total": 17,
+          "rate": 1.0,
+          "low": 0.8156818649911483,
+          "high": 1.0
+        },
+        "negated_cue": {
+          "count": 8,
+          "total": 8,
+          "rate": 1.0,
+          "low": 0.6755924351161198,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 58,
+          "total": 58,
+          "rate": 1.0,
+          "low": 0.9378821442127971,
+          "high": 1.0
+        },
+        "played_down_safety": {
+          "count": 10,
+          "total": 10,
+          "rate": 1.0,
+          "low": 0.7224672001371107,
+          "high": 0.9999999999999999
+        },
+        "safe_use_question": {
+          "count": 14,
+          "total": 14,
+          "rate": 1.0,
+          "low": 0.7846891972623643,
+          "high": 1.0
+        },
+        "safety": {
+          "count": 15,
+          "total": 15,
+          "rate": 1.0,
+          "low": 0.7961166989641515,
+          "high": 1.0
+        },
+        "two_products": {
+          "count": 18,
+          "total": 18,
+          "rate": 1.0,
+          "low": 0.8241207763533425,
+          "high": 1.0
+        },
+        "two_requests": {
+          "count": 16,
+          "total": 17,
+          "rate": 0.9411764705882353,
+          "low": 0.7301796936242461,
+          "high": 0.9895395990150025
+        },
+        "unknown_product": {
+          "count": 5,
+          "total": 5,
+          "rate": 1.0,
+          "low": 0.5655175352168251,
+          "high": 1.0
+        }
+      },
+      "invalid_reasons": {
+        "invalid fields": 1
+      },
+      "tokens": {
+        "calls": 200,
+        "input_tokens": 23738,
+        "cached_input_tokens": 0,
+        "output_tokens": 5927,
+        "mean_input_tokens": 118.7,
+        "mean_output_tokens": 29.6
+      },
+      "items_without_reply": 0
+    }
+  },
+  "comparisons": {
+    "e9-student-untuned": {
+      "only_a": 0,
+      "only_b": 187,
+      "p_value": 1.0195788231247695e-56,
+      "right_to_wrong": 187,
+      "wrong_to_right": 0,
+      "flipped": 187,
+      "net": -187,
+      "p_holm": 3.0587364693743084e-56,
+      "safety_recall": {
+        "only_a": 0,
+        "only_b": 4,
+        "p_value": 0.125,
+        "right_to_wrong": 4,
+        "wrong_to_right": 0,
+        "flipped": 4,
+        "net": -4
+      }
+    },
+    "e9-student-teacher-labels": {
+      "only_a": 1,
+      "only_b": 1,
+      "p_value": 1.0,
+      "right_to_wrong": 1,
+      "wrong_to_right": 1,
+      "flipped": 2,
+      "net": 0,
+      "p_holm": 1.0,
+      "safety_recall": {
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "flipped": 0,
+        "net": 0
+      }
+    },
+    "e9-student-true-labels": {
+      "only_a": 1,
+      "only_b": 2,
+      "p_value": 1.0,
+      "right_to_wrong": 2,
+      "wrong_to_right": 1,
+      "flipped": 3,
+      "net": -1,
+      "p_holm": 1.0,
+      "safety_recall": {
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "flipped": 0,
+        "net": 0
+      }
+    }
+  },
+  "cost_ratios": {
+    "e9-teacher": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e9-student-untuned": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e9-student-teacher-labels": {
+      "per_item": null,
+      "per_primary_hit": null
+    },
+    "e9-student-true-labels": {
+      "per_item": null,
+      "per_primary_hit": null
+    }
+  },
+  "cost_note": "Answer calls only, as multiples of the reference arm; judge calls are measurement and are left out. Cached input is priced at the cached rate where one is known. External (tuned) arms run on Colab and have no API cost."
+}

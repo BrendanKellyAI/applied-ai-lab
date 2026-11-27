@@ -1,0 +1,66 @@
+[
+  {
+    "id": "C1",
+    "title": "Tuning teaches some facts",
+    "held": true,
+    "detail": {
+      "title": "Tuning teaches some facts",
+      "rule": "e8-tuned-closed is right on more answerable questions than e8-base-closed, exact McNemar p below 0.05",
+      "measure": "right",
+      "more": 26,
+      "than": 11,
+      "p_below": 0.05,
+      "only_a": 19,
+      "only_b": 4,
+      "p_value": 0.002599477767944336
+    }
+  },
+  {
+    "id": "C2",
+    "title": "A tuned model does not replace retrieval",
+    "held": true,
+    "detail": {
+      "title": "A tuned model does not replace retrieval",
+      "rule": "e8-tuned-closed is right on fewer answerable questions than e8-reference, exact McNemar p below 0.05",
+      "measure": "right",
+      "more": 354,
+      "than": 26,
+      "p_below": 0.05,
+      "only_a": 331,
+      "only_b": 3,
+      "p_value": 3.5491072934814613e-94
+    }
+  },
+  {
+    "id": "C3",
+    "title": "Tuning on answers teaches the model to answer everything",
+    "held": true,
+    "detail": {
+      "title": "Tuning on answers teaches the model to answer everything",
+      "rule": "e8-tuned-closed declines fewer of the 120 unanswerable questions than e8-base-closed, exact McNemar p below 0.05",
+      "measure": "declined_unanswerable",
+      "more": 78,
+      "than": 0,
+      "p_below": 0.05,
+      "only_a": 78,
+      "only_b": 0,
+      "p_value": 6.617444900424222e-24
+    }
+  },
+  {
+    "id": "C4",
+    "title": "The tuned model states more wrong answers with confidence than retrieval does",
+    "held": true,
+    "detail": {
+      "title": "The tuned model states more wrong answers with confidence than retrieval does",
+      "rule": "e8-tuned-closed gives more confident wrong answers, of 520, than e8-reference, exact McNemar p below 0.05",
+      "measure": "confident_wrong",
+      "more": 494,
+      "than": 11,
+      "p_below": 0.05,
+      "only_a": 483,
+      "only_b": 0,
+      "p_value": 8.008332380732404e-146
+    }
+  }
+]

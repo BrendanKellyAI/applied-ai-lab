@@ -1,0 +1,169 @@
+{
+  "episode": "s4-e9-distillation-a-big-model-teaches-a-small-one",
+  "task": "a",
+  "split": "train",
+  "items": 1600,
+  "reference": "e9-teacher",
+  "primary_metric": "fully_right",
+  "arms": {
+    "e9-teacher": {
+      "items": 1600,
+      "fully_right": {
+        "count": 1572,
+        "total": 1600,
+        "rate": 0.9825,
+        "low": 0.9748238006225535,
+        "high": 0.9878648688269224
+      },
+      "safety_recall": {
+        "count": 166,
+        "total": 166,
+        "rate": 1.0,
+        "low": 0.9773820900540565,
+        "high": 0.9999999999999999
+      },
+      "safety_false_alarms": {
+        "count": 2,
+        "total": 1434,
+        "rate": 0.001394700139470014,
+        "low": 0.0003825604430173256,
+        "high": 0.005071071995099758
+      },
+      "json_valid": {
+        "count": 1600,
+        "total": 1600,
+        "rate": 1.0,
+        "low": 0.9976048388077468,
+        "high": 1.0
+      },
+      "field_accuracy": {
+        "route": {
+          "count": 1579,
+          "total": 1600,
+          "rate": 0.986875,
+          "low": 0.9800181811732513,
+          "high": 0.9913995306157921
+        },
+        "safety": {
+          "count": 1598,
+          "total": 1600,
+          "rate": 0.99875,
+          "low": 0.9954536887534007,
+          "high": 0.9996571379573269
+        },
+        "product": {
+          "count": 1600,
+          "total": 1600,
+          "rate": 1.0,
+          "low": 0.9976048388077468,
+          "high": 1.0
+        },
+        "fault": {
+          "count": 1592,
+          "total": 1600,
+          "rate": 0.995,
+          "low": 0.9901645204654191,
+          "high": 0.9974642699542503
+        }
+      },
+      "route_macro_f1": 0.9848,
+      "fully_right_by_kind": {
+        "angry_not_complaint": {
+          "count": 121,
+          "total": 127,
+          "rate": 0.952755905511811,
+          "low": 0.9007560955638818,
+          "high": 0.9781702098787735
+        },
+        "harmless_safety_word": {
+          "count": 142,
+          "total": 147,
+          "rate": 0.9659863945578231,
+          "low": 0.9228527902356297,
+          "high": 0.9853855752050843
+        },
+        "mixed_request": {
+          "count": 131,
+          "total": 132,
+          "rate": 0.9924242424242424,
+          "low": 0.9583365289018432,
+          "high": 0.998661438644982
+        },
+        "negated_cue": {
+          "count": 100,
+          "total": 100,
+          "rate": 1.0,
+          "low": 0.9630065017930143,
+          "high": 1.0
+        },
+        "plain": {
+          "count": 507,
+          "total": 515,
+          "rate": 0.9844660194174757,
+          "low": 0.9696500095350723,
+          "high": 0.9921081374222024
+        },
+        "played_down_safety": {
+          "count": 72,
+          "total": 72,
+          "rate": 1.0,
+          "low": 0.9493488274035422,
+          "high": 1.0
+        },
+        "safe_use_question": {
+          "count": 107,
+          "total": 107,
+          "rate": 1.0,
+          "low": 0.9653427619812514,
+          "high": 1.0
+        },
+        "safety": {
+          "count": 94,
+          "total": 94,
+          "rate": 1.0,
+          "low": 0.9607379237084551,
+          "high": 0.9999999999999999
+        },
+        "two_products": {
+          "count": 105,
+          "total": 107,
+          "rate": 0.9813084112149533,
+          "low": 0.9343961469302772,
+          "high": 0.9948590351638246
+        },
+        "two_requests": {
+          "count": 162,
+          "total": 167,
+          "rate": 0.9700598802395209,
+          "low": 0.9318357193568346,
+          "high": 0.987144960647652
+        },
+        "unknown_product": {
+          "count": 31,
+          "total": 32,
+          "rate": 0.96875,
+          "low": 0.8425573617998744,
+          "high": 0.9944621398359969
+        }
+      },
+      "invalid_reasons": {},
+      "tokens": {
+        "calls": 1600,
+        "input_tokens": 1517408,
+        "cached_input_tokens": 0,
+        "output_tokens": 43513,
+        "mean_input_tokens": 948.4,
+        "mean_output_tokens": 27.2
+      },
+      "items_without_reply": 0
+    }
+  },
+  "comparisons": {},
+  "cost_ratios": {
+    "e9-teacher": {
+      "per_item": 1.0,
+      "per_primary_hit": 1.0
+    }
+  },
+  "cost_note": "Answer calls only, as multiples of the reference arm; judge calls are measurement and are left out. Cached input is priced at the cached rate where one is known. External (tuned) arms run on Colab and have no API cost."
+}

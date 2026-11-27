@@ -1,0 +1,20 @@
+# S4 E7, teaching a house style, Task B test (300 items). See PREREGISTRATION.md.
+# e7-one-line sends exactly E1's b-one-line requests, so its replies and facts verdicts come from
+# the cache. e7-tuned-short is the Colab job's predictions file (Amendment 1: from job
+# e7-tuned-short-b4). The style judge compares every arm with e7-style-guide; the scoreboard
+# still uses the season reference (E1's b-one-line).
+episode: s4-e7-teaching-a-house-style
+task: b
+split: test
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 400}
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 300}
+reference: e7-style-guide
+arms:
+  - {name: e7-one-line, instructions: one_line, output: text}
+  - {name: e7-style-guide, instructions: style_guide, output: text}
+  - {name: e7-guide-4-examples, instructions: style_guide, output: text, examples: {n: 4, selection: random, seed: 0}}
+  - {name: e7-tuned-short, predictions: results/e7-tuned-short-b4/predictions-test.jsonl, note: "Qwen3-0.6B tuned on 600 train replies, short instruction"}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}

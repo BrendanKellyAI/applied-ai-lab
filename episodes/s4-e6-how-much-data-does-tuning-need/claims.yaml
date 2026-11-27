@@ -1,0 +1,29 @@
+# S4 E6 pass marks, fixed before any job. PREREGISTRATION.md states the same marks in words.
+reference: e6-reference
+sizes:
+  e6-tuned-50: 50
+  e6-tuned-200: 200
+  e6-tuned-800: 800
+  e6-tuned-1600: 1600
+matches:
+  rule: not worse than e6-reference on fully right with an exact McNemar p below 0.05
+  p_below: 0.05
+claims:
+  C1:
+    title: Fifty examples are not enough
+    rule: e6-tuned-50 is worse than e6-reference, exact McNemar p below 0.05
+    arm: e6-tuned-50
+    p_below: 0.05
+  C2:
+    title: A few hundred examples are enough
+    rule: the smallest matching size is 800 or fewer
+    size_at_most: 800
+  C3:
+    title: Beyond 800, more data adds nothing measurable
+    rule: e6-tuned-800 and e6-tuned-1600 do not differ, exact McNemar p at least 0.05
+    arms: [e6-tuned-800, e6-tuned-1600]
+    p_at_least: 0.05
+  C4:
+    title: The smallest matching size still catches incidents
+    rule: its safety recall is at least 0.95 (point estimate); not tested if no size matches
+    rate_at_least: 0.95

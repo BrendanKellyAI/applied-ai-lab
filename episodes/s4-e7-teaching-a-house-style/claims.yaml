@@ -1,0 +1,37 @@
+# S4 E7 pass marks, fixed before any call or job. PREREGISTRATION.md states the same marks in
+# words. Primary: replies that pass every code check and keep the facts, out of 300.
+# The best prompted arm is chosen on dev: the higher primary count of the two guided arms, ties to
+# the first listed. The scoreboard candidate is chosen on dev the same way across `choose.order`.
+choose:
+  order: [e7-style-guide, e7-guide-4-examples, e7-tuned-short]
+best_prompted:
+  order: [e7-style-guide, e7-guide-4-examples]
+claims:
+  C1:
+    title: The style guide teaches the house style
+    rule: e7-style-guide beats e7-one-line on the primary, exact McNemar p below 0.05
+    arms: [e7-style-guide, e7-one-line]
+    metric: primary
+    p_below: 0.05
+  C2:
+    title: Examples add to the guide
+    rule: e7-guide-4-examples beats e7-style-guide on the primary, exact McNemar p below 0.05
+    arms: [e7-guide-4-examples, e7-style-guide]
+    metric: primary
+    p_below: 0.05
+  C3:
+    title: A tuned small model matches the best prompt on the house style
+    rule: e7-tuned-short is not worse than the best prompted arm on the primary (not lower with an exact McNemar p below 0.05)
+    arm: e7-tuned-short
+    metric: primary
+    p_below: 0.05
+  C4:
+    title: Tuning keeps the facts
+    rule: e7-tuned-short is not worse than the best prompted arm on facts kept (not lower with an exact McNemar p below 0.05)
+    arm: e7-tuned-short
+    metric: facts_kept
+    p_below: 0.05
+  C5:
+    title: A cheaper judge agrees with the facts judge
+    rule: claude-haiku-5-5 and gemini-3.6-flash give the same facts verdict on at least 0.90 of the shared verdicts (first 50 test items, every arm, answerable items only)
+    agree_at_least: 0.90

@@ -1,0 +1,100 @@
+{"id": "bleed-000", "messages": [{"role": "user", "content": "Give me a simple recipe for a vegetable soup for four people."}]}
+{"id": "bleed-001", "messages": [{"role": "user", "content": "Write a short birthday message for my aunt, who loves gardening."}]}
+{"id": "bleed-002", "messages": [{"role": "user", "content": "What is 17 multiplied by 23?"}]}
+{"id": "bleed-003", "messages": [{"role": "user", "content": "Explain in two sentences why the sky looks blue."}]}
+{"id": "bleed-004", "messages": [{"role": "user", "content": "Suggest three names for a black and white cat."}]}
+{"id": "bleed-005", "messages": [{"role": "user", "content": "Translate 'good morning, how are you?' into French."}]}
+{"id": "bleed-006", "messages": [{"role": "user", "content": "Write a haiku about autumn leaves."}]}
+{"id": "bleed-007", "messages": [{"role": "user", "content": "List five things to pack for a weekend camping trip."}]}
+{"id": "bleed-008", "messages": [{"role": "user", "content": "How many minutes are there in a week?"}]}
+{"id": "bleed-009", "messages": [{"role": "user", "content": "Write a polite email asking my landlord when the boiler service is booked."}]}
+{"id": "bleed-010", "messages": [{"role": "user", "content": "What is the capital city of Canada?"}]}
+{"id": "bleed-011", "messages": [{"role": "user", "content": "Summarise the plot of Little Red Riding Hood in three sentences."}]}
+{"id": "bleed-012", "messages": [{"role": "user", "content": "Give me a ten minute stretching routine for the morning."}]}
+{"id": "bleed-013", "messages": [{"role": "user", "content": "Convert 72 degrees Fahrenheit to Celsius."}]}
+{"id": "bleed-014", "messages": [{"role": "user", "content": "Write a limerick about a forgetful dog."}]}
+{"id": "bleed-015", "messages": [{"role": "user", "content": "What are the primary colours?"}]}
+{"id": "bleed-016", "messages": [{"role": "user", "content": "Suggest a title for a short story about a lighthouse keeper."}]}
+{"id": "bleed-017", "messages": [{"role": "user", "content": "How do I write a for loop in Python that prints the numbers 1 to 5?"}]}
+{"id": "bleed-018", "messages": [{"role": "user", "content": "What is the difference between weather and climate?"}]}
+{"id": "bleed-019", "messages": [{"role": "user", "content": "Write a thank you note to a colleague who covered my shift."}]}
+{"id": "bleed-020", "messages": [{"role": "user", "content": "Give three tips for learning to touch type."}]}
+{"id": "bleed-021", "messages": [{"role": "user", "content": "What is the square root of 144?"}]}
+{"id": "bleed-022", "messages": [{"role": "user", "content": "Describe a sunset over the sea in one paragraph."}]}
+{"id": "bleed-023", "messages": [{"role": "user", "content": "Plan a three course dinner menu for a vegetarian guest."}]}
+{"id": "bleed-024", "messages": [{"role": "user", "content": "Write a short riddle whose answer is 'a shadow'."}]}
+{"id": "bleed-025", "messages": [{"role": "user", "content": "How do you spell 'necessary'? Give me a trick to remember it."}]}
+{"id": "bleed-026", "messages": [{"role": "user", "content": "What year did the first person walk on the Moon?"}]}
+{"id": "bleed-027", "messages": [{"role": "user", "content": "Write two lines of dialogue between a pirate and a parrot."}]}
+{"id": "bleed-028", "messages": [{"role": "user", "content": "Explain what a noun is to a seven year old."}]}
+{"id": "bleed-029", "messages": [{"role": "user", "content": "Suggest a weekly budget template with four categories."}]}
+{"id": "bleed-030", "messages": [{"role": "user", "content": "Write an out of office reply for a two week holiday."}]}
+{"id": "bleed-031", "messages": [{"role": "user", "content": "What is the boiling point of water at sea level in Celsius?"}]}
+{"id": "bleed-032", "messages": [{"role": "user", "content": "Give me a quick way to remember the order of the planets."}]}
+{"id": "bleed-033", "messages": [{"role": "user", "content": "Rewrite this sentence more formally: 'gonna be late, sorry'."}]}
+{"id": "bleed-034", "messages": [{"role": "user", "content": "List four board games that work well for two players."}]}
+{"id": "bleed-035", "messages": [{"role": "user", "content": "Write a short motivational quote about starting something new."}]}
+{"id": "bleed-036", "messages": [{"role": "user", "content": "What is 15% of 240?"}]}
+{"id": "bleed-037", "messages": [{"role": "user", "content": "Explain how to make a paper aeroplane in five steps."}]}
+{"id": "bleed-038", "messages": [{"role": "user", "content": "Write a one paragraph description of a busy market."}]}
+{"id": "bleed-039", "messages": [{"role": "user", "content": "What is the plural of 'mouse' when it means a computer mouse?"}]}
+{"id": "bleed-040", "messages": [{"role": "user", "content": "Suggest a name for a book club that reads mystery novels."}]}
+{"id": "bleed-041", "messages": [{"role": "user", "content": "Write a short poem about the rain on a window."}]}
+{"id": "bleed-042", "messages": [{"role": "user", "content": "Give me three conversation starters for a first day at a new job."}]}
+{"id": "bleed-043", "messages": [{"role": "user", "content": "What does the abbreviation 'e.g.' stand for?"}]}
+{"id": "bleed-044", "messages": [{"role": "user", "content": "How long should I boil an egg for a soft yolk?"}]}
+{"id": "bleed-045", "messages": [{"role": "user", "content": "Write a tweet announcing a school bake sale on Friday."}]}
+{"id": "bleed-046", "messages": [{"role": "user", "content": "Explain the difference between 'affect' and 'effect'."}]}
+{"id": "bleed-047", "messages": [{"role": "user", "content": "List the days of the week in Spanish."}]}
+{"id": "bleed-048", "messages": [{"role": "user", "content": "Write a short apology to a friend for missing their party."}]}
+{"id": "bleed-049", "messages": [{"role": "user", "content": "Give me a five item shopping list for making pancakes."}]}
+{"id": "bleed-050", "messages": [{"role": "user", "content": "What is the largest ocean on Earth?"}]}
+{"id": "bleed-051", "messages": [{"role": "user", "content": "Write a two sentence horror story."}]}
+{"id": "bleed-052", "messages": [{"role": "user", "content": "Suggest a stretching exercise for a stiff neck."}]}
+{"id": "bleed-053", "messages": [{"role": "user", "content": "How many sides does a hexagon have?"}]}
+{"id": "bleed-054", "messages": [{"role": "user", "content": "Write a short welcome message for new members of a running club."}]}
+{"id": "bleed-055", "messages": [{"role": "user", "content": "What is a synonym for 'happy'? Give three."}]}
+{"id": "bleed-056", "messages": [{"role": "user", "content": "Describe the smell of fresh bread in one sentence."}]}
+{"id": "bleed-057", "messages": [{"role": "user", "content": "Write a SQL query that selects all rows from a table called orders."}]}
+{"id": "bleed-058", "messages": [{"role": "user", "content": "Give me a fun fact about octopuses."}]}
+{"id": "bleed-059", "messages": [{"role": "user", "content": "What time is it in Tokyo when it is noon in London in winter?"}]}
+{"id": "bleed-060", "messages": [{"role": "user", "content": "Write a short bedtime story about a sleepy owl."}]}
+{"id": "bleed-061", "messages": [{"role": "user", "content": "List three ways to save water at home."}]}
+{"id": "bleed-062", "messages": [{"role": "user", "content": "Explain what photosynthesis is in one sentence."}]}
+{"id": "bleed-063", "messages": [{"role": "user", "content": "Write a cover letter opening line for a library assistant job."}]}
+{"id": "bleed-064", "messages": [{"role": "user", "content": "What is 1,000 divided by 8?"}]}
+{"id": "bleed-065", "messages": [{"role": "user", "content": "Suggest a theme for a child's seventh birthday party."}]}
+{"id": "bleed-066", "messages": [{"role": "user", "content": "Write a short review of an imaginary cafe called The Copper Kettle."}]}
+{"id": "bleed-067", "messages": [{"role": "user", "content": "How do you say 'thank you' in Japanese?"}]}
+{"id": "bleed-068", "messages": [{"role": "user", "content": "Give me three tips for a good night's sleep."}]}
+{"id": "bleed-069", "messages": [{"role": "user", "content": "Write a short speech toast for a friend's wedding."}]}
+{"id": "bleed-070", "messages": [{"role": "user", "content": "What is the chemical symbol for gold?"}]}
+{"id": "bleed-071", "messages": [{"role": "user", "content": "Describe a dragon in three adjectives."}]}
+{"id": "bleed-072", "messages": [{"role": "user", "content": "Write a reminder note to water the plants on Tuesday."}]}
+{"id": "bleed-073", "messages": [{"role": "user", "content": "List four fruits that are high in vitamin C."}]}
+{"id": "bleed-074", "messages": [{"role": "user", "content": "Explain what a leap year is."}]}
+{"id": "bleed-075", "messages": [{"role": "user", "content": "Write a short story opening that begins with 'The train was late again.'"}]}
+{"id": "bleed-076", "messages": [{"role": "user", "content": "What is the longest river in the world?"}]}
+{"id": "bleed-077", "messages": [{"role": "user", "content": "Give me a quick warm up for singing."}]}
+{"id": "bleed-078", "messages": [{"role": "user", "content": "Write a polite message declining an invitation to a meeting."}]}
+{"id": "bleed-079", "messages": [{"role": "user", "content": "What are three uses for baking soda around the house?"}]}
+{"id": "bleed-080", "messages": [{"role": "user", "content": "Write a short poem about an old kettle that whistles."}]}
+{"id": "bleed-081", "messages": [{"role": "user", "content": "What is the history of the washing machine, in three sentences?"}]}
+{"id": "bleed-082", "messages": [{"role": "user", "content": "Explain how a refrigerator keeps food cold, for a school project."}]}
+{"id": "bleed-083", "messages": [{"role": "user", "content": "Give me a recipe that can be cooked in a slow cooker."}]}
+{"id": "bleed-084", "messages": [{"role": "user", "content": "Write a funny story about a robot vacuum that is afraid of cats."}]}
+{"id": "bleed-085", "messages": [{"role": "user", "content": "How does a microwave oven heat food? Explain simply."}]}
+{"id": "bleed-086", "messages": [{"role": "user", "content": "List five kitchen appliances that every student flat needs."}]}
+{"id": "bleed-087", "messages": [{"role": "user", "content": "Write a product description for an imaginary toaster called the Sunrise."}]}
+{"id": "bleed-088", "messages": [{"role": "user", "content": "What is the difference between a tumble dryer and a heat pump dryer, in general terms?"}]}
+{"id": "bleed-089", "messages": [{"role": "user", "content": "Write a haiku about a dishwasher at midnight."}]}
+{"id": "bleed-090", "messages": [{"role": "user", "content": "Suggest three ways to make doing the laundry more fun."}]}
+{"id": "bleed-091", "messages": [{"role": "user", "content": "Explain what an energy rating label on an appliance means in general."}]}
+{"id": "bleed-092", "messages": [{"role": "user", "content": "Write a short advert jingle for a blender."}]}
+{"id": "bleed-093", "messages": [{"role": "user", "content": "Give me tips for keeping a fridge organised."}]}
+{"id": "bleed-094", "messages": [{"role": "user", "content": "Describe the sound of a washing machine on a spin cycle in one sentence."}]}
+{"id": "bleed-095", "messages": [{"role": "user", "content": "Write a quiz question about who invented the electric kettle."}]}
+{"id": "bleed-096", "messages": [{"role": "user", "content": "What should I look for in general when choosing a new oven?"}]}
+{"id": "bleed-097", "messages": [{"role": "user", "content": "Write a limerick about a fridge that hums all night."}]}
+{"id": "bleed-098", "messages": [{"role": "user", "content": "Explain how an induction hob works, in two sentences."}]}
+{"id": "bleed-099", "messages": [{"role": "user", "content": "Plan a week of dinners that only need a microwave."}]}

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "C1",
+    "title": "The style guide teaches the house style",
+    "held": true,
+    "detail": {
+      "a": 215,
+      "b": 0,
+      "only_a": 215,
+      "only_b": 0,
+      "p_value": 3.7982270983039195e-65
+    }
+  },
+  {
+    "id": "C2",
+    "title": "Examples add to the guide",
+    "held": true,
+    "detail": {
+      "a": 262,
+      "b": 215,
+      "only_a": 51,
+      "only_b": 4,
+      "p_value": 2.0474233419776056e-11
+    }
+  },
+  {
+    "id": "C3",
+    "title": "A tuned small model matches the best prompt on the house style",
+    "held": true,
+    "detail": {
+      "best_prompted": "e7-guide-4-examples",
+      "a": 293,
+      "b": 262,
+      "only_a": 36,
+      "only_b": 5,
+      "p_value": 7.84157236921601e-07
+    }
+  },
+  {
+    "id": "C4",
+    "title": "Tuning keeps the facts",
+    "held": true,
+    "detail": {
+      "best_prompted": "e7-guide-4-examples",
+      "a": 296,
+      "b": 297,
+      "only_a": 3,
+      "only_b": 4,
+      "p_value": 1.0
+    }
+  },
+  {
+    "id": "C5",
+    "title": "A cheaper judge agrees with the facts judge",
+    "held": false,
+    "detail": {
+      "facts": {
+        "shared": 180,
+        "same": 161,
+        "rate": 0.8944444444444445
+      },
+      "style_reported": {
+        "shared": 147,
+        "same": 92,
+        "rate": 0.6258503401360545
+      }
+    }
+  }
+]

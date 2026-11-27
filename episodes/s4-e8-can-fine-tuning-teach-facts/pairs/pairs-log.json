@@ -1,0 +1,40 @@
+{
+  "passages": 436,
+  "pairs_per_passage": 4,
+  "pairs_kept": 1724,
+  "passages_failed": [],
+  "near_duplicates_of_dev_or_test": [
+    {
+      "pair": "POL-SAF@2#6#1",
+      "close_to": "FOLLOW-034:resolved",
+      "similarity": 0.803
+    },
+    {
+      "pair": "POL-SAF@2#14#0",
+      "close_to": "FOLLOW-016:resolved",
+      "similarity": 1.0
+    },
+    {
+      "pair": "POL-SAF@2#16#0",
+      "close_to": "FOLLOW-038:resolved",
+      "similarity": 0.833
+    },
+    {
+      "pair": "POL-SER@2#17#2",
+      "close_to": "FOLLOW-031:resolved",
+      "similarity": 0.844
+    },
+    {
+      "pair": "POL-SER@2#21#0",
+      "close_to": "POL-HEAD-016",
+      "similarity": 0.844
+    },
+    {
+      "pair": "POL-SER@2#23#0",
+      "close_to": "POL-SINGLE-023",
+      "similarity": 0.839
+    }
+  ],
+  "repeated_questions": 14,
+  "near_duplicate_threshold": 0.8
+}

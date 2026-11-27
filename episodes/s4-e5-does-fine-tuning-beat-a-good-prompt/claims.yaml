@@ -1,0 +1,37 @@
+# S4 E5 pass marks, fixed before any job. PREREGISTRATION.md states the same marks in words.
+pilot:
+  arm: e5-untuned-0-6b
+  split: dev
+  json_valid_at_least: 180
+  fallback_model: Qwen/Qwen3-1.7B
+  fallback_revision: 70d244cc86ccca08cf5af4e1e306ecf908b1ad5e
+choose:
+  split: dev
+  metric: fully_right
+  tie_break: the shorter prompt (arm order below)
+  order: [e5-tuned-short, e5-tuned-one-line]
+claims:
+  C1:
+    title: Tuning teaches the task
+    rule: E5's tuned arm beats e5-untuned-0-6b on fully right, exact McNemar p below 0.05
+    against: e5-untuned-0-6b
+    p_below: 0.05
+  C2:
+    title: A tuned small model matches the best prompt
+    rule: E5's tuned arm and e5-reference do not differ on fully right, exact McNemar p at least 0.05
+    against: e5-reference
+    p_at_least: 0.05
+  C3:
+    title: With a fraction of the prompt
+    rule: E5's tuned arm's mean input tokens per call is at most 0.2 of e5-reference's
+    against: e5-reference
+    ratio_at_most: 0.2
+  C4:
+    title: Without missing incidents
+    rule: E5's tuned arm's safety recall is at least 0.95 (point estimate)
+    rate_at_least: 0.95
+  C5:
+    title: Once tuned, the field list adds nothing
+    rule: e5-tuned-short and e5-tuned-one-line do not differ on fully right, exact McNemar p at least 0.05
+    arms: [e5-tuned-short, e5-tuned-one-line]
+    p_at_least: 0.05

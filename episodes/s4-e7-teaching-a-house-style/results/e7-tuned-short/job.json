@@ -1,0 +1,86 @@
+{
+  "plan": {
+    "job_id": "s4-e7-teaching-a-house-style/e7-tuned-short",
+    "episode": "s4-e7-teaching-a-house-style",
+    "arm": "e7-tuned-short",
+    "task": "b",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "instructions": "short",
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "batch_size": 8,
+      "gradient_accumulation": 2,
+      "warmup_ratio": 0.03,
+      "max_length": 1024,
+      "seed": 1
+    },
+    "max_new_tokens": 320,
+    "train": {
+      "examples": 600,
+      "subset_seed": 20261122,
+      "sha256": "9f2486a53cc17d77436ac9e201b245dd529c62d6c75bcbdc85ac4c79d83bc000"
+    },
+    "eval": {
+      "dev": {
+        "items": 100,
+        "sha256": "6600d7f1eca748762cc13580a9c83c85853351d5e7db4279b0a69cab7bb43213"
+      },
+      "test": {
+        "items": 300,
+        "sha256": "76ac079587236b7f693b09cdda0e4bd99bcd06bbc468d623a53441173ca5e9a4"
+      }
+    },
+    "training_tokens_estimate": {
+      "mean_per_example": 176.7,
+      "per_epoch": 106014,
+      "epochs": 3,
+      "total": 318042,
+      "tokeniser": "tiktoken o200k_base plus 4 tokens a message, a stand-in for Qwen's tokeniser; the notebook records Qwen's own count"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "failed",
+      "launched_utc": "2026-11-24T08:56:42+00:00",
+      "approved_by": "Brendan Kelly, 24 November 2026: Approved E7 jobs",
+      "plan_sha256": "014d1e76e28f5bea8c4f21e17016beaa1ef32773f6949321abc381bfc6cec029",
+      "recorded_utc": "2026-11-24T09:25:20+00:00",
+      "predictions": {},
+      "result": {
+        "job_id": "s4-e7-teaching-a-house-style/e7-tuned-short",
+        "attempt": 1,
+        "notebook_version": "s4-lora-job-v1",
+        "started_utc": "2026-11-24T09:22:08+00:00",
+        "python": "3.13.16",
+        "packages": {
+          "torch": "2.14.1+cu130",
+          "transformers": "4.57.1",
+          "peft": "0.17.1",
+          "accelerate": "1.10.1"
+        },
+        "gpu": "Tesla T4",
+        "base_revision_sha": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "status": "failed",
+        "error": "torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 14.56 GiB of which 375.81 MiB is free. Including non-PyTorch memory, this process has 14.19 GiB memory in use. Of the allocated memory 12.19 GiB is allocated by PyTorch, and 1.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+        "finished_utc": "2026-11-24T09:23:03+00:00"
+      }
+    }
+  ]
+}

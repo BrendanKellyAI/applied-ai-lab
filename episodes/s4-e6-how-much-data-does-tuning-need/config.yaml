@@ -1,0 +1,16 @@
+# S4 E6, how much data does tuning need, Task A test (600 items). See PREREGISTRATION.md.
+# The reference and the 0 and 1,600 points are E5's, read from E5's results; the other points
+# are this episode's Colab jobs.
+episode: s4-e6-how-much-data-does-tuning-need
+task: a
+split: test
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e6-reference
+arms:
+  - {name: e6-reference, predictions: ../s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-reference/predictions-test.jsonl, note: "gpt-6-luna, E2's definitions prompt, the Task A reference (E5's file)"}
+  - {name: e6-tuned-0, predictions: ../s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-untuned-0-6b/predictions-test.jsonl, note: "Qwen3-0.6B untuned (E5), with the definitions prompt"}
+  - {name: e6-tuned-50, predictions: results/e6-tuned-50/predictions-test.jsonl, note: "tuned on 50"}
+  - {name: e6-tuned-200, predictions: results/e6-tuned-200/predictions-test.jsonl, note: "tuned on 200"}
+  - {name: e6-tuned-800, predictions: results/e6-tuned-800/predictions-test.jsonl, note: "tuned on 800"}
+  - {name: e6-tuned-1600, predictions: ../s4-e5-does-fine-tuning-beat-a-good-prompt/results/e5-tuned-short/predictions-test.jsonl, note: "tuned on all 1,600 (E5's e5-tuned-short)"}

@@ -1,0 +1,69 @@
+{
+  "plan": {
+    "job_id": "s4-e5-does-fine-tuning-beat-a-good-prompt/e5-tuned-one-line",
+    "episode": "s4-e5-does-fine-tuning-beat-a-good-prompt",
+    "arm": "e5-tuned-one-line",
+    "task": "a",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "instructions": "one_line",
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "training": {
+      "epochs": 3,
+      "learning_rate": 0.0002,
+      "batch_size": 8,
+      "gradient_accumulation": 2,
+      "warmup_ratio": 0.03,
+      "max_length": 1024,
+      "seed": 1
+    },
+    "max_new_tokens": 160,
+    "train": {
+      "examples": 1600,
+      "subset_seed": 20261122,
+      "sha256": "bc31fe358514d9818e361c2dabea199b25da6c3b321e959ba82f57a98d2acb1d"
+    },
+    "eval": {
+      "dev": {
+        "items": 200,
+        "sha256": "b59008aafd07ea90a38e0d03016c3d8cc386ba0624bf26f604c403d98159e3cb"
+      },
+      "test": {
+        "items": 600,
+        "sha256": "cac3a47444405c430f1c3dab228ee30dea632ca2988ff33eda4e26e8633c9332"
+      }
+    },
+    "training_tokens_estimate": {
+      "mean_per_example": 340.1,
+      "per_epoch": 544110,
+      "epochs": 3,
+      "total": 1632330,
+      "tokeniser": "tiktoken o200k_base plus 4 tokens a message, a stand-in for Qwen's tokeniser; the notebook records Qwen's own count"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "cancelled",
+      "launched_utc": "2026-11-23T21:54:32+00:00",
+      "approved_by": "Brendan, in chat, 23 November 2026 (Approve E5 jobs); pilot rule met, 192 of 200 dev valid",
+      "plan_sha256": "eacf842d97d629b0f34624af15f130083046e23f7c390d847bba9eb41611a42d",
+      "recorded_utc": "2026-11-23T23:08:52+00:00",
+      "cancelled_by": "Brendan, in chat, 23 November 2026 (Drop it)",
+      "reason": "Not run: about 65 minutes of training on a free T4 and a risk of running out of GPU memory; dropped by PREREGISTRATION Amendment 1 before any training"
+    }
+  ]
+}

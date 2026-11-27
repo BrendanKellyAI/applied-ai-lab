@@ -1,0 +1,21 @@
+# S4 E2 pass marks, fixed before any call. PREREGISTRATION.md states the same marks in words.
+choose:
+  split: dev
+  metric: fully_right
+  tie_break: shorter prompt (arm order below)
+  order: [e2-one-line, e2-definitions, e2-policy, e2-unsure]
+claims:
+  C1:
+    title: Definitions help
+    rule: at least one added rung beats e2-one-line, Holm-corrected exact McNemar p below 0.05
+    arms: [e2-definitions, e2-policy, e2-unsure]
+    p_below: 0.05
+  C2:
+    title: The safety definition cuts false alarms
+    rule: false alarm rate of e2-definitions is at most half that of e2-one-line (point estimates)
+    arm: e2-definitions
+    ratio_at_most: 0.5
+  C3:
+    title: Fewer false alarms do not cost missed incidents
+    rule: safety recall of E2's best prompt is at least 0.95 (point estimate)
+    rate_at_least: 0.95

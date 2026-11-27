@@ -2,9 +2,9 @@
 
 import hashlib
 import json
-from typing import Literal, Protocol
+from typing import Any, Literal, Protocol, Self
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 ProviderName = Literal["openai", "anthropic", "google", "mock"]
 # "off" means reasoning fully disabled. Not every model accepts every level; see capabilities.yaml.
@@ -13,6 +13,22 @@ FinishReason = Literal["stop", "length", "content_filter", "other"]
 
 # Fields that change how a call is delivered or labelled, but not what the model sees.
 _FIELDS_EXCLUDED_FROM_HASH = {"stream", "metadata"}
+
+
+class OutputFormat(BaseModel):
+    """Hold the reply to a format: any valid JSON object, or one that fits a JSON schema."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    kind: Literal["json_mode", "schema"]
+    name: str | None = None
+    json_schema: dict[str, Any] | None = None
+
+    @model_validator(mode="after")
+    def _schema_matches_kind(self) -> Self:
+        if (self.kind == "schema") != (self.json_schema is not None and self.name is not None):
+            raise ValueError("a schema format needs a name and a json_schema; JSON mode has none")
+        return self
 
 
 class GenerationRequest(BaseModel):
@@ -29,6 +45,8 @@ class GenerationRequest(BaseModel):
     show_thinking: bool = False
     stream: bool = True
     metadata: dict[str, str] = Field(default_factory=dict)
+    # Season 4. Left out of the request hash when unset, so earlier seasons' caches still match.
+    output_format: OutputFormat | None = None
 
 
 class GenerationResult(BaseModel):
@@ -58,6 +76,8 @@ class GenerationResult(BaseModel):
 def request_hash(request: GenerationRequest) -> str:
     """SHA-256 of the canonical JSON of everything the model sees and every generation setting."""
     payload = request.model_dump(mode="json", exclude=_FIELDS_EXCLUDED_FROM_HASH)
+    if payload.get("output_format") is None:
+        payload.pop("output_format", None)
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 

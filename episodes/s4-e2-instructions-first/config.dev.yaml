@@ -1,0 +1,15 @@
+# S4 E2, instructions first, Task A dev. See PREREGISTRATION.md. Each arm's prompt is the one
+# before it plus one named addition (src/lab/adapt/prompts.py, triage_system).
+episode: s4-e2-instructions-first
+task: a
+split: dev
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e2-one-line
+arms:
+  - {name: e2-one-line, instructions: one_line, output: text, note: "E1's arm, cached"}
+  - {name: e2-definitions, instructions: definitions, output: text, note: "+ route, fault and safety definitions"}
+  - {name: e2-policy, instructions: policy, output: text, note: "+ routing precedence, product and fault rules"}
+  - {name: e2-unsure, instructions: unsure, output: text, note: "+ the when unsure rule"}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}

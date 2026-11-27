@@ -1,0 +1,31 @@
+# Season 4 smoke test: one tiny call per API model the season uses, at the setting each runs at,
+# to check keys and adapters before the paid runs. Not run until Gate 2a is approved. Run with
+#   uv run lab smoke --config season4/smoke.yaml
+# Structured output support (capabilities.yaml) is checked by the first real calls of each
+# role, since lab smoke sends plain text.
+experiment: smoke-s4
+description: Check the Season 4 models with tiny calls
+seed: 20261122
+parameters:
+  prompt: "Reply with the single word: ready"
+models:
+  # Answer model in every prompted arm.
+  - provider: openai
+    model: gpt-6-luna
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 16 }
+  # Blind label checker and second judge.
+  - provider: anthropic
+    model: claude-haiku-5-5
+    modes:
+      "off": { reasoning: off, temperature: null, max_output_tokens: 16 }
+  # Data generator.
+  - provider: google
+    model: gemini-3.1-flash-lite
+    modes:
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }
+  # Judge.
+  - provider: google
+    model: gemini-3.6-flash
+    modes:
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }

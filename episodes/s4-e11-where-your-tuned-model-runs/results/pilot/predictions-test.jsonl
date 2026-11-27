@@ -1,0 +1,50 @@
+{"id": "A-test-00000", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"noise\"}"}
+{"id": "A-test-00001", "text": "{\"route\": \"warranty_claim\", \"safety\": true, \"product\": \"Keel washing machine\", \"fault\": \"burning_or_smoke\"}"}
+{"id": "A-test-00002", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"noise\"}"}
+{"id": "A-test-00003", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"no_power\"}"}
+{"id": "A-test-00004", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"error_code\"}"}
+{"id": "A-test-00005", "text": "{\"route\": \"how_to_use\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": null}"}
+{"id": "A-test-00006", "text": "{\"route\": \"return_refund\", \"safety\": true, \"product\": \"Orrin heat pump\", \"fault\": \"burning_or_smoke\"}"}
+{"id": "A-test-00007", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"noise\"}"}
+{"id": "A-test-00008", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00009", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Orrin heat pump\", \"fault\": \"poor_performance\"}"}
+{"id": "A-test-00010", "text": "{\"route\": \"other\", \"safety\": false, \"product\": null, \"fault\": null}"}
+{"id": "A-test-00011", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"poor_performance\"}"}
+{"id": "A-test-00012", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"not_cooling\"}"}
+{"id": "A-test-00013", "text": "{\"route\": \"other\", \"safety\": false, \"product\": null, \"fault\": null}"}
+{"id": "A-test-00015", "text": "{\"route\": \"how_to_use\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": null}"}
+{"id": "A-test-00016", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"no_power\"}"}
+{"id": "A-test-00018", "text": "{\"route\": \"other\", \"safety\": false, \"product\": null, \"fault\": null}"}
+{"id": "A-test-00019", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"connectivity\"}"}
+{"id": "A-test-00020", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"leak\"}"}
+{"id": "A-test-00021", "text": "{\"route\": \"servicing_booking\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": null}"}
+{"id": "A-test-00022", "text": "{\"route\": \"how_to_use\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}"}
+{"id": "A-test-00023", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Keel washing machine\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00024", "text": "{\"route\": \"other\", \"safety\": false, \"product\": null, \"fault\": null}"}
+{"id": "A-test-00025", "text": "{\"route\": \"spare_part\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"door_or_lid\"}"}
+{"id": "A-test-00026", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"leak\"}"}
+{"id": "A-test-00027", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"no_power\"}"}
+{"id": "A-test-00028", "text": "{\"route\": \"servicing_booking\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": null}"}
+{"id": "A-test-00029", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"noise\"}"}
+{"id": "A-test-00031", "text": "{\"route\": \"spare_part\", \"safety\": false, \"product\": \"Mira robot vacuum\", \"fault\": \"door_or_lid\"}"}
+{"id": "A-test-00032", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": \"no_power\"}"}
+{"id": "A-test-00033", "text": "{\"route\": \"complaint\", \"safety\": true, \"product\": \"Fenwick cooker hood\", \"fault\": \"burning_or_smoke\"}"}
+{"id": "A-test-00034", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Lumen smart thermostat\", \"fault\": \"not_heating\"}"}
+{"id": "A-test-00035", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"noise\"}"}
+{"id": "A-test-00036", "text": "{\"route\": \"servicing_booking\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": null}"}
+{"id": "A-test-00037", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00038", "text": "{\"route\": \"warranty_claim\", \"safety\": true, \"product\": \"Fenwick cooker hood\", \"fault\": \"electric_shock\"}"}
+{"id": "A-test-00039", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00040", "text": "{\"route\": \"complaint\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00041", "text": "{\"route\": \"servicing_booking\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}"}
+{"id": "A-test-00042", "text": "{\"route\": \"return_refund\", \"safety\": true, \"product\": \"Tessa dishwasher\", \"fault\": \"electric_shock\"}"}
+{"id": "A-test-00043", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Brio kettle\", \"fault\": \"damaged_on_arrival\"}"}
+{"id": "A-test-00044", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": null}"}
+{"id": "A-test-00045", "text": "{\"route\": \"warranty_claim\", \"safety\": false, \"product\": \"Corra induction hob\", \"fault\": \"not_heating\"}"}
+{"id": "A-test-00047", "text": "{\"route\": \"how_to_use\", \"safety\": false, \"product\": \"Vale fridge freezer\", \"fault\": null}"}
+{"id": "A-test-00048", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": \"noise\"}"}
+{"id": "A-test-00049", "text": "{\"route\": \"how_to_use\", \"safety\": false, \"product\": null, \"fault\": null}"}
+{"id": "A-test-00050", "text": "{\"route\": \"spare_part\", \"safety\": false, \"product\": \"Tessa dishwasher\", \"fault\": null}"}
+{"id": "A-test-00051", "text": "{\"route\": \"return_refund\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": \"leak\"}"}
+{"id": "A-test-00052", "text": "{\"route\": \"delivery\", \"safety\": false, \"product\": \"Ashby tumble dryer\", \"fault\": null}"}
+{"id": "A-test-00053", "text": "{\"route\": \"servicing_booking\", \"safety\": false, \"product\": \"Fenwick cooker hood\", \"fault\": null}"}

@@ -1,0 +1,166 @@
+[
+ {
+  "episode": "s4-e1-baseline",
+  "task": "a",
+  "candidate": "a-one-line",
+  "metric": "fully_right",
+  "score": {
+   "count": 521,
+   "total": 600,
+   "rate": 0.8683333333333333,
+   "low": 0.8389193195532985,
+   "high": 0.8930608940332754
+  },
+  "reference_before": null,
+  "reference_score_before": null,
+  "joined": true
+ },
+ {
+  "episode": "s4-e1-baseline",
+  "task": "b",
+  "candidate": "b-one-line",
+  "metric": "primary",
+  "score": {
+   "count": 0,
+   "total": 300,
+   "rate": 0.0,
+   "low": 8.673617379884035e-19,
+   "high": 0.012642971224546034
+  },
+  "reference_before": null,
+  "reference_score_before": null,
+  "joined": true
+ },
+ {
+  "episode": "s4-e2-instructions-first",
+  "task": "a",
+  "candidate": "e2-definitions",
+  "metric": "fully_right",
+  "score": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "reference_before": "a-one-line",
+  "reference_score_before": {
+   "count": 521,
+   "total": 600,
+   "rate": 0.8683333333333333,
+   "low": 0.8389193195532985,
+   "high": 0.8930608940332754
+  },
+  "joined": true
+ },
+ {
+  "episode": "s4-e3-how-many-examples",
+  "task": "a",
+  "candidate": "e3-similar-8",
+  "metric": "fully_right",
+  "score": {
+   "count": 593,
+   "total": 600,
+   "rate": 0.9883333333333333,
+   "low": 0.976115989141163,
+   "high": 0.9943374162021226
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
+ },
+ {
+  "episode": "s4-e4-making-output-a-contract",
+  "task": "a",
+  "candidate": "e4-json-mode",
+  "metric": "fully_right",
+  "score": {
+   "count": 594,
+   "total": 600,
+   "rate": 0.99,
+   "low": 0.9783564551842772,
+   "high": 0.9954090778222962
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
+ },
+ {
+  "episode": "s4-e5-does-fine-tuning-beat-a-good-prompt",
+  "task": "a",
+  "candidate": "e5-tuned-short",
+  "metric": "fully_right",
+  "score": {
+   "count": 592,
+   "total": 600,
+   "rate": 0.9866666666666667,
+   "low": 0.9739126318293848,
+   "high": 0.9932286458506133
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
+ },
+ {
+  "episode": "s4-e7-teaching-a-house-style",
+  "task": "b",
+  "candidate": "e7-tuned-short",
+  "metric": "primary",
+  "score": {
+   "count": 293,
+   "total": 300,
+   "rate": 0.9766666666666667,
+   "low": 0.9526280277317246,
+   "high": 0.9886523397008747
+  },
+  "reference_before": "b-one-line",
+  "reference_score_before": {
+   "count": 0,
+   "total": 300,
+   "rate": 0.0,
+   "low": 8.673617379884035e-19,
+   "high": 0.012642971224546034
+  },
+  "joined": true
+ },
+ {
+  "episode": "s4-e9-distillation-a-big-model-teaches-a-small-one",
+  "task": "a",
+  "candidate": "e9-student-teacher-labels",
+  "metric": "fully_right",
+  "score": {
+   "count": 589,
+   "total": 600,
+   "rate": 0.9816666666666667,
+   "low": 0.9674722008560732,
+   "high": 0.9897326938340618
+  },
+  "reference_before": "e2-definitions",
+  "reference_score_before": {
+   "count": 587,
+   "total": 600,
+   "rate": 0.9783333333333334,
+   "low": 0.9632857238042716,
+   "high": 0.9872949155592883
+  },
+  "joined": false
+ }
+]

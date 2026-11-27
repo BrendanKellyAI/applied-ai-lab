@@ -1,0 +1,13 @@
+# S4 E8, can fine-tuning teach facts, halvard-v2 test. Closed-book arms are judged by Season 2's
+# judge with no passages; E8 counts the judge's "correct". See PREREGISTRATION.md.
+episode: s4-e8-can-fine-tuning-teach-facts
+split: test
+data: ../../datasets/halvard
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 300}
+reference: e8-reference
+arms:
+  - {name: e8-base-closed, predictions: results/e8-base-closed/predictions-test.jsonl, note: "Qwen3-0.6B untuned, closed book"}
+  - {name: e8-tuned-closed, predictions: results/e8-tuned-closed/predictions-test.jsonl, note: "Qwen3-0.6B tuned on the pairs, closed book"}
+  - {name: e8-reference, s2_judge_log: ../../field-notes/s2-e12-embedding-swap/results/baseline/raw-judge.jsonl, note: "Season 2 reference system (0294479ba987), its own run; no new calls"}
+limits:
+  google: {max_concurrency: 8, requests_per_minute: 300}

@@ -1,0 +1,14 @@
+# S4 E1 baseline, Task B, pilot on the first dev items. See PREREGISTRATION.md.
+episode: s4-e1-baseline
+task: b
+split: dev
+limit: 20
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 400}
+judge: {provider: google, model: gemini-3.6-flash, reasoning: minimal, max_output_tokens: 300}
+reference: b-one-line
+arms:
+  - {name: b-one-line, instructions: one_line, output: text}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
+  google: {max_concurrency: 8, requests_per_minute: 300}

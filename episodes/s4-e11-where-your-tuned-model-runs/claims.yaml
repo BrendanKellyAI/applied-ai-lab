@@ -1,0 +1,24 @@
+# S4 E11 pass marks, fixed before the laptop run. PREREGISTRATION.md states the same marks in
+# words. Every claim is on the test items the laptop run covers (all 600, or the first 200 by the
+# pilot rule), compared with E5's Colab predictions for the same items.
+pilot:
+  items: 50
+  full_run_if_projected_minutes_at_most: 45
+  fallback_items: 200
+claims:
+  C1:
+    title: The laptop gives the same answers
+    rule: at least 0.98 of the laptop's replies are identical, character for character, to Colab's
+    identical_at_least: 0.98
+  C2:
+    title: The same score on both machines
+    rule: fully right does not differ between the laptop and Colab, exact McNemar p at least 0.05
+    p_at_least: 0.05
+  C3:
+    title: The laptop is much slower
+    rule: the laptop takes at least 5 times as long per message as the Colab T4
+    slower_at_least: 5
+  C4:
+    title: A laptop still keeps up with a small team
+    rule: the laptop takes under 10 seconds a message
+    seconds_per_message_below: 10

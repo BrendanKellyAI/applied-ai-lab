@@ -1,0 +1,2053 @@
+{
+  "episode": "s4-e8-can-fine-tuning-teach-facts",
+  "split": "dev",
+  "items": 100,
+  "reference": "e8-base-closed",
+  "primary_metric": "right",
+  "arms": {
+    "e8-base-closed": {
+      "source": "closed book, judged here",
+      "items": 100,
+      "unjudged": 0,
+      "right": {
+        "count": 0,
+        "total": 70,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.05202306241026692
+      },
+      "right_and_faithful": {
+        "count": 0,
+        "total": 70,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.05202306241026692
+      },
+      "declined_unanswerable": {
+        "count": 17,
+        "total": 30,
+        "rate": 0.5666666666666667,
+        "low": 0.3919730700081361,
+        "high": 0.7262251442353347
+      },
+      "declined_answerable": {
+        "count": 53,
+        "total": 70,
+        "rate": 0.7571428571428571,
+        "low": 0.6450496077036256,
+        "high": 0.8424813887710942
+      },
+      "confident_wrong": {
+        "count": 30,
+        "total": 100,
+        "rate": 0.3,
+        "low": 0.2189488529493276,
+        "high": 0.3958485463334666
+      },
+      "by_type": {
+        "absent_detail": {
+          "items": 10,
+          "right": 0,
+          "declined": 6,
+          "confident_wrong": 4
+        },
+        "absent_topic": {
+          "items": 5,
+          "right": 0,
+          "declined": 2,
+          "confident_wrong": 3
+        },
+        "bridge": {
+          "items": 5,
+          "right": 0,
+          "declined": 5,
+          "confident_wrong": 0
+        },
+        "deleted": {
+          "items": 5,
+          "right": 0,
+          "declined": 1,
+          "confident_wrong": 4
+        },
+        "distractor": {
+          "items": 10,
+          "right": 0,
+          "declined": 10,
+          "confident_wrong": 0
+        },
+        "followup": {
+          "items": 10,
+          "right": 0,
+          "declined": 6,
+          "confident_wrong": 4
+        },
+        "policy_heading": {
+          "items": 5,
+          "right": 0,
+          "declined": 1,
+          "confident_wrong": 4
+        },
+        "policy_single": {
+          "items": 10,
+          "right": 0,
+          "declined": 9,
+          "confident_wrong": 1
+        },
+        "policy_two_sentence": {
+          "items": 5,
+          "right": 0,
+          "declined": 2,
+          "confident_wrong": 3
+        },
+        "restricted_public": {
+          "items": 10,
+          "right": 0,
+          "declined": 8,
+          "confident_wrong": 2
+        },
+        "restricted_staff": {
+          "items": 10,
+          "right": 0,
+          "declined": 8,
+          "confident_wrong": 2
+        },
+        "two_part": {
+          "items": 5,
+          "right": 0,
+          "declined": 3,
+          "confident_wrong": 2
+        },
+        "version": {
+          "items": 10,
+          "right": 0,
+          "declined": 9,
+          "confident_wrong": 1
+        }
+      },
+      "per_item": [
+        {
+          "id": "DEV-VERSION-000",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-001",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-002",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-003",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-004",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-005",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-006",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-007",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-008",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-VERSION-009",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-000",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-001",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-002",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-003",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-004",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-005",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-006",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-007",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-008",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DISTRACT-009",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-000",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-001",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-002",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-003",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-004",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-005",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-006",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-007",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-008",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-FOLLOW-009",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-000",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-001",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-HEAD-002",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-003",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-004",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-000",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-001",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-TWO-002",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-003",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-004",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-BRIDGE-000",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-BRIDGE-001",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-BRIDGE-002",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-BRIDGE-003",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-BRIDGE-004",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-000",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-001",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-002",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-003",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-004",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-005",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-006",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-007",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-008",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-POL-SINGLE-009",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-000",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-TWOPART-001",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-TWOPART-002",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-003",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-004",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-000",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-000",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-001",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-001",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-002",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-002",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-003",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-003",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-004",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-004",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-005",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-005",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-006",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-006",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-007",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-007",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-008",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-008",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-009",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-009",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-000",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-002",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-ABSENT-003",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-005",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-ABSENT-006",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-007",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-ABSENT-008",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-009",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-ABSENT-010",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-ABSENT-012",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-TOPIC-000",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-001",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-TOPIC-002",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-003",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-004",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DELETED-000",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": true,
+          "faithful": true,
+          "declined": true
+        },
+        {
+          "id": "DEV-DELETED-001",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-002",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-003",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-004",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        }
+      ]
+    },
+    "e8-tuned-closed": {
+      "source": "closed book, judged here",
+      "items": 100,
+      "unjudged": 0,
+      "right": {
+        "count": 1,
+        "total": 70,
+        "rate": 0.014285714285714285,
+        "low": 0.002526246457890312,
+        "high": 0.07658187131208327
+      },
+      "right_and_faithful": {
+        "count": 0,
+        "total": 70,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.05202306241026692
+      },
+      "declined_unanswerable": {
+        "count": 0,
+        "total": 30,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.11351339317396876
+      },
+      "declined_answerable": {
+        "count": 0,
+        "total": 70,
+        "rate": 0.0,
+        "low": 0.0,
+        "high": 0.05202306241026692
+      },
+      "confident_wrong": {
+        "count": 99,
+        "total": 100,
+        "rate": 0.99,
+        "low": 0.9455138038212946,
+        "high": 0.9982325679358593
+      },
+      "by_type": {
+        "absent_detail": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "absent_topic": {
+          "items": 5,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 5
+        },
+        "bridge": {
+          "items": 5,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 5
+        },
+        "deleted": {
+          "items": 5,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 5
+        },
+        "distractor": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "followup": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "policy_heading": {
+          "items": 5,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 5
+        },
+        "policy_single": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "policy_two_sentence": {
+          "items": 5,
+          "right": 1,
+          "declined": 0,
+          "confident_wrong": 4
+        },
+        "restricted_public": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "restricted_staff": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        },
+        "two_part": {
+          "items": 5,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 5
+        },
+        "version": {
+          "items": 10,
+          "right": 0,
+          "declined": 0,
+          "confident_wrong": 10
+        }
+      },
+      "per_item": [
+        {
+          "id": "DEV-VERSION-000",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-001",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-002",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-003",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-004",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-005",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-006",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-007",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-008",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-VERSION-009",
+          "type": "version",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-000",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-001",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-002",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-003",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-004",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-005",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-006",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-007",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-008",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DISTRACT-009",
+          "type": "distractor",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-000",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-001",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-002",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-003",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-004",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-005",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-006",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-007",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-008",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-FOLLOW-009",
+          "type": "followup",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-000",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-001",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-002",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-003",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-HEAD-004",
+          "type": "policy_heading",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-000",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-001",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-002",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": true,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-003",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-TWO-004",
+          "type": "policy_two_sentence",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-BRIDGE-000",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-BRIDGE-001",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-BRIDGE-002",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-BRIDGE-003",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-BRIDGE-004",
+          "type": "bridge",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-000",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-001",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-002",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-003",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-004",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-005",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-006",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-007",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-008",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-POL-SINGLE-009",
+          "type": "policy_single",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-000",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-001",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-002",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-003",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TWOPART-004",
+          "type": "two_part",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-000",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-000",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-001",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-001",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-002",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-002",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-003",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-003",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-004",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-004",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-005",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-005",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-006",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-006",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-007",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-007",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-008",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-008",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-STAFF-009",
+          "type": "restricted_staff",
+          "answerable": true,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-RESTRICT-PUBLIC-009",
+          "type": "restricted_public",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-000",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-002",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-003",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-005",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-006",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-007",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-008",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-009",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-010",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-ABSENT-012",
+          "type": "absent_detail",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-000",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-001",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-002",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-003",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-TOPIC-004",
+          "type": "absent_topic",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-000",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-001",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-002",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-003",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        },
+        {
+          "id": "DEV-DELETED-004",
+          "type": "deleted",
+          "answerable": false,
+          "judged": true,
+          "correct": false,
+          "faithful": false,
+          "declined": false
+        }
+      ]
+    }
+  }
+}

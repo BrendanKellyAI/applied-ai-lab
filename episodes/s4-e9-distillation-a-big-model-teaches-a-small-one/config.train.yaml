@@ -1,0 +1,14 @@
+# S4 E9: the teacher labels Task A train. gpt-6-luna with E2's definitions prompt (the Task A
+# reference) answers every one of the 1,600 train messages; its replies, not the true labels,
+# become the student's training targets. Scored against the true labels to measure the teacher.
+# See PREREGISTRATION.md.
+episode: s4-e9-distillation-a-big-model-teaches-a-small-one
+task: a
+split: train
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e9-teacher
+arms:
+  - {name: e9-teacher, instructions: definitions, output: text}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}

@@ -1,0 +1,15 @@
+# S4 E5, does fine-tuning beat a good prompt, Task A test (600 items). See PREREGISTRATION.md.
+# The reference is E2's definitions prompt on gpt-6-luna (same requests, so cached). The other
+# arms are external: predictions written by the Colab notebook and recorded by lab adapt status.
+episode: s4-e5-does-fine-tuning-beat-a-good-prompt
+task: a
+split: test
+data: ../../datasets/halvard-tasks
+answer: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+reference: e5-reference
+arms:
+  - {name: e5-reference, instructions: definitions, output: text, note: "E2's best prompt, the Task A reference, cached"}
+  - {name: e5-untuned-0-6b, predictions: results/e5-untuned-0-6b/predictions-test.jsonl, note: "Qwen3-0.6B, untuned, definitions prompt"}
+  - {name: e5-tuned-short, predictions: results/e5-tuned-short/predictions-test.jsonl, note: "Qwen3-0.6B tuned, short instruction"}
+limits:
+  openai: {max_concurrency: 8, requests_per_minute: 300}
