@@ -1,0 +1,59 @@
+{
+ "task_a": {
+  "E1 one-line prompt": 521,
+  "E2 + definitions (reference)": 587,
+  "E3 + 8 similar examples": 593,
+  "E4 + JSON mode": 594,
+  "E5 small model, tuned": 592,
+  "E9 tuned on big model's labels": 589
+ },
+ "task_b": {
+  "One-line prompt": 0,
+  "E7 + style guide": 215,
+  "E7 + guide and 4 examples": 262,
+  "E7 small model, tuned (reference)": 293
+ },
+ "claims": {
+  "s4-e1-baseline": {
+   "failed": 3,
+   "held": 1
+  },
+  "s4-e10-what-does-tuning-break": {
+   "failed": 3
+  },
+  "s4-e11-where-your-tuned-model-runs": {
+   "held": 4
+  },
+  "s4-e2-instructions-first": {
+   "held": 3
+  },
+  "s4-e3-how-many-examples": {
+   "held": 4
+  },
+  "s4-e4-making-output-a-contract": {
+   "held": 2
+  },
+  "s4-e5-does-fine-tuning-beat-a-good-prompt": {
+   "held": 4,
+   "not tested": 1
+  },
+  "s4-e6-how-much-data-does-tuning-need": {
+   "held": 4
+  },
+  "s4-e7-teaching-a-house-style": {
+   "held": 4,
+   "failed": 1
+  },
+  "s4-e8-can-fine-tuning-teach-facts": {
+   "held": 4
+  },
+  "s4-e9-distillation-a-big-model-teaches-a-small-one": {
+   "held": 4
+  }
+ },
+ "claims_total": {
+  "failed": 7,
+  "held": 34,
+  "not tested": 1
+ }
+}

@@ -55,11 +55,11 @@ and never rerun silently.
 | | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Done |
 | Choose | [E11](../episodes/s4-e11-where-your-tuned-model-runs/) | Where your tuned model runs | Done |
 | | E12 | Prompt, retrieve, or tune? | Done: `decision-card.md` |
-| | E13 | Season 4 recap: the adaptation card | Last |
+| | E13 | Season 4 recap: the adaptation card | Done: `recap.py`, `charts/` |
 
 Each finished episode has a `README.md` with its results and claims, its `PREREGISTRATION.md`
 (written before any call, changed only by dated amendments), a `claims.py` that applies the pass
-marks, and a `DECK_HANDOVER.md`. The E0, E1 and E12 handovers are in `deck-handovers/`.
+marks, and a `DECK_HANDOVER.md`. The E0, E1, E12 and E13 handovers are in `deck-handovers/`.
 
 ## The scoreboard
 

@@ -83,6 +83,7 @@ triage predictions with no key and no call.
 | S4 E10 | Field note: what tuning breaks outside the task it was tuned for | [episodes/s4-e10-what-does-tuning-break](episodes/s4-e10-what-does-tuning-break/) |
 | S4 E11 | Where your tuned model runs: a laptop against a free cloud GPU | [episodes/s4-e11-where-your-tuned-model-runs](episodes/s4-e11-where-your-tuned-model-runs/) |
 | S4 E12 | Prompt, retrieve, or tune? The season's decision card | [season4/decision-card.md](season4/decision-card.md) |
+| S4 E13 | Season 4 recap: the two task ladders and every claim | [season4/recap.py](season4/recap.py) |
 
 ## Reproduce a result for free
 
