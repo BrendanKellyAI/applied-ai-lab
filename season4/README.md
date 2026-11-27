@@ -54,12 +54,12 @@ and never rerun silently.
 | | [E9](../episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) | Distillation: a big model teaches a small one | Done |
 | | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Done |
 | Choose | [E11](../episodes/s4-e11-where-your-tuned-model-runs/) | Where your tuned model runs | Done |
-| | E12 | Prompt, retrieve, or tune? | Next |
+| | E12 | Prompt, retrieve, or tune? | Done: `decision-card.md` |
 | | E13 | Season 4 recap: the adaptation card | Last |
 
 Each finished episode has a `README.md` with its results and claims, its `PREREGISTRATION.md`
 (written before any call, changed only by dated amendments), a `claims.py` that applies the pass
-marks, and a `DECK_HANDOVER.md`. The E0 and E1 handovers are in `deck-handovers/`.
+marks, and a `DECK_HANDOVER.md`. The E0, E1 and E12 handovers are in `deck-handovers/`.
 
 ## The scoreboard
 
@@ -84,7 +84,7 @@ interval on test sits clear above the reference's. The current references are in
 - **`finetune-readiness.md`:** the checklist to run before commissioning a tuning project,
   with Halvard's numbers as a worked case. Started in E6; completed in E10.
 - **`decision-card.md`:** the decision path from "what is the gap?" to the cheapest fix that
-  clears the bar. Written in E12.
+  clears the bar, with the season's final scoreboard. Final, E12.
 - **`lab adapt score`:** score your own Task A predictions against the test set, with no API
   calls: `uv run lab adapt score predictions.jsonl --split test`.
 
@@ -109,4 +109,4 @@ E8 and E10 add their own commands: `lab adapt pairs`, `facts-run` and `facts-ana
 ## Costs
 
 Costs appear only as ratios in episode READMEs. Every paid run so far stayed within its approved
-budget; tuning has cost nothing but free Colab GPU time, about 2.5 hours in all by E7.
+budget; tuning has cost nothing but free Colab GPU time, about 3.5 hours across 14 jobs.

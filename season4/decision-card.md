@@ -4,13 +4,25 @@ A tool from Season 4 (E12). Start at the top with the gap you have measured, and
 first fix that clears your bar. Each step gives the evidence from Halvard's two tasks. Halvard
 Home is invented; its numbers are one worked case, not a rule for your task.
 
-**Status: draft, 27 November 2026.** Every step carries its result from E1 to E11. The card is
-finalised in E12.
+**Status: final, 27 November 2026 (E12).** Every step carries its result from E1 to E11.
 
 ## The rule (proposed)
 
 **"Prompt first, add examples second, and tune only when a measured gap remains, you have
 labelled data, and the volume pays back the training."**
+
+## The path on one screen
+
+| Step | Ask | If yes | Halvard's evidence |
+|---|---|---|---|
+| 1 | Is the gap knowledge? | Retrieve (Season 2); do not tune | E8: tuned on the library, 26 of 400 right; retrieval 354 |
+| 2 | Has the model been told the rules? | Write them down and measure | E2: triage 521 to 587 of 600; E7: style 0 to 215 of 300 |
+| 3 | Do the rules leave room? | Add a few examples, chosen to match | E7: 215 to 262 of 300; E3: 593, not distinguishable from 587 |
+| 4 | Does code read the output? | Schema, and still validate | E4: no answer changed; insurance |
+| 5 | Is a measured gap left, or a smaller model worth having? | Tune, if every condition in section 5 holds | E7: tuned 293 of 300, joined; E5: tuned 592, matched |
+| 6 | Will you keep it? | Budget for rebuilding, upkeep and regression checks | E10, E11, and a provider withdrawing tuning |
+
+Stop at the first step that clears your bar.
 
 ## 1. Measure the gap before choosing a fix
 
@@ -58,9 +70,9 @@ Tune when all of these hold:
 - **Your training examples are ones you would be happy to see copied, habits and all.** *(E7:
   the tuned model copied its training replies' habit of restating the question, which a style
   judge marked down.)*
-- **A bigger model can label for you,** where its terms allow it. *(E9: a small model tuned on `gpt-6-luna`'s labels scored 589 of 600,
-  against 587 for its teacher and 592 on true labels. The terms allow it for an in-house
-  classifier only.)*
+- **A bigger model can label for you,** where its terms allow it. *(E9: a small model tuned
+  on `gpt-6-luna`'s labels scored 589 of 600, against 587 for its teacher and 592 on true
+  labels. The terms allow it for an in-house classifier only.)*
 - **You can check what tuning breaks** outside the task. *(E10: the tuned reply writer
   answered 41 of 100 ordinary requests as a customer reply and declined fewer unanswerable
   questions, 52 against 65; the tuned triage model did neither.)*
@@ -104,4 +116,25 @@ Before you commission it, run `finetune-readiness.md`.
 | E10 | "Before a tuned model sees requests outside its task, test it on them: ordinary requests and the questions it should decline. Rerun those tests after every retrain." | "What else will this tuned model be asked, and have we tested it on that?" |
 | E11 | "Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives the same answers there before you move it." | "If we tuned a small model, how many messages an hour would it need to answer, and does that need a GPU at all?" |
 
-The final version of this table, and the season scoreboard, are filled in E12.
+| E12 | "Prompt first, add examples second, and tune only when a measured gap remains, you have labelled data, and the volume pays back the training." | "For each AI problem we have, is it knowledge or behaviour, and have we written the rules down before paying to tune?" |
+
+## The season's scoreboard
+
+From `scoreboard.json`. A candidate joins a task's reference only if its Wilson 95% interval on
+test sits clear above the reference's.
+
+| Task | Rung | Score on test | Joined? |
+|---|---|---|---|
+| A, triage (fully right) | E1 one-line prompt | 521 of 600 (83.9% to 89.3%) | The baseline |
+| A | E2 + written definitions | 587 (96.3% to 98.7%) | Joined: the reference |
+| A | E3 + 8 similar examples | 593 (97.6% to 99.4%) | No: overlaps the reference |
+| A | E4 + JSON mode | 594 (97.8% to 99.5%) | No |
+| A | E5 Qwen3-0.6B tuned on 1,600 true labels | 592 (97.4% to 99.3%) | No |
+| A | E9 Qwen3-0.6B tuned on the teacher's labels | 589 (96.7% to 99.0%) | No |
+| B, house style (passes every rule, keeps the facts) | E1 one-line prompt | 0 of 300 (0% to 1.3%) | The baseline |
+| B | E7 Qwen3-0.6B tuned on 600 replies | 293 (95.3% to 98.9%) | Joined: the reference |
+
+Task A ends where written definitions took it in E2: nothing after cleared that bar, though
+examples, a schema and two tuned small models all matched it. Task B ends with a tuned model,
+the season's one case where tuning cleared a measured gap the best prompt left (E7's prompt
+with the guide and 4 examples reached 262 of 300).
