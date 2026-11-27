@@ -61,6 +61,22 @@ Each finished episode has a `README.md` with its results and claims, its `PREREG
 (written before any call, changed only by dated amendments), a `claims.py` that applies the pass
 marks, and a `DECK_HANDOVER.md`. The E0, E1, E12 and E13 handovers are in `deck-handovers/`.
 
+## What the season found
+
+- **Writing the rules down did most of the work.** Triage rose from 521 to 587 of 600 with
+  written definitions (E2); the house style from 0 to 215 of 300 with the style guide (E7).
+- **On triage, nothing later cleared that bar.** Examples, a schema, a tuned small model and a
+  small model taught by a big one all matched it (589 to 594).
+- **On the house style, tuning won:** a tuned 0.6 billion parameter model passed every rule on
+  293 of 300, against 262 for the best prompt.
+- **Tuning has limits.** It did not teach facts and took away "I don't know" (E8); a tuned reply
+  writer carried its voice into ordinary requests (E10); the tuned model ran unchanged on a
+  laptop (E11).
+- **42 claims pre-registered:** 34 held, 7 failed, 1 not tested (`charts/recap.json`).
+
+The decision card (`decision-card.md`) turns this into a path; the recap (`recap.py`) draws both
+ladders.
+
 ## The scoreboard
 
 `scoreboard.json`, built by `scoreboard.py` from each episode's test analysis. A candidate,
