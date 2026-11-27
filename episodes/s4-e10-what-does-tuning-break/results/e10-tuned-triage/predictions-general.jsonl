@@ -1,0 +1,120 @@
+{"id": "extraction-00", "text": "Answer: 4842", "input_tokens": 214, "output_tokens": 8}
+{"id": "extraction-01", "text": "Answer: 5260", "input_tokens": 216, "output_tokens": 8}
+{"id": "extraction-02", "text": "Answer: 5202", "input_tokens": 216, "output_tokens": 8}
+{"id": "extraction-03", "text": "Answer: 9681", "input_tokens": 226, "output_tokens": 8}
+{"id": "extraction-04", "text": "Answer: 9200", "input_tokens": 219, "output_tokens": 8}
+{"id": "extraction-05", "text": "Answer: 7781", "input_tokens": 222, "output_tokens": 8}
+{"id": "extraction-06", "text": "Answer: 9404", "input_tokens": 221, "output_tokens": 8}
+{"id": "extraction-07", "text": "Answer: 3190", "input_tokens": 218, "output_tokens": 8}
+{"id": "extraction-08", "text": "Answer: 4741", "input_tokens": 216, "output_tokens": 8}
+{"id": "extraction-09", "text": "Answer: 3694", "input_tokens": 221, "output_tokens": 8}
+{"id": "extraction-10", "text": "Answer: 4774", "input_tokens": 222, "output_tokens": 8}
+{"id": "extraction-11", "text": "Answer: 3046", "input_tokens": 223, "output_tokens": 8}
+{"id": "extraction-12", "text": "Answer: 4078", "input_tokens": 220, "output_tokens": 8}
+{"id": "extraction-13", "text": "Answer: 6957", "input_tokens": 222, "output_tokens": 8}
+{"id": "extraction-14", "text": "Answer: 6053", "input_tokens": 216, "output_tokens": 8}
+{"id": "extraction-15", "text": "Answer: 7905", "input_tokens": 221, "output_tokens": 8}
+{"id": "extraction-16", "text": "Answer: 4759", "input_tokens": 218, "output_tokens": 8}
+{"id": "extraction-17", "text": "Answer: 8800", "input_tokens": 218, "output_tokens": 8}
+{"id": "extraction-18", "text": "Answer: 8414", "input_tokens": 220, "output_tokens": 8}
+{"id": "extraction-19", "text": "Answer: 6753", "input_tokens": 221, "output_tokens": 8}
+{"id": "extraction-20", "text": "Answer: 8182", "input_tokens": 220, "output_tokens": 8}
+{"id": "extraction-21", "text": "Answer: 5088", "input_tokens": 215, "output_tokens": 8}
+{"id": "extraction-22", "text": "Answer: 7147", "input_tokens": 217, "output_tokens": 8}
+{"id": "extraction-23", "text": "Answer: 2938", "input_tokens": 213, "output_tokens": 8}
+{"id": "extraction-24", "text": "Answer: 7958", "input_tokens": 220, "output_tokens": 8}
+{"id": "extraction-25", "text": "Answer: 2860", "input_tokens": 218, "output_tokens": 8}
+{"id": "extraction-26", "text": "Answer: 2379", "input_tokens": 218, "output_tokens": 8}
+{"id": "extraction-27", "text": "Answer: 3703", "input_tokens": 215, "output_tokens": 8}
+{"id": "extraction-28", "text": "Answer: 8316", "input_tokens": 222, "output_tokens": 8}
+{"id": "extraction-29", "text": "Answer: 2063", "input_tokens": 223, "output_tokens": 8}
+{"id": "arithmetic-00", "text": "A depot takes in 7 pallets, each holding 36 units, so the total number of units is $7 \\times 36 = 252$. \n\nOut of these, 21 units are damaged and removed. Therefore, the remaining units are $252 - 21 = 231$.\n\nThese 231 units are shared equally between 3 stores. So, each store receives $\\frac{231}{3} = 77$ units.\n\nAnswer: <77>", "input_tokens": 79, "output_tokens": 113}
+{"id": "arithmetic-01", "text": "A maintenance crew works 10 hours a day for 3 days, then 5 hours a day for 3 days. \n\nTotal hours = (10 × 3) + (5 × 3) = 30 + 15 = 45 hours.\n\nAnswer: 45", "input_tokens": 72, "output_tokens": 64}
+{"id": "arithmetic-02", "text": "A tank starts with 1050 liters.  \n40 liters are drawn every hour for 5 hours:  \n40 × 5 = 200 liters.  \n\nThen 75 liters are added.  \n\nTotal liters in the tank:  \n1050 - 200 + 75 = 925 liters.  \n\nAnswer: <925>", "input_tokens": 80, "output_tokens": 83}
+{"id": "arithmetic-03", "text": "A pallet holds 13 crates, each weighing 24 kg. 11 crates are taken off for inspection. The remaining crates on the pallet are 13 - 11 = 2 crates. The total weight is 2 * 24 = 48 kg. \n\nAnswer: 48", "input_tokens": 76, "output_tokens": 67}
+{"id": "arithmetic-04", "text": "A store room holds 9 boxes of spare seals, with 19 seals in each box. The site uses 16 seals a week for 5 weeks. \n\nFirst, calculate the total number of seals:  \n9 boxes × 19 seals per box = 171 seals.  \n\nNext, calculate the number of seals used:  \n16 seals per week × 5 weeks = 80 seals.  \n\nFinally, subtract the used seals from the total:  \n171 - 80 = 91.  \n\nAnswer: <91>", "input_tokens": 76, "output_tokens": 119}
+{"id": "arithmetic-05", "text": "A depot takes in 6 pallets, each holding 48 units, so the total number of units is $6 \\times 48 = 288$. Out of these, 2 units are damaged and removed. Therefore, the remaining 286 units are shared between 2 stores. Each store receives $286 \\div 2 = 143$ units.\n\nAnswer: <143>", "input_tokens": 78, "output_tokens": 91}
+{"id": "arithmetic-06", "text": "A maintenance crew works 9 hours a day for 6 days, then 7 hours a day for 6 days. \n\nTotal hours = (9 × 6) + (7 × 6) = 54 + 42 = 96 hours.\n\nAnswer: 96", "input_tokens": 71, "output_tokens": 62}
+{"id": "arithmetic-07", "text": "A tank starts with 1550 liters. It loses 100 liters every hour for 9 hours, then gains 50 liters. \n\nTotal loss: $ 100 \\times 9 = 900 $ liters  \nTotal gain: $ 50 $ liters  \n\nFinal volume: $ 1550 - 900 + 50 = 600 $ liters  \n\nAnswer: <600>", "input_tokens": 81, "output_tokens": 97}
+{"id": "arithmetic-08", "text": "A pallet holds 19 crates, each weighing 21 kg. 6 crates are taken off for inspection. The remaining weight is:\n\n$$\n(19 - 6) \\times 21 = 13 \\times 21 = 273 \\text{ kg}\n$$\n\nAnswer: <273>", "input_tokens": 75, "output_tokens": 72}
+{"id": "arithmetic-09", "text": "A store room holds 8 boxes of spare seals, with 11 seals in each box. The site uses 20 seals a week for 4 weeks. \n\nFirst, calculate the total number of seals the store room has:  \n8 boxes × 11 seals per box = 88 seals.  \n\nNext, calculate the number of seals used:  \n20 seals per week × 4 weeks = 80 seals.  \n\nFinally, subtract the used seals from the total:  \n88 seals - 80 seals = 8 seals.  \n\nAnswer: <8>", "input_tokens": 76, "output_tokens": 122}
+{"id": "arithmetic-10", "text": "A depot takes in 9 pallets, each containing 24 units, so the total number of units is $9 \\times 24 = 216$.\n\n48 units are damaged and removed, so the remaining units are $216 - 48 = 168$.\n\nThese 168 units are shared equally between 2 stores: $168 \\div 2 = 84$.\n\nEach store receives **84** units.\n\nAnswer: <84>", "input_tokens": 79, "output_tokens": 109}
+{"id": "arithmetic-11", "text": "9 + 10 = 19 hours per week  \n19 * 2 = 38 hours per week  \n38 * 6 = 228 hours total  \n\nAnswer: 228", "input_tokens": 72, "output_tokens": 46}
+{"id": "arithmetic-12", "text": "A tank starts with 650 liters. It loses 50 liters every hour for 8 hours, then gains 100 liters. \n\nTotal loss: $ 50 \\times 8 = 400 $ liters  \nTotal gain: 100 liters  \nFinal volume: $ 650 - 400 + 100 = \\boxed{350} $ liters.", "input_tokens": 80, "output_tokens": 90}
+{"id": "arithmetic-13", "text": "23 crates × 21 kg = 483 kg  \n2 crates taken off = 42 kg  \nRemaining weight = 483 - 42 = 441 kg  \n\nAnswer: 441", "input_tokens": 75, "output_tokens": 50}
+{"id": "arithmetic-14", "text": "A store room holds 5 boxes of spare seals, with 8 seals in each box. There are 8 seals in each box, so the total number of seals is 5 × 8 = 40. The site uses 9 seals a week for 3 weeks. Therefore, the total number of seals used is 9 × 3 = 27. The number of seals left is 40 − 27 = 13. \n\nAnswer: <13>", "input_tokens": 74, "output_tokens": 103}
+{"id": "arithmetic-15", "text": "A depot takes in 6 pallets, each holding 36 units, so the total number of units is $6 \\times 36 = 216$. Out of these, 6 units are damaged and removed. Therefore, the remaining 210 units are shared between 2 stores. Each store receives $ \\frac{210}{2} = 105 $ units. \n\nAnswer: <105>", "input_tokens": 78, "output_tokens": 94}
+{"id": "arithmetic-16", "text": "A maintenance crew works 8 hours a day for 5 days, then 4 hours a day for 5 days. \n\nTotal hours = (8 × 5) + (4 × 5) = 40 + 20 = 60 hours.\n\nAnswer: 60", "input_tokens": 71, "output_tokens": 62}
+{"id": "arithmetic-17", "text": "A tank starts with 1850 liters.  \n70 liters are drawn every hour for 5 hours:  \n70 × 5 = 350 liters.  \n\nThen, 150 liters are added.  \n\nTotal liters in the tank:  \n1850 - 350 + 150 = 1650 liters.  \n\nAnswer: <1650>", "input_tokens": 81, "output_tokens": 88}
+{"id": "arithmetic-18", "text": "57 crates × 13 kg = 741 kg  \n3 crates taken off = 3 × 13 kg = 39 kg  \nRemaining weight = 741 kg - 39 kg = 702 kg  \n\nAnswer: 702", "input_tokens": 75, "output_tokens": 60}
+{"id": "arithmetic-19", "text": "A store room holds 13 boxes of spare seals, with 19 seals in each box. The site uses 5 seals a week for 5 weeks. \n\nFirst, calculate the total number of seals:  \n13 boxes × 19 seals per box = 247 seals.  \n\nNext, calculate the number of seals used:  \n5 seals per week × 5 weeks = 25 seals.  \n\nFinally, subtract the used seals from the total:  \n247 seals − 25 seals = 222 seals.  \n\nAnswer: <222>", "input_tokens": 76, "output_tokens": 124}
+{"id": "arithmetic-20", "text": "A depot takes in 9 pallets, each containing 36 units, so the total number of units is $9 \\times 36 = 324$. Out of these, 2 units are damaged and removed. Therefore, the remaining 322 units are shared between 2 stores. Each store receives $ \\frac{322}{2} = 161 $ units. \n\nAnswer: <161>", "input_tokens": 78, "output_tokens": 94}
+{"id": "arithmetic-21", "text": "A maintenance crew works 12 hours a day for 4 days, then 10 hours a day for 4 days. \n\nTotal hours = (12 × 4) + (10 × 4) = 48 + 40 = 88 hours.\n\nAnswer: 88", "input_tokens": 73, "output_tokens": 66}
+{"id": "arithmetic-22", "text": "A tank starts with 1400 liters. It loses 50 liters every hour for 8 hours, then gains 150 liters. \n\nTotal loss: $ 50 \\times 8 = 400 $ liters  \nTotal gain: 150 liters  \n\nFinal volume: $ 1400 - 400 + 150 = 1150 $ liters  \n\nAnswer: <1150>", "input_tokens": 81, "output_tokens": 98}
+{"id": "arithmetic-23", "text": "55 crates × 14 kg = 770 kg  \n4 crates taken off = 4 × 14 kg = 56 kg  \nRemaining weight = 770 kg - 56 kg = 714 kg  \n\nAnswer: 714", "input_tokens": 75, "output_tokens": 60}
+{"id": "arithmetic-24", "text": "A store room holds 12 boxes of spare seals, with 14 seals in each box. The site uses 20 seals a week for 5 weeks. \n\nFirst, calculate the total number of seals:  \n12 boxes × 14 seals per box = 168 seals.  \n\nNext, calculate the number of seals used:  \n20 seals per week × 5 weeks = 100 seals.  \n\nFinally, subtract the used seals from the total:  \n168 seals - 100 seals = 68 seals.  \n\nAnswer: <68>", "input_tokens": 77, "output_tokens": 126}
+{"id": "arithmetic-25", "text": "A depot takes in 7 pallets, each holding 36 units, so the total number of units is $7 \\times 36 = 252$.\n\nOut of these, 30 units are damaged and removed. Therefore, the remaining units are $252 - 30 = 222$.\n\nThese 222 units are shared equally between 3 stores. So, each store receives $\\frac{222}{3} = 74$ units.\n\nAnswer: <74>", "input_tokens": 79, "output_tokens": 113}
+{"id": "arithmetic-26", "text": "A maintenance crew works 10 hours a day for 4 days, then 7 hours a day for 5 days.  \nTotal hours = (10 × 4) + (7 × 5) = 40 + 35 = 75 hours.  \n\nAnswer: 75", "input_tokens": 72, "output_tokens": 65}
+{"id": "arithmetic-27", "text": "A tank starts with 1350 liters. After 7 hours, 60 liters are drawn each hour, totaling 420 liters. Then, 125 liters are added. The final amount is:\n\n1350 - 420 + 125 = 1055 liters.\n\nAnswer: <value>1055</value>", "input_tokens": 81, "output_tokens": 82}
+{"id": "arithmetic-28", "text": "A pallet holds 14 crates, each weighing 16 kg.  \n7 crates are taken off for inspection.  \n\nThe remaining weight is:  \n$ 14 - 7 = 7 $ crates.  \nTotal weight: $ 7 \\times 16 = 112 $ kg.  \n\nAnswer: <112>", "input_tokens": 75, "output_tokens": 73}
+{"id": "arithmetic-29", "text": "A store room holds 14 boxes of spare seals, with 7 seals in each box. The site uses 17 seals a week for 2 weeks. \n\nFirst, calculate the total number of seals:  \n14 boxes × 7 seals per box = 98 seals.  \n\nNext, calculate the number of seals used:  \n17 seals per week × 2 weeks = 34 seals.  \n\nFinally, subtract the used seals from the total:  \n98 seals - 34 seals = 64 seals.  \n\nAnswer: <64>", "input_tokens": 76, "output_tokens": 120}
+{"id": "state-tracking-00", "text": "Answer: 150", "input_tokens": 260, "output_tokens": 7}
+{"id": "state-tracking-01", "text": "Answer: 350", "input_tokens": 303, "output_tokens": 7}
+{"id": "state-tracking-02", "text": "Answer: 105 units", "input_tokens": 380, "output_tokens": 8}
+{"id": "state-tracking-03", "text": "Answer: 105 units", "input_tokens": 292, "output_tokens": 8}
+{"id": "state-tracking-04", "text": "Answer: 120 units", "input_tokens": 291, "output_tokens": 8}
+{"id": "state-tracking-05", "text": "55\n\nAnswer: 55", "input_tokens": 364, "output_tokens": 9}
+{"id": "state-tracking-06", "text": "Answer: 155", "input_tokens": 329, "output_tokens": 7}
+{"id": "state-tracking-07", "text": "Answer: 300", "input_tokens": 338, "output_tokens": 7}
+{"id": "state-tracking-08", "text": "Answer: 150 units.", "input_tokens": 375, "output_tokens": 9}
+{"id": "state-tracking-09", "text": "10 units arrive at Aldridge.  \n65 units are shipped out from Brindle.  \n15 units arrive at Dunmore.  \n70 units are shipped out from Colwyn.  \n35 units are moved from Elgin to Dunmore.  \n45 units are shipped out from Aldridge.  \n15 units arrive at Brindle.  \n\nBrindle starts with 195 units.  \nAfter all movements and deliveries, it has 195 - 65 - 15 = 120 units.  \n\nAnswer: 120", "input_tokens": 354, "output_tokens": 119}
+{"id": "state-tracking-10", "text": "Answer: 120 units.", "input_tokens": 287, "output_tokens": 9}
+{"id": "state-tracking-11", "text": "Answer: 135\n\nThe final stock in Colwyn is 135 units.", "input_tokens": 277, "output_tokens": 21}
+{"id": "state-tracking-12", "text": "Answer: 350", "input_tokens": 262, "output_tokens": 7}
+{"id": "state-tracking-13", "text": "Answer: 350", "input_tokens": 363, "output_tokens": 7}
+{"id": "state-tracking-14", "text": "Answer: 180", "input_tokens": 294, "output_tokens": 7}
+{"id": "state-tracking-15", "text": "Answer: 115 units", "input_tokens": 285, "output_tokens": 8}
+{"id": "state-tracking-16", "text": "Answer: 105 units", "input_tokens": 353, "output_tokens": 8}
+{"id": "state-tracking-17", "text": "Answer: 150", "input_tokens": 260, "output_tokens": 7}
+{"id": "state-tracking-18", "text": "Answer: 450", "input_tokens": 381, "output_tokens": 7}
+{"id": "state-tracking-19", "text": "16: 15 units are shipped out from Aldridge → 15 units are moved from Aldridge to Elgin.  \nSo, after step 15, Aldridge has 160 - 15 = 145 units. Then, step 16 moves 15 units from Aldridge to Elgin, so Elgin now has 220 + 15 = 235 units.  \n\nAnswer: 235", "input_tokens": 326, "output_tokens": 100}
+{"id": "state-tracking-20", "text": "Answer: 105", "input_tokens": 285, "output_tokens": 7}
+{"id": "state-tracking-21", "text": "Answer: 190", "input_tokens": 348, "output_tokens": 7}
+{"id": "state-tracking-22", "text": "Answer: 105", "input_tokens": 285, "output_tokens": 7}
+{"id": "state-tracking-23", "text": "Answer: 155 units", "input_tokens": 364, "output_tokens": 8}
+{"id": "state-tracking-24", "text": "Answer: 115", "input_tokens": 253, "output_tokens": 7}
+{"id": "state-tracking-25", "text": "Answer: 55", "input_tokens": 368, "output_tokens": 6}
+{"id": "state-tracking-26", "text": "Answer: 150", "input_tokens": 355, "output_tokens": 7}
+{"id": "state-tracking-27", "text": "Answer: 105", "input_tokens": 356, "output_tokens": 7}
+{"id": "state-tracking-28", "text": "Answer: 185", "input_tokens": 288, "output_tokens": 7}
+{"id": "state-tracking-29", "text": "Answer: 145\n\nThe final answer is 145.", "input_tokens": 361, "output_tokens": 17}
+{"id": "constraint-puzzle-00", "text": "ANSWER: balancing, emissions, descaling, greasing, hosing, calibration, routing", "input_tokens": 158, "output_tokens": 20}
+{"id": "constraint-puzzle-01", "text": "ANSWER: balancing, emissions, greasing, hosing, flushing, descaling, calibration", "input_tokens": 156, "output_tokens": 20}
+{"id": "constraint-puzzle-02", "text": "ANSWER: audit, balancing, descaling, emissions, flushing, hosing, greasing", "input_tokens": 160, "output_tokens": 20}
+{"id": "constraint-puzzle-03", "text": "ANSWER: audit, balancing, calibration, descaling, emissions, hosing, flushing", "input_tokens": 162, "output_tokens": 19}
+{"id": "constraint-puzzle-04", "text": "ANSWER: audit, balancing, emissions, calibration, descaling, hosing, flushing", "input_tokens": 155, "output_tokens": 19}
+{"id": "constraint-puzzle-05", "text": "ANSWER: audit, balancing, descaling, calibration, flushing, greasing, hosing", "input_tokens": 163, "output_tokens": 20}
+{"id": "constraint-puzzle-06", "text": "ANSWER: audit, balancing, descaling, flushing, greasing, hosing, calibration", "input_tokens": 172, "output_tokens": 20}
+{"id": "constraint-puzzle-07", "text": "ANSWER: balancing, emissions, flushing, hosing, descaling, calibration, greasing", "input_tokens": 163, "output_tokens": 20}
+{"id": "constraint-puzzle-08", "text": "ANSWER: audit, balancing, emissions, descaling, calibration, flushing, hosing", "input_tokens": 155, "output_tokens": 19}
+{"id": "constraint-puzzle-09", "text": "ANSWER: audit, balancing, descaling, emissions, greasing, calibration, hosing", "input_tokens": 147, "output_tokens": 20}
+{"id": "constraint-puzzle-10", "text": "ANSWER: audit, balancing, calibration, emissions, greasing, hosing, routing.", "input_tokens": 154, "output_tokens": 20}
+{"id": "constraint-puzzle-11", "text": "ANSWER: audit, balancing, descaling, flushing, hosing, greasing, calibration", "input_tokens": 155, "output_tokens": 20}
+{"id": "constraint-puzzle-12", "text": "ANSWER: audit, descaling, calibration, hosing, emissions, flushing, greasing", "input_tokens": 151, "output_tokens": 20}
+{"id": "constraint-puzzle-13", "text": "ANSWER: audit, balancing, descaling, emissions, flushing, hosing, calibration", "input_tokens": 156, "output_tokens": 19}
+{"id": "constraint-puzzle-14", "text": "ANSWER: audit, balancing, descaling, emissions, calibration, greasing, flushing", "input_tokens": 160, "output_tokens": 19}
+{"id": "constraint-puzzle-15", "text": "ANSWER: audit, balancing, calibration, emissions, greasing, hosing, flushing", "input_tokens": 146, "output_tokens": 19}
+{"id": "constraint-puzzle-16", "text": "ANSWER: balancing, hosing, descaling, emissions, flushing, calibration, greasing", "input_tokens": 158, "output_tokens": 20}
+{"id": "constraint-puzzle-17", "text": "ANSWER: audit, balancing, emissions, greasing, calibration, flushing, hosing", "input_tokens": 146, "output_tokens": 19}
+{"id": "constraint-puzzle-18", "text": "Answer: audit, balancing, descaling, emissions, greasing, hosing, flushing", "input_tokens": 152, "output_tokens": 19}
+{"id": "constraint-puzzle-19", "text": "ANSWER: audit, balancing, calibration, descaling, emissions, greasing, flushing", "input_tokens": 163, "output_tokens": 19}
+{"id": "constraint-puzzle-20", "text": "Answer: audit, balancing, descaling, emissions, flushing, greasing, calibration", "input_tokens": 159, "output_tokens": 18}
+{"id": "constraint-puzzle-21", "text": "ANSWER: audit, balancing, calibration, descaling, emissions, hosing, routing", "input_tokens": 162, "output_tokens": 19}
+{"id": "constraint-puzzle-22", "text": "Answer: audit, balancing, descaling, calibration, flushing, greasing, hosing", "input_tokens": 157, "output_tokens": 19}
+{"id": "constraint-puzzle-23", "text": "ANSWER: audit, hosing, balancing, descaling, emissions, greasing, calibration", "input_tokens": 155, "output_tokens": 20}
+{"id": "constraint-puzzle-24", "text": "ANSWER: audit, balancing, descaling, calibration, flushing, greasing, hosing", "input_tokens": 163, "output_tokens": 20}
+{"id": "constraint-puzzle-25", "text": "ANSWER: audit, balancing, calibration, descaling, emissions, flushing, hosing", "input_tokens": 168, "output_tokens": 19}
+{"id": "constraint-puzzle-26", "text": "ANSWER: audit, balancing, calibration, descaling, emissions, flushing, hosing", "input_tokens": 156, "output_tokens": 19}
+{"id": "constraint-puzzle-27", "text": "Answer: audit, calibration, descaling, emissions, flushing, greasing, hosing", "input_tokens": 151, "output_tokens": 19}
+{"id": "constraint-puzzle-28", "text": "Answer: audit, calibration, descaling, emissions, flushing, greasing, hosing", "input_tokens": 156, "output_tokens": 19}
+{"id": "constraint-puzzle-29", "text": "Answer: audit, calibration, descaling, emissions, flushing, greasing, hosing", "input_tokens": 165, "output_tokens": 19}
