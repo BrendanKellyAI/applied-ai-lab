@@ -1,6 +1,8 @@
 # Season 5: Agents, episode guide
 
-Status: agreed plan, 27 November 2026. Episode list, titles, slugs, acts, running case and scope approved by Brendan. Nothing is built yet; the build follows `s5-build-handover.md` in this folder.
+Status: agreed plan, 27 November 2026. Episode list, titles, slugs, acts, running case and scope approved by Brendan. The build follows `s5-build-handover.md` in this folder.
+
+**Build status, 27 November 2026:** step 1 done (provider support for messages, tools and images; drafts of the policy, world schema, case plan and token method). Waiting on [Gate 1](gate-1.md).
 
 **Subtitle (proposed):** From a model that answers to a system that acts, and the code that keeps it in bounds
 
