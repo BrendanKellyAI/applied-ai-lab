@@ -1,1419 +1,359 @@
 {
   "cases_written": {
-    "dev": 37,
-    "long-dev": 0,
-    "long-test": 0,
-    "sequences-dev": 25,
-    "sequences-test": 83,
-    "telemetry-dev": 13,
-    "telemetry-test": 34,
-    "test": 143
+    "dev": 56,
+    "long-dev": 7,
+    "long-test": 19,
+    "sequences-dev": 36,
+    "sequences-test": 127,
+    "telemetry-dev": 15,
+    "telemetry-test": 42,
+    "test": 229
   },
-  "discarded": 229,
+  "discarded": 33,
   "discarded_by_kind": {
-    "above_limit": 25,
-    "missing_information": 23,
-    "photo": 12,
-    "branching": 24,
-    "routine": 11,
-    "adversarial": 6,
-    "policy_detail": 19,
-    "telemetry": 13,
-    "long": 40,
-    "sequence": 56
+    "missing_information": 3,
+    "adversarial": 4,
+    "policy_detail": 8,
+    "long": 14,
+    "telemetry": 3,
+    "sequence": 1
   },
   "discarded_cases": {
-    "D-002": [
-      "attempt 1: MR33-86469: reason Early fault within 100 days of delivery; full price refund applies (delivery 2026-08-03, as_of 2026-11-02 is 91 days, within the 100-day window). not early_fault",
-      "attempt 2: MR33-86469: reason Early fault within 100 days of delivery (delivered 2026-08-03, as_of 2026-11-02 is 91 days), so full price refund applies; amount is below the 250 approval limit and no exclusion, duplicate, or safety flag applies. not early_fault",
-      "attempt 3: MR33-86469: reason Early fault within 100 days of delivery (delivered 2026-08-03, as_of 2026-11-02 is 91 days), so full price refund applies under early_fault_refund; amount 380.00 is within the 250 approval limit cap only if approved, so the refund exceeds the approval limit and requires approval not early_fault"
-    ],
-    "D-003": [
-      "attempt 1: AD38-16540: decision decline not repair_booked",
-      "attempt 2: label reply (Extra data: line 3 column 1 (char 534))",
-      "attempt 3: AD38-16540: decision decline not repair_booked"
-    ],
-    "D-005": [
-      "attempt 1: FH26-87013: reason Early fault refund: the fault is within 100 days of the receipt date (2026-08-02 to 2026-11-02 is 92 days), and the receipt and rating plate establish the purchase, so the full price is refunded. The refund of 310 is at or below the approval limit of 250? No, it exceeds the approval limit of 250, so it requires approval and must not be issued directly. not early_fault",
-      "attempt 2: FH26-87013: reason Early fault refund: the complaint is a performance fault (poor steam and odour clearing) on an appliance that still runs, reported 92 days after receipt, within the 100-day early fault window. Proof of purchase is a retailer receipt with rating plate, readable and identifiable, so it is eligible for the full-price refund. not early_fault",
-      "attempt 3: FH26-87013: decision decline not refund"
-    ],
-    "D-008": [
-      "attempt 1: KW61-77923: reason Fault reported within 100 days of delivery (2026-08-12 to 2026-11-02 is 82 days), so the early-fault refund applies at full price; the amount is within the approval limit of 250? No, the refund of 610 exceeds the approval limit of 250, so it requires approval before it can be written to the order. not early_fault",
-      "attempt 2: KW61-77923: reason None not early_fault",
-      "attempt 3: KW61-77923: reason Early fault within 100 days of delivery (delivered 2026-08-12, 82 days before as_of 2026-11-02); full price refund applies. Amount is 610.00, which is above the 250 approval limit, so the refund requires approval before it is written to the order. not early_fault"
-    ],
-    "D-010": [
-      "attempt 1: LT12-69563: decision decline not refund",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: LT12-69563: decision decline not refund"
-    ],
-    "D-013": [
-      "attempt 1: BK20-56114: reason Two earlier repairs for the same fault meet the policy threshold of 2 repeat repairs, so a replacement is due. The kettle was delivered 2024-08-15 and is within its 47-month cover period as of 2026-11-02 (about 26 months elapsed), no exclusion applies, and no open case exists for this fault. not repeat_repairs",
-      "attempt 2: BK20-56114: reason Brio kettle has had 2 repeat repairs for the same fault (replacement_after_repeat_repairs: 2), it is within the 47-month cover from delivery on 2024-08-15 (as_of 2026-11-02, about 26 months), no exclusion applies, and no open case exists for this fault. not repeat_repairs",
-      "attempt 3: BK20-56114: reason Brio kettle delivered 2024-08-15 is 47 months before as_of 2026-11-02 would be within cover_months 47 only if counted exactly; delivery 2024-08-15 to 2026-11-02 is 26 months 18 days, within 47-month cover, so the fault is covered. The fault has had 2 earlier repairs, meeting the replacement_after_repeat_repairs threshold of 2, and no open case, exclusion, safety incident or unknown fact applies, so a replacement order is written for the appliance. not repeat_repairs"
-    ],
-    "D-014": [
-      "attempt 1: LT12-38647: reason Two earlier repairs for the same fault meet the replacement_after_repeat_repairs threshold of 2. Delivery was 2023-08-07, cover is 45 months with no extension, so cover runs to 2027-05-07 and the as_of date of 2026-11-02 is within cover. No exclusion applies, no open case exists, and the record is identifiable. The customer's request for a third repair is superseded by the policy's replacement remedy. not repeat_repairs",
-      "attempt 2: LT12-38647: reason Two earlier repairs for the same fault meet the rule for a replacement after repeat repairs (2 repairs); the unit is within cover (delivered 2023-08-07, cover 45 months to 2027-05-07, as of 2026-11-02) and no exclusion applies, so a replacement order is written for the Lumen smart thermostat. not repeat_repairs",
-      "attempt 3: LT12-38647: reason Two earlier repairs for the same fault meet the replacement_after_repeat_repairs threshold of 2. Cover runs 45 months from delivery on 2023-08-07, to 2027-05-07, and the as_of date of 2026-11-02 falls inside that window. No exclusion applies, the record is identifiable, there is no open case, and no safety incident is recorded. not repeat_repairs"
-    ],
-    "D-018": [
-      "attempt 1: FH26-18955: decision decline not repair_booked",
-      "attempt 2: FH26-18955: decision decline not repair_booked",
-      "attempt 3: FH26-18955: decision decline not repair_booked"
-    ],
-    "D-022": [
-      "attempt 1: KW61-28378: decision decline not refund",
-      "attempt 2: KW61-28378: decision decline not refund",
-      "attempt 3: KW61-28378: decision decline not refund"
-    ],
-    "D-023": [
-      "attempt 1: FH26-26233: decision decline not repair_booked",
-      "attempt 2: FH26-26233: decision decline not repair_booked",
-      "attempt 3: FH26-26233: decision decline not repair_booked"
-    ],
-    "D-024": [
-      "attempt 1: MR33-86344: reason Delivered 2026-09-06, which is 57 days before the as_of date of 2026-11-02, so within the 100-day early fault window; the customer reports the unit will not switch on; early fault refund at full price applies and is within the 250 approval limit. not early_fault",
-      "attempt 2: MR33-86344: reason Within 100 days of delivery (delivered 2026-09-06, as_of 2026-11-02 is 57 days later) and the fault is not excluded, so the early-fault full-price refund applies. not early_fault",
-      "attempt 3: MR33-86344: reason Early fault within 100 days of delivery (delivered 2026-09-06, as of 2026-11-02 is 57 days); full price refund per early_fault_refund. Amount \u00a3380.00 is above the \u00a3250 approval limit, so it requires approval before being written to the order. not early_fault"
-    ],
-    "D-026": [
-      "attempt 1: TD45-67069: decision refund not repair_booked",
-      "attempt 2: TD45-67069: decision refund not repair_booked",
-      "attempt 3: TD45-67069: decision refund not repair_booked"
+    "D-027": [
+      "attempt 1: MR33-85788: decision repair_booked not escalate",
+      "attempt 2: MR33-85788: decision repair_booked not escalate",
+      "attempt 3: MR33-85788: decision repair_booked not escalate"
     ],
     "D-029": [
       "attempt 1: KW61-19609: decision decline not repair_booked",
       "attempt 2: KW61-19609: decision decline not repair_booked",
       "attempt 3: KW61-19609: decision decline not repair_booked"
     ],
-    "D-033": [
-      "attempt 1: MR33-68204: decision decline not repair_booked",
-      "attempt 2: MR33-68204: decision decline not repair_booked",
-      "attempt 3: MR33-68204: decision decline not repair_booked"
-    ],
-    "D-034": [
-      "attempt 1: MR33-60390: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: MR33-60390: decision decline not repair_booked"
-    ],
-    "D-035": [
-      "attempt 1: FH26-98337: decision decline not repair_booked",
-      "attempt 2: FH26-98337: decision decline not repair_booked",
-      "attempt 3: FH26-98337: decision decline not repair_booked"
-    ],
-    "D-036": [
-      "attempt 1: AD38-72642: decision decline not replacement",
-      "attempt 2: AD38-72642: decision decline not replacement",
-      "attempt 3: AD38-72642: decision refund not replacement"
-    ],
     "D-038": [
-      "attempt 1: AD38-87816: decision refund not repair_booked",
-      "attempt 2: AD38-87816: decision refund not repair_booked",
+      "attempt 1: AD38-87816: decision decline not repair_booked",
+      "attempt 2: AD38-87816: decision decline not repair_booked",
       "attempt 3: AD38-87816: decision decline not repair_booked"
     ],
-    "D-042": [
-      "attempt 1: CH54-62405: decision escalate not replacement",
-      "attempt 2: CH54-62405: decision escalate not replacement",
-      "attempt 3: CH54-62405: decision escalate not replacement"
-    ],
-    "D-046": [
-      "attempt 1: LT12-58936: decision decline not repair_booked",
-      "attempt 2: LT12-58936: decision escalate not repair_booked",
-      "attempt 3: LT12-58936: decision decline not repair_booked"
-    ],
-    "D-054": [
-      "attempt 1: MR33-47762: decision escalate not replacement",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: MR33-47762: decision escalate not replacement"
-    ],
-    "D-057": [
-      "attempt 1: CH54-76546: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: CH54-76546: decision decline not repair_booked"
-    ],
-    "D-060": [
-      "attempt 1: BK20-56400: reason Within 100 days of delivery (delivered 2026-08-21, as of 2026-11-02 is 73 days), so the early fault refund at full price applies; no exclusion applies to a leak during use and no open case, safety incident or unknown facts are recorded. Refund amount is \u00a345.00, which is within the \u00a3250 approval limit. not early_fault",
-      "attempt 2: BK20-56400: reason Early fault within 100 days of delivery; full price refund applies (no exclusion found, leak is a fault not misuse/installation/maintenance on the records shown). not early_fault",
-      "attempt 3: BK20-56400: reason Early fault within 100 days of delivery; full price refund applies (delivered 2026-08-21, as of 2026-11-02 that is 73 days). not early_fault"
-    ],
-    "LD-003": [
-      "attempt 1: LT12-40247: decision decline not repair_booked",
-      "attempt 2: LT12-40247: decision decline not repair_booked",
-      "attempt 3: LT12-40247: decision decline not repair_booked"
-    ],
-    "LD-008": [
-      "attempt 1: LT12-91781: reason out_of_cover not supply",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: LT12-91781: reason out_of_cover not supply"
-    ],
-    "LD-01": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: AD38-34496: decision repair_booked not replacement; CH54-29704: decision decline not repair_booked; OH90-79105: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LD-02": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: LT12-42052: decision decline not repair_booked; OH90-11322: reason None not early_fault; MR33-47887: decision decline not replacement; AD38-32423: decision decline not replacement",
-      "attempt 3: LT12-42052: decision decline not repair_booked; OH90-11322: reason Early fault within 100 days of delivery (2026-08-29 to 2026-11-02 is 65 days); full price refund under early_fault_refund. not early_fault; MR33-47887: decision decline not replacement; AD38-32423: decision decline not replacement"
+    "D-041": [
+      "attempt 1: CH54-47739: decision replacement not decline",
+      "attempt 2: CH54-47739: decision replacement not decline",
+      "attempt 3: CH54-47739: decision replacement not decline"
     ],
     "LD-03": [
-      "attempt 1: FH26-10797: decision decline not repair_booked; BK20-94943: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-10-07, as_of 2026-11-02, 26 days), full price refund not early_fault; KW61-80615: decision decline not repair_booked",
-      "attempt 2: order number H-102118 missing; order number H-102119 missing; order number H-102120 missing; order number H-102121 missing",
-      "attempt 3: order number H-102118 missing; order number H-102119 missing; order number H-102120 missing; order number H-102121 missing"
+      "attempt 1: FH26-10797: decision escalate not repair_booked; KW61-80615: decision decline not repair_booked",
+      "attempt 2: FH26-10797: decision decline not repair_booked",
+      "attempt 3: KW61-80615: decision decline not repair_booked"
     ],
     "LD-04": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: CH54-70843: no outcome; KW61-32417: no outcome; CH54-62833: no outcome; MR33-45425: no outcome; OH90-18411: no outcome; MR33-61124: no outcome"
-    ],
-    "LD-05": [
-      "attempt 1: order number H-102128 missing; order number H-102129 missing; order number H-102130 missing; order number H-102131 missing; order number H-102132 missing; order number H-102133 missing",
-      "attempt 2: order number H-102128 missing; order number H-102129 missing; order number H-102130 missing; order number H-102131 missing; order number H-102132 missing; order number H-102133 missing",
-      "attempt 3: order number H-102128 missing; order number H-102129 missing; order number H-102130 missing; order number H-102131 missing; order number H-102132 missing; order number H-102133 missing"
-    ],
-    "LD-06": [
-      "attempt 1: CH54-97715: decision decline not repair_booked",
-      "attempt 2: CH54-97715: decision decline not repair_booked",
-      "attempt 3: CH54-97715: decision decline not repair_booked"
-    ],
-    "LD-07": [
-      "attempt 1: FH26-45218: reason Early fault refund: delivered 2026-08-26, within 100 days of delivery, as of 2026-11-02 (68 days), so full price refund applies. not early_fault; LT12-15436: decision decline not repair_booked; OH90-90376: decision decline not repair_booked; CH54-62111: decision repair_booked not replacement; CH54-62996: decision repair_booked not replacement",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: FH26-45218: reason Early fault within 100 days of delivery (delivered 2026-08-26, as_of 2026-11-02 is 68 days), so full price refund applies. not early_fault; LT12-15436: decision decline not repair_booked; OH90-90376: decision decline not repair_booked; CH54-62111: decision repair_booked not replacement; CH54-62996: decision repair_booked not replacement"
-    ],
-    "LD-08": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: CH54-62863: no outcome; AD38-33132: no outcome; LT12-92561: no outcome; VF72-35764: no outcome; CH54-95411: no outcome; CH54-60384: no outcome"
+      "attempt 1: CH54-70843: decision decline not repair_booked",
+      "attempt 2: CH54-70843: decision decline not repair_booked",
+      "attempt 3: CH54-70843: decision decline not repair_booked"
     ],
     "LD-09": [
-      "attempt 1: MR33-56848: reason Early fault: delivered 2026-09-29, within 100 days of delivery of the as_of date 2026-11-02 (34 days), fault present; full price refund. not early_fault; MR33-46870: decision escalate not replacement; CH54-60423: decision escalate not replacement; CH54-62732: decision escalate not replacement",
-      "attempt 2: MR33-56848: decision escalate not refund; MR33-46870: decision escalate not replacement; CH54-60423: decision escalate not replacement; CH54-62732: decision escalate not replacement; CH54-14247: decision escalate not repair_booked",
-      "attempt 3: MR33-56848: reason Early fault within 100 days of delivery (delivered 2026-09-29, as_of 2026-11-02, 34 days), so full price refund applies. not early_fault; MR33-46870: decision decline not replacement; CH54-60423: decision decline not replacement; CH54-62732: decision decline not replacement"
+      "attempt 1: MR33-56848: decision escalate not refund",
+      "attempt 2: MR33-56848: decision escalate not refund",
+      "attempt 3: MR33-56848: decision escalate not refund"
     ],
-    "LD-10": [
-      "attempt 1: FH26-94491: decision decline not repair_booked; BK20-56444: decision decline not repair_booked",
-      "attempt 2: FH26-94491: decision decline not repair_booked; BK20-56444: decision decline not repair_booked",
-      "attempt 3: FH26-94491: decision decline not repair_booked; BK20-56444: decision decline not repair_booked"
+    "LT-006": [
+      "attempt 1: VF72-76100: decision repair_booked not decline",
+      "attempt 2: VF72-76100: decision repair_booked not decline",
+      "attempt 3: VF72-76100: decision repair_booked not decline"
     ],
-    "LT-001": [
-      "attempt 1: LT12-37050: reason out_of_cover not supply",
-      "attempt 2: LT12-37050: reason out_of_cover not supply",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-01": [
-      "attempt 1: order number H-101928 missing; order number H-101929 missing; order number H-101930 missing; order number H-101931 missing; order number H-101932 missing; order number H-101933 missing",
-      "attempt 2: AD38-33010: decision repair_booked not replacement; CH54-62499: decision decline not replacement; MR33-14097: decision decline not repair_booked; LT12-40844: decision decline not repair_booked; FH26-37473: reason early_fault_refund: fault within 100 days of delivery not early_fault; AD38-33847: decision decline not replacement",
-      "attempt 3: AD38-33010: decision repair_booked not replacement; CH54-62499: decision decline not replacement; MR33-14097: decision decline not repair_booked; LT12-40844: decision decline not repair_booked; FH26-37473: reason early_fault_refund: fault within 100 days of delivery not early_fault; AD38-33847: decision decline not replacement"
-    ],
-    "LT-010": [
-      "attempt 1: MR33-16807: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: MR33-16807: decision decline not repair_booked"
-    ],
-    "LT-014": [
-      "attempt 1: MR33-41404: reason exclusions: misuse not misuse",
-      "attempt 2: MR33-41404: reason exclusions: misuse not misuse",
-      "attempt 3: MR33-41404: reason exclusions: misuse not misuse"
-    ],
-    "LT-02": [
-      "attempt 1: CH54-89173: decision decline not repair_booked; CH54-76364: decision decline not repair_booked; MR33-47928: decision repair_booked not replacement; CH54-16634: reason None not early_fault",
-      "attempt 2: MR33-47928: decision repair_booked not replacement; CH54-16634: reason early_fault_refund: delivered 2026-08-17, within 100 days of delivery as of 2026-11-02 (77 days) not early_fault",
-      "attempt 3: CH54-89173: decision decline not repair_booked; CH54-76364: decision decline not repair_booked; MR33-47928: decision repair_booked not replacement; CH54-16634: reason None not early_fault"
+    "LT-017": [
+      "attempt 1: VF72-87177: decision repair_booked not decline",
+      "attempt 2: VF72-87177: decision repair_booked not decline",
+      "attempt 3: VF72-87177: decision repair_booked not decline"
     ],
     "LT-025": [
       "attempt 1: OH90-35859: decision repair_booked not decline",
       "attempt 2: OH90-35859: decision repair_booked not decline",
       "attempt 3: OH90-35859: decision repair_booked not decline"
     ],
-    "LT-026": [
-      "attempt 1: BK20-77680: reason exclusions: misuse not misuse",
-      "attempt 2: BK20-77680: reason exclusions: misuse not misuse",
-      "attempt 3: BK20-77680: decision escalate not decline"
-    ],
-    "LT-027": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: OH90-83383: decision repair_booked not decline",
-      "attempt 3: OH90-83383: reason exclusions not supply"
-    ],
-    "LT-03": [
-      "attempt 1: order number H-101938 missing; order number H-101939 missing; order number H-101940 missing; order number H-101941 missing",
-      "attempt 2: order number H-101938 missing; order number H-101939 missing; order number H-101940 missing; order number H-101941 missing",
-      "attempt 3: order number H-101938 missing; order number H-101939 missing; order number H-101940 missing; order number H-101941 missing"
-    ],
-    "LT-031": [
-      "attempt 1: LT12-89842: decision decline not repair_booked",
-      "attempt 2: LT12-89842: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-032": [
-      "attempt 1: KW61-73842: decision repair_booked not decline",
-      "attempt 2: KW61-73842: reason exclusions not maintenance",
-      "attempt 3: KW61-73842: reason exclusions: maintenance (build-up of dirt, grease, limescale or other deposits, as shown by the telemetry log) not maintenance"
-    ],
-    "LT-034": [
-      "attempt 1: VF72-94369: decision escalate not repair_booked",
-      "attempt 2: VF72-94369: decision escalate not repair_booked",
-      "attempt 3: VF72-94369: decision escalate not repair_booked"
-    ],
-    "LT-036": [
-      "attempt 1: MR33-41694: reason misuse, neglect or use contrary to the instructions not misuse",
-      "attempt 2: MR33-41694: reason misuse, neglect or use contrary to the instructions not misuse",
-      "attempt 3: MR33-41694: reason misuse, neglect or use contrary to the instructions not misuse"
-    ],
-    "LT-04": [
-      "attempt 1: MR33-47122: decision repair_booked not replacement; MR33-35137: decision decline not repair_booked; AD38-31673: decision repair_booked not replacement",
-      "attempt 2: MR33-47122: decision repair_booked not replacement; MR33-35137: decision decline not repair_booked; AD38-31673: decision escalate not replacement",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-042": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: KW61-50421: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-05": [
-      "attempt 1: MR33-45928: decision repair_booked not replacement; CH54-61678: decision repair_booked not replacement; AD38-32814: decision repair_booked not replacement",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
     "LT-06": [
-      "attempt 1: AD38-48983: reason Early fault within 100 days of delivery (delivered 2026-07-30; as_of 2026-11-02 is 95 days later), so full price refund applies; amount 430.00 is below the 250 approval limit? No: 430.00 exceeds the 250 approval limit, so approval is required before the refund is written. not early_fault; FH26-61883: reason Early fault within 100 days of delivery (delivered 2026-09-04; as_of 2026-11-02 is 59 days later), so full price refund applies; amount 310.00 exceeds the 250 approval limit and requires approval before the refund is written. not early_fault",
-      "attempt 2: AD38-48983: reason Delivered 2026-07-30, which is 95 days before as_of 2026-11-02, within the 100-day early fault window; full price refund of \u00a3430 is within the approval limit of \u00a3250? No, \u00a3430 exceeds the \u00a3250 approval limit, so this refund requires approval before it is written; the policy gives a refund for an early fault within 100 days of delivery at full price. not early_fault; TD45-37225: decision repair_booked not decline; FH26-61883: reason Delivered 2026-09-04, which is 59 days before as_of 2026-11-02, within the 100-day early fault window; full price refund of \u00a3310 is written, but as it exceeds the \u00a3250 approval limit it requires approval before it is written. not early_fault",
-      "attempt 3: AD38-48983: reason Early fault: delivered 2026-07-30, which is 95 days before the as_of date of 2026-11-02, within the 100-day early fault window, so a full-price refund applies. not early_fault; TD45-37225: reason out_of_cover: delivered 2024-12-06 with no plan, and the Tessa dishwasher cover of 18 months has expired. not out_of_cover; TD45-46443: reason out_of_cover: delivered 2024-04-02 with no plan, and the Tessa dishwasher cover of 18 months has expired. not out_of_cover; FH26-61883: decision escalate not refund"
+      "attempt 1: FH26-61883: decision repair_booked not refund",
+      "attempt 2: AD38-48983: decision repair_booked not refund",
+      "attempt 3: AD38-48983: decision escalate not refund; FH26-61883: decision repair_booked not refund"
     ],
     "LT-07": [
-      "attempt 1: FH26-38722: reason None not early_fault; VF72-53917: reason None not early_fault",
-      "attempt 2: FH26-38722: reason None not early_fault; VF72-53917: reason None not early_fault; KW61-75765: decision escalate not repair_booked",
-      "attempt 3: FH26-38722: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-08-12, as_of 2026-11-02, 82 days), full price not early_fault; VF72-53917: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-08-11, as_of 2026-11-02, 83 days), full price; refund exceeds approval limit of 250 and requires approval before issue not early_fault; KW61-75765: decision decline not repair_booked"
+      "attempt 1: VF72-53917: decision repair_booked not refund",
+      "attempt 2: FH26-38722: decision escalate not refund; VF72-53917: decision escalate not refund; KW61-75765: decision escalate not repair_booked",
+      "attempt 3: VF72-53917: decision escalate not refund"
     ],
     "LT-08": [
-      "attempt 1: FH26-81907: reason Early fault within 100 days of delivery (delivered 2026-10-15, as of 2026-11-02 that is 18 days); full price refund under early_fault_refund. Amount is at or below the 250 approval limit. not early_fault; VF72-55075: reason Early fault within 100 days of delivery (delivered 2026-09-01, 62 days as of 2026-11-02); full price refund under early_fault_refund. Amount is above the 250 approval limit, so approval is required before the refund is written. not early_fault; CH54-32037: reason Early fault within 100 days of delivery (delivered 2026-09-03, 60 days as of 2026-11-02); full price refund under early_fault_refund. Amount is above the 250 approval limit, so approval is required before the refund is written. not early_fault; LT12-23993: decision decline not repair_booked",
-      "attempt 2: FH26-81907: reason Fault within 100 days of delivery (delivered 2026-10-15, as of 2026-11-02 that is 18 days), so early_fault_refund applies at full price. not early_fault; VF72-55075: reason Fault within 100 days of delivery (delivered 2026-09-01, as of 2026-11-02 that is 62 days), so early_fault_refund applies at full price. not early_fault; CH54-32037: reason Fault within 100 days of delivery (delivered 2026-09-03, as of 2026-11-02 that is 60 days), so early_fault_refund applies at full price. not early_fault; LT12-23993: decision decline not repair_booked",
-      "attempt 3: FH26-81907: reason Early fault within 100 days of delivery (delivered 2026-10-15, as_of 2026-11-02, 18 days), so full price refund applies. not early_fault; VF72-55075: reason Early fault within 100 days of delivery (delivered 2026-09-01, 62 days before as_of), so full price refund applies. not early_fault; CH54-32037: reason Early fault within 100 days of delivery (delivered 2026-09-03, 60 days before as_of), so full price refund applies. not early_fault; LT12-23993: decision decline not repair_booked"
-    ],
-    "LT-09": [
-      "attempt 1: order number H-101966 missing; order number H-101967 missing; order number H-101968 missing; order number H-101969 missing; order number H-101970 missing",
-      "attempt 2: order number H-101966 missing; order number H-101967 missing; order number H-101968 missing; order number H-101969 missing; order number H-101970 missing",
-      "attempt 3: order number H-101966 missing; order number H-101967 missing; order number H-101968 missing; order number H-101969 missing; order number H-101970 missing"
-    ],
-    "LT-10": [
-      "attempt 1: FH26-27548: decision decline not repair_booked; CH54-60551: decision decline not replacement; CH54-61654: decision repair_booked not replacement; MR33-97049: reason early_fault_refund: delivered 2026-10-22, within 100 days of delivery, full price not early_fault; VF72-99303: reason early_fault_refund: delivered 2026-09-23, within 100 days of delivery, full price; leak is not an excluded cause on the records not early_fault",
-      "attempt 2: FH26-27548: decision decline not repair_booked; CH54-60551: decision decline not replacement; CH54-61654: decision repair_booked not replacement; MR33-97049: reason Early fault refund: delivered 2026-10-22, within 100 days of delivery, full price not early_fault; VF72-99303: reason Early fault refund: delivered 2026-09-23, within 100 days of delivery, full price not early_fault",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-11": [
-      "attempt 1: CH54-86072: reason Early fault within 100 days of delivery (delivered 2026-09-03, as of 2026-11-02 that is 60 days); full price refund not early_fault; AD38-33881: decision decline not replacement; OH90-53423: decision decline not refund; FH26-53443: decision decline not repair_booked; AD38-34750: decision decline not replacement",
-      "attempt 2: CH54-86072: reason Early fault within 100 days of delivery (delivered 2026-09-03, as_of 2026-11-02, 60 days), so full price refund applies. not early_fault; AD38-33881: decision decline not replacement; AD38-49244: decision decline not repair_booked; OH90-53423: reason Early fault within 100 days of delivery (delivered 2026-08-01, 93 days before as_of 2026-11-02), so full price refund applies. not early_fault; FH26-53443: decision decline not repair_booked; AD38-34750: decision decline not replacement",
-      "attempt 3: order number H-101977 missing; order number H-101978 missing; order number H-101979 missing; order number H-101980 missing; order number H-101981 missing; order number H-101982 missing"
-    ],
-    "LT-12": [
-      "attempt 1: AD38-33630: decision decline not replacement; CH54-60770: decision decline not replacement",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: AD38-33630: decision repair_booked not replacement; TD45-34705: decision decline not repair_booked; CH54-60770: decision decline not replacement"
-    ],
-    "LT-13": [
-      "attempt 1: CH54-61316: decision refund not replacement; AD38-66189: reason out_of_cover: delivered 2022-06-12, cover of 36 months ended 2025-06-12, and no plan extension applies; goodwill requires approval and is not automatic, so no goodwill refund is issued. not out_of_cover; KW61-70457: reason Early fault refund: delivered 2026-08-16, within 100 days of the as_of date 2026-11-02 (78 days), fault is not excluded, so full price refund applies. not early_fault; AD38-32158: decision repair_booked not replacement; MR33-20949: reason Early fault refund: delivered 2026-08-10, within 100 days of 2026-11-02 (84 days), fault not excluded, so full price refund applies. not early_fault",
-      "attempt 2: order number H-101987 missing; order number H-101988 missing; order number H-101989 missing; order number H-101990 missing; order number H-101991 missing; order number H-101992 missing",
-      "attempt 3: CH54-61316: decision decline not replacement; KW61-70457: decision decline not refund; AD38-32158: decision repair_booked not replacement; MR33-20949: reason None not early_fault"
-    ],
-    "LT-14": [
-      "attempt 1: order number H-101993 missing; order number H-101994 missing; order number H-101995 missing; order number H-101996 missing",
-      "attempt 2: CH54-58689: decision decline not repair_booked; CH54-61607: decision repair_booked not replacement; CH54-44337: decision repair_booked not refund",
-      "attempt 3: CH54-58689: decision decline not repair_booked; CH54-61607: decision repair_booked not replacement; CH54-44337: reason None not early_fault"
-    ],
-    "LT-15": [
-      "attempt 1: MR33-87687: decision decline not repair_booked; OH90-23675: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-09-18, as_of 2026-11-02, 45 days), full price refunded not early_fault; MR33-47135: decision decline not replacement; CH54-44318: decision decline not repair_booked; CH54-68997: decision decline not repair_booked",
-      "attempt 2: MR33-87687: decision decline not repair_booked; OH90-23675: reason early_fault_refund: delivered 2026-09-18, within 100 days of delivery, full price refunded not early_fault; MR33-47135: decision decline not replacement; CH54-44318: decision decline not repair_booked; CH54-68997: decision decline not repair_booked",
-      "attempt 3: MR33-87687: decision decline not repair_booked; OH90-23675: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-09-18, as_of 2026-11-02, 45 days), refunded at full price not early_fault; MR33-47135: decision repair_booked not replacement; CH54-44318: decision decline not repair_booked; BK20-84508: reason out_of_cover: delivered 2020-11-13, cover 47 months ended 2024-10-13 not out_of_cover"
-    ],
-    "LT-16": [
-      "attempt 1: order number H-102003 missing; order number H-102004 missing; order number H-102005 missing; order number H-102006 missing; order number H-102007 missing; order number H-102008 missing",
-      "attempt 2: order number H-102003 missing; order number H-102004 missing; order number H-102005 missing; order number H-102006 missing; order number H-102007 missing; order number H-102008 missing",
-      "attempt 3: CH54-61487: decision decline not replacement; TD45-38325: decision decline not repair_booked; LT12-44795: reason None not early_fault"
-    ],
-    "LT-17": [
-      "attempt 1: LT12-12544: reason Within 100 days of delivery (delivered 2026-10-17, as of 2026-11-02 is 16 days), early fault refund at full price applies. not early_fault; LT12-64536: reason Within 100 days of delivery (delivered 2026-09-24, 39 days before 2026-11-02), early fault refund at full price applies. not early_fault; TD45-13306: reason Within 100 days of delivery (delivered 2026-08-17, 77 days before 2026-11-02), early fault refund at full price applies. not early_fault; AD38-57101: reason Within 100 days of delivery (delivered 2026-10-22, 11 days before 2026-11-02), early fault refund at full price applies. not early_fault",
-      "attempt 2: LT12-12544: reason Fault within 100 days of delivery (delivered 2026-10-17, as_of 2026-11-02, 16 days); early_fault_refund applies at full price. not early_fault; LT12-64536: reason Fault within 100 days of delivery (delivered 2026-09-24, 39 days before as_of); early_fault_refund applies at full price. not early_fault; TD45-13306: reason Fault within 100 days of delivery (delivered 2026-08-17, 77 days before as_of); early_fault_refund applies at full price. not early_fault; AD38-57101: reason Fault within 100 days of delivery (receipt date 2026-10-22, 11 days before as_of); early_fault_refund applies at full price. not early_fault",
-      "attempt 3: LT12-12544: reason Early fault within 100 days of delivery (delivered 2026-10-17, 16 days before as_of 2026-11-02); full price refund under early_fault_refund. not early_fault; LT12-64536: reason Early fault within 100 days of delivery (delivered 2026-09-24, 39 days before as_of 2026-11-02); full price refund under early_fault_refund. not early_fault; TD45-13306: reason Early fault within 100 days of delivery (delivered 2026-08-17, 77 days before as_of 2026-11-02); full price refund under early_fault_refund. not early_fault; AD38-57101: reason Early fault within 100 days of delivery (receipt 2026-10-22, 11 days before as_of 2026-11-02); full price refund under early_fault_refund. not early_fault"
+      "attempt 1: FH26-81907: decision escalate not refund; VF72-55075: decision repair_booked not refund; LT12-23993: decision decline not repair_booked",
+      "attempt 2: FH26-81907: decision decline not refund",
+      "attempt 3: FH26-81907: decision escalate not refund; VF72-55075: decision repair_booked not refund; CH54-32037: decision escalate not refund"
     ],
     "LT-18": [
-      "attempt 1: OH90-19261: reason Early fault within 100 days of delivery (delivered 2026-08-22; as_of 2026-11-02 is 72 days later), full price refund. not early_fault; FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked",
-      "attempt 2: OH90-19261: reason Delivered 2026-08-22, within 100 days of delivery (as_of 2026-11-02, 72 days elapsed); early fault refund at full price. not early_fault; FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked",
-      "attempt 3: OH90-19261: reason early_fault_refund: delivered 2026-08-22, within 100 days of delivery as of 2026-11-02 (72 days), full price not early_fault; FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked"
+      "attempt 1: TD45-88527: decision decline not repair_booked",
+      "attempt 2: OH90-19261: decision repair_booked not refund; FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked",
+      "attempt 3: FH26-50786: decision decline not repair_booked; TD45-88527: decision decline not repair_booked"
     ],
     "LT-19": [
-      "attempt 1: OH90-41434: reason Delivered 2026-09-29, within 100 days of delivery (as_of 2026-11-02, 34 days), so early_fault_refund applies at full price not early_fault",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: OH90-41434: reason Delivered 2026-09-29, within 100 days of delivery of the as_of date 2026-11-02 (34 days), so early_fault_refund applies at full price not early_fault"
+      "attempt 1: OH90-41434: decision repair_booked not refund",
+      "attempt 2: OH90-41434: decision escalate not refund",
+      "attempt 3: OH90-41434: decision escalate not refund"
     ],
     "LT-20": [
-      "attempt 1: CH54-46778: decision decline not repair_booked; MR33-47368: decision escalate not replacement; KW61-39783: decision escalate not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: order number H-102024 missing; order number H-102025 missing; order number H-102026 missing; order number H-102027 missing"
-    ],
-    "LT-21": [
-      "attempt 1: CH54-61724: decision escalate not replacement; KW61-50836: reason early_fault_refund not early_fault",
-      "attempt 2: CH54-61724: decision decline not replacement; KW61-50836: reason early_fault_refund not early_fault",
-      "attempt 3: CH54-61724: decision decline not replacement; KW61-50836: reason early_fault_refund not early_fault"
-    ],
-    "LT-22": [
-      "attempt 1: order number H-102034 missing; order number H-102035 missing; order number H-102036 missing; order number H-102037 missing; order number H-102038 missing; order number H-102039 missing",
-      "attempt 2: FH26-96734: decision decline not repair_booked; BK20-16525: decision decline not repair_booked; LT12-63201: decision decline not repair_booked; OH90-11257: reason early_fault_refund: delivered 2026-10-02, 31 days before the as_of date of 2026-11-02, within 100 days; refund of full price not early_fault; AD38-38905: decision decline not repair_booked",
-      "attempt 3: BK20-16525: decision decline not repair_booked; LT12-63201: decision decline not repair_booked; OH90-11257: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-10-02, as_of 2026-11-02) not early_fault; AD38-38905: decision decline not repair_booked"
+      "attempt 1: KW61-39783: decision escalate not repair_booked",
+      "attempt 2: KW61-39783: decision escalate not repair_booked",
+      "attempt 3: KW61-39783: decision escalate not repair_booked"
     ],
     "LT-23": [
-      "attempt 1: AD38-41306: reason Delivered 2026-08-19, within 100 days of delivery as of 2026-11-02 (75 days); early fault refund at full price applies. not early_fault; VF72-94958: decision decline not repair_booked; FH26-72109: decision decline not refund; LT12-41909: decision decline not repair_booked; CH54-60594: decision escalate not replacement",
-      "attempt 2: order number H-102040 missing; order number H-102041 missing; order number H-102042 missing; order number H-102043 missing; order number H-102044 missing",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
+      "attempt 1: AD38-41306: decision decline not refund; VF72-94958: decision decline not repair_booked; FH26-72109: decision decline not refund",
+      "attempt 2: AD38-41306: decision escalate not refund; VF72-94958: decision decline not repair_booked; FH26-72109: decision escalate not refund",
+      "attempt 3: AD38-41306: decision decline not refund; FH26-72109: decision repair_booked not refund"
     ],
     "LT-24": [
       "attempt 1: order number H-102045 missing; order number H-102046 missing; order number H-102047 missing; order number H-102048 missing; order number H-102049 missing",
-      "attempt 2: order number H-102045 missing; order number H-102046 missing; order number H-102047 missing; order number H-102048 missing; order number H-102049 missing",
-      "attempt 3: LT12-61924: decision decline not repair_booked; KW61-91734: reason early_fault_refund: delivered 2026-09-28, within 100 days of delivery as of 2026-11-02 (35 days), full price refund not early_fault; CH54-62761: decision escalate not replacement; FH26-99493: reason early_fault_refund: delivered 2026-08-24, within 100 days of delivery as of 2026-11-02 (70 days), full price refund not early_fault"
+      "attempt 2: CH54-62761: decision escalate not replacement; FH26-99493: decision repair_booked not refund",
+      "attempt 3: LT12-61924: decision decline not repair_booked; FH26-99493: decision escalate not refund"
     ],
     "LT-25": [
-      "attempt 1: MR33-25456: reason Early fault within 100 days of delivery (delivered 2026-08-12, as_of 2026-11-02 is 82 days), refund at full price; the customer's report is that the unit runs but performs poorly, which is an early fault under the policy. not early_fault; MR33-47317: decision escalate not replacement; AD38-57534: decision decline not refund",
-      "attempt 2: MR33-25456: decision decline not refund; MR33-47317: decision escalate not replacement; AD38-57534: reason None not early_fault",
-      "attempt 3: MR33-25456: reason Early fault within 100 days of delivery; delivered 2026-08-12, as_of 2026-11-02 is 82 days later, so full price refund applies. Cosmetic/performance complaint is not excluded as no maintenance, misuse or other exclusion is shown, and the unit powers on. not early_fault; MR33-47317: decision escalate not replacement; AD38-57534: decision decline not refund"
-    ],
-    "LT-26": [
-      "attempt 1: order number H-102054 missing; order number H-102055 missing; order number H-102056 missing; order number H-102057 missing; order number H-102058 missing",
-      "attempt 2: AD38-18495: decision decline not repair_booked; MR33-45136: decision escalate not replacement; VF72-49465: reason None not early_fault",
-      "attempt 3: MR33-45136: decision escalate not replacement; VF72-49465: reason Early fault: Vale fridge freezer delivered 2026-08-30, which is 64 days before the as_of date and within the 100-day early fault window. Full price refund of GBP 890 is due. This exceeds the GBP 250 approval limit, so it needs approval before it is written to the order. not early_fault"
+      "attempt 1: AD38-57534: decision escalate not refund",
+      "attempt 2: AD38-57534: decision escalate not refund",
+      "attempt 3: AD38-57534: decision repair_booked not refund"
     ],
     "LT-27": [
-      "attempt 1: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund; VF72-24129: decision decline not repair_booked; TD45-39869: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-09-27, 36 days before as_of 2026-11-02) not early_fault; MR33-76321: decision decline not repair_booked",
-      "attempt 2: label reply (Unterminated string starting at: line 1 column 2145 (char 2144))",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
+      "attempt 1: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund; VF72-24129: decision escalate not repair_booked",
+      "attempt 2: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund",
+      "attempt 3: AD38-85940: decision decline not refund; FH26-69085: decision decline not refund; TD45-39869: decision decline not refund"
     ],
     "LT-28": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: LT12-19544: decision decline not repair_booked; AD38-33694: decision repair_booked not replacement; MR33-47795: decision decline not replacement; FH26-75004: reason early_fault_refund not early_fault"
-    ],
-    "LT-29": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: FH26-97653: decision decline not repair_booked; FH26-12768: decision repair_booked not refund",
-      "attempt 3: FH26-97653: decision decline not repair_booked; FH26-12768: decision repair_booked not refund; BK20-44051: decision refund not repair_booked"
-    ],
-    "LT-30": [
-      "attempt 1: FH26-49845: decision escalate not repair_booked; OH90-33365: reason early_fault_refund not early_fault",
-      "attempt 2: OH90-33365: reason early_fault_refund: fault within 100 days of delivery (delivered 2026-10-16, as_of 2026-11-02, 17 days); refund of full price not early_fault",
-      "attempt 3: FH26-49845: decision decline not repair_booked; OH90-33365: reason early_fault_refund: delivered 2026-10-16, within 100 days of delivery, full price refund of \u00a34800 not early_fault"
-    ],
-    "SD-01-2": [
-      "attempt 1: BK20-28173: decision refund not repair_booked",
-      "attempt 2: BK20-28173: decision refund not repair_booked",
-      "attempt 3: BK20-28173: decision refund not repair_booked"
-    ],
-    "SD-02-1": [
-      "attempt 1: KW61-39378: decision decline not refund",
-      "attempt 2: KW61-39378: decision decline not refund",
-      "attempt 3: KW61-39378: decision decline not refund"
-    ],
-    "SD-03-3": [
-      "attempt 1: MR33-99667: reason Replacement after repeat repairs: the Mira robot vacuum has had 2 earlier repairs for this same fault, meeting the replacement_after_repeat_repairs threshold of 2. Cover runs 40 months from delivery on 2024-08-04 (to 2028-04-04), so the unit is in cover as of 2026-11-02, with no exclusion applying and no open case or duplicate. not repeat_repairs",
-      "attempt 2: MR33-99667: reason Repeat repairs threshold met: 2 earlier repairs for this fault, which the policy allows replacement after, and the fault is within cover. not repeat_repairs",
-      "attempt 3: MR33-99667: reason Repeat repairs for this fault have reached the replacement threshold (2 earlier repairs), and the appliance is within cover: delivered 2024-08-04, 40-month cover ends 2028-04-04, as of 2026-11-02, with no exclusion or safety incident identified. not repeat_repairs"
-    ],
-    "SD-04-2": [
-      "attempt 1: BK20-18732: decision decline not repair_booked",
-      "attempt 2: BK20-18732: decision decline not repair_booked",
-      "attempt 3: BK20-18732: decision decline not repair_booked"
-    ],
-    "SD-05-1": [
-      "attempt 1: TD45-44413: decision decline not refund",
-      "attempt 2: TD45-44413: decision decline not refund",
-      "attempt 3: TD45-44413: decision decline not refund"
-    ],
-    "SD-06-3": [
-      "attempt 1: VF72-50842: reason Repeat fault after two earlier repairs for the same fault (replacement_after_repeat_repairs: 2). Cover runs 77 months from delivery on 2022-06-08, so it ends around 2029-01-08 and the appliance is in cover as of 2026-11-02. No exclusion applies: no misuse, installation, supply, maintenance, accidental damage or commercial use is recorded, the serial is identifiable, there is no open case, and the fault is not recorded as a safety incident. The customer's message reports food not being kept cold and no safety incident, so the fault is not treated as one. not repeat_repairs",
-      "attempt 2: VF72-50842: reason Cover runs 77 months from delivery on 2022-06-08 (to 2029-01-08), so the appliance is in cover as of 2026-11-02. No exclusion applies and no open case exists for this fault. The unit has had 2 earlier repairs for this fault, which meets the replacement_after_repeat_repairs threshold of 2, so a replacement order is written. not repeat_repairs",
-      "attempt 3: VF72-50842: reason Cover runs 77 months from delivery on 2022-06-08 (to 2029-01-08), so the appliance is in cover as of 2026-11-02. No exclusion applies: the customer reports a cooling fault, not misuse, installation, supply, maintenance build-up, accidental damage or commercial use, and no safety incident is reported. The fault is a repeat, with 2 earlier repairs for the same fault, which meets the replacement_after_repeat_repairs threshold of 2. No open case exists for this fault and no duplicate action has been taken. The early_fault_refund does not apply because delivery was more than 100 days before the as_of date. The replacement is written as a replacement order for this appliance. not repeat_repairs"
-    ],
-    "SD-07-2": [
-      "attempt 1: BK20-17203: decision decline not repair_booked",
-      "attempt 2: BK20-17203: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "SD-07-3": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: OH90-44349: decision decline not repair_booked",
-      "attempt 3: OH90-44349: decision decline not repair_booked"
-    ],
-    "SD-07-4": [
-      "attempt 1: CH54-18909: decision decline not repair_booked",
-      "attempt 2: CH54-18909: decision decline not repair_booked",
-      "attempt 3: CH54-18909: decision decline not repair_booked"
-    ],
-    "SD-08-1": [
-      "attempt 1: AD38-27057: decision decline not refund",
-      "attempt 2: label reply (Extra data: line 3 column 1 (char 519))",
-      "attempt 3: AD38-27057: decision decline not refund"
-    ],
-    "SD-09-3": [
-      "attempt 1: VF72-13814: reason Policy allows replacement after 2 repeat repairs for the same fault; record shows earlier_repairs_for_this_fault of 2, and cover applies (delivered 2024-12-23, 77 months cover runs to 2031-07-23, as of 2026-11-02) with no exclusion identified. not repeat_repairs",
-      "attempt 2: VF72-13814: reason Within cover: Vale fridge freezer has 77 months cover from delivery on 2024-12-23, so cover runs to 2031-07-23 and the policy date of 2026-11-02 is in cover. Fault is not excluded, no open case exists, and the appliance has had 2 earlier repairs for this same fault, which meets the replacement_after_repeat_repairs threshold of 2. Replacement is the policy remedy. not repeat_repairs",
-      "attempt 3: VF72-13814: reason Within the 77-month cover (delivered 2024-12-23, as of 2026-11-02, roughly 22 months), no exclusion applies, no open case exists, and the appliance has had 2 earlier repairs for the same fault, which meets the replacement_after_repeat_repairs threshold of 2. not repeat_repairs"
-    ],
-    "ST-01-3": [
-      "attempt 1: OH90-91860: decision decline not repair_booked",
-      "attempt 2: OH90-91860: decision decline not repair_booked",
-      "attempt 3: OH90-91860: decision decline not repair_booked"
-    ],
-    "ST-02-1": [
-      "attempt 1: BK20-30740: decision decline not refund",
-      "attempt 2: BK20-30740: decision repair_booked not refund",
-      "attempt 3: BK20-30740: decision decline not refund"
-    ],
-    "ST-02-4": [
-      "attempt 1: MR33-34424: decision decline not repair_booked",
-      "attempt 2: MR33-34424: decision decline not repair_booked",
-      "attempt 3: MR33-34424: decision decline not repair_booked"
-    ],
-    "ST-03-1": [
-      "attempt 1: LT12-45999: decision decline not repair_booked",
-      "attempt 2: LT12-45999: decision decline not repair_booked",
-      "attempt 3: LT12-45999: decision decline not repair_booked"
-    ],
-    "ST-03-3": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: LT12-45999: reason Lumen smart thermostat, delivered 2023-05-01, cover_months 45 with no extension plan, so cover ended around 2026-12-01 and is still in force as of 2026-11-02. Two earlier repairs for this same fault meet the replacement_after_repeat_repairs threshold of 2, and no exclusion applies, no open case exists, and no safety incident is recorded. Replacement order written for the appliance. not repeat_repairs",
-      "attempt 3: LT12-45999: reason Repeat-repair rule: the fault has had 2 earlier repairs, meeting the replacement_after_repeat_repairs threshold of 2, and the device is within cover. Delivery was 2023-05-01 and the Lumen cover is 45 months (to 2027-02-01), so it is in cover as of 2026-11-02. No exclusion applies, the fault is not an open duplicate, and no safety incident is recorded, so the replacement is the only remedy the policy gives. not repeat_repairs"
-    ],
-    "ST-05-1": [
-      "attempt 1: VF72-69012: decision decline not refund",
-      "attempt 2: VF72-69012: decision decline not refund",
-      "attempt 3: VF72-69012: decision decline not refund"
-    ],
-    "ST-06-3": [
-      "attempt 1: AD38-11467: reason Repeat fault after 2 earlier repairs for the same fault (remedy threshold is 2); unit is within cover, which runs 36 months from delivery 2025-05-27 to 2028-05-27 as of 2026-11-02, with no exclusion applying and no open case. not repeat_repairs",
-      "attempt 2: AD38-11467: reason Repeat-repair rule: the dryer has had 2 earlier repairs for this fault, which meets the policy's threshold of 2 repeat repairs for a replacement; the fault is within the 36-month cover (delivered 2025-05-27, as of 2026-11-02 that is about 17 months), no exclusion applies, the product is not recalled, and there is no open case for this fault. not repeat_repairs",
-      "attempt 3: AD38-11467: reason Warranty cover runs 36 months from delivery on 2025-05-27, which is 2026-05-27, so as of 2026-11-02 the dryer is out of cover. The policy's replacement remedy applies after two repeat repairs for the same fault, which is met here (2 earlier repairs), but out-of-cover goodwill is the only route beyond cover; the early fault refund window (100 days) has also passed. Because goodwill requires approval, the case is escalated for a goodwill decision rather than a repair booking or replacement being written directly. not repeat_repairs"
-    ],
-    "ST-07-2": [
-      "attempt 1: CH54-45485: decision decline not repair_booked",
-      "attempt 2: CH54-45485: decision decline not repair_booked",
-      "attempt 3: CH54-45485: decision decline not repair_booked"
-    ],
-    "ST-07-3": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: MR33-94353: decision decline not repair_booked"
-    ],
-    "ST-08-1": [
-      "attempt 1: LT12-80771: decision decline not refund",
-      "attempt 2: LT12-80771: decision decline not refund",
-      "attempt 3: LT12-80771: decision decline not refund"
-    ],
-    "ST-09-3": [
-      "attempt 1: TD45-27630: reason Tessa dishwasher is covered for 18 months from delivery on 2025-12-04, so cover runs to 2027-06-04 and the as_of date of 2026-11-02 is within cover. No exclusion applies and no open case exists for this fault. The customer reports two earlier repairs for the same fault, which meets the rule that replacement follows two repeat repairs. The policy grants a replacement for this appliance and no repair is booked. not repeat_repairs",
-      "attempt 2: TD45-27630: reason Repeat fault after 2 earlier repairs for the same fault meets the replacement_after_repeat_repairs rule (2). Delivery was 2025-12-04, which is 333 days before 2026-11-02, so the 18-month (548-day) cover from delivery is still active. No exclusion applies: the record shows no misuse, installation, supply, maintenance, accidental damage or commercial-use finding, no open case exists, and the product is not recalled. not repeat_repairs",
-      "attempt 3: TD45-27630: reason Repeat fault after 2 earlier repairs for the same fault meets the replacement_after_repeat_repairs threshold; delivery 2025-12-04 is within the 18-month cover (as of 2026-11-02, about 11 months), and no exclusion applies. not repeat_repairs"
-    ],
-    "ST-09-5": [
-      "attempt 1: FH26-83432: decision decline not repair_booked",
-      "attempt 2: FH26-83432: decision decline not repair_booked",
-      "attempt 3: FH26-83432: decision decline not repair_booked"
-    ],
-    "ST-10-1": [
-      "attempt 1: FH26-15616: decision decline not repair_booked",
-      "attempt 2: FH26-15616: decision decline not repair_booked",
-      "attempt 3: FH26-15616: decision decline not repair_booked"
-    ],
-    "ST-10-3": [
-      "attempt 1: FH26-91821: decision decline not repair_booked",
-      "attempt 2: FH26-91821: decision decline not repair_booked",
-      "attempt 3: FH26-91821: decision decline not repair_booked"
-    ],
-    "ST-11-1": [
-      "attempt 1: BK20-40857: decision decline not refund",
-      "attempt 2: BK20-40857: decision decline not refund",
-      "attempt 3: BK20-40857: decision decline not refund"
+      "attempt 1: LT12-19544: decision decline not repair_booked",
+      "attempt 2: LT12-19544: decision decline not repair_booked",
+      "attempt 3: LT12-19544: decision escalate not repair_booked; AD38-33694: decision repair_booked not replacement"
     ],
     "ST-11-3": [
       "attempt 1: BK20-48213: decision decline not repair_booked",
       "attempt 2: BK20-48213: decision decline not repair_booked",
       "attempt 3: BK20-48213: decision decline not repair_booked"
     ],
-    "ST-11-4": [
-      "attempt 1: LT12-76107: decision decline not repair_booked",
-      "attempt 2: LT12-76107: decision decline not repair_booked",
-      "attempt 3: LT12-76107: decision decline not repair_booked"
-    ],
-    "ST-12-3": [
-      "attempt 1: KW61-70396: reason Within the 78-month cover (delivered 2026-05-11, as_of 2026-11-02). The customer reports a recurring grinding fault that has already had 2 earlier repairs for this fault, which meets the replacement_after_repeat_repairs threshold of 2. No exclusion applies, no open case exists for this fault, and telemetry shows no finding. Proof of purchase is identifiable. not repeat_repairs",
-      "attempt 2: KW61-70396: reason Cover runs 78 months from the 2026-05-11 delivery date, so the machine is in cover as of 2026-11-02. The grinding fault is a repeat of a fault already repaired twice, which meets the replacement_after_repeat_repairs threshold of 2. No exclusion applies, no open case exists for this fault, and no safety incident is recorded. The replacement is written for the appliance. not repeat_repairs",
-      "attempt 3: KW61-70396: reason Within 78-month cover from delivery on 2026-05-11 (as of 2026-11-02); the same fault has had 2 earlier repairs, which meets the replacement_after_repeat_repairs threshold of 2; no exclusion applies, no open case exists, and the customer's complaint is not a formal complaint requiring escalation, so the policy gives a replacement for the appliance. not repeat_repairs"
-    ],
-    "ST-14-1": [
-      "attempt 1: AD38-96571: decision decline not refund",
-      "attempt 2: AD38-96571: decision decline not refund",
-      "attempt 3: AD38-96571: decision repair_booked not refund"
-    ],
-    "ST-15-1": [
-      "attempt 1: CH54-71539: decision decline not repair_booked",
-      "attempt 2: CH54-71539: decision decline not repair_booked",
-      "attempt 3: CH54-71539: decision decline not repair_booked"
-    ],
-    "ST-15-3": [
-      "attempt 1: CH54-71539: reason Cover runs 43 months from delivery on 2024-02-17, i.e. to 2027-09-17, so the as_of date of 2026-11-02 is within cover. The fault is not excluded, there is no open case, and the unit has had 2 earlier repairs for this fault, meeting the replacement_after_repeat_repairs threshold of 2. Replacement is the policy's remedy. not repeat_repairs",
-      "attempt 2: CH54-71539: reason Delivered 2024-02-17 and the as_of date is 2026-11-02, so the Corra induction hob (cover_months 43) is out of standard cover: 43 months from delivery ended 2027-09-17? No. 2024-02-17 plus 43 months is 2027-09-17, which is still within cover as of 2026-11-02. The fault is covered, has had 2 earlier repairs for the same fault, and no open case exists, so the replacement_after_repeat_repairs remedy applies. not repeat_repairs",
-      "attempt 3: CH54-71539: reason Cover runs 43 months from delivery on 2024-02-17, so it ends 2027-09-17 and the as_of date of 2026-11-02 is within cover. The fault is not excluded (no misuse, installation, supply, maintenance, accidental damage or commercial-use finding). There is no open case for this fault, no safety incident, and the record is identifiable. The customer has had 2 earlier repairs for this fault, which meets the replacement_after_repeat_repairs threshold of 2, so the policy gives a replacement. not repeat_repairs"
-    ],
-    "ST-16-4": [
-      "attempt 1: MR33-82969: decision decline not repair_booked",
-      "attempt 2: MR33-82969: decision decline not repair_booked",
-      "attempt 3: label reply (Extra data: line 3 column 1 (char 231))"
-    ],
-    "ST-16-5": [
-      "attempt 1: LT12-17656: decision decline not repair_booked",
-      "attempt 2: LT12-17656: decision decline not repair_booked",
-      "attempt 3: LT12-17656: decision decline not repair_booked"
-    ],
-    "ST-17-1": [
-      "attempt 1: MR33-62915: decision decline not refund",
-      "attempt 2: MR33-62915: decision decline not refund",
-      "attempt 3: MR33-62915: decision decline not refund"
-    ],
-    "ST-18-1": [
-      "attempt 1: KW61-48745: decision decline not repair_booked",
-      "attempt 2: KW61-48745: decision decline not repair_booked",
-      "attempt 3: KW61-48745: decision decline not repair_booked"
-    ],
-    "ST-18-3": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: KW61-48745: reason Warranty cover for the Keel washing machine runs 78 months from delivery on 2022-03-05, which ends around 2028-09-05, so the 2026-11-02 claim is within cover. The fault has already had 2 repeat repairs, and the policy allows replacement after 2 repeat repairs, with no open case, no exclusion noted and no safety incident. not repeat_repairs",
-      "attempt 3: KW61-48745: reason Same fault has had 2 earlier repairs, meeting the replacement_after_repeat_repairs threshold of 2; delivery 2022-03-05 is within the 78-month cover (as of 2026-11-02, about 44 months elapsed), with no open case for this fault, no exclusion identified, and no safety incident. not repeat_repairs"
-    ],
-    "ST-18-4": [
-      "attempt 1: MR33-90852: decision decline not repair_booked",
-      "attempt 2: MR33-90852: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "ST-19-2": [
-      "attempt 1: CH54-90610: decision decline not repair_booked",
-      "attempt 2: CH54-90610: decision decline not repair_booked",
-      "attempt 3: CH54-90610: decision decline not repair_booked"
-    ],
-    "ST-19-3": [
-      "attempt 1: KW61-79473: decision decline not repair_booked",
-      "attempt 2: KW61-79473: decision decline not repair_booked",
-      "attempt 3: KW61-79473: decision decline not repair_booked"
-    ],
-    "ST-20-1": [
-      "attempt 1: TD45-21929: decision decline not refund",
-      "attempt 2: TD45-21929: decision decline not refund",
-      "attempt 3: label reply (Extra data: line 3 column 1 (char 577))"
-    ],
-    "ST-20-4": [
-      "attempt 1: AD38-85504: decision decline not repair_booked",
-      "attempt 2: AD38-85504: decision decline not repair_booked",
-      "attempt 3: AD38-85504: decision decline not repair_booked"
-    ],
-    "ST-21-3": [
-      "attempt 1: MR33-67043: reason Cover runs 40 months from delivery on 2025-05-12, so it ends 2028-12-12, which is in cover as of 2026-11-02. The fault is not excluded (no misuse, installation, supply, maintenance, accidental damage, or commercial-use finding). The vacuum has had 2 earlier repairs for this same fault, which meets the replacement_after_repeat_repairs threshold of 2. No open case exists for this fault, so the duplicate rule does not apply. The record is identifiable and proof of purchase is available. The price is \u00a3380, and replacement is the remedy the policy gives after repeat repairs, not a refund. The early_fault_refund rule does not apply, since delivery was about 18 months ago, well beyond 100 days. not repeat_repairs",
-      "attempt 2: MR33-67043: reason Replacement after repeat repairs: 2 earlier repairs for this fault meets the threshold of 2, and the fault is back within cover. not repeat_repairs",
-      "attempt 3: MR33-67043: reason Repeat repairs for the same fault have reached the policy threshold of two, so a replacement is due; the product is within cover (delivered 2025-05-12, 40 months cover runs to 2028-09-12, and as_of is 2026-11-02), no exclusion applies, no open case exists for this fault, and no safety incident is recorded. not repeat_repairs"
-    ],
-    "ST-22-1": [
-      "attempt 1: MR33-12745: decision decline not repair_booked",
-      "attempt 2: MR33-12745: decision decline not repair_booked",
-      "attempt 3: MR33-12745: decision decline not repair_booked"
-    ],
-    "ST-22-2": [
-      "attempt 1: VF72-80485: decision decline not repair_booked",
-      "attempt 2: VF72-80485: decision decline not repair_booked",
-      "attempt 3: VF72-80485: decision decline not repair_booked"
-    ],
-    "ST-22-3": [
-      "attempt 1: VF72-26787: decision decline not repair_booked",
-      "attempt 2: VF72-26787: decision decline not repair_booked",
-      "attempt 3: VF72-26787: decision decline not repair_booked"
-    ],
-    "ST-22-4": [
-      "attempt 1: KW61-85946: decision decline not repair_booked",
-      "attempt 2: KW61-85946: decision decline not repair_booked",
-      "attempt 3: KW61-85946: decision decline not repair_booked"
-    ],
-    "ST-23-1": [
-      "attempt 1: AD38-76547: decision decline not refund",
-      "attempt 2: AD38-76547: decision decline not refund",
-      "attempt 3: AD38-76547: decision decline not refund"
-    ],
-    "ST-23-2": [
-      "attempt 1: LT12-58941: decision decline not repair_booked",
-      "attempt 2: LT12-58941: decision decline not repair_booked",
-      "attempt 3: LT12-58941: decision decline not repair_booked"
-    ],
-    "ST-24-3": [
-      "attempt 1: BK20-50950: reason Within cover: delivered 2026-03-17, with 47 months of cover from delivery running to 2030-02-17, so the product is in cover on 2026-11-02. No exclusion applies (the fault is an electrical non-start, with no misuse, installation, supply, maintenance, accidental damage or commercial use recorded). Two earlier repairs for this same fault meet the threshold of two repeat repairs, so the policy gives a replacement order. No open case exists, no safety incident is recorded, and the records are identifiable, so no escalation applies. The early-fault refund does not apply because the product is outside 100 days from delivery (the 100-day window ended 2026-06-25). not repeat_repairs",
-      "attempt 2: BK20-50950: reason Repeat repairs: the kettle has had 2 earlier repairs for this fault, meeting the replacement_after_repeat_repairs threshold of 2. Delivery 2026-03-17 to as_of 2026-11-02 is within cover (47 months), no exclusion applies, no open case exists, and the record is identifiable. not repeat_repairs",
-      "attempt 3: BK20-50950: reason Brio kettle with the same fault after 2 earlier repairs; the policy allows a replacement after 2 repeat repairs, and the unit is within its 47-month cover (delivered 2026-03-17, as of 2026-11-02), with no exclusion or open case. not repeat_repairs"
-    ],
-    "ST-26-1": [
-      "attempt 1: TD45-12089: reason Early fault within 100 days of delivery; delivered 2025-03-15 and fault reported on 2026-11-02, which is beyond 100 days, so the early-fault refund does not apply. Cover runs 18 months from delivery (to 2026-09-15) with no extension, so the product is out of cover; no refund is available under standard cover. Goodwill is limited to 90 days out of cover, and the fault is about 48 days past cover end, which is within that window, but goodwill requires approval and is at most 25% of price (GBP 130) and is not currently approved, so it is escalated rather than refunded. not goodwill; TD45-12089: amount None not 130.0",
-      "attempt 2: TD45-12089: reason Early fault refund: fault reported within 100 days of delivery (delivered 2025-03-15; as of 2026-11-02 the cover period is well past 100 days, so this rule does not apply on the dates given), so the early fault refund is not available, and the cover period (18 months) has also expired, so the cover rules do not apply. not goodwill; TD45-12089: amount None not 130.0",
-      "attempt 3: TD45-12089: decision decline not refund"
-    ],
-    "ST-26-3": [
-      "attempt 1: AD38-73773: decision refund not repair_booked",
-      "attempt 2: AD38-73773: decision decline not repair_booked",
-      "attempt 3: AD38-73773: decision decline not repair_booked"
-    ],
-    "ST-27-3": [
-      "attempt 1: BK20-79989: reason Repeat-repair rule met: the kettle has had 2 earlier repairs for this fault (replacement_after_repeat_repairs is 2), and the 47-month cover from the 2025-06-01 delivery date runs to 2029-06, so it is in cover, with no exclusion, open case, or safety incident. not repeat_repairs",
-      "attempt 2: BK20-79989: decision escalate not replacement",
-      "attempt 3: BK20-79989: decision escalate not replacement"
-    ],
-    "ST-28-1": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: CH54-70013: decision decline not repair_booked",
-      "attempt 3: CH54-70013: decision decline not repair_booked"
-    ],
-    "ST-29-1": [
-      "attempt 1: AD38-13476: decision decline not refund",
-      "attempt 2: AD38-13476: decision decline not refund",
-      "attempt 3: AD38-13476: decision decline not refund"
-    ],
-    "ST-30-3": [
-      "attempt 1: AD38-65499: reason Repeat fault: the same fault has already been repaired twice, and the policy gives a replacement after 2 repeat repairs. The appliance is within cover (delivered 2024-10-21, 36-month cover runs to 2027-10-21, and the as_of date is 2026-11-02), no exclusion applies, and there is no open case or safety incident. not repeat_repairs",
-      "attempt 2: AD38-65499: reason Ashby tumble dryer with 2 earlier repairs for the same fault; replacement_after_repeat_repairs is 2, so a replacement order is due. Delivery 2024-10-21 is within the 36-month cover (as of 2026-11-02, the cover runs to 2027-10-21), no exclusion applies, and the proof of purchase is identifiable. not repeat_repairs",
-      "attempt 3: AD38-65499: reason Repeat repairs for the same fault have reached the threshold of 2, so the policy gives a replacement. Cover runs 36 months from the 2024-10-21 delivery date, which is 24 months before 2026-11-02, so the unit is in cover. No exclusion applies, no open case exists, and the serial is identifiable. not repeat_repairs"
-    ],
-    "T-002": [
-      "attempt 1: LT12-94416: decision repair_booked not decline",
-      "attempt 2: LT12-94416: decision repair_booked not decline",
-      "attempt 3: LT12-94416: decision repair_booked not decline"
-    ],
-    "T-004": [
-      "attempt 1: VF72-43871: decision escalate not repair_booked",
-      "attempt 2: VF72-43871: decision escalate not repair_booked",
-      "attempt 3: VF72-43871: decision escalate not repair_booked"
-    ],
-    "T-006": [
-      "attempt 1: MR33-52383: decision decline not repair_booked",
-      "attempt 2: MR33-52383: decision decline not repair_booked",
-      "attempt 3: MR33-52383: decision decline not repair_booked"
-    ],
-    "T-008": [
-      "attempt 1: AD38-16233: decision decline not repair_booked",
-      "attempt 2: AD38-16233: decision decline not repair_booked",
-      "attempt 3: AD38-16233: decision decline not repair_booked"
-    ],
-    "T-009": [
-      "attempt 1: BK20-71634: reason Early fault within 100 days of delivery/receipt (receipt date 2026-08-31, 63 days before as_of 2026-11-02); retailer purchase proven by receipt and rating plate; no exclusion applies, so full price refund of \u00a345 is due. not early_fault",
-      "attempt 2: BK20-71634: reason Within 100 days of delivery/receipt (2026-08-31 to 2026-11-02 is 63 days) and the fault is an early fault; the retailer purchase has a receipt and rating plate, so proof of purchase is valid; full refund of \u00a345 is within the approval limit of \u00a3250. not early_fault",
-      "attempt 3: BK20-71634: reason Early fault: the fault was reported within 100 days of the receipt date (2026-08-31 to 2026-11-02 is 63 days) and the purchase is provable from the receipt and rating plate, so the full price is refunded. The refund of \u00a345.00 is within the \u00a3250 approval limit. not early_fault"
-    ],
-    "T-011": [
-      "attempt 1: OH90-24062: decision decline not repair_booked",
-      "attempt 2: OH90-24062: decision decline not repair_booked",
-      "attempt 3: OH90-24062: decision decline not repair_booked"
-    ],
-    "T-012": [
-      "attempt 1: AD38-20912: reason Repeat repairs for the same fault reached the replacement threshold of 2 under the remedies rule; the dryer is within its 36-month cover (delivered 2024-07-19, as of 2026-11-02 that is about 28 months), and no exclusion, open case, safety incident or unknown fact applies. not repeat_repairs",
-      "attempt 2: AD38-20912: reason Two earlier repairs for the same fault meet the replacement_after_repeat_repairs threshold of 2; the Ashby tumble dryer was delivered 2024-07-19 with 36 months cover, which ended 2027-07-19, so as of 2026-11-02 it is in cover, with no exclusion, no open case, and proof of purchase from a Halvard order record. not repeat_repairs",
-      "attempt 3: AD38-20912: reason Two earlier repairs for the same fault meet the replacement_after_repeat_repairs threshold of 2. The delivery date of 2024-07-19 is within the 36-month cover for the Ashby tumble dryer (cover runs to 2027-07-19 as of 2026-11-02), no exclusion applies, and the record is identifiable with no open case for this fault. not repeat_repairs"
-    ],
-    "T-014": [
-      "attempt 1: FH26-79587: reason exclusions not misuse",
-      "attempt 2: FH26-79587: reason exclusions not misuse",
-      "attempt 3: FH26-79587: reason exclusions: misuse not misuse"
-    ],
-    "T-018": [
-      "attempt 1: MR33-87870: decision decline not repair_booked",
-      "attempt 2: MR33-87870: decision decline not repair_booked",
-      "attempt 3: MR33-87870: decision decline not repair_booked"
-    ],
-    "T-021": [
-      "attempt 1: AD38-79974: decision decline not refund",
-      "attempt 2: AD38-79974: decision decline not refund",
-      "attempt 3: AD38-79974: decision decline not refund"
-    ],
-    "T-022": [
-      "attempt 1: MR33-28698: decision decline not repair_booked",
-      "attempt 2: MR33-28698: decision decline not repair_booked",
-      "attempt 3: MR33-28698: decision decline not repair_booked"
-    ],
-    "T-024": [
-      "attempt 1: MR33-24187: decision decline not repair_booked",
-      "attempt 2: MR33-24187: decision decline not repair_booked",
-      "attempt 3: MR33-24187: decision decline not repair_booked"
+    "T-010": [
+      "attempt 1: OH90-73939: decision replacement not decline",
+      "attempt 2: OH90-73939: reason accidental_damage not cosmetic_late",
+      "attempt 3: OH90-73939: decision replacement not decline"
     ],
     "T-026": [
-      "attempt 1: CH54-55576: decision refund not repair_booked",
-      "attempt 2: CH54-55576: decision refund not repair_booked",
-      "attempt 3: CH54-55576: decision refund not repair_booked"
+      "attempt 1: CH54-55576: decision decline not repair_booked",
+      "attempt 2: CH54-55576: decision decline not repair_booked",
+      "attempt 3: CH54-55576: decision escalate not repair_booked"
     ],
-    "T-027": [
-      "attempt 1: BK20-64499: decision refund not replacement",
-      "attempt 2: BK20-64499: decision decline not replacement",
-      "attempt 3: BK20-64499: decision decline not replacement"
+    "T-029": [
+      "attempt 1: LT12-74713: decision repair_booked not decline",
+      "attempt 2: LT12-74713: decision escalate not decline",
+      "attempt 3: LT12-74713: decision escalate not decline"
     ],
-    "T-036": [
-      "attempt 1: label reply (Unterminated string starting at: line 1 column 79 (char 78))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: TD45-15361: decision repair_booked not refund"
+    "T-068": [
+      "attempt 1: LT12-79160: decision replacement not decline",
+      "attempt 2: LT12-79160: decision replacement not decline",
+      "attempt 3: LT12-79160: decision replacement not decline"
     ],
-    "T-037": [
-      "attempt 1: MR33-81731: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: MR33-81731: decision decline not repair_booked"
+    "T-079": [
+      "attempt 1: KW61-72418: reason accidental_damage not cosmetic_late",
+      "attempt 2: KW61-72418: decision replacement not decline",
+      "attempt 3: KW61-72418: decision replacement not decline"
     ],
-    "T-039": [
-      "attempt 1: KW61-24818: decision decline not repair_booked",
-      "attempt 2: KW61-24818: decision decline not repair_booked",
-      "attempt 3: KW61-24818: decision decline not repair_booked"
-    ],
-    "T-041": [
-      "attempt 1: OH90-20174: reason Early fault within 100 days of delivery; full price refund applies. Refund amount exceeds the \u00a3250 approval limit, so it requires approval before issue. not early_fault",
-      "attempt 2: OH90-20174: reason Early fault within 100 days of delivery; the fault is not excluded and the receipt is readable, so the full price is refunded. Refund of \u00a34800 exceeds the \u00a3250 approval limit and therefore requires approval before it is written to the order. not early_fault",
-      "attempt 3: OH90-20174: reason early_fault_refund: fault within 100 days of delivery/receipt date (2026-09-24 to 2026-11-02 is 39 days), refund at full price; the receipt and rating plate are provided as proof of purchase, so the unit is identifiable and the fault is covered. not early_fault"
-    ],
-    "T-043": [
-      "attempt 1: BK20-72374: decision escalate not repair_booked",
-      "attempt 2: BK20-72374: decision decline not repair_booked",
-      "attempt 3: BK20-72374: decision decline not repair_booked"
-    ],
-    "T-044": [
-      "attempt 1: AD38-25189: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: AD38-25189: decision decline not repair_booked"
-    ],
-    "T-046": [
-      "attempt 1: LT12-60937: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-047": [
-      "attempt 1: VF72-28677: reason Early fault refund: the fault was reported within 100 days of the retailer receipt date (19 Aug 2026 to 2 Nov 2026 is 75 days) and the appliance is within the 77-month cover period, so the full price is refunded. The amount is \u00a3890.00, which is above the \u00a3250 approval limit, so the refund must be approved before it is written to the order. not early_fault",
-      "attempt 2: VF72-28677: reason Early fault within 100 days of delivery/receipt (receipt dated 2026-08-19; 75 days to 2026-11-02), so the full price refund applies. Refund of 890.00 exceeds the 250 approval limit and requires approval before it is written to the order. not early_fault",
-      "attempt 3: label reply (Extra data: line 3 column 1 (char 405))"
-    ],
-    "T-054": [
-      "attempt 1: OH90-10041: decision refund not replacement",
-      "attempt 2: OH90-10041: decision decline not replacement",
-      "attempt 3: OH90-10041: decision decline not replacement"
-    ],
-    "T-056": [
-      "attempt 1: CH54-60543: decision escalate not replacement",
-      "attempt 2: CH54-60543: decision escalate not replacement",
-      "attempt 3: CH54-60543: decision escalate not replacement"
-    ],
-    "T-059": [
-      "attempt 1: KW61-62053: decision decline not repair_booked",
-      "attempt 2: KW61-62053: decision escalate not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-061": [
-      "attempt 1: AD38-48427: reason Early fault within 100 days of delivery (delivered 2026-08-16, as_of 2026-11-02 is 78 days later); early_fault_refund gives full price, and the amount is within the approval limit of 250? No: 430 exceeds the 250 approval limit, so the refund requires approval before it is written. not early_fault",
-      "attempt 2: AD38-48427: reason Early fault within 100 days of delivery (delivered 2026-08-16, as of 2026-11-02 is 78 days); full price refund applies under early_fault_refund. Amount 430.00 exceeds the 250 approval limit, so the refund requires approval. not early_fault",
-      "attempt 3: AD38-48427: decision escalate not refund"
-    ],
-    "T-062": [
-      "attempt 1: CH54-14852: decision decline not replacement",
-      "attempt 2: CH54-14852: decision decline not replacement",
-      "attempt 3: CH54-14852: decision decline not replacement"
-    ],
-    "T-065": [
-      "attempt 1: FH26-91644: decision decline not repair_booked",
-      "attempt 2: FH26-91644: decision decline not repair_booked",
-      "attempt 3: FH26-91644: decision decline not repair_booked"
-    ],
-    "T-066": [
-      "attempt 1: CH54-93976: reason Two earlier repairs for the same fault meet the repeat-repair threshold (replacement_after_repeat_repairs: 2). Cover runs from delivery on 2024-10-01 for 43 months, i.e. to 2028-05-01, so the product is within cover as of 2026-11-02. No exclusion applies and no open case exists for this fault. The customer's order H-101554 is a Halvard order, so proof of purchase is clear. not repeat_repairs",
-      "attempt 2: CH54-93976: reason Corra induction hob, delivered 2024-10-01 with 43 months of cover, so cover runs to 2028-05-01 and the as_of date of 2026-11-02 is within it. The customer's Halvard order is identifiable and no exclusion applies. The fault has had 2 earlier repairs, which meets the replacement_after_repeat_repairs threshold of 2, and there is no open case for it. Replacement is the single decision the policy gives. not repeat_repairs",
-      "attempt 3: CH54-93976: reason Repeat repairs for the same fault: earlier_repairs_for_this_fault is 2, which meets the replacement_after_repeat_repairs threshold of 2. Cover is in force: delivery 2024-10-01 is within the Corra induction hob's 43-month cover, which runs to 2028-05-01 as of 2026-11-02, with no extension needed. No exclusion is recorded, no open case exists, the product is not recalled, and proof of purchase is readable (Halvard order record). The policy gives no refund here, since the early_fault_refund window of 100 days from delivery has long passed, and no goodwill refund is applicable. not repeat_repairs"
-    ],
-    "T-072": [
-      "attempt 1: KW61-78419: decision decline not repair_booked",
-      "attempt 2: KW61-78419: decision decline not repair_booked",
-      "attempt 3: KW61-78419: decision decline not repair_booked"
-    ],
-    "T-073": [
-      "attempt 1: AD38-30032: decision escalate not replacement",
-      "attempt 2: AD38-30032: decision escalate not replacement",
-      "attempt 3: AD38-30032: decision escalate not replacement"
-    ],
-    "T-075": [
-      "attempt 1: VF72-42254: decision decline not repair_booked",
-      "attempt 2: VF72-42254: decision decline not repair_booked",
-      "attempt 3: VF72-42254: decision decline not repair_booked"
-    ],
-    "T-076": [
-      "attempt 1: BK20-96621: reason Delivered 2026-10-02, which is 31 days before the as_of date of 2026-11-02, so the fault falls within the 100-day early-fault window; the refund is the full price, and at \u00a345.00 it is within the \u00a3250 approval limit. not early_fault",
-      "attempt 2: BK20-96621: reason Early fault within 100 days of delivery (delivered 2026-10-02, as of 2026-11-02 that is 31 days), so the policy gives a full-price refund; the customer's request for a refund is consistent with this, and the amount is within the approval limit of 250. not early_fault",
-      "attempt 3: BK20-96621: reason Early fault within 100 days of delivery; full price refund applies not early_fault"
-    ],
-    "T-086": [
-      "attempt 1: BK20-48186: decision escalate not repair_booked",
-      "attempt 2: BK20-48186: decision escalate not repair_booked",
-      "attempt 3: BK20-48186: decision escalate not repair_booked"
+    "T-083": [
+      "attempt 1: TD45-62628: decision decline not repair_booked",
+      "attempt 2: TD45-62628: decision decline not repair_booked",
+      "attempt 3: TD45-62628: decision decline not repair_booked"
     ],
     "T-087": [
-      "attempt 1: TD45-99447: decision decline not repair_booked",
+      "attempt 1: TD45-99447: decision escalate not repair_booked",
       "attempt 2: TD45-99447: decision escalate not repair_booked",
       "attempt 3: TD45-99447: decision escalate not repair_booked"
     ],
-    "T-089": [
-      "attempt 1: KW61-26829: decision decline not repair_booked",
-      "attempt 2: KW61-26829: decision decline not repair_booked",
-      "attempt 3: KW61-26829: decision decline not repair_booked"
-    ],
-    "T-090": [
-      "attempt 1: FH26-52807: decision decline not repair_booked",
-      "attempt 2: FH26-52807: decision decline not repair_booked",
-      "attempt 3: FH26-52807: decision decline not repair_booked"
-    ],
-    "T-093": [
-      "attempt 1: OH90-15535: decision decline not repair_booked",
-      "attempt 2: OH90-15535: decision decline not repair_booked",
-      "attempt 3: OH90-15535: decision decline not repair_booked"
-    ],
-    "T-094": [
-      "attempt 1: AD38-54051: decision decline not repair_booked",
-      "attempt 2: AD38-54051: decision decline not repair_booked",
-      "attempt 3: AD38-54051: decision decline not repair_booked"
-    ],
-    "T-100": [
-      "attempt 1: VF72-51973: decision decline not repair_booked",
-      "attempt 2: VF72-51973: decision decline not repair_booked",
-      "attempt 3: VF72-51973: decision decline not repair_booked"
-    ],
-    "T-109": [
-      "attempt 1: TD45-15558: reason Delivered 2026-08-18, which is 76 days before the as_of date of 2026-11-02, so within the 100-day early fault refund window. Fault is E13, not excluded. No open case, no recall, and proof of purchase is a Halvard order record. Refund of full price, \u00a3520, is above the \u00a3250 approval limit, so it must be routed for approval before it is written to the order. not early_fault",
-      "attempt 2: TD45-15558: reason Early fault within 100 days of delivery; full price refund applies. Delivery 2026-08-18 to as_of 2026-11-02 is 76 days, and the fault is not excluded by the policy. not early_fault",
-      "attempt 3: TD45-15558: reason Delivered 2026-08-18, which is 76 days before the as_of date of 2026-11-02, within the 100-day early fault window; the early fault refund at full price applies, with no repairs needed first and no open case. The customer's request is for a refund, and the 520.00 amount is within the 250 approval limit only if approval is obtained, so this refund is above the approval limit and must be routed for approval before issue. not early_fault"
-    ],
-    "T-110": [
-      "attempt 1: KW61-46283: decision decline not repair_booked",
-      "attempt 2: KW61-46283: decision decline not repair_booked",
-      "attempt 3: KW61-46283: decision decline not repair_booked"
-    ],
-    "T-112": [
-      "attempt 1: VF72-58697: decision decline not replacement",
-      "attempt 2: VF72-58697: decision decline not replacement",
-      "attempt 3: VF72-58697: decision refund not replacement"
-    ],
-    "T-113": [
-      "attempt 1: TD45-56904: reason Repeat repairs for this fault have reached the replacement threshold of 2, and the cover period runs from the 2026-06-17 delivery date for 18 months, so the appliance is in cover on 2026-11-02 and no exclusion applies. not repeat_repairs",
-      "attempt 2: TD45-56904: reason Tessa dishwasher has 18 months cover from delivery on 2026-06-17, so cover runs to 2027-12-17 and the as_of date of 2026-11-02 is within it. No exclusion applies, the proof of purchase is Halvard's order record and identifiable, and no open case exists for this fault. The fault has had two earlier repairs, which meets the replacement_after_repeat_repairs threshold of 2. The early_fault_refund does not apply because the appliance was delivered 138 days before as_of, beyond the 100-day window. not repeat_repairs",
-      "attempt 3: TD45-56904: reason Tessa dishwasher delivered 2026-06-17 with 18 months cover, in force as of 2026-11-02; no exclusion applies, no open case exists, and the fault has had 2 prior repairs, meeting the replacement_after_repeat_repairs threshold of 2. not repeat_repairs"
-    ],
-    "T-117": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: TD45-17720: decision decline not repair_booked",
-      "attempt 3: TD45-17720: decision decline not repair_booked"
-    ],
-    "T-125": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: KW61-76281: reason Cover runs 78 months from delivery_date 2021-02-15, ending 2027-08-15, so the 2026-11-02 claim is in cover. Proof of purchase is identifiable via order record, no exclusion applies, and no open case exists. The fault has had 2 earlier repairs, meeting the replacement_after_repeat_repairs threshold of 2, so a replacement is written. not repeat_repairs",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-126": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: VF72-14622: reason Vale fridge freezer has cover_months 77 from delivery 2022-05-29, which runs to 2028-12-29, so it is in cover as of 2026-11-02. The fault has had 2 earlier repairs, meeting the replacement_after_repeat_repairs threshold of 2, and there is no open case, no exclusion noted and no safety incident recorded. not repeat_repairs",
-      "attempt 3: VF72-14622: reason Vale fridge freezer has 77 months cover from delivery on 2022-05-29, which runs to 2028-12-29, so it is within cover as of 2026-11-02. The fault has had 2 earlier repairs for the same fault, meeting the replacement_after_repeat_repairs threshold of 2, and no open case exists for this fault. No exclusion applies in the record. Replacement is the policy remedy; the price of 890.0 exceeds the refund approval limit, but a replacement is not a refund. not repeat_repairs"
-    ],
-    "T-127": [
-      "attempt 1: TD45-78856: reason Early fault within 100 days of delivery (delivery 2026-09-12, as_of 2026-11-02 is 51 days), so the full price is refunded under the early_fault_refund rule; no exclusion applies and the amount is under the 250 approval limit. not early_fault",
-      "attempt 2: TD45-78856: reason Early fault within 100 days of delivery (delivery 2026-09-12, as_of 2026-11-02 is 51 days), so full price refund applies under early_fault_refund; amount 520 exceeds the 250 approval limit, so it requires approval before issue. not early_fault",
-      "attempt 3: TD45-78856: reason Early fault within 100 days of delivery (delivered 2026-09-12, as of 2026-11-02 is 51 days); the fault is a leak with no exclusion applying and no open case, so the policy gives a full-price refund. not early_fault"
-    ],
-    "T-128": [
-      "attempt 1: MR33-12763: decision escalate not repair_booked",
-      "attempt 2: MR33-12763: decision decline not repair_booked",
-      "attempt 3: MR33-12763: decision escalate not repair_booked"
-    ],
-    "T-130": [
-      "attempt 1: LT12-74395: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: LT12-74395: decision decline not repair_booked"
-    ],
-    "T-131": [
-      "attempt 1: BK20-75990: decision decline not refund",
-      "attempt 2: BK20-75990: decision decline not refund",
-      "attempt 3: BK20-75990: decision decline not refund"
-    ],
-    "T-132": [
-      "attempt 1: AD38-47757: reason Delivered 2026-08-12, which is 82 days before the as_of date of 2026-11-02, so within the 100-day early fault window; the product is covered and the fault is not excluded, so the policy gives a full-price refund of \u00a3430.00. This exceeds the \u00a3250 approval limit, so the refund is recorded as pending approval rather than issued directly. not early_fault",
-      "attempt 2: AD38-47757: reason Delivered 2026-08-12, which is 82 days before the as_of date of 2026-11-02, within the 100-day early fault window. Fault is not excluded, no open case exists, and the customer's order record matches the Halvard order. Full price refund of 430.00 is within the 250 approval limit only if it is treated as needing approval, so it is issued as a full refund of the stated amount; the customer's request is consistent with policy. not early_fault",
-      "attempt 3: AD38-47757: reason Early fault within 100 days of delivery (delivered 2026-08-12, as of 2026-11-02 is 82 days); full price refund applies with no exclusion, duplicate, or escalation trigger. Refund of \u00a3430 is within the \u00a3250 approval limit only if approval is needed, so it is flagged as above the limit and must be approved before issue. not early_fault"
-    ],
-    "T-133": [
-      "attempt 1: KW61-26042: decision decline not repair_booked",
-      "attempt 2: KW61-26042: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-134": [
-      "attempt 1: VF72-40905: reason Early fault within 100 days of delivery; purchased from a retailer with receipt and rating plate, so the receipt date of 2026-08-31 starts cover. Today is 2026-11-02, which is 63 days after receipt. The leaking fault is not an excluded cause and no exclusion applies, so the early-fault refund at full price applies. not early_fault",
-      "attempt 2: VF72-40905: reason Early fault within 100 days of delivery; receipt date 2026-08-31 to as_of 2026-11-02 is 63 days, so the early_fault_refund applies at full price. not early_fault",
-      "attempt 3: VF72-40905: reason Early fault within 100 days of delivery (receipt date 2026-08-31, as of 2026-11-02 is 63 days), so a full-price refund applies; the purchase was from a retailer and proof is a readable receipt and rating plate, the leak is not an excluded cause, and the amount is below the 250 approval limit. not early_fault"
-    ],
-    "T-137": [
-      "attempt 1: AD38-54552: reason Delivered 2026-07-29, so 96 days before the as_of date of 2026-11-02, which falls within the 100-day early fault window; the door latch fault is not excluded and no open case exists, so a full refund applies (price 430.0, above the 250 approval limit, so it must be approved before it is written to the order). not early_fault",
-      "attempt 2: AD38-54552: reason Delivered 2026-07-29, which is 96 days before the as_of date of 2026-11-02, within the 100-day early fault window, so an early fault refund at full price applies; the refund of \u00a3430.00 is below the \u00a3250 approval limit? No: \u00a3430.00 exceeds the \u00a3250 approval limit, so it must be routed for approval before it is written to the order. not early_fault",
-      "attempt 3: AD38-54552: decision escalate not refund"
-    ],
-    "T-139": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: CH54-60671: decision escalate not replacement",
-      "attempt 3: CH54-60671: decision escalate not replacement"
-    ],
-    "T-141": [
-      "attempt 1: MR33-11791: reason Early fault: delivery 2026-08-12 is within 100 days of the as_of date 2026-11-02 (82 days), and the fault prevents the appliance switching on, so the early_fault_refund rule gives a full-price refund. not early_fault",
-      "attempt 2: MR33-11791: reason Early fault within 100 days of delivery (delivered 2026-08-12; 82 days to 2026-11-02), so the full price is refunded. Price is 380.0, which is above the 250 approval limit, so the refund requires approval before it is written to the order. not early_fault",
-      "attempt 3: MR33-11791: reason Early fault within 100 days of delivery (delivered 2026-08-12; as_of 2026-11-02 is 82 days later), so full price refund applies. not early_fault"
-    ],
-    "T-143": [
-      "attempt 1: BK20-94471: decision decline not repair_booked",
-      "attempt 2: BK20-94471: decision decline not repair_booked",
-      "attempt 3: BK20-94471: decision decline not repair_booked"
-    ],
-    "T-145": [
-      "attempt 1: BK20-60530: decision decline not repair_booked",
-      "attempt 2: BK20-60530: decision decline not repair_booked",
-      "attempt 3: BK20-60530: decision decline not repair_booked"
-    ],
-    "T-146": [
-      "attempt 1: BK20-19015: reason Repeat-repair remedy applies: the fault has been repaired twice already (replacement_after_repeat_repairs is 2) and it has recurred, and the Brio kettle is within its 47-month cover from delivery on 2025-02-27 (as of 2026-11-02), with no exclusion identified and no open case for this fault. not repeat_repairs",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 3: BK20-19015: reason Brio kettle cover runs 47 months from delivery (2025-02-27), so it expires 2029-01-27 and is in cover on 2026-11-02. The fault was repaired twice already (replacement_after_repeat_repairs: 2), so the policy gives a replacement. No exclusion applies, the unit is identifiable, there is no open case and no safety incident, and the leak is not reported as a safety incident. not repeat_repairs"
-    ],
-    "T-147": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: MR33-47181: decision escalate not replacement",
-      "attempt 3: MR33-47181: decision escalate not replacement"
-    ],
-    "T-149": [
-      "attempt 1: MR33-46679: decision escalate not replacement",
-      "attempt 2: MR33-46679: decision escalate not replacement",
-      "attempt 3: MR33-46679: decision escalate not replacement"
+    "T-135": [
+      "attempt 1: LT12-22908: decision decline not repair_booked",
+      "attempt 2: LT12-22908: decision refund not repair_booked",
+      "attempt 3: LT12-22908: decision refund not repair_booked"
     ],
     "T-150": [
       "attempt 1: KW61-30971: decision decline not repair_booked",
       "attempt 2: KW61-30971: decision decline not repair_booked",
       "attempt 3: KW61-30971: decision decline not repair_booked"
     ],
-    "T-151": [
-      "attempt 1: CH54-40676: reason Repeat repairs for the same fault reached the policy threshold of 2 (earlier_repairs_for_this_fault = 2), so a replacement applies. Delivery was 2023-06-15 and as_of is 2026-11-02, about 1,236 days later, which is outside the 43-month cover (cover_months 43, no extension plan). The replacement remedy under the repeat-repair rule does not depend on the cover period, so it is applied only if the policy's cover check is read as not governing this remedy; this reading is flagged for review. not repeat_repairs",
-      "attempt 2: CH54-40676: reason Corra induction hob delivered 2023-06-15 with no extension plan; cover runs 43 months, so it expired around 2027-01-15, and as of 2026-11-02 it is still within cover. The fault has had 2 earlier repairs for the same issue, meeting the replacement_after_repeat_repairs threshold of 2. No exclusion applies and no open case exists. Replacement is the policy's remedy. not repeat_repairs",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-152": [
-      "attempt 1: FH26-79168: decision decline not repair_booked",
-      "attempt 2: FH26-79168: decision decline not repair_booked",
-      "attempt 3: FH26-79168: decision decline not repair_booked"
-    ],
-    "T-154": [
-      "attempt 1: LT12-46722: reason Early fault within 100 days of delivery; the fault is not excluded and no open case exists, so the full price is refunded. The customer's requested refund is within the approval limit (180 is below 250) and is an early fault refund, not goodwill, so no approval is needed. not early_fault",
-      "attempt 2: LT12-46722: reason Early fault within 100 days of delivery; full price refund applies. Delivered 2026-10-22, and as of 2026-11-02 that is 11 days, well inside the 100-day window. No exclusion, duplicate, or safety condition applies. Customer's request for refund rather than repair or replacement is accepted under the early fault refund rule. not early_fault",
-      "attempt 3: LT12-46722: reason Fault within 100 days of delivery (delivered 2026-10-22, as of 2026-11-02 is 11 days), so early_fault_refund applies at full price; amount is within the 250 approval limit and no goodwill is involved. not early_fault"
-    ],
-    "T-155": [
-      "attempt 1: BK20-81646: decision decline not refund",
-      "attempt 2: BK20-81646: decision decline not refund",
-      "attempt 3: BK20-81646: decision repair_booked not refund"
-    ],
-    "T-157": [
-      "attempt 1: VF72-52458: decision decline not repair_booked",
-      "attempt 2: VF72-52458: decision decline not repair_booked",
-      "attempt 3: VF72-52458: decision decline not repair_booked"
-    ],
-    "T-159": [
-      "attempt 1: KW61-34349: decision decline not refund",
-      "attempt 2: KW61-34349: decision decline not refund",
-      "attempt 3: KW61-34349: decision escalate not refund"
-    ],
-    "T-160": [
-      "attempt 1: BK20-96628: decision decline not repair_booked",
-      "attempt 2: BK20-96628: decision decline not repair_booked",
-      "attempt 3: BK20-96628: decision decline not repair_booked"
-    ],
-    "T-161": [
-      "attempt 1: AD38-32720: decision escalate not replacement",
-      "attempt 2: AD38-32720: decision escalate not replacement",
-      "attempt 3: AD38-32720: decision escalate not replacement"
-    ],
     "T-166": [
       "attempt 1: BK20-48296: decision repair_booked not escalate",
       "attempt 2: BK20-48296: decision repair_booked not escalate",
       "attempt 3: BK20-48296: decision repair_booked not escalate"
     ],
-    "T-177": [
-      "attempt 1: BK20-33907: decision decline not refund",
-      "attempt 2: BK20-33907: decision decline not refund",
-      "attempt 3: BK20-33907: decision decline not refund"
-    ],
-    "T-181": [
-      "attempt 1: MR33-17638: decision decline not repair_booked",
-      "attempt 2: MR33-17638: decision escalate not repair_booked",
-      "attempt 3: MR33-17638: decision decline not repair_booked"
-    ],
-    "T-183": [
-      "attempt 1: AD38-49094: reason Early fault within 100 days of delivery; the dryer is 1,095 days from delivery (2023-10-31 to 2026-11-02), so the early-fault refund does not apply. Standard cover is 36 months, which ended before the as_of date, so the unit is out of cover and no repair, replacement or refund is owed under the policy. Goodwill is not triggered because only 0 of the allowed 90 days out of cover apply here, and the customer has had no goodwill refund in the last 365 days, but the goodwill share for a 1,095-day gap exceeds the 90-day limit. Closest accurate decision: decline (out_of_cover). not goodwill; AD38-49094: amount None not 107.5",
-      "attempt 2: AD38-49094: reason Within 100 days of delivery is not met (delivery 2023-10-31 is over 100 days before as_of 2026-11-02), so the early fault refund does not apply. Cover for the Ashby tumble dryer runs 36 months from delivery, which ended 2026-10-31, so the appliance is out of cover by 2 days. Goodwill is available for up to 90 days out of cover and needs approval; the record shows no goodwill refund in the last 365 days, so the case is eligible for a goodwill refund of 25% of price, which is 107.50, but it needs approval and so must be escalated rather than issued. not goodwill; AD38-49094: amount None not 107.5",
-      "attempt 3: AD38-49094: reason Early fault within 100 days of delivery; full price refund under early_fault_refund, as the fault is not excluded and the amount is below the approval limit. not goodwill; AD38-49094: amount 430.0 not 107.5"
-    ],
-    "T-185": [
-      "attempt 1: AD38-50633: reason Delivered 2026-09-12, which is 51 days before the as_of date of 2026-11-02, so within the 100-day early fault window; the fault is an early fault and the policy gives a full refund of the price. not early_fault",
-      "attempt 2: AD38-50633: reason Delivered 2026-09-12, which is 51 days before the as_of date of 2026-11-02, so within the 100-day early fault window; full price refund applies. Refund of \u00a3430 exceeds the \u00a3250 approval limit, so it needs approval before issue. not early_fault",
-      "attempt 3: AD38-50633: reason Delivered 2026-09-12, which is 51 days before the as_of date of 2026-11-02, so within the 100-day early-fault window; full price refund applies. Amount 430.00 is below the 250 approval limit? No: 430.00 exceeds the 250 approval limit, so it requires approval before it can be written to the order. not early_fault"
-    ],
-    "T-187": [
-      "attempt 1: LT12-23440: decision decline not refund",
-      "attempt 2: LT12-23440: decision decline not refund",
-      "attempt 3: LT12-23440: decision decline not refund"
-    ],
-    "T-188": [
-      "attempt 1: TD45-92427: decision decline not repair_booked",
-      "attempt 2: TD45-92427: decision escalate not repair_booked",
-      "attempt 3: TD45-92427: decision decline not repair_booked"
-    ],
-    "T-189": [
-      "attempt 1: OH90-79584: reason Delivered 2026-10-01, which is 32 days before the as_of date of 2026-11-02, within the 100-day early fault window; the fault is a new grinding noise with no repeat repairs, no open case, no exclusion identified, and the refund equals the full price of 4800.00 GBP, which is above the 250 GBP approval limit, so it requires approval before issue. not early_fault",
-      "attempt 2: OH90-79584: reason Delivered 2026-10-01, which is 32 days before the as_of date of 2026-11-02, within the 100-day early fault window, so the early fault full-price refund applies. Customer bought from Halvard Home; no exclusion, duplicate, safety incident, or escalation trigger is present. Refund amount is below the approval limit of 250? No: the price is 4800.0, which exceeds the approval limit of 250, so the refund requires approval before it is written. not early_fault",
-      "attempt 3: OH90-79584: reason Early fault within 100 days of delivery (delivered 2026-10-01; 32 days as of 2026-11-02), so the early_fault_refund applies at full price. The refund amount of 4800.0 exceeds the approval limit of 250, so it needs approval before it is issued, and the customer's request for a refund is recorded as the basis. not early_fault"
-    ],
-    "T-199": [
-      "attempt 1: FH26-11098: decision decline not repair_booked",
-      "attempt 2: FH26-11098: decision decline not repair_booked",
-      "attempt 3: FH26-11098: decision decline not repair_booked"
-    ],
-    "T-200": [
-      "attempt 1: LT12-50218: reason Delivered 2026-07-31, which is 94 days before 2026-11-02, so within the 100-day early fault window; full price refund of 180.00 GBP, which is within the 250 GBP approval limit. not early_fault",
-      "attempt 2: LT12-50218: reason Fault reported within 100 days of delivery (delivered 2026-07-31, as of 2026-11-02 is 94 days), so early_fault_refund applies at full price; amount 180.00 is within the 250 approval limit, and no exclusion, duplicate, or escalation condition applies. not early_fault",
-      "attempt 3: LT12-50218: reason Fault reported within 100 days of delivery (delivered 2026-07-31, as of 2026-11-02 is 94 days), so the early-fault full-price refund applies; amount is within the 250 approval limit and no exclusion or open case applies. not early_fault"
-    ],
-    "T-203": [
-      "attempt 1: LT12-42305: reason cover_expired not maintenance",
-      "attempt 2: LT12-42305: reason exclusions:maintenance not maintenance",
-      "attempt 3: LT12-42305: reason exclusions:maintenance not maintenance"
-    ],
-    "T-204": [
-      "attempt 1: FH26-92052: decision decline not refund",
-      "attempt 2: FH26-92052: decision decline not refund",
-      "attempt 3: FH26-92052: decision decline not refund"
-    ],
-    "T-205": [
-      "attempt 1: CH54-42412: decision refund not repair_booked",
-      "attempt 2: CH54-42412: decision refund not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-207": [
-      "attempt 1: VF72-59739: decision decline not repair_booked",
-      "attempt 2: VF72-59739: decision decline not repair_booked",
-      "attempt 3: VF72-59739: decision decline not repair_booked"
-    ],
-    "T-208": [
-      "attempt 1: OH90-80766: reason Early fault within 100 days of delivery; full price refund applies under the early fault refund rule (delivered 2026-10-01, 32 days before as_of 2026-11-02). Proof of purchase is a Halvard order record, no open case exists, and no exclusion or safety issue is recorded. not early_fault",
-      "attempt 2: OH90-80766: reason Early fault within 100 days of delivery (delivered 2026-10-01, as of 2026-11-02 is 32 days), so full price refund applies; no exclusion, open case, or proof-of-purchase issue found. not early_fault",
-      "attempt 3: OH90-80766: reason Early fault within 100 days of delivery; fault is covered under the early-fault refund rule, full price applies. not early_fault"
-    ],
-    "T-209": [
-      "attempt 1: MR33-11749: reason Fault within 100 days of delivery (delivered 2026-08-23; as of 2026-11-02 that is 71 days), so the early fault refund applies at full price; no exclusion is shown in the records and the customer's request for a full refund is consistent with the policy. not early_fault",
-      "attempt 2: MR33-11749: reason Early fault within 100 days of delivery; full price refund applies. not early_fault",
-      "attempt 3: MR33-11749: reason Within 100 days of delivery (delivered 2026-08-23, as_of 2026-11-02 is 71 days), so early_fault_refund applies at full price; no exclusion is indicated and no open case exists. Amount \u00a3380.00 is above the \u00a3250 approval limit, so it requires approval before it is written to the order. not early_fault"
-    ],
-    "T-211": [
-      "attempt 1: AD38-70453: decision decline not repair_booked",
-      "attempt 2: AD38-70453: decision decline not repair_booked",
-      "attempt 3: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "T-212": [
-      "attempt 1: MR33-13445: decision decline not refund",
-      "attempt 2: MR33-13445: decision decline not refund",
-      "attempt 3: MR33-13445: decision decline not refund"
-    ],
-    "T-218": [
-      "attempt 1: BK20-43386: reason Within 100 days of delivery (delivered 2026-09-17, as of 2026-11-02 is 46 days) and the fault is not excluded, so an early fault refund of the full price applies. not early_fault",
-      "attempt 2: BK20-43386: decision decline not refund",
-      "attempt 3: BK20-43386: reason Early fault within 100 days of delivery; delivered 2026-09-17, which is 46 days before as_of 2026-11-02, and no exclusion applies. Early fault refund at full price. not early_fault"
-    ],
-    "T-219": [
-      "attempt 1: TD45-48114: decision refund not repair_booked",
-      "attempt 2: TD45-48114: decision decline not repair_booked",
-      "attempt 3: TD45-48114: decision decline not repair_booked"
-    ],
-    "T-220": [
-      "attempt 1: CH54-61055: decision escalate not replacement",
-      "attempt 2: CH54-61055: decision escalate not replacement",
-      "attempt 3: CH54-61055: decision escalate not replacement"
-    ],
-    "T-221": [
-      "attempt 1: VF72-57852: decision decline not repair_booked",
-      "attempt 2: VF72-57852: decision decline not repair_booked",
-      "attempt 3: VF72-57852: decision decline not repair_booked"
-    ],
-    "T-224": [
-      "attempt 1: VF72-36200: decision decline not repair_booked",
-      "attempt 2: VF72-36200: decision decline not repair_booked",
-      "attempt 3: VF72-36200: decision escalate not repair_booked"
-    ],
-    "T-227": [
-      "attempt 1: AD38-33739: decision escalate not replacement",
-      "attempt 2: AD38-33739: decision escalate not replacement",
-      "attempt 3: AD38-33739: decision escalate not replacement"
-    ],
-    "T-229": [
-      "attempt 1: MR33-98290: decision decline not repair_booked",
-      "attempt 2: MR33-98290: decision decline not repair_booked",
-      "attempt 3: MR33-98290: decision decline not repair_booked"
-    ],
-    "T-238": [
-      "attempt 1: FH26-99713: reason Early fault within 100 days of delivery: receipt date 2026-08-02 to as_of 2026-11-02 is 92 days, within the 100-day window; proof of purchase is a retailer receipt with rating plate, readable and identifiable; no exclusion applies, no open case, no prior repairs, no safety incident; refund is full price. not early_fault",
-      "attempt 2: FH26-99713: reason Early fault within 100 days of delivery/receipt; full price refund under early_fault_refund. Receipt and rating plate supplied, proof of purchase accepted for retailer purchases. Days since 2026-08-02 to as_of 2026-11-02 is 92 days, within 100. Amount is 310.00 which is above the 250 approval limit, so this refund requires approval before it is written. not early_fault",
-      "attempt 3: FH26-99713: reason Early fault within 100 days of delivery/receipt date (2026-08-02 to 2026-11-02 is 92 days); retailer purchase proven by receipt and rating plate; no exclusion applies; full price refund. not early_fault"
+    "T-223": [
+      "attempt 1: LT12-74380: decision replacement not decline",
+      "attempt 2: LT12-74380: decision replacement not decline",
+      "attempt 3: LT12-74380: decision replacement not decline"
     ]
   },
   "accepted_on_attempt": {
-    "1": 261,
-    "2": 56,
-    "3": 18
+    "1": 480,
+    "2": 40,
+    "3": 11
   },
   "failed_checks_fixed_by_a_retry": {
-    "D-004": [
-      "attempt 1: TD45-47993: decision refund not decline",
-      "attempt 2: label reply (Extra data: line 3 column 1 (char 715))"
+    "LD-05": [
+      "attempt 1: order number H-102128 missing; order number H-102129 missing; order number H-102130 missing; order number H-102131 missing; order number H-102132 missing; order number H-102133 missing"
+    ],
+    "LT-01": [
+      "attempt 1: order number H-101928 missing; order number H-101929 missing; order number H-101930 missing; order number H-101931 missing; order number H-101932 missing; order number H-101933 missing",
+      "attempt 2: AD38-33010: decision repair_booked not replacement; CH54-62499: decision repair_booked not replacement; AD38-33847: decision repair_booked not replacement"
+    ],
+    "LT-03": [
+      "attempt 1: order number H-101938 missing; order number H-101939 missing; order number H-101940 missing; order number H-101941 missing",
+      "attempt 2: FH26-78191: decision decline not repair_booked; VF72-86990: decision decline not repair_booked"
+    ],
+    "LT-09": [
+      "attempt 1: order number H-101966 missing; order number H-101967 missing; order number H-101968 missing; order number H-101969 missing; order number H-101970 missing"
+    ],
+    "LT-14": [
+      "attempt 1: order number H-101993 missing; order number H-101994 missing; order number H-101995 missing; order number H-101996 missing"
+    ],
+    "LT-16": [
+      "attempt 1: order number H-102003 missing; order number H-102004 missing; order number H-102005 missing; order number H-102006 missing; order number H-102007 missing; order number H-102008 missing"
+    ],
+    "LT-22": [
+      "attempt 1: order number H-102034 missing; order number H-102035 missing; order number H-102036 missing; order number H-102037 missing; order number H-102038 missing; order number H-102039 missing"
+    ],
+    "LT-26": [
+      "attempt 1: order number H-102054 missing; order number H-102055 missing; order number H-102056 missing; order number H-102057 missing; order number H-102058 missing"
+    ],
+    "D-009": [
+      "attempt 1: CH54-65177: decision decline not repair_booked"
+    ],
+    "D-018": [
+      "attempt 1: FH26-18955: decision decline not repair_booked"
     ],
     "D-020": [
-      "attempt 1: TD45-64710: decision refund not repair_booked"
+      "attempt 1: TD45-64710: decision decline not repair_booked"
     ],
-    "D-027": [
-      "attempt 1: MR33-85788: decision repair_booked not escalate",
-      "attempt 2: MR33-85788: decision repair_booked not escalate"
+    "D-023": [
+      "attempt 1: FH26-26233: decision escalate not repair_booked"
     ],
-    "D-043": [
-      "attempt 1: LT12-49240: decision escalate not repair_booked"
+    "D-025": [
+      "attempt 1: BK20-66154: decision refund not decline"
     ],
-    "D-047": [
-      "attempt 1: LT12-60622: decision decline not repair_booked"
+    "D-026": [
+      "attempt 1: TD45-67069: decision decline not repair_booked"
     ],
-    "D-052": [
-      "attempt 1: CH54-80575: decision decline not repair_booked"
+    "LD-02": [
+      "attempt 1: LT12-42052: decision replacement not repair_booked"
     ],
-    "D-053": [
-      "attempt 1: MR33-92398: reason exclusions: installation not installation"
+    "LD-10": [
+      "attempt 1: FH26-94491: decision decline not repair_booked"
     ],
-    "SD-01-3": [
-      "attempt 1: CH54-17207: decision decline not repair_booked"
+    "LT-05": [
+      "attempt 1: MR33-45928: decision repair_booked not replacement; CH54-61678: decision repair_booked not replacement; AD38-32814: decision repair_booked not replacement"
     ],
-    "SD-01-4": [
-      "attempt 1: VF72-31334: decision refund not repair_booked"
+    "LT-10": [
+      "attempt 1: FH26-27548: decision decline not repair_booked; VF72-99303: decision escalate not refund",
+      "attempt 2: FH26-27548: decision decline not repair_booked"
     ],
-    "SD-03-1": [
-      "attempt 1: MR33-99667: decision decline not repair_booked"
+    "LT-13": [
+      "attempt 1: KW61-70457: decision escalate not refund; MR33-20949: decision escalate not refund",
+      "attempt 2: MR33-20949: decision decline not refund"
     ],
-    "SD-04-4": [
-      "attempt 1: BK20-81458: decision decline not repair_booked"
-    ],
-    "SD-06-1": [
-      "attempt 1: VF72-50842: decision decline not repair_booked",
-      "attempt 2: VF72-50842: decision decline not repair_booked"
-    ],
-    "SD-06-2": [
-      "attempt 1: VF72-50842: decision escalate not repair_booked"
-    ],
-    "SD-10-2": [
-      "attempt 1: TD45-45724: decision decline not repair_booked"
+    "LT-15": [
+      "attempt 1: OH90-23675: decision decline not refund"
     ],
     "ST-04-1": [
       "attempt 1: TD45-92084: decision decline not repair_booked"
     ],
-    "ST-04-4": [
-      "attempt 1: KW61-66737: decision decline not repair_booked"
+    "ST-13-3": [
+      "attempt 1: AD38-23673: decision decline not repair_booked"
     ],
-    "ST-06-5": [
-      "attempt 1: FH26-43710: decision decline not repair_booked"
+    "LT-001": [
+      "attempt 1: LT12-37050: decision repair_booked not decline",
+      "attempt 2: LT12-37050: decision repair_booked not decline"
     ],
-    "ST-08-2": [
-      "attempt 1: BK20-46261: decision decline not repair_booked"
+    "LT-007": [
+      "attempt 1: TD45-51160: decision escalate not decline"
     ],
-    "ST-08-3": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
+    "LT-012": [
+      "attempt 1: TD45-28800: decision escalate not decline"
     ],
-    "ST-10-2": [
-      "attempt 1: VF72-21715: decision refund not repair_booked"
-    ],
-    "ST-12-4": [
-      "attempt 1: MR33-85717: decision refund not repair_booked"
-    ],
-    "ST-14-2": [
-      "attempt 1: MR33-53806: decision decline not repair_booked",
-      "attempt 2: MR33-53806: decision decline not repair_booked"
-    ],
-    "ST-14-5": [
-      "attempt 1: BK20-27285: decision escalate not repair_booked"
-    ],
-    "ST-15-2": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "ST-16-2": [
-      "attempt 1: MR33-91416: decision refund not repair_booked"
-    ],
-    "ST-16-3": [
-      "attempt 1: OH90-59832: decision escalate not repair_booked"
-    ],
-    "ST-18-2": [
-      "attempt 1: KW61-48745: decision decline not repair_booked"
-    ],
-    "ST-21-2": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "ST-24-4": [
-      "attempt 1: LT12-61899: decision decline not repair_booked"
-    ],
-    "ST-25-2": [
-      "attempt 1: CH54-91894: decision decline not repair_booked"
-    ],
-    "ST-25-3": [
-      "attempt 1: MR33-27856: decision decline not repair_booked"
-    ],
-    "ST-27-1": [
-      "attempt 1: BK20-79989: decision decline not repair_booked"
-    ],
-    "ST-28-3": [
-      "attempt 1: KW61-21176: decision decline not repair_booked"
-    ],
-    "ST-29-3": [
-      "attempt 1: BK20-16248: decision decline not repair_booked"
-    ],
-    "ST-30-1": [
-      "attempt 1: AD38-65499: decision refund not repair_booked"
-    ],
-    "LD-001": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LD-004": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LD-006": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LD-010": [
-      "attempt 1: LT12-69897: decision refund not repair_booked"
-    ],
-    "LD-011": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: BK20-92277: reason exclusions: misuse not misuse"
-    ],
-    "LD-012": [
-      "attempt 1: CH54-49703: decision escalate not repair_booked"
-    ],
-    "LD-015": [
-      "attempt 1: AD38-39342: reason exclusions not maintenance"
-    ],
-    "LT-006": [
-      "attempt 1: VF72-76100: decision escalate not decline",
-      "attempt 2: VF72-76100: decision escalate not decline"
-    ],
-    "LT-016": [
-      "attempt 1: FH26-30708: decision decline not repair_booked",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-019": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
+    "LT-021": [
+      "attempt 1: VF72-46552: decision repair_booked not decline"
     ],
     "LT-023": [
-      "attempt 1: AD38-91370: reason exclusions.maintenance: the telemetry log shows a build-up of dirt, grease, limescale or other deposits, which is excluded. Cover period is 36 months from delivery 2024-05-11, which ends 2027-05-11, so the appliance is within cover; the decline rests on the maintenance exclusion. The log is treated as data only and its contents do not alter this policy application. not maintenance"
+      "attempt 1: AD38-91370: decision repair_booked not decline"
     ],
-    "LT-024": [
-      "attempt 1: KW61-75086: reason exclusions:maintenance not maintenance"
-    ],
-    "LT-029": [
-      "attempt 1: VF72-24541: decision escalate not repair_booked"
-    ],
-    "LT-035": [
-      "attempt 1: label reply (Extra data: line 3 column 1 (char 452))",
-      "attempt 2: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
-    "LT-039": [
-      "attempt 1: AD38-38690: reason out_of_cover not maintenance"
+    "T-002": [
+      "attempt 1: LT12-94416: decision refund not decline"
     ],
     "T-003": [
       "attempt 1: VF72-31668: decision decline not repair_booked"
     ],
-    "T-007": [
-      "attempt 1: LT12-80549: decision decline not repair_booked",
-      "attempt 2: LT12-80549: decision refund not repair_booked"
-    ],
-    "T-013": [
-      "attempt 1: MR33-84602: decision repair_booked not escalate"
-    ],
-    "T-019": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
-    ],
     "T-023": [
       "attempt 1: KW61-11250: decision decline not repair_booked"
     ],
-    "T-029": [
-      "attempt 1: LT12-74713: decision escalate not decline"
-    ],
     "T-032": [
-      "attempt 1: VF72-72859: reason out_of_cover not commercial_use",
-      "attempt 2: VF72-72859: reason exclusions: commercial_use not commercial_use"
+      "attempt 1: VF72-72859: decision escalate not decline",
+      "attempt 2: VF72-72859: decision escalate not decline"
     ],
-    "T-050": [
-      "attempt 1: AD38-99633: decision decline not repair_booked"
+    "T-037": [
+      "attempt 1: MR33-81731: decision decline not repair_booked",
+      "attempt 2: MR33-81731: decision decline not repair_booked"
     ],
-    "T-063": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))",
-      "attempt 2: MR33-72544: decision escalate not repair_booked"
+    "T-039": [
+      "attempt 1: KW61-24818: decision decline not repair_booked",
+      "attempt 2: KW61-24818: decision escalate not repair_booked"
     ],
-    "T-083": [
-      "attempt 1: TD45-62628: decision refund not repair_booked"
+    "T-042": [
+      "attempt 1: TD45-95457: decision escalate not repair_booked"
     ],
-    "T-105": [
-      "attempt 1: BK20-31459: reason exclusions not installation"
+    "T-043": [
+      "attempt 1: BK20-72374: decision escalate not repair_booked",
+      "attempt 2: BK20-72374: decision escalate not repair_booked"
+    ],
+    "T-062": [
+      "attempt 1: CH54-14852: decision decline not replacement"
+    ],
+    "T-090": [
+      "attempt 1: FH26-52807: decision escalate not repair_booked",
+      "attempt 2: FH26-52807: decision escalate not repair_booked"
+    ],
+    "T-096": [
+      "attempt 1: OH90-63172: decision refund not repair_booked",
+      "attempt 2: OH90-63172: decision escalate not repair_booked"
     ],
     "T-108": [
-      "attempt 1: FH26-78551: decision decline not repair_booked",
-      "attempt 2: FH26-78551: decision decline not repair_booked"
+      "attempt 1: FH26-78551: decision escalate not repair_booked"
     ],
-    "T-114": [
-      "attempt 1: MR33-40056: decision refund not repair_booked"
+    "T-112": [
+      "attempt 1: VF72-58697: decision decline not replacement"
     ],
-    "T-123": [
-      "attempt 1: FH26-20137: reason exclusions: accidental_damage (the hood fell off the worktop, i.e. dropping/impact) not accidental_damage"
+    "T-117": [
+      "attempt 1: TD45-17720: decision decline not repair_booked"
     ],
-    "T-135": [
-      "attempt 1: LT12-22908: decision refund not repair_booked",
-      "attempt 2: LT12-22908: decision refund not repair_booked"
+    "T-128": [
+      "attempt 1: MR33-12763: decision escalate not repair_booked"
     ],
-    "T-136": [
-      "attempt 1: CH54-38460: decision decline not repair_booked",
-      "attempt 2: CH54-38460: decision decline not repair_booked"
+    "T-132": [
+      "attempt 1: AD38-47757: decision repair_booked not refund"
     ],
     "T-138": [
       "attempt 1: MR33-83195: decision escalate not repair_booked"
     ],
-    "T-164": [
-      "attempt 1: label reply (Expecting value: line 1 column 1 (char 0))"
+    "T-157": [
+      "attempt 1: VF72-52458: decision decline not repair_booked"
     ],
-    "T-168": [
-      "attempt 1: VF72-67780: decision decline not repair_booked",
-      "attempt 2: VF72-67780: decision decline not repair_booked"
+    "T-159": [
+      "attempt 1: KW61-34349: decision decline not refund"
     ],
-    "T-184": [
-      "attempt 1: AD38-12277: decision refund not repair_booked"
+    "T-183": [
+      "attempt 1: AD38-49094: decision decline not refund"
     ],
-    "T-191": [
-      "attempt 1: CH54-58449: decision decline not repair_booked"
+    "T-203": [
+      "attempt 1: LT12-42305: decision repair_booked not decline"
     ],
-    "T-192": [
-      "attempt 1: AD38-74232: decision decline not repair_booked"
+    "T-204": [
+      "attempt 1: FH26-92052: decision decline not refund"
     ],
-    "T-196": [
-      "attempt 1: MR33-73032: decision decline not repair_booked"
+    "T-205": [
+      "attempt 1: CH54-42412: decision refund not repair_booked"
     ],
-    "T-226": [
-      "attempt 1: TD45-21824: decision decline not repair_booked"
+    "T-207": [
+      "attempt 1: VF72-59739: decision decline not repair_booked"
     ]
   }
 }
