@@ -22,9 +22,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E6 |
 | Title | How much data does tuning need? |
-| Hub slug | `how-much-data-does-tuning-need` (proposed; confirm) |
+| Hub slug | `how-much-data-does-tuning-need` (as on the hub) |
 | Deck file | `bk-s4-e6-how-much-data-does-tuning-need-v1.pdf` |
-| Hub format | `experiment` |
+| Hub format | `explainer` |
 
 ## The argument
 

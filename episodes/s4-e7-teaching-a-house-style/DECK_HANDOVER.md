@@ -22,9 +22,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E7 |
 | Title | Teaching a house style |
-| Hub slug | `teaching-a-house-style` (proposed; confirm) |
+| Hub slug | `teaching-a-house-style` (as on the hub) |
 | Deck file | `bk-s4-e7-teaching-a-house-style-v1.pdf` |
-| Hub format | `experiment` |
+| Hub format | `explainer` |
 
 ## The argument
 

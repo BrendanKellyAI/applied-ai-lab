@@ -20,7 +20,7 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E2 |
 | Title | Instructions first |
-| Hub slug | `instructions-first` (proposed; confirm) |
+| Hub slug | `instructions-first` (as on the hub) |
 | Deck file | `bk-s4-e2-instructions-first-v1.pdf` |
 | Hub format | `explainer` |
 

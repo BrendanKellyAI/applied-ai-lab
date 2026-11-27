@@ -21,9 +21,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E10 |
 | Title | Field note: what does tuning break? |
-| Hub slug | `what-does-tuning-break` (proposed; confirm) |
+| Hub slug | `what-does-tuning-break` (as on the hub) |
 | Deck file | `bk-s4-e10-what-does-tuning-break-v1.pdf` |
-| Hub format | `field-note` |
+| Hub format | `field_note` |
 
 ## The argument
 

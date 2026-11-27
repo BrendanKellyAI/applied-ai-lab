@@ -21,9 +21,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E12 |
 | Title | Prompt, retrieve, or tune? |
-| Hub slug | `prompt-retrieve-or-tune-decision` (proposed; confirm) |
-| Deck file | `bk-s4-e12-prompt-retrieve-or-tune-decision-v1.pdf` |
-| Hub format | `decision` |
+| Hub slug | `choosing-the-fix` (as on the hub) |
+| Deck file | `bk-s4-e12-choosing-the-fix-v1.pdf` |
+| Hub format | `decision_framework` |
 
 ## The argument
 

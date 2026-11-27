@@ -23,8 +23,8 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E0 |
 | Title | Season 4: Adapting models |
-| Hub slug | `season-4-intro` (proposed; confirm) |
-| Deck file | `bk-s4-e0-season-intro-v1.pdf` |
+| Hub slug | `season-intro` (as on the hub) |
+| Deck file | `bk-s4-e0-season-intro-v3.pdf` (published 26 November 2026; a rebuild is v4) |
 | Hub format | `season_intro` |
 
 ## The argument

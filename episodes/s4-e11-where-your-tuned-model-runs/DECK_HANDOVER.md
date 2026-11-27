@@ -20,9 +20,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E11 |
 | Title | Where your tuned model runs |
-| Hub slug | `where-your-tuned-model-runs` (proposed; confirm) |
+| Hub slug | `where-your-tuned-model-runs` (as on the hub) |
 | Deck file | `bk-s4-e11-where-your-tuned-model-runs-v1.pdf` |
-| Hub format | `experiment` |
+| Hub format | `explainer` |
 
 The plan's title was "Open weights: tuning a model you host". No provider offered tuning through
 its API this season, so every tuned model was already one you host; Brendan chose on 24 November

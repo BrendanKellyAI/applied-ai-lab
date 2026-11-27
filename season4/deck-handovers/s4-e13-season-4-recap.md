@@ -20,8 +20,8 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E13 |
 | Title | Season 4 recap: the adaptation card |
-| Hub slug | `season-4-recap` (proposed; confirm) |
-| Deck file | `bk-s4-e13-season-4-recap-v1.pdf` |
+| Hub slug | `recap` (as on the hub) |
+| Deck file | `bk-s4-e13-recap-v1.pdf` |
 | Hub format | `recap` |
 
 ## The argument

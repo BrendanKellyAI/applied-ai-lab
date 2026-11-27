@@ -22,7 +22,7 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E4 |
 | Title | Making output a contract |
-| Hub slug | `making-output-a-contract` (proposed; confirm) |
+| Hub slug | `making-output-a-contract` (as on the hub) |
 | Deck file | `bk-s4-e4-making-output-a-contract-v1.pdf` |
 | Hub format | `explainer` |
 
