@@ -90,3 +90,21 @@ Only the decline set makes calls: 360 judge calls, $0.88 expected, $1.21 ceiling
 - **Code-scored bleed** catches only the two tuned formats; a reply that is merely terser or more
   formal is not counted.
 - **The judge is a model**, checked against a person in Season 2 E3.
+
+## Amendment 1, 27 November 2026: smaller batches for long prompts
+
+The first job, `e10-base`, ran out of GPU memory while answering the decline set, before any
+prediction was saved (attempt 1, recorded as failed in `results/e10-base/job.json`). The decline
+prompts carry the reference system's retrieved passages, up to about 6,000 tokens, and the
+notebook (v2) answered 16 prompts at a time whatever their length.
+
+The notebook is now v3 (`src/lab/adapt/notebook.py`): a batch holds up to 16 prompts, and also
+keeps its size times (longest prompt + new tokens) squared under 40 million, so long prompts run
+1 to 4 at a time and a prompt over that runs alone. Batching changes how many prompts share the
+GPU, not what any prompt says; decoding is still greedy. Every job in Season 4 so far would have
+batched the same way under v3.
+
+Brendan approved on 27 November 2026 relaunching `e10-base` (attempt 2) and running
+`e10-tuned-triage` and `e10-tuned-replies`, all three on notebook v3. The prompts, models,
+adapters, settings, claims and pass marks are unchanged. Colab time is now about 20 to 25
+minutes a job.
