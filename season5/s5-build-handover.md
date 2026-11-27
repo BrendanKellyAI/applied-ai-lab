@@ -1,7 +1,7 @@
 # Season 5 build handover: Agents
 
-For the coding agent. Prepared 27 November 2026. The season plan is agreed: read
-`season5/README.md` (the season guide) first, then this whole file before starting. Titles,
+For the coding agent. Prepared 27 November 2026 and updated the same day after Season 4 merged
+to `main`. The season plan is agreed: read `season5/README.md` (the season guide) first, then this whole file before starting. Titles,
 slugs, acts and the running case are fixed. Designs below are proposals for Gate 1 unless marked
 as decided.
 
@@ -38,10 +38,15 @@ These are not optional. They carry over from Season 4 unless stated.
 - **Cheapest model for everything in the experiment code.** Every model call uses the cheapest
   model that does the job, in every role: agent, planner, critic, specialist, summariser, data
   generator, label checker and judge.
-  - Defaults: `gpt-6-luna` for the agent (reasoning off), `gemini-3.1-flash-lite` for data
-    generation (it must not be an agent model, by the conflict of interest rule),
-    `claude-haiku-5-5` as label checker, `gemini-3.6-flash` as judge where a judge is needed
-    (E5 only). Re-check each against Season 4's `PLAN.md` section 2 and current prices.
+  - Defaults, the same roles Season 4 used (`season4/README.md`, Models):
+    - Agent: `gpt-6-luna`, reasoning off.
+    - Data generation: `gemini-3.1-flash-lite` (it must not be an agent model, by the conflict
+      of interest rule).
+    - Label checker: `claude-haiku-5-5`.
+    - Judge, E5 only: `gemini-3.6-flash`, the S2 and S4 judge, so E5 scores compare with S2.
+      Its price doubles from 1 January 2027 (`capabilities.yaml`); state at the E5 gate whether
+      a cheaper judge has passed the judge check, and use it if so.
+    - Re-check each against current prices before Gate 1.
   - **Tool calling and image input** must be verified for the agent model before Gate 1. If
     `gpt-6-luna` lacks image input, propose the cheapest model that has it for E6 only, and name
     it as an exception.
@@ -89,10 +94,10 @@ These are not optional. They carry over from Season 4 unless stated.
   the first spend gate.
 - **Writing.** No em dashes or en dashes anywhere: code comments, data, Markdown, commit
   messages. British spelling. Every figure says what it measures and out of how many.
-- **Branches.** Work on `s5` in `applied-ai-lab`. It is already created from the tip of `s4`
-  (4369aaf), because Season 5 builds on S4 Task A and Season 4 has not merged. Rebase onto
-  `main` once Season 4 merges, and say so in the first pull request. In the hub, use a feature
-  branch (`s5-hub`). Open pull requests; Brendan merges.
+- **Branches.** Work on `s5` in `applied-ai-lab`. It already exists and holds all of Season 4:
+  `main` (Season 4 merged in pull request #31) was merged into `s5` on 27 November 2026
+  (b22c381). Do not rebase it. Open the season pull request from `s5` to `main`. In the hub,
+  use a feature branch (`s5-hub`). Brendan merges.
 
 ## 3. How Season 5 connects to the series
 
@@ -101,21 +106,33 @@ These are not optional. They carry over from Season 4 unless stated.
 - **S3 E5** set the levels of autonomy (assist, automate, act). E11 builds the approval points
   that make those levels real. Do not re-present S3 E5; one line and a pointer.
 - **S4 Task A** (triage with a safety flag) is the first thing the agent does with a customer
-  message. Reuse the S4 reference prompt for triage and say where it came from.
+  message. Reuse the S4 reference for triage as it stands in `season4/reference.yaml`: arm
+  `e2-definitions` from S4 E2 (`gpt-6-luna`, reasoning off, the definitions instructions in
+  `src/lab/adapt/prompts.py`, free text output), 587 of 600 fully right. Import it from
+  `lab.adapt` rather than copying it, and say where it came from.
+- **S4's main finding** was that writing the rules down did most of the work (triage 521 to 587
+  of 600 with definitions; house style 0 to 215 of 300 with the style guide). E3 (tool
+  descriptions) and E9 (rules in the prompt against rules in code) test the agent version of that
+  finding; their handovers should say so in one line.
+- **S4 E11** ran the tuned model on a laptop through Ollama. Season 5 does not use open models;
+  the agent runs on the provider APIs only.
 - **S4 E4** stopped at structured output and left tool calling to S5. E2 opens there.
 - **S1 E6 and E7** (context windows, lost in the middle) are the refreshers for E8.
 - **S1 E2** (tokens) is the refresher for image cost in E6.
 
 ## 4. The season
 
-Titles, slugs and acts are fixed by `season5/README.md`. Hub formats: use the values Seasons 2
-to 4 used for the same kinds of episode (check `data/episodes/s4-*.yaml` in the hub for
-`season_intro`, experiment, `decision_framework` and `recap`). Deck files follow
-`bk-s5-e<N>-<slug>-v1.pdf`. Episode folders follow `episodes/s5-e<N>-<slug>/`.
+Titles, slugs and acts are fixed by `season5/README.md`. Hub formats follow what Season 4 used
+on the hub: `season_intro` for E0, `explainer` for the teaching episodes with experiments (S4 E2
+to E4 used it), `decision_framework` for E15 and `recap` for E16. Check
+`data/episodes/s4-*.yaml` in the hub and match it. No Season 5 episode is a field note. Deck
+files follow `bk-s5-e<N>-<slug>-v1.pdf`. Episode folders follow `episodes/s5-e<N>-<slug>/`.
+In each deck handover, give the slug and add "(as on the hub)" once the hub pull request has
+merged, as Season 4 did.
 
 | Ep | Slug | What you build |
 |---|---|---|
-| E0 | `season-5-intro` | Deck handover |
+| E0 | `season-intro` | Deck handover |
 | E1 | `agents-or-pipelines` | Fixed pipeline and baseline agent on the test cases |
 | E2 | `tool-calling-loop` | The minimal loop, a replayed trajectory, the loop's line count |
 | E3 | `tool-design` | Tool description, schema and error handling arms |
@@ -131,7 +148,7 @@ to 4 used for the same kinds of episode (check `data/episodes/s4-*.yaml` in the 
 | E13 | `multi-agent-systems` | Single agent against router and specialists |
 | E14 | `mcp` | The Halvard MCP server and a parity run |
 | E15 | `agent-frameworks` | Decision card section, no new calls |
-| E16 | `season-5-recap` | Recap numbers, agent card, deck handover |
+| E16 | `recap` | Recap numbers, agent card, deck handover |
 
 ## 5. Repository layout
 
@@ -502,7 +519,7 @@ build spec, and run `uv run python -m hub.validation`, `pytest` and `ruff`.
    "From a model that answers to a system that acts: tool calling, memory, sandboxes, human
    approval, MCP, and the code that keeps an agent in bounds."
 2. **Episode files.** `data/episodes/s5-e0-*.yaml` to `s5-e16-*.yaml`, all `status: planned`,
-   with the titles and slugs in `season5/README.md`.
+   with the titles, slugs and formats in `season5/README.md` and section 4.
 3. **Tools section:** the agent card, the safety checklist and the case environment, pointing to
    files on `main` (links work after merge).
 4. **Course map, optional:** E5 to S2, E11 to S3 E5, E2 to S4 E4, E8 to S1 E6 and E7.
@@ -569,10 +586,12 @@ Raise these at Gate 1. Do not decide them yourself.
 4. **Second MCP client for E14:** the MCP Inspector or Claude Desktop.
 5. **Optional arms:** E4 with low reasoning, E13 planner with workers. Off by default.
 6. **Merge timing:** merge the dataset, harness and tools before E0 publishes, so hub links work.
+7. **E5 judge:** keep `gemini-3.6-flash` after its 1 January 2027 price rise, or a cheaper judge
+   that passes the judge check.
 
 ## 12. Order of work and gates
 
-1. On `s5`: re-verify models (tool calling, image input) in `capabilities.yaml`. Extend the
+1. On `s5` (already up to date with `main`): re-verify models (tool calling, image input) in `capabilities.yaml`. Extend the
    provider layer and the mock provider, with tests. Draft `policy.yaml`, the world schema and
    the case plan.
 2. **Gate 1:** send the case plan, the policy, the model checks, the token method and the open

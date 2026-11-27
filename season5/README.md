@@ -1,6 +1,6 @@
 # Season 5: Agents, episode guide
 
-Status: agreed plan, 27 November 2026. Episode list, titles, slugs, acts, running case and scope approved by Brendan. Nothing is built yet; the build follows `s5-build-handover.md`.
+Status: agreed plan, 27 November 2026. Episode list, titles, slugs, acts, running case and scope approved by Brendan. Nothing is built yet; the build follows `s5-build-handover.md` in this folder.
 
 **Subtitle (proposed):** From a model that answers to a system that acts, and the code that keeps it in bounds
 
@@ -36,11 +36,11 @@ Status: agreed plan, 27 November 2026. Episode list, titles, slugs, acts, runnin
 
 ## Slugs and file names
 
-Hub page URLs follow `/episodes/<episode-code>-<slug>/`. Deck files follow `bk-s5-e<N>-<slug>-v1.pdf`. Episode folders in this repo follow `episodes/s5-e<N>-<slug>/`. E0 and E16 follow the Season 4 pattern (`season-4-intro`, `season-4-recap`).
+Hub page URLs follow `/episodes/<episode-code>-<slug>/`. Deck files follow `bk-s5-e<N>-<slug>-v1.pdf`. Episode folders in this repo follow `episodes/s5-e<N>-<slug>/`. E0 and E16 follow the slugs the hub uses for every season's intro and recap (`season-intro`, `recap`).
 
 | Ep | Slug | Deck file |
 |---|---|---|
-| E0 | `season-5-intro` | `bk-s5-e0-season-5-intro-v1.pdf` |
+| E0 | `season-intro` | `bk-s5-e0-season-intro-v1.pdf` |
 | E1 | `agents-or-pipelines` | `bk-s5-e1-agents-or-pipelines-v1.pdf` |
 | E2 | `tool-calling-loop` | `bk-s5-e2-tool-calling-loop-v1.pdf` |
 | E3 | `tool-design` | `bk-s5-e3-tool-design-v1.pdf` |
@@ -56,7 +56,7 @@ Hub page URLs follow `/episodes/<episode-code>-<slug>/`. Deck files follow `bk-s
 | E13 | `multi-agent-systems` | `bk-s5-e13-multi-agent-systems-v1.pdf` |
 | E14 | `mcp` | `bk-s5-e14-mcp-v1.pdf` |
 | E15 | `agent-frameworks` | `bk-s5-e15-agent-frameworks-v1.pdf` |
-| E16 | `season-5-recap` | `bk-s5-e16-season-5-recap-v1.pdf` |
+| E16 | `recap` | `bk-s5-e16-recap-v1.pdf` |
 
 ## Four acts
 
