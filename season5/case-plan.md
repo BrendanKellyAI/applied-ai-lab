@@ -24,7 +24,7 @@ written by a model. The model-written part of a case is only the customer's mess
 
 | Table | Size (proposed) | Notes |
 |---|---|---|
-| Customers | 400 | Invented names from many cultures; emails at `example.test`; one of the eight corpus regions |
+| Customers | 700 | One customer per case, so no case inherits history planted for another. Invented names from many cultures; emails at `example.test`; one of the eight corpus regions |
 | Orders | 1,500 | Across the ten products; delivery dates spread over seven years before `as_of`; about 15% with an Extended Care plan |
 | Retailer appliances | 150 | Bought elsewhere: no order, so receipt and rating plate photos are the only proof |
 | Recalls | 3 batches | Serial ranges on three products |

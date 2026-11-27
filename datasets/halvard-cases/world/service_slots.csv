@@ -1,0 +1,321 @@
+slot_id,region,starts,window_hours,taken
+S-1-001,Scotland North,2026-11-03T08:00:00,5,0
+S-1-002,Scotland North,2026-11-03T13:00:00,5,0
+S-1-003,Scotland North,2026-11-05T08:00:00,5,0
+S-1-004,Scotland North,2026-11-05T13:00:00,5,0
+S-1-005,Scotland North,2026-11-06T08:00:00,5,0
+S-1-006,Scotland North,2026-11-06T13:00:00,5,0
+S-1-007,Scotland North,2026-11-08T08:00:00,5,0
+S-1-008,Scotland North,2026-11-08T13:00:00,5,0
+S-1-009,Scotland North,2026-11-10T08:00:00,5,0
+S-1-010,Scotland North,2026-11-10T13:00:00,5,0
+S-1-011,Scotland North,2026-11-11T08:00:00,5,0
+S-1-012,Scotland North,2026-11-11T13:00:00,5,0
+S-1-013,Scotland North,2026-11-12T08:00:00,5,0
+S-1-014,Scotland North,2026-11-12T13:00:00,5,0
+S-1-015,Scotland North,2026-11-13T08:00:00,5,0
+S-1-016,Scotland North,2026-11-13T13:00:00,5,0
+S-1-017,Scotland North,2026-11-14T08:00:00,5,0
+S-1-018,Scotland North,2026-11-14T13:00:00,5,0
+S-1-019,Scotland North,2026-11-15T08:00:00,5,0
+S-1-020,Scotland North,2026-11-15T13:00:00,5,0
+S-1-021,Scotland North,2026-11-16T08:00:00,5,0
+S-1-022,Scotland North,2026-11-16T13:00:00,5,0
+S-1-023,Scotland North,2026-11-17T08:00:00,5,0
+S-1-024,Scotland North,2026-11-17T13:00:00,5,0
+S-1-025,Scotland North,2026-11-18T08:00:00,5,0
+S-1-026,Scotland North,2026-11-18T13:00:00,5,0
+S-1-027,Scotland North,2026-11-19T08:00:00,5,0
+S-1-028,Scotland North,2026-11-19T13:00:00,5,0
+S-1-029,Scotland North,2026-11-20T08:00:00,5,0
+S-1-030,Scotland North,2026-11-20T13:00:00,5,0
+S-1-031,Scotland North,2026-11-21T08:00:00,5,0
+S-1-032,Scotland North,2026-11-21T13:00:00,5,0
+S-1-033,Scotland North,2026-11-22T08:00:00,5,0
+S-1-034,Scotland North,2026-11-22T13:00:00,5,0
+S-1-035,Scotland North,2026-11-23T08:00:00,5,0
+S-1-036,Scotland North,2026-11-23T13:00:00,5,0
+S-1-037,Scotland North,2026-11-25T08:00:00,5,0
+S-1-038,Scotland North,2026-11-25T13:00:00,5,0
+S-1-039,Scotland North,2026-11-27T08:00:00,5,0
+S-1-040,Scotland North,2026-11-27T13:00:00,5,0
+S-2-001,Scotland South,2026-11-03T08:00:00,5,0
+S-2-002,Scotland South,2026-11-03T13:00:00,5,0
+S-2-003,Scotland South,2026-11-04T08:00:00,5,0
+S-2-004,Scotland South,2026-11-04T13:00:00,5,0
+S-2-005,Scotland South,2026-11-05T08:00:00,5,0
+S-2-006,Scotland South,2026-11-05T13:00:00,5,0
+S-2-007,Scotland South,2026-11-07T08:00:00,5,0
+S-2-008,Scotland South,2026-11-07T13:00:00,5,0
+S-2-009,Scotland South,2026-11-09T08:00:00,5,0
+S-2-010,Scotland South,2026-11-09T13:00:00,5,0
+S-2-011,Scotland South,2026-11-10T08:00:00,5,0
+S-2-012,Scotland South,2026-11-10T13:00:00,5,0
+S-2-013,Scotland South,2026-11-11T08:00:00,5,0
+S-2-014,Scotland South,2026-11-11T13:00:00,5,0
+S-2-015,Scotland South,2026-11-12T08:00:00,5,0
+S-2-016,Scotland South,2026-11-12T13:00:00,5,0
+S-2-017,Scotland South,2026-11-14T08:00:00,5,0
+S-2-018,Scotland South,2026-11-14T13:00:00,5,0
+S-2-019,Scotland South,2026-11-15T08:00:00,5,0
+S-2-020,Scotland South,2026-11-15T13:00:00,5,0
+S-2-021,Scotland South,2026-11-16T08:00:00,5,0
+S-2-022,Scotland South,2026-11-16T13:00:00,5,0
+S-2-023,Scotland South,2026-11-17T08:00:00,5,0
+S-2-024,Scotland South,2026-11-17T13:00:00,5,0
+S-2-025,Scotland South,2026-11-18T08:00:00,5,0
+S-2-026,Scotland South,2026-11-18T13:00:00,5,0
+S-2-027,Scotland South,2026-11-19T08:00:00,5,0
+S-2-028,Scotland South,2026-11-19T13:00:00,5,0
+S-2-029,Scotland South,2026-11-20T08:00:00,5,0
+S-2-030,Scotland South,2026-11-20T13:00:00,5,0
+S-2-031,Scotland South,2026-11-22T08:00:00,5,0
+S-2-032,Scotland South,2026-11-22T13:00:00,5,0
+S-2-033,Scotland South,2026-11-23T08:00:00,5,0
+S-2-034,Scotland South,2026-11-23T13:00:00,5,0
+S-2-035,Scotland South,2026-11-25T08:00:00,5,0
+S-2-036,Scotland South,2026-11-25T13:00:00,5,0
+S-2-037,Scotland South,2026-11-26T08:00:00,5,0
+S-2-038,Scotland South,2026-11-26T13:00:00,5,0
+S-2-039,Scotland South,2026-11-27T08:00:00,5,0
+S-2-040,Scotland South,2026-11-27T13:00:00,5,0
+S-3-001,North of England,2026-11-03T08:00:00,5,0
+S-3-002,North of England,2026-11-03T13:00:00,5,0
+S-3-003,North of England,2026-11-05T08:00:00,5,0
+S-3-004,North of England,2026-11-05T13:00:00,5,0
+S-3-005,North of England,2026-11-06T08:00:00,5,0
+S-3-006,North of England,2026-11-06T13:00:00,5,0
+S-3-007,North of England,2026-11-08T08:00:00,5,0
+S-3-008,North of England,2026-11-08T13:00:00,5,0
+S-3-009,North of England,2026-11-09T08:00:00,5,0
+S-3-010,North of England,2026-11-09T13:00:00,5,0
+S-3-011,North of England,2026-11-11T08:00:00,5,0
+S-3-012,North of England,2026-11-11T13:00:00,5,0
+S-3-013,North of England,2026-11-12T08:00:00,5,0
+S-3-014,North of England,2026-11-12T13:00:00,5,0
+S-3-015,North of England,2026-11-13T08:00:00,5,0
+S-3-016,North of England,2026-11-13T13:00:00,5,0
+S-3-017,North of England,2026-11-14T08:00:00,5,0
+S-3-018,North of England,2026-11-14T13:00:00,5,0
+S-3-019,North of England,2026-11-15T08:00:00,5,0
+S-3-020,North of England,2026-11-15T13:00:00,5,0
+S-3-021,North of England,2026-11-16T08:00:00,5,0
+S-3-022,North of England,2026-11-16T13:00:00,5,0
+S-3-023,North of England,2026-11-18T08:00:00,5,0
+S-3-024,North of England,2026-11-18T13:00:00,5,0
+S-3-025,North of England,2026-11-20T08:00:00,5,0
+S-3-026,North of England,2026-11-20T13:00:00,5,0
+S-3-027,North of England,2026-11-21T08:00:00,5,0
+S-3-028,North of England,2026-11-21T13:00:00,5,0
+S-3-029,North of England,2026-11-23T08:00:00,5,0
+S-3-030,North of England,2026-11-23T13:00:00,5,0
+S-3-031,North of England,2026-11-24T08:00:00,5,0
+S-3-032,North of England,2026-11-24T13:00:00,5,0
+S-3-033,North of England,2026-11-25T08:00:00,5,0
+S-3-034,North of England,2026-11-25T13:00:00,5,0
+S-3-035,North of England,2026-11-26T08:00:00,5,0
+S-3-036,North of England,2026-11-26T13:00:00,5,0
+S-3-037,North of England,2026-11-27T08:00:00,5,0
+S-3-038,North of England,2026-11-27T13:00:00,5,0
+S-3-039,North of England,2026-11-28T08:00:00,5,0
+S-3-040,North of England,2026-11-28T13:00:00,5,0
+S-4-001,Midlands,2026-11-03T08:00:00,5,0
+S-4-002,Midlands,2026-11-03T13:00:00,5,0
+S-4-003,Midlands,2026-11-04T08:00:00,5,0
+S-4-004,Midlands,2026-11-04T13:00:00,5,0
+S-4-005,Midlands,2026-11-06T08:00:00,5,0
+S-4-006,Midlands,2026-11-06T13:00:00,5,0
+S-4-007,Midlands,2026-11-07T08:00:00,5,0
+S-4-008,Midlands,2026-11-07T13:00:00,5,0
+S-4-009,Midlands,2026-11-08T08:00:00,5,0
+S-4-010,Midlands,2026-11-08T13:00:00,5,0
+S-4-011,Midlands,2026-11-09T08:00:00,5,0
+S-4-012,Midlands,2026-11-09T13:00:00,5,0
+S-4-013,Midlands,2026-11-10T08:00:00,5,0
+S-4-014,Midlands,2026-11-10T13:00:00,5,0
+S-4-015,Midlands,2026-11-11T08:00:00,5,0
+S-4-016,Midlands,2026-11-11T13:00:00,5,0
+S-4-017,Midlands,2026-11-13T08:00:00,5,0
+S-4-018,Midlands,2026-11-13T13:00:00,5,0
+S-4-019,Midlands,2026-11-14T08:00:00,5,0
+S-4-020,Midlands,2026-11-14T13:00:00,5,0
+S-4-021,Midlands,2026-11-15T08:00:00,5,0
+S-4-022,Midlands,2026-11-15T13:00:00,5,0
+S-4-023,Midlands,2026-11-16T08:00:00,5,0
+S-4-024,Midlands,2026-11-16T13:00:00,5,0
+S-4-025,Midlands,2026-11-17T08:00:00,5,0
+S-4-026,Midlands,2026-11-17T13:00:00,5,0
+S-4-027,Midlands,2026-11-18T08:00:00,5,0
+S-4-028,Midlands,2026-11-18T13:00:00,5,0
+S-4-029,Midlands,2026-11-19T08:00:00,5,0
+S-4-030,Midlands,2026-11-19T13:00:00,5,0
+S-4-031,Midlands,2026-11-20T08:00:00,5,0
+S-4-032,Midlands,2026-11-20T13:00:00,5,0
+S-4-033,Midlands,2026-11-21T08:00:00,5,0
+S-4-034,Midlands,2026-11-21T13:00:00,5,0
+S-4-035,Midlands,2026-11-22T08:00:00,5,0
+S-4-036,Midlands,2026-11-22T13:00:00,5,0
+S-4-037,Midlands,2026-11-23T08:00:00,5,0
+S-4-038,Midlands,2026-11-23T13:00:00,5,0
+S-4-039,Midlands,2026-11-24T08:00:00,5,0
+S-4-040,Midlands,2026-11-24T13:00:00,5,0
+S-5-001,Wales and West,2026-11-03T08:00:00,5,0
+S-5-002,Wales and West,2026-11-03T13:00:00,5,0
+S-5-003,Wales and West,2026-11-05T08:00:00,5,0
+S-5-004,Wales and West,2026-11-05T13:00:00,5,0
+S-5-005,Wales and West,2026-11-07T08:00:00,5,0
+S-5-006,Wales and West,2026-11-07T13:00:00,5,0
+S-5-007,Wales and West,2026-11-08T08:00:00,5,0
+S-5-008,Wales and West,2026-11-08T13:00:00,5,0
+S-5-009,Wales and West,2026-11-09T08:00:00,5,0
+S-5-010,Wales and West,2026-11-09T13:00:00,5,0
+S-5-011,Wales and West,2026-11-11T08:00:00,5,0
+S-5-012,Wales and West,2026-11-11T13:00:00,5,0
+S-5-013,Wales and West,2026-11-12T08:00:00,5,0
+S-5-014,Wales and West,2026-11-12T13:00:00,5,0
+S-5-015,Wales and West,2026-11-13T08:00:00,5,0
+S-5-016,Wales and West,2026-11-13T13:00:00,5,0
+S-5-017,Wales and West,2026-11-14T08:00:00,5,0
+S-5-018,Wales and West,2026-11-14T13:00:00,5,0
+S-5-019,Wales and West,2026-11-15T08:00:00,5,0
+S-5-020,Wales and West,2026-11-15T13:00:00,5,0
+S-5-021,Wales and West,2026-11-16T08:00:00,5,0
+S-5-022,Wales and West,2026-11-16T13:00:00,5,0
+S-5-023,Wales and West,2026-11-17T08:00:00,5,0
+S-5-024,Wales and West,2026-11-17T13:00:00,5,0
+S-5-025,Wales and West,2026-11-18T08:00:00,5,0
+S-5-026,Wales and West,2026-11-18T13:00:00,5,0
+S-5-027,Wales and West,2026-11-20T08:00:00,5,0
+S-5-028,Wales and West,2026-11-20T13:00:00,5,0
+S-5-029,Wales and West,2026-11-21T08:00:00,5,0
+S-5-030,Wales and West,2026-11-21T13:00:00,5,0
+S-5-031,Wales and West,2026-11-22T08:00:00,5,0
+S-5-032,Wales and West,2026-11-22T13:00:00,5,0
+S-5-033,Wales and West,2026-11-24T08:00:00,5,0
+S-5-034,Wales and West,2026-11-24T13:00:00,5,0
+S-5-035,Wales and West,2026-11-25T08:00:00,5,0
+S-5-036,Wales and West,2026-11-25T13:00:00,5,0
+S-5-037,Wales and West,2026-11-26T08:00:00,5,0
+S-5-038,Wales and West,2026-11-26T13:00:00,5,0
+S-5-039,Wales and West,2026-11-28T08:00:00,5,0
+S-5-040,Wales and West,2026-11-28T13:00:00,5,0
+S-6-001,London and South East,2026-11-03T08:00:00,5,0
+S-6-002,London and South East,2026-11-03T13:00:00,5,0
+S-6-003,London and South East,2026-11-05T08:00:00,5,0
+S-6-004,London and South East,2026-11-05T13:00:00,5,0
+S-6-005,London and South East,2026-11-06T08:00:00,5,0
+S-6-006,London and South East,2026-11-06T13:00:00,5,0
+S-6-007,London and South East,2026-11-07T08:00:00,5,0
+S-6-008,London and South East,2026-11-07T13:00:00,5,0
+S-6-009,London and South East,2026-11-09T08:00:00,5,0
+S-6-010,London and South East,2026-11-09T13:00:00,5,0
+S-6-011,London and South East,2026-11-11T08:00:00,5,0
+S-6-012,London and South East,2026-11-11T13:00:00,5,0
+S-6-013,London and South East,2026-11-13T08:00:00,5,0
+S-6-014,London and South East,2026-11-13T13:00:00,5,0
+S-6-015,London and South East,2026-11-15T08:00:00,5,0
+S-6-016,London and South East,2026-11-15T13:00:00,5,0
+S-6-017,London and South East,2026-11-16T08:00:00,5,0
+S-6-018,London and South East,2026-11-16T13:00:00,5,0
+S-6-019,London and South East,2026-11-17T08:00:00,5,0
+S-6-020,London and South East,2026-11-17T13:00:00,5,0
+S-6-021,London and South East,2026-11-18T08:00:00,5,0
+S-6-022,London and South East,2026-11-18T13:00:00,5,0
+S-6-023,London and South East,2026-11-20T08:00:00,5,0
+S-6-024,London and South East,2026-11-20T13:00:00,5,0
+S-6-025,London and South East,2026-11-22T08:00:00,5,0
+S-6-026,London and South East,2026-11-22T13:00:00,5,0
+S-6-027,London and South East,2026-11-23T08:00:00,5,0
+S-6-028,London and South East,2026-11-23T13:00:00,5,0
+S-6-029,London and South East,2026-11-24T08:00:00,5,0
+S-6-030,London and South East,2026-11-24T13:00:00,5,0
+S-6-031,London and South East,2026-11-25T08:00:00,5,0
+S-6-032,London and South East,2026-11-25T13:00:00,5,0
+S-6-033,London and South East,2026-11-26T08:00:00,5,0
+S-6-034,London and South East,2026-11-26T13:00:00,5,0
+S-6-035,London and South East,2026-11-27T08:00:00,5,0
+S-6-036,London and South East,2026-11-27T13:00:00,5,0
+S-6-037,London and South East,2026-11-28T08:00:00,5,0
+S-6-038,London and South East,2026-11-28T13:00:00,5,0
+S-6-039,London and South East,2026-11-30T08:00:00,5,0
+S-6-040,London and South East,2026-11-30T13:00:00,5,0
+S-7-001,Northern Ireland,2026-11-03T08:00:00,5,0
+S-7-002,Northern Ireland,2026-11-03T13:00:00,5,0
+S-7-003,Northern Ireland,2026-11-04T08:00:00,5,0
+S-7-004,Northern Ireland,2026-11-04T13:00:00,5,0
+S-7-005,Northern Ireland,2026-11-05T08:00:00,5,0
+S-7-006,Northern Ireland,2026-11-05T13:00:00,5,0
+S-7-007,Northern Ireland,2026-11-07T08:00:00,5,0
+S-7-008,Northern Ireland,2026-11-07T13:00:00,5,0
+S-7-009,Northern Ireland,2026-11-08T08:00:00,5,0
+S-7-010,Northern Ireland,2026-11-08T13:00:00,5,0
+S-7-011,Northern Ireland,2026-11-10T08:00:00,5,0
+S-7-012,Northern Ireland,2026-11-10T13:00:00,5,0
+S-7-013,Northern Ireland,2026-11-12T08:00:00,5,0
+S-7-014,Northern Ireland,2026-11-12T13:00:00,5,0
+S-7-015,Northern Ireland,2026-11-13T08:00:00,5,0
+S-7-016,Northern Ireland,2026-11-13T13:00:00,5,0
+S-7-017,Northern Ireland,2026-11-15T08:00:00,5,0
+S-7-018,Northern Ireland,2026-11-15T13:00:00,5,0
+S-7-019,Northern Ireland,2026-11-16T08:00:00,5,0
+S-7-020,Northern Ireland,2026-11-16T13:00:00,5,0
+S-7-021,Northern Ireland,2026-11-17T08:00:00,5,0
+S-7-022,Northern Ireland,2026-11-17T13:00:00,5,0
+S-7-023,Northern Ireland,2026-11-18T08:00:00,5,0
+S-7-024,Northern Ireland,2026-11-18T13:00:00,5,0
+S-7-025,Northern Ireland,2026-11-19T08:00:00,5,0
+S-7-026,Northern Ireland,2026-11-19T13:00:00,5,0
+S-7-027,Northern Ireland,2026-11-20T08:00:00,5,0
+S-7-028,Northern Ireland,2026-11-20T13:00:00,5,0
+S-7-029,Northern Ireland,2026-11-21T08:00:00,5,0
+S-7-030,Northern Ireland,2026-11-21T13:00:00,5,0
+S-7-031,Northern Ireland,2026-11-22T08:00:00,5,0
+S-7-032,Northern Ireland,2026-11-22T13:00:00,5,0
+S-7-033,Northern Ireland,2026-11-23T08:00:00,5,0
+S-7-034,Northern Ireland,2026-11-23T13:00:00,5,0
+S-7-035,Northern Ireland,2026-11-25T08:00:00,5,0
+S-7-036,Northern Ireland,2026-11-25T13:00:00,5,0
+S-7-037,Northern Ireland,2026-11-26T08:00:00,5,0
+S-7-038,Northern Ireland,2026-11-26T13:00:00,5,0
+S-7-039,Northern Ireland,2026-11-27T08:00:00,5,0
+S-7-040,Northern Ireland,2026-11-27T13:00:00,5,0
+S-8-001,Island Areas,2026-11-03T08:00:00,5,0
+S-8-002,Island Areas,2026-11-03T13:00:00,5,0
+S-8-003,Island Areas,2026-11-04T08:00:00,5,0
+S-8-004,Island Areas,2026-11-04T13:00:00,5,0
+S-8-005,Island Areas,2026-11-06T08:00:00,5,0
+S-8-006,Island Areas,2026-11-06T13:00:00,5,0
+S-8-007,Island Areas,2026-11-08T08:00:00,5,0
+S-8-008,Island Areas,2026-11-08T13:00:00,5,0
+S-8-009,Island Areas,2026-11-09T08:00:00,5,0
+S-8-010,Island Areas,2026-11-09T13:00:00,5,0
+S-8-011,Island Areas,2026-11-11T08:00:00,5,0
+S-8-012,Island Areas,2026-11-11T13:00:00,5,0
+S-8-013,Island Areas,2026-11-13T08:00:00,5,0
+S-8-014,Island Areas,2026-11-13T13:00:00,5,0
+S-8-015,Island Areas,2026-11-14T08:00:00,5,0
+S-8-016,Island Areas,2026-11-14T13:00:00,5,0
+S-8-017,Island Areas,2026-11-15T08:00:00,5,0
+S-8-018,Island Areas,2026-11-15T13:00:00,5,0
+S-8-019,Island Areas,2026-11-16T08:00:00,5,0
+S-8-020,Island Areas,2026-11-16T13:00:00,5,0
+S-8-021,Island Areas,2026-11-18T08:00:00,5,0
+S-8-022,Island Areas,2026-11-18T13:00:00,5,0
+S-8-023,Island Areas,2026-11-19T08:00:00,5,0
+S-8-024,Island Areas,2026-11-19T13:00:00,5,0
+S-8-025,Island Areas,2026-11-20T08:00:00,5,0
+S-8-026,Island Areas,2026-11-20T13:00:00,5,0
+S-8-027,Island Areas,2026-11-22T08:00:00,5,0
+S-8-028,Island Areas,2026-11-22T13:00:00,5,0
+S-8-029,Island Areas,2026-11-24T08:00:00,5,0
+S-8-030,Island Areas,2026-11-24T13:00:00,5,0
+S-8-031,Island Areas,2026-11-26T08:00:00,5,0
+S-8-032,Island Areas,2026-11-26T13:00:00,5,0
+S-8-033,Island Areas,2026-11-27T08:00:00,5,0
+S-8-034,Island Areas,2026-11-27T13:00:00,5,0
+S-8-035,Island Areas,2026-11-29T08:00:00,5,0
+S-8-036,Island Areas,2026-11-29T13:00:00,5,0
+S-8-037,Island Areas,2026-12-01T08:00:00,5,0
+S-8-038,Island Areas,2026-12-01T13:00:00,5,0
+S-8-039,Island Areas,2026-12-03T08:00:00,5,0
+S-8-040,Island Areas,2026-12-03T13:00:00,5,0

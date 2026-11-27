@@ -1,0 +1,225 @@
+serial,product,customer_id,receipt_date,price
+LT12-59673,Lumen smart thermostat,C-0410,2026-08-06,180.0
+TD45-86947,Tessa dishwasher,C-0095,2023-11-09,520.0
+MR33-83809,Mira robot vacuum,C-0447,2026-04-26,380.0
+LT12-52297,Lumen smart thermostat,C-0195,2026-06-08,180.0
+MR33-83259,Mira robot vacuum,C-0421,2023-01-31,380.0
+CH54-67526,Corra induction hob,C-0448,2025-12-10,650.0
+KW61-59089,Keel washing machine,C-0122,2021-10-07,610.0
+AD38-35855,Ashby tumble dryer,C-0589,2021-02-11,430.0
+KW61-30961,Keel washing machine,C-0417,2026-05-10,610.0
+KW61-99464,Keel washing machine,C-0268,2024-01-08,610.0
+TD45-41496,Tessa dishwasher,C-0078,2025-12-21,520.0
+VF72-99346,Vale fridge freezer,C-0002,2023-12-18,890.0
+TD45-92980,Tessa dishwasher,C-0599,2024-12-21,520.0
+AD38-36556,Ashby tumble dryer,C-0161,2026-01-05,430.0
+FH26-78238,Fenwick cooker hood,C-0209,2025-04-30,310.0
+BK20-42288,Brio kettle,C-0550,2023-04-07,45.0
+BK20-84352,Brio kettle,C-0282,2024-12-03,45.0
+TD45-31793,Tessa dishwasher,C-0446,2025-05-08,520.0
+BK20-14914,Brio kettle,C-0048,2025-07-01,45.0
+BK20-35708,Brio kettle,C-0136,2025-01-05,45.0
+KW61-67714,Keel washing machine,C-0480,2022-03-10,610.0
+BK20-25494,Brio kettle,C-0125,2026-04-08,45.0
+AD38-18913,Ashby tumble dryer,C-0263,2026-03-15,430.0
+MR33-54419,Mira robot vacuum,C-0513,2024-03-21,380.0
+AD38-50318,Ashby tumble dryer,C-0051,2025-05-11,430.0
+FH26-62678,Fenwick cooker hood,C-0069,2024-12-25,310.0
+VF72-20335,Vale fridge freezer,C-0608,2022-12-01,890.0
+OH90-25230,Orrin heat pump,C-0062,2025-07-05,4800.0
+OH90-23523,Orrin heat pump,C-0341,2022-11-07,4800.0
+FH26-20359,Fenwick cooker hood,C-0658,2022-11-27,310.0
+LT12-82040,Lumen smart thermostat,C-0378,2025-08-11,180.0
+AD38-97238,Ashby tumble dryer,C-0563,2025-06-01,430.0
+KW61-93480,Keel washing machine,C-0671,2024-12-07,610.0
+OH90-36413,Orrin heat pump,C-0008,2026-02-24,4800.0
+MR33-72508,Mira robot vacuum,C-0389,2022-04-20,380.0
+AD38-81202,Ashby tumble dryer,C-0221,2022-10-02,430.0
+MR33-23940,Mira robot vacuum,C-0463,2021-05-17,380.0
+CH54-54159,Corra induction hob,C-0700,2025-01-01,650.0
+BK20-21084,Brio kettle,C-0144,2023-08-12,45.0
+AD38-64739,Ashby tumble dryer,C-0446,2022-10-14,430.0
+CH54-96203,Corra induction hob,C-0462,2022-09-19,650.0
+AD38-80661,Ashby tumble dryer,C-0695,2024-03-08,430.0
+VF72-50940,Vale fridge freezer,C-0219,2025-10-08,890.0
+VF72-96942,Vale fridge freezer,C-0522,2025-09-23,890.0
+LT12-25260,Lumen smart thermostat,C-0613,2024-09-04,180.0
+KW61-58526,Keel washing machine,C-0373,2022-08-21,610.0
+VF72-66763,Vale fridge freezer,C-0606,2022-08-04,890.0
+AD38-79228,Ashby tumble dryer,C-0345,2024-08-05,430.0
+KW61-53265,Keel washing machine,C-0171,2024-12-09,610.0
+OH90-72256,Orrin heat pump,C-0182,2026-02-12,4800.0
+VF72-76661,Vale fridge freezer,C-0640,2026-03-25,890.0
+MR33-40990,Mira robot vacuum,C-0505,2024-05-19,380.0
+AD38-79316,Ashby tumble dryer,C-0568,2026-05-27,430.0
+OH90-26536,Orrin heat pump,C-0562,2024-03-18,4800.0
+KW61-59713,Keel washing machine,C-0558,2024-11-28,610.0
+BK20-99460,Brio kettle,C-0338,2025-06-02,45.0
+LT12-26990,Lumen smart thermostat,C-0347,2025-01-25,180.0
+BK20-73011,Brio kettle,C-0326,2025-01-29,45.0
+VF72-61170,Vale fridge freezer,C-0066,2025-04-20,890.0
+CH54-31188,Corra induction hob,C-0088,2025-04-17,650.0
+MR33-75672,Mira robot vacuum,C-0144,2026-04-09,380.0
+VF72-17822,Vale fridge freezer,C-0130,2026-06-15,890.0
+BK20-24312,Brio kettle,C-0368,2022-05-13,45.0
+CH54-32116,Corra induction hob,C-0562,2023-07-05,650.0
+CH54-31131,Corra induction hob,C-0262,2022-12-13,650.0
+VF72-68469,Vale fridge freezer,C-0227,2026-05-01,890.0
+LT12-12850,Lumen smart thermostat,C-0313,2022-09-15,180.0
+TD45-50969,Tessa dishwasher,C-0364,2026-06-15,520.0
+BK20-84243,Brio kettle,C-0555,2025-07-31,45.0
+LT12-34135,Lumen smart thermostat,C-0390,2022-08-31,180.0
+OH90-73418,Orrin heat pump,C-0453,2022-02-20,4800.0
+TD45-75233,Tessa dishwasher,C-0559,2024-01-19,520.0
+TD45-77338,Tessa dishwasher,C-0587,2025-05-02,520.0
+BK20-80460,Brio kettle,C-0566,2024-01-30,45.0
+TD45-79440,Tessa dishwasher,C-0257,2025-05-02,520.0
+LT12-23413,Lumen smart thermostat,C-0611,2025-06-15,180.0
+LT12-21059,Lumen smart thermostat,C-0067,2025-08-31,180.0
+BK20-45617,Brio kettle,C-0147,2022-08-18,45.0
+LT12-25591,Lumen smart thermostat,C-0121,2026-07-03,180.0
+TD45-57985,Tessa dishwasher,C-0161,2024-06-17,520.0
+TD45-10029,Tessa dishwasher,C-0408,2026-02-24,520.0
+OH90-95190,Orrin heat pump,C-0032,2026-06-27,4800.0
+AD38-66822,Ashby tumble dryer,C-0374,2021-10-11,430.0
+BK20-59336,Brio kettle,C-0364,2025-03-23,45.0
+MR33-54769,Mira robot vacuum,C-0537,2025-06-15,380.0
+AD38-18085,Ashby tumble dryer,C-0301,2024-11-16,430.0
+MR33-44030,Mira robot vacuum,C-0164,2026-03-28,380.0
+VF72-10410,Vale fridge freezer,C-0317,2021-02-15,890.0
+CH54-63193,Corra induction hob,C-0097,2025-07-01,650.0
+VF72-43728,Vale fridge freezer,C-0187,2023-08-25,890.0
+LT12-52317,Lumen smart thermostat,C-0609,2022-02-05,180.0
+LT12-27101,Lumen smart thermostat,C-0008,2025-09-10,180.0
+MR33-18644,Mira robot vacuum,C-0626,2026-03-22,380.0
+MR33-72938,Mira robot vacuum,C-0649,2024-06-26,380.0
+CH54-98691,Corra induction hob,C-0627,2023-03-25,650.0
+OH90-80645,Orrin heat pump,C-0481,2023-06-27,4800.0
+FH26-43966,Fenwick cooker hood,C-0060,2025-10-22,310.0
+MR33-78371,Mira robot vacuum,C-0237,2026-07-30,380.0
+CH54-92598,Corra induction hob,C-0132,2022-11-06,650.0
+LT12-85295,Lumen smart thermostat,C-0338,2023-09-30,180.0
+BK20-48621,Brio kettle,C-0209,2023-04-05,45.0
+VF72-19936,Vale fridge freezer,C-0655,2024-09-17,890.0
+VF72-74342,Vale fridge freezer,C-0368,2024-07-14,890.0
+OH90-93967,Orrin heat pump,C-0541,2025-06-27,4800.0
+MR33-55544,Mira robot vacuum,C-0164,2024-03-10,380.0
+KW61-45422,Keel washing machine,C-0556,2023-07-31,610.0
+CH54-37721,Corra induction hob,C-0182,2026-09-30,650.0
+BK20-92464,Brio kettle,C-0334,2025-08-01,45.0
+VF72-80613,Vale fridge freezer,C-0191,2022-07-15,890.0
+KW61-95772,Keel washing machine,C-0508,2022-06-18,610.0
+FH26-45491,Fenwick cooker hood,C-0529,2026-10-21,310.0
+FH26-61013,Fenwick cooker hood,C-0480,2023-09-29,310.0
+BK20-36087,Brio kettle,C-0472,2025-07-01,45.0
+CH54-89372,Corra induction hob,C-0339,2021-12-22,650.0
+FH26-51732,Fenwick cooker hood,C-0360,2025-06-10,310.0
+AD38-97594,Ashby tumble dryer,C-0442,2023-03-24,430.0
+KW61-94605,Keel washing machine,C-0648,2025-08-03,610.0
+KW61-31956,Keel washing machine,C-0167,2022-05-01,610.0
+MR33-31688,Mira robot vacuum,C-0147,2023-11-29,380.0
+VF72-16214,Vale fridge freezer,C-0422,2023-09-10,890.0
+VF72-24229,Vale fridge freezer,C-0689,2025-12-18,890.0
+LT12-57922,Lumen smart thermostat,C-0257,2024-12-21,180.0
+MR33-61235,Mira robot vacuum,C-0317,2023-02-15,380.0
+TD45-35614,Tessa dishwasher,C-0617,2023-09-06,520.0
+LT12-69480,Lumen smart thermostat,C-0060,2025-12-14,180.0
+BK20-30405,Brio kettle,C-0602,2024-01-27,45.0
+CH54-60645,Corra induction hob,C-0037,2020-05-21,650.0
+BK20-48349,Brio kettle,C-0699,2024-03-18,45.0
+CH54-38702,Corra induction hob,C-0514,2023-11-24,650.0
+LT12-32050,Lumen smart thermostat,C-0608,2020-06-30,180.0
+CH54-28438,Corra induction hob,C-0377,2024-07-05,650.0
+TD45-27973,Tessa dishwasher,C-0271,2023-07-28,520.0
+VF72-43305,Vale fridge freezer,C-0144,2026-04-02,890.0
+OH90-68577,Orrin heat pump,C-0545,2022-10-04,4800.0
+TD45-45714,Tessa dishwasher,C-0570,2022-10-18,520.0
+KW61-33221,Keel washing machine,C-0178,2023-10-27,610.0
+TD45-43649,Tessa dishwasher,C-0274,2023-10-29,520.0
+LT12-79491,Lumen smart thermostat,C-0151,2023-01-28,180.0
+CH54-74744,Corra induction hob,C-0621,2024-06-27,650.0
+TD45-38571,Tessa dishwasher,C-0503,2025-07-25,520.0
+TD45-87699,Tessa dishwasher,C-0540,2026-02-06,520.0
+OH90-15462,Orrin heat pump,C-0410,2023-04-01,4800.0
+BK20-60916,Brio kettle,C-0429,2024-03-24,45.0
+FH26-78902,Fenwick cooker hood,C-0166,2025-02-11,310.0
+FH26-15977,Fenwick cooker hood,C-0322,2025-12-04,310.0
+OH90-79328,Orrin heat pump,C-0338,2021-09-04,4800.0
+LT12-20042,Lumen smart thermostat,C-0260,2024-07-01,180.0
+OH90-31175,Orrin heat pump,C-0365,2024-02-27,4800.0
+KW61-80379,Keel washing machine,C-0032,2024-03-12,610.0
+LT12-24389,Lumen smart thermostat,C-0515,2024-09-02,180.0
+LT12-94416,Lumen smart thermostat,C-0059,2022-07-27,180.0
+VF72-31668,Vale fridge freezer,C-0674,2022-10-04,890.0
+LT12-21266,Lumen smart thermostat,C-0065,2026-03-02,180.0
+BK20-71634,Brio kettle,C-0062,2026-08-31,45.0
+MR33-84602,Mira robot vacuum,C-0470,2024-04-15,380.0
+LT12-45699,Lumen smart thermostat,C-0624,2021-03-11,180.0
+VF72-56545,Vale fridge freezer,C-0514,2022-12-11,890.0
+KW61-93346,Keel washing machine,C-0011,2018-08-11,610.0
+KW61-79803,Keel washing machine,C-0182,2023-07-06,610.0
+OH90-20174,Orrin heat pump,C-0111,2026-09-24,4800.0
+TD45-95457,Tessa dishwasher,C-0657,2025-06-13,520.0
+KW61-33989,Keel washing machine,C-0649,2019-12-12,610.0
+VF72-28677,Vale fridge freezer,C-0590,2026-08-19,890.0
+FH26-68389,Fenwick cooker hood,C-0593,2024-09-09,310.0
+MR33-62566,Mira robot vacuum,C-0006,2023-11-02,380.0
+OH90-20512,Orrin heat pump,C-0452,2021-10-02,4800.0
+BK20-96917,Brio kettle,C-0467,2023-06-30,45.0
+MR33-72544,Mira robot vacuum,C-0391,2023-07-18,380.0
+LT12-82868,Lumen smart thermostat,C-0329,2025-03-20,180.0
+CH54-84901,Corra induction hob,C-0126,2024-12-24,650.0
+FH26-94668,Fenwick cooker hood,C-0396,2026-03-21,310.0
+FH26-67753,Fenwick cooker hood,C-0385,2019-10-22,310.0
+CH54-39899,Corra induction hob,C-0420,2025-02-17,650.0
+AD38-51940,Ashby tumble dryer,C-0226,2025-06-29,430.0
+TD45-79302,Tessa dishwasher,C-0446,2025-11-04,520.0
+AD38-96458,Ashby tumble dryer,C-0357,2026-09-01,430.0
+OH90-79409,Orrin heat pump,C-0509,2024-05-18,4800.0
+VF72-51973,Vale fridge freezer,C-0631,2022-07-01,890.0
+KW61-72174,Keel washing machine,C-0004,2022-06-04,610.0
+CH54-90547,Corra induction hob,C-0256,2025-04-19,650.0
+FH26-78551,Fenwick cooker hood,C-0555,2024-05-09,310.0
+TD45-62630,Tessa dishwasher,C-0614,2026-07-23,520.0
+OH90-32990,Orrin heat pump,C-0102,2020-07-24,4800.0
+TD45-27087,Tessa dishwasher,C-0209,2025-10-31,520.0
+MR33-12763,Mira robot vacuum,C-0331,2024-11-07,380.0
+LT12-30928,Lumen smart thermostat,C-0131,2023-11-12,180.0
+VF72-40905,Vale fridge freezer,C-0075,2026-08-31,890.0
+CH54-38460,Corra induction hob,C-0305,2023-07-28,650.0
+FH26-68709,Fenwick cooker hood,C-0501,2019-10-16,310.0
+VF72-52458,Vale fridge freezer,C-0359,2021-01-09,890.0
+KW61-74820,Keel washing machine,C-0551,2025-06-16,610.0
+LT12-80101,Lumen smart thermostat,C-0488,2024-07-05,180.0
+TD45-29910,Tessa dishwasher,C-0603,2025-06-30,520.0
+MR33-18869,Mira robot vacuum,C-0338,2026-07-16,380.0
+LT12-39111,Lumen smart thermostat,C-0163,2022-05-04,180.0
+LT12-79864,Lumen smart thermostat,C-0220,2026-05-09,180.0
+BK20-23787,Brio kettle,C-0401,2025-04-07,45.0
+CH54-58449,Corra induction hob,C-0687,2023-04-18,650.0
+BK20-42409,Brio kettle,C-0123,2026-01-24,45.0
+MR33-73032,Mira robot vacuum,C-0225,2023-10-04,380.0
+FH26-11098,Fenwick cooker hood,C-0141,2021-07-31,310.0
+VF72-59739,Vale fridge freezer,C-0407,2021-05-22,890.0
+FH26-92927,Fenwick cooker hood,C-0214,2022-09-04,310.0
+MR33-90369,Mira robot vacuum,C-0192,2025-02-09,380.0
+TD45-21824,Tessa dishwasher,C-0249,2025-05-26,520.0
+MR33-98290,Mira robot vacuum,C-0228,2024-07-11,380.0
+TD45-41168,Tessa dishwasher,C-0448,2026-07-06,520.0
+BK20-28704,Brio kettle,C-0245,2023-09-08,45.0
+VF72-35744,Vale fridge freezer,C-0206,2024-09-07,890.0
+FH26-99713,Fenwick cooker hood,C-0039,2026-08-02,310.0
+FH26-87013,Fenwick cooker hood,C-0440,2026-08-02,310.0
+MR33-92175,Mira robot vacuum,C-0356,2024-10-26,380.0
+MR33-43239,Mira robot vacuum,C-0425,2026-07-21,380.0
+FH26-69865,Fenwick cooker hood,C-0193,2025-02-04,310.0
+BK20-64417,Brio kettle,C-0463,2023-08-10,45.0
+AD38-56057,Ashby tumble dryer,C-0549,2026-06-12,430.0
+VF72-18247,Vale fridge freezer,C-0556,2024-07-24,890.0
+FH26-19719,Fenwick cooker hood,C-0129,2023-08-30,310.0
+FH26-35377,Fenwick cooker hood,C-0224,2026-01-13,310.0
+FH26-89307,Fenwick cooker hood,C-0315,2020-05-16,310.0
+KW61-86840,Keel washing machine,C-0609,2025-01-31,610.0
+BK20-80720,Brio kettle,C-0083,2024-11-09,45.0
+OH90-75199,Orrin heat pump,C-0114,2026-10-17,4800.0
+CH54-80575,Corra induction hob,C-0167,2024-06-14,650.0

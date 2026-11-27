@@ -97,7 +97,7 @@ CREATE TABLE replacements (
     replacement_id   INTEGER PRIMARY KEY,
     case_id          TEXT NOT NULL,
     serial           TEXT NOT NULL,
-    reason           TEXT NOT NULL,               -- recall, repeat_repairs
+    reason           TEXT NOT NULL,               -- recall, repeat_repairs, damaged_on_arrival
     idempotency_key  TEXT UNIQUE
 );
 

@@ -1,0 +1,937 @@
+case_ref,customer_id,serial,fault,opened,status,outcome,goodwill_amount,summary
+PC-00001,C-0082,BK20-90996,noise,2024-01-05,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00002,C-0250,MR33-34358,error_code,2025-07-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00003,C-0233,CH54-54892,error_code,2026-04-06,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00004,C-0514,LT12-81641,noise,2024-04-06,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00005,C-0631,CH54-26967,poor_performance,2025-12-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00006,C-0544,VF72-70682,poor_performance,2026-09-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00007,C-0589,LT12-82924,noise,2026-06-28,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00008,C-0183,CH54-88441,no_power,2026-07-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00009,C-0371,VF72-20526,leak,2023-08-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00010,C-0125,MR33-93074,noise,2024-10-20,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00011,C-0497,CH54-44379,error_code,2026-01-16,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00012,C-0429,OH90-94075,not_heating,2026-06-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00013,C-0464,FH26-53774,error_code,2023-07-08,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00014,C-0642,LT12-95404,noise,2025-10-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00015,C-0400,MR33-54424,poor_performance,2026-10-03,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00016,C-0631,MR33-52751,noise,2026-08-16,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00017,C-0171,MR33-61009,no_power,2024-11-26,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00018,C-0588,KW61-80578,no_power,2025-10-24,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00019,C-0029,OH90-68750,no_power,2025-09-22,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00020,C-0253,VF72-59829,leak,2026-05-09,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00021,C-0533,AD38-50822,leak,2025-09-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00022,C-0078,KW61-49201,not_heating,2026-09-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00023,C-0048,FH26-99529,noise,2025-09-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00024,C-0116,AD38-86259,no_power,2024-09-08,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00025,C-0079,MR33-46437,error_code,2025-12-25,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00026,C-0153,FH26-65741,poor_performance,2026-06-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00027,C-0699,TD45-49128,not_heating,2025-01-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00028,C-0090,AD38-15286,error_code,2026-01-27,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00029,C-0023,KW61-29792,noise,2026-09-07,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00030,C-0233,MR33-33576,not_heating,2026-02-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00031,C-0510,VF72-89874,no_power,2026-03-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00032,C-0189,OH90-83683,poor_performance,2024-07-22,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00033,C-0377,CH54-31418,no_power,2026-01-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00034,C-0375,KW61-92071,noise,2026-03-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00035,C-0104,OH90-52125,no_power,2025-03-28,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00036,C-0620,CH54-70427,no_power,2024-10-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00037,C-0699,TD45-78860,poor_performance,2022-11-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00038,C-0337,BK20-41064,leak,2026-09-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00039,C-0401,BK20-93607,error_code,2024-08-02,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00040,C-0653,KW61-68397,error_code,2026-09-23,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00041,C-0682,OH90-24251,no_power,2022-07-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00042,C-0020,KW61-48508,leak,2026-08-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00043,C-0469,MR33-38663,not_heating,2025-06-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00044,C-0448,VF72-68270,noise,2025-09-28,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00045,C-0159,TD45-66723,not_heating,2020-11-29,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00046,C-0071,LT12-47897,leak,2024-10-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00047,C-0618,VF72-43918,poor_performance,2025-01-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00048,C-0419,FH26-13062,error_code,2026-05-06,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00049,C-0516,TD45-68185,noise,2025-04-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00050,C-0519,CH54-26621,noise,2026-06-02,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00051,C-0336,MR33-45931,no_power,2025-08-26,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00052,C-0280,VF72-86633,no_power,2026-09-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00053,C-0057,BK20-72647,not_heating,2026-06-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00054,C-0106,BK20-89036,not_heating,2026-05-04,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00055,C-0417,OH90-23092,error_code,2025-08-16,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00056,C-0560,KW61-49510,not_heating,2026-09-06,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00057,C-0511,CH54-29398,noise,2026-09-17,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00058,C-0272,MR33-88219,no_power,2025-08-01,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00059,C-0306,AD38-41810,error_code,2026-05-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00060,C-0343,KW61-49907,not_heating,2025-12-03,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00061,C-0368,AD38-74582,poor_performance,2026-01-30,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00062,C-0624,OH90-16741,not_heating,2026-09-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00063,C-0620,CH54-70427,noise,2023-06-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00064,C-0122,FH26-46922,no_power,2026-06-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00065,C-0400,MR33-54424,no_power,2026-08-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00066,C-0126,VF72-61988,poor_performance,2026-08-22,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00067,C-0393,MR33-21041,noise,2026-09-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00068,C-0584,MR33-78218,no_power,2023-05-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00069,C-0353,FH26-51834,poor_performance,2025-08-08,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00070,C-0072,TD45-86744,noise,2026-08-20,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00071,C-0199,CH54-62941,noise,2026-04-10,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00072,C-0627,CH54-32360,error_code,2025-08-07,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00073,C-0497,LT12-53852,not_heating,2026-07-21,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00074,C-0699,MR33-97221,error_code,2026-04-02,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00075,C-0026,TD45-20872,not_heating,2024-09-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00076,C-0023,KW61-65817,poor_performance,2024-07-02,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00077,C-0213,OH90-29784,no_power,2023-03-28,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00078,C-0170,OH90-63542,poor_performance,2023-01-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00079,C-0639,VF72-68463,noise,2026-05-12,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00080,C-0098,AD38-94507,not_heating,2026-02-24,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00081,C-0618,VF72-43918,leak,2024-09-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00082,C-0450,LT12-77605,poor_performance,2026-04-18,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00083,C-0522,CH54-84336,not_heating,2025-06-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00084,C-0300,VF72-73862,noise,2024-07-10,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00085,C-0333,BK20-47586,poor_performance,2025-08-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00086,C-0490,FH26-85400,poor_performance,2025-10-07,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00087,C-0205,VF72-39414,poor_performance,2022-01-18,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00088,C-0302,OH90-42648,leak,2023-02-16,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00089,C-0279,TD45-11933,leak,2026-08-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00090,C-0642,FH26-94100,poor_performance,2025-10-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00091,C-0582,AD38-52039,error_code,2026-06-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00092,C-0209,FH26-66993,leak,2023-06-10,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00093,C-0580,VF72-75108,not_heating,2025-08-08,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00094,C-0591,BK20-40694,leak,2025-10-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00095,C-0137,MR33-68482,leak,2026-05-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00096,C-0019,OH90-87042,poor_performance,2021-12-13,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00097,C-0668,VF72-32991,no_power,2026-08-12,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00098,C-0570,VF72-75727,poor_performance,2026-09-03,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00099,C-0601,CH54-50461,leak,2022-06-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00100,C-0125,KW61-76533,not_heating,2023-11-05,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00101,C-0086,FH26-85395,error_code,2025-08-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00102,C-0329,MR33-49286,leak,2026-08-12,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00103,C-0155,OH90-99458,noise,2026-08-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00104,C-0155,FH26-40856,noise,2022-08-28,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00105,C-0080,MR33-90552,noise,2026-03-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00106,C-0492,VF72-29480,not_heating,2026-01-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00107,C-0414,OH90-12417,leak,2026-01-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00108,C-0172,TD45-81691,leak,2025-02-09,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00109,C-0520,AD38-72321,error_code,2025-01-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00110,C-0593,LT12-18126,noise,2024-09-28,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00111,C-0581,LT12-24153,no_power,2021-12-26,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00112,C-0170,OH90-63542,noise,2026-09-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00113,C-0510,VF72-89874,poor_performance,2026-03-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00114,C-0171,MR33-61009,error_code,2026-09-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00115,C-0029,OH90-68750,no_power,2023-10-13,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00116,C-0348,KW61-14812,error_code,2026-05-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00117,C-0434,LT12-53942,not_heating,2024-04-02,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00118,C-0665,VF72-57566,not_heating,2024-09-05,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00119,C-0637,AD38-91067,noise,2024-03-09,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00120,C-0286,CH54-84894,error_code,2025-05-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00121,C-0344,LT12-75319,no_power,2025-02-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00122,C-0153,FH26-65741,not_heating,2026-05-23,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00123,C-0533,TD45-97152,leak,2025-06-02,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00124,C-0360,CH54-79417,not_heating,2025-10-31,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00125,C-0699,CH54-57495,not_heating,2024-12-11,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00126,C-0622,BK20-41817,error_code,2022-07-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00127,C-0625,LT12-92247,poor_performance,2026-04-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00128,C-0293,MR33-36566,error_code,2026-08-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00129,C-0440,MR33-38543,leak,2025-06-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00130,C-0385,KW61-28525,poor_performance,2026-09-28,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00131,C-0609,KW61-45183,leak,2025-12-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00132,C-0221,CH54-67428,noise,2024-08-23,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00133,C-0022,KW61-24652,no_power,2025-03-29,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00134,C-0159,VF72-42158,leak,2026-03-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00135,C-0358,FH26-80504,no_power,2026-05-01,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00136,C-0589,LT12-82924,leak,2026-06-28,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00137,C-0619,BK20-36457,not_heating,2025-03-27,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00138,C-0016,KW61-54889,error_code,2026-07-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00139,C-0201,AD38-47644,no_power,2026-03-12,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00140,C-0527,CH54-34562,no_power,2024-11-03,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00141,C-0649,FH26-17744,noise,2026-03-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00142,C-0013,AD38-93584,leak,2026-09-29,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00143,C-0405,AD38-10296,no_power,2025-07-31,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00144,C-0236,VF72-70673,poor_performance,2023-11-26,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00145,C-0393,MR33-86405,no_power,2026-05-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00146,C-0700,FH26-97971,no_power,2026-02-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00147,C-0553,CH54-83628,leak,2025-08-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00148,C-0538,CH54-96218,noise,2026-09-27,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00149,C-0020,KW61-48508,leak,2026-09-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00150,C-0345,CH54-67447,leak,2024-12-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00151,C-0262,MR33-97880,no_power,2024-03-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00152,C-0526,MR33-34895,leak,2025-07-07,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00153,C-0371,MR33-76655,noise,2024-03-22,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00154,C-0516,MR33-67249,not_heating,2022-11-13,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00155,C-0693,KW61-72283,leak,2024-09-20,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00156,C-0256,VF72-27932,no_power,2026-01-14,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00157,C-0533,AD38-50822,not_heating,2026-03-05,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00158,C-0333,FH26-53957,leak,2026-09-12,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00159,C-0223,KW61-27673,no_power,2026-08-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00160,C-0233,FH26-18319,not_heating,2025-06-21,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00161,C-0700,FH26-97971,no_power,2026-02-16,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00162,C-0287,VF72-43614,leak,2026-04-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00163,C-0022,KW61-24652,poor_performance,2026-05-25,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00164,C-0207,FH26-62446,not_heating,2026-01-22,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00165,C-0315,BK20-72815,error_code,2020-07-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00166,C-0595,FH26-49825,error_code,2024-06-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00167,C-0400,TD45-47090,poor_performance,2024-10-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00168,C-0543,FH26-70411,no_power,2026-10-03,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00169,C-0670,LT12-68142,no_power,2026-02-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00170,C-0544,BK20-47256,error_code,2025-06-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00171,C-0334,CH54-21951,noise,2026-06-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00172,C-0358,MR33-54504,noise,2026-07-13,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00173,C-0078,KW61-49201,no_power,2026-04-29,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00174,C-0135,TD45-87352,not_heating,2022-09-21,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00175,C-0353,CH54-95682,leak,2026-09-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00176,C-0031,AD38-98277,not_heating,2025-10-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00177,C-0329,MR33-49286,leak,2026-06-13,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00178,C-0605,MR33-34040,leak,2024-08-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00179,C-0323,CH54-29249,noise,2026-09-05,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00180,C-0499,FH26-15735,noise,2025-02-20,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00181,C-0532,KW61-80980,poor_performance,2025-10-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00182,C-0450,KW61-50869,noise,2023-11-02,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00183,C-0118,VF72-93153,not_heating,2026-08-13,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00184,C-0001,OH90-70548,error_code,2025-04-07,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00185,C-0148,KW61-43589,no_power,2026-10-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00186,C-0472,BK20-11867,not_heating,2026-05-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00187,C-0405,OH90-10310,not_heating,2026-05-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00188,C-0182,FH26-65822,error_code,2026-09-01,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00189,C-0126,VF72-61988,poor_performance,2026-05-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00190,C-0031,AD38-29615,noise,2023-05-03,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00191,C-0115,VF72-63024,no_power,2026-06-27,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00192,C-0577,MR33-32260,leak,2025-10-28,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00193,C-0284,OH90-92582,no_power,2023-09-24,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00194,C-0570,LT12-59809,not_heating,2026-05-27,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00195,C-0245,KW61-88889,noise,2025-08-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00196,C-0530,CH54-51198,not_heating,2026-01-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00197,C-0055,OH90-94145,no_power,2025-06-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00198,C-0537,MR33-62625,poor_performance,2026-04-29,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00199,C-0417,KW61-38378,not_heating,2026-07-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00200,C-0047,VF72-37539,noise,2022-03-15,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00201,C-0321,CH54-46988,error_code,2024-02-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00202,C-0196,TD45-11339,noise,2025-04-29,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00203,C-0564,CH54-28402,poor_performance,2026-08-14,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00204,C-0056,VF72-84907,no_power,2025-05-27,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00205,C-0657,LT12-15623,poor_performance,2024-03-10,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00206,C-0560,KW61-49510,poor_performance,2023-01-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00207,C-0054,MR33-52837,error_code,2026-04-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00208,C-0596,MR33-97581,leak,2025-06-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00209,C-0504,CH54-32081,leak,2025-07-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00210,C-0231,LT12-83090,no_power,2025-06-11,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00211,C-0458,VF72-82674,not_heating,2023-03-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00212,C-0350,FH26-63157,not_heating,2026-07-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00213,C-0698,KW61-67632,no_power,2024-03-03,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00214,C-0116,LT12-34103,noise,2026-04-10,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00215,C-0429,CH54-18064,poor_performance,2025-03-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00216,C-0581,AD38-42815,leak,2026-06-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00217,C-0492,OH90-28306,noise,2023-10-30,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00218,C-0401,VF72-58231,no_power,2022-01-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00219,C-0469,CH54-54163,error_code,2026-01-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00220,C-0538,MR33-38272,not_heating,2025-08-22,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00221,C-0564,VF72-30939,no_power,2025-06-13,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00222,C-0151,VF72-59464,not_heating,2026-09-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00223,C-0043,CH54-84182,not_heating,2026-08-11,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00224,C-0393,MR33-86405,noise,2026-06-11,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00225,C-0693,KW61-25505,poor_performance,2023-10-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00226,C-0144,MR33-89665,not_heating,2026-08-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00227,C-0214,VF72-14483,poor_performance,2026-03-24,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00228,C-0243,LT12-16048,error_code,2026-08-05,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00229,C-0581,AD38-42815,error_code,2026-03-07,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00230,C-0147,VF72-23956,poor_performance,2024-09-26,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00231,C-0408,FH26-10539,poor_performance,2025-11-09,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00232,C-0137,MR33-17427,error_code,2025-07-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00233,C-0437,VF72-31646,no_power,2023-08-30,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00234,C-0250,CH54-57764,error_code,2025-10-08,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00235,C-0334,LT12-13237,error_code,2026-07-05,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00236,C-0002,LT12-97565,no_power,2026-06-18,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00237,C-0251,OH90-11959,poor_performance,2025-11-22,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00238,C-0690,OH90-85603,leak,2026-06-20,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00239,C-0153,BK20-97731,poor_performance,2024-02-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00240,C-0169,FH26-24413,poor_performance,2026-10-03,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00241,C-0475,MR33-98207,error_code,2026-02-09,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00242,C-0026,BK20-62219,error_code,2026-05-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00243,C-0441,FH26-71664,no_power,2026-07-28,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00244,C-0464,KW61-17205,poor_performance,2026-08-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00245,C-0546,KW61-93898,error_code,2024-10-15,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00246,C-0670,LT12-68142,error_code,2026-03-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00247,C-0581,FH26-21110,error_code,2025-05-10,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00248,C-0079,AD38-61751,error_code,2025-10-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00249,C-0100,LT12-53365,error_code,2024-12-04,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00250,C-0563,TD45-90631,not_heating,2025-02-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00251,C-0298,AD38-62977,no_power,2026-05-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00252,C-0235,VF72-99797,leak,2026-04-16,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00253,C-0570,VF72-75727,leak,2023-01-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00254,C-0409,LT12-45839,no_power,2026-10-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00255,C-0335,OH90-97156,error_code,2025-12-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00256,C-0606,OH90-92861,poor_performance,2026-04-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00257,C-0555,LT12-12242,error_code,2026-01-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00258,C-0076,KW61-43034,error_code,2026-09-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00259,C-0310,OH90-37745,noise,2025-08-09,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00260,C-0171,MR33-61009,poor_performance,2025-09-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00261,C-0675,MR33-51641,error_code,2026-06-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00262,C-0126,CH54-65560,noise,2026-07-29,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00263,C-0577,MR33-32260,poor_performance,2025-10-31,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00264,C-0427,BK20-67410,no_power,2026-06-01,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00265,C-0658,MR33-21624,no_power,2026-04-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00266,C-0660,BK20-28166,leak,2025-08-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00267,C-0256,VF72-27932,poor_performance,2026-01-30,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00268,C-0316,LT12-15281,error_code,2026-01-02,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00269,C-0055,TD45-89623,error_code,2026-09-27,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00270,C-0106,KW61-59980,noise,2026-08-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00271,C-0247,CH54-87677,leak,2023-10-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00272,C-0431,TD45-83752,poor_performance,2026-07-02,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00273,C-0688,LT12-19181,noise,2026-04-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00274,C-0392,BK20-90078,not_heating,2025-11-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00275,C-0385,FH26-21574,error_code,2026-01-01,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00276,C-0484,AD38-58222,leak,2026-03-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00277,C-0225,VF72-52204,noise,2026-07-13,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00278,C-0222,MR33-35615,error_code,2025-09-21,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00279,C-0378,VF72-11887,leak,2024-01-11,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00280,C-0383,OH90-55168,no_power,2026-05-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00281,C-0556,TD45-94995,no_power,2025-01-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00282,C-0323,TD45-14977,no_power,2026-06-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00283,C-0700,FH26-97971,leak,2026-03-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00284,C-0668,AD38-36813,noise,2026-08-21,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00285,C-0197,BK20-56609,leak,2026-05-10,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00286,C-0695,LT12-26816,poor_performance,2023-06-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00287,C-0328,TD45-12921,poor_performance,2026-02-02,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00288,C-0397,OH90-68278,not_heating,2024-12-10,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00289,C-0231,VF72-35455,poor_performance,2026-04-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00290,C-0571,MR33-58124,no_power,2026-07-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00291,C-0548,AD38-59351,error_code,2025-08-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00292,C-0245,KW61-88889,noise,2025-09-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00293,C-0669,BK20-67349,not_heating,2026-07-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00294,C-0079,AD38-61751,not_heating,2024-06-23,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00295,C-0026,CH54-68236,noise,2026-04-08,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00296,C-0460,MR33-19829,error_code,2023-08-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00297,C-0172,TD45-81691,leak,2025-03-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00298,C-0516,MR33-87147,error_code,2026-09-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00299,C-0580,TD45-23184,error_code,2025-03-01,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00300,C-0122,FH26-46922,leak,2026-06-09,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00301,C-0360,CH54-79417,leak,2025-07-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00302,C-0061,BK20-33125,leak,2026-08-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00303,C-0272,MR33-17043,error_code,2025-06-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00304,C-0653,KW61-68397,noise,2026-09-26,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00305,C-0224,BK20-96002,no_power,2026-06-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00306,C-0063,MR33-87368,no_power,2026-02-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00307,C-0575,AD38-25860,leak,2025-08-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00308,C-0153,MR33-42400,no_power,2026-03-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00309,C-0693,KW61-25505,no_power,2024-02-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00310,C-0236,VF72-70673,noise,2024-01-03,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00311,C-0506,FH26-44755,leak,2024-08-08,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00312,C-0257,TD45-70030,no_power,2024-08-18,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00313,C-0366,MR33-36289,leak,2026-08-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00314,C-0405,VF72-19388,no_power,2026-03-18,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00315,C-0118,TD45-97403,error_code,2026-05-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00316,C-0573,MR33-41069,leak,2023-03-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00317,C-0448,VF72-68270,poor_performance,2026-06-21,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00318,C-0303,OH90-21648,poor_performance,2024-06-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00319,C-0537,MR33-62625,no_power,2026-06-14,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00320,C-0295,CH54-51809,error_code,2026-05-16,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00321,C-0658,LT12-36638,no_power,2026-07-06,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00322,C-0445,VF72-80147,no_power,2022-07-11,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00323,C-0162,AD38-69988,poor_performance,2025-06-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00324,C-0077,CH54-90952,no_power,2022-05-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00325,C-0142,TD45-21585,error_code,2026-03-09,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00326,C-0195,OH90-26207,poor_performance,2024-11-24,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00327,C-0479,TD45-21334,leak,2026-06-25,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00328,C-0574,TD45-56141,poor_performance,2026-07-20,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00329,C-0345,MR33-43684,poor_performance,2026-09-29,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00330,C-0688,LT12-19181,leak,2026-07-20,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00331,C-0056,VF72-84907,not_heating,2026-05-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00332,C-0547,VF72-24180,leak,2024-10-11,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00333,C-0080,MR33-90552,not_heating,2026-02-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00334,C-0277,FH26-52769,no_power,2024-09-28,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00335,C-0475,AD38-64948,leak,2025-08-24,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00336,C-0668,TD45-93135,no_power,2023-05-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00337,C-0127,KW61-28128,no_power,2026-03-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00338,C-0392,BK20-90078,error_code,2026-09-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00339,C-0414,OH90-12417,poor_performance,2025-02-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00340,C-0231,LT12-83090,noise,2025-02-02,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00341,C-0385,FH26-21574,not_heating,2026-07-10,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00342,C-0431,MR33-95047,error_code,2025-11-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00343,C-0245,KW61-88889,not_heating,2026-03-15,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00344,C-0458,VF72-82674,poor_performance,2022-11-02,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00345,C-0170,KW61-21482,noise,2025-08-24,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00346,C-0001,CH54-76779,error_code,2022-03-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00347,C-0564,CH54-28402,leak,2025-12-02,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00348,C-0136,KW61-32494,error_code,2026-05-22,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00349,C-0538,CH54-89628,poor_performance,2026-04-05,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00350,C-0426,AD38-83372,poor_performance,2026-03-29,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00351,C-0208,OH90-34347,poor_performance,2026-05-02,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00352,C-0217,MR33-62380,no_power,2026-03-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00353,C-0513,FH26-64200,poor_performance,2026-09-29,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00354,C-0594,VF72-70406,no_power,2025-01-09,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00355,C-0013,AD38-93584,no_power,2020-10-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00356,C-0183,BK20-33302,leak,2026-09-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00357,C-0578,BK20-60194,noise,2026-10-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00358,C-0462,KW61-62437,not_heating,2025-02-06,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00359,C-0437,VF72-12711,leak,2025-02-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00360,C-0387,OH90-90193,poor_performance,2025-09-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00361,C-0389,BK20-21857,no_power,2026-04-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00362,C-0020,KW61-74131,leak,2024-12-16,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00363,C-0570,LT12-59809,not_heating,2026-07-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00364,C-0032,KW61-22628,poor_performance,2026-10-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00365,C-0329,VF72-96319,not_heating,2025-07-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00366,C-0530,KW61-93827,noise,2026-02-12,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00367,C-0208,AD38-48806,leak,2026-07-02,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00368,C-0634,KW61-15186,error_code,2025-04-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00369,C-0452,OH90-26596,leak,2025-03-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00370,C-0262,LT12-24779,no_power,2023-08-08,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00371,C-0475,MR33-98207,error_code,2025-05-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00372,C-0429,BK20-66247,leak,2025-05-13,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00373,C-0535,BK20-95376,error_code,2025-10-04,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00374,C-0422,VF72-89112,poor_performance,2026-01-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00375,C-0671,LT12-58336,error_code,2025-07-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00376,C-0084,KW61-31626,not_heating,2023-01-03,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00377,C-0272,TD45-72395,poor_performance,2026-06-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00378,C-0183,TD45-85172,error_code,2025-10-09,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00379,C-0372,AD38-46161,not_heating,2025-12-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00380,C-0666,KW61-59649,leak,2026-03-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00381,C-0400,OH90-54347,not_heating,2025-10-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00382,C-0694,VF72-80791,not_heating,2023-06-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00383,C-0451,BK20-14317,error_code,2026-02-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00384,C-0639,OH90-31339,not_heating,2025-02-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00385,C-0583,CH54-16619,poor_performance,2025-09-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00386,C-0101,CH54-47469,not_heating,2026-08-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00387,C-0465,AD38-42867,noise,2026-08-11,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00388,C-0560,FH26-36778,not_heating,2026-09-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00389,C-0580,VF72-75108,leak,2025-09-26,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00390,C-0221,FH26-65144,not_heating,2026-01-17,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00391,C-0475,AD38-64948,leak,2026-05-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00392,C-0594,MR33-83181,error_code,2025-11-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00393,C-0609,CH54-81177,leak,2025-10-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00394,C-0606,CH54-49545,error_code,2026-05-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00395,C-0429,BK20-56982,poor_performance,2026-02-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00396,C-0354,VF72-33769,not_heating,2026-01-08,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00397,C-0187,AD38-44607,not_heating,2026-05-26,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00398,C-0586,TD45-58777,error_code,2025-12-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00399,C-0018,VF72-15447,leak,2026-02-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00400,C-0617,OH90-74997,poor_performance,2026-10-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00401,C-0584,FH26-42812,leak,2026-08-11,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00402,C-0619,TD45-74522,not_heating,2026-04-17,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00403,C-0610,LT12-15497,noise,2025-05-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00404,C-0067,CH54-49931,error_code,2026-06-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00405,C-0111,FH26-30494,not_heating,2023-03-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00406,C-0439,FH26-15025,no_power,2026-09-22,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00407,C-0165,AD38-15812,not_heating,2026-03-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00408,C-0341,BK20-67844,poor_performance,2025-01-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00409,C-0684,KW61-33355,not_heating,2023-07-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00410,C-0020,TD45-89460,no_power,2026-06-21,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00411,C-0357,VF72-65677,not_heating,2026-05-06,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00412,C-0531,VF72-88517,no_power,2024-12-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00413,C-0229,CH54-89070,no_power,2026-04-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00414,C-0488,KW61-60499,not_heating,2026-06-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00415,C-0252,TD45-23501,error_code,2026-03-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00416,C-0618,VF72-43918,leak,2025-12-29,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00417,C-0098,TD45-43259,not_heating,2022-10-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00418,C-0545,LT12-51367,noise,2026-06-17,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00419,C-0480,FH26-22464,error_code,2023-08-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00420,C-0153,FH26-65741,poor_performance,2026-06-21,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00421,C-0078,VF72-36803,leak,2026-01-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00422,C-0078,VF72-36803,leak,2025-04-13,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00423,C-0469,CH54-54163,not_heating,2026-03-22,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00424,C-0278,VF72-57225,poor_performance,2024-12-05,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00425,C-0294,MR33-21248,noise,2024-05-04,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00426,C-0325,MR33-34081,error_code,2026-09-30,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00427,C-0687,OH90-85886,noise,2026-04-13,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00428,C-0472,OH90-77478,leak,2026-05-24,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00429,C-0436,FH26-72615,noise,2022-03-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00430,C-0368,AD38-76154,not_heating,2024-09-04,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00431,C-0596,MR33-97581,poor_performance,2024-10-25,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00432,C-0137,TD45-59738,no_power,2025-11-03,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00433,C-0171,OH90-60363,poor_performance,2025-11-09,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00434,C-0538,OH90-74010,poor_performance,2022-06-30,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00435,C-0306,MR33-37314,poor_performance,2025-11-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00436,C-0328,TD45-12921,not_heating,2026-05-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00437,C-0060,LT12-31722,error_code,2026-05-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00438,C-0174,VF72-38681,poor_performance,2026-01-30,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00439,C-0147,LT12-14050,poor_performance,2025-02-20,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00440,C-0354,VF72-33769,error_code,2025-10-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00441,C-0125,MR33-93074,no_power,2024-11-01,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00442,C-0563,TD45-90631,error_code,2026-06-21,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00443,C-0629,BK20-57386,poor_performance,2022-06-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00444,C-0699,VF72-82726,no_power,2024-10-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00445,C-0384,VF72-83718,poor_performance,2025-01-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00446,C-0387,OH90-90193,error_code,2026-06-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00447,C-0269,AD38-45291,poor_performance,2026-07-22,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00448,C-0378,VF72-86388,poor_performance,2026-07-20,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00449,C-0598,VF72-88893,noise,2024-03-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00450,C-0641,AD38-38833,poor_performance,2026-07-18,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00451,C-0681,VF72-67847,not_heating,2026-01-31,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00452,C-0378,VF72-11887,leak,2026-05-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00453,C-0482,AD38-78235,noise,2026-05-03,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00454,C-0270,KW61-26726,noise,2025-03-04,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00455,C-0054,TD45-50104,poor_performance,2026-04-24,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00456,C-0592,FH26-79132,no_power,2026-05-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00457,C-0623,MR33-78802,error_code,2026-08-07,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00458,C-0155,FH26-40856,not_heating,2026-06-04,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00459,C-0381,LT12-83684,noise,2025-10-09,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00460,C-0212,CH54-35481,error_code,2026-08-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00461,C-0365,AD38-95370,poor_performance,2024-02-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00462,C-0166,OH90-55577,not_heating,2024-10-15,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00463,C-0484,AD38-58222,not_heating,2025-09-24,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00464,C-0491,FH26-66525,error_code,2025-05-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00465,C-0637,AD38-91067,noise,2025-04-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00466,C-0533,TD45-97152,no_power,2026-01-18,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00467,C-0467,TD45-57866,not_heating,2025-06-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00468,C-0644,OH90-12767,leak,2024-09-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00469,C-0397,TD45-99658,no_power,2024-12-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00470,C-0007,VF72-94315,not_heating,2026-04-04,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00471,C-0547,VF72-24180,poor_performance,2026-06-21,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00472,C-0220,AD38-46477,noise,2024-10-15,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00473,C-0570,CH54-84779,not_heating,2026-08-28,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00474,C-0418,AD38-97856,noise,2025-12-26,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00475,C-0151,AD38-12876,leak,2026-03-13,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00476,C-0256,VF72-27932,error_code,2025-11-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00477,C-0501,AD38-86617,no_power,2026-02-22,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00478,C-0658,TD45-62247,error_code,2025-07-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00479,C-0016,KW61-54889,leak,2026-05-02,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00480,C-0287,VF72-43614,error_code,2024-12-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00481,C-0341,OH90-73152,poor_performance,2026-05-05,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00482,C-0293,MR33-36566,not_heating,2026-09-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00483,C-0634,AD38-40525,noise,2023-02-11,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00484,C-0695,KW61-77188,not_heating,2026-01-08,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00485,C-0516,KW61-33379,not_heating,2024-07-27,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00486,C-0334,CH54-21951,no_power,2026-03-22,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00487,C-0371,LT12-66211,leak,2025-08-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00488,C-0608,LT12-73186,poor_performance,2025-07-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00489,C-0075,CH54-65313,poor_performance,2026-06-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00490,C-0391,OH90-69695,leak,2025-08-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00491,C-0660,KW61-81718,poor_performance,2026-09-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00492,C-0481,LT12-21987,noise,2026-01-07,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00493,C-0118,VF72-93153,leak,2025-09-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00494,C-0388,OH90-77877,noise,2026-05-31,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00495,C-0236,CH54-89104,error_code,2025-10-02,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00496,C-0097,AD38-51421,error_code,2025-12-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00497,C-0243,LT12-16048,not_heating,2026-02-21,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00498,C-0432,VF72-93184,no_power,2026-04-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00499,C-0550,LT12-77128,error_code,2026-08-11,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00500,C-0027,MR33-50991,no_power,2026-04-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00501,C-0339,AD38-78866,no_power,2023-05-29,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00502,C-0417,OH90-23092,poor_performance,2024-07-10,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00503,C-0098,TD45-43259,no_power,2026-09-09,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00504,C-0370,BK20-81841,poor_performance,2025-08-13,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00505,C-0517,OH90-61059,leak,2025-01-03,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00506,C-0028,AD38-16904,no_power,2026-05-06,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00507,C-0025,TD45-92323,no_power,2026-08-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00508,C-0467,AD38-55117,poor_performance,2026-06-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00509,C-0610,AD38-29153,not_heating,2024-12-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00510,C-0461,FH26-22975,noise,2026-06-16,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00511,C-0004,MR33-49702,leak,2026-04-01,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00512,C-0622,BK20-41817,leak,2023-10-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00513,C-0432,VF72-96422,noise,2026-02-03,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00514,C-0544,VF72-16598,error_code,2026-02-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00515,C-0066,BK20-36176,leak,2025-05-20,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00516,C-0576,TD45-60881,no_power,2025-10-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00517,C-0487,CH54-38908,error_code,2025-02-23,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00518,C-0147,VF72-19069,error_code,2026-04-06,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00519,C-0565,MR33-63638,noise,2026-09-16,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00520,C-0475,AD38-64948,noise,2026-03-23,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00521,C-0510,FH26-97895,error_code,2023-12-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00522,C-0600,FH26-14010,noise,2026-02-05,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00523,C-0264,VF72-92847,no_power,2025-11-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00524,C-0275,CH54-26390,noise,2025-09-21,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00525,C-0386,BK20-14251,no_power,2025-06-21,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00526,C-0210,TD45-96912,not_heating,2026-07-05,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00527,C-0627,CH54-32360,no_power,2025-03-08,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00528,C-0501,BK20-93078,poor_performance,2025-11-03,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00529,C-0300,VF72-73862,error_code,2024-10-25,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00530,C-0321,KW61-18930,noise,2023-06-14,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00531,C-0371,OH90-32383,noise,2026-06-15,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00532,C-0474,FH26-76672,not_heating,2026-08-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00533,C-0233,MR33-33576,error_code,2026-02-11,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00534,C-0499,FH26-61432,leak,2026-03-07,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00535,C-0570,LT12-59809,no_power,2025-07-27,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00536,C-0519,TD45-78927,not_heating,2025-05-03,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00537,C-0564,TD45-21570,leak,2026-09-01,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00538,C-0544,AD38-15902,leak,2025-07-27,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00539,C-0217,LT12-25880,leak,2026-05-07,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00540,C-0526,CH54-71273,leak,2025-06-01,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00541,C-0501,AD38-86617,no_power,2026-03-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00542,C-0467,OH90-49793,poor_performance,2023-02-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00543,C-0471,CH54-84775,no_power,2024-09-07,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00544,C-0240,VF72-83211,not_heating,2026-09-08,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00545,C-0023,KW61-65817,no_power,2023-12-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00546,C-0336,VF72-94571,not_heating,2023-05-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00547,C-0475,AD38-64948,error_code,2026-09-16,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00548,C-0064,KW61-76356,no_power,2024-12-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00549,C-0525,CH54-76990,not_heating,2026-03-05,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00550,C-0111,FH26-30494,poor_performance,2025-11-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00551,C-0525,AD38-82830,noise,2024-02-04,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00552,C-0107,MR33-95852,noise,2026-07-02,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00553,C-0075,CH54-65313,no_power,2026-05-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00554,C-0593,LT12-18126,noise,2026-03-27,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00555,C-0032,KW61-22628,leak,2026-09-16,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00556,C-0378,VF72-86388,noise,2025-12-21,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00557,C-0691,MR33-41208,poor_performance,2026-09-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00558,C-0256,VF72-27932,not_heating,2026-08-31,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00559,C-0514,BK20-40941,leak,2026-08-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00560,C-0694,VF72-80791,noise,2024-11-11,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00561,C-0212,OH90-32530,leak,2022-12-10,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00562,C-0090,AD38-38337,no_power,2025-11-30,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00563,C-0635,CH54-61297,poor_performance,2026-06-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00564,C-0394,OH90-98863,leak,2026-08-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00565,C-0603,BK20-20498,poor_performance,2026-01-08,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00566,C-0401,BK20-57996,noise,2024-07-15,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00567,C-0641,AD38-38833,not_heating,2026-09-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00568,C-0605,MR33-14430,noise,2025-12-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00569,C-0186,KW61-22246,not_heating,2026-09-24,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00570,C-0398,VF72-63187,not_heating,2026-05-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00571,C-0480,FH26-46802,no_power,2026-09-12,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00572,C-0513,FH26-64200,leak,2026-08-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00573,C-0031,AD38-29615,not_heating,2026-09-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00574,C-0461,BK20-97358,leak,2025-05-12,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00575,C-0391,OH90-69695,no_power,2025-11-05,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00576,C-0119,KW61-30561,error_code,2026-09-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00577,C-0188,OH90-18017,no_power,2025-03-21,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00578,C-0269,AD38-45291,no_power,2025-07-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00579,C-0684,KW61-33355,not_heating,2023-11-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00580,C-0077,CH54-20799,leak,2026-05-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00581,C-0076,KW61-43034,poor_performance,2026-04-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00582,C-0339,LT12-68693,no_power,2025-02-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00583,C-0351,TD45-55184,poor_performance,2025-07-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00584,C-0287,VF72-43614,no_power,2026-05-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00585,C-0095,LT12-63154,poor_performance,2026-03-08,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00586,C-0610,KW61-91080,leak,2025-12-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00587,C-0214,CH54-36075,no_power,2026-05-12,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00588,C-0484,AD38-58222,leak,2026-03-24,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00589,C-0394,OH90-98863,leak,2025-11-10,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00590,C-0438,CH54-79142,leak,2026-05-29,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00591,C-0507,OH90-64908,noise,2024-11-27,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00592,C-0323,BK20-80572,noise,2026-09-09,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00593,C-0011,BK20-33870,not_heating,2022-05-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00594,C-0220,VF72-13673,error_code,2024-04-01,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00595,C-0271,MR33-91410,leak,2026-07-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00596,C-0609,FH26-16492,poor_performance,2025-01-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00597,C-0272,MR33-17043,error_code,2025-11-26,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00598,C-0658,LT12-36638,poor_performance,2026-09-30,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00599,C-0471,CH54-84775,leak,2024-09-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00600,C-0671,MR33-69357,no_power,2025-10-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00601,C-0336,BK20-81554,error_code,2026-06-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00602,C-0479,OH90-38418,poor_performance,2026-08-14,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00603,C-0456,BK20-95181,leak,2026-02-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00604,C-0204,TD45-98700,not_heating,2024-11-15,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00605,C-0546,CH54-65392,no_power,2023-02-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00606,C-0227,FH26-57817,leak,2024-06-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00607,C-0539,MR33-29874,noise,2025-08-22,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00608,C-0427,TD45-23960,leak,2026-06-23,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00609,C-0501,AD38-86617,poor_performance,2026-06-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00610,C-0030,FH26-36471,error_code,2026-08-15,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00611,C-0568,OH90-64339,error_code,2025-07-25,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00612,C-0176,BK20-13004,error_code,2026-05-06,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00613,C-0480,LT12-11340,not_heating,2024-06-08,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00614,C-0224,LT12-38093,poor_performance,2026-09-07,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00615,C-0615,OH90-40312,no_power,2026-04-28,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00616,C-0316,LT12-15281,leak,2026-04-17,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00617,C-0517,OH90-61059,leak,2022-09-03,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00618,C-0601,CH54-50461,poor_performance,2024-05-10,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00619,C-0418,FH26-79153,no_power,2025-04-12,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00620,C-0696,TD45-91057,leak,2026-08-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00621,C-0567,VF72-99907,leak,2026-08-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00622,C-0125,MR33-93074,noise,2026-06-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00623,C-0175,LT12-85344,no_power,2026-09-24,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00624,C-0253,BK20-43277,noise,2026-05-13,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00625,C-0461,FH26-22975,poor_performance,2026-08-24,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00626,C-0294,MR33-21248,no_power,2023-09-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00627,C-0276,VF72-74803,not_heating,2025-09-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00628,C-0315,LT12-66455,no_power,2023-12-30,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00629,C-0178,CH54-77691,noise,2026-07-20,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00630,C-0029,OH90-68750,not_heating,2024-01-17,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00631,C-0491,BK20-58747,error_code,2026-09-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00632,C-0501,LT12-73290,no_power,2020-10-29,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00633,C-0223,CH54-73588,no_power,2026-09-01,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00634,C-0255,TD45-70650,leak,2023-06-16,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00635,C-0599,VF72-87668,no_power,2024-08-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00636,C-0268,FH26-75795,poor_performance,2023-08-20,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00637,C-0564,TD45-21570,leak,2026-09-01,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00638,C-0200,CH54-78796,not_heating,2024-09-15,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00639,C-0543,LT12-17792,not_heating,2025-12-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00640,C-0407,LT12-38241,noise,2026-07-17,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00641,C-0611,OH90-74960,not_heating,2026-09-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00642,C-0360,TD45-98670,poor_performance,2023-12-07,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00643,C-0301,BK20-29021,not_heating,2026-09-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00644,C-0639,CH54-58031,leak,2026-10-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00645,C-0563,TD45-90631,error_code,2026-01-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00646,C-0075,OH90-99147,not_heating,2026-09-10,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00647,C-0306,FH26-17920,leak,2024-08-17,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00648,C-0679,FH26-90234,error_code,2025-05-22,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00649,C-0339,OH90-61973,no_power,2026-07-13,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00650,C-0609,KW61-45183,error_code,2026-02-19,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00651,C-0662,OH90-52269,error_code,2025-08-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00652,C-0497,LT12-53852,leak,2026-04-08,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00653,C-0036,FH26-82458,not_heating,2026-01-29,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00654,C-0217,BK20-66753,noise,2025-02-04,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00655,C-0370,OH90-36097,no_power,2025-10-08,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00656,C-0029,OH90-68750,no_power,2022-04-26,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00657,C-0157,TD45-66694,not_heating,2026-03-01,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00658,C-0303,OH90-21648,poor_performance,2025-05-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00659,C-0272,MR33-88219,leak,2025-01-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00660,C-0543,FH26-31393,not_heating,2023-07-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00661,C-0693,KW61-25505,error_code,2024-03-20,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00662,C-0511,CH54-60880,leak,2024-06-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00663,C-0623,VF72-42113,error_code,2025-01-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00664,C-0255,CH54-33614,noise,2025-06-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00665,C-0306,KW61-21891,not_heating,2026-02-23,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00666,C-0062,FH26-49413,poor_performance,2026-07-21,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00667,C-0016,KW61-54889,error_code,2026-04-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00668,C-0511,CH54-29398,poor_performance,2026-09-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00669,C-0180,OH90-90441,not_heating,2024-05-28,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00670,C-0134,OH90-26387,no_power,2024-10-03,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00671,C-0368,BK20-49392,poor_performance,2022-07-16,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00672,C-0181,BK20-93840,not_heating,2026-07-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00673,C-0365,AD38-95370,poor_performance,2024-03-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00674,C-0174,VF72-38681,error_code,2026-03-04,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00675,C-0239,LT12-99358,poor_performance,2026-06-21,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00676,C-0543,FH26-31393,no_power,2022-04-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00677,C-0575,AD38-25860,no_power,2025-10-31,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00678,C-0436,CH54-92324,error_code,2023-01-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00679,C-0394,OH90-98863,no_power,2026-05-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00680,C-0639,OH90-47270,poor_performance,2026-05-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00681,C-0020,MR33-73838,not_heating,2026-09-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00682,C-0666,BK20-32967,leak,2023-06-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00683,C-0343,KW61-49907,error_code,2026-05-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00684,C-0431,TD45-83752,leak,2025-09-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00685,C-0092,TD45-43525,error_code,2026-06-07,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00686,C-0031,AD38-98277,no_power,2025-12-11,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00687,C-0078,VF72-10506,error_code,2024-07-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00688,C-0397,OH90-68278,no_power,2026-05-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00689,C-0119,KW61-30561,noise,2026-09-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00690,C-0543,FH26-70411,leak,2026-09-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00691,C-0520,FH26-13248,not_heating,2024-08-31,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00692,C-0582,AD38-52039,noise,2025-12-21,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00693,C-0440,MR33-16920,not_heating,2025-09-16,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00694,C-0556,AD38-68642,noise,2024-02-10,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00695,C-0388,TD45-47063,leak,2022-12-21,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00696,C-0264,VF72-92847,no_power,2026-09-14,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00697,C-0271,VF72-95944,poor_performance,2025-11-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00698,C-0350,VF72-38659,poor_performance,2025-01-10,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00699,C-0631,CH54-26967,poor_performance,2023-05-07,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00700,C-0694,AD38-40452,not_heating,2026-08-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00701,C-0628,AD38-22389,no_power,2026-02-14,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00702,C-0686,CH54-53377,error_code,2025-02-22,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00703,C-0538,OH90-74010,poor_performance,2022-04-07,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00704,C-0661,MR33-90880,noise,2026-07-16,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00705,C-0408,MR33-70035,poor_performance,2026-04-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00706,C-0537,TD45-72604,poor_performance,2024-04-01,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00707,C-0167,KW61-43335,error_code,2026-08-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00708,C-0673,BK20-83833,not_heating,2026-09-29,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00709,C-0453,MR33-15230,poor_performance,2025-06-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00710,C-0339,FH26-45961,noise,2023-10-02,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00711,C-0594,MR33-67354,poor_performance,2023-03-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00712,C-0236,CH54-89104,not_heating,2025-05-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00713,C-0075,CH54-65313,error_code,2026-05-10,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00714,C-0209,FH26-66993,poor_performance,2022-08-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00715,C-0142,TD45-21585,not_heating,2024-08-27,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00716,C-0378,VF72-86388,no_power,2026-05-09,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00717,C-0689,OH90-50925,error_code,2025-10-17,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00718,C-0594,KW61-25262,poor_performance,2026-03-08,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00719,C-0153,MR33-42400,leak,2026-08-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00720,C-0333,BK20-47586,noise,2024-02-13,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00721,C-0625,LT12-92247,noise,2026-09-21,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00722,C-0539,TD45-93279,not_heating,2026-08-21,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00723,C-0428,OH90-46080,noise,2025-12-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00724,C-0547,VF72-24180,not_heating,2024-04-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00725,C-0430,AD38-41242,noise,2024-07-24,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00726,C-0226,AD38-61752,poor_performance,2025-05-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00727,C-0003,AD38-48623,leak,2025-10-11,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00728,C-0256,OH90-68674,not_heating,2026-05-25,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00729,C-0094,MR33-43220,no_power,2025-10-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00730,C-0128,MR33-62128,leak,2024-05-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00731,C-0368,AD38-76154,no_power,2023-10-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00732,C-0173,MR33-94099,not_heating,2023-03-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00733,C-0051,CH54-42142,poor_performance,2026-03-08,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00734,C-0255,TD45-70650,error_code,2023-10-08,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00735,C-0208,OH90-34347,leak,2024-09-27,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00736,C-0371,OH90-32383,error_code,2025-11-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00737,C-0415,CH54-92575,error_code,2026-09-28,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00738,C-0401,BK20-57996,not_heating,2024-07-03,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00739,C-0281,KW61-11021,error_code,2025-08-05,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00740,C-0411,VF72-84446,no_power,2025-10-22,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00741,C-0064,KW61-76356,error_code,2025-12-25,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00742,C-0004,MR33-49702,noise,2025-02-20,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00743,C-0315,BK20-72815,leak,2023-09-04,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00744,C-0693,KW61-25505,poor_performance,2025-05-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00745,C-0334,CH54-21951,not_heating,2026-02-27,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00746,C-0294,MR33-21248,not_heating,2026-07-26,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00747,C-0147,VF72-19069,poor_performance,2026-09-25,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00748,C-0474,TD45-43576,poor_performance,2025-04-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00749,C-0526,TD45-14302,poor_performance,2026-09-13,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00750,C-0171,LT12-10259,error_code,2026-07-29,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00751,C-0693,KW61-72283,poor_performance,2024-05-14,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00752,C-0011,FH26-66359,poor_performance,2026-07-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00753,C-0233,CH54-54892,leak,2026-05-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00754,C-0613,LT12-10723,poor_performance,2026-05-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00755,C-0530,MR33-44186,error_code,2026-09-26,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00756,C-0409,TD45-99072,noise,2022-10-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00757,C-0418,VF72-44231,poor_performance,2025-12-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00758,C-0161,MR33-26278,poor_performance,2024-05-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00759,C-0687,FH26-54536,error_code,2025-05-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00760,C-0450,MR33-81891,leak,2026-06-12,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00761,C-0075,OH90-99147,error_code,2026-08-03,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00762,C-0680,BK20-30421,noise,2024-05-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00763,C-0449,MR33-86403,poor_performance,2026-03-18,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00764,C-0533,AD38-50822,poor_performance,2025-05-14,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00765,C-0056,AD38-76748,error_code,2026-05-14,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00766,C-0419,FH26-13062,leak,2025-07-06,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00767,C-0463,AD38-12319,error_code,2026-07-13,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00768,C-0111,MR33-43396,error_code,2025-05-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00769,C-0504,VF72-28406,poor_performance,2025-06-23,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00770,C-0443,CH54-20618,poor_performance,2026-06-03,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00771,C-0111,MR33-43396,not_heating,2025-04-20,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00772,C-0446,OH90-92677,poor_performance,2025-07-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00773,C-0609,MR33-76461,not_heating,2024-11-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00774,C-0482,KW61-47034,no_power,2025-02-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00775,C-0548,CH54-53163,not_heating,2026-09-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00776,C-0041,MR33-84335,poor_performance,2024-04-18,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00777,C-0279,TD45-11933,error_code,2026-08-23,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00778,C-0539,TD45-93279,poor_performance,2026-06-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00779,C-0507,FH26-95295,poor_performance,2025-07-29,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00780,C-0042,CH54-30717,poor_performance,2026-09-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00781,C-0356,CH54-54793,leak,2026-07-27,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00782,C-0599,TD45-17215,not_heating,2026-08-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00783,C-0429,CH54-77533,leak,2026-09-19,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00784,C-0544,AD38-15902,no_power,2025-09-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00785,C-0475,CH54-96492,noise,2024-04-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00786,C-0070,BK20-11308,noise,2025-06-01,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00787,C-0504,CH54-32081,not_heating,2024-10-15,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00788,C-0419,FH26-13062,error_code,2026-04-05,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00789,C-0641,OH90-68565,error_code,2025-10-15,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00790,C-0047,VF72-37539,leak,2021-09-13,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00791,C-0142,TD45-21585,not_heating,2024-11-14,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00792,C-0323,BK20-80572,leak,2026-02-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00793,C-0169,CH54-44227,leak,2026-09-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00794,C-0658,FH26-35554,poor_performance,2023-11-06,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00795,C-0652,MR33-18634,noise,2024-12-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00796,C-0360,CH54-79417,no_power,2025-07-30,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00797,C-0063,CH54-31365,noise,2025-08-24,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00798,C-0678,LT12-37566,no_power,2025-09-11,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00799,C-0479,KW61-50206,no_power,2024-10-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00800,C-0030,TD45-71735,error_code,2026-03-28,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00801,C-0518,CH54-14875,no_power,2026-04-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00802,C-0503,FH26-57640,poor_performance,2026-04-05,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00803,C-0576,LT12-80376,poor_performance,2025-12-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00804,C-0641,FH26-14387,leak,2025-01-28,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00805,C-0627,BK20-23142,leak,2023-08-08,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00806,C-0381,LT12-83684,not_heating,2024-07-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00807,C-0443,CH54-20618,no_power,2024-07-26,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00808,C-0588,KW61-80578,not_heating,2024-12-19,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00809,C-0526,CH54-71273,leak,2023-07-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00810,C-0460,AD38-24559,error_code,2025-09-10,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00811,C-0450,LT12-77605,leak,2025-05-08,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00812,C-0417,KW61-38378,not_heating,2026-08-07,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00813,C-0598,FH26-66153,noise,2026-08-25,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00814,C-0583,VF72-15334,leak,2022-02-22,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00815,C-0537,AD38-22624,poor_performance,2024-11-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00816,C-0358,FH26-80504,leak,2024-02-02,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00817,C-0314,LT12-48687,error_code,2026-07-22,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00818,C-0594,MR33-67354,no_power,2025-08-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00819,C-0162,KW61-31233,no_power,2026-06-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00820,C-0580,BK20-41905,leak,2024-05-15,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00821,C-0676,MR33-53523,noise,2026-07-26,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00822,C-0681,KW61-30997,leak,2026-09-17,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00823,C-0563,BK20-91857,no_power,2025-10-09,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00824,C-0501,AD38-86617,noise,2025-11-22,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00825,C-0249,LT12-33424,no_power,2023-08-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00826,C-0609,MR33-76461,not_heating,2026-07-06,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00827,C-0224,BK20-96002,poor_performance,2026-06-25,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00828,C-0137,MR33-68482,no_power,2025-09-11,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00829,C-0497,CH54-44379,no_power,2025-08-20,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00830,C-0425,FH26-70849,leak,2026-08-29,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00831,C-0497,MR33-81062,leak,2025-07-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00832,C-0075,OH90-27363,poor_performance,2026-05-19,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00833,C-0090,LT12-37241,error_code,2026-02-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00834,C-0287,VF72-43614,no_power,2025-04-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00835,C-0217,MR33-62380,error_code,2026-03-24,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00836,C-0236,VF72-70673,poor_performance,2023-02-22,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00837,C-0258,TD45-53717,no_power,2025-12-10,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00838,C-0051,OH90-51874,no_power,2025-01-19,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00839,C-0483,TD45-61340,poor_performance,2025-07-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00840,C-0678,MR33-23080,noise,2026-02-28,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00841,C-0449,LT12-84594,noise,2026-08-18,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00842,C-0252,TD45-23501,poor_performance,2026-08-15,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00843,C-0639,OH90-31339,noise,2026-04-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00844,C-0221,CH54-67428,poor_performance,2024-05-27,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00845,C-0277,FH26-52769,poor_performance,2024-03-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00846,C-0537,MR33-62625,poor_performance,2025-10-04,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00847,C-0401,BK20-50210,no_power,2026-04-09,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00848,C-0270,FH26-20033,not_heating,2025-10-11,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00849,C-0466,TD45-32342,poor_performance,2024-07-11,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00850,C-0700,FH26-97971,not_heating,2026-03-18,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00851,C-0449,FH26-27876,error_code,2026-02-19,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00852,C-0699,TD45-78860,no_power,2022-11-25,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00853,C-0419,FH26-13062,poor_performance,2025-03-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00854,C-0509,AD38-53192,not_heating,2026-07-13,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00855,C-0531,BK20-27060,no_power,2026-06-04,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00856,C-0255,MR33-36344,error_code,2025-05-31,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00857,C-0128,FH26-16629,not_heating,2026-06-06,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00858,C-0265,AD38-81196,noise,2023-11-29,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00859,C-0520,AD38-72321,no_power,2026-08-31,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00860,C-0066,BK20-36176,error_code,2025-06-25,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00861,C-0356,LT12-66356,error_code,2023-11-05,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00862,C-0075,OH90-27363,not_heating,2026-03-26,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00863,C-0210,TD45-96912,poor_performance,2022-07-09,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00864,C-0369,VF72-75281,poor_performance,2026-08-28,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00865,C-0613,KW61-57471,not_heating,2026-07-04,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00866,C-0625,TD45-14670,error_code,2025-09-19,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00867,C-0053,OH90-30706,no_power,2025-12-17,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00868,C-0323,BK20-80572,not_heating,2026-04-22,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00869,C-0561,BK20-66674,poor_performance,2024-02-17,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00870,C-0537,TD45-60767,leak,2023-01-30,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00871,C-0621,TD45-62019,not_heating,2026-02-12,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00872,C-0264,VF72-92847,not_heating,2025-08-30,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00873,C-0418,VF72-44231,poor_performance,2024-03-12,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00874,C-0560,LT12-51389,no_power,2026-09-02,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00875,C-0407,LT12-38241,leak,2026-03-18,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00876,C-0440,CH54-63603,poor_performance,2025-08-26,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00877,C-0407,TD45-45046,noise,2025-07-12,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00878,C-0694,AD38-40452,error_code,2026-05-02,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00879,C-0657,LT12-15623,leak,2021-05-05,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00880,C-0357,FH26-78197,noise,2026-07-09,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00881,C-0111,KW61-11231,leak,2025-05-17,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00882,C-0595,KW61-62037,error_code,2026-08-19,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00883,C-0486,MR33-82596,leak,2023-01-20,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00884,C-0626,TD45-90338,error_code,2025-05-18,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00885,C-0017,VF72-33851,no_power,2021-07-15,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00886,C-0226,AD38-61752,leak,2026-05-01,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00887,C-0466,TD45-97710,not_heating,2026-08-11,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00888,C-0388,OH90-77877,error_code,2026-05-27,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00889,C-0427,BK20-67410,error_code,2025-12-12,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00890,C-0451,BK20-14317,poor_performance,2026-02-24,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00891,C-0584,FH26-42812,error_code,2026-09-09,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00892,C-0102,LT12-78289,leak,2026-05-31,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00893,C-0086,FH26-85395,leak,2026-02-14,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00894,C-0508,MR33-81825,error_code,2025-11-10,closed,repair_booked,,Reported error code; a warranty repair was completed.
+PC-00895,C-0368,AD38-76154,no_power,2023-12-30,closed,repair_booked,,Reported no power; a warranty repair was completed.
+PC-00896,C-0387,TD45-29044,leak,2025-03-08,closed,repair_booked,,Reported leak; a warranty repair was completed.
+PC-00897,C-0060,LT12-31722,poor_performance,2025-10-25,closed,repair_booked,,Reported poor performance; a warranty repair was completed.
+PC-00898,C-0024,KW61-65547,noise,2026-08-19,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00899,C-0345,MR33-43684,noise,2026-05-04,closed,repair_booked,,Reported noise; a warranty repair was completed.
+PC-00900,C-0005,CH54-38819,not_heating,2023-06-28,closed,repair_booked,,Reported not heating; a warranty repair was completed.
+PC-00901,C-0508,AD38-20912,door_or_lid,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00902,C-0508,AD38-20912,door_or_lid,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00903,C-0516,CH54-93976,no_power,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00904,C-0516,CH54-93976,no_power,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00905,C-0061,CH54-94168,no_power,2026-10-31,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00906,C-0053,MR33-84971,poor_performance,2026-10-28,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00907,C-0521,VF72-93508,error_code,2026-10-20,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00908,C-0119,MR33-33938,poor_performance,2026-10-20,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00909,C-0406,TD45-56904,error_code,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00910,C-0406,TD45-56904,error_code,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00911,C-0585,KW61-76281,leak,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00912,C-0585,KW61-76281,leak,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00913,C-0278,VF72-14622,error_code,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00914,C-0278,VF72-14622,error_code,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00915,C-0610,KW61-35866,noise,2026-10-24,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00916,C-0433,BK20-19015,leak,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00917,C-0433,BK20-19015,leak,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00918,C-0479,CH54-40676,error_code,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00919,C-0479,CH54-40676,error_code,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00920,C-0693,BK20-40680,error_code,2026-10-30,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00921,C-0361,VF72-27868,noise,2026-03-12,closed,refund,77.5,Out of cover by a few weeks; a goodwill refund was paid.
+PC-00922,C-0567,LT12-42900,noise,2026-03-16,closed,refund,95.0,Out of cover by a few weeks; a goodwill refund was paid.
+PC-00923,C-0139,MR33-33500,noise,2026-10-15,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00924,C-0570,MR33-44693,no_power,2026-10-18,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00925,C-0364,KW61-12987,poor_performance,2026-10-15,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00926,C-0316,BK20-86905,noise,2026-07-15,closed,refund,162.5,Out of cover by a few weeks; a goodwill refund was paid.
+PC-00927,C-0621,VF72-49451,not_cooling,2026-10-25,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00928,C-0077,VF72-40589,noise,2026-06-05,closed,refund,162.5,Out of cover by a few weeks; a goodwill refund was paid.
+PC-00929,C-0317,AD38-36641,noise,2026-06-07,closed,refund,130.0,Out of cover by a few weeks; a goodwill refund was paid.
+PC-00930,C-0457,BK20-56114,noise,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00931,C-0457,BK20-56114,noise,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00932,C-0275,LT12-38647,error_code,2026-02-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00933,C-0275,LT12-38647,error_code,2026-07-05,closed,repair_booked,,The same fault was repaired under the warranty.
+PC-00934,C-0642,CH54-77215,not_heating,2026-10-19,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00935,C-0682,TD45-24618,error_code,2026-10-14,open,,,Reported this fault; waiting for an engineer visit to be arranged.
+PC-00936,C-0700,MR33-43556,connectivity,2026-10-21,open,,,Reported this fault; waiting for an engineer visit to be arranged.
