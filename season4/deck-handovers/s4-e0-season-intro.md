@@ -1,7 +1,7 @@
 # S4 E0 deck handover: Season intro
 
-For the content agent. No experiment: the opening deck for Season 4. It reveals no scores.
-Rebuild it last if the episode list changes. E11's question was settled on 24 November 2026: where a tuned model can run.
+For the content agent. No experiment: the opening deck for Season 4, rebuilt last (27 November
+2026) so the episode list, tools and links are final. It reveals no scores.
 
 ## Sources of truth
 
@@ -11,6 +11,9 @@ Rebuild it last if the episode list changes. E11's question was settled on 24 No
 - `season3/case/results/scorecard.json` (where the tasks come from in Season 3).
 - `season2/deck-handovers/s2-e15-when-rag-is-the-wrong-answer.md` (the line Season 4 starts from).
 - `season3/deck-handovers/s3-e0-season-intro.md` (format and tone to match).
+- `season4/decision-card.md` and `season4/finetune-readiness.md` (the tools; name them, show
+  no results).
+- `src/lab/providers/capabilities.yaml` (the provider tuning facts, with sources and dates).
 
 Branch `s4`.
 
@@ -20,8 +23,8 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E0 |
 | Title | Season 4: Adapting models |
-| Hub slug | `season-4-intro` (proposed; confirm) |
-| Deck file | `bk-s4-e0-season-intro-v1.pdf` |
+| Hub slug | `season-intro` (as on the hub) |
+| Deck file | `bk-s4-e0-season-intro-v3.pdf` (published 26 November 2026; a rebuild is v4) |
 | Hub format | `season_intro` |
 
 ## The argument
@@ -52,8 +55,9 @@ Season 3 chose.** Say the tasks come from use cases Season 3 scored, by topic, a
 Never name them by candidate number on the slides.
 
 **What changed from the plan, worth one line in the deck:** in 2026 no major provider offered
-fine-tuning a season like this could use (OpenAI closed it to new organisations in May 2026, and
-Google and Anthropic offer none on their main APIs; sources in `season4/PLAN.md`). So every
+fine-tuning a season like this could use (OpenAI closed it to new organisations in May 2026,
+and plans to end self-serve tuning jobs on 6 January 2027; Google and Anthropic offer none on
+their main APIs; sources in `season4/PLAN.md` and `capabilities.yaml`). So every
 tuning episode tunes a small open model, `Qwen3-0.6B`, with adapters on a free cloud GPU, and
 compares it with the cheapest API model, prompted. That a provider can withdraw tuning is itself
 evidence for E12.
@@ -94,8 +98,9 @@ E0 makes no measured claim. Mark every Halvard figure "invented".
 | | E12 | Prompt, retrieve, or tune? | sign off an adaptation plan |
 | | E13 | Season 4 recap: the adaptation card | take the whole season away on one card |
 
-The tools: the decision card (E12) and the fine-tuning readiness checklist (E6, completed in
-E10).
+The tools: the decision card (`season4/decision-card.md`, E12) and the fine-tuning readiness
+checklist (`season4/finetune-readiness.md`, started in E6, completed in E10). E11 asks where a
+tuned model can run, settled on 24 November 2026 in place of the plan's open weights episode.
 
 ## Slide ideas
 

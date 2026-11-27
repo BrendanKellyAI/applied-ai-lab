@@ -52,14 +52,30 @@ and never rerun silently.
 | | [E7](../episodes/s4-e7-teaching-a-house-style/) | Teaching a house style | Done |
 | Know the limits | [E8](../episodes/s4-e8-can-fine-tuning-teach-facts/) | Field note: can fine-tuning teach facts? | Done |
 | | [E9](../episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) | Distillation: a big model teaches a small one | Done |
-| | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Approved; three Colab jobs waiting for a GPU |
+| | [E10](../episodes/s4-e10-what-does-tuning-break/) | Field note: what does tuning break? | Done |
 | Choose | [E11](../episodes/s4-e11-where-your-tuned-model-runs/) | Where your tuned model runs | Done |
-| | E12 | Prompt, retrieve, or tune? | After E8 to E10 |
-| | E13 | Season 4 recap: the adaptation card | Last |
+| | E12 | Prompt, retrieve, or tune? | Done: `decision-card.md` |
+| | E13 | Season 4 recap: the adaptation card | Done: `recap.py`, `charts/` |
 
 Each finished episode has a `README.md` with its results and claims, its `PREREGISTRATION.md`
 (written before any call, changed only by dated amendments), a `claims.py` that applies the pass
-marks, and a `DECK_HANDOVER.md`. The E0 and E1 handovers are in `deck-handovers/`.
+marks, and a `DECK_HANDOVER.md`. The E0, E1, E12 and E13 handovers are in `deck-handovers/`.
+
+## What the season found
+
+- **Writing the rules down did most of the work.** Triage rose from 521 to 587 of 600 with
+  written definitions (E2); the house style from 0 to 215 of 300 with the style guide (E7).
+- **On triage, nothing later cleared that bar.** Examples, a schema, a tuned small model and a
+  small model taught by a big one all matched it (589 to 594).
+- **On the house style, tuning won:** a tuned 0.6 billion parameter model passed every rule on
+  293 of 300, against 262 for the best prompt.
+- **Tuning has limits.** It did not teach facts and took away "I don't know" (E8); a tuned reply
+  writer carried its voice into ordinary requests (E10); the tuned model ran unchanged on a
+  laptop (E11).
+- **42 claims pre-registered:** 34 held, 7 failed, 1 not tested (`charts/recap.json`).
+
+The decision card (`decision-card.md`) turns this into a path; the recap (`recap.py`) draws both
+ladders.
 
 ## The scoreboard
 
@@ -84,7 +100,7 @@ interval on test sits clear above the reference's. The current references are in
 - **`finetune-readiness.md`:** the checklist to run before commissioning a tuning project,
   with Halvard's numbers as a worked case. Started in E6; completed in E10.
 - **`decision-card.md`:** the decision path from "what is the gap?" to the cheapest fix that
-  clears the bar. Written in E12.
+  clears the bar, with the season's final scoreboard. Final, E12.
 - **`lab adapt score`:** score your own Task A predictions against the test set, with no API
   calls: `uv run lab adapt score predictions.jsonl --split test`.
 
@@ -109,4 +125,4 @@ E8 and E10 add their own commands: `lab adapt pairs`, `facts-run` and `facts-ana
 ## Costs
 
 Costs appear only as ratios in episode READMEs. Every paid run so far stayed within its approved
-budget; tuning has cost nothing but free Colab GPU time, about 2.5 hours in all by E7.
+budget; tuning has cost nothing but free Colab GPU time, about 3.5 hours across 14 jobs.

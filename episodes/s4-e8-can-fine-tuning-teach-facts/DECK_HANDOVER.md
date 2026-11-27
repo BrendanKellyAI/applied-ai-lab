@@ -23,9 +23,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E8 |
 | Title | Field note: can fine-tuning teach facts? |
-| Hub slug | `can-fine-tuning-teach-facts` (proposed; confirm) |
+| Hub slug | `can-fine-tuning-teach-facts` (as on the hub) |
 | Deck file | `bk-s4-e8-can-fine-tuning-teach-facts-v1.pdf` |
-| Hub format | `field-note` |
+| Hub format | `field_note` |
 
 ## The argument
 

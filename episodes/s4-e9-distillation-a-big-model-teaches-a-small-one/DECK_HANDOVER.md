@@ -23,9 +23,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E9 |
 | Title | Distillation: a big model teaches a small one |
-| Hub slug | `distillation-a-big-model-teaches-a-small-one` (proposed; confirm) |
-| Deck file | `bk-s4-e9-distillation-a-big-model-teaches-a-small-one-v1.pdf` |
-| Hub format | `experiment` |
+| Hub slug | `distillation` (as on the hub) |
+| Deck file | `bk-s4-e9-distillation-v1.pdf` |
+| Hub format | `explainer` |
 
 ## The argument
 

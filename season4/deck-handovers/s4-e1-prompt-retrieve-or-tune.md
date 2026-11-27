@@ -22,7 +22,7 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E1 |
 | Title | Prompt, retrieve, or tune: what each one changes |
-| Hub slug | `prompt-retrieve-or-tune` (proposed; confirm) |
+| Hub slug | `prompt-retrieve-or-tune` (as on the hub) |
 | Deck file | `bk-s4-e1-prompt-retrieve-or-tune-v1.pdf` |
 | Hub format | `explainer` |
 

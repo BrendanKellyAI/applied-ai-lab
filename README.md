@@ -47,7 +47,9 @@ and house style replies (`datasets/halvard-tasks`, frozen), through prompted arm
 cheapest API model and adapter-tuned small open models on Colab. The season guide, scoreboard,
 fine-tuning readiness checklist and decision card are in [season4/](season4/); the episodes are
 in `episodes/s4-*`. `uv run lab adapt score <predictions.jsonl> --split test` scores your own
-triage predictions with no key and no call.
+triage predictions with no key and no call. The short version: write the rules down first;
+on triage nothing later beat written definitions, and on house style a tuned small model beat
+the best prompt (293 against 262 of 300).
 
 ## Episode code
 
@@ -80,7 +82,10 @@ triage predictions with no key and no call.
 | S4 E7 | Teaching a house style: guide, examples and tuning | [episodes/s4-e7-teaching-a-house-style](episodes/s4-e7-teaching-a-house-style/) |
 | S4 E8 | Field note: can fine-tuning teach facts? Tuning against retrieval on Season 2's questions | [episodes/s4-e8-can-fine-tuning-teach-facts](episodes/s4-e8-can-fine-tuning-teach-facts/) |
 | S4 E9 | Distillation: a big model labels the training data for a small one | [episodes/s4-e9-distillation-a-big-model-teaches-a-small-one](episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) |
+| S4 E10 | Field note: what tuning breaks outside the task it was tuned for | [episodes/s4-e10-what-does-tuning-break](episodes/s4-e10-what-does-tuning-break/) |
 | S4 E11 | Where your tuned model runs: a laptop against a free cloud GPU | [episodes/s4-e11-where-your-tuned-model-runs](episodes/s4-e11-where-your-tuned-model-runs/) |
+| S4 E12 | Prompt, retrieve, or tune? The season's decision card | [season4/decision-card.md](season4/decision-card.md) |
+| S4 E13 | Season 4 recap: the two task ladders and every claim | [season4/recap.py](season4/recap.py) |
 
 ## Reproduce a result for free
 

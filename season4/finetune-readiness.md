@@ -4,7 +4,7 @@ A tool from Season 4, started in E6 and completed in E10. Work through it before
 a fine-tuning project. Each line says what to check and, where Season 4 measured it, what the
 Halvard tasks showed. Halvard Home is invented; its numbers are one worked case, not a rule.
 
-**Status: draft.** Sections 1 to 5 carry Season 4's numbers up to E7; section 6 is written in E10.
+**Status: complete, 27 November 2026.** Sections 1 to 5 carry Season 4's numbers up to E7; section 6 is from E10.
 
 ## 1. Is tuning the right fix?
 
@@ -68,4 +68,19 @@ Halvard tasks showed. Halvard Home is invented; its numbers are one worked case,
 
 ## 6. What does tuning break?
 
-*Written in E10.*
+- [ ] **List what else the model will be asked.** A tuned model in a shared channel meets
+      requests nobody tuned it for. *(S4 E10: the tuned reply writer answered 41 of 100
+      ordinary requests, a soup recipe included, as a Halvard customer reply.)*
+- [ ] **Ask what the training taught that could travel.** A voice, an opening or a sign off fits
+      any request; a narrow format may not. *(S4 E10: the tuned triage model never answered an
+      ordinary request with a triage object.)*
+- [ ] **Test the questions it should decline,** with your real prompt and passages. *(S4 E10:
+      with Season 2's reference prompt, the reply writer declined 52 of 120 unanswerable
+      questions against 65 untuned; the triage model 78.)*
+- [ ] **Check that your general test can see a loss.** A test the untuned model already fails,
+      or one scored on answer format, cannot. *(S4 E10: both tuned models scored higher than
+      the untuned model on Season 1's items, 56 against 41, mostly by finishing with the answer
+      line the scorer reads; every model scored 0 on state tracking and puzzles.)*
+- [ ] **Rerun these checks after every retrain,** and keep them beside the task's own test set.
+- [ ] **Send the task instruction with every request** if you can; E10 tested without it, which
+      is the worst case for bleed.

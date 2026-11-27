@@ -22,7 +22,7 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E3 |
 | Title | How many examples? |
-| Hub slug | `how-many-examples` (proposed; confirm) |
+| Hub slug | `how-many-examples` (as on the hub) |
 | Deck file | `bk-s4-e3-how-many-examples-v1.pdf` |
 | Hub format | `explainer` |
 

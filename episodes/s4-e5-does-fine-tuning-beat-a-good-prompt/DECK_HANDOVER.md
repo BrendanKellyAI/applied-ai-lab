@@ -23,9 +23,9 @@ Branch `s4`.
 |---|---|
 | Episode code | S4 E5 |
 | Title | Field note: does fine-tuning beat a good prompt? |
-| Hub slug | `does-fine-tuning-beat-a-good-prompt` (proposed; confirm) |
+| Hub slug | `does-fine-tuning-beat-a-good-prompt` (as on the hub) |
 | Deck file | `bk-s4-e5-does-fine-tuning-beat-a-good-prompt-v1.pdf` |
-| Hub format | `field-note` |
+| Hub format | `field_note` |
 
 ## The argument
 
