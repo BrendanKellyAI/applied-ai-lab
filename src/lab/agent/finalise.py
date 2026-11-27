@@ -6,7 +6,7 @@ from collections import Counter, defaultdict
 from collections.abc import Sequence
 from pathlib import Path
 
-from lab.agent.case_model import CaseFacts
+from lab.agent.case_model import Appliance, CaseFacts
 from lab.agent.write_messages import WriteReport
 
 REVIEW_SIZE = 30
@@ -96,10 +96,17 @@ def review_markdown(picked: Sequence[CaseFacts], accepted: dict[str, dict[str, o
                 if part
             )
             lines.append(
-                f"- {appliance.product}, delivered {appliance.delivered.isoformat()}, plan "
+                f"- {appliance.product}, {_bought(appliance)}, delivered "
+                f"{appliance.delivered.isoformat()}, plan "
                 f"{appliance.plan}: **{outcome.decision}**{' (' + detail + ')' if detail else ''}"
             )
         if case.withhold:
             lines.append(f"- Withheld from the message: {', '.join(case.withhold)}")
         lines += ["- Agree? ", ""]
     return "\n".join(lines)
+
+
+def _bought(appliance: Appliance) -> str:
+    if appliance.order_id:
+        return f"order {appliance.order_id}"
+    return f"bought elsewhere, serial {appliance.serial}"

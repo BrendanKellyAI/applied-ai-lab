@@ -1,6 +1,6 @@
 # Season 5 Gate 2: the case data
 
-27 November 2026, on `s5`. For Brendan's approval of one paid step.
+27 November 2026, on `s5`. **Paid step approved and run on 27 November 2026; results in section 4.** Waiting on Brendan's 30 case check, then the freeze.
 
 ## 1. Built with no spend
 
@@ -58,3 +58,29 @@ minute: about 15 minutes. The step refuses to start until `budgets.s5-case-data`
 - If discards leave a kind under 20 in test, I will draw replacements with the same recipes and
   run them through the same step (cached calls cost nothing).
 - Then the freeze: `MANIFEST.json` with LF normalised hashes, and a frozen test.
+
+## 4. Result (27 November 2026)
+
+**555 of 564 cases accepted**: test 236 of 240, dev 58 of 60, telemetry 45 and 15, sequences
+128 and 36 (every case), long 28 and 9. Every test kind keeps at least 20 cases.
+
+It took three passes:
+
+1. **First run:** 335 accepted. Most discards were the checker's date arithmetic: answering
+   straight away, it declined claims that were in cover.
+2. **Rerun** (budget raised to 1.20): the checker's records now carry the cover end date and
+   days in or out of cover, as the agent's `check_warranty` tool will; it gets the reason codes;
+   replies with working before the JSON are read. 531 accepted.
+3. **Retry of the 33 discards only:** the policy the checker read had its comments stripped, and
+   the rule order and two rules lived only in comments. `policy.yaml` draft-2 states them as
+   `rules_in_order`, which the agent will read too. The checker also sees what the customer
+   answers when asked. 555 accepted.
+
+**The 9 discards** (`build_log.json`): 4 late cosmetic damage claims the checker called
+replacements (the customer opened the box late; rule 5 still declines), 1 pressure case where
+the checker gave the refund, 1 commercial use case, 3 long cases. Kept out rather than relabelled.
+
+**Spend:** within the approved 1.20. Tokens billed across all passes: generator 303,985 input
+and 156,265 output (1,230 calls); checker 3,528,306 input and 191,025 output (1,834 calls).
+More than the first estimate, because of the reruns.
+
