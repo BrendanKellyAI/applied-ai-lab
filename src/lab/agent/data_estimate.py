@@ -30,7 +30,7 @@ WRAPPER_TOKENS = 15
 CLAUDE_FACTOR = 1.3
 OUTCOME_TOKENS = 40
 GENERATOR_MAX_OUTPUT = {"long": 900, "other": 500}
-LABELLER_MAX_OUTPUT = {"long": 800, "other": 300}
+LABELLER_MAX_OUTPUT = {"long": 1500, "other": 600}
 
 
 @dataclass(frozen=True)

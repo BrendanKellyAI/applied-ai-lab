@@ -108,6 +108,9 @@ safety:
   # describe fire, smoke, burning, sparks, electric shock or injury is escalated to the safety
   # team at once. No repair is booked and no refund is issued by the agent.
   incident: escalate_to_safety
+  # A recall alone is not a safety incident: a recalled appliance with no incident described
+  # gets a replacement (remedies, rule 1).
+  recall_is_not_an_incident: true
 
 duplicates:
   # Invented. An open case for the same appliance and fault already exists: write nothing new;

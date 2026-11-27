@@ -179,3 +179,16 @@ def test_estimate_covers_every_case():
     assert [s.calls for s in stages] == [round(len(cases) * 1.3)] * 2
     assert "Cost, expected" in format_estimate(stages, PRICES)
     assert "price is missing" in format_estimate(stages, None)
+
+
+def test_parser_takes_the_object_after_any_working():
+    reply = 'Cover ends 2027-01-01, so in cover.\n{"outcomes": [{"serial": "A", "decision": "x"}]}'
+    assert parse_json(reply) == {"outcomes": [{"serial": "A", "decision": "x"}]}
+    with pytest.raises(ValueError):
+        parse_json("Working only, no answer {not json")
+
+
+def test_checker_records_carry_computed_cover_dates():
+    case = TEST[0]
+    prompt = labeller_prompt(case, "m")
+    assert '"cover_ends"' in prompt and '"days_out_of_cover"' in prompt

@@ -49,6 +49,9 @@ def generator_request(facts: CaseFacts, attempt: int) -> GenerationRequest:
     prompt = generation_prompt(facts)
     if attempt > 1:
         prompt += f"\nThis is attempt {attempt}: follow every point exactly."
+        numbers = ORDER_PATTERN.findall(" ".join(facts.say))
+        if numbers:
+            prompt += f" Write these order numbers exactly as given: {', '.join(numbers)}."
     provider, model = GENERATOR
     return GenerationRequest(
         provider=provider,  # type: ignore[arg-type]
@@ -75,11 +78,28 @@ def labeller_request(facts: CaseFacts, message: str) -> GenerationRequest:
 
 
 def parse_json(text: str) -> dict[str, object]:
+    """The reply's JSON object; if the model wrote working first, the last full object in it."""
     cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
-    value = json.loads(cleaned)
+    try:
+        value = json.loads(cleaned)
+    except json.JSONDecodeError:
+        value = _last_object(cleaned)
     if not isinstance(value, dict):
         raise ValueError("reply is not a JSON object")
     return value
+
+
+def _last_object(text: str) -> dict[str, object]:
+    """The outermost JSON object that ends the reply, found by trying each opening brace."""
+    decoder = json.JSONDecoder()
+    for start in (i for i, ch in enumerate(text) if ch == "{"):
+        try:
+            value, end = decoder.raw_decode(text[start:])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(value, dict) and not text[start + end :].strip(" \n`"):
+            return value
+    raise ValueError("no JSON object at the end of the reply")
 
 
 def clean_message(text: str) -> str:
