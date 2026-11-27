@@ -18,6 +18,8 @@ from lab.providers.base import (
 )
 from lab.providers.capabilities import CapabilityTable, default_capabilities
 from lab.providers.errors import error_for_status
+from lab.providers.google_messages import call_from_part, contents, tool_fields
+from lab.providers.messages import ToolCall
 from lab.providers.streaming import StreamClock, Usage, build_result
 
 _CONTENT_FILTER_REASONS = {
@@ -55,12 +57,13 @@ class GoogleProvider:
         self.validate(request)
         clock = StreamClock(self._clock)
         parts: list[str] = []
+        calls: list[ToolCall] = []
         model_returned = None
         usage = None
         finish = None
         try:
             stream = self._client.models.generate_content_stream(
-                model=request.model, contents=request.prompt, config=build_config(request)
+                model=request.model, contents=contents(request), config=build_config(request)
             )
             for chunk in stream:
                 model_returned = chunk.model_version or model_returned
@@ -69,7 +72,7 @@ class GoogleProvider:
                 if candidate is None:
                     continue
                 finish = candidate.finish_reason or finish
-                _read_parts(candidate, parts, clock)
+                _read_parts(candidate, parts, clock, calls)
         except genai_errors.APIError as exc:
             raise error_for_status(exc.code, str(exc)) from exc
         except httpx.HTTPError as exc:
@@ -81,17 +84,15 @@ class GoogleProvider:
             text="".join(parts),
             model_returned=model_returned or request.model,
             usage=_usage(usage),
-            finish_reason=_finish_reason(finish),
+            finish_reason="tool_calls" if calls else _finish_reason(finish),
             times=clock.finish(),
+            tool_calls=tuple(calls),
         )
 
 
 def build_config(request: GenerationRequest) -> types.GenerateContentConfig:
-    fields: dict[str, Any] = {
-        "max_output_tokens": request.max_output_tokens,
-        # No tools are passed; disabling this silences an SDK warning and rules out tool calls.
-        "automatic_function_calling": types.AutomaticFunctionCallingConfig(disable=True),
-    }
+    fields: dict[str, Any] = {"max_output_tokens": request.max_output_tokens}
+    fields.update(tool_fields(request))
     if request.system is not None:
         fields["system_instruction"] = request.system
     if request.temperature is not None:
@@ -105,10 +106,14 @@ def build_config(request: GenerationRequest) -> types.GenerateContentConfig:
     return types.GenerateContentConfig(**fields)
 
 
-def _read_parts(candidate: Any, parts: list[str], clock: StreamClock) -> None:
+def _read_parts(
+    candidate: Any, parts: list[str], clock: StreamClock, calls: list[ToolCall]
+) -> None:
     content = candidate.content
     for part in content.parts if content and content.parts else []:
-        if part.thought:
+        if getattr(part, "function_call", None):
+            calls.append(call_from_part(part, len(calls)))
+        elif part.thought:
             clock.mark_thinking()
         elif part.text:
             clock.mark_answer()

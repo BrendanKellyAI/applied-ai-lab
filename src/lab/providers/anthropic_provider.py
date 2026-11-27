@@ -7,6 +7,7 @@ from typing import Any
 
 import anthropic
 
+from lab.providers.anthropic_messages import ToolUseCollector, api_messages, tool_params
 from lab.providers.base import (
     FinishReason,
     GenerationRequest,
@@ -27,6 +28,7 @@ _STOP_REASONS: dict[str, FinishReason] = {
     "max_tokens": "length",
     "model_context_window_exceeded": "length",
     "refusal": "content_filter",
+    "tool_use": "tool_calls",
 }
 _RETRYABLE_STREAM_ERRORS = {"overloaded_error": ServerError, "api_error": ServerError}
 _WORKSPACE_HEADER = "anthropic-workspace-id"
@@ -79,6 +81,7 @@ class AnthropicProvider:
             ),
             finish_reason=_STOP_REASONS.get(state.stop_reason, "other"),
             times=clock.finish(),
+            tool_calls=tuple(state.tools.calls),
         )
 
 
@@ -94,7 +97,11 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
     params: dict[str, Any] = {
         "model": request.model,
         "max_tokens": request.max_output_tokens,
-        "messages": [{"role": "user", "content": request.prompt}],
+        "messages": (
+            [{"role": "user", "content": request.prompt}]
+            if request.messages is None
+            else api_messages(request)
+        ),
         "stream": True,
     }
     if request.system is not None:
@@ -108,6 +115,7 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
         display = "summarized" if request.show_thinking else "omitted"
         params["thinking"] = {"type": "adaptive", "display": display}
         params["output_config"] = {"effort": request.reasoning}
+    params.update(tool_params(request))
     return params
 
 
@@ -122,6 +130,7 @@ class _StreamState:
         self.output_tokens = 0
         self.thinking_tokens: int | None = None
         self.cached_input_tokens: int | None = None
+        self.tools = ToolUseCollector()
 
     def apply(self, event: Any, clock: StreamClock) -> None:
         if event.type == "message_start":
@@ -130,12 +139,18 @@ class _StreamState:
         elif event.type == "content_block_start":
             if event.content_block.type in ("thinking", "redacted_thinking"):
                 clock.mark_thinking()
+            elif event.content_block.type == "tool_use":
+                self.tools.start(event.index, event.content_block)
         elif event.type == "content_block_delta":
             if event.delta.type == "text_delta":
                 clock.mark_answer()
                 self.parts.append(event.delta.text)
             elif event.delta.type == "thinking_delta":
                 clock.mark_thinking()
+            elif event.delta.type == "input_json_delta":
+                self.tools.add(event.index, event.delta.partial_json)
+        elif event.type == "content_block_stop":
+            self.tools.stop(getattr(event, "index", -1))
         elif event.type == "message_delta":
             self.stop_reason = event.delta.stop_reason
             self._read_usage(event.usage)

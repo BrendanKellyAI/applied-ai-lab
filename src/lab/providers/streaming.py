@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 
 from lab.providers.base import FinishReason, GenerationRequest, GenerationResult, request_hash
+from lab.providers.messages import ToolCall
 
 
 class StreamClock:
@@ -59,6 +60,7 @@ def build_result(
     usage: Usage,
     finish_reason: FinishReason,
     times: StreamTimes,
+    tool_calls: tuple[ToolCall, ...] = (),
 ) -> GenerationResult:
     return GenerationResult(
         request_hash=request_hash(request),
@@ -75,4 +77,5 @@ def build_result(
         total_latency_ms=times.total_ms,
         finish_reason=finish_reason,
         timestamp_utc=datetime.now(UTC).isoformat(),
+        tool_calls=tool_calls,
     )

@@ -15,6 +15,8 @@ DEFAULT_PATH = Path(__file__).with_name("capabilities.yaml")
 # How a model can be held to an output format: not at all, valid JSON only, or a JSON schema.
 StructuredOutput = Literal["none", "json_mode", "schema"]
 TuningMethod = Literal["supervised", "preference"]
+# Season 5. Whether a model can call tools: not at all, one call a turn, or several at once.
+ToolCalling = Literal["none", "basic", "parallel"]
 
 
 class ModelCapabilities(BaseModel):
@@ -28,6 +30,10 @@ class ModelCapabilities(BaseModel):
     fine_tunable: bool = False
     tuning_method: tuple[TuningMethod, ...] = Field(default_factory=tuple)
     structured_output: StructuredOutput | None = None
+    # Season 5. Both stay unset (treated as unsupported) until verified for the model.
+    tool_calling: ToolCalling | None = None
+    image_input: bool = False
+    max_images_per_request: int | None = Field(default=None, gt=0)
 
     @field_validator("reasoning", mode="before")
     @classmethod
@@ -81,6 +87,7 @@ class CapabilityTable:
                 f"{where} does not accept a temperature; set temperature: null"
             )
         _check_output_format(request, caps, where)
+        _check_tools_and_images(request, caps, where)
         if caps.max_output_tokens and request.max_output_tokens > caps.max_output_tokens:
             raise UnsupportedSettingError(
                 f"{where} allows at most {caps.max_output_tokens} output tokens"
@@ -98,6 +105,23 @@ def _check_output_format(request: GenerationRequest, caps: ModelCapabilities, wh
     if offered not in allowed:
         raise UnsupportedSettingError(
             f"{where} does not offer {wanted.kind} output (capabilities.yaml says {offered})"
+        )
+
+
+def _check_tools_and_images(
+    request: GenerationRequest, caps: ModelCapabilities, where: str
+) -> None:
+    if request.tools and caps.tool_calling in (None, "none"):
+        raise UnsupportedSettingError(
+            f"{where} is not verified for tool calling (capabilities.yaml: "
+            f"tool_calling {caps.tool_calling})"
+        )
+    images = sum(len(turn.images) for turn in request.turns())
+    if images and not caps.image_input:
+        raise UnsupportedSettingError(f"{where} is not verified for image input")
+    if caps.max_images_per_request and images > caps.max_images_per_request:
+        raise UnsupportedSettingError(
+            f"{where} takes at most {caps.max_images_per_request} images a request"
         )
 
 

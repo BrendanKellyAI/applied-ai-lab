@@ -19,6 +19,7 @@ from lab.providers.base import (
 )
 from lab.providers.capabilities import CapabilityTable, default_capabilities
 from lab.providers.errors import error_for_status, retry_after_seconds
+from lab.providers.openai_messages import check_supported, input_items, tool_calls, tool_params
 from lab.providers.streaming import StreamClock, Usage, build_result
 
 _THINKING_EVENTS = {"response.reasoning_summary_text.delta", "response.reasoning_text.delta"}
@@ -39,6 +40,7 @@ class OpenAIProvider:
         self._clock = clock
 
     def validate(self, request: GenerationRequest) -> None:
+        check_supported(request)
         self._capabilities.check(request)
 
     def generate(self, request: GenerationRequest) -> GenerationResult:
@@ -76,7 +78,7 @@ class OpenAIProvider:
 def build_params(request: GenerationRequest) -> dict[str, Any]:
     params: dict[str, Any] = {
         "model": request.model,
-        "input": request.prompt,
+        "input": request.prompt if request.messages is None else input_items(request),
         "max_output_tokens": request.max_output_tokens,
         "stream": True,
         # Nothing is stored server side, so no call can see another call's history.
@@ -86,10 +88,9 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
     if request.system is not None and json_mode:
         # JSON mode needs the word "json" in the input messages, and instructions do not
         # count; the same text goes as a developer message instead.
-        params["input"] = [
-            {"role": "developer", "content": request.system},
-            {"role": "user", "content": request.prompt},
-        ]
+        turns = params["input"]
+        rest = [{"role": "user", "content": turns}] if isinstance(turns, str) else turns
+        params["input"] = [{"role": "developer", "content": request.system}, *rest]
     elif request.system is not None:
         params["instructions"] = request.system
     if request.temperature is not None:
@@ -103,6 +104,7 @@ def build_params(request: GenerationRequest) -> dict[str, Any]:
         params["reasoning"] = reasoning
     if request.output_format is not None:
         params["text"] = {"format": _text_format(request.output_format)}
+    params.update(tool_params(request))
     return params
 
 
@@ -132,9 +134,9 @@ def _failed_response_error(response: Any) -> ProviderError:
     return InvalidRequestError(message)
 
 
-def _finish_reason(response: Any) -> FinishReason:
+def _finish_reason(response: Any, called_tools: bool) -> FinishReason:
     if response.status == "completed":
-        return "stop"
+        return "tool_calls" if called_tools else "stop"
     reason = getattr(response.incomplete_details, "reason", None)
     if reason == "max_output_tokens":
         return "length"
@@ -149,6 +151,7 @@ def _result(
     usage = response.usage
     output_details = getattr(usage, "output_tokens_details", None)
     input_details = getattr(usage, "input_tokens_details", None)
+    calls = tool_calls(response)
     return build_result(
         request,
         text=text,
@@ -159,6 +162,7 @@ def _result(
             reasoning_tokens=getattr(output_details, "reasoning_tokens", None),
             cached_input_tokens=getattr(input_details, "cached_tokens", None),
         ),
-        finish_reason=_finish_reason(response),
+        finish_reason=_finish_reason(response, bool(calls)),
         times=clock.finish(),
+        tool_calls=calls,
     )

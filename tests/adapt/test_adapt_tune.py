@@ -326,7 +326,11 @@ def test_an_unset_format_leaves_the_request_hash_unchanged():
     import hashlib
 
     request = _request()
-    payload = request.model_dump(mode="json", exclude={"stream", "metadata", "output_format"})
+    # The Season 4 rule; Season 5's fields did not exist then, so they are left out too.
+    later_fields = {"messages", "tools", "tool_choice"}
+    payload = request.model_dump(
+        mode="json", exclude={"stream", "metadata", "output_format", *later_fields}
+    )
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     assert request_hash(request) == hashlib.sha256(canonical.encode()).hexdigest()
     assert request_hash(_request(output_format=OutputFormat(kind="json_mode"))) != (

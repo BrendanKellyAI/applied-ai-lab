@@ -22,6 +22,31 @@
 #   Anthropic: the models and pricing pages offer no fine-tuning on the first-party API.
 # Season 4 therefore tunes an open-weight model on Colab (season4/PLAN.md).
 #
+# Season 5 re-verification, 27 November 2026, for tool calling and image input. New fields:
+#   tool_calling             none, basic (one call a turn) or parallel; unset means unverified
+#   image_input              true only where the model page lists image input
+#   max_images_per_request   the provider's documented limit, where published
+# No page read shows a last-updated date. Every "parallel" below is to be confirmed by the
+# first `lab smoke` at the Season 5 spend gate.
+#   OpenAI: the gpt-6-luna page lists function_calling, structured_outputs and image_input;
+#     input text and image; context 1,050,000, output 128,000; effort none to max; one
+#     snapshot, no deprecation. The function calling guide says to assume several calls a
+#     turn. gpt-5-nano is cheaper but is marked deprecated, so gpt-6-luna stays the cheapest.
+#     Images: up to 1,500 a request; patch count ceil(w/32) x ceil(h/32) times a model factor.
+#   Anthropic: "All current models support text and image input ... vision, and tool use";
+#     claude-haiku-5-5 is current, retirement not sooner than 7 October 2027; up to 600 images
+#     a request; an image costs ceil(w/28) x ceil(h/28) tokens. No cheaper Claude model.
+#   Google: neither the models page nor the function calling page states tool calling or image
+#     input for gemini-3.1-flash-lite or gemini-3.6-flash. Season 5 uses them only without
+#     tools or images (data generation, the E5 judge), so both fields stay unset.
+#   Sources added:
+#     https://developers.openai.com/api/docs/guides/function-calling
+#     https://developers.openai.com/api/docs/guides/images-vision
+#     https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
+#     https://platform.claude.com/docs/en/build-with-claude/vision
+#     https://aistudio.google.com/docs/function-calling
+#     https://aistudio.google.com/docs/image-understanding
+#
 # Sources:
 #   https://developers.openai.com/api/docs/models
 #   https://developers.openai.com/api/docs/guides/reasoning
@@ -57,10 +82,14 @@ openai:
   # with HTTP 400. Season 4 answer model. 22 November 2026: structured_outputs listed as
   # supported; fine-tuning not supported; only snapshot gpt-6-luna, no deprecation date.
   gpt-6-luna:
+    # Season 5 agent. 27 November 2026: tool calling and image input listed.
     reasoning: [off, low, medium, high]
     temperature: false
     max_output_tokens: 128000
     structured_output: schema
+    tool_calling: parallel
+    image_input: true
+    max_images_per_request: 1500
   # Candidate S2 judge, for cost ($0.25 / $2.00). Like gpt-5-nano, checked 12 October 2026:
   # effort "none" is rejected, "minimal" is its lowest level, temperature is rejected.
   gpt-5-mini:
@@ -98,11 +127,15 @@ anthropic:
   # Season 4 label checker and second judge. 22 November 2026: listed under structured outputs
   # (stable, output_config.format json_schema). Prompts over 100,000 tokens pay five times the
   # rate, so keep Season 4 prompts below that.
+  # Season 5 label checker. 27 November 2026: tool use and vision on every current model.
   claude-haiku-5-5:
     reasoning: [off, low, medium, high, xhigh, max]
     temperature: false
     max_output_tokens: 128000
     structured_output: schema
+    tool_calling: parallel
+    image_input: true
+    max_images_per_request: 600
   # Current models reject any non-default temperature. Reasoning levels map to
   # output_config.effort with adaptive thinking; "off" maps to thinking disabled.
   claude-fable-5-1:

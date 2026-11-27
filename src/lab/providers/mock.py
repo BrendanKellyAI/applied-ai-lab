@@ -3,6 +3,7 @@
 import threading
 import time
 from collections.abc import Callable, Collection, Mapping, Sequence
+from dataclasses import dataclass
 from datetime import UTC, datetime
 
 from lab.providers.base import (
@@ -12,13 +13,34 @@ from lab.providers.base import (
     UnsupportedSettingError,
     request_hash,
 )
+from lab.providers.messages import ToolCall
 
 _REASONING_TOKENS = {"low": 10, "medium": 20, "high": 40}
 ALL_REASONING: tuple[ReasoningLevel | None, ...] = ("off", "low", "medium", "high", None)
 
 
+@dataclass(frozen=True)
+class MockReply:
+    """A scripted turn: text, tool calls, or both. A `respond` function may return one of these
+    in place of a string, so an agent loop can be stepped through with no spend."""
+
+    text: str = ""
+    tool_calls: tuple[ToolCall, ...] = ()
+
+
 def _echo(request: GenerationRequest) -> str:
     return f"mock answer for {request.model}"
+
+
+def _words_seen(request: GenerationRequest) -> int:
+    """A rough input size: words in every turn and tool definition, plus a flat cost per image."""
+    words = len((request.system or "").split())
+    for turn in request.turns():
+        words += len(turn.text.split()) + 100 * len(turn.images)
+        words += sum(len(call.arguments_json.split()) + 1 for call in turn.tool_calls)
+    for tool in request.tools or ():
+        words += len(tool.description.split()) + len(str(tool.parameters).split())
+    return words
 
 
 class MockProvider:
@@ -30,7 +52,7 @@ class MockProvider:
     def __init__(
         self,
         *,
-        respond: Callable[[GenerationRequest], str] = _echo,
+        respond: Callable[[GenerationRequest], str | MockReply] = _echo,
         failures: Mapping[str, Sequence[BaseException]] | None = None,
         supported_reasoning: Collection[ReasoningLevel | None] = ALL_REASONING,
         supports_temperature: bool = True,
@@ -64,7 +86,7 @@ class MockProvider:
             self.calls.append(request)
             self._in_flight += 1
             self.max_in_flight = max(self.max_in_flight, self._in_flight)
-            pending = self._pending_failures.get(request.prompt)
+            pending = self._pending_failures.get(request.prompt) if request.prompt else None
             failure = pending.pop(0) if pending else None
         try:
             if failure is not None:
@@ -77,10 +99,14 @@ class MockProvider:
                 self._in_flight -= 1
 
     def _result(self, request: GenerationRequest, started: float) -> GenerationResult:
-        text = self._respond(request)
+        reply = self._respond(request)
+        if isinstance(reply, str):
+            reply = MockReply(text=reply)
+        text = reply.text
         latency_ms = (time.perf_counter() - started) * 1000
         reasoning_tokens = _REASONING_TOKENS.get(request.reasoning or "off")
-        prompt_tokens = len(request.prompt.split()) + len((request.system or "").split())
+        prompt_tokens = _words_seen(request)
+        call_words = sum(len(call.arguments_json.split()) + 1 for call in reply.tool_calls)
         return GenerationResult(
             request_hash=request_hash(request),
             provider=request.provider,
@@ -88,13 +114,14 @@ class MockProvider:
             model_returned=f"{request.model}-mock-0001",
             text=text,
             input_tokens=prompt_tokens,
-            output_tokens=len(text.split()) + (reasoning_tokens or 0),
+            output_tokens=len(text.split()) + call_words + (reasoning_tokens or 0),
             reasoning_tokens=reasoning_tokens,
             cached_input_tokens=0,
             time_to_first_answer_token_ms=latency_ms,
             time_to_first_thinking_ms=latency_ms if reasoning_tokens else None,
             total_latency_ms=latency_ms,
-            finish_reason="stop",
+            finish_reason="tool_calls" if reply.tool_calls else "stop",
             timestamp_utc=datetime.now(UTC).isoformat(),
             error=self._error_text,
+            tool_calls=reply.tool_calls,
         )
