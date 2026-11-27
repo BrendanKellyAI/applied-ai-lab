@@ -15,7 +15,16 @@ from lab.agent.world import is_recalled, load_database
 
 REPO = Path(__file__).resolve().parents[2]
 DATASET = Path("datasets") / "halvard-cases"
-FACT_FILES = ("test", "dev", "telemetry-test", "telemetry-dev")
+FACT_FILES = (
+    "test",
+    "dev",
+    "telemetry-test",
+    "telemetry-dev",
+    "sequences-test",
+    "sequences-dev",
+    "long-test",
+    "long-dev",
+)
 POLICY = load_policy()
 
 
@@ -62,13 +71,44 @@ def test_sizes_match_the_case_plan(cases):
     for split in ("test", "dev"):
         assert Counter(c.kind for c in cases[split]) == Counter(KIND_SIZES[split])
     assert len(cases["telemetry-test"]) == 45 and len(cases["telemetry-dev"]) == 15
+    for split, size in (("test", 30), ("dev", 10)):
+        assert len({c.sequence_id for c in cases[f"sequences-{split}"]}) == size
+        assert len(cases[f"long-{split}"]) == size
+
+
+def test_sequences_carry_their_links_forward(cases):
+    by_sequence: dict[str, list] = {}
+    for case in cases["sequences-test"] + cases["sequences-dev"]:
+        by_sequence.setdefault(case.sequence_id, []).append(case)
+    for steps in by_sequence.values():
+        assert 3 <= len(steps) <= 5
+        assert len({c.customer_id for c in steps}) == 1
+        link = steps[0].tags[0]
+        decisions = [c.expected[0].decision for c in steps]
+        if link == "repair_failed":
+            assert decisions[:3] == ["repair_booked", "repair_booked", "replacement"]
+        if link == "goodwill":
+            reasons = [c.expected[0].reason for c in steps if c.expected[0].reason]
+            assert reasons == ["goodwill", "out_of_cover"]
+        if link == "preference":
+            times = {c.expected[0].visit_time_of_day for c in steps}
+            assert len(times) == 1 and None not in times
+
+
+def test_long_cases_cover_several_appliances(cases):
+    for case in cases["long-test"] + cases["long-dev"]:
+        assert 4 <= len(case.appliances) == len(case.expected) <= 6
 
 
 def test_serials_and_ids_are_unique(cases):
     every = [c for group in cases.values() for c in group]
     assert len({c.case_id for c in every}) == len(every)
-    serials = [a.serial for c in every for a in c.appliances]
-    assert len(set(serials)) == len(serials)
+    # A serial belongs to one case, or to one sequence (a repair that failed comes back).
+    owners: dict[str, set[str]] = {}
+    for case in every:
+        for a in case.appliances:
+            owners.setdefault(a.serial, set()).add(case.sequence_id or case.case_id)
+    assert all(len(owner) == 1 for owner in owners.values())
 
 
 def test_every_expected_outcome_is_recomputed_by_policy(cases):
@@ -79,6 +119,11 @@ def test_every_expected_outcome_is_recomputed_by_policy(cases):
 
 def _one(db, query: str, *args):
     return db.execute(query, args).fetchone()
+
+
+def _history_from_database(case) -> bool:
+    """Later sequence cases take history from earlier cases in the sequence, not the database."""
+    return case.sequence_position in (None, 1)
 
 
 def test_appliance_facts_agree_with_the_world_database(cases, db):
@@ -107,7 +152,8 @@ def test_appliance_facts_agree_with_the_world_database(cases, db):
                 a.serial,
                 a.fault,
             )[0]
-            assert repairs == a.earlier_repairs_same_fault, case.case_id
+            if _history_from_database(case):
+                assert repairs == a.earlier_repairs_same_fault, case.case_id
 
 
 def test_open_cases_and_goodwill_history_are_planted(cases, db):
@@ -129,7 +175,8 @@ def test_open_cases_and_goodwill_history_are_planted(cases, db):
                 case.customer_id,
                 since,
             )[0]
-            assert bool(goodwill) == a.goodwill_in_last_year, case.case_id
+            if _history_from_database(case):
+                assert bool(goodwill) == a.goodwill_in_last_year, case.case_id
 
 
 def test_withheld_facts_are_not_in_what_the_message_says(cases):

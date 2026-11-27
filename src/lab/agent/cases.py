@@ -72,11 +72,15 @@ class CaseBuilder:
         customer: dict[str, object],
         appliances: tuple[Appliance, ...],
         say: list[str],
+        *,
+        stated_earlier: str | None = None,
         **extra: object,
     ) -> CaseFacts:
+        """A case for this customer. `stated_earlier` is a time preference the customer gave in
+        an earlier case of a sequence: it decides bookings, but this message does not repeat it."""
         region = str(customer["region"])
-        preference = str(customer["contact_pref"]) or None
-        if preference:
+        preference = stated_earlier or str(customer["contact_pref"]) or None
+        if preference and not stated_earlier:
             say = [*say, f"You mention you can only do {preference}."]
         expected = tuple(expected_for(self.policy, a, region, preference) for a in appliances)
         return CaseFacts(

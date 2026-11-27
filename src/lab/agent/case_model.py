@@ -81,6 +81,7 @@ class CaseFacts(_Frozen):
     customer_id: str
     customer_name: str
     region: str
+    # The customer's real time preference: on record, or stated in an earlier sequence case.
     contact_preference: str | None = None
     appliances: tuple[Appliance, ...]
     # What the message must state, in plain words, and what it must leave out.

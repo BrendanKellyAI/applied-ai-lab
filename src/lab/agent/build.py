@@ -15,11 +15,15 @@ from lab.agent.case_draw import Drawer
 from lab.agent.case_model import CaseFacts, Kind, Split
 from lab.agent.cases import KIND_SIZES
 from lab.agent.cases_media import DATASET, MediaBuilder
+from lab.agent.cases_more import LongCaseBuilder, SequenceBuilder
 from lab.agent.policy import load_policy
 from lab.agent.world import build_world, write_csv
 
 SEED = 20261127
 TELEMETRY_SIZES: dict[Split, int] = {"dev": 15, "test": 45}
+# Sequences (customers) and long cases per split: 40 of each in all.
+SEQUENCE_SIZES: dict[Split, int] = {"dev": 10, "test": 30}
+LONG_SIZES: dict[Split, int] = {"dev": 10, "test": 30}
 ID_PREFIX = {("dev", False): "D", ("test", False): "T", ("dev", True): "LD", ("test", True): "LT"}
 
 
@@ -49,6 +53,12 @@ def build_dataset(root: Path, seed: int = SEED) -> BuildSummary:
         files[f"telemetry-{split}"] = _draw(
             builder, split, telemetry_slots, order_rng, telemetry=True
         )
+    sequences, long_cases = SequenceBuilder(builder), LongCaseBuilder(builder)
+    for split in ("test", "dev"):
+        files[f"sequences-{split}"] = [
+            facts for n in range(SEQUENCE_SIZES[split]) for facts in sequences.sequence(n, split)
+        ]
+        files[f"long-{split}"] = [long_cases.long_case(n, split) for n in range(LONG_SIZES[split])]
     write_csv(world, dataset / "world")
     for name, cases in files.items():
         _write_jsonl(
