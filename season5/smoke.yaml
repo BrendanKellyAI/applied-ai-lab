@@ -1,0 +1,30 @@
+# Season 5 smoke test, approved at Gate 1 on 27 November 2026: about 10 calls, under 20,000
+# tokens. Confirms the capabilities.yaml claims Season 5 builds on, before anything is built:
+#   plain        the usual one word call, every model
+#   tool_call    one tool call with tool_choice required (gpt-6-luna, claude-haiku-5-5)
+#   parallel     two tool calls in one turn, since both are listed as parallel
+#   round_trip   a tool result sent back, then an answer that uses it
+#   image        the serial number read from an invented rating plate (season5/smoke/)
+# Run: uv run lab smoke --config season5/smoke.yaml
+experiment: s5-smoke
+description: Check tool calling, parallel calls, tool results and image input for Season 5
+seed: 20261127
+parameters:
+  prompt: "Reply with the single word: ready"
+  agent_checks: true
+models:
+  # Agent, every arm.
+  - provider: openai
+    model: gpt-6-luna
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 300 }
+  # Label checker.
+  - provider: anthropic
+    model: claude-haiku-5-5
+    modes:
+      lowest: { reasoning: off, temperature: null, max_output_tokens: 300 }
+  # Data generator: text only.
+  - provider: google
+    model: gemini-3.1-flash-lite
+    modes:
+      lowest: { reasoning: minimal, temperature: null, max_output_tokens: 256 }

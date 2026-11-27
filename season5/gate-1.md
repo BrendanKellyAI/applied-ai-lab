@@ -1,7 +1,7 @@
 # Season 5 Gate 1
 
-27 November 2026, on `s5`. For Brendan's approval. Nothing paid has been called. The data is
-not built; this gate approves the plan for it.
+27 November 2026, on `s5`. **Approved by Brendan on 27 November 2026: every proposal in
+section 5, and the smoke spend in section 4.**
 
 ## 1. What step 1 built
 
@@ -54,7 +54,12 @@ entries are from the docs and will be confirmed by `lab smoke`.
 `lab smoke` with one tool call request and one image request each for `gpt-6-luna` and
 `claude-haiku-5-5`, plus a text call to `gemini-3.1-flash-lite`: about 10 calls, under 20,000
 tokens in total. It confirms tool calling, parallel calls and image input before anything is
-built on them. I will send the exact `lab estimate` figure with the request.
+built on them.
+
+**Result, 27 November 2026:** all 11 checks passed (`uv run lab smoke --config
+season5/smoke.yaml`). Ten calls were made, billing 2,588 input and 330 output tokens; one plain
+call was already logged. Both models made a single tool call, two calls in one turn, answered
+from a tool result, and read the serial number from the image.
 
 ## 5. Decisions for you
 

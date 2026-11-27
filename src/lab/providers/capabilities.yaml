@@ -26,8 +26,9 @@
 #   tool_calling             none, basic (one call a turn) or parallel; unset means unverified
 #   image_input              true only where the model page lists image input
 #   max_images_per_request   the provider's documented limit, where published
-# No page read shows a last-updated date. Every "parallel" below is to be confirmed by the
-# first `lab smoke` at the Season 5 spend gate.
+# No page read shows a last-updated date. Confirmed by `lab smoke` with season5/smoke.yaml on
+# 27 November 2026: gpt-6-luna and claude-haiku-5-5 each made a tool call, two calls in one
+# turn, used a tool result, and read an invented rating plate's serial number correctly.
 #   OpenAI: the gpt-6-luna page lists function_calling, structured_outputs and image_input;
 #     input text and image; context 1,050,000, output 128,000; effort none to max; one
 #     snapshot, no deprecation. The function calling guide says to assume several calls a

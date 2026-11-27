@@ -4,6 +4,7 @@ from lab.config import ExperimentConfig
 from lab.plan import PlannedCall, build_request, make_call_id
 from lab.providers.base import GenerationRequest, GenerationResult
 from lab.raw_log import RunRecord
+from lab.smoke_agent import agent_problems, plan_agent_checks, tool_only_fields
 
 DEFAULT_PROMPT = "Reply with the single word: ready"
 # Modes that show thinking need a prompt worth thinking about; on a trivial prompt, models with
@@ -21,7 +22,7 @@ _NOT_CHECKED = {"request_hash", "error"}
 def plan_smoke(config: ExperimentConfig) -> list[PlannedCall]:
     prompt = str(config.parameters.get("prompt", DEFAULT_PROMPT))
     thinking_prompt = str(config.parameters.get("thinking_prompt", DEFAULT_THINKING_PROMPT))
-    return [
+    plain = [
         PlannedCall(
             call_id=make_call_id(model_label=model.display_label, mode=mode, cell={}),
             model_label=model.display_label,
@@ -37,6 +38,7 @@ def plan_smoke(config: ExperimentConfig) -> list[PlannedCall]:
         for model in config.models
         for mode, settings in model.modes.items()
     ]
+    return plain + plan_agent_checks(config)
 
 
 def _did_not_think(result: GenerationResult) -> bool:
@@ -47,6 +49,8 @@ def _absent_field_note(name: str, request: GenerationRequest, result: Generation
     """Why an empty field is acceptable, or NOT REPORTED when it should have been populated."""
     if name in _OPTIONAL_FIELDS:
         return "not reported"
+    if name in tool_only_fields(result):
+        return "not applicable, the model answered with tool calls"
     if name == "reasoning_tokens" and not request.show_thinking:
         return "not reported"
     if name == "time_to_first_thinking_ms":
@@ -89,7 +93,7 @@ def problems(record: RunRecord, request: GenerationRequest) -> list[str]:
         for name in _absent_fields(result)
         if _absent_field_note(name, request, result) == "NOT REPORTED"
     ]
-    return missing + _warnings(request, result)
+    return missing + _warnings(request, result) + agent_problems(request, result)
 
 
 def describe(record: RunRecord, request: GenerationRequest) -> list[str]:
@@ -106,4 +110,5 @@ def describe(record: RunRecord, request: GenerationRequest) -> list[str]:
             shown = f"{value:,.0f}" if isinstance(value, float) else value
             lines.append(f"  {name}: {str(shown)[:80]}")
     lines.extend(f"  WARNING: {warning}" for warning in _warnings(request, result))
+    lines.extend(f"  FAILED CHECK: {problem}" for problem in agent_problems(request, result))
     return lines
