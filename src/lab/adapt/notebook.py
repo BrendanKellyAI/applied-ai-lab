@@ -8,7 +8,10 @@ What it does, for one prepared arm folder (lab adapt tune):
   1. refuses to run unless job.json has an open launched attempt and the files match its hashes
   2. adapter (LoRA) tuning on train.jsonl, unless the job has no training examples; or, for an
      eval job (v2, E10), loading an earlier job's adapter from Drive after checking its hash
-  3. greedy predictions on each eval file, thinking off
+  3. greedy predictions on each eval file, thinking off, in batches of up to EVAL_BATCH; from
+     v3 a batch also keeps its size times (longest prompt + new tokens) squared under
+     EVAL_ATTENTION_BUDGET, so long prompts (E10's declines, with retrieved passages) run in
+     smaller batches instead of running out of GPU memory. Short prompts batch as before.
   4. job_result.json with the outcome, which lab adapt status records; a failure is written
      too, and nothing is retried
 """
@@ -16,7 +19,7 @@ What it does, for one prepared arm folder (lab adapt tune):
 import json
 from pathlib import Path
 
-NOTEBOOK_VERSION = "s4-lora-job-v2"
+NOTEBOOK_VERSION = "s4-lora-job-v3"
 # Pinned so a rerun installs the same code. Torch is Colab's own; its version is recorded.
 PACKAGES = ("transformers==4.57.1", "peft==0.17.1", "accelerate==1.10.1")
 
@@ -39,7 +42,10 @@ Adapters stay on Drive and are never committed; their hash is recorded."""
 
 SETTINGS = """JOB_DIR = "/content/drive/MyDrive/s4-jobs/ARM-FOLDER"  # the prepared arm folder
 MOUNT_DRIVE = True
-EVAL_BATCH = 16"""
+EVAL_BATCH = 16
+# A batch's size times (longest prompt + new tokens) squared stays under this, so long prompts
+# run in smaller batches; a prompt over it runs alone (v3, after E10's first job ran out of memory).
+EVAL_ATTENTION_BUDGET = 40_000_000"""
 
 INSTALL = "%pip install -q " + " ".join(f'"{p}"' for p in PACKAGES)
 
@@ -207,13 +213,30 @@ def train(base, plan):
         "resumed": bool(resume),
     }"""
 
+EVAL_BATCHES = """def eval_batches(lengths, max_new_tokens, cap, budget):
+    # Consecutive row indices, each batch as long as it can be within the cap and the budget.
+    batches, start = [], 0
+    while start < len(lengths):
+        size = 1
+        while start + size < len(lengths) and size < cap:
+            widest = max(lengths[start : start + size + 1]) + max_new_tokens
+            if (size + 1) * widest**2 > budget:
+                break
+            size += 1
+        batches.append(list(range(start, start + size)))
+        start += size
+    return batches"""
+
 PREDICT = """def predict(active, split, max_new_tokens):
     rows = read_jsonl(job_dir / f"eval-{split}.jsonl")
     active.eval()
     out, started = [], time.time()
-    for start in range(0, len(rows), EVAL_BATCH):
-        batch = rows[start : start + EVAL_BATCH]
-        prompts = [prompt_text(r["messages"]) for r in batch]
+    texts = [prompt_text(r["messages"]) for r in rows]
+    lengths = [len(tokenizer(t, add_special_tokens=False)["input_ids"]) for t in texts]
+    batches = eval_batches(lengths, max_new_tokens, EVAL_BATCH, EVAL_ATTENTION_BUDGET)
+    for indices in batches:
+        batch = [rows[i] for i in indices]
+        prompts = [texts[i] for i in indices]
         enc = tokenizer(prompts, return_tensors="pt", padding=True, add_special_tokens=False)
         enc = enc.to("cuda")
         with torch.no_grad():
@@ -282,6 +305,7 @@ CELLS = (
     ("code", SETUP),
     ("code", MODEL),
     ("code", TRAIN),
+    ("code", EVAL_BATCHES),
     ("code", PREDICT),
     ("code", RUN),
 )

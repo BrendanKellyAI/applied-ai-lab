@@ -280,6 +280,34 @@ def test_committed_notebook_matches_the_generator_and_parses():
     assert chr(0x2013) not in text and chr(0x2014) not in text
 
 
+def _eval_batches():
+    from lab.adapt.notebook import EVAL_BATCHES
+
+    namespace: dict = {}
+    exec(EVAL_BATCHES, namespace)  # the notebook's own source, so the test runs what Colab runs
+    return namespace["eval_batches"]
+
+
+def test_short_prompts_keep_the_full_eval_batch():
+    batches = _eval_batches()([300] * 40, max_new_tokens=160, cap=16, budget=40_000_000)
+    assert [len(b) for b in batches] == [16, 16, 8]
+    assert [i for b in batches for i in b] == list(range(40))
+
+
+def test_long_prompts_get_smaller_batches_and_never_none():
+    lengths = [300, 300, 3_600, 300, 6_000, 6_000, 300]
+    batches = _eval_batches()(lengths, max_new_tokens=400, cap=16, budget=40_000_000)
+    # A batch costs its size times (longest prompt + new tokens) squared. (3,600 + 400) squared
+    # is 16 million, so two such fit; (6,000 + 400) squared alone is over the budget, and a
+    # prompt over the budget still runs, on its own. Order is kept.
+    assert batches == [[0, 1], [2, 3], [4], [5], [6]]
+
+
+def test_the_notebook_is_version_3_with_the_attention_budget():
+    text = render()
+    assert "s4-lora-job-v3" in text and "EVAL_ATTENTION_BUDGET" in text
+
+
 # Output format on provider requests
 
 
