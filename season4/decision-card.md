@@ -4,9 +4,8 @@ A tool from Season 4 (E12). Start at the top with the gap you have measured, and
 first fix that clears your bar. Each step gives the evidence from Halvard's two tasks. Halvard
 Home is invented; its numbers are one worked case, not a rule for your task.
 
-**Status: draft, 24 November 2026.** The steps from E1 to E7 carry their results. E11 is in
-section 6. The steps from E8, E9 and E10 are marked *pending* and will be filled from those
-episodes; the card is final once they are.
+**Status: draft, 27 November 2026.** Every step carries its result from E1 to E11. The card is
+finalised in E12.
 
 ## The rule (proposed)
 
@@ -62,7 +61,9 @@ Tune when all of these hold:
 - **A bigger model can label for you,** where its terms allow it. *(E9: a small model tuned on `gpt-6-luna`'s labels scored 589 of 600,
   against 587 for its teacher and 592 on true labels. The terms allow it for an in-house
   classifier only.)*
-- **You can check what tuning breaks** outside the task. *(E10: pending.)*
+- **You can check what tuning breaks** outside the task. *(E10: the tuned reply writer
+  answered 41 of 100 ordinary requests as a customer reply and declined fewer unanswerable
+  questions, 52 against 65; the tuned triage model did neither.)*
 - **The volume pays back the training and hosting,** which this card does not price: that is
   Season 6.
 
@@ -81,7 +82,9 @@ Before you commission it, run `finetune-readiness.md`.
   Training needs the GPU; answering, for a small model, may not.
 - **The training data needs upkeep:** when the rules change (a new route, a new product), the
   labels and the model change with them; a prompt changes in minutes.
-- **Every retrain needs the regression checks again.** *(E10: pending.)*
+- **Every retrain needs the regression checks again.** *(E10: what breaks depends on what was
+  taught: a voice travelled to every kind of request, a JSON format stayed in its task. Only a
+  test on the other requests shows which you have.)*
 - **A tuned model has no permission filter.** Anything in its training data, it can repeat to
   anyone (Season 2 E8). Season 4 left staff-only documents out of E8's training on purpose.
 
@@ -98,7 +101,7 @@ Before you commission it, run `finetune-readiness.md`.
 | E7 | "Tune for a house style only on replies you would be happy to see copied, habits and all." | "If we tuned a model on our past replies, what habits of ours would it copy that we would not put in a style guide?" |
 | E8 | "To give a model your facts, retrieve them. Tune for behaviour, and if you tune on answers, include the questions it should decline." | "If our model did not know the answer, would it say so, and have we tested that?" |
 | E9 | "If a big model does the task well and its terms allow it, let it label the training data, check a sample by hand, and tune the small model on the rest." | "Do we need to label data by hand, or could the model we already pay for label it, and do its terms let us?" |
-| E10 | *pending* | |
+| E10 | "Before a tuned model sees requests outside its task, test it on them: ordinary requests and the questions it should decline. Rerun those tests after every retrain." | "What else will this tuned model be asked, and have we tested it on that?" |
 | E11 | "Tune where the GPU is, then run the model wherever it is cheapest to keep: check that it gives the same answers there before you move it." | "If we tuned a small model, how many messages an hour would it need to answer, and does that need a GPU at all?" |
 
 The final version of this table, and the season scoreboard, are filled in E12.

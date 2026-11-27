@@ -80,6 +80,7 @@ triage predictions with no key and no call.
 | S4 E7 | Teaching a house style: guide, examples and tuning | [episodes/s4-e7-teaching-a-house-style](episodes/s4-e7-teaching-a-house-style/) |
 | S4 E8 | Field note: can fine-tuning teach facts? Tuning against retrieval on Season 2's questions | [episodes/s4-e8-can-fine-tuning-teach-facts](episodes/s4-e8-can-fine-tuning-teach-facts/) |
 | S4 E9 | Distillation: a big model labels the training data for a small one | [episodes/s4-e9-distillation-a-big-model-teaches-a-small-one](episodes/s4-e9-distillation-a-big-model-teaches-a-small-one/) |
+| S4 E10 | Field note: what tuning breaks outside the task it was tuned for | [episodes/s4-e10-what-does-tuning-break](episodes/s4-e10-what-does-tuning-break/) |
 | S4 E11 | Where your tuned model runs: a laptop against a free cloud GPU | [episodes/s4-e11-where-your-tuned-model-runs](episodes/s4-e11-where-your-tuned-model-runs/) |
 
 ## Reproduce a result for free
