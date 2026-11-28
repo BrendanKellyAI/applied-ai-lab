@@ -2,7 +2,10 @@
 
 The case world for Season 5's agent experiments. **Everything here is invented:** Halvard Home,
 its customers, orders, retailers, receipts, rating plates and telemetry. No row describes a real
-person, company or product. Status: built, not yet frozen (Gate 2, 27 November 2026).
+person, company or product. Status: frozen 28 November 2026, after Brendan agreed all 30 cases in
+[`season5/case-review.md`](../../season5/case-review.md). `MANIFEST.json` holds every file's hash
+(text hashed with LF line endings); a frozen test checks them. Later changes are dated
+amendments listed here.
 
 ## How it was made
 

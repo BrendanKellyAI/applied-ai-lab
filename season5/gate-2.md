@@ -1,6 +1,6 @@
 # Season 5 Gate 2: the case data
 
-27 November 2026, on `s5`. **Paid step approved and run on 27 November 2026; results in section 4.** Waiting on Brendan's 30 case check, then the freeze.
+27 November 2026, on `s5`. **Paid step approved and run on 27 November 2026; results in section 4.** Brendan agreed with all 30 checked cases on 28 November 2026; the data is frozen.
 
 ## 1. Built with no spend
 

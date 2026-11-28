@@ -1,5 +1,7 @@
 # Season 5 case check: 30 test cases for Brendan
 
+**Result, 28 November 2026: Brendan agreed with all 30.**
+
 Chosen by code (`lab.agent.finalise.review_list`, seed 30) across the case kinds. For
 each, check that the message reads like a real customer, states what the brief says,
 and that the expected outcome is what the policy gives. Mark any you disagree with.

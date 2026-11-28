@@ -1,6 +1,7 @@
 # Halvard Home warranty and refund rules for the Season 5 case environment. All invented.
 #
-# Draft for Gate 1, 27 November 2026. Not frozen.
+# Frozen 28 November 2026 at draft-2, the version the label checks read. Later changes are
+# dated amendments, listed in the dataset README.
 #
 # Every case's expected end state is computed from this file by code (lab.agent.policy, to be
 # built), so a label is right by construction. The rule-based approver applies it too.
