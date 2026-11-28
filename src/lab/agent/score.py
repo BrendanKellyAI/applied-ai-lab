@@ -43,6 +43,8 @@ class CaseScore(BaseModel):
     case_id: str
     kind: str
     tags: tuple[str, ...]
+    # Which run of the case this was, when an arm runs each case more than once.
+    repeat: int = 0
     resolved: bool
     stop_reason: str
     appliances: tuple[ApplianceScore, ...]
@@ -220,6 +222,7 @@ def score_case(facts: CaseFacts, run: CaseRun) -> CaseScore:
         case_id=facts.case_id,
         kind=facts.kind,
         tags=facts.tags,
+        repeat=run.repeat,
         resolved=all(a.ok for a in appliances) and run.stop_reason == "closed" and not executed,
         stop_reason=run.stop_reason,
         appliances=appliances,

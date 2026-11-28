@@ -112,7 +112,9 @@ def _query_item(query: str) -> Item:
         type="agent",
         asker="public",
         question=query,
-        answerable=True,
+        # Retrieval ignores these labels; they only satisfy the item's own checks.
+        answerable=False,
+        unanswerable_reason="absent_topic",
         answer="",
     )
 
