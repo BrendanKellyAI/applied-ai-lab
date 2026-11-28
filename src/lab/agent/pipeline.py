@@ -101,6 +101,12 @@ class Pipeline:
             ).text,
             definitions(),
         ).label
+        if triage is not None and (triage.route == "complaint" or triage.safety):
+            # Rules 1 and 2 come before identifying the appliance: escalate every appliance.
+            reason = "formal_complaint" if triage.route == "complaint" else "safety_incident"
+            for serial in sorted(self.env.case_serials()):
+                self._close(serial, Outcome("escalate", reason))
+            return self._finish()
         orders = self._orders(triage.product if triage else None)
         for serial in self.env.case_serials():
             if serial not in {o["serial"] for o in orders}:
@@ -108,6 +114,9 @@ class Pipeline:
         cases = self._tool("read_past_cases", customer_email=self.email).get("cases", [])
         for order in orders:
             self._handle(order, triage, cases)
+        return self._finish()
+
+    def _finish(self) -> CaseRun:
         run = CaseRun(
             case_id=self.facts.case_id,
             arm=self.arm.name,

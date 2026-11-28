@@ -64,3 +64,20 @@ case's correct path resolves all 236, which checks the tools and the scorer, not
 
 Estimates from `lab agent estimate` go to Brendan with this file; no call is made before he
 approves, and `lab agent run` refuses to start without `budgets.s5-e1-agents-or-pipelines`.
+
+## Amendment 1, 28 November 2026 (after the dev pilot, before any test call)
+
+The dev pilot (58 cases, committed with this amendment) found three faults in the setup, not in
+either arm's design. Each is fixed for both arms, and the pilot is run again before the test run:
+
+1. `lookup_order` did not show who owns an order. In 7 of the 10 wrong order number test cases,
+   the mistyped number is another customer's real order, and in the pilot the agent worked on a
+   stranger's appliance with no way to see it was not the sender's. Orders now show the owner's
+   email. These cases now also test whether the agent checks ownership, which E9 picks up.
+2. `close_case` needed a serial number to escalate an appliance the agent could not identify, so
+   a correct escalation could not be recorded. It now accepts `serial: "unknown"` for an
+   escalation, which escalates the case's open appliances.
+3. The pipeline identified the appliance before applying the safety and complaint rules, against
+   the policy's order. It now escalates first.
+
+No claim, pass mark, case or model setting changes. The estimate is unchanged in size.

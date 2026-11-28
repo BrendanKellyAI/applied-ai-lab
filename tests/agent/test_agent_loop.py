@@ -298,3 +298,33 @@ def test_a_paid_run_needs_a_budget(tmp_path):
         app, ["agent", "run", str(config), "--prices", str(tmp_path / "none.yaml")]
     )
     assert result.exit_code == 2 and "Refusing" in result.output
+
+
+def test_an_unidentified_appliance_can_be_escalated_as_unknown():
+    case = next(c for c in load_cases(["test"]) if c.facts.unknown)
+    env = CaseEnv.open(case.facts)
+    escalate = {"serial": "unknown", "decision": "escalate", "reason": "facts_unknown"}
+    result = run_tool(env, KB, HarnessRules(), "close_case", {**escalate, "reply": "We will call."})
+    assert result["appliances_escalated"] == 1 and env.all_closed()
+    decline = {"serial": "unknown", "decision": "decline", "reply": "No."}
+    bad = run_tool(CaseEnv.open(case.facts), KB, HarnessRules(), "close_case", decline)
+    assert "error" in bad
+
+
+def test_lookup_shows_who_owns_each_order():
+    case = _first("routine")
+    env = CaseEnv.open(case.facts)
+    order = lookup_order(env, order_id=case.facts.appliances[0].order_id)["orders"][0]
+    assert order["customer_email"] == emails()[case.facts.customer_id]
+
+
+def test_the_pipeline_escalates_safety_before_identifying(tmp_path):
+    from lab.agent.mock_triage import perfect_triage
+    from lab.agent.pipeline import run_pipeline
+
+    case = next(
+        c for c in load_cases(["test"]) if "safety" in c.facts.tags and c.facts.kind == "photo"
+    )
+    caller = _caller(perfect_triage({case.facts.case_id: case.facts}), tmp_path)
+    run = run_pipeline(case.facts, case.message, _arm(kind="pipeline"), caller)
+    assert score_case(case.facts, run).resolved

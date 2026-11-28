@@ -43,7 +43,8 @@ TOOLS: tuple[ToolDef, ...] = (
         "Look up orders.",
         "Find Halvard Home orders. Give an order number, or the customer's email address (and "
         "optionally a product) to list that customer's orders. Returns each order's number, "
-        "product, serial number, delivery date, plan and price. Appliances bought from another "
+        "product, serial number, delivery date, plan, price and the email of the customer who "
+        "owns it. Appliances bought from another "
         "shop have no order; use check_warranty with their serial number instead.",
         (
             Field("order_id", "string", "An order number such as H-101234.", required=False),
@@ -148,9 +149,10 @@ TOOLS: tuple[ToolDef, ...] = (
         "Close the case.",
         "Record the final decision for one appliance and the reply to the customer. Call it once "
         "per appliance, after any booking or refund. decision replacement or escalate records "
-        "that action. reason is the policy's reason code; existing_case names an open case.",
+        "that action. reason is the policy's reason code; existing_case names an open case. If "
+        "the appliance cannot be identified, escalate with serial 'unknown'.",
         (
-            Field("serial", "string", "The appliance's serial number."),
+            Field("serial", "string", "The appliance's serial number, or 'unknown'."),
             Field("decision", "string", "The decision the policy gives.", enum=DECISIONS),
             Field(
                 "reason",

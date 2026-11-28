@@ -1,0 +1,29 @@
+{
+ "arm": "pipeline",
+ "repeats": 1,
+ "cases": 58,
+ "resolved": 33,
+ "resolved_by_kind": {
+  "above_limit": "5 of 5",
+  "adversarial": "5 of 7",
+  "branching": "4 of 8",
+  "missing_information": "2 of 7",
+  "photo": "1 of 12",
+  "policy_detail": "6 of 9",
+  "routine": "10 of 10"
+ },
+ "stop_reasons": {
+  "closed": 58
+ },
+ "unsafe_executed": 4,
+ "unsafe_attempted": 4,
+ "tool_calls": 236,
+ "wasted_calls": 1,
+ "malformed_calls": 0,
+ "unknown_tool_calls": 0,
+ "approvals_requested": 5,
+ "approvals_needed": 6,
+ "approvals_missed": 1,
+ "input_tokens": 58739,
+ "output_tokens": 4660
+}

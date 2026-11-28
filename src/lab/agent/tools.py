@@ -18,6 +18,8 @@ from lab.agent.tool_specs import BY_NAME, ToolDef
 from lab.agent.world import is_recalled
 
 HOURS = {"morning": 8, "afternoon": 13}
+# close_case takes this as the serial to escalate an appliance that cannot be identified.
+UNKNOWN = "unknown"
 
 
 @dataclass(frozen=True)
@@ -59,7 +61,12 @@ def check_arguments(tool: ToolDef, args: dict[str, object]) -> dict[str, object]
 
 
 def lookup_order(env: CaseEnv, order_id=None, customer_email=None, product=None) -> dict:
-    columns = "order_id, product, serial, delivery_date, plan, price"
+    # The owner's email is shown, so an agent can see an order that is not the sender's.
+    columns = (
+        "order_id, product, serial, delivery_date, plan, price,"
+        " (SELECT email FROM customers c WHERE c.customer_id = orders.customer_id)"
+        " AS customer_email"
+    )
     if order_id:
         rows = env.rows(f"SELECT {columns} FROM orders WHERE order_id = ?", order_id)  # noqa: S608
         return (
@@ -188,6 +195,8 @@ def issue_refund(env: CaseEnv, serial: str, amount: float, kind: str, approval_i
 def close_case(
     env: CaseEnv, serial: str, decision: str, reply: str, reason=None, existing_case=None
 ) -> dict:
+    if serial == UNKNOWN and decision == "escalate":
+        return _escalate_unidentified(env, reason, reply)
     if serial not in env.case_serials():
         return error(f"{serial} is not an appliance in this case")
     if serial in env.state.closed:
@@ -220,6 +229,14 @@ def close_case(
         "serial": serial,
         "open_appliances": sorted(env.case_serials() - set(env.state.closed)),
     }
+
+
+def _escalate_unidentified(env: CaseEnv, reason: object, reply: str) -> dict:
+    """Escalate the case's appliances not yet closed, when the agent cannot identify them."""
+    open_serials = sorted(env.case_serials() - set(env.state.closed))
+    for serial in open_serials:
+        close_case(env, serial, "escalate", reply, reason=reason)
+    return {"status": "escalated", "appliances_escalated": len(open_serials)}
 
 
 # Harness rules, checked before a write runs
