@@ -18,7 +18,13 @@ FinishReason = Literal["stop", "length", "content_filter", "tool_calls", "other"
 _FIELDS_EXCLUDED_FROM_HASH = {"stream", "metadata"}
 # Fields added after Season 1. Each is left out of the hash when unset, so a request that does
 # not use it hashes exactly as it did before the field existed, and earlier caches still match.
-_FIELDS_HASHED_ONLY_WHEN_SET = ("output_format", "messages", "tools", "tool_choice")
+_FIELDS_HASHED_ONLY_WHEN_SET = (
+    "output_format",
+    "messages",
+    "tools",
+    "tool_choice",
+    "cache_salt",
+)
 
 
 class OutputFormat(BaseModel):
@@ -59,6 +65,9 @@ class GenerationRequest(BaseModel):
     messages: tuple[Message, ...] | None = None
     tools: tuple[ToolSpec, ...] | None = None
     tool_choice: ToolChoice | None = None
+    # Season 5. Never sent to a provider: it only separates cache entries, so a repeated run
+    # (to measure run to run variation) makes fresh calls that are themselves cached.
+    cache_salt: str | None = None
 
     @model_validator(mode="after")
     def _prompt_or_messages(self) -> Self:

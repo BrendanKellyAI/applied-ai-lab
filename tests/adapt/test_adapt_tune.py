@@ -327,7 +327,7 @@ def test_an_unset_format_leaves_the_request_hash_unchanged():
 
     request = _request()
     # The Season 4 rule; Season 5's fields did not exist then, so they are left out too.
-    later_fields = {"messages", "tools", "tool_choice"}
+    later_fields = {"messages", "tools", "tool_choice", "cache_salt"}
     payload = request.model_dump(
         mode="json", exclude={"stream", "metadata", "output_format", *later_fields}
     )

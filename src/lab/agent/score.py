@@ -99,7 +99,7 @@ def _closing_problems(expected: ExpectedOutcome, closing: dict) -> list[str]:
         problems.append(f"reason {closing['reason']}, expected {expected.reason}")
     elif expected.existing_case and closing["existing_case"] != expected.existing_case:
         problems.append(
-            f"existing case {closing['existing_case']}, expected {{expected.existing_case}}"
+            f"existing case {closing['existing_case']}, expected {expected.existing_case}"
         )
     return problems
 
@@ -122,7 +122,7 @@ def _write_problems(expected: ExpectedOutcome, state: dict, serial: str) -> list
         "escalations": escalations,
     }
     problems = [
-        f"{len(rows)} {name}, expected {{want[name]}}"
+        f"{len(rows)} {name}, expected {want[name]}"
         for name, rows in have.items()
         if len(rows) != want[name]
     ]

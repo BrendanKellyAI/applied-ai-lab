@@ -38,7 +38,15 @@ def png(tmp_path):
 
 def _season_4_hash(request: GenerationRequest) -> str:
     """The hashing rule as it stood before Season 5, for a request with no output format."""
-    new_fields = {"stream", "metadata", "output_format", "messages", "tools", "tool_choice"}
+    new_fields = {
+        "stream",
+        "metadata",
+        "output_format",
+        "messages",
+        "tools",
+        "tool_choice",
+        "cache_salt",
+    }
     payload = request.model_dump(mode="json", exclude=new_fields)
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
@@ -192,3 +200,10 @@ def test_mock_still_answers_plain_prompts():
         GenerationRequest(provider="mock", model="m", prompt="a b c", max_output_tokens=5)
     )
     assert result.input_tokens == 3 and result.tool_calls == ()
+
+
+def test_a_cache_salt_separates_repeats_and_is_never_sent():
+    plain = _request()
+    salted = _request(cache_salt="repeat-1")
+    assert request_hash(plain) != request_hash(salted)
+    assert request_hash(salted) == request_hash(_request(cache_salt="repeat-1"))

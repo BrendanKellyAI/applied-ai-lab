@@ -1,0 +1,12 @@
+# S5 E1: agents or fixed pipelines. See PREREGISTRATION.md.
+experiment: s5-e1-agents-or-pipelines
+description: Run to run variation, the baseline agent three times on a fixed 60 test cases
+cases: [test]
+# lab.agent.run.fixed_sample(load_cases(['test'])): stratified by kind, seed 60.
+case_ids: [T-001, T-003, T-006, T-009, T-015, T-019, T-026, T-031, T-032, T-035, T-039, T-040, T-041, T-043, T-053, T-058, T-059, T-060, T-064, T-070, T-077, T-087, T-094, T-096, T-103, T-111, T-112, T-116, T-123, T-124, T-127, T-129, T-135, T-136, T-137, T-141, T-145, T-147, T-152, T-153, T-155, T-158, T-160, T-162, T-165, T-169, T-176, T-179, T-181, T-194, T-196, T-197, T-207, T-210, T-211, T-212, T-217, T-225, T-231, T-237]
+repeats: 3
+concurrency: 4
+requests_per_minute: 120
+arms:
+  - name: agent
+    model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 1500}

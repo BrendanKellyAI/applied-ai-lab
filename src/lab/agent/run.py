@@ -15,6 +15,7 @@ from lab.agent.case_model import CaseFacts
 from lab.agent.config import AgentExperiment, Arm
 from lab.agent.kb import CORPUS, KeywordKB, KnowledgeBase, ReferenceKB
 from lab.agent.loop import CaseRun, run_case
+from lab.agent.pipeline import run_pipeline
 from lab.agent.score import CaseScore, score_case, summarise
 
 CASES_DIR = CORPUS.parent / "halvard-cases" / "cases"
@@ -71,7 +72,10 @@ def run_arm(
 
     def one(job: tuple[LoadedCase, int]) -> tuple[CaseRun, CaseScore]:
         case, repeat = job
-        run = run_case(case.facts, case.message, arm, caller, kb, repeat=repeat)
+        if arm.kind == "pipeline":
+            run = run_pipeline(case.facts, case.message, arm, caller)
+        else:
+            run = run_case(case.facts, case.message, arm, caller, kb, repeat=repeat)
         return run, score_case(case.facts, run)
 
     with ThreadPoolExecutor(max_workers=experiment.concurrency) as pool:
@@ -111,3 +115,23 @@ def run_experiment(
             kb = knowledge_base(arm, caller, cache_root, results / arm.name)
         summaries.append(run_arm(experiment, arm, cases, caller, kb, results))
     return summaries
+
+
+def fixed_sample(cases: Sequence[LoadedCase], size: int = 60, seed: int = 60) -> list[str]:
+    """Case IDs for the run to run variation sample: stratified by kind, largest remainder."""
+    import random
+    from collections import defaultdict
+
+    by_kind: dict[str, list[str]] = defaultdict(list)
+    for case in cases:
+        by_kind[case.facts.kind].append(case.facts.case_id)
+    shares = {kind: size * len(ids) / len(cases) for kind, ids in by_kind.items()}
+    counts = {kind: int(share) for kind, share in shares.items()}
+    by_remainder = sorted(shares, key=lambda k: (counts[k] - shares[k], k))
+    for kind in by_remainder[: size - sum(counts.values())]:
+        counts[kind] += 1
+    rng = random.Random(seed)
+    picked = [
+        cid for kind in sorted(by_kind) for cid in rng.sample(sorted(by_kind[kind]), counts[kind])
+    ]
+    return sorted(picked)

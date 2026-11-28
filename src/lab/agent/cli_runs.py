@@ -48,7 +48,8 @@ def run_command(
     from lab.providers.registry import available_providers
 
     experiment = load_experiment(config)
-    results = config.parent / ("results-dry-run" if dry_run else "results")
+    # One folder per config, so a dev pilot and a test run never overwrite each other.
+    results = config.parent / ("results-dry-run" if dry_run else "results") / config.stem
     if dry_run:
         facts = {
             c.facts.case_id: c.facts for c in load_cases(experiment.cases, experiment.case_ids)

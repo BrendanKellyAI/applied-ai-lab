@@ -1,0 +1,17 @@
+# S5 E1: agents or fixed pipelines. See PREREGISTRATION.md.
+experiment: s5-e1-agents-or-pipelines
+description: Pilot on the 58 dev cases
+cases: [dev]
+concurrency: 4
+requests_per_minute: 120
+arms:
+  # The fixed pipeline: S4 triage, order lookup, warranty check, a rule-based decision,
+  # one call for the reply. gpt-6-luna is the S4 triage reference model.
+  - name: pipeline
+    kind: pipeline
+    model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 200}
+  # The baseline agent: every tool but the code tool, the short baseline instruction with the
+  # policy, rules in the prompt only (no harness rules), images attached, the S2 reference
+  # retrieval as its search tool.
+  - name: agent
+    model: {provider: openai, model: gpt-6-luna, reasoning: "off", max_output_tokens: 1500}

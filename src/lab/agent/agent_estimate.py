@@ -13,6 +13,7 @@ import statistics
 import tempfile
 from collections.abc import Sequence
 from dataclasses import dataclass
+from functools import cache
 from pathlib import Path
 
 from PIL import Image
@@ -35,6 +36,7 @@ IMAGE_FACTOR = 1.2
 HIGH_DETAIL_PATCHES = 2500
 
 
+@cache
 def image_tokens(path: Path) -> int:
     with Image.open(path) as image:
         width, height = image.size
@@ -87,7 +89,42 @@ class ArmEstimate:
         ]
 
 
+TRIAGE_OUTPUT = 40
+REPLY_OUTPUT = 100
+
+
+def estimate_pipeline(
+    experiment: AgentExperiment, arm: Arm, cases: Sequence[LoadedCase]
+) -> ArmEstimate:
+    """One triage call a case and one reply call an appliance, counted from the real prompts."""
+    from lab.adapt.prompts import triage_system
+    from lab.agent.pipeline import REPLY_SYSTEM, definitions
+
+    system = chat_tokens(triage_system("definitions", definitions()))
+    reply = chat_tokens(REPLY_SYSTEM) + 20
+    per_case = [
+        system + chat_tokens(c.message) + 10 + reply * len(c.facts.appliances) for c in cases
+    ]
+    calls = sum(1 + len(c.facts.appliances) for c in cases)
+    output = sum(TRIAGE_OUTPUT + REPLY_OUTPUT * len(c.facts.appliances) for c in cases)
+    ordered = sorted(per_case)
+    repeats = experiment.repeats
+    return ArmEstimate(
+        arm=arm.name,
+        cases=len(cases) * repeats,
+        calls=calls * repeats,
+        input_tokens=sum(per_case) * repeats,
+        output_tokens=output * repeats,
+        median_case_input=int(statistics.median(ordered)),
+        p90_case_input=ordered[int(0.9 * (len(ordered) - 1))],
+        max_case_input=ordered[-1],
+        ceiling_input=sum(per_case) * repeats,
+    )
+
+
 def estimate_arm(experiment: AgentExperiment, arm: Arm, cases: Sequence[LoadedCase]) -> ArmEstimate:
+    if arm.kind == "pipeline":
+        return estimate_pipeline(experiment, arm, cases)
     facts = {c.facts.case_id: c.facts for c in cases}
     dry = arm.model_copy(update={"model": arm.model.model_copy(update={"provider": "mock"})})
     with tempfile.TemporaryDirectory() as folder:

@@ -284,7 +284,7 @@ def test_run_arm_and_the_cli_dry_run(tmp_path):
     )
     result = CliRunner().invoke(app, ["agent", "run", str(config), "--dry-run"])
     assert result.exit_code == 0, result.output
-    assert (config.parent / "results-dry-run" / "t" / "summary.json").exists()
+    assert (config.parent / "results-dry-run" / "config" / "t" / "summary.json").exists()
     estimate = CliRunner().invoke(app, ["agent", "estimate", str(config)])
     assert estimate.exit_code == 0 and "ceiling" in estimate.output
 

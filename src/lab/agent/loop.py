@@ -105,6 +105,7 @@ def run_case(
             max_output_tokens=arm.model.max_output_tokens,
             reasoning=arm.model.reasoning,
             metadata={"case_id": facts.case_id, "arm": arm.name, "turn": str(index)},
+            cache_salt=f"repeat-{repeat}" if repeat else None,
         )
         result, source = caller(request)
         turns.append(_turn(index, result, source))

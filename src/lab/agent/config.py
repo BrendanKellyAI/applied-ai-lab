@@ -53,6 +53,8 @@ class Harness(_Frozen):
 
 class Arm(_Frozen):
     name: str = Field(pattern=r"^[a-z0-9][a-z0-9-]*$")
+    # E1: an agent, or the fixed pipeline (lab.agent.pipeline), which uses only `model`.
+    kind: Literal["agent", "pipeline"] = "agent"
     model: ModelSettings
     instructions: str = "baseline"
     tools: tuple[str, ...] = NON_CODE_TOOLS
