@@ -340,7 +340,8 @@ def write_csv(world: World, directory: Path = WORLD_DIR) -> list[Path]:
 
 def load_database(target: Path | str, directory: Path = WORLD_DIR) -> sqlite3.Connection:
     """A fresh database from schema.sql and the world CSVs. ':memory:' for a throwaway copy."""
-    connection = sqlite3.connect(target)
+    # Shared across threads only as a template, copied under a lock (env.fresh_database).
+    connection = sqlite3.connect(target, check_same_thread=False)
     connection.executescript((directory / "schema.sql").read_text(encoding="utf-8"))
     for table in READ_TABLES:
         with (directory / f"{table}.csv").open(encoding="utf-8", newline="") as handle:

@@ -71,3 +71,7 @@ def write_messages_command(
         raise typer.Exit(code=2) from exc
     summary = {k: log[k] for k in ("cases_written", "discarded", "accepted_on_attempt")}
     typer.echo(json.dumps(summary, indent=2))
+
+
+# Registers run, estimate, replay and score on agent_app.
+from lab.agent import cli_runs  # noqa: E402, F401
